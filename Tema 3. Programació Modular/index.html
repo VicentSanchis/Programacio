@@ -1,0 +1,987 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Tema 3. Programació Modular - PROGRAMACIÓ 1DAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-3-programacio-modular" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 3. Programació Modular
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PROGRAMACIÓ 1DAW
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Índex
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%201.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
+        Tema 1. Introducció a la programació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%202.%20Programaci%C3%B3%20Estructurada/" class="md-nav__link">
+        Tema 2. Programació Estructurada
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tema 3. Programació Modular
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tema 3. Programació Modular
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    Introducció
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstraccio" class="md-nav__link">
+    Abstracció
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristiques" class="md-nav__link">
+    Característiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcions-en-java" class="md-nav__link">
+    Funcions en Java
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcions en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-els-arguments" class="md-nav__link">
+    Sobre els arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-el-return" class="md-nav__link">
+    Sobre el return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crida-a-un-funcio" class="md-nav__link">
+    Crida a un funció
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-funcions-declaracio-i-crida" class="md-nav__link">
+    Exemple 1. Funcions: declaració i crida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalls-per-invocar-funcions" class="md-nav__link">
+    Detalls per invocar funcions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-duna-funcio" class="md-nav__link">
+    Paràmetres d'una funció
+  </a>
+  
+    <nav class="md-nav" aria-label="Paràmetres d'una funció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pas-dobjectes-a-funcions" class="md-nav__link">
+    Pas d'objectes a funcions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivitat" class="md-nav__link">
+    Recursivitat
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursivitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-overflow" class="md-nav__link">
+    Stack Overflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-api-de-java" class="md-nav__link">
+    La API de Java
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
+        Tema 5. Tipus Compostos de Dades
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%209.%20Gr%C3%A0fics%201.%20Java%20Swing/" class="md-nav__link">
+        Tema 9. Gràfics. Java Swing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%209.%20Gr%C3%A0fics%202.%20Components%20i%20Events/" class="md-nav__link">
+        Tema 9. Gràfics 2. Components i Esdeveniments
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    Introducció
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstraccio" class="md-nav__link">
+    Abstracció
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristiques" class="md-nav__link">
+    Característiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcions-en-java" class="md-nav__link">
+    Funcions en Java
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcions en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-els-arguments" class="md-nav__link">
+    Sobre els arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-el-return" class="md-nav__link">
+    Sobre el return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crida-a-un-funcio" class="md-nav__link">
+    Crida a un funció
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-funcions-declaracio-i-crida" class="md-nav__link">
+    Exemple 1. Funcions: declaració i crida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalls-per-invocar-funcions" class="md-nav__link">
+    Detalls per invocar funcions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-duna-funcio" class="md-nav__link">
+    Paràmetres d'una funció
+  </a>
+  
+    <nav class="md-nav" aria-label="Paràmetres d'una funció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pas-dobjectes-a-funcions" class="md-nav__link">
+    Pas d'objectes a funcions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivitat" class="md-nav__link">
+    Recursivitat
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursivitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-overflow" class="md-nav__link">
+    Stack Overflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-api-de-java" class="md-nav__link">
+    La API de Java
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tema-3-programacio-modular">Tema 3. Programació Modular</h1>
+<h2 id="introduccio">Introducció</h2>
+<p>La <strong>programació modular</strong> és un paradigma de programació que consisteix a dividir un programa en <strong>mòduls o subprogrames</strong> per tal de fer-lo més llegible i manejable</p>
+<p>Es presenta històricament com una evolució de la programació estructurada per solucionar problemes de programació més grans i complexos del que aquesta pot resoldre.</p>
+<p>A l'aplicar la programació modular, un problema complex ha de ser dividit en diversos subproblemes més simples, i aquests al seu torn en altres subproblemes més simples encara. Això s'ha de fer fins a obtenir subproblemes prou simples com per poder ser resolts fàcilment amb algun llenguatge de programació. Aquesta tècnica es diu refinament successiu, divideix i venceràs o anàlisi descendent (Top-Down).</p>
+<p>Un 'mòdul' és cadascuna de les parts d'un programa que resol un dels subproblemes en què es divideix el problema complex original. Cadascun d'aquests mòduls té una tasca ben definida i alguns necessiten d'altres per poder operar. En cas que un mòdul necessiti d'un altre, pot comunicar-se amb aquest mitjançant una interfície de comunicació que també ha d'estar ben definida.</p>
+<p>Si bé un mòdul es pot entendre com una part d'un programa en qualsevol de les seves formes i variats contextos, en la pràctica se'ls sol prendre com a sinònims de procediments i funcions. Però no necessària ni estrictament un mòdul és una funció o un procediment, ja que el mateix pot contenir molts d'ells. No s'ha de confondre el terme "mòdul" (en el sentit de programació modular) amb termes com "funció" o "procediment", propis de l'llenguatge que ho suporte.</p>
+<h3 id="abstraccio">Abstracció</h3>
+<p>L'abstracció és la capacitat de, observada una realitat, quedar-se amb allò important o essencial i obviar el detall. Aquest concepte serà un concepte bàsic en l'evolució de la programació estructurada i modular cap a la programació orientada a objectes.
+Per exemple, per saber conduir un cotxe no necessite saber al detall el funcionament del seu motor sino on està l'accelerador, el fre i el volant.</p>
+<p>No hem de pensar mai en un programa com un tot sino com un conjunt de mòduls relacionats entre si on cada mòdul desenvolupa una tasca molt concreta independentment de la resta i que tots junts formen el programa o aplicació.</p>
+<h2 id="caracteristiques">Característiques</h2>
+<ul>
+<li>Es considera moudlaritat com la definició d'un programa com a conjunt de subprogrames (mòduls).</li>
+<li>Cada mòdul té una funció particular, és semi-independent i també pot trobar-se en fitxers de codi distints.</li>
+<li>Avantatges</li>
+<li>El codi resultant és més net i fàcil d'entendre.</li>
+<li>Permet la divisió del treball.</li>
+<li>Es pot provar de forma independent, millorant així la recerca i correcció d'errades.</li>
+<li>Facilita la definició de variables al crear diversos àmbits.</li>
+</ul>
+<p>Depenent del nivell de detall amb el que es tracten els mòduls, podem distindir tres tipus:
+- Llibreries
+- Classes
+- Funcions o mètodes</p>
+<p>Una funció és un troç de codi que realitza una funció concreta i de vegades torna algun valor com a resultat.</p>
+<h2 id="funcions-en-java">Funcions en Java</h2>
+<p>Una funció en Java té la següent estructura:</p>
+<pre><code class="language-Javascript">[acces] [modificador] tipus nomFuncio([tipus nomArgument,[tipo nomArgument]...])
+{
+    /*
+        * Bloque de instrucciones
+    */
+
+    return valor;
+}
+
+</code></pre>
+<blockquote>
+<p>Tots aquells elements que estan entre claudators són opcionals
+On: 
+- <strong>Accés:</strong> public, protected, private o package
+- <strong>Modificador:</strong> static o final
+- <strong>Tipo:</strong> int, boolean, float o qualsevol tipus predefinit per l'usuari.
+- <strong>nomFuncio:</strong> cadena alfanumèrica significativa que indique el que fa la funció.
+- <strong>nomArgument:</strong> paràmetres que se li passen a la funció. Aquestos paràmetres funcionaran com variables locals a la funció.</p>
+</blockquote>
+<h3 id="exemples">Exemples</h3>
+<pre><code class="language-Java">// Funció simple 
+void diguesHola () {
+  System.out.println(&quot;Hola Mon&quot;);
+}
+
+// Funció amb paràmetres
+void sayMyName (String strNom) {
+  System.out.println(&quot;Hola Mon: &quot; + strNom);
+}
+
+// Funció que torna algun valor
+String canviaNom (String strNom) {
+  return strNom.reverse();
+}
+</code></pre>
+<h3 id="sobre-els-arguments">Sobre els arguments</h3>
+<p>Hi ha alguns detalls al respeecte dels arguments d'una funció:
+- Una funció pot tindre una quantitat qualsevol de paràmetres, és a dir, poden tindre des de zero fins a un, dos, deu o cent paràmetres. Normalment no sol passar de cinc màxim.
+- Si la funció té més d'un paràmetre cadascun d'ells ha d'anar separat per una coma.
+- Els arguments d'una funció també tenen un tipus i nom que els identifica.
+- El tipus dels arguments pot ser qualsevol i no ha de tindre relació amb el tipus del mètode.
+- Al rebre un argument res ens obliga a fer ús d'aquest dins del mètode.
+- Els paràmetres poden passar-se per referència (es mantenen les modificacions que es facen dins del mètode) o per valor (no afectarien les modificacions a l'element original).</p>
+<h3 id="sobre-el-return">Sobre el return</h3>
+<p>Has de tenir en compte dues coses importants amb la sentència return:
+- Qualsevol instrucció que es trobe després de l'execució de return, <strong>NO</strong> serà executada.
+- És comú trobar funcions amb múltiples sentències return al seu codi, com per exemple en sentencies condicionals, però una vegada el codi execute una sentència return allò que vinga després no s'executarà.
+- El tipus de valor que es torna en una funció ha de conicidir amb el tipus declarat a la funció, és a dir, si es declara int, el valor que ha de tornar ha de ser un nombre enter.
+- En el cas de les funcions que no tornen res (void), també conegues com a procediments, poden usar la sentència return però sense cap valor i només s'usaria per acabar amb l'execució de la funció. </p>
+<h3 id="crida-a-un-funcio">Crida a un funció</h3>
+<p>Per tal de cridar una funció en Java s'ha de fer de la següent forma:</p>
+<pre><code class="language-Java">nombre([valor,[valor]...]);
+</code></pre>
+<p>Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
+<h3 id="exemple-1-funcions-declaracio-i-crida">Exemple 1. Funcions: declaració i crida</h3>
+<pre><code class="language-Java">// Declaració de la funció holaMon
+void holaMon (String strNom) {
+  System.out.println(&quot;Hola: &quot; + strNom);
+}
+
+// Declaració del funció suma
+int suma (int a, int b) {
+  int res = a + b;
+  return res;
+}
+
+// Crida correcta a la funció holaMon
+holaMon(&quot;Batiste&quot;);
+
+// Crida incorrecta a la funció holaMon
+holaMon();
+holaMon(&quot;Batiste&quot;,&quot;Ceba&quot;);
+
+// Crida correcta a suma
+int resultat = suma(10,5);
+suma(10,5);
+
+// Crides incorrectes.
+int resultat = suma();
+suma();
+int res = suma (10,3,10);
+
+</code></pre>
+<h3 id="detalls-per-invocar-funcions">Detalls per invocar funcions</h3>
+<ul>
+<li>
+<p>No importa si es tracta d’un mètode en Java o d’una funció o d’un mètode, només els debats ocupen d’enviar els paràmetres de la forma correcta per invocar-los. </p>
+</li>
+<li>
+<p>El nombre ha de coincidir exactament al moment d’invocar, és l’única forma d’identificar-lo.L’ordenació dels paràmetres i el tipus ha de coincidir. </p>
+</li>
+<li>
+<p>Cal tindre cura en el moment d'enviar els paràmetres, hem de fer-ho en el mateix ordre en que varen ser declarats i han de ser del mateix tipus.</p>
+</li>
+<li>
+<p>Cada paràmetre enviat també va separat per comes.</p>
+</li>
+<li>
+<p>Si una funció no rep paràmetres, simplement no posem res a l'interior de la parèntesi, però sempre debem posar la parèntesi.</p>
+</li>
+<li>
+<p>Invocar una funció sigue sentint una sentència comuna i corrent en Java, així que ha de finalitzar amb ';' com sempre.</p>
+</li>
+<li>
+<p>El valor retornat per un mètode o funció pot ser assignat a una variable del mateix tipus, però no podem fer això amb un procediment, no es pot retornar valor algú.</p>
+</li>
+<li>
+<p>Una funció pot llamar a una altra dins de sí mateixa o fins i tot pot ser enviada com a paràmetre a una altra (mira el següent exemple).</p>
+</li>
+</ul>
+<h3 id="parametres-duna-funcio">Paràmetres d'una funció</h3>
+<p>És possible passar un o més valors a una funció quan es crida. Recordeu que un valor passat a una funció es diu <strong>argument</strong>. Dins la funció, la variable que rep l'argument es diu <strong>paràmetre</strong>. Els paràmetres es declaren dins dels parèntesis que segueixen a el nom de mètode. La sintaxi de declaració de paràmetre és la mateixa que la utilitzada per a les variables.</p>
+<p>Un paràmetre està dins de l'abast de la seua funció, i a banda de la seva tasca especial de rebre un argument, actua com qualsevol altra variable local.</p>
+<p>Ací hi ha un exemple simple de l'ús de paràmetres. Dins de la classe ComprobarNumero, el mètode Espar () retorna true si el valor que es passa és parell. Retorna false en cas contrari. Per tant, Espar () té un tipus de retorn booleà.</p>
+<pre><code class="language-Java">// Un exemple simple de l'ús de paramètres
+class ComprovarNumero {
+    // Retorna true si x es parell
+    boolean esParell(int x){
+        if ((x%2)==0) return true;
+        else return false;
+    }
+}
+
+class ParametroDemo {
+    public static void main(String[] args) {
+        ComprobarNumero e=new ComprobarNumero();
+        if (e.esPar(10)) System.out.println(&quot;10 es par.&quot;);
+        if (e.esPar(9)) System.out.println(&quot;9 es par.&quot;);
+        if (e.esPar(8)) System.out.println(&quot;8 es par.&quot;);
+    }
+}
+</code></pre>
+<p>Un mètode pot tenir més d'un paràmetre. Simplement declare cada paràmetre, separant un el següent amb una coma. Per exemple, la classe Divisor defineix un mètode anomenat esDivisor () que determina si el primer paràmetre és divisor de el segon.</p>
+<pre><code class="language-Java">// Un exemple sempre de l'ús de paramètres
+
+class Divisor {
+
+    boolean esDivisor(int a, int b){
+        if ((b%a)==0) return true;
+        else return false;
+    }
+}
+class DivisorDemo {
+    public static void main(String[] args) {
+        Divisor x =new Divisor();
+        if (x.esDivisor(2,20)) System.out.println(&quot;2 es Divisor de 20&quot;);
+        if (x.esDivisor(3,20)) System.out.println(&quot;3 es Divisor de 20&quot;);
+    }
+}
+</code></pre>
+<p>Depenent del tipus de dada que enviem a la funció com a argument, podem diferenciar dos comportaments: 
+- <strong>Pas per valor:</strong> Es crea una còpia local de la variable dins de la funció. </p>
+<p><img alt="Pas per valor" src="../assets/Tema3/PasxValor.png" /></p>
+<ul>
+<li><strong>Pas per referència:</strong> Es maneja directament la variable, els canvis realitzats dins de la funció li afectaran també fora.</li>
+</ul>
+<p><img alt="Pas per referencia" src="../assets/Tema3/PasxReferencia.png" /></p>
+<h4 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h4>
+<p>Quan passem un tipus primitiu a una funció, es passa per valor. Però quan vam passar un objecte a una funció, la situació canvia dràsticament, perquè els objectes es passen pel que efectivament és anomenat, <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència. Bàsicament, la funció no pot canviar un paràmetre, però la funció pot demanar-li a l'paràmetre que es canviï a si mateix cridant a algun mètode dins d'ell.</p>
+<p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
+<p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús de trucada per referència.</p>
+<p>Els canvis en l'objecte dins el mètode es reflecteixen en l'objecte utilitzat com a argument.</p>
+<pre><code class="language-Java">// Programa Java per demostrar el pas d'objectes a funcions
+class Demo {
+    int a, b;
+    Demo(int i, int j) {
+        a = i;
+        b = j;
+    }
+
+    // Torna true si els valors són els mateixos
+    boolean equalTo(Demo obj) {
+        return (obj.a == a &amp;&amp; obj.b == b);
+    }
+}
+    public class Test {
+        public static void main(String args[]) {
+            Demo ob1 = new Demo(100, 22);
+            Demo ob2 = new Demo(100, 22);
+            Demo ob3 = new Demo(-1, -1);
+            System.out.println(&quot;ob1 == ob2: &quot; + ob1.equalTo(ob2));
+            System.out.println(&quot;ob1 == ob3: &quot; + ob1.equalTo(ob3));
+        }
+    }
+</code></pre>
+<p>Eixida</p>
+<pre><code class="language-Java">obj1 == obj2: true
+obj1 == obj3: false
+</code></pre>
+<p>Explicació en imatges:
+1. Es creen tres objectes:</p>
+<pre><code class="language-Java">Demo ob1 = new Demo(100, 22);
+Demo ob2 = new Demo(100, 22);
+Demo ob3 = new Demo(-1, -1);
+</code></pre>
+<p><img alt="Pas 1" src="../assets/Tema3/Explicacio1.png" /></p>
+<ol>
+<li>Des del costat de la funció, es declara una referència de tipus Demo amb un objecte obj i s'assigna inicialment null. </li>
+</ol>
+<p><img alt="Pas 2" src="../assets/Tema3/Explicacio2.png" /></p>
+<ol>
+<li>Com cridem al mètode equalTo, la referència 'obj' s'assignarà a l'objecte que es passa com a paràmetre, és a dir, 'obj' es referirà a 'obj2' quan la següent sentència s'execute.</li>
+</ol>
+<pre><code class="language-Java">System.out.println(&quot;ob1 == ob2: &quot; + ob1.equalTo(ob2));
+</code></pre>
+<p><img alt="Pas 3" src="../assets/Tema3/Explicacio3.png" /></p>
+<ol>
+<li>Ara com podem observar, es crida al mètode equalTo sobre 'obj1' i 'obj' fa referència a 'obj2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si (condició) és veritat, aleshores tornarà true.</li>
+</ol>
+<pre><code class="language-Java">if(obj.a == a &amp;&amp; obj.b == b)
+</code></pre>
+<ol>
+<li>De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència.</li>
+</ol>
+<pre><code class="language-Java">System.out.println(&quot;ob1 == ob3: &quot; + ob1.equalTo(ob3));
+</code></pre>
+<p><img alt="Pas 4" src="../assets/Tema3/Explicacio4.png" /></p>
+<ol>
+<li>Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</li>
+</ol>
+<h2 id="recursivitat">Recursivitat</h2>
+<blockquote>
+<p>En general, la recursivitat és el procés de definir alguna cosa en termes de si mateix i és una cosa semblant a una definició circular. El component clau d'un mètode recursiu és una declaració que executa una crida a si mateix. La recursivitat és un poderós mecanisme de control.</p>
+</blockquote>
+<p>L'exemple clàssic de recursivitat és el càlcul de l'factorial d'un nombre. El factorial d'un nombre N és el producte de tots els nombres enters que es trobin entre 1 i N. Per exemple, el factorial de 3 és 1 × 2 × 3, és a dir, és de 6.</p>
+<p>El següent programa mostra una forma recursiva de calcular el factorial d'un nombre. Per a propòsits de comparació, també s'inclou un equivalent no recursiu (iteratiu).</p>
+<pre><code class="language-Java">// Un simple programa de recursividad
+class Factorial
+{
+    // Esto es un método recursivo
+    int facR (int n){
+        int resultado;
+        if (n==1) return 1;
+        resultado=facR(n-1)*n;
+        return resultado;
+    }
+    // Esto es un equivalente iterativo
+    int facI (int n){
+        int t, resultado;
+        resultado=1;
+        for (t=1; t&lt;=n; t++) resultado *=t;
+        return resultado;
+    }
+}
+    class Recursividad{
+    public static void main(String[] args) {
+        Factorial f= new Factorial();
+        System.out.println(&quot;Factorial utilizando un método recursivo:&quot;);
+        System.out.println(&quot;El factorial de 3 es: &quot;+f.facR(3));
+        System.out.println(&quot;El factorial de 6 es: &quot;+f.facR(6));
+        System.out.println();
+        System.out.println(&quot;Factorial utilizando un método iterativo:&quot;);
+        System.out.println(&quot;El factorial de 3 es: &quot;+f.facI(3));
+        System.out.println(&quot;El factorial de 6 es: &quot;+f.facI(6));
+        System.out.println();
+    }
+}
+</code></pre>
+<p>Eixida</p>
+<pre><code class="language-Java">Factorial utilizando un método recursivo:
+El factorial de 3 es: 6
+El factorial de 6 es: 720
+
+Factorial utilizando un método iterativo:
+El factorial de 3 es: 6
+El factorial de 6 es: 720
+</code></pre>
+<h3 id="stack-overflow">Stack Overflow</h3>
+<p>Les versions recursives de moltes rutines poden executar-se una mica més lentament que els seus equivalents iteratius causa de la sobrecàrrega addicional de les trucades a mètodes addicionals. Massa crides recursives a un mètode podrien causar un desbordament de la pila.</p>
+<p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que la pila s 'ha esgotat. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una excepció. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torni boja.</p>
+<p>El principal avantatge de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
+<pre><code class="language-Java">int fact(int n)
+{
+    // condición base equivocada (esto causa
+    // stack overflow).
+    if (n == 100) 
+        return 1;
+    else
+        return n*fact(n-1);
+}
+</code></pre>
+<p>En l'exemple anterior: Si es diu a fact (10), cridarà a fac (9), fact (8), fact (7), etc., però el nombre mai arribarà a 100. Per tant, no s'assoleix la condició base. Si la memòria s'esgota amb aquests mètodes en la pila, provocarà un error de desbordament de pila.</p>
+<h2 id="la-api-de-java">La API de Java</h2>
+<p>L'API Java és una interfície de programació d'aplicacions (API, per les seves sigles de l'anglès: Application Programming Interface) proveïda pels creadors de el llenguatge de programació Java, que dóna als programadors els mitjans per desenvolupar aplicacions Java.</p>
+<p>Com el llenguatge Java és un llenguatge orientat a objectes, l'API de Java proveeix d'un conjunt de classes utilitàries per a efectuar tota mena de tasques necessàries dins d'un programa.</p>
+<p>L'API Java està organitzada en paquets lògics, on cada paquet conté un conjunt de classes relacionades semànticament.</p>
+<p><img alt="API de Java" src="../assets/Tema3/API-Java.jpg" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Tema%202.%20Programaci%C3%B3%20Estructurada/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Tema 2. Programació Estructurada
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tema 5. Tipus Compostos de Dades
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>

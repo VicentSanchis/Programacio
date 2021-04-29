@@ -1,0 +1,1237 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Tema 3. El llenguatge Java - PROGRAMACIÓ 1DAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-3-el-llenguatge-java" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 3. El llenguatge Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PROGRAMACIÓ 1DAW
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Índex
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%201.%20Activitats/" class="md-nav__link">
+        Tema 1. Introducció a la programació. Activitats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%201.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
+        Tema 1. Introducció a la programació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%202.%20Programaci%C3%B3%20Estructurada/" class="md-nav__link">
+        Tema 2. Programació Estructurada
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tema 3. El llenguatge Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tema 3. El llenguatge Java
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    Introducció
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-variables-i-identificadors" class="md-nav__link">
+    Dades, Variables i identificadors.
+  </a>
+  
+    <nav class="md-nav" aria-label="Dades, Variables i identificadors.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paraules-reservades" class="md-nav__link">
+    Paraules reservades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus-de-dades" class="md-nav__link">
+    Tipus de dades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentaris" class="md-nav__link">
+    Comentaris
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadors-i-expressions" class="md-nav__link">
+    Operadors i expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadors i expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operador-assignacio" class="md-nav__link">
+    Operador assignació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-aritmetics" class="md-nav__link">
+    Operadors aritmètics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-increment-i-decrement" class="md-nav__link">
+    Operadors increment i decrement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-relacionals" class="md-nav__link">
+    Operadors relacionals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-logics" class="md-nav__link">
+    Operadors lògics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-condicional" class="md-nav__link">
+    Operador condicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructures" class="md-nav__link">
+    Estructures
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-dun-programa-en-java" class="md-nav__link">
+    Estructura d'un programa en Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-en-processing-ide" class="md-nav__link">
+    Estructura en Processing IDE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-nav__link">
+        Tema 3. Programació Modular
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
+        Tema 4. Tipus Compostos de Dades
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%206.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
+        Tema 5. Programació Orientada a Objectes.
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%207.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
+        Tema 6. Herència, polimorfisme i interfícies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%208.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
+        Tema 7. Entrada, eixida i excepcions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%209.%20Gr%C3%A0fics%201.%20Java%20Swing/" class="md-nav__link">
+        Tema 8. Gràfics 1. Java Swing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%209.%20Gr%C3%A0fics%202.%20Components%20i%20Events/" class="md-nav__link">
+        Tema 9. Gràfics 2. Components i Esdeveniments
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    Introducció
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-variables-i-identificadors" class="md-nav__link">
+    Dades, Variables i identificadors.
+  </a>
+  
+    <nav class="md-nav" aria-label="Dades, Variables i identificadors.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paraules-reservades" class="md-nav__link">
+    Paraules reservades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus-de-dades" class="md-nav__link">
+    Tipus de dades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentaris" class="md-nav__link">
+    Comentaris
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadors-i-expressions" class="md-nav__link">
+    Operadors i expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadors i expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operador-assignacio" class="md-nav__link">
+    Operador assignació
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-aritmetics" class="md-nav__link">
+    Operadors aritmètics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-increment-i-decrement" class="md-nav__link">
+    Operadors increment i decrement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-relacionals" class="md-nav__link">
+    Operadors relacionals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-logics" class="md-nav__link">
+    Operadors lògics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-condicional" class="md-nav__link">
+    Operador condicional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructures" class="md-nav__link">
+    Estructures
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-dun-programa-en-java" class="md-nav__link">
+    Estructura d'un programa en Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-en-processing-ide" class="md-nav__link">
+    Estructura en Processing IDE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tema-3-el-llenguatge-java">Tema 3. El llenguatge Java</h1>
+<h2 id="introduccio">Introducció</h2>
+<p>Una vegada estudiat el teorema del programa estructurat juntamnet amb els diagrames de flux i psuedocodi, passem a veure aquestos conceptes teòrics en un llenguatge de programació d'alt nivell Java.</p>
+<p>En aquest tema veurem la sintaxis bàsica de Java: paraules reservades, dades, variables, constants, identificadors i com també es codifiquen les estructures de control vistes al tema anterior en llenguatge Java.</p>
+<h2 id="dades-variables-i-identificadors">Dades, Variables i identificadors.</h2>
+<p>En qualsevol llenguatge de programació existeixen una sèrie d'elements com variables, constants, funcions, llibreries. Aquestos elements requereixen d'un nom per tal de distingir-lo de la resta. Aquestos noms es diuen <strong>identificadors</strong></p>
+<p>Un <strong>identificador</strong> és una cadena alfanúmerica que representa o dona un nom a un element dins del nostre programa. Els <strong>identificadors</strong> de les variables són noms que s'inventa el programador i s'hauria de tindre en consideració al següent màxima:</p>
+<blockquote>
+<p>Quan triem el nom per identificar a una variable, ha de ser significatiu, és a dir, que el mateix identificador ja done alguna pista de que és el que representa.</p>
+</blockquote>
+<h3 id="paraules-reservades">Paraules reservades</h3>
+<p>Uns dels principals <strong>identificadors</strong> que ens trobarem a tot llenguatge de programació són les <strong>paraules reservades</strong>. Per entendre-ho, el conjunt de paraules reservades d'un llenguatge de programació són el diccionari de totes les paraules que té aquest llenguatge. Aquetes paraules reservades no poden utilitzar-se per cap altra cosa més, per exemple, si Java té la paraula reservada <strong>public</strong>, el programador no podrà crear cap variable utilitzant l'identificador public.</p>
+<h3 id="tipus-de-dades">Tipus de dades</h3>
+<p>Tot llenguatge de programació porta una sèrie de tipus de dades predefinits que es poden usar. Aquestos tipus de dades també es coneixen com a <strong>tipus primitius o tipus simples.</strong>. Java defineix 8 tipus diferents de dades: byte, short, int, long, char, float, double i boolean. Aquestos tipus es poden agrupar en quatre blocs:
+- <strong>Enters:</strong> on podem trobar el byte, short, long i int.
+- <strong>Punt flotant:</strong> aquest grup inclou el float i el double on es representen els números decimals.
+- <strong>Caracters:</strong> char representa a tot el conjunt de caracters del nostre sistema.
+- <strong>Booleà:</strong> boolean és un tipus especial que només pot tindre dos possibles valors: true o false.</p>
+<h3 id="variables">Variables</h3>
+<p>Al final tot programa s'encarrega de processar informació i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
+<p>Una variable és com un contenidor que té associat un tipus (enter, real, caracter) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra.</p>
+<p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong></p>
+<pre><code class="language-Java">// Declaració d'una variable en Java
+// type identifier;
+// Per exemple:
+int a;
+float b;
+long j;
+char c;
+int i = 0; // En aquesta declaració s'inclou també la inicialització del seu valor.
+</code></pre>
+<p>Les varialbes com a contenidors d'informació, poden variar el seu valor durant l'execució del programa.</p>
+<h3 id="constants">Constants</h3>
+<p>Les constants en java són semblants a les variables, és a dir, són contenidors d'informació, tenen un identificador i un tipus bàsic associat però el seu valor no canvia durant l'execució del programa.
+Les variables en java es defineixen de la següent forma:</p>
+<pre><code class="language-Java">// Constant en java
+static final int prova = 10; // Prova valdrà 10 durant tot el programa. 
+</code></pre>
+<h3 id="comentaris">Comentaris</h3>
+<p>Els comentaris a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga més fàcil de llegir millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. 
+En java tenim tres tipus de comentaris:
+- Comentaris en línia:
+  - S'utilitzen per comentar parts concretes del codi.</p>
+<pre><code class="language-Java">// Comentari d'una sola línia en Java
+</code></pre>
+<ul>
+<li>Comentaris de vàries línies: Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
+</ul>
+<pre><code class="language-Java">/* Comentari de més d'una línia
+  linia 1
+  linia 2
+  linia 3
+  linia final */
+</code></pre>
+<ul>
+<li>Comentaris de documentació: Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
+</ul>
+<pre><code class="language-Java">/**
+* Troba la mitjana de tres números!
+* El programa FindAvg implementa una aplicacio que
+* simplement calcula la mitjana de tres enteros i els mostra
+* a la eixida per pantalla.
+*
+* @author  Aleix Caminou
+* @version 1.0
+* @since   2020-2-2
+*/
+
+</code></pre>
+<h2 id="operadors-i-expressions">Operadors i expressions</h2>
+<p>Les expressions són equacions matemàtiques que solen representar càlculs, per exemple: 3<em>x + 7</em>z. L'expressió anterior la formen els següents elements: dos literals enters: 3 i 7; dos identificadors de variables (no sabem el tipus) x i z; i els simbols * i +.
+Aquestos simbols són els operadors, concretament * és l'operador aritmètic de multiplicació i el símbol + representa l'operador de suma. Aquesta expressió tindrà finalment un valor, per exemple, sí x val 3 i z val 2, el resultat de l'expressió seria 23.</p>
+<h3 id="operador-assignacio">Operador assignació</h3>
+<p>L'operador assignació en Java és el símbol '=' i s'utilitza de la següent forma </p>
+<pre><code class="language-Java">// variable = expressió
+// Seguint l'exemple anterior
+int x=3, y, z=2;
+y = 3*x + 7*z;
+</code></pre>
+<p>On l'operador '=' assignaria el valor de l'expressió '3x+2z' a la variable y, és a dir, executada aquesta acció dins de la variable y hauríem depositat el valor 23.
+Altres exemples d'ús de l'operador assignació:</p>
+<pre><code class="language-Java">int a, b, c;
+a = b = c = 10;
+// Tant a com b com c tindríen valor 10
+
+int i = 3;
+i = i * 3;
+// i valdria 9
+
+int j = 2;
+j *= 2; 
+// Aquesta manera peculiar d'usar l'operador assignació és el mateix que j = j * 2;
+</code></pre>
+<h3 id="operadors-aritmetics">Operadors aritmètics</h3>
+<p>Els operador aritmètics en Java serveixen per realitzar operacions bàsiques algebraiques com: la suma, resta, multiplicació o divisió.
+- <strong>Suma:</strong> símbol (+). Exemple: 4+5
+- <strong>Resta:</strong> símbol (-). Exemple: 5-2
+- <strong>Multiplicació:</strong> símbol (<em>). Exemple: 3</em>7
+- <strong>Divisió (Quocient):</strong> símbol (/). Exemple: 8/5.
+- <strong>Divisió (Residu):</strong> símbol (%). Exemple 10%2.</p>
+<h3 id="operadors-increment-i-decrement">Operadors increment i decrement</h3>
+<p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variable a la qual s'apliquen.</p>
+<pre><code class="language-Java">int x = 10;
+x ++; // Aquest codi seria equivalent a x = x + 1;
+x --; // Aquest codi seria equivalent a x = x -1 ;
+</code></pre>
+<p>Aquestos operadors també es poden posar abans de la variable produint el mateix efecte</p>
+<pre><code class="language-Java">int x = 10;
+++ x; // Aquest codi seria equivalent a x = x + 1;
+-- x; // Aquest codi seria equivalent a x = x -1 ;
+</code></pre>
+<h3 id="operadors-relacionals">Operadors relacionals</h3>
+<p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors true o false. Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé true o false.
+Els operadors relacionals a Java són:
+- <strong>==</strong> o igual a. Exemple d'ús: a == b, compara si a i b són iguals o no.
+- <strong>!=</strong> o distint de. Exemple d'ús: a != b, comprova si a i b són distints.
+- <strong>&gt;</strong> o major que. Exemple d'ús: 'a&gt;b' comprova si a és major que b.
+- <strong>&lt;</strong> o menor que. Exemple d'ús: 'a<b' comprova si a és menor que b.
+- **>=<strong> o major igual que. Exemple d'ús: 'a&gt;=b' comprova si a és major o igual que b.
+- </strong>&lt;=** o menor igual que. Exemple d'ús: 'a&lt;=b' comprova si a és menor o igual que b.</p>
+<h3 id="operadors-logics">Operadors lògics</h3>
+<ul>
+<li><strong>not (!)</strong>: negació lògica.</li>
+<li><strong>and (&amp;&amp;)</strong>: and lògic.</li>
+<li><strong>or (||)</strong>: or lògic.</li>
+<li><strong>or exclusivo (^)</strong>: or exclusiu.</li>
+</ul>
+<h3 id="operador-condicional">Operador condicional</h3>
+<p>Java inclou un operador especial de tipus ternari que de vegades s'utilitza per substituir algunes estructures if then else. Aquest és l'operador <strong>?</strong> i la seua forma general és:</p>
+<pre><code class="language-Java">expressio1 ? expressio2 : expressio 3;
+</code></pre>
+<p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a true, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a false, s'executaria l'expressió 2.
+Exemple</p>
+<pre><code class="language-Java">double temperatura; // Variable que ens indica la temperatur ambient
+boolean AC_ON = false;  // Variable booleana que ens indica si l'aire condicionat està en marxa
+temperatura &gt; 25 ? AC_ON = true : AC_ON = false;
+// Bàsicament el que faria aquesta espressió seria engegar l'aire condicionat si la temperatura
+// és superior a 25 graus.
+</code></pre>
+<h2 id="estructures">Estructures</h2>
+<p>Com hem vist al tema 2, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estrucutures bàsiques amb les quals es podríen codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.</p>
+<p>En els pròxims punts veurem com es codifiquen totes aquestes estructures en llenguatge Java.</p>
+<h3 id="estructura-dun-programa-en-java">Estructura d'un programa en Java</h3>
+<p>El primer que s'ha de tenir en compte és que tot programa escrit en Java ha de tindre almenys un main() a la classe principal per tal que s'execute. En resum, programa escrit en Java ha de tindre:</p>
+<ul>
+<li>Declaracions d'importació de paquets o inclusió d'altres llibreries.</li>
+<li>Declaracions de les classes que el formen.</li>
+<li>El mètode main</li>
+<li>Mètodes definits pels usuaris dins de les classes.</li>
+<li>Comentaris.</li>
+</ul>
+<pre><code class="language-Java">// Programa principal
+import java.io.*;             // Llibreries amb funcions d'entrada i eixida.
+public class nomPrograma {    // Nom de la classe principal
+
+    Calculadora calc;         // Membres de la classe (una calculadora)
+
+    public static void main (String [] args) { // Mètode principal main
+        calc = new Calculadora();              // Instruccions del mètode principal.
+        int result = calc.suma(10,20)
+        System.out.println(&quot;Resultat: &quot; + result );
+    }
+}
+
+// Una altra classe
+import java.io.*;
+public class Calculadora {            // Nom de la classe 
+
+    public int suma(int a, int b) {   // Mètode de la classe
+        return a + b;
+    }
+}
+</code></pre>
+<p>Al programa anterior podem trobar una classe 'nomPrograma' que conté el mètode principal main i que al mateix temps conté el conjunt d'instruccions que es van a executar seqüencialment al nostre programa. Aquesta classe <strong>nomPrograma</strong> té un memebre calc que és un objecte (ja veurem classes i objectes més endavant) de tipus calculadora i que està definit més endavant amb la classe pública calculadora.
+Les sentències que executa el nostre programa d'exmemple són les següents:
+- Instancia l'objecte calc (calc = new Calculadora()).
+- Declara una variable de tipus enter <strong>result</strong>
+- Crida al mètode <strong>suma</strong> de l'objecte calc passant-li els paràmetres 10 i 20
+- Deposita el resultat que retorna el mètode suma de la classe calc a la variable <strong>result</strong>
+- Mostra per pantalla el resultat de la suma.</p>
+<h3 id="estructura-en-processing-ide">Estructura en Processing IDE</h3>
+<pre><code class="language-Java">// Referències a altres llibrerires.
+// Variables globals a l'aplicació.
+void setup () {  // Només s'executa una vegada a l'inici de l'execució.
+    // Sentències d'inicialització de la nostra aplicació.
+}
+
+void draw () { // S'executa 60 vegades per segon (60Hz freqüencia del monitor)
+    // Codi principal del programa.
+}
+
+// Declaració d'altres funcions
+</code></pre>
+<h1 id="a-revisar-des-daci">A REVISAR DES D'ACÍ</h1>
+<h3 id="estructura-sequencial">Estructura Seqüencial</h3>
+<p>L'estructura seqüencial en Java es codifica de la següent manera:</p>
+<pre><code class="language-Java">// Exemple de bloc - estructura seqüencial
+{
+    Instrucció1;
+    Instrucció2;
+    ...
+    InstruccióN;
+}
+</code></pre>
+<p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing.</p>
+<h4 id="activitat-dibuixa-amb-processing-ide-un-punt-una-linia-un-cercle-i-un-quadrat">Activitat. Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat.</h4>
+<pre><code class="language-Java">void setup () {
+    size(320,240);
+    background(255);
+    fill(0);
+}
+
+void draw () {
+    point(10,10);
+    line(20,20,40,40);
+    ellipse(100,100,80,80);
+    square(200,200,50);
+}
+</code></pre>
+<h3 id="estructures-de-seleccio">Estructures de selecció</h3>
+<p>Com varem explicar al tema anterior, ens podem trobar les següents variants d'estructura de selecció:
+- Selecció simple
+- Selecció doble
+- Selecció multiple
+- Operador condicional ?</p>
+<h4 id="seleccio-simple">Selecció Simple</h4>
+<p><img alt="Selecció simple" src="../assets/Tema2/Estructura-condicional-simple-java.png" /></p>
+<p>El seu codi en Java seria:</p>
+<pre><code class="language-Java">if (condicio) 
+    instruccio;
+
+// O també
+if (condicio) {
+    instruccio1;
+    instruccio2;
+    ...
+    instruccioN;
+}
+</code></pre>
+<p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
+<p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
+<p><strong>Exemple en Java:</strong></p>
+<pre><code class="language-Java">import java.util.*;
+public class condicioSimple {
+    public static void main (String [] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println(&quot;Quina hora és?:&quot;);
+        int hora = sc.nextInt();
+        if ( hora &gt;= 9)
+            System.out.println(&quot;A sopar&quot;);
+
+        System.out.println(&quot;Adeu&quot;);
+    }
+}
+</code></pre>
+<h4 id="if-else">if .. else</h4>
+<p><img alt="Selecció simple" src="../assets/Tema2/Estructura-condicional-doble-java.png" /></p>
+<p>El codi en Java seria</p>
+<pre><code class="language-Java">instruccio1;
+instruccio2;
+if (condicio) {
+    instruccio3;
+    instruccio4;
+}
+else {
+    instruccio5;
+    instruccio6;
+}
+instruccio7;
+instruccio8;
+</code></pre>
+<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'if' s'avalua 'true' o 'false'. En el primer cas, amb la condició a true, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a 'false', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
+<p><strong>Exemple en Java:</strong></p>
+<pre><code class="language-Java">import java.util.*;
+public class condicioDoble {
+    public static void main (String [] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println(&quot;Quina hora és?:&quot;);
+        int hora = sc.nextInt();
+        if ( hora &gt;= 12)
+            System.out.println(&quot;Encara és de matí&quot;);
+        else
+            System.out.println(&quot;Ja és de vesprada&quot;);
+    }
+}
+</code></pre>
+<h4 id="if-else-if-else">if else if else</h4>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/Estructura-condicional-multiple-java.png" /></p>
+<p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
+<pre><code class="language-Java">instruccio1;
+
+if (condicio1) {
+    instruccio2;
+    instruccio3;
+}
+else if (condicio2) {
+    instruccio4;
+}
+else if (condicio3) {
+    instruccio5;
+    instruccio6;
+    instruccio7;
+}
+else {
+    instruccio8;
+    instruccio9;
+}
+instruccio10;
+</code></pre>
+<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
+<p><strong>Exemple</strong></p>
+<p>Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else</p>
+<pre><code class="language-Java">import java.util.*;
+public class condicioMultiple {
+    public static void main (String [] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println(&quot;Quina hora és?:&quot;);
+        int hora = sc.nextInt();
+        if (hora &gt;= 7 &amp;&amp; hora &lt;= 9)
+            System.out.println(&quot;Eres matiner&quot;);
+        else if (hora &gt; 9 &amp;&amp; hora &lt;= 12)
+            System.out.println(&quot;Deuries haver esmorzat ja&quot;);
+        else if (hora &gt; 12 &amp;&amp; hora &lt;= 15)
+            System.out.println(&quot;Es hora de dinar si no has dinat&quot;);
+        else if (hora &gt; 15 &amp;&amp; hora &lt;= 18)
+            System.out.println(&quot;Si no has fet una migdiada oblidat&quot;);
+        else
+            System.out.println(&quot;Hora de la cervesa&quot;);
+    }
+}
+</code></pre>
+<h4 id="switch-case">switch case</h4>
+<p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull</p>
+<pre><code class="language-Java">switch (condicio) {
+    case 1:
+        // Instruccions
+        break;
+
+    case 2:
+        // INstrucciones 2
+        break;
+
+    default:
+        // Instruccions per defecte
+        break;
+}
+</code></pre>
+<p>Un altre exemple més clar</p>
+<pre><code class="language-Java">//Programa que demana un numero i diu quin mes és
+
+import java.util.*;
+public class ExempleSwitch {
+    public static void main(String[] args) {
+        int mes;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(&quot;Introdueix el numero del mes: &quot;);                                                        
+        mes = sc.nextInt();
+        switch (mes) {  //inicio del switch
+                case 1: System.out.println(&quot;GENER&quot;);
+                        break;
+                case 2: System.out.println(&quot;FEBRER&quot;);
+                        break;
+                case 3: System.out.println(&quot;MARÇ&quot;);
+                        break;
+                case 4: System.out.println(&quot;ABRIL&quot;);
+                        break;
+                case 5: System.out.println(&quot;MAIG&quot;);
+                        break;
+                case 6: System.out.println(&quot;JUNY&quot;);
+                        break;
+                case 7: System.out.println(&quot;JULIOL&quot;);
+                        break;
+                case 8: System.out.println(&quot;AGOST&quot;);
+                        break;
+                case 9: System.out.println(&quot;SETEMBRE&quot;);
+                         break;
+                case 10: System.out.println(&quot;OCTUBRE&quot;);
+                         break;
+                case 11: System.out.println(&quot;NOVEMBRE&quot;);                                                         
+                         break;
+                case 12: System.out.println(&quot;DESEEMBRE&quot;);
+                         break;
+                default : System.out.println(&quot;No vàlid&quot;);                        
+        }
+    }
+}
+</code></pre>
+<h3 id="estructures-de-repeticio">Estructures de repetició</h3>
+<p>Imaginem que tenim un vector d'enters de 100 elements i volem trobar un nombre concret. Usant les estrcutures condicionals ho podríem fer.</p>
+<pre><code class="language-Java">int [] arrayNumeros;               // Declarem un array d'enters
+arrayNumeros = new int [100];      // Reservem espai en memòria per 100 elements
+inicialitzaNumeros(arrayNumeros);  // Emplenem de forma aleatòria l'array
+
+// Comencem la recerca del número 10 per exemple
+if ( array[0] == 10 )
+    System.out.println(&quot;Número trobat a la posició 0&quot;);
+
+else if (array[1] == 10)
+    System.out.println(&quot;Número trobat a la posició 1&quot;);
+
+else if (array[2] == 10)
+    System.out.println(&quot;Número trobat a la posició 2&quot;);
+
+else if (array[3] == 10)
+    System.out.println(&quot;Número trobat a la posició 3&quot;);
+
+else if (array[4] == 10)
+    System.out.println(&quot;Número trobat a la posició 4&quot;);
+
+else if (array[5] == 10)
+    System.out.println(&quot;Número trobat a la posició 5&quot;);    
+
+// I així fins 100 ... 
+
+</code></pre>
+<p>Com podeu observar, només he necessitat escriure codi per als 5 primers elements del nostre array per adondar-me que aquest codi és totalment ineficient i té un manteniment molt complicat. Imagineu un array amb 1000 elements i que ho hagurem de codificar com hem fet abans.</p>
+<p>Les estructures repetitives permetrien recòrrer l'array de principi a final sense necessitat d'escriure tant de codi.</p>
+<p>Veiem els següents exemples.</p>
+<h4 id="while">while</h4>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-while.png" /></p>
+<p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
+<p>Els passos que representen el diagrama anterior són:
+1. S'executa la instrucció 1
+2. S'avalua la condició 
+3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
+4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
+<pre><code class="language-Java">int i = 0;   // Inicialitzem una variable que ens servirà de contador.
+while (i &lt; 100) {
+    if (arrarNumeros[i] == 10)
+        System.out.println(&quot;Número trobat a la posició &quot; + i);
+    i ++; // Important incrementar el contador o entraríem en un bucle infinit.
+}
+
+</code></pre>
+<h4 id="do-while">do .. while</h4>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-do-while.png" /></p>
+<p>Els passos que representen el diagrama anterior són:
+1. S'executa la instrucció 1
+2. S'executen les instruccions que conté el bloc 
+3. S'avalua la condició 
+4. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
+5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
+<pre><code class="language-Java">int i = 0;   // Inicialitzem una variable que ens servirà de contador.
+do {
+    if (arrarNumeros[i] == 10)
+        System.out.println(&quot;Número trobat a la posició &quot; + i);
+    i ++; // Important incrementar el contador o entraríem en un bucle infinit.
+}
+while (i &lt; 100);
+
+</code></pre>
+<h4 id="bucle-for">bucle for</h4>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-for.png" /></p>
+<ol>
+<li>Executem instrucció 1 (aliena al bucle for)</li>
+<li>Inicialització</li>
+<li>Avaluació de la condició</li>
+<li>Si la condició és true</li>
+<li>Executem les instruccions del bucle for</li>
+<li>Actualitzem índex</li>
+<li>Si la condició es false eixim del bucle i executem instrucció 2</li>
+</ol>
+<pre><code class="language-Java">for (int i = 0; i &lt; 100; i ++ ) { 
+    if (arrarNumeros[i] == 10)
+        System.out.println(&quot;Número trobat a la posició &quot; + i);
+}
+
+</code></pre>
+<p>Al codi anterior:
+1. Inicialització: int i = 0;
+2. Avaluació de la condició: és i &lt; 100 ?
+3. Actualització: i ++</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Tema%202.%20Programaci%C3%B3%20Estructurada/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Tema 2. Programació Estructurada
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tema 3. Programació Modular
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>

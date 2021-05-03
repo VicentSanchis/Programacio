@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -51,9 +51,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,8 +96,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -232,6 +232,21 @@
   
     <li class="md-nav__item">
       <a href="../Tema%203.%20El%20llenguatge%20Java/" class="md-nav__link">
+        Tema 3. El llenguatge Java
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%203.%20Java/" class="md-nav__link">
         Tema 3. El llenguatge Java
       </a>
     </li>
@@ -816,7 +831,7 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 </ul>
 <h3 id="class-file">Class File</h3>
 <p>Per poder identificar d’un fitxer al sistema de fitxers de qualsevol sistema operatiu, necessitem: nom i ruta. Per exemple ‘/user/data/file.txt’. El fitxer es diu file.txt i la ruta en la qual es troba és ‘/user/data/’. Aquest identificador de fitxer és el que es passa al constructor de la classe per tal d’obrir un flux.</p>
-<pre><code class="language-Java">File fitxer = new File ( strPath + &quot;prova.txt&quot;);
+<pre><code class="language-java">File fitxer = new File ( strPath + &quot;prova.txt&quot;);
 </code></pre>
 <p>En l’exemple anterior hem utilitzat la classe File per tal d’instanciar un stream al fitxer que li hem passat per paràmetre «prova.txt». Compte que s’ha de passar la ruta absoluta d’on es troba el fitxer.</p>
 <p>Hi ha alternatives al constructor de la classe File que hem mostrat a l’exemple anterior, es pot construir també amb dos paràmetres: ruta i nom del fitxer o inclús indicar-li la ruta mitjançant un altre objecte File.</p>
@@ -903,7 +918,7 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <h3 id="arxius-de-baix-nivell-fileinputstream-i-fileoutputstream">Arxius de baix nivell: FileInputStream i FileOutputStream</h3>
 <p>Tot arxiu es pot considerar en sí mateix una seqüència de bytes de baix nivell i després sobre aquesta informació es pot construir informació de mes alt nivell per tal de processar dades més complexes des de tipus bàsic fins objectes. </p>
 <p>En altres paraules, si volem obrir un flux de dades a un fitxer o arxiu i volem llegir byte a byte per després decidir nosaltres a nivell de programació que volem fer amb aquests bytes, hauríem d’utilitzar aquestes classes.</p>
-<pre><code class="language-Java">FileInputStream fen = new FileInputStream(strPath + &quot;provat.txt&quot;);
+<pre><code class="language-java">FileInputStream fen = new FileInputStream(strPath + &quot;provat.txt&quot;);
 </code></pre>
 <p>La classe <strong>FileInputStream</strong> s’utilitza per llegir bytes o grups de bytes del fitxer associat. Tots els mètodes tenen visibilitat pública i s’ha de tenir en compte quina és l’excepció que llencen per controlar els possibles errors en temps d’execució.</p>
 <table>
@@ -949,7 +964,7 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 per llegir-lo i desarem el seu contingut a un fitxer d’eixida «resultat.txt» que
 obirem amb un FileOutputStream. Al fitxer d’eixida, bolcarem el contingut de
 «prova.txt»</p>
-<pre><code class="language-Java">try {
+<pre><code class="language-java">try {
     FileInputStream fen = new FileInputStream(strPath + &quot;prova.txt&quot;);
     FileOutputStream fout = new FileOutputStream(strPath + &quot;resultat.txt&quot;);
 
@@ -973,7 +988,7 @@ copie el que apareix a «prova.txt», el d’entrada però a l’inrevés.</p>
 <h3 id="arxius-de-dades">Arxius de dades</h3>
 <p>La veritat és que treballar amb bytes quan estem parlant de fitxers o arxius que contenen informació o dades de més nivell pot resultar incomode, ja que entre altres hauríem de saber quants bytes té un caràcter, un enter o un doble. </p>
 <p>En Java tenim les classes <strong>DataInputStream</strong> i <strong>DataOutputStream</strong> que són subclasses de les classes <strong>FilterInputStream</strong> i <strong>FilterOutputStream</strong></p>
-<pre><code class="language-Java">FileInputStream gs = new FileInputStream(strPath + &quot;prova.txt&quot;);
+<pre><code class="language-java">FileInputStream gs = new FileInputStream(strPath + &quot;prova.txt&quot;);
 DataInputStream ent = new DataInputStream(gs);
 </code></pre>
 <p>Bàsicament aquestes classes el que fan és organitzar els bytes en tipus primitius de tal forma que ja podem treballar llegint i escrivint als fluxos: enters, caràcters, reals, cadenes etc..</p>
@@ -1032,7 +1047,7 @@ DataInputStream ent = new DataInputStream(gs);
 </tbody>
 </table>
 <p>D’aquesta forma ja no ens hem de preocupar de saber quants bytes de memòria s’han de reservar per un caràcter o un enter. Per exemple si associem  un <strong>DataOutputStream</strong> a un fitxer i després cridem al mètode <strong>writeInt</strong>, realment el que s’està fent és escriure 4 bytes d’informació al fitxer de la qual cosa s’estaria encarregant de manera trans11parent a l’usuari.</p>
-<pre><code class="language-Java">FileOutputStream fn = new FileOutputStream(strPath + &quot;result.txt&quot;);
+<pre><code class="language-java">FileOutputStream fn = new FileOutputStream(strPath + &quot;result.txt&quot;);
 DataOutputStream snb = new DataOutputStream(fn);
 </code></pre>
 <table>
@@ -1099,7 +1114,7 @@ DataOutputStream snb = new DataOutputStream(fn);
 </table>
 <p>A continuació podem veure un exemple en el que fem ús del DataOutputStream i DataInputStream. El que fa aquest exemple és escriure a un fitxer d’eixida «pluges.dat» dos valors double aleatoris per després llegir-los amb un DataInputStream i mostrar-los per pantalla. </p>
 <p>El codi podria ser el següent:</p>
-<pre><code class="language-Java">try {
+<pre><code class="language-java">try {
     FileOutputStream fos = new FileOutputStream(strPath + &quot;pluges.dat&quot;);
     DataOutputStream dos = new DataOutputStream(fos);
 
@@ -1144,7 +1159,7 @@ catch (IOException e) {
 </code></pre>
 <h2 id="flux-printstream">Flux PrintStream</h2>
 <p>La classe PrintStream deriva de FilterOutputStream i el valor afegit d’aquesta classe derivada és que permet afegir el caràcter final de línia als fitxers. Aquests tipus de fluxos són sempre d’eixida i s’associen a un altre flux de bytes de més baix nivell</p>
-<pre><code class="language-Java">PrintStream ps = new PrintStream(new FileOutputStream(&quot;Complex.dat&quot;));
+<pre><code class="language-java">PrintStream ps = new PrintStream(new FileOutputStream(&quot;Complex.dat&quot;));
 </code></pre>
 <table>
 <thead>
@@ -1219,12 +1234,12 @@ catch (IOException e) {
 </table>
 <p><strong>InputStremaReader</strong>
 Els fluxos de la classe IntpuStreamReader envolten a un flux de bytes; converteixen la seqüència de bytes en seqüència de caràcters i així ja no ho hem de fer nosaltres; la classe deriva directament de Reader, pel que té disponibles els mètodes read() de la seua classe pare per la lectura de caràcters</p>
-<pre><code class="language-Java">InputStreamReader ent = new InputStreamReader(Sytem.in);
+<pre><code class="language-java">InputStreamReader ent = new InputStreamReader(Sytem.in);
 </code></pre>
 <p><strong>FileReader</strong></p>
 <p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus FileReader, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
 <p>Per exemple</p>
-<pre><code class="language-Java">FileReader fr = new FileReader(&quot;cartes.dat&quot;);
+<pre><code class="language-java">FileReader fr = new FileReader(&quot;cartes.dat&quot;);
 </code></pre>
 <p>En general no resulta eficient llegir directament d’un flux d’aquest tipus, s’utilitzarà un flux BufferedReader.</p>
 <p><strong>BufferedReader</strong></p>
@@ -1232,10 +1247,10 @@ Els fluxos de la classe IntpuStreamReader envolten a un flux de bytes; convertei
 <p>El constructor de la classe té un argument de tipus Reader, FileReader o InputStreamReader, el flux creat disposa d’un buffer de grandària suficient, el qual es pot especificar en el constructor amb un segon argument encara que no fa falta. Exemples de fluxos amb buffer;</p>
 <p><strong>Writer</strong></p>
 <p>Els arxius de text són arxius de caràcters, es poden crear fluxos de bytes o de caràcters derivats de la classe abstracta Writer, la qual defineix mètodes write() per escriure arrays de caràcters o cadenes, d’aquesta classe es deriva OutputStreamWriter que permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
-<pre><code class="language-Java">OutputStreamWriter ot = new OutputStreamWriter(new FileOutputStream(arxiu));
+<pre><code class="language-java">OutputStreamWriter ot = new OutputStreamWriter(new FileOutputStream(arxiu));
 </code></pre>
 <p>No es freqüent utilitzar directament fluxos OutputStreamWriter, encara que resulta interessant perquè la classe FileWriter és una extensió d’ella. Dissenyada per escriure en un arxiu de caràcters, els fluxos d’aquest tipus escriuen caràcters amb el mètode write() a l’arxiu al que s’associa el flux quan es crea l’objecte.</p>
-<pre><code class="language-Java">FileWriter nr = new FileWriter(&quot;cartes.dat&quot;);
+<pre><code class="language-java">FileWriter nr = new FileWriter(&quot;cartes.dat&quot;);
 nr.write(&quot;Frase qualsevol a escriure&quot;);
 </code></pre>
 <p><strong>PrintWriter</strong></p>
@@ -1305,28 +1320,28 @@ nr.write(&quot;Frase qualsevol a escriure&quot;);
 <p>Per tal que un objecte continue existint una vegada ja hem finalitzat l’execució d’un programa o aplicació l’hem de desar a un arxiu d’objectes. Per poder aconseguir açò, utilitzarem les classes ObjectInputStream i ObjectOutputStream</p>
 <h4 id="classe-dobjecte-persistent">Classe d'objecte persistent</h4>
 <p>La declaració de la classe els objectes de la qual van a ser persistents, han de implementar la interfície «serializable» del paquet java.io, la qual és buida, no declara mètodes, simplement indica a la màquina virtual de Java que les instàncies d’aquestes classes podran gravar-se en un fitxer.</p>
-<pre><code class="language-Java">class racional implements serializable { ... }
+<pre><code class="language-java">class racional implements serializable { ... }
 </code></pre>
 <h4 id="flux-objectoutputstream">Flux ObjectOutputStream</h4>
 <p>Els fluxos de la classe ObjectOutputStream s’utilitzen per gravar objectes persistents. El mètode writeObject() escriu qualsevol objecte d’una classe serializable en el flux de bytes associat. Pot llençar excepcions del tipus IOException que és necessari processar.</p>
-<pre><code class="language-Java">public void writeObject(Object obj) throws IOException;
+<pre><code class="language-java">public void writeObject(Object obj) throws IOException;
 </code></pre>
 <p>El constructor de la classe espera un argument de tipus OutputStream, que és la base dels fluxos d’eixida a nivell de bytes, per tant, per crear aquest tipus de fluxos primer es crea un d’eixida a nivell de bytes associat a un arxiu extern i a continuació, es passa com argument al constructor de ObjectOutputStream, per exemple:</p>
-<pre><code class="language-Java">FileOutputStream bn = new FileOutputStream(&quot;dadesRac.dat&quot;);
+<pre><code class="language-java">FileOutputStream bn = new FileOutputStream(&quot;dadesRac.dat&quot;);
 ObjectOutputStream fobj = new ObjectOuputStream(bn);
 </code></pre>
 <p>A continuació es pot escriure qualsevol objecte al flux:</p>
-<pre><code class="language-Java">Persona juan = new Persona(&quot;Juan&quot;,&quot;Martin&quot;, &quot;123432123X&quot;);
+<pre><code class="language-java">Persona juan = new Persona(&quot;Juan&quot;,&quot;Martin&quot;, &quot;123432123X&quot;);
 fobj.writeObject(juan);
 String str = new String (&quot;Cadena de favors&quot;);
 fobj.write(str);
 </code></pre>
 <h4 id="flux-objectinputstream">Flux ObjectInputStream</h4>
 <p>El objectes guardats en arxius amb fluxos de la classe ObjectOutputStream es recuperen i lligen amb fluxos d’entrada del tipus ObjectInputStream, aquesta classe és una extensió d’InputStream, a més a més, implementa la interfície DataInput, per això disposa de diversos mètodes d’entrada (read) per cadascun dels tipus de dades com readInt() o altres. El mètode més important definit per la classe ObjectInputStream és readObject(), el qual llig un objecte del flux d’entrada, és a dir, de l’arxiu associat al flux de baix nivell; l’objecte llegit es va escriure en el seu moment amb el mètode writeObject()</p>
-<pre><code class="language-Java">public Object readObject() throws IOException;
+<pre><code class="language-java">public Object readObject() throws IOException;
 </code></pre>
 <p>El constructor de fluxos ObjectInputStreeam té com entrada un altre flux de baix nivell de qualsevol tipus derivat d’InputStream, per exemple: FileInputStream associat amb l’arxiu d’objectes. A continuació es crea un flux d’entrada per llegir els objectes de l’arxiu «archivoObjects.dat»</p>
-<pre><code class="language-Java">ObjectInputStream obj = new ObjectInputStream(new FileInputStream(&quot;arxiuObjects.dat&quot;));
+<pre><code class="language-java">ObjectInputStream obj = new ObjectInputStream(new FileInputStream(&quot;arxiuObjects.dat&quot;));
 </code></pre>
 <p>El constructor llença una excepció si, per exemple, l’arxiu no existeix, aquella és del tipus «ClassNotFoundException» o «IOException», és necessari poder capturar aquestes excepcions</p>
 <h2 id="excepcions">Excepcions</h2>
@@ -1355,7 +1370,7 @@ fobj.write(str);
 <li>S’executa el bloc finally (opcional)</li>
 </ol>
 <p>Exemple. Suposem una classe persona que incorporarem a la nostra aplicació. Aquesta classe té un constructor al qual se li passa el DNI, imaginem ara que de la nostra aplicació instanciem un objecte de la classe persona a la qual l direm Joan però quan cridem al constructor de la classe no li passem un DNI, aquest «mal ús» de la classe Persona, llençaria una excepció que hauria de capturar la nostra aplicació al bloc catch i és ací, en aquest bloc d’instruccions, en el que s’hauria de corregir la situació o avisar a l’usuari de l’aplicació del que ha passat.</p>
-<pre><code class="language-Java">public void escolta () throws Exception {
+<pre><code class="language-java">public void escolta () throws Exception {
    // Codi del metode escolta
    // ...
    throw new Exception ();
@@ -1375,7 +1390,7 @@ public static void main (String [] args) {
 <h3 id="bloc-try">Bloc try</h3>
 <p>Dins del bloc try s’han de posar aquelles sentències que poden llençar alguna excepció entre claudàtors, després del claudàtor de tancament s’ha de posar el bloc catch o controlador d’excepcions almenys un bloc catch. Si l’excepció que es produeix coincideix amb algun dels paràmetres dels blocs catch que hi han, s’executen les sentències que es troben a dintre.</p>
 <p>Els blocs try, de la mateixa forma que amb totes les sentències de programació estructurada, es poden niar.</p>
-<pre><code class="language-Java">public static void main (String [] args) {
+<pre><code class="language-java">public static void main (String [] args) {
    try {
       escolta();
 
@@ -1414,7 +1429,6 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -1475,7 +1489,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
       
     
   </body>

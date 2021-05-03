@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -51,9 +51,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,8 +96,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -232,6 +232,21 @@
   
     <li class="md-nav__item">
       <a href="../Tema%203.%20El%20llenguatge%20Java/" class="md-nav__link">
+        Tema 3. El llenguatge Java
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%203.%20Java/" class="md-nav__link">
         Tema 3. El llenguatge Java
       </a>
     </li>
@@ -697,7 +712,7 @@ Per exemple, per saber conduir un cotxe no necessite saber al detall el funciona
 <p>Una funció és un troç de codi que realitza una funció concreta i de vegades torna algun valor com a resultat.</p>
 <h2 id="funcions-en-java">Funcions en Java</h2>
 <p>Una funció en Java té la següent estructura:</p>
-<pre><code class="language-Javascript">[acces] [modificador] tipus nomFuncio([tipus nomArgument,[tipo nomArgument]...])
+<pre><code class="language-java">[acces] [modificador] tipus nomFuncio([tipus nomArgument,[tipo nomArgument]...])
 {
     /*
         * Bloque de instrucciones
@@ -717,7 +732,7 @@ On:
 - <strong>nomArgument:</strong> paràmetres que se li passen a la funció. Aquestos paràmetres funcionaran com variables locals a la funció.</p>
 </blockquote>
 <h3 id="exemples">Exemples</h3>
-<pre><code class="language-Java">// Funció simple 
+<pre><code class="language-java">// Funció simple 
 void diguesHola () {
   System.out.println(&quot;Hola Mon&quot;);
 }
@@ -748,11 +763,11 @@ String canviaNom (String strNom) {
 - En el cas de les funcions que no tornen res (void), també conegues com a procediments, poden usar la sentència return però sense cap valor i només s'usaria per acabar amb l'execució de la funció. </p>
 <h3 id="crida-a-un-funcio">Crida a un funció</h3>
 <p>Per tal de cridar una funció en Java s'ha de fer de la següent forma:</p>
-<pre><code class="language-Java">nombre([valor,[valor]...]);
+<pre><code class="language-java">nombre([valor,[valor]...]);
 </code></pre>
 <p>Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
 <h3 id="exemple-1-funcions-declaracio-i-crida">Exemple 1. Funcions: declaració i crida</h3>
-<pre><code class="language-Java">// Declaració de la funció holaMon
+<pre><code class="language-java">// Declaració de la funció holaMon
 void holaMon (String strNom) {
   System.out.println(&quot;Hola: &quot; + strNom);
 }
@@ -811,7 +826,7 @@ int res = suma (10,3,10);
 <p>És possible passar un o més valors a una funció quan es crida. Recordeu que un valor passat a una funció es diu <strong>argument</strong>. Dins la funció, la variable que rep l'argument es diu <strong>paràmetre</strong>. Els paràmetres es declaren dins dels parèntesis que segueixen a el nom de mètode. La sintaxi de declaració de paràmetre és la mateixa que la utilitzada per a les variables.</p>
 <p>Un paràmetre està dins de l'abast de la seua funció, i a banda de la seva tasca especial de rebre un argument, actua com qualsevol altra variable local.</p>
 <p>Ací hi ha un exemple simple de l'ús de paràmetres. Dins de la classe ComprobarNumero, el mètode Espar () retorna true si el valor que es passa és parell. Retorna false en cas contrari. Per tant, Espar () té un tipus de retorn booleà.</p>
-<pre><code class="language-Java">// Un exemple simple de l'ús de paramètres
+<pre><code class="language-java">// Un exemple simple de l'ús de paramètres
 class ComprovarNumero {
     // Retorna true si x es parell
     boolean esParell(int x){
@@ -830,7 +845,7 @@ class ParametroDemo {
 }
 </code></pre>
 <p>Un mètode pot tenir més d'un paràmetre. Simplement declare cada paràmetre, separant un el següent amb una coma. Per exemple, la classe Divisor defineix un mètode anomenat esDivisor () que determina si el primer paràmetre és divisor de el segon.</p>
-<pre><code class="language-Java">// Un exemple sempre de l'ús de paramètres
+<pre><code class="language-java">// Un exemple sempre de l'ús de paramètres
 
 class Divisor {
 
@@ -859,7 +874,7 @@ class DivisorDemo {
 <p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
 <p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús de trucada per referència.</p>
 <p>Els canvis en l'objecte dins el mètode es reflecteixen en l'objecte utilitzat com a argument.</p>
-<pre><code class="language-Java">// Programa Java per demostrar el pas d'objectes a funcions
+<pre><code class="language-java">// Programa Java per demostrar el pas d'objectes a funcions
 class Demo {
     int a, b;
     Demo(int i, int j) {
@@ -883,12 +898,12 @@ class Demo {
     }
 </code></pre>
 <p>Eixida</p>
-<pre><code class="language-Java">obj1 == obj2: true
+<pre><code class="language-java">obj1 == obj2: true
 obj1 == obj3: false
 </code></pre>
 <p>Explicació en imatges:
 1. Es creen tres objectes:</p>
-<pre><code class="language-Java">Demo ob1 = new Demo(100, 22);
+<pre><code class="language-java">Demo ob1 = new Demo(100, 22);
 Demo ob2 = new Demo(100, 22);
 Demo ob3 = new Demo(-1, -1);
 </code></pre>
@@ -900,18 +915,18 @@ Demo ob3 = new Demo(-1, -1);
 <ol>
 <li>Com cridem al mètode equalTo, la referència 'obj' s'assignarà a l'objecte que es passa com a paràmetre, és a dir, 'obj' es referirà a 'obj2' quan la següent sentència s'execute.</li>
 </ol>
-<pre><code class="language-Java">System.out.println(&quot;ob1 == ob2: &quot; + ob1.equalTo(ob2));
+<pre><code class="language-java">System.out.println(&quot;ob1 == ob2: &quot; + ob1.equalTo(ob2));
 </code></pre>
 <p><img alt="Pas 3" src="../assets/Tema3/Explicacio3.png" /></p>
 <ol>
 <li>Ara com podem observar, es crida al mètode equalTo sobre 'obj1' i 'obj' fa referència a 'obj2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si (condició) és veritat, aleshores tornarà true.</li>
 </ol>
-<pre><code class="language-Java">if(obj.a == a &amp;&amp; obj.b == b)
+<pre><code class="language-java">if(obj.a == a &amp;&amp; obj.b == b)
 </code></pre>
 <ol>
 <li>De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència.</li>
 </ol>
-<pre><code class="language-Java">System.out.println(&quot;ob1 == ob3: &quot; + ob1.equalTo(ob3));
+<pre><code class="language-java">System.out.println(&quot;ob1 == ob3: &quot; + ob1.equalTo(ob3));
 </code></pre>
 <p><img alt="Pas 4" src="../assets/Tema3/Explicacio4.png" /></p>
 <ol>
@@ -923,7 +938,7 @@ Demo ob3 = new Demo(-1, -1);
 </blockquote>
 <p>L'exemple clàssic de recursivitat és el càlcul de l'factorial d'un nombre. El factorial d'un nombre N és el producte de tots els nombres enters que es trobin entre 1 i N. Per exemple, el factorial de 3 és 1 × 2 × 3, és a dir, és de 6.</p>
 <p>El següent programa mostra una forma recursiva de calcular el factorial d'un nombre. Per a propòsits de comparació, també s'inclou un equivalent no recursiu (iteratiu).</p>
-<pre><code class="language-Java">// Un simple programa de recursividad
+<pre><code class="language-java">// Un simple programa de recursividad
 class Factorial
 {
     // Esto es un método recursivo
@@ -956,7 +971,7 @@ class Factorial
 }
 </code></pre>
 <p>Eixida</p>
-<pre><code class="language-Java">Factorial utilizando un método recursivo:
+<pre><code class="language-java">Factorial utilizando un método recursivo:
 El factorial de 3 es: 6
 El factorial de 6 es: 720
 
@@ -968,7 +983,7 @@ El factorial de 6 es: 720
 <p>Les versions recursives de moltes rutines poden executar-se una mica més lentament que els seus equivalents iteratius causa de la sobrecàrrega addicional de les trucades a mètodes addicionals. Massa crides recursives a un mètode podrien causar un desbordament de la pila.</p>
 <p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que la pila s 'ha esgotat. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una excepció. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torni boja.</p>
 <p>El principal avantatge de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
-<pre><code class="language-Java">int fact(int n)
+<pre><code class="language-java">int fact(int n)
 {
     // condición base equivocada (esto causa
     // stack overflow).
@@ -994,7 +1009,6 @@ El factorial de 6 es: 720
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -1002,7 +1016,7 @@ El factorial de 6 es: 720
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../Tema%203.%20El%20llenguatge%20Java/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../Tema%203.%20Java/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1055,7 +1069,7 @@ El factorial de 6 es: 720
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
       
     
   </body>

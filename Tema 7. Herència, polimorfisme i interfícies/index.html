@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -51,9 +51,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,8 +96,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -232,6 +232,21 @@
   
     <li class="md-nav__item">
       <a href="../Tema%203.%20El%20llenguatge%20Java/" class="md-nav__link">
+        Tema 3. El llenguatge Java
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%203.%20Java/" class="md-nav__link">
         Tema 3. El llenguatge Java
       </a>
     </li>
@@ -756,14 +771,14 @@ El primer ens permet crear una jerarquia de classes relacionades entre sí de ta
 <p>La classe base en una jerarquia d’herència és la classe que conté els atributs i mètodes comuns a totes les classes derivades i és per això que s’evita la redundància del codi que es produiria si haguérem de repetir codi comú a cadascuna de les subclasses, per tant, es podria deduir que una classe derivada és de facto una ampliació de les funcionalitats de la classe base ja que contindrà tant els membres de la classe base com els que s'afegeixen de més a la classe derivada.</p>
 <h3 id="declaracio-duna-classe-derivada">Declaració d'una classe derivada</h3>
 <p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada ‘extends’. Mira l’exemple següent:</p>
-<pre><code class="language-Java">public class Guitarra extends Instrument {
+<pre><code class="language-java">public class Guitarra extends Instrument {
 
 }
 </code></pre>
 <p>Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama de classes quedaria així:</p>
 <p><img alt="Banda de Rock" src="../assets/Tema6/RockBand2.png" /></p>
 <p>El codi en Java resultant seria el següent:</p>
-<pre><code class="language-Java">public class Instrument {
+<pre><code class="language-java">public class Instrument {
 
 }
 
@@ -783,7 +798,7 @@ Ampliem el nostre exemple de banda de rock anterior i afegim atributs i membres 
 <p>Ja més específicament d’una bateria hem de saber el total de Toms que té, el total de pedals (hi ha bateries amb doble pedal) i el total de plats a banda de poder tocar un redoble. D’una guitarra hem d’especificar quin ampli utilitza i quantes cordes té (pot tenir-ne fins 12). Finalment pel que fa al teclat, sabrem el nombre de tecles que té i podrà tocar melodies.</p>
 <p><img alt="Banda de Rock" src="../assets/Tema6/RockBand3.png" /></p>
 <p>El codi resultant d’aquest disseny seria el següent:</p>
-<pre><code class="language-Java">public class Instrument {
+<pre><code class="language-java">public class Instrument {
 
     public Instrument () {
 
@@ -862,7 +877,7 @@ public class Bateria extends Instrument {
 <p>Seguint amb l’exemple de la nostra banda de rock mireu el següent codi:</p>
 <p><img alt="Banda de Rock" src="../assets/Tema6/RockBand4.png" /></p>
 <p>Com es pot observar a la imatge anterior hi ha una sobrecarrega del mètode afinar a cada classe derivada perquè seria el mateix que el de la classe pare però amb diferents paràmetres mentre que el mètode tocar està sobreescrit ja que la interfície és idèntica. En codi podria quedar de la següent forma:</p>
-<pre><code class="language-Java">public class Instrument {
+<pre><code class="language-java">public class Instrument {
 
     public Instrument () {
 
@@ -954,7 +969,7 @@ public class Bateria extends Instrument {
 <h3 id="constructors-en-herencia">Constructors en herència</h3>
 <p>De la mateixa manera que s’hereten mètodes i atributs també s’hereten els constructors de la classe. D’aquesta forma si declarem un objecte d’una classe derivada, primer s’executa el constructor de la classe base i a continuació s’executa la part de codi de la classe derivada.</p>
 <p>Continuant amb la nostra banda de rock farem algunes modificacions. Afegim un constructor parametritzat a la classe instrument que s’encarregarà d’inicialitzar els atributs amo, any, marca i model.</p>
-<pre><code class="language-Java">public class Instrument {
+<pre><code class="language-java">public class Instrument {
 
     private String amo;
     protected int any;
@@ -984,7 +999,7 @@ public class Bateria extends Instrument {
 }
 </code></pre>
 <p>Per l’altre costat a la classe Guitarra hi afegim també un nou constructor (sobrecarregat) amb els paràmetres: amo, any, marca, model, número de cordes i l’amplificador que utilitza.</p>
-<pre><code class="language-Java">public class Guitarra extends Instrument {
+<pre><code class="language-java">public class Guitarra extends Instrument {
 
     private int numCordes;
     private String ampli;
@@ -1013,7 +1028,7 @@ public class Bateria extends Instrument {
 }
 </code></pre>
 <p>Amb aquest disseny de classes podríem per exemple executar el següent codi</p>
-<pre><code class="language-Java">public class Test {
+<pre><code class="language-java">public class Test {
     public static void main (String [] args ) {
         Guitarra lesPaul = new Guitarra (&quot;Vicent&quot;, 2007, &quot;Gibson&quot;, &quot;LesPaul&quot;, 6, &quot;Marshall&quot;);
         lesPaul.afinar('R');
@@ -1028,15 +1043,15 @@ public class Bateria extends Instrument {
 <p>Que executaria el següent codi?</p>
 <p><img alt="Exemple Constructors" src="../assets/Tema6/Exemple1.png" /></p>
 <p>A més a més, super() també ens permet cridar a mètodes de la classe pare de la següent forma:</p>
-<pre><code class="language-Java">super.metode(argumnets);
+<pre><code class="language-java">super.metode(argumnets);
 </code></pre>
 <h3 id="conversio-entre-subclasse-i-superclasse">Conversió entre subclasse i superclasse</h3>
 <p>De vegades en programació hem de poder convertir entre tipus de dades, aquest mecanisme s’anomena també «cast». Per exemple si tenim un double amb valor 6,8 i volem convertir-lo en un moment determinat de la nostra aplicació a un int, ho fariem de la següent forma:</p>
-<pre><code class="language-Java">double d = 6,8;
+<pre><code class="language-java">double d = 6,8;
 int i = (int)d;
 </code></pre>
 <p>Entre objectes també existeix la possibilitat de aplicar aquest mecanisme. Al nostre model de banda de rock, ens podríem trobar amb la següent situació:</p>
-<pre><code class="language-Java">Instrument inst = new Instrument ();
+<pre><code class="language-java">Instrument inst = new Instrument ();
 Guitarra git = new Guitarra ();
 Teclat tcl = new Teclat ();
 inst = git;  // Conversió automàtica
@@ -1044,7 +1059,7 @@ inst = tcl;  // Conversió automàtica
 </code></pre>
 <h3 id="classes-no-derivables-atribut-final">Classes no derivables: atribut final</h3>
 <p>Si volem que alguna classe en concret no siga ja més derivable, és a dir, que no volem que es creen més subclasses a partir d’una classe concreta, ho indiquem utilitzant la paraula reservada «final»</p>
-<pre><code class="language-Java">public final class Bateria extends Instrument {
+<pre><code class="language-java">public final class Bateria extends Instrument {
     public Bateria () {
 
     }
@@ -1077,7 +1092,7 @@ inst = tcl;  // Conversió automàtica
 <p>Les classes i mètodes abstractes són un «fenomen» que es dona en algunes de les generalitzacions que ens apareixen quan analitzem una realitat des del punt de vista de la programació orientada a objectes. És a dir, l’abstracció com a tècnica en POO només es pot donar en l’herència entre classes, concretament a les classes més altes de la jerarquia.</p>
 <p>Una classe abstracta és aquella de la qual mai s’instanciarà cap objecte. Per exemple Instrument a la nostra banda de rock on o s’instancia una guitarra, un baix o una bateria però mai un instrument com a tal.</p>
 <p>A nivell de codi l’únic canvi que es produeix és que a la classe general «Instrument» se li afegeix la paraula reservada abstract com a modificador de comportament de la classe.</p>
-<pre><code class="language-Java">public abstract class Instrument {
+<pre><code class="language-java">public abstract class Instrument {
 
 }
 </code></pre>
@@ -1111,7 +1126,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <p>Per implementar una interfície, una classe ha de proporcionar cossos (implementacions) per als mètodes descrits per la interfície. Cada classe és lliure de determinar els detalls de la seva pròpia implementació. Dues classes poden implementar la mateixa interfície de diferents maneres, però cada classe encara admet el mateix conjunt de mètodes. Per tant, el codi que té. Herència, polimorfisme i Interfícies coneixement de la interfície pot usar objectes de qualsevol classe, ja que la interfície amb aquests objectes és la mateixa.</p>
 <h3 id="implementacio-duna-interficie">Implementació d'una interfície</h3>
 <p>La interfície especifica el comportament comú que tenen un conjunt de dades el qual es realitza en cadascuna d’elles i es coneix també com a implementació d’una interfície. La sintaxis és similar a la derivació o extensió d’una classe amb la paraula reservada implements en llo d’extends.</p>
-<pre><code class="language-Java">Class nomClasse implements nomInterficie {
+<pre><code class="language-java">Class nomClasse implements nomInterficie {
 // definició d’atributs
 // implementació dels mètodes de la classe
 // implementació dels mètodes de la interfícies
@@ -1120,7 +1135,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <p>La classe que implementa la interfície ha d’especificar el codi (la implementació) de cadascun dels mètodes, en cas de no fer-ho, la classe es. Herència, polimorfisme i Interfícies converteix en abstracta i com a tal s’ha de declarar. És a dir, si una classe implementa una interfície, està obligada a implementar tots els seus mètodes.</p>
 <p>Per tal d’il·lustrar amb un exemple sobre una interfície, utilitzarem un comandament a distància de qualsevol dispositiu electrònic. Es suposa que des d’un comandament a distància podrem: encendre i apagar el dispositiu, pujar i baixar el volum, silenciar etc..</p>
 <p>La nostra interfície creada amb Java podria ser com la següent:</p>
-<pre><code class="language-Java">public class Comandament {
+<pre><code class="language-java">public class Comandament {
     void engegar ();
     void apagar ();
     void pujarVolum(int increment);
@@ -1131,7 +1146,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <p>Els mètodes declarats ací a la interfície Comandament deurien ser autoexplicatoris. Hem inclòs només unes poques de les múltiples accions que es poden realitzar amb un comandament a distància d’un dispositiu electrònic i encara se li podrien afegir algunes més ben segur. </p>
 <p>No hi ha definició de cap dels mètodes ací, Els mètodes declarats en una interfície són sempre abstractes i sempre públics per defecte. Ara qualsevol classe que necessite de l’ús de la funcionalitat proveïda per Comandament només ha de delcarar que implementa la interficie a més a més de definir cadascun dels mètodes que la formen. </p>
 <p>Posem per exemple una televisió, el codi Java seria el següent:</p>
-<pre><code class="language-Java">public class TV implements comandament {
+<pre><code class="language-java">public class TV implements comandament {
     public void engegar () {
         // Codi necessari per engegar la televisió
     }
@@ -1155,11 +1170,11 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 </code></pre>
 <h3 id="jerarquia-dinteficies">Jerarquia d'intefícies</h3>
 <p>Les interfícies també es poden organitzar de forma jerarquica de manera que els mètodes siguen heredats</p>
-<pre><code class="language-Java">interficie extends interficie2 extends interficie3...
+<pre><code class="language-java">interficie extends interficie2 extends interficie3...
 </code></pre>
 <h3 id="herencia-de-classes-i-implementacio-dinterficies">Herència de classes i implementació d'interfícies</h3>
 <p>es interfícies no són classes ja que especifiquen un comportament mitjançant mètodes per la classe que els implemente; per això, una classe pot heretar de la seua classe base i al mateix temps implementar una interfície. Per exemple si tenim una classe base anomenada Electrodomèstic de la qual hereten una sèrie de classes com podrien ser: Televisió, DVD, Microones, Forn, Nevera etc..i a més a més també disposem d’una interfície Comandament,  podríem crear una aplicació en la que la televisió herete de la classe general electrodomèstic i a banda implemente la interfície comandament com hem vist abans.</p>
-<pre><code class="language-Java">public class Televisio extends Electrodomestic implements comandament { ... }
+<pre><code class="language-java">public class Televisio extends Electrodomestic implements comandament { ... }
 </code></pre>
 <h3 id="classes-internes">Classes internes</h3>
 <p>Una classe interna és una classe que es declara dintre d’una altra classe.</p>
@@ -1173,7 +1188,6 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -1234,7 +1248,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
       
     
   </body>

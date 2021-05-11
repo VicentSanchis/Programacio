@@ -186,8 +186,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%201.%20Activitats/" class="md-nav__link">
-        Tema 1. Introducció a la programació. Activitats
+      <a href="../Instal%C2%B7lar%20i%20configurar%20LAMP/" class="md-nav__link">
+        Instal·lar i configurar LAMP.
       </a>
     </li>
   
@@ -203,6 +203,21 @@
     <li class="md-nav__item">
       <a href="../Tema%201.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
         Tema 1. Introducció a la programació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" class="md-nav__link">
+        Tema 10. Accés a dades
       </a>
     </li>
   
@@ -509,23 +524,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%203.%20Java/" class="md-nav__link">
-        Tema 3. El llenguatge Java
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-nav__link">
-        Tema 3. Programació Modular
+        Tema 4. Programació Modular
       </a>
     </li>
   
@@ -540,7 +540,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
-        Tema 4. Tipus Compostos de Dades
+        Tema 5. Tipus Compostos de Dades
       </a>
     </li>
   
@@ -555,7 +555,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%206.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
-        Tema 5. Programació Orientada a Objectes.
+        Tema 6. Programació Orientada a Objectes.
       </a>
     </li>
   
@@ -570,7 +570,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%207.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
-        Tema 6. Herència, polimorfisme i interfícies
+        Tema 7. Herència, polimorfisme i interfícies
       </a>
     </li>
   
@@ -585,7 +585,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%208.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
-        Tema 7. Entrada, eixida i excepcions
+        Tema 8. Entrada, eixida i excepcions
       </a>
     </li>
   
@@ -600,7 +600,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%209.%20Gr%C3%A0fics%201.%20Java%20Swing/" class="md-nav__link">
-        Tema 8. Gràfics 1. Java Swing
+        Tema 9. Gràfics 1. Java Swing
       </a>
     </li>
   
@@ -912,77 +912,76 @@
 <p>Al final tot programa s'encarrega de processar informació i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
 <p>Una variable és com un contenidor que té associat un tipus (enter, real, caracter) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra.</p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong></p>
-<pre><code class="language-java">// Declaració d'una variable en Java
-// type identifier;
-// Per exemple:
-int a;
-float b;
-long j;
-char c;
-int i = 0; // En aquesta declaració s'inclou també la inicialització del seu valor.
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// Declaració d&#39;una variable en Java</span>
+<span class="c1">// type identifier;</span>
+<span class="c1">// Per exemple:</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">b</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">j</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// En aquesta declaració s&#39;inclou també la inicialització del seu valor.</span>
+</code></pre></div>
 <p>Les varialbes com a contenidors d'informació, poden variar el seu valor durant l'execució del programa.</p>
 <h3 id="constants">Constants</h3>
 <p>Les constants en java són semblants a les variables, és a dir, són contenidors d'informació, tenen un identificador i un tipus bàsic associat però el seu valor no canvia durant l'execució del programa.
 Les variables en java es defineixen de la següent forma:</p>
-<pre><code class="language-java">// Constant en java
-static final int prova = 10; // Prova valdrà 10 durant tot el programa. 
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// Constant en java</span>
+<span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">prova</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// Prova valdrà 10 durant tot el programa. </span>
+</code></pre></div>
 <h3 id="comentaris">Comentaris</h3>
 <p>Els comentaris a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga més fàcil de llegir millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. 
 En java tenim tres tipus de comentaris:
 - Comentaris en línia:
   - S'utilitzen per comentar parts concretes del codi.</p>
-<pre><code class="language-java">// Comentari d'una sola línia en Java
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// Comentari d&#39;una sola línia en Java</span>
+</code></pre></div>
 <ul>
 <li>Comentaris de vàries línies: Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
 </ul>
-<pre><code class="language-java">/* Comentari de més d'una línia
-  linia 1
-  linia 2
-  linia 3
-  linia final */
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Comentari de més d&#39;una línia</span>
+<span class="cm">  linia 1</span>
+<span class="cm">  linia 2</span>
+<span class="cm">  linia 3</span>
+<span class="cm">  linia final */</span>
+</code></pre></div>
 <ul>
 <li>Comentaris de documentació: Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
 </ul>
-<pre><code class="language-java">/**
-* Troba la mitjana de tres números!
-* El programa FindAvg implementa una aplicacio que
-* simplement calcula la mitjana de tres enteros i els mostra
-* a la eixida per pantalla.
-*
-* @author  Aleix Caminou
-* @version 1.0
-* @since   2020-2-2
-*/
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">* Troba la mitjana de tres números!</span>
+<span class="cm">* El programa FindAvg implementa una aplicacio que</span>
+<span class="cm">* simplement calcula la mitjana de tres enteros i els mostra</span>
+<span class="cm">* a la eixida per pantalla.</span>
+<span class="cm">*</span>
+<span class="cm">* @author  Aleix Caminou</span>
+<span class="cm">* @version 1.0</span>
+<span class="cm">* @since   2020-2-2</span>
+<span class="cm">*/</span>
+</code></pre></div>
 <h2 id="operadors-i-expressions">Operadors i expressions</h2>
 <p>Les expressions són equacions matemàtiques que solen representar càlculs, per exemple: 3<em>x + 7</em>z. L'expressió anterior la formen els següents elements: dos literals enters: 3 i 7; dos identificadors de variables (no sabem el tipus) x i z; i els simbols * i +.
 Aquestos simbols són els operadors, concretament * és l'operador aritmètic de multiplicació i el símbol + representa l'operador de suma. Aquesta expressió tindrà finalment un valor, per exemple, sí x val 3 i z val 2, el resultat de l'expressió seria 23.</p>
 <h3 id="operador-assignacio">Operador assignació</h3>
 <p>L'operador assignació en Java és el símbol '=' i s'utilitza de la següent forma </p>
-<pre><code class="language-java">// variable = expressió
-// Seguint l'exemple anterior
-int x=3, y, z=2;
-y = 3*x + 7*z;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// variable = expressió</span>
+<span class="c1">// Seguint l&#39;exemple anterior</span>
+<span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">z</span><span class="p">;</span>
+</code></pre></div>
 <p>On l'operador '=' assignaria el valor de l'expressió '3x+2z' a la variable y, és a dir, executada aquesta acció dins de la variable y hauríem depositat el valor 23.
 Altres exemples d'ús de l'operador assignació:</p>
-<pre><code class="language-java">int a, b, c;
-a = b = c = 10;
-// Tant a com b com c tindríen valor 10
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="c1">// Tant a com b com c tindríen valor 10</span>
 
-int i = 3;
-i = i * 3;
-// i valdria 9
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+<span class="c1">// i valdria 9</span>
 
-int j = 2;
-j *= 2; 
-// Aquesta manera peculiar d'usar l'operador assignació és el mateix que j = j * 2;
-</code></pre>
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">j</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span> 
+<span class="c1">// Aquesta manera peculiar d&#39;usar l&#39;operador assignació és el mateix que j = j * 2;</span>
+</code></pre></div>
 <h3 id="operadors-aritmetics">Operadors aritmètics</h3>
 <p>Els operador aritmètics en Java serveixen per realitzar operacions bàsiques algebraiques com: la suma, resta, multiplicació o divisió.
 - <strong>Suma:</strong> símbol (+). Exemple: 4+5
@@ -992,15 +991,15 @@ j *= 2;
 - <strong>Divisió (Residu):</strong> símbol (%). Exemple 10%2.</p>
 <h3 id="operadors-increment-i-decrement">Operadors increment i decrement</h3>
 <p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variable a la qual s'apliquen.</p>
-<pre><code class="language-java">int x = 10;
-x ++; // Aquest codi seria equivalent a x = x + 1;
-x --; // Aquest codi seria equivalent a x = x -1 ;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x + 1;</span>
+<span class="n">x</span> <span class="o">--</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x -1 ;</span>
+</code></pre></div>
 <p>Aquestos operadors també es poden posar abans de la variable produint el mateix efecte</p>
-<pre><code class="language-java">int x = 10;
-++ x; // Aquest codi seria equivalent a x = x + 1;
--- x; // Aquest codi seria equivalent a x = x -1 ;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="o">++</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x + 1;</span>
+<span class="o">--</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x -1 ;</span>
+</code></pre></div>
 <h3 id="operadors-relacionals">Operadors relacionals</h3>
 <p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors true o false. Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé true o false.
 Els operadors relacionals a Java són:
@@ -1019,16 +1018,16 @@ Els operadors relacionals a Java són:
 </ul>
 <h3 id="operador-condicional">Operador condicional</h3>
 <p>Java inclou un operador especial de tipus ternari que de vegades s'utilitza per substituir algunes estructures if then else. Aquest és l'operador <strong>?</strong> i la seua forma general és:</p>
-<pre><code class="language-java">expressio1 ? expressio2 : expressio 3;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">expressio1</span> <span class="o">?</span> <span class="n">expressio2</span> <span class="p">:</span> <span class="n">expressio</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
 <p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a true, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a false, s'executaria l'expressió 2.
 Exemple</p>
-<pre><code class="language-java">double temperatura; // Variable que ens indica la temperatur ambient
-boolean AC_ON = false;  // Variable booleana que ens indica si l'aire condicionat està en marxa
-temperatura &gt; 25 ? AC_ON = true : AC_ON = false;
-// Bàsicament el que faria aquesta espressió seria engegar l'aire condicionat si la temperatura
-// és superior a 25 graus.
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">temperatura</span><span class="p">;</span> <span class="c1">// Variable que ens indica la temperatur ambient</span>
+<span class="kt">boolean</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  <span class="c1">// Variable booleana que ens indica si l&#39;aire condicionat està en marxa</span>
+<span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="o">?</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">:</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="c1">// Bàsicament el que faria aquesta espressió seria engegar l&#39;aire condicionat si la temperatura</span>
+<span class="c1">// és superior a 25 graus.</span>
+</code></pre></div>
 <h2 id="estructures">Estructures</h2>
 <p>Com hem vist al tema 2, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estrucutures bàsiques amb les quals es podríen codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.</p>
 <p>En els pròxims punts veurem com es codifiquen totes aquestes estructures en llenguatge Java.</p>
@@ -1041,28 +1040,28 @@ temperatura &gt; 25 ? AC_ON = true : AC_ON = false;
 <li>Mètodes definits pels usuaris dins de les classes.</li>
 <li>Comentaris.</li>
 </ul>
-<pre><code class="language-java">// Programa principal
-import java.io.*;             // Llibreries amb funcions d'entrada i eixida.
-public class nomPrograma {    // Nom de la classe principal
+<div class="highlight"><pre><span></span><code><span class="c1">// Programa principal</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>             <span class="c1">// Llibreries amb funcions d&#39;entrada i eixida.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">nomPrograma</span> <span class="p">{</span>    <span class="c1">// Nom de la classe principal</span>
 
-    Calculadora calc;         // Membres de la classe (una calculadora)
+    <span class="n">Calculadora</span> <span class="n">calc</span><span class="p">;</span>         <span class="c1">// Membres de la classe (una calculadora)</span>
 
-    public static void main (String [] args) { // Mètode principal main
-        calc = new Calculadora();              // Instruccions del mètode principal.
-        int result = calc.suma(10,20)
-        System.out.println(&quot;Resultat: &quot; + result );
-    }
-}
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Mètode principal main</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculadora</span><span class="p">();</span>              <span class="c1">// Instruccions del mètode principal.</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Resultat: &quot;</span> <span class="o">+</span> <span class="n">result</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-// Una altra classe
-import java.io.*;
-public class Calculadora {            // Nom de la classe 
+<span class="c1">// Una altra classe</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculadora</span> <span class="p">{</span>            <span class="c1">// Nom de la classe </span>
 
-    public int suma(int a, int b) {   // Mètode de la classe
-        return a + b;
-    }
-}
-</code></pre>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">suma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Mètode de la classe</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Al programa anterior podem trobar una classe 'nomPrograma' que conté el mètode principal main i que al mateix temps conté el conjunt d'instruccions que es van a executar seqüencialment al nostre programa. Aquesta classe <strong>nomPrograma</strong> té un memebre calc que és un objecte (ja veurem classes i objectes més endavant) de tipus calculadora i que està definit més endavant amb la classe pública calculadora.
 Les sentències que executa el nostre programa d'exmemple són les següents:
 - Instancia l'objecte calc (calc = new Calculadora()).
@@ -1071,43 +1070,43 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 - Deposita el resultat que retorna el mètode suma de la classe calc a la variable <strong>result</strong>
 - Mostra per pantalla el resultat de la suma.</p>
 <h3 id="estructura-en-processing-ide">Estructura en Processing IDE</h3>
-<pre><code class="language-java">// Referències a altres llibrerires.
-// Variables globals a l'aplicació.
-void setup () {  // Només s'executa una vegada a l'inici de l'execució.
-    // Sentències d'inicialització de la nostra aplicació.
-}
+<div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
+<span class="c1">// Variables globals a l&#39;aplicació.</span>
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s&#39;executa una vegada a l&#39;inici de l&#39;execució.</span>
+    <span class="c1">// Sentències d&#39;inicialització de la nostra aplicació.</span>
+<span class="p">}</span>
 
-void draw () { // S'executa 60 vegades per segon (60Hz freqüencia del monitor)
-    // Codi principal del programa.
-}
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S&#39;executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
+    <span class="c1">// Codi principal del programa.</span>
+<span class="p">}</span>
 
-// Declaració d'altres funcions
-</code></pre>
+<span class="c1">// Declaració d&#39;altres funcions</span>
+</code></pre></div>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
 <p>L'estructura seqüencial en Java es codifica de la següent manera:</p>
-<pre><code class="language-java">// Exemple de bloc - estructura seqüencial
-{
-    Instrucció1;
-    Instrucció2;
-    ...
-    InstruccióN;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// Exemple de bloc - estructura seqüencial</span>
+<span class="p">{</span>
+    <span class="n">Instrucció1</span><span class="p">;</span>
+    <span class="n">Instrucció2</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="n">InstruccióN</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing.</p>
 <h4 id="activitat-dibuixa-amb-processing-ide-un-punt-una-linia-un-cercle-i-un-quadrat">Activitat. Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat.</h4>
-<pre><code class="language-java">void setup () {
-    size(320,240);
-    background(255);
-    fill(0);
-}
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
 
-void draw () {
-    point(10,10);
-    line(20,20,40,40);
-    ellipse(100,100,80,80);
-    square(200,200,50);
-}
-</code></pre>
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span>
+    <span class="n">square</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="estructures-de-seleccio">Estructures de selecció</h3>
 <p>Com varem explicar al tema anterior, ens podem trobar les següents variants d'estructura de selecció:
 - Selecció simple
@@ -1115,200 +1114,199 @@ void draw () {
 - Selecció multiple
 - Operador condicional ?</p>
 <h4 id="seleccio-simple">Selecció Simple</h4>
-<p><img alt="Selecció simple" src="../assets/Tema2/Estructura-condicional-simple-java.png" /></p>
+<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-simple-java.png" /></p>
 <p>El seu codi en Java seria:</p>
-<pre><code class="language-java">if (condicio) 
-    instruccio;
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> 
+    <span class="n">instruccio</span><span class="p">;</span>
 
-// O també
-if (condicio) {
-    instruccio1;
-    instruccio2;
-    ...
-    instruccioN;
-}
-</code></pre>
+<span class="c1">// O també</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">instruccio1</span><span class="p">;</span>
+    <span class="n">instruccio2</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="n">instruccioN</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
 <p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
 <p><strong>Exemple en Java:</strong></p>
-<pre><code class="language-java">import java.util.*;
-public class condicioSimple {
-    public static void main (String [] args) {
-        Scanner sc = new Scanner (System.in);
-        System.out.println(&quot;Quina hora és?:&quot;);
-        int hora = sc.nextInt();
-        if ( hora &gt;= 9)
-            System.out.println(&quot;A sopar&quot;);
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioSimple</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A sopar&quot;</span><span class="p">);</span>
 
-        System.out.println(&quot;Adeu&quot;);
-    }
-}
-</code></pre>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adeu&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="if-else">if .. else</h4>
-<p><img alt="Selecció simple" src="../assets/Tema2/Estructura-condicional-doble-java.png" /></p>
+<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-doble-java.png" /></p>
 <p>El codi en Java seria</p>
-<pre><code class="language-java">instruccio1;
-instruccio2;
-if (condicio) {
-    instruccio3;
-    instruccio4;
-}
-else {
-    instruccio5;
-    instruccio6;
-}
-instruccio7;
-instruccio8;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">instruccio1</span><span class="p">;</span>
+<span class="n">instruccio2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">instruccio3</span><span class="p">;</span>
+    <span class="n">instruccio4</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="n">instruccio5</span><span class="p">;</span>
+    <span class="n">instruccio6</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">instruccio7</span><span class="p">;</span>
+<span class="n">instruccio8</span><span class="p">;</span>
+</code></pre></div>
 <p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'if' s'avalua 'true' o 'false'. En el primer cas, amb la condició a true, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a 'false', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
 <p><strong>Exemple en Java:</strong></p>
-<pre><code class="language-java">import java.util.*;
-public class condicioDoble {
-    public static void main (String [] args) {
-        Scanner sc = new Scanner (System.in);
-        System.out.println(&quot;Quina hora és?:&quot;);
-        int hora = sc.nextInt();
-        if ( hora &gt;= 12)
-            System.out.println(&quot;Encara és de matí&quot;);
-        else
-            System.out.println(&quot;Ja és de vesprada&quot;);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioDoble</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Encara és de matí&quot;</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ja és de vesprada&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="if-else-if-else">if else if else</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/Estructura-condicional-multiple-java.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/Estructura-condicional-multiple-java.png" /></p>
 <p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
-<pre><code class="language-java">instruccio1;
+<div class="highlight"><pre><span></span><code><span class="n">instruccio1</span><span class="p">;</span>
 
-if (condicio1) {
-    instruccio2;
-    instruccio3;
-}
-else if (condicio2) {
-    instruccio4;
-}
-else if (condicio3) {
-    instruccio5;
-    instruccio6;
-    instruccio7;
-}
-else {
-    instruccio8;
-    instruccio9;
-}
-instruccio10;
-</code></pre>
+<span class="k">if</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">instruccio2</span><span class="p">;</span>
+    <span class="n">instruccio3</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">instruccio4</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">condicio3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">instruccio5</span><span class="p">;</span>
+    <span class="n">instruccio6</span><span class="p">;</span>
+    <span class="n">instruccio7</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="n">instruccio8</span><span class="p">;</span>
+    <span class="n">instruccio9</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">instruccio10</span><span class="p">;</span>
+</code></pre></div>
 <p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
 <p><strong>Exemple</strong></p>
 <p>Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else</p>
-<pre><code class="language-java">import java.util.*;
-public class condicioMultiple {
-    public static void main (String [] args) {
-        Scanner sc = new Scanner (System.in);
-        System.out.println(&quot;Quina hora és?:&quot;);
-        int hora = sc.nextInt();
-        if (hora &gt;= 7 &amp;&amp; hora &lt;= 9)
-            System.out.println(&quot;Eres matiner&quot;);
-        else if (hora &gt; 9 &amp;&amp; hora &lt;= 12)
-            System.out.println(&quot;Deuries haver esmorzat ja&quot;);
-        else if (hora &gt; 12 &amp;&amp; hora &lt;= 15)
-            System.out.println(&quot;Es hora de dinar si no has dinat&quot;);
-        else if (hora &gt; 15 &amp;&amp; hora &lt;= 18)
-            System.out.println(&quot;Si no has fet una migdiada oblidat&quot;);
-        else
-            System.out.println(&quot;Hora de la cervesa&quot;);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioMultiple</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">7</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres matiner&quot;</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Deuries haver esmorzat ja&quot;</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">12</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Es hora de dinar si no has dinat&quot;</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">15</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">18</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Si no has fet una migdiada oblidat&quot;</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hora de la cervesa&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="switch-case">switch case</h4>
 <p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull</p>
-<pre><code class="language-java">switch (condicio) {
-    case 1:
-        // Instruccions
-        break;
+<p><div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1">// Instruccions</span>
+        <span class="k">break</span><span class="p">;</span>
 
-    case 2:
-        // INstrucciones 2
-        break;
+    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1">// INstrucciones 2</span>
+        <span class="k">break</span><span class="p">;</span>
 
-    default:
-        // Instruccions per defecte
-        break;
-}
-</code></pre>
-<p>Un altre exemple més clar</p>
-<pre><code class="language-java">//Programa que demana un numero i diu quin mes és
+<span class="nl">    default:</span>
+        <span class="c1">// Instruccions per defecte</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Un altre exemple més clar</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Programa que demana un numero i diu quin mes és</span>
 
-import java.util.*;
-public class ExempleSwitch {
-    public static void main(String[] args) {
-        int mes;
-        Scanner sc = new Scanner(System.in);
-        System.out.print(&quot;Introdueix el numero del mes: &quot;);                                                        
-        mes = sc.nextInt();
-        switch (mes) {  //inicio del switch
-                case 1: System.out.println(&quot;GENER&quot;);
-                        break;
-                case 2: System.out.println(&quot;FEBRER&quot;);
-                        break;
-                case 3: System.out.println(&quot;MARÇ&quot;);
-                        break;
-                case 4: System.out.println(&quot;ABRIL&quot;);
-                        break;
-                case 5: System.out.println(&quot;MAIG&quot;);
-                        break;
-                case 6: System.out.println(&quot;JUNY&quot;);
-                        break;
-                case 7: System.out.println(&quot;JULIOL&quot;);
-                        break;
-                case 8: System.out.println(&quot;AGOST&quot;);
-                        break;
-                case 9: System.out.println(&quot;SETEMBRE&quot;);
-                         break;
-                case 10: System.out.println(&quot;OCTUBRE&quot;);
-                         break;
-                case 11: System.out.println(&quot;NOVEMBRE&quot;);                                                         
-                         break;
-                case 12: System.out.println(&quot;DESEEMBRE&quot;);
-                         break;
-                default : System.out.println(&quot;No vàlid&quot;);                        
-        }
-    }
-}
-</code></pre>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExempleSwitch</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">mes</span><span class="p">;</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introdueix el numero del mes: &quot;</span><span class="p">);</span>                                                        
+        <span class="n">mes</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">mes</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//inicio del switch</span>
+                <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GENER&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;FEBRER&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;MARÇ&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">4</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ABRIL&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">5</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;MAIG&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">6</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;JUNY&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">7</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;JULIOL&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">8</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;AGOST&quot;</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">9</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;SETEMBRE&quot;</span><span class="p">);</span>
+                         <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">10</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;OCTUBRE&quot;</span><span class="p">);</span>
+                         <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">11</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;NOVEMBRE&quot;</span><span class="p">);</span>                                                         
+                         <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="mi">12</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;DESEEMBRE&quot;</span><span class="p">);</span>
+                         <span class="k">break</span><span class="p">;</span>
+                <span class="k">default</span> <span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No vàlid&quot;</span><span class="p">);</span>                        
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
 <p>Imaginem que tenim un vector d'enters de 100 elements i volem trobar un nombre concret. Usant les estrcutures condicionals ho podríem fer.</p>
-<pre><code class="language-java">int [] arrayNumeros;               // Declarem un array d'enters
-arrayNumeros = new int [100];      // Reservem espai en memòria per 100 elements
-inicialitzaNumeros(arrayNumeros);  // Emplenem de forma aleatòria l'array
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="o">[]</span> <span class="n">arrayNumeros</span><span class="p">;</span>               <span class="c1">// Declarem un array d&#39;enters</span>
+<span class="n">arrayNumeros</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span>      <span class="c1">// Reservem espai en memòria per 100 elements</span>
+<span class="n">inicialitzaNumeros</span><span class="p">(</span><span class="n">arrayNumeros</span><span class="p">);</span>  <span class="c1">// Emplenem de forma aleatòria l&#39;array</span>
 
-// Comencem la recerca del número 10 per exemple
-if ( array[0] == 10 )
-    System.out.println(&quot;Número trobat a la posició 0&quot;);
+<span class="c1">// Comencem la recerca del número 10 per exemple</span>
+<span class="k">if</span> <span class="p">(</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 0&quot;</span><span class="p">);</span>
 
-else if (array[1] == 10)
-    System.out.println(&quot;Número trobat a la posició 1&quot;);
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 1&quot;</span><span class="p">);</span>
 
-else if (array[2] == 10)
-    System.out.println(&quot;Número trobat a la posició 2&quot;);
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 2&quot;</span><span class="p">);</span>
 
-else if (array[3] == 10)
-    System.out.println(&quot;Número trobat a la posició 3&quot;);
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 3&quot;</span><span class="p">);</span>
 
-else if (array[4] == 10)
-    System.out.println(&quot;Número trobat a la posició 4&quot;);
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 4&quot;</span><span class="p">);</span>
 
-else if (array[5] == 10)
-    System.out.println(&quot;Número trobat a la posició 5&quot;);    
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 5&quot;</span><span class="p">);</span>    
 
-// I així fins 100 ... 
-
-</code></pre>
+<span class="c1">// I així fins 100 ... </span>
+</code></pre></div>
 <p>Com podeu observar, només he necessitat escriure codi per als 5 primers elements del nostre array per adondar-me que aquest codi és totalment ineficient i té un manteniment molt complicat. Imagineu un array amb 1000 elements i que ho hagurem de codificar com hem fet abans.</p>
 <p>Les estructures repetitives permetrien recòrrer l'array de principi a final sense necessitat d'escriure tant de codi.</p>
 <p>Veiem els següents exemples.</p>
 <h4 id="while">while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-while.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-while.png" /></p>
 <p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
 <p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
@@ -1316,16 +1314,15 @@ else if (array[5] == 10)
 3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
 <p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
-<pre><code class="language-java">int i = 0;   // Inicialitzem una variable que ens servirà de contador.
-while (i &lt; 100) {
-    if (arrarNumeros[i] == 10)
-        System.out.println(&quot;Número trobat a la posició &quot; + i);
-    i ++; // Important incrementar el contador o entraríem en un bucle infinit.
-}
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Inicialitzem una variable que ens servirà de contador.</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+    <span class="n">i</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Important incrementar el contador o entraríem en un bucle infinit.</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="do-while">do .. while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-do-while.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-do-while.png" /></p>
 <p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
 2. S'executen les instruccions que conté el bloc 
@@ -1333,17 +1330,16 @@ while (i &lt; 100) {
 4. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
 <p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
-<pre><code class="language-java">int i = 0;   // Inicialitzem una variable que ens servirà de contador.
-do {
-    if (arrarNumeros[i] == 10)
-        System.out.println(&quot;Número trobat a la posició &quot; + i);
-    i ++; // Important incrementar el contador o entraríem en un bucle infinit.
-}
-while (i &lt; 100);
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Inicialitzem una variable que ens servirà de contador.</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+    <span class="n">i</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Important incrementar el contador o entraríem en un bucle infinit.</span>
+<span class="p">}</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="bucle-for">bucle for</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-for.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-for.png" /></p>
 <ol>
 <li>Executem instrucció 1 (aliena al bucle for)</li>
 <li>Inicialització</li>
@@ -1353,13 +1349,12 @@ while (i &lt; 100);
 <li>Actualitzem índex</li>
 <li>Si la condició es false eixim del bucle i executem instrucció 2</li>
 </ol>
-<pre><code class="language-java">for (int i = 0; i &lt; 100; i ++ ) { 
-    if (arrarNumeros[i] == 10)
-        System.out.println(&quot;Número trobat a la posició &quot; + i);
-}
-
-</code></pre>
-<p>Al codi anterior:
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span> 
+    <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+Al codi anterior:
 1. Inicialització: int i = 0;
 2. Avaluació de la condició: és i &lt; 100 ?
 3. Actualització: i ++</p>
@@ -1395,13 +1390,13 @@ while (i &lt; 100);
         </a>
       
       
-        <a href="../Tema%203.%20Java/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Tema 3. El llenguatge Java
+              Tema 4. Programació Modular
             </div>
           </div>
           <div class="md-footer__button md-icon">

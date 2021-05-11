@@ -186,8 +186,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%201.%20Activitats/" class="md-nav__link">
-        Tema 1. Introducció a la programació. Activitats
+      <a href="../Instal%C2%B7lar%20i%20configurar%20LAMP/" class="md-nav__link">
+        Instal·lar i configurar LAMP.
       </a>
     </li>
   
@@ -203,6 +203,21 @@
     <li class="md-nav__item">
       <a href="../Tema%201.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
         Tema 1. Introducció a la programació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" class="md-nav__link">
+        Tema 10. Accés a dades
       </a>
     </li>
   
@@ -246,23 +261,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%203.%20Java/" class="md-nav__link">
-        Tema 3. El llenguatge Java
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-nav__link">
-        Tema 3. Programació Modular
+        Tema 4. Programació Modular
       </a>
     </li>
   
@@ -277,7 +277,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
-        Tema 4. Tipus Compostos de Dades
+        Tema 5. Tipus Compostos de Dades
       </a>
     </li>
   
@@ -292,7 +292,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%206.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
-        Tema 5. Programació Orientada a Objectes.
+        Tema 6. Programació Orientada a Objectes.
       </a>
     </li>
   
@@ -307,7 +307,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%207.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
-        Tema 6. Herència, polimorfisme i interfícies
+        Tema 7. Herència, polimorfisme i interfícies
       </a>
     </li>
   
@@ -322,7 +322,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%208.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
-        Tema 7. Entrada, eixida i excepcions
+        Tema 8. Entrada, eixida i excepcions
       </a>
     </li>
   
@@ -337,7 +337,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%209.%20Gr%C3%A0fics%201.%20Java%20Swing/" class="md-nav__link">
-        Tema 8. Gràfics 1. Java Swing
+        Tema 9. Gràfics 1. Java Swing
       </a>
     </li>
   
@@ -472,53 +472,53 @@
 <p>Arribats a aquest punt podriem tindre una interfície totalment dissenyada però no completament funcional, és a dir, imagineu que hem dissenyat la interfície per a una calculadora amb tots els seus controls necessaris. Què passa si fem clic en algun botó de la calculadora? No res ,veritat. Encara hem de programar el comportament d'aquesta calculadora i per tal d'aconseguir-ho hem de fer ús de la programació d'esdeveniments. Aquest procediment es diu <strong>Event Handling</strong> i es pot aplicar a aquells elements gràfics que produeixen algun esdeveniment.</p>
 <p>Els esdeveniments són essencials per als usuaris interactuen amb els components de una aplicació gràfica; el model d'esdeveniments segueix el AWT de Java. Aquest capítol estudia la forma general de captura d'esdeveniments, la jerarquia de classes del model i les interfaces desenvolupades per a la seva captura; inclou exemples senzills de captura d’esdeveniments de los botons.</p>
 <p>Veiem un exemple</p>
-<pre><code class="language-java">import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.awt.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.event.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.*</span><span class="p">;</span>
 
-public class EventDemo {
-    JLabel lab;
-    public EventDemo () {
-        JFrame jfrm = new JFrame (&quot;Esdeveniments&quot;);
-        jfrm.setLayout(new FlowLayout());
-        jfrm.setSize(220,90);
-        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JButton btnAlpha = new JButton(&quot;Alpha&quot;);
-        JButton btnBeta  = new JButton(&quot;Beta&quot; );
-        btnAlpha.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                lab.setText(&quot;Alpha Pressed&quot;);
-            }
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EventDemo</span> <span class="p">{</span>
+    <span class="n">JLabel</span> <span class="n">lab</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">EventDemo</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">JFrame</span> <span class="n">jfrm</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JFrame</span> <span class="p">(</span><span class="s">&quot;Esdeveniments&quot;</span><span class="p">);</span>
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">setLayout</span><span class="p">(</span><span class="k">new</span> <span class="n">FlowLayout</span><span class="p">());</span>
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
+        <span class="n">JButton</span> <span class="n">btnAlpha</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">&quot;Alpha&quot;</span><span class="p">);</span>
+        <span class="n">JButton</span> <span class="n">btnBeta</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="p">(</span><span class="s">&quot;Beta&quot;</span> <span class="p">);</span>
+        <span class="n">btnAlpha</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span> <span class="n">ActionListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">ae</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">lab</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;Alpha Pressed&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
 
-        });
+        <span class="p">});</span>
 
-        btnBeta.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                lab.setText(&quot;Beta Pressed&quot;);
-            }
+        <span class="n">btnBeta</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span> <span class="n">ActionListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">ae</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">lab</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;Beta Pressed&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
 
-        });
+        <span class="p">});</span>
 
-        jfrm.add(btnAlpha);
-        jfrm.add(btnBeta);
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">btnAlpha</span><span class="p">);</span>
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">btnBeta</span><span class="p">);</span>
 
-        lab = new JLabel(&quot;Apreta un botó&quot;);
-        jfrm.add(lab);
+        <span class="n">lab</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="p">(</span><span class="s">&quot;Apreta un botó&quot;</span><span class="p">);</span>
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">lab</span><span class="p">);</span>
 
-        jfrm.setVisible(true);
-    }
+        <span class="n">jfrm</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    public static void main (String [] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new EventDemo();
-            }
-        });
-    }
-}
-</code></pre>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">new</span> <span class="n">EventDemo</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>El resultat seria</p>
-<p><img alt="Event Demo" src="../assets/Tema8/EventDemo.png" /></p>
+<p><img alt="Event Demo" src="../assets/Tema9/EventDemo.png" /></p>
                 
               
               
@@ -545,7 +545,7 @@ public class EventDemo {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tema 8. Gràfics 1. Java Swing
+              Tema 9. Gràfics 1. Java Swing
             </div>
           </div>
         </a>

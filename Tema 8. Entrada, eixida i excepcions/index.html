@@ -14,7 +14,7 @@
     
     
       
-        <title>Tema 7. Entrada, eixida i excepcions - PROGRAMACIÓ 1DAW</title>
+        <title>Tema 8. Entrada, eixida i excepcions - PROGRAMACIÓ 1DAW</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tema-7-entrada-eixida-i-excepcions" class="md-skip">
+        <a href="#tema-8-entrada-eixida-i-excepcions" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tema 7. Entrada, eixida i excepcions
+              Tema 8. Entrada, eixida i excepcions
             
           </span>
         </div>
@@ -186,8 +186,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%201.%20Activitats/" class="md-nav__link">
-        Tema 1. Introducció a la programació. Activitats
+      <a href="../Instal%C2%B7lar%20i%20configurar%20LAMP/" class="md-nav__link">
+        Instal·lar i configurar LAMP.
       </a>
     </li>
   
@@ -203,6 +203,21 @@
     <li class="md-nav__item">
       <a href="../Tema%201.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
         Tema 1. Introducció a la programació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" class="md-nav__link">
+        Tema 10. Accés a dades
       </a>
     </li>
   
@@ -246,23 +261,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema%203.%20Java/" class="md-nav__link">
-        Tema 3. El llenguatge Java
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Tema%204.%20Programaci%C3%B3%20Modular/" class="md-nav__link">
-        Tema 3. Programació Modular
+        Tema 4. Programació Modular
       </a>
     </li>
   
@@ -277,7 +277,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%205.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
-        Tema 4. Tipus Compostos de Dades
+        Tema 5. Tipus Compostos de Dades
       </a>
     </li>
   
@@ -292,7 +292,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%206.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
-        Tema 5. Programació Orientada a Objectes.
+        Tema 6. Programació Orientada a Objectes.
       </a>
     </li>
   
@@ -307,7 +307,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%207.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
-        Tema 6. Herència, polimorfisme i interfícies
+        Tema 7. Herència, polimorfisme i interfícies
       </a>
     </li>
   
@@ -330,12 +330,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tema 7. Entrada, eixida i excepcions
+          Tema 8. Entrada, eixida i excepcions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tema 7. Entrada, eixida i excepcions
+        Tema 8. Entrada, eixida i excepcions
       </a>
       
         
@@ -560,7 +560,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%209.%20Gr%C3%A0fics%201.%20Java%20Swing/" class="md-nav__link">
-        Tema 8. Gràfics 1. Java Swing
+        Tema 9. Gràfics 1. Java Swing
       </a>
     </li>
   
@@ -810,7 +810,7 @@
               
                 
                 
-                <h1 id="tema-7-entrada-eixida-i-excepcions">Tema 7. Entrada, eixida i excepcions</h1>
+                <h1 id="tema-8-entrada-eixida-i-excepcions">Tema 8. Entrada, eixida i excepcions</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Una part important de tot llenguatge de programació és com s’establirà el contacte amb l’exterior, bé siga mitjançant la consola o a través del sistema de fitxers, per finalment poder actuar amb l’usuari d’una aplicació en execució. Ambdós, consola i sistema de fitxers, poden funcionar tant d’entrada als nostres programes com d’eixida.</p>
 <p>Java defineix una abstracció, els streams o fluxos per tractar la comunicació d’informació amb l’exterior.. Per entendre-ho millor, un stream o flux és com un canal de comunicació entre un origen i un destí. Per exemple suposem el cas d’un programa que quan arranque haja de llegir una llista de clients d’un fitxer de text per crear una agenda. En aquest cas l’origen seria el fitxer de text i el destí el programa o aplicació que s’encarrega d’emplenar l’agenda amb el llistat de clients, doncs bé, l’stream en aquest escenari seria el canal de comunicació que s’establiria entre el fitxer de text i el programa per tal que aquest puga llegir la informació.</p>
@@ -831,8 +831,8 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 </ul>
 <h3 id="class-file">Class File</h3>
 <p>Per poder identificar d’un fitxer al sistema de fitxers de qualsevol sistema operatiu, necessitem: nom i ruta. Per exemple ‘/user/data/file.txt’. El fitxer es diu file.txt i la ruta en la qual es troba és ‘/user/data/’. Aquest identificador de fitxer és el que es passa al constructor de la classe per tal d’obrir un flux.</p>
-<pre><code class="language-java">File fitxer = new File ( strPath + &quot;prova.txt&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">File</span> <span class="n">fitxer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span> <span class="p">(</span> <span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;prova.txt&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>En l’exemple anterior hem utilitzat la classe File per tal d’instanciar un stream al fitxer que li hem passat per paràmetre «prova.txt». Compte que s’ha de passar la ruta absoluta d’on es troba el fitxer.</p>
 <p>Hi ha alternatives al constructor de la classe File que hem mostrat a l’exemple anterior, es pot construir també amb dos paràmetres: ruta i nom del fitxer o inclús indicar-li la ruta mitjançant un altre objecte File.</p>
 <p>Els mètodes de la classe File són:</p>
@@ -914,13 +914,13 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <p>Com que les possibilitats que tenim en programació respecte de l’ús de fitxers és ampla, podem: llegir de fitxers, escriure en fitxers, llegir per una entrada com un teclat <strong>System.in</strong> o escriure en una eixida com un monitor <strong>System.out</strong>, Java declara dues classes que deriven directament de la superclasse «Object» que són: <strong>InputStream</strong> i <strong>OutputStream</strong>, ambdues abstractes, és a dir, no podem instanciar cap objecte d’aquestes classes.</p>
 <p><strong>InputStream</strong> és la base per a totes les classes definies per al flux d’entrada de dades mentre que <strong>OutputStream</strong> és la classe base per a les classes que gestionen el flux d’eixida. </p>
 <p>Bàsicament en la següent imatge podeu les principals classes derivades dels fluxos d’entrada i eixida i la seua jerarquia.</p>
-<p><img alt="Jerarquia Classes" src="../assets/Tema7/Tema7-a.png" /></p>
+<p><img alt="Jerarquia Classes" src="../assets/Tema8/Tema7-a.png" /></p>
 <h3 id="arxius-de-baix-nivell-fileinputstream-i-fileoutputstream">Arxius de baix nivell: FileInputStream i FileOutputStream</h3>
 <p>Tot arxiu es pot considerar en sí mateix una seqüència de bytes de baix nivell i després sobre aquesta informació es pot construir informació de mes alt nivell per tal de processar dades més complexes des de tipus bàsic fins objectes. </p>
 <p>En altres paraules, si volem obrir un flux de dades a un fitxer o arxiu i volem llegir byte a byte per després decidir nosaltres a nivell de programació que volem fer amb aquests bytes, hauríem d’utilitzar aquestes classes.</p>
-<pre><code class="language-java">FileInputStream fen = new FileInputStream(strPath + &quot;provat.txt&quot;);
-</code></pre>
-<p>La classe <strong>FileInputStream</strong> s’utilitza per llegir bytes o grups de bytes del fitxer associat. Tots els mètodes tenen visibilitat pública i s’ha de tenir en compte quina és l’excepció que llencen per controlar els possibles errors en temps d’execució.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">FileInputStream</span> <span class="n">fen</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;provat.txt&quot;</span><span class="p">);</span>
+</code></pre></div>
+La classe <strong>FileInputStream</strong> s’utilitza per llegir bytes o grups de bytes del fitxer associat. Tots els mètodes tenen visibilitat pública i s’ha de tenir en compte quina és l’excepció que llencen per controlar els possibles errors en temps d’execució.</p>
 <table>
 <thead>
 <tr>
@@ -964,33 +964,33 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 per llegir-lo i desarem el seu contingut a un fitxer d’eixida «resultat.txt» que
 obirem amb un FileOutputStream. Al fitxer d’eixida, bolcarem el contingut de
 «prova.txt»</p>
-<pre><code class="language-java">try {
-    FileInputStream fen = new FileInputStream(strPath + &quot;prova.txt&quot;);
-    FileOutputStream fout = new FileOutputStream(strPath + &quot;resultat.txt&quot;);
+<div class="highlight"><pre><span></span><code><span class="k">try</span> <span class="p">{</span>
+    <span class="n">FileInputStream</span> <span class="n">fen</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;prova.txt&quot;</span><span class="p">);</span>
+    <span class="n">FileOutputStream</span> <span class="n">fout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;resultat.txt&quot;</span><span class="p">);</span>
 
-    int byteLlegit = fen.read();
-    while ( byteLlegit != -1 ) {
-        fout.write(byteLlegit);
-        byteLlegit = fen.read();
-    }
-    fen.close();
-    fout.close();
-}
-catch (FileNotFoundException f ) {
-    System.out.println(&quot;Fitxer no trobat&quot;);
-}
-catch (IOException e) {
-    System.out.println(&quot;Error d'entrada eixida&quot;);
-}
-</code></pre>
+    <span class="kt">int</span> <span class="n">byteLlegit</span> <span class="o">=</span> <span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="n">byteLlegit</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">fout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">byteLlegit</span><span class="p">);</span>
+        <span class="n">byteLlegit</span> <span class="o">=</span> <span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="n">fout</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="n">f</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fitxer no trobat&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error d&#39;entrada eixida&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Activitat. Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es
 copie el que apareix a «prova.txt», el d’entrada però a l’inrevés.</p>
 <h3 id="arxius-de-dades">Arxius de dades</h3>
 <p>La veritat és que treballar amb bytes quan estem parlant de fitxers o arxius que contenen informació o dades de més nivell pot resultar incomode, ja que entre altres hauríem de saber quants bytes té un caràcter, un enter o un doble. </p>
 <p>En Java tenim les classes <strong>DataInputStream</strong> i <strong>DataOutputStream</strong> que són subclasses de les classes <strong>FilterInputStream</strong> i <strong>FilterOutputStream</strong></p>
-<pre><code class="language-java">FileInputStream gs = new FileInputStream(strPath + &quot;prova.txt&quot;);
-DataInputStream ent = new DataInputStream(gs);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">FileInputStream</span> <span class="n">gs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;prova.txt&quot;</span><span class="p">);</span>
+<span class="n">DataInputStream</span> <span class="n">ent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataInputStream</span><span class="p">(</span><span class="n">gs</span><span class="p">);</span>
+</code></pre></div>
 <p>Bàsicament aquestes classes el que fan és organitzar els bytes en tipus primitius de tal forma que ja podem treballar llegint i escrivint als fluxos: enters, caràcters, reals, cadenes etc..</p>
 <table>
 <thead>
@@ -1047,166 +1047,84 @@ DataInputStream ent = new DataInputStream(gs);
 </tbody>
 </table>
 <p>D’aquesta forma ja no ens hem de preocupar de saber quants bytes de memòria s’han de reservar per un caràcter o un enter. Per exemple si associem  un <strong>DataOutputStream</strong> a un fitxer i després cridem al mètode <strong>writeInt</strong>, realment el que s’està fent és escriure 4 bytes d’informació al fitxer de la qual cosa s’estaria encarregant de manera trans11parent a l’usuari.</p>
-<pre><code class="language-java">FileOutputStream fn = new FileOutputStream(strPath + &quot;result.txt&quot;);
-DataOutputStream snb = new DataOutputStream(fn);
-</code></pre>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public DataOutputStream(OutputStream destino) throws IOException</td>
-<td>Crea un objecte associat a l’out11putstream que es passa per paràmetre</td>
-</tr>
-<tr>
-<td>public final void writeBoolean(boolean v) throws IOException</td>
-<td>Escriu un boolean</td>
-</tr>
-<tr>
-<td>public final void writeByte(int v) throws IOException</td>
-<td>Escriu un byte</td>
-</tr>
-<tr>
-<td>public final void writeShort(int v) throws IOException</td>
-<td>Escriu un short</td>
-</tr>
-<tr>
-<td>public final void writeChar(int v) throws IOException</td>
-<td>Escriu un char</td>
-</tr>
-<tr>
-<td>public final void writeChars(String v) throws IOException</td>
-<td>Escriu tots els chars que conté la String v</td>
-</tr>
-<tr>
-<td>public final void writeInt(int v) throws IOException</td>
-<td>Escriu un int</td>
-</tr>
-<tr>
-<td>public final void writeLong(long v) throws IOException</td>
-<td>Escriu un long</td>
-</tr>
-<tr>
-<td>public final void writeFloat(float v) throws IOException</td>
-<td>Escriu un float</td>
-</tr>
-<tr>
-<td>public final void writeDouble(double v) throws IOException</td>
-<td>Escriu un double</td>
-</tr>
-<tr>
-<td>public final void writeUTF(String cad) throws IOException</td>
-<td>Escriu la cadena cad en format UTF</td>
-</tr>
-<tr>
-<td>public final int close()throws IOException</td>
-<td>Tanca el flux</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p><div class="highlight"><pre><span></span><code><span class="n">FileOutputStream</span> <span class="n">fn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;result.txt&quot;</span><span class="p">);</span>
+<span class="n">DataOutputStream</span> <span class="n">snb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fn</span><span class="p">);</span>
+</code></pre></div>
+|||
+|--|--|
+|public DataOutputStream(OutputStream destino) throws IOException|Crea un objecte associat a l’out11putstream que es passa per paràmetre|
+|public final void writeBoolean(boolean v) throws IOException|Escriu un boolean|
+|public final void writeByte(int v) throws IOException|Escriu un byte|
+|public final void writeShort(int v) throws IOException|Escriu un short|
+|public final void writeChar(int v) throws IOException|Escriu un char|
+|public final void writeChars(String v) throws IOException|Escriu tots els chars que conté la String v|
+|public final void writeInt(int v) throws IOException|Escriu un int
+|public final void writeLong(long v) throws IOException|Escriu un long|
+|public final void writeFloat(float v) throws IOException|Escriu un float|
+|public final void writeDouble(double v) throws IOException|Escriu un double|
+|public final void writeUTF(String cad) throws IOException|Escriu la cadena cad en format UTF|
+|public final int close()throws IOException|Tanca el flux|
+|||</p>
 <p>A continuació podem veure un exemple en el que fem ús del DataOutputStream i DataInputStream. El que fa aquest exemple és escriure a un fitxer d’eixida «pluges.dat» dos valors double aleatoris per després llegir-los amb un DataInputStream i mostrar-los per pantalla. </p>
 <p>El codi podria ser el següent:</p>
-<pre><code class="language-java">try {
-    FileOutputStream fos = new FileOutputStream(strPath + &quot;pluges.dat&quot;);
-    DataOutputStream dos = new DataOutputStream(fos);
+<div class="highlight"><pre><span></span><code><span class="k">try</span> <span class="p">{</span>
+    <span class="n">FileOutputStream</span> <span class="n">fos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;pluges.dat&quot;</span><span class="p">);</span>
+    <span class="n">DataOutputStream</span> <span class="n">dos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
 
-    double info  Math.random()*100;
-    dos.writeDouble(info);
+    <span class="kt">double</span> <span class="n">info</span>  <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">;</span>
+    <span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
 
-    FileInputStream fis = new FileInputStream(strPath + &quot;pluges.dat&quot;);
-    DataInputStream dis = new DataInputStream(fis);
+    <span class="n">FileInputStream</span> <span class="n">fis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span> <span class="o">+</span> <span class="s">&quot;pluges.dat&quot;</span><span class="p">);</span>
+    <span class="n">DataInputStream</span> <span class="n">dis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
 
-    double info2 = dis.readDouble();
-    System.out.println(&quot;Primer valor: &quot; + info2);
-    info2 = dis.readDouble();
-    System.out.println(&quot;Segon valor: &quot; + info2);
+    <span class="kt">double</span> <span class="n">info2</span> <span class="o">=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Primer valor: &quot;</span> <span class="o">+</span> <span class="n">info2</span><span class="p">);</span>
+    <span class="n">info2</span> <span class="o">=</span> <span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Segon valor: &quot;</span> <span class="o">+</span> <span class="n">info2</span><span class="p">);</span>
 
 
-}
-catch (FileNotFoundException e) {
-    System.out.println(&quot;El fitxer no existeix&quot;);
-}// Exemple 1. Dies de la setmana
-enum Dies {
-    Dilluns,
-    Dimarts,
-    Dimecres,
-    Dijous,
-    Divendres,
-    Dissabte,
-    Diumenge
-}
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El fitxer no existeix&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// Exemple 1. Dies de la setmana</span>
+<span class="kd">enum</span> <span class="n">Dies</span> <span class="p">{</span>
+    <span class="n">Dilluns</span><span class="p">,</span>
+    <span class="n">Dimarts</span><span class="p">,</span>
+    <span class="n">Dimecres</span><span class="p">,</span>
+    <span class="n">Dijous</span><span class="p">,</span>
+    <span class="n">Divendres</span><span class="p">,</span>
+    <span class="n">Dissabte</span><span class="p">,</span>
+    <span class="n">Diumenge</span>
+<span class="p">}</span>
 
-// Exemple 2. Talles de roba
-enum Talles {
-    XXL,
-    XL,
-    L,
-    M,
-    S,
-    XS
-}
-catch (IOException e) {
-    System.out.println(&quot;Error IO inesperat&quot;);
-}
-</code></pre>
+<span class="c1">// Exemple 2. Talles de roba</span>
+<span class="kd">enum</span> <span class="n">Talles</span> <span class="p">{</span>
+    <span class="n">XXL</span><span class="p">,</span>
+    <span class="n">XL</span><span class="p">,</span>
+    <span class="n">L</span><span class="p">,</span>
+    <span class="n">M</span><span class="p">,</span>
+    <span class="n">S</span><span class="p">,</span>
+    <span class="n">XS</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error IO inesperat&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="flux-printstream">Flux PrintStream</h2>
 <p>La classe PrintStream deriva de FilterOutputStream i el valor afegit d’aquesta classe derivada és que permet afegir el caràcter final de línia als fitxers. Aquests tipus de fluxos són sempre d’eixida i s’associen a un altre flux de bytes de més baix nivell</p>
-<pre><code class="language-java">PrintStream ps = new PrintStream(new FileOutputStream(&quot;Complex.dat&quot;));
-</code></pre>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public PrintStream(OutputStream destino)</td>
-<td>Crea un objecte associat a qualsevol objecte d’eixida per paràmetre</td>
-</tr>
-<tr>
-<td>public PrintStream(OutputStream destino, boolean flag)</td>
-<td>Crea un objecte associat a qualsevol objecte d’eixida per paràmetre. Si flag és true, es produeix un bolcat automàtic al escriure final de línia.</td>
-</tr>
-<tr>
-<td>public void flush()</td>
-<td>Bolca el flux actual</td>
-</tr>
-<tr>
-<td>ublic void print(Object obj)</td>
-<td>Escriu la representació de l’objecte obj al flux</td>
-</tr>
-<tr>
-<td>public void print(String cad)</td>
-<td>Escriu la cadena al flux</td>
-</tr>
-<tr>
-<td>public void print(char c)</td>
-<td>Escriu un caràcter al flux</td>
-</tr>
-<tr>
-<td>public void println(Object obj)</td>
-<td>Escriu la representació de l’objecte al flux i final de línia</td>
-</tr>
-<tr>
-<td>public void println(String cad)</td>
-<td>Escriu la cadena al flux i final de línia</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p><div class="highlight"><pre><span></span><code><span class="n">PrintStream</span> <span class="n">ps</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;Complex.dat&quot;</span><span class="p">));</span>
+</code></pre></div>
+|||
+|---|---|
+|public PrintStream(OutputStream destino)|Crea un objecte associat a qualsevol objecte d’eixida per paràmetre|
+|public PrintStream(OutputStream destino, boolean flag)| Crea un objecte associat a qualsevol objecte d’eixida per paràmetre. Si flag és true, es produeix un bolcat automàtic al escriure final de línia.|
+|public void flush()|Bolca el flux actual|
+|ublic void print(Object obj)|Escriu la representació de l’objecte obj al flux|
+|public void print(String cad)|Escriu la cadena al flux|
+|public void print(char c)|Escriu un caràcter al flux|
+|public void println(Object obj)|Escriu la representació de l’objecte al flux i final de línia|
+|public void println(String cad)|Escriu la cadena al flux i final de línia|
+|||</p>
 <h3 id="arxius-de-caracters-reader-i-writer">Arxius de caracters: Reader i writer</h3>
 <p>Reader i Writer són fluxos de Java orientats a caràcters. Amb aquests fluxos podem llegir i escriure caràcters o cadenes de caràcters al dispositius connectats mitjançant aquests fluxos.</p>
 <p>Per llegir arxius de caràcters s’utilitzen fluxos derivats de la classe Reader on es declaren o sobreescriuen mètodes per la lectura de caràcters. Els mètodes més importants són:</p>
@@ -1234,25 +1152,25 @@ catch (IOException e) {
 </table>
 <p><strong>InputStremaReader</strong>
 Els fluxos de la classe IntpuStreamReader envolten a un flux de bytes; converteixen la seqüència de bytes en seqüència de caràcters i així ja no ho hem de fer nosaltres; la classe deriva directament de Reader, pel que té disponibles els mètodes read() de la seua classe pare per la lectura de caràcters</p>
-<pre><code class="language-java">InputStreamReader ent = new InputStreamReader(Sytem.in);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">InputStreamReader</span> <span class="n">ent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InputStreamReader</span><span class="p">(</span><span class="n">Sytem</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</code></pre></div>
 <p><strong>FileReader</strong></p>
 <p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus FileReader, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
 <p>Per exemple</p>
-<pre><code class="language-java">FileReader fr = new FileReader(&quot;cartes.dat&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">FileReader</span> <span class="n">fr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;cartes.dat&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>En general no resulta eficient llegir directament d’un flux d’aquest tipus, s’utilitzarà un flux BufferedReader.</p>
 <p><strong>BufferedReader</strong></p>
 <p>La lectura d’arxius de text es realitza amb un flux que emmagatzema els caràcters en un buffer intermedi, aquests no es lligen directament de l’arxiu si no del buffer. D’aquesta manera augmentem l’eficiència a les operacions d’entrada, la classe BufferReader permet crear fluxos de caràcters amb buffer que no és més que una forma d’organitzar el flux bàsic de caràcters del que ve  el text perquè al crear un flux BufferReader, aquest s’inicialitza com un flux de caràcters InputStreamReader o qualsevol altre.</p>
 <p>El constructor de la classe té un argument de tipus Reader, FileReader o InputStreamReader, el flux creat disposa d’un buffer de grandària suficient, el qual es pot especificar en el constructor amb un segon argument encara que no fa falta. Exemples de fluxos amb buffer;</p>
 <p><strong>Writer</strong></p>
 <p>Els arxius de text són arxius de caràcters, es poden crear fluxos de bytes o de caràcters derivats de la classe abstracta Writer, la qual defineix mètodes write() per escriure arrays de caràcters o cadenes, d’aquesta classe es deriva OutputStreamWriter que permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
-<pre><code class="language-java">OutputStreamWriter ot = new OutputStreamWriter(new FileOutputStream(arxiu));
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">OutputStreamWriter</span> <span class="n">ot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">arxiu</span><span class="p">));</span>
+</code></pre></div>
 <p>No es freqüent utilitzar directament fluxos OutputStreamWriter, encara que resulta interessant perquè la classe FileWriter és una extensió d’ella. Dissenyada per escriure en un arxiu de caràcters, els fluxos d’aquest tipus escriuen caràcters amb el mètode write() a l’arxiu al que s’associa el flux quan es crea l’objecte.</p>
-<pre><code class="language-java">FileWriter nr = new FileWriter(&quot;cartes.dat&quot;);
-nr.write(&quot;Frase qualsevol a escriure&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">FileWriter</span> <span class="n">nr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;cartes.dat&quot;</span><span class="p">);</span>
+<span class="n">nr</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Frase qualsevol a escriure&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p><strong>PrintWriter</strong></p>
 <p>Els fluxos més utilitzats en l’eixida de caràcters són de tipus PrintWriter, aquesta classe declara constructors per associar un flux PrintWriter amb qualsevol altre de tipus Writer o bé OutputStream.</p>
 <table>
@@ -1320,29 +1238,29 @@ nr.write(&quot;Frase qualsevol a escriure&quot;);
 <p>Per tal que un objecte continue existint una vegada ja hem finalitzat l’execució d’un programa o aplicació l’hem de desar a un arxiu d’objectes. Per poder aconseguir açò, utilitzarem les classes ObjectInputStream i ObjectOutputStream</p>
 <h4 id="classe-dobjecte-persistent">Classe d'objecte persistent</h4>
 <p>La declaració de la classe els objectes de la qual van a ser persistents, han de implementar la interfície «serializable» del paquet java.io, la qual és buida, no declara mètodes, simplement indica a la màquina virtual de Java que les instàncies d’aquestes classes podran gravar-se en un fitxer.</p>
-<pre><code class="language-java">class racional implements serializable { ... }
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">racional</span> <span class="kd">implements</span> <span class="n">serializable</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</code></pre></div>
 <h4 id="flux-objectoutputstream">Flux ObjectOutputStream</h4>
 <p>Els fluxos de la classe ObjectOutputStream s’utilitzen per gravar objectes persistents. El mètode writeObject() escriu qualsevol objecte d’una classe serializable en el flux de bytes associat. Pot llençar excepcions del tipus IOException que és necessari processar.</p>
-<pre><code class="language-java">public void writeObject(Object obj) throws IOException;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">;</span>
+</code></pre></div>
 <p>El constructor de la classe espera un argument de tipus OutputStream, que és la base dels fluxos d’eixida a nivell de bytes, per tant, per crear aquest tipus de fluxos primer es crea un d’eixida a nivell de bytes associat a un arxiu extern i a continuació, es passa com argument al constructor de ObjectOutputStream, per exemple:</p>
-<pre><code class="language-java">FileOutputStream bn = new FileOutputStream(&quot;dadesRac.dat&quot;);
-ObjectOutputStream fobj = new ObjectOuputStream(bn);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">FileOutputStream</span> <span class="n">bn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;dadesRac.dat&quot;</span><span class="p">);</span>
+<span class="n">ObjectOutputStream</span> <span class="n">fobj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectOuputStream</span><span class="p">(</span><span class="n">bn</span><span class="p">);</span>
+</code></pre></div>
 <p>A continuació es pot escriure qualsevol objecte al flux:</p>
-<pre><code class="language-java">Persona juan = new Persona(&quot;Juan&quot;,&quot;Martin&quot;, &quot;123432123X&quot;);
-fobj.writeObject(juan);
-String str = new String (&quot;Cadena de favors&quot;);
-fobj.write(str);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">Persona</span> <span class="n">juan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span><span class="s">&quot;Martin&quot;</span><span class="p">,</span> <span class="s">&quot;123432123X&quot;</span><span class="p">);</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">juan</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span> <span class="p">(</span><span class="s">&quot;Cadena de favors&quot;</span><span class="p">);</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="flux-objectinputstream">Flux ObjectInputStream</h4>
 <p>El objectes guardats en arxius amb fluxos de la classe ObjectOutputStream es recuperen i lligen amb fluxos d’entrada del tipus ObjectInputStream, aquesta classe és una extensió d’InputStream, a més a més, implementa la interfície DataInput, per això disposa de diversos mètodes d’entrada (read) per cadascun dels tipus de dades com readInt() o altres. El mètode més important definit per la classe ObjectInputStream és readObject(), el qual llig un objecte del flux d’entrada, és a dir, de l’arxiu associat al flux de baix nivell; l’objecte llegit es va escriure en el seu moment amb el mètode writeObject()</p>
-<pre><code class="language-java">public Object readObject() throws IOException;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="n">Object</span> <span class="nf">readObject</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">;</span>
+</code></pre></div>
 <p>El constructor de fluxos ObjectInputStreeam té com entrada un altre flux de baix nivell de qualsevol tipus derivat d’InputStream, per exemple: FileInputStream associat amb l’arxiu d’objectes. A continuació es crea un flux d’entrada per llegir els objectes de l’arxiu «archivoObjects.dat»</p>
-<pre><code class="language-java">ObjectInputStream obj = new ObjectInputStream(new FileInputStream(&quot;arxiuObjects.dat&quot;));
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">ObjectInputStream</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectInputStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;arxiuObjects.dat&quot;</span><span class="p">));</span>
+</code></pre></div>
 <p>El constructor llença una excepció si, per exemple, l’arxiu no existeix, aquella és del tipus «ClassNotFoundException» o «IOException», és necessari poder capturar aquestes excepcions</p>
 <h2 id="excepcions">Excepcions</h2>
 <p>Un problema important en el desenvolupament del programari és la gestió de les errades o errors. No importa quan bé estiga planificat aquest desenvolupament i quan eficient siga l’equip desenvolupador. És una màxima en informàtica el fet que sempre apareixeran problemes. Aquests problemes inesperats són problemes o errors que apareixen en temps d’execució, per exemple: esgotament de memòria o recursos, errors en els intervals dels bucles, divisions per zero, arxius no existents, etc..</p>
@@ -1370,42 +1288,42 @@ fobj.write(str);
 <li>S’executa el bloc finally (opcional)</li>
 </ol>
 <p>Exemple. Suposem una classe persona que incorporarem a la nostra aplicació. Aquesta classe té un constructor al qual se li passa el DNI, imaginem ara que de la nostra aplicació instanciem un objecte de la classe persona a la qual l direm Joan però quan cridem al constructor de la classe no li passem un DNI, aquest «mal ús» de la classe Persona, llençaria una excepció que hauria de capturar la nostra aplicació al bloc catch i és ací, en aquest bloc d’instruccions, en el que s’hauria de corregir la situació o avisar a l’usuari de l’aplicació del que ha passat.</p>
-<pre><code class="language-java">public void escolta () throws Exception {
-   // Codi del metode escolta
-   // ...
-   throw new Exception ();
-}
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">escolta</span> <span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+   <span class="c1">// Codi del metode escolta</span>
+   <span class="c1">// ...</span>
+   <span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span> <span class="p">();</span>
+<span class="p">}</span>
 
-public static void main (String [] args) {
-   try {
-      escolta();
-   }
-   catch(Exception e) {
-      // Codi a executar quan es produeix una excepció.
-   }
-}
-</code></pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">try</span> <span class="p">{</span>
+      <span class="n">escolta</span><span class="p">();</span>
+   <span class="p">}</span>
+   <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Codi a executar quan es produeix una excepció.</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Al codi anterior hem crear un mètode escolta que l’únic que fa és lleçar una excepció. Quan al mètode main cridem a la funció escolta, si volem fer ús del sistema d’excepcions de Java, l’haurem de posar dins del bloc try. Just desprès d’acabar el conjunt d’instruccions del bloc try posem un catch indicant-li quina és la classe d’excepció que hauriem de capturar, al nostre cas Exception, i dins del bloc catch posariem el codi que s’hauria d’executar en cas de produir-se eixe error. Normalment es solen posar missatges d’error que alerten l’usuari de l’aplicació.</p>
 <p>A continuació explicarem amb més detall què és el que fan cadascun dels blocs del mecanisme d’excepcions que ha dissenyat Java.</p>
 <h3 id="bloc-try">Bloc try</h3>
 <p>Dins del bloc try s’han de posar aquelles sentències que poden llençar alguna excepció entre claudàtors, després del claudàtor de tancament s’ha de posar el bloc catch o controlador d’excepcions almenys un bloc catch. Si l’excepció que es produeix coincideix amb algun dels paràmetres dels blocs catch que hi han, s’executen les sentències que es troben a dintre.</p>
 <p>Els blocs try, de la mateixa forma que amb totes les sentències de programació estructurada, es poden niar.</p>
-<pre><code class="language-java">public static void main (String [] args) {
-   try {
-      escolta();
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">try</span> <span class="p">{</span>
+      <span class="n">escolta</span><span class="p">();</span>
 
-      try {
-         tornaAEscoltar();
-      }
-      catch (Exception e) {
-         // Codi excepció interna
-      }
-   }
-   catch (Exception e) {
-      // Codi excepció externa
-   }
-}
-</code></pre>
+      <span class="k">try</span> <span class="p">{</span>
+         <span class="n">tornaAEscoltar</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+         <span class="c1">// Codi excepció interna</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Codi excepció externa</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>A l’exemple anterior és pot observar un codi amb dos blocs try niats on el primer bloc try té dos blocs catch per controlar varies excepcions</p>
 <h3 id="bloc-throw">Bloc throw</h3>
 <p>La sentència throw llença (raise) una excepció. Les excepcions en Java són objectes, per tant, una excepció és una instància d’una classe que deriva de la classe Exception
@@ -1416,7 +1334,7 @@ A l’exemple anterior com es pot observar es capturen dos tipus d’excepcions 
 <p>El bloc finally en un try..catch, és el bloc d’instruccions que s’executarà sempre, hi haja excepcions o no, al final de tot el nostre codi. 
 Normalment es solen posar sentències per tal d’alliberar tot allò que pugam haver creat dins del bloc try, és a dir, tancar fluxos, fitxers, connexions a bases de dades etc..amb la finalitat d’alliberar memòria.</p>
 <h3 id="classes-dexcepcions-en-java">Classes d'excepcions en Java</h3>
-<p><img alt="Excepcions Java" src="../assets/Tema7/Excepcions.png" /></p>
+<p><img alt="Excepcions Java" src="../assets/Tema8/Excepcions.png" /></p>
 <h3 id="nove-excepcions">Nove excepcions</h3>
 <p>Java permet la creació d’excepcions noves que deriven de la classe base Exception</p>
                 
@@ -1445,7 +1363,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tema 6. Herència, polimorfisme i interfícies
+              Tema 7. Herència, polimorfisme i interfícies
             </div>
           </div>
         </a>
@@ -1457,7 +1375,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
               <span class="md-footer__direction">
                 Next
               </span>
-              Tema 8. Gràfics 1. Java Swing
+              Tema 9. Gràfics 1. Java Swing
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -325,8 +325,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-1-funcions-declaracio-i-crida" class="md-nav__link">
-    Exemple 1. Funcions: declaració i crida
+  <a href="#funcions-declaracio-i-crida" class="md-nav__link">
+    Funcions: declaració i crida
   </a>
   
 </li>
@@ -343,18 +343,12 @@
     Paràmetres d'una funció
   </a>
   
-    <nav class="md-nav" aria-label="Paràmetres d'una funció">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#pas-dobjectes-a-funcions" class="md-nav__link">
     Pas d'objectes a funcions
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -576,8 +570,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-1-funcions-declaracio-i-crida" class="md-nav__link">
-    Exemple 1. Funcions: declaració i crida
+  <a href="#funcions-declaracio-i-crida" class="md-nav__link">
+    Funcions: declaració i crida
   </a>
   
 </li>
@@ -594,18 +588,12 @@
     Paràmetres d'una funció
   </a>
   
-    <nav class="md-nav" aria-label="Paràmetres d'una funció">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#pas-dobjectes-a-funcions" class="md-nav__link">
     Pas d'objectes a funcions
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -758,7 +746,7 @@ On:
 </code></pre></div>
 </td></tr></table>
 <p>Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
-<h3 id="exemple-1-funcions-declaracio-i-crida">Exemple 1. Funcions: declaració i crida</h3>
+<h3 id="funcions-declaracio-i-crida">Funcions: declaració i crida</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -812,6 +800,10 @@ On:
 <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">suma</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
+<blockquote>
+<p><strong>Activitat 1</strong><br>
+Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
+</blockquote>
 <h3 id="detalls-per-invocar-funcions">Detalls per invocar funcions</h3>
 <ul>
 <li>
@@ -878,6 +870,10 @@ On:
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<blockquote>
+<p><strong>Activitat 2</strong><br>
+Passa el codi anterior a Processing i executa'l.</p>
+</blockquote>
 <p>Un mètode pot tenir més d'un paràmetre. Simplement declare cada paràmetre, separant un el següent amb una coma. Per exemple, la classe Divisor defineix un mètode anomenat esDivisor () que determina si el primer paràmetre és divisor de el segon.</p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -912,14 +908,73 @@ On:
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-Depenent del tipus de dada que enviem a la funció com a argument, podem diferenciar dos comportaments: 
-- <strong>Pas per valor:</strong> Es crea una còpia local de la variable dins de la funció. </p>
+Depenent del tipus de dada que enviem a la funció com a argument, podem diferenciar dos comportaments: </p>
+<ul>
+<li><strong>Pas per valor:</strong> Es crea una còpia local de la variable dins de la funció. </li>
+</ul>
 <p><img alt="Pas per valor" src="../assets/Tema4/PasxValor.png" /></p>
 <ul>
 <li><strong>Pas per referència:</strong> Es maneja directament la variable, els canvis realitzats dins de la funció li afectaran també fora.</li>
 </ul>
 <p><img alt="Pas per referencia" src="../assets/Tema4/PasxReferencia.png" /></p>
-<h4 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h4>
+<blockquote>
+<p><strong>Activitat 3</strong><br>
+Passa el següent codi a processing, executa'l i raona el que està passant.</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">a</span> <span class="o">++</span> <span class="p">)</span>
+        <span class="n">array</span><span class="o">[</span><span class="n">a</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Abans de la cirda a la funció:&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i=&quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;array[5]=&quot;</span> <span class="o">+</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="p">);</span>
+    <span class="n">funcio</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">array</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Després de la cirda a la funció:&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i=&quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;array[5]=&quot;</span> <span class="o">+</span> <span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">funcio</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h3>
 <p>Quan passem un tipus primitiu a una funció, es passa per valor. Però quan vam passar un objecte a una funció, la situació canvia dràsticament, perquè els objectes es passen pel que efectivament és anomenat, <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència. Bàsicament, la funció no pot canviar un paràmetre, però la funció pot demanar-li a l'paràmetre que es canviï a si mateix cridant a algun mètode dins d'ell.</p>
 <p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
 <p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús de trucada per referència.</p>
@@ -1069,13 +1124,13 @@ Depenent del tipus de dada que enviem a la funció com a argument, podem diferen
     <span class="kd">class</span> <span class="nc">Recursividad</span><span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Factorial</span> <span class="n">f</span><span class="o">=</span> <span class="k">new</span> <span class="n">Factorial</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial utilizando un método recursivo:&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 3 es: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facR</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 6 es: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facR</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial utlitzant un mètode recursiu:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 3 és: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facR</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 6 és: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facR</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial utilizando un método iterativo:&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 3 es: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facI</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 6 es: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facI</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial utilitzant un mètode iteratiu:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 3 és: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facI</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El factorial de 6 és: &quot;</span><span class="o">+</span><span class="n">f</span><span class="p">.</span><span class="na">facI</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1088,13 +1143,13 @@ Eixida
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Factorial</span> <span class="n">utilizando</span> <span class="n">un</span> <span class="n">método</span> <span class="n">recursivo</span><span class="p">:</span>
-<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">es</span><span class="p">:</span> <span class="mi">6</span>
-<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">es</span><span class="p">:</span> <span class="mi">720</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Factorial</span> <span class="n">utilitzant</span> <span class="n">un</span> <span class="n">mètode</span> <span class="n">recursiu</span><span class="p">:</span>
+<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">és</span><span class="p">:</span> <span class="mi">6</span>
+<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">és</span><span class="p">:</span> <span class="mi">720</span>
 
-<span class="n">Factorial</span> <span class="n">utilizando</span> <span class="n">un</span> <span class="n">método</span> <span class="n">iterativo</span><span class="p">:</span>
-<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">es</span><span class="p">:</span> <span class="mi">6</span>
-<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">es</span><span class="p">:</span> <span class="mi">720</span>
+<span class="n">Factorial</span> <span class="n">utilitzant</span> <span class="n">un</span> <span class="n">mètode</span> <span class="n">iteratiu</span><span class="p">:</span>
+<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">és</span><span class="p">:</span> <span class="mi">6</span>
+<span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">és</span><span class="p">:</span> <span class="mi">720</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="stack-overflow">Stack Overflow</h3>
@@ -1108,11 +1163,9 @@ Eixida
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="c1">// condición base equivocada (esto causa</span>
-    <span class="c1">// stack overflow).</span>
+    <span class="c1">// Condició de base equivocada (provoca Stack Overflow)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">100</span><span class="p">)</span> 
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="k">else</span>

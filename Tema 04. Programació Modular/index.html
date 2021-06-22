@@ -974,6 +974,198 @@ Passa el següent codi a processing, executa'l i raona el que està passant.</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<blockquote>
+<p><strong>Activitat 4</strong><br>
+Escriu el següent codi en Processing i executa'l</p>
+</blockquote>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Variables globals</span>
+<span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="c1">// Dibuixem la cara cercle</span>
+  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+
+  <span class="c1">// Dibuixem ulls</span>
+  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="n">circle</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+  <span class="n">circle</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+  <span class="n">point</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
+  <span class="n">point</span><span class="p">(</span><span class="mi">168</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
+
+  <span class="c1">// Dibuixem la boca</span>
+  <span class="n">noFill</span><span class="p">();</span>
+  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="n">arc</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PI</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+Aquest codi mostra el següent dibuix</p>
+<p><img alt="Activitat 4" src="../assets/Tema4/Activitat4.png" /></p>
+<blockquote>
+<p><strong>Activitat 5. Divideix-lo en funcions.</strong><br>
+Separa el codi en funcions, has d'afegir les funcions dibuixaUlls i dibuixaBoca seguint els prototips que et mostre a continuació.</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de funcions</span>
+<span class="kt">void</span> <span class="nf">dibuixaUlls</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">dibuixaBoca</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p><strong>Activitat 6. Paràmetres coordenades.</strong><br>
+Modifica el codi anterior per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dues funcions: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenads x i y i a partir d'aquestes ha de dibuixar els ulls i la boca on corresponga.</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de les funcions</span>
+<span class="kt">void</span> <span class="nf">dibuixaUlls</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">dibuixaBoca</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p><strong>Activitat 7</strong><br> 
+Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de quedar el codi de la funció draw</p>
+</blockquote>
+<p><img alt="Activitat 7" src="../assets/Tema4/Activitat7.png" /></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Variables Globals</span>
+<span class="kt">int</span> <span class="n">cercleX</span><span class="p">,</span> <span class="n">cercleY</span><span class="p">,</span> <span class="n">triangleX</span><span class="p">,</span> <span class="n">triangleY</span><span class="p">,</span> <span class="n">quadratX</span><span class="p">,</span> <span class="n">quadratY</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+    <span class="c1">// Coordenades del cercle</span>
+    <span class="n">cercleX</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>
+    <span class="n">cercleY</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>
+
+    <span class="c1">// Coordenades del primer punt del triangle</span>
+    <span class="n">triangleX</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
+    <span class="n">triangleY</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+
+    <span class="c1">// Coordenades del quadrat</span>
+    <span class="n">quadratX</span> <span class="o">=</span> <span class="mi">445</span><span class="p">;</span>
+    <span class="n">quadratY</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+
+    <span class="c1">// Codi per dibuixar el cercle</span>
+    <span class="c1">// Escriu el codi necessari per dibuixar el cercle a cercleX i cercleY</span>
+    <span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
+    <span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
+
+    <span class="c1">// Codi per dibuixar el triangle</span>
+    <span class="c1">// Escriu el codi necessari per dibuixar el cercle a triangleX i triangleY</span>
+    <span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
+    <span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
+
+    <span class="c1">// Codi per dibuixar el quadrat</span>
+    <span class="c1">// Escriu el codi necessari per dibuixar el cercle a quadratX i quadratY</span>
+    <span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
+    <span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<blockquote>
+<p><strong>Activitat 8. Dibuixar peça domino parametres</strong><br>
+Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
+</blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">dras</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">dibuixaDomino</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">dibuixaDomin</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   
+    <span class="c1">// Codi per dibuixar la peça de dominó amb la puntuació que es passa per paràmetre.</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h3 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h3>
 <p>Quan passem un tipus primitiu a una funció, es passa per valor. Però quan vam passar un objecte a una funció, la situació canvia dràsticament, perquè els objectes es passen pel que efectivament és anomenat, <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència. Bàsicament, la funció no pot canviar un paràmetre, però la funció pot demanar-li a l'paràmetre que es canviï a si mateix cridant a algun mètode dins d'ell.</p>
 <p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>

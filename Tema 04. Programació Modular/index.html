@@ -1142,10 +1142,10 @@ Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de
 </code></pre></div>
 </td></tr></table>
 <blockquote>
-<p><strong>Activitat 8. Dibuixar peça domino parametres</strong><br>
+<p><strong>Activitat 8. Dibuixar peça domino.</strong><br>
 Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
 </blockquote>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1157,15 +1157,21 @@ Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatg
 <span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="kt">void</span> <span class="nf">dras</span> <span class="p">()</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="nf">draw</span>  <span class="p">()</span> <span class="p">{</span>
     <span class="n">dibuixaDomino</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">dibuixaDomin</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   
+<span class="kt">void</span> <span class="nf">dibuixaDomino</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   
     <span class="c1">// Codi per dibuixar la peça de dominó amb la puntuació que es passa per paràmetre.</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<img alt="Activitat 8" src="../assets/Tema4/Activitat8.png" /></p>
+<blockquote>
+<p><strong>Activitat 9</strong><br>
+Què passa si en lloc de 5 i 4 pasarem 6 i 6 per paràmetre? Dibuixa el que esperes que dibuixe? Fes les modficacions necessàries al codi per tal que funcione com s'espera. 
+<strong>Ampliació:</strong> fes que el teu algorisme mostre totes les peces del dominó ordenades en files i columnes.</p>
+</blockquote>
 <h3 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h3>
 <p>Quan passem un tipus primitiu a una funció, es passa per valor. Però quan vam passar un objecte a una funció, la situació canvia dràsticament, perquè els objectes es passen pel que efectivament és anomenat, <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència. Bàsicament, la funció no pot canviar un paràmetre, però la funció pot demanar-li a l'paràmetre que es canviï a si mateix cridant a algun mètode dins d'ell.</p>
 <p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>

@@ -888,9 +888,11 @@
                 
                 <h1 id="tema-3-el-llenguatge-java">Tema 3. El llenguatge Java</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>Una vegada estudiat el <strong>teorema del programa estructurat</strong> juntamnet amb els diagrames de flux i psuedocodi, passem a veure aquestos conceptes teòrics en un llenguatge de programació d'alt nivell com és el llenguatge de programació Java.</p>
+<p>Una vegada estudiat el <strong>teorema del programa estructurat</strong> juntamnet amb els diagrames de flux i psuedocodi, passem a veure aquestos conceptes teòrics en un llenguatge de programació d'alt nivell concret com és el llenguatge de programació Java.</p>
 <p>En aquest tema veurem la sintaxis bàsica de Java: paraules reservades, dades, variables, constants, identificadors i com també es codifiquen les estructures de control vistes al tema anterior en llenguatge Java.</p>
 <h2 id="dades-variables-i-identificadors">Dades, Variables i identificadors.</h2>
+<p>Una <strong>dada</strong> per una altra banda és: "la representació convencional de la informació en un format adequat perquè puga ser processada, comunicada o interpretada per mitjans manuals o automàtics."</p>
+<p>Per un altre costat una <strong>variable</strong> és:  "una expressió matemàtica, símbol que representa una quantitat el valor numèric de la qual no s'especifica."</p>
 <p>En qualsevol llenguatge de programació existeixen una sèrie d'elements com variables, constants, funcions, llibreries. Aquestos elements requereixen d'un nom per tal de distingir-lo de la resta. Aquestos noms es diuen <strong>identificadors</strong></p>
 <p>Un <strong>identificador</strong> és una cadena alfanúmerica que representa o dona un nom a un element dins del nostre programa. Els <strong>identificadors</strong> de les variables són noms que s'inventa el programador i s'hauria de tindre en consideració al següent màxima:</p>
 <blockquote>
@@ -985,10 +987,10 @@
 <h3 id="tipus-de-dades">Tipus de dades</h3>
 <p>Tot llenguatge de programació porta una sèrie de tipus de dades predefinits que es poden usar. Aquestos tipus de dades també es coneixen com a <strong>tipus primitius o tipus simples.</strong>. Java defineix 8 tipus diferents de dades: byte, short, int, long, char, float, double i boolean. Aquestos tipus es poden agrupar en quatre blocs:</p>
 <ul>
-<li><strong>Enters:</strong> on podem trobar el byte, short, long i int.</li>
-<li><strong>Punt flotant:</strong> aquest grup inclou el float i el double on es representen els números decimals.</li>
-<li><strong>Caracters:</strong> char representa a tot el conjunt de caracters del nostre sistema.</li>
-<li><strong>Booleà:</strong> boolean és un tipus especial que només pot tindre dos possibles valors: true o false.</li>
+<li><strong>Nombres enters:</strong> on podem trobar el byte, short, long i int. Aquestos tipus admeten valors no fraccionables en parts més xicotetes que la unitat. Per exemple: 1, 3, 5, 15, 20, 132... </li>
+<li><strong>Punt flotant:</strong> aquest grup inclou el float i el double on es representen els nombres decimals, és a dir, aquells que sí admeten fraccions. Per exemple: 1.3, 5.802039, etc..</li>
+<li><strong>Caracters:</strong> char representa a tot el conjunt de caracters del nostre sistema alfabètic inclosos els símbols. Per exmple: a, b, c, $, ?...</li>
+<li><strong>Booleà:</strong> boolean és un tipus especial que només pot tindre dos possibles valors: true o false. Què són els dos valors lògics de l'algebra de George Boole.</li>
 </ul>
 <h3 id="variables">Variables</h3>
 <p>Al final tot programa s'encarrega de processar informació i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
@@ -1390,8 +1392,92 @@ Còpia i compila el codi anterior i observa el que mostra pel terminal. Pots exe
  Prova el codi anterior i digues-me el que passa.</p>
 </blockquote>
 <h3 id="operadors-relacionals">Operadors relacionals</h3>
-<p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors true o false. Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé true o false.
-Els operadors relacionals a Java són:</p>
+<p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors true o false. Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé <strong>true o false.</strong></p>
+<p>Tant els operadors relacionals com els tipus de dades boolean, estan directament relacionats amb <strong>l'algebra de boole</strong>. A continuació hi pots veure un resum de les operacions bàsiques en l'algebra de boole:</p>
+<p><strong>Negació</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OR</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>OR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AND</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>AND</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Els operadors relacionals a Java són:</p>
 <ul>
 <li><strong>Igual que: ==</strong> o igual a. Exemple d'ús: a == b, compara si a i b són iguals o no.</li>
 <li><strong>Distint de: !=</strong> o distint de. Exemple d'ús: a != b, comprova si a i b són distints.</li>
@@ -2099,22 +2185,71 @@ Un altre exemple més clar</p>
 <p><strong>Activitat 26</strong><br>
 Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png" /></p>
+<p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 0 i 15 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
 <blockquote>
 <p><strong>Activitat 27. Dies de la setmana</strong><br>
 Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png" /></p>
 <blockquote>
 <p><strong>Activitat 28. if a switch</strong><br>
 Passa les activitats de l'apartat if..else a sentències switch..case</p>
 </blockquote>
-<p>&nbsp;</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de switch convertit a if</span>
+<span class="k">switch</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">valor1</span><span class="p">:</span>
+        <span class="c1">// Accions 1</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">valor2</span><span class="p">:</span>
+        <span class="c1">// Accions 2</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">valor3</span><span class="p">:</span>
+        <span class="c1">// Accions 3</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="p">:</span>
+        <span class="c1">// Accions default</span>
+<span class="p">}</span>
+
+<span class="c1">// El codi anterior utilitzant if</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">variable</span> <span class="o">==</span> <span class="n">valor1</span> <span class="p">)</span>
+    <span class="c1">// Accions 1</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">variagble</span> <span class="o">==</span> <span class="n">valor2</span><span class="p">)</span>
+    <span class="c1">// Accions 2</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">variable</span> <span class="o">==</span> <span class="n">valor3</span><span class="p">)</span>
+    <span class="c1">// Accions 3</span>
+<span class="k">else</span>
+    <span class="c1">//Accions default</span>
+</code></pre></div>
+</td></tr></table>
 <blockquote>
 <p><strong>Activitat 29. dies del mes</strong><br>
-Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes.</p>
+Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. Si fas el programa amb Processing recorda que el número del més l'hauràs de generar de forma aleatòria.</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png" /></p>
 <blockquote>
 <p><strong>Activitat 30. Figures geomètriques</strong><br>
 Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent.</p>
@@ -2244,32 +2379,54 @@ Al codi anterior:
 2. Avaluació de la condició: és i &lt; 100 ?
 3. Actualització: i ++</p>
 <blockquote>
-<p><strong>Activitat 31. Dibuixa triangles i cercles augmentant cada línia</strong>
-Fes un programa que dibuixe cercles de tamany 20 pixels seguint el següent patró: 1 cercle a la primera línia, dos a la segona, tres a la tercera i així successivament fins la cinquena línia.</p>
+<p><strong>Activitat 31. Dibuixa amb bucles</strong><br>
+Observa el següent codi i raona'l</p>
 </blockquote>
-<p>&nbsp;</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
+      <span class="n">circle</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>El resultat d'aquest codi seria:</p>
+<p><img alt="Activitat 31" src="../assets/Tema3/Activitat31.png" /></p>
 <blockquote>
-<p><strong>Activitat 32. Dibuixa la piramid i la invertida</strong>
+<p><strong>Activitat 32. Dibuixa la piramid i la invertida</strong><br>
 Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 32" src="../assets/Tema3/Activitat32.png" /></p>
 <blockquote>
-<p><strong>Activitat 33. Dibuixa la diagonal</strong>
+<p><strong>Activitat 33. Dibuixa la diagonal</strong><br>
 Donada una pantalla de 500 pixels d'ample i 500 d'alt, fes un programa que dibuixe quadrats de 20 per 20 pixels ocupant la diagonal de la pantalla des de la posició (0,0) fins la (500,500).</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png" /></p>
 <blockquote>
-<p><strong>Activitat 34. Dibuixa les dues diagonals</strong>
+<p><strong>Activitat 34. Dibuixa les dues diagonals</strong><br>
 Millora el programa anterior i fes que dibuixe les dues diagonals, des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
 </blockquote>
-<p>&nbsp;</p>
+<p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png" /></p>
 <blockquote>
-<p><strong>Activitat 35. Dues diagonals 640x480</strong>
+<p><strong>Activitat 35. Dues diagonals 640x480</strong><br>
 Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
 </blockquote>
 <p>&nbsp;</p>
 <blockquote>
-<p><strong>Activitat 36. whiles i for</strong>
+<p><strong>Activitat 36. whiles i for</strong><br>
 Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p>
 </blockquote>
                 

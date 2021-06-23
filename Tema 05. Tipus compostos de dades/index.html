@@ -775,13 +775,15 @@ Per tal de fer les activitats d’aquest tema es necessitarà de la implementaci
 - Membres de la classe: arrayNúmeros i arrayCaracters
 - Mètodes de la classe: recercaBinaria, recercaSequencial, ordenarInserció, ordenarBombolla, ordenarShell, ordernarQuickSort</p>
 <p>De moment amb açò serà suficient, en apartats posteriors anirem afegint més membres i mètodes quan ho necessitem.</p>
-<p><strong>Activitat 1.</strong> </p>
-<p>Crea la classe ‘TAD’ amb l’IDE que sols utilitzar basada en les 
+<blockquote>
+<p><strong>Activitat 1</strong><br> 
+Crea la classe ‘TAD’ amb l’IDE que sols utilitzar basada en les 
 següents especificacions:
 - Ha de ser una classe pública
 - Ha de tindre mínim una constant que ens indicarà el total d’elements que tindran els arrays, tant el d’enters com el de caràcters.
 - Com membres de la classe ha de tindre almenys un array de caràcters i un d’enters. Han de ser privats o públics?
 - També ha de tenir un mètode main static on s’iniciarà el programa.</p>
+</blockquote>
 <h2 id="arrays">Arrays</h2>
 <p>Un array és un tipus de dades compost que permet emmagatzemar un nombre x d’elements del mateix tipus. Amb una única declaració podem tenir accés a un conjunt de valors agrupats. Aquestes agrupacions o arrays poden bé ser de tipus simples o també de tipus compostos.
 Per tal d’accedir a cadascun dels elements del array s’utilitza un índex o posició. La primera posició de tot array és la 0 mentre que la segona seria la que té índex 1. Açò pot marejar un poc al principi.</p>
@@ -822,8 +824,10 @@ Alguns exemples:</p>
 </code></pre></div>
 </td></tr></table>
 <p>D’aquesta forma hauríem creat un array de 5 enters que contindria els nombres parells fins al 10.</p>
-<p><strong>Activitat 2</strong></p>
-<p>En aquest punt aprofitarem per crear un constructor a la nostra classe TAD. Un constructor de classe és la funció que s’executa en el moment que s’instancia un objecte i és en aquest punt on s’haurien d'inicialitzar aquells elements de la classe que ho necessiten. En el nostre cas els arrays. Inicialitza l’arrayNumeros amb 10 números aleatoris usant la funció rand. Fes el mateix però amb caràcters amb el nostre arrayCaracters. Recorda que els arrays són membres de la classe.</p>
+<blockquote>
+<p><strong>Activitat 2</strong><br>
+En aquest punt aprofitarem per crear un constructor a la nostra classe TAD. Un constructor de classe és la funció que s’executa en el moment que s’instancia un objecte i és en aquest punt on s’haurien d'inicialitzar aquells elements de la classe que ho necessiten. En el nostre cas els arrays. Inicialitza l’arrayNumeros amb 10 números aleatoris usant la funció rand. Fes el mateix però amb caràcters amb el nostre arrayCaracters. Recorda que els arrays són membres de la classe.</p>
+</blockquote>
 <h3 id="acces-als-elements-dun-array">Accés als elements d'un array</h3>
 <p>Una vegada ja tenim la declaració de l’array i la seua inicialització, si volem bé accedir al seu contingut o modificar-ho, necessitaríem l’identificador de l’array i l’índex al qual volem accedir. És molt important tenir en compte que el primer element d’un array en Java està a la posició (índex) 0 i no a la posició 1 com ens indicaria la lògica.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -843,10 +847,12 @@ Alguns exemples:</p>
 <h3 id="arrays-com-a-parametres">Arrays com a paràmetres</h3>
 <p>Com qualsevol altre tipus de dades, un array també es pot passar com a paràmetre a un mètode. Els arrays sempre es passen per referència, és a dir, quan passem un array per paràmetre a un mètode, el que en realitat estem passant és un adreça de memòria que és la que ens indicaria on està l’inici del contingut d’aquest. Passar per referència qualsevol paràmetre significa que qualsevol modificació que es faja dins del mètode afectarà també a l’array fora d’aquest.</p>
 <p>No passa el mateix si passem un element concret de l’array, en aquest cas a l’igual que amb els altres paràmetres, aquestos es passen per valor, per tant les  modificacions o canvis que es produeixquen dins del mètode no afectaran fora d’aquest.</p>
-<p><strong>Activitat 3.</strong></p>
-<p>Fes dos mètodes per la nostra classe que mostre, de forma amigable, l’array de números i l’array de caràcters. Els mètodes es podrien dir mostraEnters i mostraCaracters i seran privats.</p>
-<p><strong>Activitat 4.</strong></p>
-<p>En la següent activitat afegirem una funció a la nostra classe en la que ens mostre un menú de les accions que podem realitzar. Per tal de realitzar aquest menú afegirem un array d’strings com a nou membre de la classe que inicialitzarem amb les següents opcions: </p>
+<blockquote>
+<p><strong>Activitat 3.</strong><br>
+Fes dos mètodes per la nostra classe que mostre, de forma amigable, l’array de números i l’array de caràcters. Els mètodes es podrien dir mostraEnters i mostraCaracters i seran privats.</p>
+<p><strong>Activitat 4.</strong><br>
+En la següent activitat afegirem una funció a la nostra classe en la que ens mostre un menú de les accions que podem realitzar. Per tal de realitzar aquest menú afegirem un array d’strings com a nou membre de la classe que inicialitzarem amb les següents opcions: </p>
+</blockquote>
 <ul>
 <li>Mostrar array enters</li>
 <li>Mostrar array caracters</li>
@@ -868,8 +874,10 @@ Alguns exemples:</p>
 <span class="p">}</span>   
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 5.</strong></p>
-<p>Fes una funció que mostre per pantalla el menú però esta vegada utilitzant el for com hem explicat a l’exemple anterior.</p>
+<blockquote>
+<p><strong>Activitat 5.</strong><br>
+Fes una funció que mostre per pantalla el menú però esta vegada utilitzant el for com hem explicat a l’exemple anterior.</p>
+</blockquote>
 <h2 id="algorismes-de-recerca">Algorismes de recerca</h2>
 <p>Existeixen dos algorismes de recerca que veurem en aquest apartat: la recerca seqüencial i la recerca binaria. A l’element que estem buscant li direm clau.</p>
 <h3 id="sequencial">Seqüencial</h3>
@@ -892,8 +900,10 @@ Alguns exemples:</p>
 - Que hajam trobat el que busquem, per tant s’acaba la recerca
 - Que el pivot siga major que la clau. En aquest cas continuaríem buscant a la meitat esquerra del vector desestimant la meitat dreta (pivot inclòs)
 - Que el pivot siga menor que la clau. Amb la qual cosa hauríem de buscar a la part esquerra del vector.</p>
-<p><strong>Activitat 6.</strong></p>
-<p>Afegeix el mètode de recerca seqüencial i el de recerca binaria a la classe TAD. També has d’implementar el codi necessari per tal que quan l’usuari seleccione una de les dues opcions de la nostra aplicació, demane el número a buscar i mostre el resultat per pantalla. En cas que es seleccione la recerca binària, hauríem de comprovar si el vector està ordenat</p>
+<blockquote>
+<p><strong>Activitat 6.</strong><br>
+Afegeix el mètode de recerca seqüencial i el de recerca binaria a la classe TAD. També has d’implementar el codi necessari per tal que quan l’usuari seleccione una de les dues opcions de la nostra aplicació, demane el número a buscar i mostre el resultat per pantalla. En cas que es seleccione la recerca binària, hauríem de comprovar si el vector està ordenat</p>
+</blockquote>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -931,8 +941,10 @@ Alguns exemples:</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 7.</strong></p>
-<p>Comparem l’eficiència dels dos algorismes de recerca vistos. Fes una funció a la nostra classe TAD en la que es compten el total de vegades que s’accedeix  l’array de números per arribar a trobar la clau. Hauràs de posar una opció més al menú, per exemple: «Comparar eficiència dels algoritmes». Aquesta nova opció haurà d’executar varies vegades els dos algorismes de recerca amb vectors de números diferents.</p>
+<blockquote>
+<p><strong>Activitat 7.</strong><br>
+Comparem l’eficiència dels dos algorismes de recerca vistos. Fes una funció a la nostra classe TAD en la que es compten el total de vegades que s’accedeix  l’array de números per arribar a trobar la clau. Hauràs de posar una opció més al menú, per exemple: «Comparar eficiència dels algoritmes». Aquesta nova opció haurà d’executar varies vegades els dos algorismes de recerca amb vectors de números diferents.</p>
+</blockquote>
 <h2 id="algorismes-dordenacio">Algorismes d'ordenació</h2>
 <p>Els algorismes d’ordenació permeten ordenar un array en funció d’un criteri establert al propi algorisme. Hi han diferents tipus d’algorismes d’ordenació: selecció, inserció, bombolla, Shell i Quicksort.</p>
 <h3 id="seleccio">Selecció</h3>
@@ -941,8 +953,10 @@ Alguns exemples:</p>
 2. A partir de la posició 1 busquem l’element més menut següent i fem el mateix que al pas anterior però aquesta vegada a la posició 1 de l’array
 3. Repetim el pas 2 fins arribar a l’última posició de l’array.</p>
 <p><img alt="Ordenació per selecció" src="../assets/Tema5/SeleccioTrace.png" /></p>
-<p><strong>Activitat 8.</strong></p>
-<p>Implementa l’algorisme d’ordenació per selecció a la classe TAD i vicula-la a l’opció del menú corresponent. </p>
+<blockquote>
+<p><strong>Activitat 8.</strong><br>
+Implementa l’algorisme d’ordenació per selecció a la classe TAD i vicula-la a l’opció del menú corresponent. </p>
+</blockquote>
 <h2 id="insercio">Inserció</h2>
 <p>Aquest algorisme consisteix en generar un nou array a partir del que ja es té, tal que cada nou element inserit es posa a la seua posició correcta.
 Imaginem que tenim el següent array d’enters per ordenar: </p>
@@ -983,8 +997,10 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 9.</strong></p>
-<p>Implementa l’algorisme d’ordenació per inserció a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<blockquote>
+<p><strong>Activitat 9.</strong><br>
+ Implementa l’algorisme d’ordenació per inserció a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+</blockquote>
 <h2 id="bombolla">Bombolla</h2>
 <p>L’algorisme d’ordenació per bombolla és el més conegut i també el menys eficient, ja que a cada passada per ordenar un element compara cadascun d’ells amb el seu adjacent de forma que si les seues posicions són incorrectes, s’intercanvien. Al finalitzar cada passada l’element més gran es va posant al final de la llista</p>
 <p>Donat el següent array: </p>
@@ -1025,8 +1041,10 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 10.</strong>
+<blockquote>
+<p><strong>Activitat 10.</strong><br>
 Implementa l’algorisme d’ordenació per bombolla a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+</blockquote>
 <h2 id="shell">Shell</h2>
 <p>L’algorisme Shell és una millora de l’algorisme d’inserció directa. Compara elements separats per un espai de vàries posicions el que permet que un element faja passos més grans fins trobar la seua posició esperada. </p>
 <p>Els passos múltiples sobre els elements de l’array es fan amb espais de posicions cada vegada més menuts. L’últim pas de l’algorisme Shell és una simple ordenació per inserció però arribats a aquest punt es pot garantir que l’array esta ja quasi ordenat, el que fa que l’ordenació per inserció siga molt eficient.</p>
@@ -1086,8 +1104,10 @@ Implementa l’algorisme d’ordenació per bombolla a la classe TAD i vincula-l
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 11.</strong></p>
-<p>Implementa l’algorisme d’ordenació shell a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<blockquote>
+<p><strong>Activitat 11.</strong><br>
+Implementa l’algorisme d’ordenació shell a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+</blockquote>
 <h2 id="quicksort">Quicksort</h2>
 <p>Aquest és un dels algorismes d’ordenació més ràpids i eficients. Utilitza la tècnica «divideix i venceràs» de tal forma que divideix l’array a ordenar en parts que ordenarà al mateix temps. Bàsicament es tria l’element de l’array com a pivot tal que es forme dos subArrays, en un d’ells s’emmagatzemen els elements menors que l’element que hem triat com a pivot i a l’altre array es guarden els element majors que el pivot. Una vegada fet, s’aplica el mateix procediment als subarrays obtinguts.</p>
 <p>Seguint amb el mateix array dels exemples anteriors, aplicarem l’algorisme d’ordenació quicksort.</p>
@@ -1149,12 +1169,21 @@ Implementa l’algorisme d’ordenació per bombolla a la classe TAD i vincula-l
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Activitat 12.</strong></p>
-<p>Implementa l’algorisme d’ordenació quicksort a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
-<p><strong>Activitat 13.</strong></p>
-<p>Fes que en cada algorisme d’ordenació es mostre una traça on a cada passada de l’algoritme, és a dir, cada vegada que mou un element a l’array, mostre aquest per pantalla.</p>
-<p><strong>Activitat 14.</strong></p>
-<p>Entrega mitjançant la plataforma aules la classe TAD que inclou de les activitats 1 a la 13 amb totes les funcions tant de recerca com d’ordenació sobre arrays unidimensionals.</p>
+<blockquote>
+<p><strong>Activitat 12.</strong><br>
+Implementa l’algorisme d’ordenació quicksort a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+<p><strong>Activitat 13.</strong><br>
+Fes que en cada algorisme d’ordenació es mostre una traça on a cada passada de l’algoritme, és a dir, cada vegada que mou un element a l’array, mostre aquest per pantalla.</p>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+<p><strong>Activitat 14.</strong><br>
+Entrega mitjançant la plataforma aules la classe TAD que inclou de les activitats 1 a la 13 amb totes les funcions tant de recerca com d’ordenació sobre arrays unidimensionals.</p>
+</blockquote>
+<p>&nbsp;</p>
 <h2 id="arrays-multidimensionals">Arrays multidimensionals</h2>
 <p>Fins ara hem estan utilitzant arrays d’una sola dimensió, coneguts també com vectors, taules o llistes. Aquests arrays es recorren amb ajuda d’un sol índex (tenen una sola dimensió). En aquest apartat estudiarem arrays de més d’una dimensió per als que necessitarem més d’un índex a l’hora de ser recorreguts. 
 Els arrays multidimensionals més comuns són els de dues dimensions o bidimensionals, també coneguts com matrius. És comú representar aquest tipus de dades com una taula composta per una sèrie de files i columnes:</p>
@@ -1309,71 +1338,38 @@ Per accedir a una dada en un array multimensional hem de coneixer els índex de 
 </code></pre></div>
 </td></tr></table>
 <p>Per tal d’entendre el concepte de matriu o array bidimensional, realitzarem un exercici on treballarem amb les típiques matrius matemàtiques, realitzant les operacions pròpies d’aquestes.</p>
-<p><strong>Activitat 15.</strong></p>
-<p>Es tracta de desenvolupar una aplicació que realitze operacions utilitzant matrius de 3x3. El menú ha de mostrar el següent:</p>
-<ol>
-<li>Emplena la primera matriu</li>
-<li>Emplena la segona matriu</li>
-<li>Visualitza les matrius</li>
-<li>Suma les matrius</li>
-<li>Multiplica per un escalar</li>
-<li>Producte de matrius</li>
-<li>Transposta</li>
-<li>Eixir</li>
-</ol>
+<blockquote>
+<p><strong>Activitat 15.</strong><br>
+Es tracta de desenvolupar una aplicació que realitze operacions utilitzant matrius de 3x3. El menú ha de mostrar el següent:
+1. Emplena la primera matriu
+2. Emplena la segona matriu
+3. Visualitza les matrius
+4. Suma les matrius
+5. Multiplica per un escalar
+6. Producte de matrius
+7. Transposta
+8. Eixir</p>
+</blockquote>
 <p>Per a cadascuna de les operacions anteriors s’ha d’implementar un mètode
 Mireu el següent exemple:</p>
 <p><img alt="Activitat 15. Matrius" src="../assets/Tema5/Matrius1.png" /></p>
-<p><strong>Activitat 16.</strong>
-Imagina que has de mantindre les notes dels alumnes de tres assignatures. A cada assignatura tens 15 alumnes, tal que s’ha de mantenir la informació mitjançant una variable que gràficament presenta la següent estructura</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Assignatura 1</td>
-<td>5</td>
-<td>6</td>
-<td>7,3</td>
-<td>2,3</td>
-<td>4,5</td>
-</tr>
-<tr>
-<td>Assignatura 2</td>
-<td>7,8</td>
-<td>8,7</td>
-<td>7,7</td>
-<td>3,3</td>
-<td>4,8</td>
-</tr>
-<tr>
-<td>Assignatura 3</td>
-<td>7</td>
-<td>9</td>
-<td>10</td>
-<td>8,2</td>
-<td>2,8</td>
-</tr>
-</tbody>
-</table>
-<p>Crea una aplicació en la que pugues:</p>
-<ol>
-<li>Inserir notes de l’assignatura sel·leccionada.</li>
-<li>Inserir totes les notes</li>
-<li>Calcular la nota mitjana de l’assignatura sel·leccionada.</li>
-<li>Ordenar les assignatures de forma ascendent.</li>
-<li>Estadística</li>
-<li>Eixir de l’aplicació.</li>
-</ol>
-<p>L’opció estadística mostra la quantitat de notes entre 0 i 3, entre 3,1 i 5, entre 5,1 i 7, entre 7.1 i 9 i entre 9,1 i 10.</p>
+<blockquote>
+<p><strong>Activitat 16.</strong><br>
+Imagina que has de mantindre les notes dels alumnes de tres assignatures. A cada assignatura tens 15 alumnes, tal que s’ha de mantenir la informació mitjançant una variable que gràficament presenta la següent estructura
+|     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- |
+| Assignatura 1 | 5 | 6 | 7,3 | 2,3 | 4,5 | ... | 8,3 |
+| Assignatura 2 | 7,8 | 8,7 | 7,7 | 3,3 | 4,8 | ... | 6,5 |
+| Assignatura 3 | 7 | 9 | 10 | 8,2 | 2,8 | ... | 9,2 |
+Crea una aplicació en la que pugues:
+1. Inserir notes de l’assignatura sel·leccionada.
+2. Inserir totes les notes
+3. Calcular la nota mitjana de l’assignatura sel·leccionada.
+4. Ordenar les assignatures de forma ascendent.
+5. Estadística
+6. Eixir de l’aplicació.
+L’opció estadística mostra la quantitat de notes entre 0 i 3, entre 3,1 i 5, entre 5,1 i 7, entre 7.1 i 9 i entre 9,1 i 10.</p>
+</blockquote>
 <h3 id="arrays-irregulars">Arrays irregulars</h3>
 <p>Una matriu irregular o escalonada no és més que un array de taules, on cadascuna de les taules que formen l’array no necessàriament han de tenir la mateixa grandària.</p>
 <p><img alt="Arrays Irregulars" src="../assets/Tema5/Irregulars.png" /></p>

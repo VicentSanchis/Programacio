@@ -396,13 +396,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple-1-la-nostra-fruiteria_1" class="md-nav__link">
-    Exemple 1. La nostra fruiteria.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#exemple-2trobar-les-claus-de-casa" class="md-nav__link">
     Exemple 2.Trobar les claus de casa.
   </a>
@@ -782,13 +775,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple-1-la-nostra-fruiteria_1" class="md-nav__link">
-    Exemple 1. La nostra fruiteria.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#exemple-2trobar-les-claus-de-casa" class="md-nav__link">
     Exemple 2.Trobar les claus de casa.
   </a>
@@ -911,8 +897,8 @@ Segons el diccionari normatiu valencià (DNV)</p>
 <ul>
 <li><strong>Programació estructurada:</strong> Utilitzen les estructures bàsiques de programació: seqüencial, alternativa i iterativa combinats amb la programació modular per dissenyar programes.</li>
 <li><strong>Programació orientada a objectes:</strong> Entenen els programes com un conjunt d’objectes que tenen unes característiques pròpies, uns mètodes i que interactuen amb els altres objectes que formen part del sistema.</li>
-<li><strong>SEGONS NOMBRE DE PROCESSOS</strong></li>
 </ul>
+<p><strong>SEGONS NOMBRE DE PROCESSOS</strong></p>
 <p>És a dir, si permeten la execució concurrent, més d’un procés al mateix temps o no. Per tant ens podem trobar:</p>
 <ul>
 <li>Llenguatges de programació concurrent que permeten la concurrència</li>
@@ -1023,24 +1009,91 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <h2 id="pseudocodi">Pseudocodi</h2>
 <p>El <strong>pseudocodi</strong> (o fals llenguatge) és una descripció a molt alt nivell de l'estructura d'un programa. Encara que utilitze estructures típiques de la programació es diu que és a alt nivell perquè una persona amb pocs o sense coneixements informàtics puga entendre i interpretar la porció de codi que estiga llegint. </p>
 <p>El principal objectiu del pseudocodi és el de representar la solució a un algorisme de la manera més detallada possible, i al mateix temps el més semblant possible al llenguatge que s'utilitzarà a la fase de codificació.</p>
-<p>No existeix una sintaxis estàndard de pseudocodi però amb ell s'han de poder escriure totes les estructures de control de la programació estructurada.</p>
-<p>A continuació farem els mateixos exemples que hem fet en diagrames de flux però en pseudocodi:</p>
-<h3 id="exemple-1-la-nostra-fruiteria_1">Exemple 1. La nostra fruiteria.</h3>
+<p>No existeix una sintaxis estàndard de pseudocodi però amb ell s'han de poder escriure totes les estructures de control de la programació estructurada. De totes formes, en aquest tema utilitzarem la següent sintaxi:</p>
+<ul>
+<li><strong>Estructura seqüencial:</strong> accio(); accio(parametres);</li>
+<li><strong>Estructura iterativa:</strong> </li>
+<li><strong>fer .. mentre:</strong></li>
+</ul>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">fer</span>
+    <span class="nf">accions</span><span class="p">();</span>
+<span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+  - <strong>mentre .. fer:</strong></p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">fer</span>
+    <span class="nf">accions</span><span class="p">();</span>
+<span class="n">fimentre</span>
+</code></pre></div>
+</td></tr></table>
+  - <strong>repetir .. fins:</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">repetir</span>
+    <span class="nf">accions</span><span class="p">();</span>
+<span class="n">fins</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>Estructura alternativa:</strong></li>
+<li><strong>si .. fsi:</strong></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">accions</span><span class="p">();</span>
+<span class="n">fisi</span>
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>si .. sino:</strong></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">accions1</span><span class="p">();</span>
+<span class="n">sino</span>
+    <span class="nf">accions2</span><span class="p">();</span>
+<span class="n">fisi</span>
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>si .. sinosi .. sino:</strong> <br />
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">createTicket</span><span class="p">();</span>
-<span class="n">fer</span> <span class="p">{</span>
-    <span class="n">afegirElement</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="n">mentre</span> <span class="k">continue</span> <span class="n">comprant</span>
-<span class="nf">calcularPreuFinal</span><span class="p">();</span>
-<span class="n">ImprimirTicket</span><span class="p">();</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">accions1</span><span class="p">();</span>
+<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">accions2</span><span class="p">();</span>
+<span class="n">sino</span>
+    <span class="nf">accions3</span><span class="p">();</span>
+<span class="n">fisi</span>
 </code></pre></div>
 </td></tr></table>
+<div class="highlight"><pre><span></span><code>A continuació farem els mateixos exemples que hem fet en diagrames de flux però en pseudocodi:
+
+### Exemple 1. La nostra fruiteria.
+
+```java linenums=&quot;1&quot;
+createTicket();
+fer {
+    afegirElement();
+}
+mentre continue comprant
+calcularPreuFinal();
+ImprimirTicket();
+</code></pre></div></li>
+</ul>
 <h3 id="exemple-2trobar-les-claus-de-casa">Exemple 2.Trobar les claus de casa.</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>

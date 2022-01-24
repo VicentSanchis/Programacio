@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -51,8 +51,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -96,9 +97,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -898,6 +898,17 @@
 <blockquote>
 <p>Quan triem el nom per identificar a una variable, ha de ser significatiu, és a dir, que el mateix identificador ja done alguna pista de que és el que representa.</p>
 </blockquote>
+<p>&nbsp;</p>
+<blockquote>
+<p><strong>Normes per construir identificadors en Java</strong><br>
+1. Estan formats per caracters i/o digits.<br>
+2. No poden començar per digit.<br>
+3. No poden usar els següents caracters especials:
+<br>&nbsp;&nbsp;&nbsp;&nbsp; <code>+ - * / = % &amp; # ! ? ^ “ ‘ ~ \ | &lt; &gt; ( ) [ ] { } : ; . ,</code><br><br>
+4. No poden ser cap paraula reservada de Java<br>
+5. Els identificadors de Java distingeixen entre majúscules i minúscules (case sensitive)
+6. No hi ha límit a la llargària de l'identificador, però és aconsellable utilitzar una grandària òptima entre 4 i 15 caracters.</p>
+</blockquote>
 <h3 id="paraules-reservades">Paraules reservades</h3>
 <p>Uns dels principals <strong>identificadors</strong> que ens trobarem a tot llenguatge de programació són les <strong>paraules reservades</strong>. Per entendre-ho, el conjunt de paraules reservades d'un llenguatge de programació són el diccionari de totes les paraules que té aquest llenguatge. Aquetes paraules reservades no poden utilitzar-se per cap altra cosa més, per exemple, si Java té la paraula reservada <strong>public</strong>, el programador no podrà crear cap variable utilitzant l'identificador public.</p>
 <h4 id="paraules-reservadoes-a-java">Paraules reservadoes a Java</h4>
@@ -994,7 +1005,7 @@
 </ul>
 <h3 id="variables">Variables</h3>
 <p>Al final tot programa s'encarrega de processar informació i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
-<p>Una variable és com un contenidor que té associat un tipus (int, float, double, char) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra.</p>
+<p>Una variable és com un contenidor que té associat un tipus (int, float, double, char) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra o símbol alfanumèric.</p>
 <p><img alt="Variables" src="../assets/Tema3/variables-en-programacion.png" /></p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1024,6 +1035,16 @@
 </td></tr></table>
 <h4 id="declaracio-i-inicialitzacio">Declaració i inicialització</h4>
 <p>Cal diferenciar entre la declaració d'una variable, quan li donen nom, i la inicialització d'aquesta mateixa, quan li donem valor. A l'exemple anterior hauríem declarat les variables de tipus enter <strong>posX</strong> i <strong>posY</strong> però no els hauriem donat cap valor incial.</p>
+<p>Si per declarar una variable és necessari l'ús d'un <strong>identificador</strong> que ens servirà d'etiqueta per poder accedir a dita variable, per tal d'assingar-li un valor hem de fer ús d'un <strong>literal</strong>.</p>
+<blockquote>
+<p>Un <strong>literal</strong> és un valor que poden assignar a les variables. Depenent del tipus de variable, podrem assignar uns valors o uns altres.</p>
+<ul>
+<li><strong>Literals enters:</strong> 12, 2, -3, 12L (long), 0101010 (binària), 0x1a (hexadecimal).</li>
+<li><strong>Literals decimals:</strong> 12.2, 12.2F, 12.2D (double).</li>
+<li><strong>Literals caràcter:</strong> 'a', 'b', '$'.</li>
+<li><strong>Literals cadena:</strong> "Bela", "Ciao".</li>
+</ul>
+</blockquote>
 <p>Per defecte Java inicialitzaria aquestes dues variables a zero, és a dir, dins la caixa (contenidor) de cada variable, tindriem el valor zero si no s'indica el contrari.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1065,16 +1086,34 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Codi per a Processing IDE</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Codi per a Processing IDE</span>
+<span class="kt">int</span> <span class="n">iPosX</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">iPosY</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">bPrinted</span><span class="p">;</span>
+
 <span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">posX</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">posY</span><span class="p">;</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
-    <span class="n">posX</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-    <span class="n">posY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
+    <span class="n">bPrinted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">bPrinted</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
+      <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
+      <span class="n">iPosX</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+      <span class="n">iPosY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
+      <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
+      <span class="n">bPrinted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -2439,6 +2478,7 @@ Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -2499,7 +2539,7 @@ Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
+      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
       
     
   </body>

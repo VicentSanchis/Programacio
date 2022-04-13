@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -51,8 +51,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -96,9 +97,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -946,7 +946,7 @@
 <h2 id="introduccio">Introducció</h2>
 <p>Una part important de tot llenguatge de programació és com s’establirà el contacte amb l’exterior, bé siga mitjançant la <strong>consola</strong> o a través del <strong>sistema de fitxers</strong>, per finalment poder actuar amb l’usuari d’una aplicació en execució. Ambdós, consola i sistema de fitxers, poden funcionar tant d’entrada als nostres programes com d’eixida.</p>
 <p>Java defineix una abstracció, els <strong>streams o fluxos</strong> per tractar la comunicació d’informació amb l’exterior. Per entendre-ho millor, un stream o flux és com un canal de comunicació entre un origen i un destí. Per exemple suposem el cas d’un programa que quan arranque haja de llegir una llista de clients d’un fitxer de text per crear una agenda. En aquest cas <strong>l’origen</strong> seria el fitxer de text i el <strong>destí</strong> el programa o aplicació que s’encarrega d’emplenar l’agenda amb el llistat de clients, doncs bé, l’stream en aquest escenari seria el <strong>canal de comunicació</strong> que s’establiria entre el fitxer de text i el programa per tal que aquest puga llegir la informació.</p>
-<p><img alt="Entrda Eixida - Streams" src="../assets/Tema8/EntradaEixida.png" /></p>
+<p><img alt="Streams" src="../assets/Tema8/EntradaEixida.png" /></p>
 <p>A la imatge anterior es poden observar dos tipus de fluxos de dades: El primer és un flux d'entrada de dades, s'enten d'entrada perquè va del sistema de fitxers al programa, mentre que el segon representa un flux de dades d'eixida, ja que aquest va del programa al sistema de fitxers.</p>
 <p>En aquest tema explicarem com Java tracta mitjançant objectes l’establiment d'aquests canals de comunicació i quines són les operacions que hi podem fer i com s’han d’utilitzar aquestes abstraccions de Java.
 D’altra banda Java també ofereix el mecanisme d’excepcions per controlar els errors sobrevinguts. Una excepció és un problema que es produeix en temps d’execució. Java permet controlar aquests problemes i programar amb els try...catch la solució als errors en temps d’execució.</p>
@@ -1255,6 +1255,7 @@ obirem amb un FileOutputStream. Al fitxer d’eixida, bolcarem el contingut de
 Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie el que apareix a «prova.txt», el d’entrada però a l’inrevés. Per exemple:
 </pre>
 
+<p>Un possible resultat de l'activitat anterior podria ser el que es pot observar a la imatge següent:</p>
 <p><img alt="Fitxers Invertits" src="../assets/Tema8/FitxersInvertits.png" /></p>
 <h3 id="datainputstream-i-dataoutputstream">DataInputStream i DataOutputStream</h3>
 <p>La veritat és que treballar amb bytes quan estem parlant de fitxers o arxius que contenen informació o dades de més nivell pot resultar incomode, ja que entre altres hauríem de saber quants bytes té un caràcter, un enter o un doble. </p>
@@ -1272,7 +1273,7 @@ Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie 
 <span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<p>Observa el codi anterior: Primer s'instancia un objecte de la classe FileInputStream (derivada de InputStream) en la que se li indica la ruta del fitxer amb el que volem treballar. Després aquest objecte FileInputStream s'utilitza per poder instanciar un objecte de la classe DataInputStream que utilitzarem per llegir tipus de dades primitius del fitxer.</p>
+<p><strong>Observa el codi anterior:</strong> Primer s'instancia un objecte de la classe <strong>FileInputStream</strong> (derivada de InputStream) en la que se li indica la ruta del fitxer amb el que volem treballar. Després aquest objecte FileInputStream s'utilitza per poder instanciar un objecte de la classe <strong>DataInputStream</strong> que utilitzarem per llegir tipus de dades primitius del fitxer.</p>
 <p>Bàsicament aquestes classes el que fan és organitzar els bytes en tipus primitius de tal forma que ja podem treballar llegint i escrivint als fluxos: enters, caràcters, reals, cadenes etc..</p>
 <table>
 <thead>
@@ -1337,7 +1338,7 @@ Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie 
 <span class="n">snb</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<p>Al contrari que passava amb el DataInputStream, al codi anterior estem instanciant un objecte de la classe DataOutputStream que utlitzarem per escriure la informació desitjada.</p>
+<p>Al contrari que passava amb el DataInputStream, al codi anterior estem instanciant un objecte de la classe <strong>DataOutputStream</strong> que utlitzarem per escriure la informació desitjada.</p>
 <table>
 <thead>
 <tr>
@@ -1396,6 +1397,26 @@ Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie 
 </tr>
 </tbody>
 </table>
+<p>Un altre exemple d'ús del <strong>DataInputStream:</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;datastreamdemo.txt&quot;</span><span class="p">);</span>
+<span class="n">DataInputStream</span> <span class="n">inst</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataInputStream</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">available</span><span class="p">();</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="p">;</span>
+<span class="n">inst</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">byte</span> <span class="n">byt</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">ki</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="n">byt</span><span class="p">;</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ki</span><span class="o">+</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p>A continuació podem veure un exemple en el que fem ús del <strong>DataOutputStream i DataInputStream</strong>. El que fa aquest exemple és escriure a un fitxer d’eixida «pluges.dat» dos valors double aleatoris per després llegir-los amb un DataInputStream i mostrar-los per pantalla. </p>
 <p>El codi podria ser el següent:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1458,7 +1479,12 @@ Crea un projecte en Eclipsei copia el codi anterior i una vegada acabada l'execu
 
 <h3 id="printstream">PrintStream</h3>
 <p>La classe <strong>PrintStream</strong> deriva de <strong>FilterOutputStream</strong> i el valor afegit d’aquesta classe derivada és que permet afegir el caràcter final de línia als fitxers. Aquests tipus de fluxos són sempre d’eixida i s’associen a un altre flux de bytes de més baix nivell. System.out és un objecte de tipus PrintStream.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">PrintStream</span> <span class="n">ps</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;Complex.dat&quot;</span><span class="p">));</span>
+<p><strong>System.out</strong> és un clar exemple de <strong>PrintStream</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">PrintStream</span> <span class="n">ps</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;Complex.dat&quot;</span><span class="p">));</span>
+<span class="c1">// Treballem i tanquem</span>
+<span class="n">ps</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
 <table>
@@ -1503,6 +1529,53 @@ Crea un projecte en Eclipsei copia el codi anterior i una vegada acabada l'execu
 </tr>
 </tbody>
 </table>
+<p>Observa el codi següent. Utilitzant la classe <strong>PrintStream</strong> s'obre un fitxer 'output.txt' dintre del qual s'escriurà una sola cadena de caracters 'data' i després es tancarà l'stream una vegada finalitzat l'execució del codi.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.io.PrintStream</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;Text que volem escriure dintre del fitxer&quot;</span><span class="p">;</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">PrintStream</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+
+            <span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+            <span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<pre class="act">
+<strong>Activitat 5</strong>
+Utilitzant la classe Scanner que hem vist abans, has de fer una aplicació en Eclipse IDE que tot allò que llegeixca per teclat o guarde en un fitxer de text juntament amb l'hora a la qual s'ha escrit. Per exemple, si l'usuari escriu per pantalla el seu nom, "Manolo" i prem Intro, al fitxer d'eixida s'hauria de gravar: 
+
+  [09:05:25] - Manolo
+
+Has d'utilitzar la classe <b>PrintStream</b> per fer aquesta activitat.
+</pre>
+
 <h2 id="flux-de-dades-a-nivell-de-caracter">Flux de dades a nivell de caracter</h2>
 <p>Una altra forma de poder treballar amb fitxers en lloc de a nivell de byte com estavem fent als apartats anteriors, és fer-ho a nivell de caracter. Al cap i a la fi els arxius, en una gran majoria, solen ser seqüències de caracters i des del punt de vista lògic ens resulta més natural treballar amb ells a aquest nivell.</p>
 <h3 id="reader-i-writer">Reader i writer</h3>
@@ -1523,7 +1596,7 @@ Crea un projecte en Eclipsei copia el codi anterior i una vegada acabada l'execu
 </tr>
 <tr>
 <td>public int read(char [] b)</td>
-<td>Llig una seqüencia de caràcters fins completar l’array b o llegir el final del fitxer. Torna el nombre de caràcters llegits o -1 si arriba al final de l’arxiu.</td>
+<td>Llig una seqüencia de caràcters fins completar l’array b o llegir el final del fitxer. Torna el nombre de caràcters llegits o -1 si arriba al final de l’arxiu</td>
 </tr>
 </tbody>
 </table>
@@ -1536,35 +1609,342 @@ Crea un projecte en Eclipsei copia el codi anterior i una vegada acabada l'execu
 <span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-La classe <strong>OutputStreamWriter</strong> que derivva de <strong>writer</strong>, permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+La classe <strong>OutputStreamWriter</strong> que deriva de <strong>writer</strong>, permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">OutputStreamWriter</span> <span class="n">ot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">arxiu</span><span class="p">));</span>
 <span class="c1">// Després hem de recordar de tancar l&#39;stream</span>
 <span class="n">ot</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<p>Però allò normal és que no s'utilitzen directament aquestes classes sino que es faja ús de FileReader i FileWriter.</p>
+Els mètodes de la classe <strong>InputStreamReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Métode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el flux i allibera tots els recursos del sistema associats</td>
+</tr>
+<tr>
+<td>String getEconding()</td>
+<td>Retorna el nom de la codificació de caràcters que utilitza aquest flux</td>
+</tr>
+<tr>
+<td>int read()</td>
+<td>Llegeix un sol caràcter</td>
+</tr>
+<tr>
+<td>int read(char[] buf, int offset, int length)</td>
+<td>Llegeix caràcters en una part d'una matriu</td>
+</tr>
+<tr>
+<td>boolean ready()</td>
+<td>Indica si aquest flux està llest per ser llegit</td>
+</tr>
+</tbody>
+</table>
+<p>Els mètodes de la classe <strong>OutputStreamWriter</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Métode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el corrent, rentant-lo primer</td>
+</tr>
+<tr>
+<td>void flush()</td>
+<td>Redueix el corrent</td>
+</tr>
+<tr>
+<td>String getEconding()</td>
+<td>Retorna el nom de la codificació de caràcters que utilitza aquest flux</td>
+</tr>
+<tr>
+<td>void write(char [] buf, int off, int len)</td>
+<td>Escriu una part d'una matriu de caràcters</td>
+</tr>
+<tr>
+<td>void write(int c)</td>
+<td>Escriu un sol caràcter</td>
+</tr>
+<tr>
+<td>void write(String str, int off, int len)</td>
+<td>Escriu una part d'una cadena</td>
+</tr>
+</tbody>
+</table>
+<pre class="act">
+<strong>Activitat 6</strong>
+Repeteix l'activitat anterior, la 5, però utilitzant InputStreamReader i OutputStreamReader
+</pre>
+
+<p>Però allò normal és que no s'utilitzen directament aquestes classes sino que es faja ús de <strong>FileReader i FileWriter</strong>.</p>
 <h3 id="filereader-i-filewriter">FileReader i FileWriter</h3>
-<p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus FileReader, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
+<p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus <strong>FileReader</strong>, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
 <p>Per exemple</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">FileReader</span> <span class="n">fr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;cartes.dat&quot;</span><span class="p">);</span>
 <span class="n">fr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<p>No es freqüent utilitzar directament fluxos OutputStreamWriter, encara que resulta interessant perquè la classe FileWriter és una extensió d’ella. Dissenyada per escriure en un arxiu de caràcters, els fluxos d’aquest tipus escriuen caràcters amb el mètode write() a l’arxiu al que s’associa el flux quan es crea l’objecte.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+Els constructors de la classe <strong>FileReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileReader(File file)</td>
+<td>Crea un nou FileReader , amb el nom del fitxer des del qual cal llegir</td>
+</tr>
+<tr>
+<td>FileReader(FileDescriptor fd)</td>
+<td>Crea un nou FileReader , donat el FileDescriptor per llegir</td>
+</tr>
+<tr>
+<td>FileReader(String fileName)</td>
+<td>Crea un nou FileReader , amb el nom del fitxer des del qual cal llegir</td>
+</tr>
+</tbody>
+</table>
+<p>Els mètodes dels que disposa <strong>FileReader</strong> són:</p>
+<ul>
+<li><strong>Heretats de java.io.InputStreamReader:</strong> close, getEncoding, read, ready</li>
+<li><strong>Heretats de java.io.Reader:</strong> mark, markSupported, read, reset, skip</li>
+<li><strong>Heretats de java.lang.Object:</strong> clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait</li>
+</ul>
+<p>No es freqüent utilitzar directament fluxos <strong>OutputStreamWriter</strong>, encara que resulta interessant perquè la classe <strong>FileWriter</strong> és una extensió d’ella. Dissenyada per escriure en un arxiu de caràcters, els fluxos d’aquest tipus escriuen caràcters amb el mètode write() a l’arxiu al que s’associa el flux quan es crea l’objecte.</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">FileWriter</span> <span class="n">nr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;cartes.dat&quot;</span><span class="p">);</span>
 <span class="n">nr</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Frase qualsevol a escriure&quot;</span><span class="p">);</span>
 <span class="n">nr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<p>En general no resulta eficient llegir directament d’un flux d’aquest tipus, s’utilitzarà un flux BufferedReader.</p>
+Els constructors de la classe <strong>FileWriter</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileWriter(File file)</td>
+<td>Construeix un objecte FileWriter donat un objecte File</td>
+</tr>
+<tr>
+<td>FileWriter(File file, boolean append)</td>
+<td>Construeix un objecte FileWriter donat un objecte File</td>
+</tr>
+<tr>
+<td>FileWriter(FileDescriptor fd)</td>
+<td>Construeix un objecte FileWriter associat a un descriptor de fitxer</td>
+</tr>
+<tr>
+<td>FileWriter(String fileName)</td>
+<td>Construeix un objecte FileWriter amb un nom de fitxer</td>
+</tr>
+<tr>
+<td>FileWriter(String fileName, boolean append)</td>
+<td>Construeix un objecte FileWriter amb un nom de fitxer amb un booleà que indica si s'han d'afegir o no les dades escrites</td>
+</tr>
+</tbody>
+</table>
+<p>En general no resulta eficient llegir directament d’un flux d’aquest tipus, s’utilitzarà un flux <strong>BufferedReader</strong></p>
+<pre class="act">
+<strong>Activitat 7</strong>
+Utilitzant les classes anteriors, obre un fitxer que continga text, llig tot el seu coningut i enregistra'l a un fitxer d'eixida amb la condició que has de canviar majúscules per minúscules i a l'inrevés des del fitxer d'origen.
+</pre>
+
 <h3 id="bufferedreader-i-bufferedwriter">BufferedReader i BufferedWriter</h3>
-<p>La lectura d’arxius de text es realitza amb un flux que emmagatzema els caràcters en un buffer intermedi, aquests no es lligen directament de l’arxiu si no del buffer. D’aquesta manera augmentem l’eficiència a les operacions d’entrada, la classe BufferReader permet crear fluxos de caràcters amb buffer que no és més que una forma d’organitzar el flux bàsic de caràcters del que ve  el text perquè al crear un flux BufferReader, aquest s’inicialitza com un flux de caràcters InputStreamReader o qualsevol altre.</p>
-<p>El constructor de la classe té un argument de tipus Reader, FileReader o InputStreamReader, el flux creat disposa d’un buffer de grandària suficient, el qual es pot especificar en el constructor amb un segon argument encara que no fa falta. Exemples de fluxos amb buffer;</p>
+<p>La lectura d’arxius de text es realitza amb un flux que emmagatzema els caràcters en un <strong>buffer</strong> intermedi, aquests no es lligen directament de l’arxiu si no del buffer. D’aquesta manera augmentem l’eficiència a les operacions d’entrada, la classe <strong>BufferedReader</strong> permet crear fluxos de caràcters amb buffer que no és més que una forma d’organitzar el flux bàsic de caràcters del que ve  el text perquè al crear un flux BufferReader, aquest s’inicialitza com un flux de caràcters InputStreamReader o qualsevol altre.</p>
+<p>El constructor de la classe té un argument de tipus Reader, FileReader o InputStreamReader, el flux creat disposa d’un buffer de grandària suficient, el qual es pot especificar en el constructor amb un segon argument encara que no fa falta. Exemples de fluxos amb buffer.</p>
+<p>Els mètodes de la classe <strong>BufferedReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el flux i allibera tots els recursos del sistema associats</td>
+</tr>
+<tr>
+<td>void mark(int readAheadLimit)</td>
+<td>Marca la posició actual al flux</td>
+</tr>
+<tr>
+<td>boolean markSupported()</td>
+<td>Indica si aquest flux admet l'operació mark(), que fa</td>
+</tr>
+<tr>
+<td>read()</td>
+<td>Llegeix un sol caràcter</td>
+</tr>
+<tr>
+<td>int read(char[] cbuf, int off, int len)</td>
+<td>Llegeix caràcters en una part d'una matriu</td>
+</tr>
+<tr>
+<td>String readLine()</td>
+<td>Llegeix una línia de text</td>
+</tr>
+<tr>
+<td>boolean ready()</td>
+<td>ndica si aquest flux està llest per ser llegit</td>
+</tr>
+<tr>
+<td>void reset()</td>
+<td>Restableix el flux a la marca més recent</td>
+</tr>
+<tr>
+<td>long skip(long n)</td>
+<td>Omet personatges</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">File</span> <span class="n">someFile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(...);</span>
+<span class="kt">int</span> <span class="n">aCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">FileReader</span> <span class="n">fr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span>
+<span class="n">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span>
+
+<span class="c1">// Count the number of &#39;a&#39; characters.</span>
+<span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">((</span><span class="n">ch</span> <span class="o">=</span> <span class="n">br</span><span class="p">.</span><span class="na">read</span><span class="p">())</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">aCount</span><span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;There are &quot;</span> <span class="o">+</span> <span class="n">aCount</span> <span class="o">+</span> <span class="s">&quot; &#39;a&#39; characters in &quot;</span> <span class="o">+</span> <span class="n">someFile</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table></p>
+<p><strong>BufferedWriter</strong>, per un altre costat, escriu text en un flux de sortida de caràcters, guarda els caràcters en memòria intermèdia (buffer) per tal de proporcionar una escriptura eficient de caràcters, matrius i cadenes individuals.</p>
+<p>Es pot especificar la mida de la memòria intermèdia o es pot acceptar la mida predeterminada. El valor predeterminat és prou gran per a la majoria de propòsits.</p>
+<p>Es proporciona un mètode newLine(), que utilitza la pròpia noció de separador de línies de la plataforma tal com es defineix per la propietat del sistema line.separator . No totes les plataformes utilitzen el caràcter de nova línia ('\n') per acabar les línies. Per tant, es prefereix cridar aquest mètode per acabar cada línia de sortida que escriure directament un caràcter de nova línia.</p>
+<p>Els mètodes de la classe són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el corrent, rentant-lo primer</td>
+</tr>
+<tr>
+<td>void flush()</td>
+<td>Redueix el corrent</td>
+</tr>
+<tr>
+<td>void newLine()</td>
+<td>Escriu un separador de línies</td>
+</tr>
+<tr>
+<td>void   write(char[] cbuf, int off, int len)</td>
+<td>Escriu una part d'una matriu de caràcters</td>
+</tr>
+<tr>
+<td>void write(int c)</td>
+<td>Escriu un sol caràcter</td>
+</tr>
+<tr>
+<td>void write(String s, int off, int len)</td>
+<td>Escriu una part d'una cadena</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.io.FileWriter</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;This is the data in the output file&quot;</span><span class="p">;</span>
+
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="c1">// Creates a FileWriter</span>
+      <span class="n">FileWriter</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+
+      <span class="c1">// Creates a BufferedWriter</span>
+      <span class="n">BufferedWriter</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedWriter</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+      <span class="c1">// Writes the string to the file</span>
+      <span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+      <span class="c1">// Closes the writer</span>
+      <span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h3 id="printwriter">PrintWriter</h3>
 <p>Els fluxos més utilitzats en l’eixida de caràcters són de tipus PrintWriter, aquesta classe declara constructors per associar un flux PrintWriter amb qualsevol altre de tipus Writer o bé OutputStream.</p>
 <table>
@@ -1620,6 +2000,50 @@ La classe <strong>OutputStreamWriter</strong> que derivva de <strong>writer</str
 </tr>
 </tbody>
 </table>
+<p>Exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;This is a text inside the file.&quot;</span><span class="p">;</span>
+
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="n">PrintWriter</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintWriter</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+
+      <span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+      <span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Fixa't en l'exemple anterior i fes la següent activitat.</p>
+<pre class="act">
+<strong>Activitat 8</strong>
+Repeteix l'activitat 7 però utilitzant les classes PrintWriter i File.
+</pre>
+
 <h2 id="arxius-dobjectes">Arxius d'objectes</h2>
 <p>Per tal que un objecte continue existint una vegada ja hem finalitzat l’execució d’un programa o aplicació l’hem de desar a un arxiu d’objectes. Per poder aconseguir açò, utilitzarem les classes ObjectInputStream i ObjectOutputStream</p>
 <h3 id="classe-dobjecte-persistent">Classe d'objecte persistent</h3>
@@ -1780,6 +2204,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -1840,7 +2265,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que pugam 
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
+      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
       
     
   </body>

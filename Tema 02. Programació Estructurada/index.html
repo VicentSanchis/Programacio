@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -40,6 +40,8 @@
     
     
       
+
+
     
     
   </head>
@@ -108,14 +110,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -206,6 +212,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -220,6 +227,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -524,6 +532,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -715,10 +724,12 @@
 <p>Els científics de la computació usualment acrediten el teorema a un article de 1966 escrit per <strong>Corrado Böhm i Giuseppe Jacopini</strong>. No obstant això, David Harel va rastrejar els seus orígens fins a la descripció de 1946 de l'arquitectura de von Neumann i el teorema de la forma normal de Kleene.</p>
 <h2 id="estructures">Estructures</h2>
 <p>Com ja hem anomenat als primers putns d'aquest tema, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estrucutures bàsiques amb les quals es podríen codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.
-Aquestes estructures són:
-- <strong>Seqüencial</strong>
-- <strong>Condicional</strong>
-- <strong>Repetitiva</strong></p>
+Aquestes estructures són:</p>
+<ul>
+<li><strong>Seqüencial:</strong> una sentencia s'executa desprès d'acabar l'anterior.</li>
+<li><strong>Condicional:</strong> s'avalua una condició i depenent del seu resultat s'executaran unes instruccions o altres.</li>
+<li><strong>Repetitiva:</strong> repetició d'un grup d'instruccions que depenen d'una sèrie de condicions.</li>
+</ul>
 <p>Al final tot algorisme escrit en un llenguatge de programació estrucuturada s'executa de forma seqüencial, és a dir, es llig la primera sentència s'executa i desprès passem a la següent fins arribar al final. Les estructures condicional i repetitiva es poden interpretar com estructures seqüencials amb algunes particularitats. L'estructura condicional potser s'execute o no i l'estructura repetitiva s'executara un nombre de vegades.</p>
 <p><img alt="Estructures de control" src="../assets/Tema2/estructuras-de-control-java.png" /></p>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
@@ -1268,7 +1279,8 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tema 1. Introducció a la programació" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1283,7 +1295,8 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
         </a>
       
       
-        <a href="../Tema%2003.%20El%20llenguatge%20Java/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../Tema%2003.%20El%20llenguatge%20Java/" class="md-footer__link md-footer__link--next" aria-label="Next: Tema 3. El llenguatge Java" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1318,10 +1331,10 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
       
     
   </body>

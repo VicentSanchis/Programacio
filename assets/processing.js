@@ -10,8 +10,6 @@
 
 ***/
 
-alert("hola");
-
 (function(window, document, Math, undef) {
   var nop = function() {};
   var debug = function() {

@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -51,9 +51,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -61,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tema-2-programacio-estructurada" class="md-skip">
+        <a href="#tema-2programacio-estructurada" class="md-skip">
           Skip to content
         </a>
       
@@ -97,8 +96,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -189,7 +189,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
-        1.- Introducció
+        1.- Introducció a la programació
       </a>
     </li>
   
@@ -252,6 +252,33 @@
     Estructures
   </a>
   
+    <nav class="md-nav" aria-label="Estructures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-sequencial" class="md-nav__link">
+    Estructura Seqüencial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructures-de-seleccio" class="md-nav__link">
+    Estructures de selecció
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructures-de-repeticio" class="md-nav__link">
+    Estructures de repetició
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -308,7 +335,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
-        5.- Tipus Compostos de dades
+        5.- Tipus Compostos Dades
       </a>
     </li>
   
@@ -323,7 +350,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
-        6.- Programació Orientada a Objectes
+        6.- Prog Orientada Objectes
       </a>
     </li>
   
@@ -338,7 +365,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
-        7.- Herència, polimorfisme i interfícies
+        7.- Herència, polimorfisme..
       </a>
     </li>
   
@@ -353,7 +380,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
-        8.- Entrada, eixida i excepcions
+        8.- Entrada, eixida, excepcions
       </a>
     </li>
   
@@ -402,7 +429,7 @@
               
                 
                 
-                <h1 id="tema-2-programacio-estructurada">Tema 2. Programació Estructurada</h1>
+                <h1 id="tema-2programacio-estructurada">Tema 2<br>Programació Estructurada</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Al inici dels temps del la informàtica moderna  segona meitat dels segle XX) i considerant ordinador programable aquell que seguia l'arquitectura de von Neumann, els primers programes s'escrivien en binari (llenguatge màquina) en tarjetes perforades. </p>
 <p>Aquestes targetes perforades s'utilitzaven per escriure programes sencers amb una finalitat molt concreta. Les targetes s'utilitzaven com a entrada de dades a la màquina que s'encarregava de llegir les instruccions escrites en binari, i una a una, carregar-les a memòria i executar-les. Un problema d'aquest incipient paradigma de programació és que cada conjunt d'instruccions és específic a cada màquina.</p>
@@ -433,28 +460,44 @@ Aquestes estructures són:</p>
 <p>Les ordres d'un programa s'executen per defecte en ordre seqüencial. El que significa que les instruccions s'executen, com hem comentat abans, una darrere de l'altra en el mateix ordre que apareixen escrites al programa.</p>
 <p>L'estructura seqüencial és l'ordre natura d'execució. Les instruccions que formen part d'aquesta estructura s'executen en ordre una a continuació de l'altra. Al final de cada instrucció hi ha un punt i coma per indicar-li al compilador el final de la sentència individual.
 Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs ( {...} )</p>
-<p>```java linenums="1"
-// Exemple de bloc - estructura seqüencial
-{
-    Instrucció1;
-    Instrucció2;
-    ...
-    InstruccióN;
-}</p>
-<pre><code>
-#### Exemple d'estructura seqüencial
-Un exemple d'estructura seqüencial al món real seria com li podem donar ordres a algú per tal que obriga la porta de casa
-
-```java linenums=&quot;1&quot;
-// Exemple d'estructura seqüencial.
-// Com engegar la TV
-{
-    AgafarCommandament();
-    PremerBotoOn();
-    TriarCanal();
-}
-
-</code></pre>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de bloc - estructura seqüencial</span>
+<span class="p">{</span>
+    <span class="n">Instrucció1</span><span class="p">;</span>
+    <span class="n">Instrucció2</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="n">InstruccióN</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<h4 id="exemple-destructura-sequencial">Exemple d'estructura seqüencial</h4>
+<p>Un exemple d'estructura seqüencial al món real seria com li podem donar ordres a algú per tal que obriga la porta de casa</p>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple d&#39;estructura seqüencial.</span>
+<span class="c1">// Com engegar la TV</span>
+<span class="p">{</span>
+    <span class="n">AgafarCommandament</span><span class="p">();</span>
+    <span class="n">PremerBotoOn</span><span class="p">();</span>
+    <span class="n">TriarCanal</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <p>En resum podríem dir que l'estructura seqüencial no és més que un conjunt de sentències o instruccions individuals agrupades.</p>
 <h3 id="estructures-de-seleccio">Estructures de selecció</h3>
 <p>És una de les estructures que permeten modificar l'ordre d'execució de les instruccions del programa.</p>
@@ -484,151 +527,272 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 Instrucció5 i Instrucció6.</p>
 <p>Pel contrari si s'avalua la condició a false, les instruccions a executar serien: Instrucció1, Instrucció2, Instrucció5 i Instrucció6. És a dir, no s'executarien la 3 i la 4.</p>
 <p>El seu codi en pseudocodi seria:</p>
-<p>```java linenums="1"
-si (condicio) aleshores
-    instruccio
-fsi</p>
-<p>// O també
-si (condicio) aleshores
-    instruccio1
-    instruccio2
-    ...
-    instruccioN
-fsi</p>
-<pre><code>
-En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio</span>
+<span class="n">fsi</span>
 
-Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.
-
-#### Exemple de selecció simple
-
-```java linenums=&quot;1&quot;
-// Exemple de selecció simple
-si (tensClausPantalo) aleshores
-    TreuClau();
-    ObrelaPorta();
-fsi
-</code></pre>
+<span class="c1">// O també</span>
+<span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio1</span>
+    <span class="n">instruccio2</span>
+    <span class="p">...</span>
+    <span class="n">instruccioN</span>
+<span class="n">fsi</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
+<p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
+<h4 id="exemple-de-seleccio-simple">Exemple de selecció simple</h4>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de selecció simple</span>
+<span class="n">si</span> <span class="p">(</span><span class="n">tensClausPantalo</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">TreuClau</span><span class="p">();</span>
+    <span class="n">ObrelaPorta</span><span class="p">();</span>
+<span class="n">fsi</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h4 id="seleccio-doble">Selecció doble</h4>
 <p>Amb aquesta estructura condicional de la programació estructurada es poden seguir camins distints depenent de si l'avaluació de la condició és true o false. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
 <p><img alt="Selecció simple" src="../assets/Tema2/Estructura-condicional-doble-java.png" /></p>
 <p>El codi en pseudocodi seria</p>
-<p>```java linenums="1"
-instruccio1
-instruccio2
-si (condicio) aleshores
-    instruccio3
-    instruccio4
-sino
-    instruccio5
-    instruccio6
-fsi
-instruccio7
-instruccio8</p>
-<pre><code>
-Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'si' s'avalua 'veritable' o 'fals'. En el primer cas, amb la condició a veritat, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'si' s'avaluara a 'fals', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.
-
-
-#### Exemple de selecció doble
-```java linenums=&quot;1&quot;
-// Exemple de selecció doble
-si (tensClausPantalo) aleshores
-    TreuClau();
-    ObrelaPorta();
-sino
-    cridarAlTimbre();
-fsi
-</code></pre>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instruccio1</span>
+<span class="n">instruccio2</span>
+<span class="nf">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio3</span>
+    <span class="n">instruccio4</span>
+<span class="n">sino</span>
+    <span class="n">instruccio5</span>
+    <span class="n">instruccio6</span>
+<span class="n">fsi</span>
+<span class="n">instruccio7</span>
+<span class="n">instruccio8</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'si' s'avalua 'veritable' o 'fals'. En el primer cas, amb la condició a veritat, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'si' s'avaluara a 'fals', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
+<h4 id="exemple-de-seleccio-doble">Exemple de selecció doble</h4>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de selecció doble</span>
+<span class="n">si</span> <span class="p">(</span><span class="n">tensClausPantalo</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">TreuClau</span><span class="p">();</span>
+    <span class="n">ObrelaPorta</span><span class="p">();</span>
+<span class="n">sino</span>
+    <span class="nf">cridarAlTimbre</span><span class="p">();</span>
+<span class="n">fsi</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h4 id="condicinals-niats">Condicinals niats</h4>
 <p>Si volem avaluar més d'una condició al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
 <p><img alt="Selecció múltiple amb if" src="../assets/Tema2/Estructura-condicional-multiple-java.png" /></p>
 <p>El mateix exemple en pseudocodi que teniu a la imatge anterior seria:</p>
-<p>```java linenums="1"
-instruccio1</p>
-<p>si (condicio1) aleshores
-    instruccio2
-    instruccio3</p>
-<p>sino si (condicio2) aleshores
-    instruccio4</p>
-<p>sino si (condicio3) aleshores
-    instruccio5
-    instruccio6
-    instruccio7
-sino 
-    instruccio8
-    instruccio9
-fsi
-instruccio10</p>
-<pre><code>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instruccio1</span>
 
-#### Exemple d'estructura condicional niada
-Un repatidor de Mirinda segueix el següent horari de feina: el dilluns reparteix a Pego, el dimarts a Oliva, el dimecres a Ondara, el dijous a El Verger i el divendres a Els poblets. Al següent algorisme s'explica:
-```java linenums=&quot;1&quot;
-// Exemple: El repartidor de Mirinda
-si  huiEsDilluns  aleshores
-    repartirPego();
+<span class="nf">si</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio2</span>
+    <span class="n">instruccio3</span>
 
-sino si huiEsDimarts aleshores
-    repartir(Oliva();
+<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio4</span>
 
-sino si huiEsDimecres aleshores
-    repartirOndara();
+<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio3</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio5</span>
+    <span class="n">instruccio6</span>
+    <span class="n">instruccio7</span>
+<span class="n">sino</span> 
+    <span class="n">instruccio8</span>
+    <span class="n">instruccio9</span>
+<span class="n">fsi</span>
+<span class="n">instruccio10</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
+<h4 id="exemple-destructura-condicional-niada">Exemple d'estructura condicional niada</h4>
+<p>Un repatidor de Mirinda segueix el següent horari de feina: el dilluns reparteix a Pego, el dimarts a Oliva, el dimecres a Ondara, el dijous a El Verger i el divendres a Els poblets. Al següent algorisme s'explica:</p>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple: El repartidor de Mirinda</span>
+<span class="n">si</span>  <span class="n">huiEsDilluns</span>  <span class="n">aleshores</span>
+    <span class="nf">repartirPego</span><span class="p">();</span>
 
-sino si huiEsDijous aleshores
-    repartirElVerger();
+<span class="n">sino</span> <span class="n">si</span> <span class="n">huiEsDimarts</span> <span class="n">aleshores</span>
+    <span class="nf">repartir</span><span class="p">(</span><span class="n">Oliva</span><span class="p">();</span>
 
-sino si huiEsDivendres aleshores
-    repartirElsPoblets();
+<span class="n">sino</span> <span class="n">si</span> <span class="n">huiEsDimecres</span> <span class="n">aleshores</span>
+    <span class="nf">repartirOndara</span><span class="p">();</span>
 
-sino
-    NoEsTreballaHui();
+<span class="n">sino</span> <span class="n">si</span> <span class="n">huiEsDijous</span> <span class="n">aleshores</span>
+    <span class="nf">repartirElVerger</span><span class="p">();</span>
 
-fsi
+<span class="n">sino</span> <span class="n">si</span> <span class="n">huiEsDivendres</span> <span class="n">aleshores</span>
+    <span class="nf">repartirElsPoblets</span><span class="p">();</span>
 
-</code></pre>
+<span class="n">sino</span>
+    <span class="nf">NoEsTreballaHui</span><span class="p">();</span>
+
+<span class="n">fsi</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h4 id="condicional-multiple">Condicional múltiple</h4>
 <p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull</p>
 <p><img alt="Selecció múltiple" src="../assets/Tema2/condicionalMultiple.png" /></p>
-<p>```java linenums="1"
-enCasDe (expressió) fer
-    cas <opcio1>
-      Instruccio1
-      Instruccio2</p>
-<div class="highlight"><pre><span></span><code>cas &lt;opcio2&gt; 
-    Instruccio3
-    Instruccio4
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">enCasDe</span> <span class="p">(</span><span class="n">expressió</span><span class="p">)</span> <span class="n">fer</span>
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">opcio1</span><span class="o">&gt;</span>
+    <span class="n">Instruccio1</span>
+    <span class="n">Instruccio2</span>
 
-sino
-    Instruccio5
-    Instruccio6
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">opcio2</span><span class="o">&gt;</span> 
+        <span class="n">Instruccio3</span>
+        <span class="n">Instruccio4</span>
+
+    <span class="n">sino</span>
+        <span class="n">Instruccio5</span>
+        <span class="n">Instruccio6</span>
+<span class="n">fiCas</span>
 </code></pre></div>
-<p>fiCas</p>
-<pre><code>
-L'exemple del repartidor ens serveriria per veure aquesta estructura
-```java linenums=&quot;1&quot;
-enCasDe (huiQuinDiaEs) fer
-    cas &lt;Dilluns&gt;
-        RepartirPego();
+</td></tr></table>
+</div>
+<p>L'exemple del repartidor ens serveriria per veure aquesta estructura</p>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">enCasDe</span> <span class="p">(</span><span class="n">huiQuinDiaEs</span><span class="p">)</span> <span class="n">fer</span>
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">Dilluns</span><span class="o">&gt;</span>
+        <span class="nf">RepartirPego</span><span class="p">();</span>
 
 
-    cas &lt;Dimarts&gt; 
-        RepartirOliva();
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">Dimarts</span><span class="o">&gt;</span> 
+        <span class="nf">RepartirOliva</span><span class="p">();</span>
 
 
-    cas &lt;Dimecres&gt; 
-        RepartirOndara();
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">Dimecres</span><span class="o">&gt;</span> 
+        <span class="nf">RepartirOndara</span><span class="p">();</span>
 
 
-    cas &lt;Dijous&gt; 
-        RepartirElVerger();
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">Dijous</span><span class="o">&gt;</span> 
+        <span class="nf">RepartirElVerger</span><span class="p">();</span>
 
-    cas &lt;Divendres&gt; 
-        RepartirElsPoblets();
+    <span class="n">cas</span> <span class="o">&lt;</span><span class="n">Divendres</span><span class="o">&gt;</span> 
+        <span class="nf">RepartirElsPoblets</span><span class="p">();</span>
 
-    sino
-        HuiNoEsTreballa();
-fiCas
-</code></pre>
+    <span class="n">sino</span>
+        <span class="nf">HuiNoEsTreballa</span><span class="p">();</span>
+<span class="n">fiCas</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
 <p>Si les estructures condicionals serveixen per determinar quines instruccions o bloc d'instruccions s'executen, la programació estructurada també disposa d'estrutctures repetitives o també anomenades bucles, que ens permeten executar una instrucció o bloc d'instruccions diverses vegades.</p>
 <h4 id="mentre">mentre</h4>
@@ -641,33 +805,40 @@ fiCas
 3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
 <p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
-<p>```java linenums="1"</p>
-<p>mentre (condicio) fer
-    Instruccio1
-    Instruccio2
-fmentre</p>
-<pre><code>
-#### repetir .. mentre
-
-Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.
-
-![Selecció múltiple amb if](assets/Tema2/diagrama-flujo-bucle-do-while.png)
-
-Els passos que representen el diagrama anterior són:
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">fer</span>
+    <span class="n">Instruccio1</span>
+    <span class="n">Instruccio2</span>
+<span class="n">fmentre</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<h4 id="repetir-mentre">repetir .. mentre</h4>
+<p>Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.</p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-do-while.png" /></p>
+<p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
 2. S'executen les instruccions que conté el bloc 
 3. S'avalua la condició 
 4. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
-5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.
-
-Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?
-
-```java linenums=&quot;1&quot;
-fer
-    Instruccio1
-    Instruccio2
-mentre (condicio)
-</code></pre>
+5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">fer</span>
+    <span class="n">Instruccio1</span>
+    <span class="n">Instruccio2</span>
+<span class="nf">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h4 id="bucle-per">bucle per</h4>
 <p>La més complicada de comprendre però també possiblement la més utilitzada. Mirem un exemple.</p>
 <p><img alt="Selecció múltiple amb if" src="../assets/Tema2/diagrama-flujo-bucle-for.png" /></p>
@@ -680,173 +851,153 @@ mentre (condicio)
 <li>Actualitzem índex</li>
 <li>Si la condició es false eixim del bucle i executem instrucció 2</li>
 </ol>
-<p>```java linenums="1"
-per i=0 a 100 fer
-    Instruccio1
-    Instruccio2
-fiper</p>
-<p>```
-Al codi anterior:
+<div class="admonition bug">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">per</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="n">a</span> <span class="mi">100</span> <span class="n">fer</span>
+    <span class="n">Instruccio1</span>
+    <span class="n">Instruccio2</span>
+<span class="n">fiper</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Al codi anterior:
 1. Inicialització: int i = 0;
 2. Avaluació de la condició: és i &lt; 100 ?
 3. Instruccio1 i Instruccio2
 4. Actualització: i ++</p>
 <h2 id="activitats">Activitats</h2>
 <p>Exposem a continació algunes activitats per tal d'assolir els coneixements exposats als punts anteriors.</p>
-<pre class='act'>
-<strong>Actiivtat 1. Iniciar sessió a Facebook</strong>
-
-Dibuixa un diagrama de flux per iniciar sessió en un compte 
-de Facebook.
-
-1. Obrim el navegador web.
-2. Escrivim facebook.com
-3. Aquesta solicitud s'envia a Facebook i respon enviant-nos a la pàgina d'inici o login.
-4. Escrivim les nostres credencials, email i contrasenya i fem clic a inciar.
-5. Si es correcte es mostrarà la pàgina del nostre perfil. En cas contrari, es produirà un error i ens demanarà una altra vegada usuari i contrasenya.
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Inici sessió Facebook" src="../assets/Tema2/FluxFacebook.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 2. Àrea d'un rectangle</strong>
-
-Calcula l'area d'un rectangle donades les seues dimensions
-
-![Area d'un rectangle](assets/Tema2/AreaRectangle.jpg)
-
+<div class="admonition question">
+<p class="admonition-title">Activitat 1. Iniciar sessió a Facebook</p>
+<p>Dibuixa un diagrama de flux per iniciar sessió en un compte de Facebook.<br>
+1. Obrim el navegador web.<br>
+2. Escrivim facebook.com<br>
+3. Aquesta solicitud s'envia a Facebook i respon enviant-nos a la pàgina d'inici o login.<br>
+4. Escrivim les nostres credencials, email i contrasenya i fem clic a inciar.<br>
+5. Si es correcte es mostrarà la pàgina del nostre perfil. En cas contrari, es produirà un error i ens demanarà una altra vegada usuari i contrasenya.</p>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Inici sessió Facebook" src="../assets/Tema2/FluxFacebook.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 2. Àrea d'un rectangle</p>
+<p>Calcula l'àrea d'un rectangle donades les seues dimensions
 1. Inserim la base.
 2. Especifiquem l'alçada.
-3. Calculem l'àrea: base x alçada
-4. Mostrem el resultat per pantalla.
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Area d'un rectangle" src="../assets/Tema2/AreaRectangleSolucio.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 3. Hola món 10 vegades</strong>
-
-Escriu el diagrama de flux necessari per imprimr per pantalla 10 vegades "hola món"
-
-Resolem aquesta activitat utilitzant el concepte bucle. Creem la variable "cuenta" i l'incialitzem a 0. Després imprimim "Hola món" i incrementem la variable "cuenta" en uno.
-
-Verifiquem si "cuenta" encara és menor que 10. En cas veritable, imprimim "Hola món" i tornem a incrementar. Quan la "cuenta" valga 10 eixim del programa.
-
-1. Cuneta = 0;
-2. Imprimir "Hola món"
-3. Incrementem cuenta
-4. Si cuenta < 10  tornem al pas 2 en cas contrari s'acaba l'execucuió
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Hola món" src="../assets/Tema2/HolaMonx10.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 4. Preparar el té</strong>
-
-Dibuixa el diagrama de flux amb els passos necessaris per preparar el té.
-
-1. Comprar té i/o sucre. 
-2. Tindre tassa i cullera.
-3. Posar a bollir aigua.
-4. Posar la bossa de té a la tassa.
-5. Posar aigua a la tassa amb la bossa (de té).
-6. Esperar uns minuts a que es disolga el té.
-7. Retirar la bossa (de té)
-8. Vols sucre? Si la resposta és sí, posar sucre i remenejar. Si la resposta és no s'acabat el procés.
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Preparar té" src="../assets/Tema2/PrepararTe.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 5. Número major</strong>
-
-Escriu el diagrama de flux de tal forma que donats dos números ens indique quin és més gran.
-
-1. Introudir els valors A i B
-2. Llegir els seus valors
-3. Si A == B tornar al pas 1
-4. Si A > B escriure per pantalla: "A és major que B"
-5. En cas contrari escriure: "B és major que A".
-6. Acabar el procés,
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Major que" src="../assets/Tema2/MajorQue.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 6. Suma dos números</strong>
-
-Algorisme que demana dos números i els suma mostrant el resultat per pantalla.
-
-1. Declarem la variable **suma** i la inicialitzem a 0.
-2. Inserim dos números.
-3. Sumem els dos números i els afegim a suma.
-4. Mostrem suma per pantalla.
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Sumar 10 i 20" src="../assets/Tema2/Sumar.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 7. Llevar la fam</strong>
-
-Ens trobem a casa i tenim fam. Què fem?
-
-1. Preguntem si tenim fam.
-2. Si la resposta és no s'acaba el procediment, ja estem satisfets.
-3. Si la resposta és si busquem el menjar a la nevera.
-4. Si hi ha menjar a la nevera la calfem i mengem
-5. Si no hi ha res a la nevera, eixim de compres i tornem, preparem algo i mengem.
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Com llevar la fam" src="../assets/Tema2/LlevarFam.jpg" /></p>
-<pre class='act'>
-
-<strong>Activitat 8. Par o impar</strong>
-
-Algorisme que determina si el número que inserim és parell o senar.
-
-1. Introduim un número 'N'
-2. Si 'N' es divideix entre 2 i el residu és 0 (N mod 2 = 0), aleshores 'N' és parell.
-3. En cas contrari és senar.
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Parell o senar" src="../assets/Tema2/ParImpar.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 9. Agafar el paraigües</strong>
-
-Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.
-
-1. Comprovem si està plovent.
-2. Si la resposta és No, eixim al carrer sense paraigües.
-3. Si la resposta és Sí, busquem el paraigües
-4. Si el trobem eixim al carrer
-5. En cas contrari tornem al pas 1.
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Agafe el paraigües" src="../assets/Tema2/Paraigues.jpg" /></p>
-<pre class='act'>
-<strong>Activitat 10. Mitjana</strong>
-
-Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspés". La nota mínima per aprovar és 11.
-
-1. Declarem les variables a utilitzar: Nota1, Nota2, Nota3, Mitjana.
-2. Inserim les notes per teclat.
-3. Calculem la mitjana
-4. Verifiquem si la mitjana és major o igual a 11.
-5. Si és major que 11, escrivim per pantalla "Aprovat"
-6. En cas contrari escrivim "Suspés" 
-
-</pre>
-
-<p><strong>Solució</strong></p>
-<p><img alt="Mitjana de notes" src="../assets/Tema2/Mitjana.jpg" /></p>
+3. Calculem l'àrea: base per alçada
+4. Mostrem el resultat per pantalla</p>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Area d'un rectangle" src="../assets/Tema2/AreaRectangleSolucio.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 3. Hola món 10 vegades</p>
+<p>Escriu el diagrama de flux necessari per imprimr per pantalla 10 vegades "hola món"</p>
+<p>Resolem aquesta activitat utilitzant el concepte bucle. Creem la variable "cuenta" i l'incialitzem a 0. Després imprimim "Hola món" i incrementem la variable "cuenta" en uno.</p>
+<p>Verifiquem si "cuenta" encara és menor que 10. En cas veritable, imprimim "Hola món" i tornem a incrementar. Quan la "cuenta" valga 10 eixim del programa.</p>
+<ol>
+<li><strong>1.</strong> comptador = 0;</li>
+<li><strong>2.</strong> Imprimir "Hola món"</li>
+<li><strong>3.</strong> Incrementem cuenta</li>
+<li><strong>4.</strong> Si comptador &lt; 10  tornem al pas 2 en cas contrari s'acaba l'execucuió</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Hola món" src="../assets/Tema2/HolaMonx10.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 4. Preparar el té</p>
+<p>Dibuixa el diagrama de flux amb els passos necessaris per preparar el té.</p>
+<ol>
+<li><strong>1.</strong> Comprar té i/o sucre. </li>
+<li><strong>2.</strong> Tindre tassa i cullera.</li>
+<li><strong>3.</strong> Posar a bollir aigua.</li>
+<li><strong>4.</strong> Posar la bossa de té a la tassa.</li>
+<li><strong>5.</strong> Posar aigua a la tassa amb la bossa (de té).</li>
+<li><strong>6.</strong> Esperar uns minuts a que es disolga el té.</li>
+<li><strong>7.</strong> Retirar la bossa (de té)</li>
+<li><strong>8.</strong> Vols sucre? Si la resposta és sí, posar sucre i remenejar. Si la resposta és no s'acabat el procés.</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Preparar té" src="../assets/Tema2/PrepararTe.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 5. Número major</p>
+<p>Escriu el diagrama de flux de tal forma que donats dos números ens indique quin és més gran.</p>
+<ol>
+<li><strong>1.</strong> Introudir els valors A i B</li>
+<li><strong>2.</strong> Llegir els seus valors</li>
+<li><strong>3.</strong> Si A == B tornar al pas 1</li>
+<li><strong>4.</strong> Si A &gt; B escriure per pantalla: "A és major que B"</li>
+<li><strong>5.</strong> En cas contrari escriure: "B és major que A".</li>
+<li><strong>6.</strong> Acabar el procés,</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Major que" src="../assets/Tema2/MajorQue.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 6. Suma dos números</p>
+<p>Algorisme que demana dos números i els suma mostrant el resultat per pantalla.</p>
+<ol>
+<li><strong>1.</strong> Declarem la variable <strong>suma</strong> i la inicialitzem a 0.</li>
+<li><strong>2.</strong> Inserim dos números.</li>
+<li><strong>3.</strong> Sumem els dos números i els afegim a suma.</li>
+<li><strong>4.</strong> Mostrem suma per pantalla.</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Sumar 10 i 20" src="../assets/Tema2/Sumar.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 7. Llevar la fam</p>
+<p>Ens trobem a casa i tenim fam. Què fem?</p>
+<ol>
+<li><strong>1.</strong> Preguntem si tenim fam.</li>
+<li><strong>2.</strong> Si la resposta és no s'acaba el procediment, ja estem satisfets.</li>
+<li><strong>3.</strong> Si la resposta és si busquem el menjar a la nevera.</li>
+<li><strong>4.</strong> Si hi ha menjar a la nevera la calfem i mengem</li>
+<li><strong>5.</strong> Si no hi ha res a la nevera, eixim de compres i tornem, preparem algo i mengem.</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Com llevar la fam" src="../assets/Tema2/LlevarFam.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 8. Par o impar</p>
+<p>Algorisme que determina si el número que inserim és parell o senar.</p>
+<ol>
+<li><strong>1.</strong> Introduim un número 'N'</li>
+<li><strong>2.</strong> Si 'N' es divideix entre 2 i el residu és 0 (N mod 2 = 0), aleshores 'N' és parell.</li>
+<li><strong>3.</strong> En cas contrari és senar.</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Parell o senar" src="../assets/Tema2/ParImpar.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 9. Agafar el paraigües</p>
+<p>Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.</p>
+<ol>
+<li><strong>1.</strong> Comprovem si està plovent.</li>
+<li><strong>2.</strong> Si la resposta és No, eixim al carrer sense paraigües.</li>
+<li><strong>3.</strong> Si la resposta és Sí, busquem el paraigües</li>
+<li><strong>4.</strong> Si el trobem eixim al carrer</li>
+<li><strong>5.</strong> En cas contrari tornem al pas 1.</li>
+</ol>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Agafe el paraigües" src="../assets/Tema2/Paraigues.jpg" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 10. Mitjana</p>
+<p>Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspés". La nota mínima per aprovar és 11.</p>
+<ol>
+<li><strong>1.</strong> Declarem les variables a utilitzar: Nota1, Nota2, Nota3, Mitjana.</li>
+<li><strong>2.</strong> Inserim les notes per teclat.</li>
+<li><strong>3.</strong> Calculem la mitjana</li>
+<li><strong>4.</strong> Verifiquem si la mitjana és major o igual a 11.</li>
+<li><strong>5.</strong> Si és major que 11, escrivim per pantalla "Aprovat"</li>
+<li><strong>6.</strong> En cas contrari escrivim "Suspés" </li>
+</ol>
+</div>
+<details class="done solució"><summary>Done</summary><p><img alt="Mitjana de notes" src="../assets/Tema2/Mitjana.jpg" /></p>
+</details>
                 
               
               
@@ -857,7 +1008,6 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -874,7 +1024,7 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
               <span class="md-footer__direction">
                 Previous
               </span>
-              1.- Introducció
+              1.- Introducció a la programació
             </div>
           </div>
         </a>
@@ -918,7 +1068,7 @@ Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantall
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
       
     
   </body>

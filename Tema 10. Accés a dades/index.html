@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -51,9 +51,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,8 +96,9 @@
         </div>
       </div>
     </div>
-    
-    
+    <div class="md-header__options">
+      
+    </div>
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -189,7 +189,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
-        1.- Introducció
+        1.- Introducció a la programació
       </a>
     </li>
   
@@ -249,7 +249,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
-        5.- Tipus Compostos de dades
+        5.- Tipus Compostos Dades
       </a>
     </li>
   
@@ -264,7 +264,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
-        6.- Programació Orientada a Objectes
+        6.- Prog Orientada Objectes
       </a>
     </li>
   
@@ -279,7 +279,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
-        7.- Herència, polimorfisme i interfícies
+        7.- Herència, polimorfisme..
       </a>
     </li>
   
@@ -294,7 +294,7 @@
   
     <li class="md-nav__item">
       <a href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
-        8.- Entrada, eixida i excepcions
+        8.- Entrada, eixida, excepcions
       </a>
     </li>
   
@@ -372,11 +372,38 @@
     Instal·lació de drivers
   </a>
   
+    <nav class="md-nav" aria-label="Instal·lació de drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descarregar-driver" class="md-nav__link">
+    Descarregar driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-al-classpath" class="md-nav__link">
+    Afegir al Classpath
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#connexio-a-la-base-de-dades" class="md-nav__link">
     Connexió a la base de dades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-i-execucio-de-sentencies-sql" class="md-nav__link">
+    Creació i execució de sentències SQL
   </a>
   
 </li>
@@ -428,10 +455,10 @@
 <h3 id="descarregar-driver">Descarregar driver</h3>
 <p>A continuació podeu entrar i descarregar el driver JDBC per a MySql de de la següent pàgina:</p>
 <p>https://dev.mysql.com/downloads/connector/j/</p>
-<pre><code class="language-console">$&gt; apt install ./mysql-connector-java_8.0.24-1ubuntu20.04_all.deb
+<div class="highlight"><pre><span></span><code><span class="gp">$</span>&gt; apt install ./mysql-connector-java_8.0.24-1ubuntu20.04_all.deb
 
-$&gt; dpkg -i mysql-connector-java_8.0.24-1ubuntu20.04_all.deb
-</code></pre>
+<span class="gp">$</span>&gt; dpkg -i mysql-connector-java_8.0.24-1ubuntu20.04_all.deb
+</code></pre></div>
 <p>Una vegada executades aquestos commandaments, tindrem didponible el paquest mysql-connector.jar a la ruta /usr/share/java i ara hauriem de podre afegir el paquet al classpath del nostre projecte.</p>
 <h3 id="afegir-al-classpath">Afegir al Classpath</h3>
 <p>Allò important és que el fitxer que conté el driver <strong>mysql-connector.jar</strong> es trobe dins del classpath del projecte. Ja que anirem a eixe path per carregar-lo i utilitzar-lo al notre programa.</p>
@@ -444,109 +471,173 @@ $&gt; dpkg -i mysql-connector-java_8.0.24-1ubuntu20.04_all.deb
 <p>Finalment premem el botó <strong>Aplicar i tancar</strong> i ja ho tindriem al path del nostre projecte.</p>
 <h2 id="connexio-a-la-base-de-dades">Connexió a la base de dades</h2>
 <p>Per tal de podre connectar amb una base de dades utilitzarem els paquets <strong>java.sql</strong> i <strong>javax.sql</strong>. Dins d'aquestos paquets disposem d'una sèrie de classes,interfícies etc.. que ens serviran per poder interactuar amb el nostre sistema gestor de bases de dades. Els més importants són: la classe <strong>DriveManager</strong> i les interfícies: <strong>ResultSet</strong>, <strong>Connection</strong>, <strong>Statement</strong> i <strong>DataSource</strong>. Per tant primer, importem tant <strong>java.sql</strong> com <strong>javax.sql</strong> al nostre projecte.</p>
-<p>```java linenums="1"
-import java.sql.<em>;
-import javax.sql.</em>;</p>
-<pre><code>Una vegada ja tenim importats els paquets del driver JDBC, hem d'establir la connexió a la base de dades mitjançant un objecte connexió i aquest objecte connexió estarà relacionat amb un String on s'emmagatzemarà la cadena de connexió a la base de dades. Veiem alguns exemples de cadenes de connexió:
-
-- jdbc:mysql://localhost:port/BD
-- jdbc:odbc:DSN_BD
-- jdbc:oracle:usuari@servidor:port:BD
-
-Cal tindre també l'usuari i la contrassenya d'accés a la base de dades. També esl pot donar el cas que es llence una excepció, per tant, necessitarem posar el codi dins d'un bloc try..catch.
-
-En definitiva per tal d'establir una connexió amb la nostra base de dades en Java ho fariem de la següent forma:
-
-```java linenums=&quot;1&quot;
-import java.sql.*;
-import javax.sql.*;
-
-public class ConnectaBD {
-
-    private Connection con;
-
-    public MySqlConnection () {
-        try {
-            // 1. Establim la connexió amb la base de dades.
-            con = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/CicleFormatiu&quot;, &quot;root&quot;, &quot;******&quot;);
-
-        } catch (Exception e) {
-            System.out.println(&quot;Error Accés BD&quot;);
-        }
-    }
-}
-</code></pre>
-<p>I des del main o la classe Test que conté el mètode main estàtic:</p>
-<p>```java linenums="1"
-import java.sql.<em>;
-import javax.sql.</em>;</p>
-<p>public class TestBD {</p>
-<div class="highlight"><pre><span></span><code>public static void main(String[] args) {
-    ConnectaBD m = new ConnectaBD();
-}
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.*</span><span class="p">;</span>
 </code></pre></div>
-<p>}</p>
-<pre><code>
-Arribats a aquest punt ja tindriem establerta la connexio entre la nostra aplicació i la base de dades
+</td></tr></table>
+Una vegada ja tenim importats els paquets del driver JDBC, hem d'establir la connexió a la base de dades mitjançant un objecte connexió i aquest objecte connexió estarà relacionat amb un String on s'emmagatzemarà la cadena de connexió a la base de dades. Veiem alguns exemples de cadenes de connexió:</p>
+<ul>
+<li>jdbc:mysql://localhost:port/BD</li>
+<li>jdbc:odbc:DSN_BD</li>
+<li>jdbc:oracle:usuari@servidor:port:BD</li>
+</ul>
+<p>Cal tindre també l'usuari i la contrassenya d'accés a la base de dades. També esl pot donar el cas que es llence una excepció, per tant, necessitarem posar el codi dins d'un bloc try..catch.</p>
+<p>En definitiva per tal d'establir una connexió amb la nostra base de dades en Java ho fariem de la següent forma:</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.*</span><span class="p">;</span>
 
-## Creació i execució de sentències SQL
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConnectaBD</span> <span class="p">{</span>
 
-El següent pas, una vegada ja tenim establerta la connexió amb la nostra base de dades hem de crear un objecte **Statement** des del objecte connexió amb el mètode **createStatement()** que ens retornarà un objecte de tipus **Statement**.
+    <span class="kd">private</span> <span class="n">Connection</span> <span class="n">con</span><span class="p">;</span>
 
-```java linenums=&quot;1&quot;
-import java.sql.*;
-import javax.sql.*;
+    <span class="kd">public</span> <span class="nf">MySqlConnection</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// 1. Establim la connexió amb la base de dades.</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">&quot;jdbc:mysql://localhost:3306/CicleFormatiu&quot;</span><span class="p">,</span> <span class="s">&quot;root&quot;</span><span class="p">,</span> <span class="s">&quot;******&quot;</span><span class="p">);</span>
 
-public class ConnectaBD {
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error Accés BD&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+I des del main o la classe Test que conté el mètode main estàtic:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.*</span><span class="p">;</span>
 
-    private Connection con;
-    private Statement stat;
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestBD</span> <span class="p">{</span>
 
-    public ConnectaBD () {
-        try {
-            // 1. Establim la connexió amb la base de dades.
-            con = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/CicleFormatiu&quot;, &quot;root&quot;, &quot;******&quot;);
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ConnectaBD</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConnectaBD</span><span class="p">();</span>
+    <span class="p">}</span>
 
-            // 2. Creem l'objecte Statement.
-            stat = con.createStatement();
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Arribats a aquest punt ja tindriem establerta la connexio entre la nostra aplicació i la base de dades</p>
+<h2 id="creacio-i-execucio-de-sentencies-sql">Creació i execució de sentències SQL</h2>
+<p>El següent pas, una vegada ja tenim establerta la connexió amb la nostra base de dades hem de crear un objecte <strong>Statement</strong> des del objecte connexió amb el mètode <strong>createStatement()</strong> que ens retornarà un objecte de tipus <strong>Statement</strong>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.*</span><span class="p">;</span>
 
-        } catch (Exception e) {
-            System.out.println(&quot;Error Accés BD&quot;);
-        }
-    }
-}
-</code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConnectaBD</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Connection</span> <span class="n">con</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Statement</span> <span class="n">stat</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">ConnectaBD</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// 1. Establim la connexió amb la base de dades.</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">&quot;jdbc:mysql://localhost:3306/CicleFormatiu&quot;</span><span class="p">,</span> <span class="s">&quot;root&quot;</span><span class="p">,</span> <span class="s">&quot;******&quot;</span><span class="p">);</span>
+
+            <span class="c1">// 2. Creem l&#39;objecte Statement.</span>
+            <span class="n">stat</span> <span class="o">=</span> <span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error Accés BD&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p>Ara hauriem de poder executar les sentències SQL que necessitem. Per poder executar sentències Sql utilitzarem el mètode <strong>executeQuery()</strong> que és un mètode que pertany a l'objecte <strong>Statement</strong> anteriorment creat. Aquest mètode ens resornarà un <strong>ResultSet</strong> què és on tindrem la informació obtesa de la base de dades.</p>
 <p>En el nostre exemple, crearem un mèotde nou a la classe <strong>MySqlConnection</strong> de tipus public al qual se li passarà un objecte strQuery de tipus String i ens retornarà un ResultSet. Veiem el codi c continuació:</p>
-<p>```java linenums="1"
-public ResultSet ExecutarSQL (String strQuery) {
-    ResultSet rs = null;</p>
-<div class="highlight"><pre><span></span><code>if ( strQuery == null )
-    return null;
-try {
-    rs = stat.executeQuery(strQuery);
-} catch (Exception e) {
-    System.out.println(&quot;Error executant SQL&quot;);
-}
-return rs;
-}
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="n">ResultSet</span> <span class="nf">ExecutarSQL</span> <span class="p">(</span><span class="n">String</span> <span class="n">strQuery</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">strQuery</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="n">stat</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">strQuery</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error executant SQL&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">rs</span><span class="p">;</span>
+    <span class="p">}</span>
 </code></pre></div>
-<pre><code>
-Amb aquest codi, des de la nostra classe on es troba el mètode main estatic podriem fer el següent:
+</td></tr></table>
+<p>Amb aquest codi, des de la nostra classe on es troba el mètode main estatic podriem fer el següent:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.sql.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.*</span><span class="p">;</span>
 
-```java linenums=&quot;1&quot;
-import java.sql.*;
-import javax.sql.*;
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestBD</span> <span class="p">{</span>
 
-public class TestBD {
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ConnectaBD</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConnectaBD</span><span class="p">();</span>
+        <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="na">ExecutarSQL</span><span class="p">(</span><span class="s">&quot;SELECT * FROM Alumnes;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    public static void main(String[] args) {
-        ConnectaBD m = new ConnectaBD();
-        ResultSet rs = m.ExecutarSQL(&quot;SELECT * FROM Alumnes;&quot;);
-    }
-
-}
-</code></pre>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p>Una vegada executat i comprovat aquest codi, deuriem tindre tots els alumnes de la nostra base de dades al ResultSet <strong>rs</strong>.</p>
 <h2 id="obtencio-de-dades">Obtenció de dades</h2>
 <p>I ara com llegim els registres de la BD?</p>
@@ -561,7 +652,6 @@ public class TestBD {
             </article>
           </div>
         </div>
-        
       </main>
       
         
@@ -608,7 +698,7 @@ public class TestBD {
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
       
     
   </body>

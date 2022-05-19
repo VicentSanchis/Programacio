@@ -12,6 +12,7 @@ h1 {
     text-align:center;
     color:#00137c !important;
     border-bottom: 2px dotted blue;
+    border-top: 2px dotted blue;
     /*background-color:#00137c;
     border: 3px solid #1a224d;*/
 }
@@ -97,3 +98,25 @@ th {
     padding:5px;
     margin:8px;
 }
+
+:root {
+    --md-admonition-icon--code: url('../assets/img/code4.png');
+  }
+  .md-typeset .admonition.code,
+  .md-typeset details.code {
+    border-color: rgb(60, 60, 60);
+  }
+  .md-typeset .code > .admonition-title,
+  .md-typeset .code > summary {
+    background-color: rgba(0, 0, 0, 0.60);
+    color:rgb(255, 255, 255);
+  }
+  .md-typeset .code > .admonition-title::before,
+  .md-typeset .code > summary::before {
+    /*background-color: rgb(43, 155, 70);*/
+    background-color: rgb(0, 255, 0);
+
+    -webkit-mask-image: var(--md-admonition-icon--code);
+            mask-image: var(--md-admonition-icon--code);
+  }
+  

@@ -548,13 +548,10 @@
 <p>Per un altre costat una <strong>variable</strong> és:  "una expressió matemàtica, símbol que representa una quantitat el valor numèric de la qual no s'especifica."</p>
 <p>En qualsevol llenguatge de programació existeixen una sèrie d'elements com variables, constants, funcions, llibreries. Aquestos elements requereixen d'un nom per tal de distingir-lo de la resta. Aquestos noms es diuen <strong>identificadors</strong></p>
 <p>Un <strong>identificador</strong> és una cadena alfanúmerica que representa o dona un nom a un element dins del nostre programa. Els <strong>identificadors</strong> de les variables són noms que s'inventa el programador i s'hauria de tindre en consideració al següent màxima:</p>
-<div class="admonition note">
-<p class="admonition-title">Identificadors i noms de variable</p>
-<p>Quan triem el nom per identificar a una variable, ha de ser significatiu, és a dir, que el mateix identificador ja done alguna pista de que és el que representa.</p>
-</div>
-<div class="admonition note">
+<div class="admonition tip">
 <p class="admonition-title">Normes per construir identificadors en Java</p>
-<ol>
+<p>Quan triem el nom per identificar a una variable, ha de ser significatiu, és a dir, que el mateix identificador ja done alguna pista de que és el que representa.</p>
+<ul>
 <li><strong>1.</strong> Estan formats per caracters i/o digits.<br></li>
 <li><strong>2.</strong> No poden començar per digit.<br></li>
 <li><strong>3.</strong> No poden usar els següents caracters especials:
@@ -562,7 +559,7 @@
 <li><strong>4.</strong> No poden ser cap paraula reservada de Java<br></li>
 <li><strong>5.</strong> Els identificadors de Java distingeixen entre majúscules i minúscules (case sensitive)</li>
 <li><strong>6.</strong> No hi ha límit a la llargària de l'identificador, però és aconsellable utilitzar una grandària òptima entre 4 i 15 caracters.</li>
-</ol>
+</ul>
 </div>
 <h3 id="paraules-reservades">Paraules reservades</h3>
 <p>Uns dels principals <strong>identificadors</strong> que ens trobarem a tot llenguatge de programació són les <strong>paraules reservades</strong>. Per entendre-ho, el conjunt de paraules reservades d'un llenguatge de programació són el diccionari de totes les paraules que té aquest llenguatge. Aquetes paraules reservades no poden utilitzar-se per cap altra cosa més, per exemple, si Java té la paraula reservada <strong>public</strong>, el programador no podrà crear cap variable utilitzant l'identificador public.</p>
@@ -570,6 +567,7 @@
 <table>
 <thead>
 <tr>
+<th></th>
 <th></th>
 <th></th>
 <th></th>
@@ -588,60 +586,67 @@
 <td>switch</td>
 <td>assert</td>
 <td>default</td>
+<td>goto</td>
 </tr>
 <tr>
-<td>goto</td>
 <td>package</td>
 <td>sychronized</td>
 <td>boolean</td>
 <td>do</td>
 <td>if</td>
 <td>private</td>
-</tr>
-<tr>
 <td>this</td>
 <td>break</td>
+</tr>
+<tr>
 <td>double</td>
 <td>implements</td>
 <td>protected</td>
 <td>throw</td>
 <td>byte</td>
-</tr>
-<tr>
 <td>else</td>
 <td>import</td>
 <td>public</td>
+</tr>
+<tr>
 <td>thows</td>
 <td>case</td>
 <td>enum</td>
 <td>instanceof</td>
-</tr>
-<tr>
 <td>return</td>
 <td>transient</td>
 <td>catch</td>
 <td>extends</td>
+</tr>
+<tr>
 <td>int</td>
 <td>short</td>
 <td>try</td>
-</tr>
-<tr>
+<td>char</td>
 <td>final</td>
 <td>interface</td>
 <td>static</td>
 <td>void</td>
-<td>class</td>
-<td>finally</td>
-<td>long</td>
 </tr>
 <tr>
+<td>finally</td>
+<td>long</td>
 <td>strictfp</td>
 <td>volatile</td>
 <td>const</td>
 <td>float</td>
 <td>native</td>
 <td>super</td>
+</tr>
+<tr>
 <td>while</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -658,8 +663,8 @@
 <p>Una variable és com un contenidor que té associat un tipus (int, float, double, char) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra o símbol alfanumèric.</p>
 <p><img alt="Variables" src="../assets/Tema3/variables-en-programacion.png" /></p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong></p>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<div class="admonition code">
+<p class="admonition-title">Declaracions de variables</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -681,8 +686,8 @@
 <p>Les variables com a contenidors d'informació, poden variar el seu valor durant l'execució del programa.</p>
 <p><img alt="Variables" src="../assets/Tema3/que_es_una_variable.png" /></p>
 <p>Imaginem una aplicació en la que volem controlar la posició d'un element qualsevol, per exemple un cercle a una pantalla 2D. Per determinar la poisció de qualsevol element en un escenari 2D necessitem dues coordenades: x i y. Les variables que podriem utiltizar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar.</p>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<div class="admonition code">
+<p class="admonition-title">Exemple de dues variables</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">posX</span><span class="p">;</span> <span class="c1">// Variables que representa la posició X de l&#39;element.</span>
 <span class="kt">int</span> <span class="n">posY</span><span class="p">;</span> <span class="c1">// Variable que representa la posició Y de l&#39;element.</span>
@@ -703,7 +708,7 @@
 </ol>
 </div>
 <p>Per defecte Java inicialitzaria aquestes dues variables a zero, és a dir, dins la caixa (contenidor) de cada variable, tindriem el valor zero si no s'indica el contrari.</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -736,7 +741,7 @@
 <p>Declara variables de tots els tipus disponibles en Java i digues-me quins són els valors que s'assignen per defecte a cadascuna d'elles. És tan simple com declarar variables de tots els tipus buides (sense inicialitzar) i després mostrar-les per pantalla. Aquesta activitat la pots fer tant en Eclipse com en Processing IDE.<br>
 Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processing IDE?</p>
 </div>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -786,7 +791,7 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <p>Les constants en java són semblants a les variables, és a dir, són contenidors d'informació, tenen un identificador i un tipus bàsic associat però el seu valor no canvia durant l'execució del programa.</p>
 <p>L'ús de les constants sol ser per a definir valors immutables dins d'un programa com per exemple en un tauler d'escacs el número de files i columnes és 8 sempre.</p>
 <p>Les variables en java es defineixen de la següent forma:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Constant en java</span>
@@ -803,36 +808,11 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <p>Els comentaris a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga més fàcil de llegir millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. 
 En java tenim tres tipus de comentaris:</p>
 <ul>
-<li><strong>Comentaris en línia:</strong></li>
-<li>S'utilitzen per comentar parts concretes del codi.</li>
-</ul>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Comentari d&#39;una sola línia en Java</span>
-</code></pre></div>
-</td></tr></table>
-</div>
-<ul>
+<li><strong>Comentaris en línia:</strong> S'utilitzen per comentar parts concretes del codi</li>
 <li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
-</ul>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/* Comentari de més d&#39;una línia</span>
-<span class="cm">linia 1</span>
-<span class="cm">linia 2</span>
-<span class="cm">linia 3</span>
-<span class="cm">linia final */</span>
-</code></pre></div>
-</td></tr></table>
-</div>
-<ul>
 <li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
 </ul>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -843,7 +823,23 @@ En java tenim tres tipus de comentaris:</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Comentari d&#39;una sola línia en Java</span>
+
+<span class="cm">/* Comentari de més d&#39;una línia</span>
+<span class="cm">linia 1</span>
+<span class="cm">linia 2</span>
+<span class="cm">...</span>
+<span class="cm">linia final */</span>
+
+<span class="cm">/**</span>
 <span class="cm">* Troba la mitjana de tres números!</span>
 <span class="cm">* El programa FindAvg implementa una aplicacio que</span>
 <span class="cm">* simplement calcula la mitjana de tres enteros i els mostra</span>
@@ -867,7 +863,7 @@ Aquestos simbols són els operadors, concretament * és l'operador aritmètic de
 <p>Aquesta expressió tindrà finalment un valor, per exemple, sí x val 3 i z val 2, el resultat de l'expressió seria 23.</p>
 <h3 id="operador-assignacio">Operador assignació</h3>
 <p>L'operador assignació en Java és el símbol '=' i s'utilitza de la següent forma </p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -881,7 +877,7 @@ Aquestos simbols són els operadors, concretament * és l'operador aritmètic de
 </div>
 <p>On l'operador '=' assignaria el valor de l'expressió '3x+2z' a la variable y, és a dir, executada aquesta acció dins de la variable y hauríem depositat el valor 23.
 Altres exemples d'ús de l'operador assignació:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -909,10 +905,7 @@ Altres exemples d'ús de l'operador assignació:</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 3. Escriu i executa</p>
-<p>Escriu i executa el següent codi i digues que és el que mostra. El codi està escrit per a Eclipse, però si vols, ho pots fer també amb Processing IDE. </p>
-</div>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<p>Escriu i executa el següent codi i digues que és el que mostra. El codi està escrit per a Eclipse, però si vols, ho pots fer també amb Processing IDE. 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -969,10 +962,10 @@ Altres exemples d'ús de l'operador assignació:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
+</td></tr></table></p>
 </div>
 <p>El codi per a processing és molt semblant, quines diferències hi veus?</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Codi per a Processing IDE</span>
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
@@ -1011,8 +1004,9 @@ Altres exemples d'ús de l'operador assignació:</p>
 <li><strong>Divisió (Quocient):</strong> símbol (/). Exemple: 8/5.</li>
 <li><strong>Divisió (Residu):</strong> símbol (%). Exemple 10%2.</li>
 </ul>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<div class="admonition question">
+<p class="admonition-title">Activitat 4. Executa codi</p>
+<p>Còpia i compila el codi anterior i observa el que mostra pel terminal. Pots executar el codi tant en Eclipse com en Processing IDE.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1031,29 +1025,25 @@ Altres exemples d'ús de l'operador assignació:</p>
 <span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// OPERADORS ARITMÈTICS</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">operadors</span>
 <span class="p">{</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-    <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Thank&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;You&quot;</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Thank&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;You&quot;</span><span class="p">;</span>
 
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a + b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a - b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x + y = &quot;</span><span class="o">+</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a * b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a / b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a % b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">));</span>
-<span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a + b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a - b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x + y = &quot;</span><span class="o">+</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a * b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a / b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a % b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">));</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Activitat 4. Executa codi</p>
-<p>Còpia i compila el codi anterior i observa el que mostra pel terminal. Pots executar el codi tant en Eclipse com en Processing IDE.</p>
-</div>
 <h3 id="operadors-increment-i-decrement-unaris">Operadors increment i decrement (unaris)</h3>
 <p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variabl</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1066,7 +1056,7 @@ Altres exemples d'ús de l'operador assignació:</p>
 </td></tr></table>
 </div>
 <p>Aquestos operadors també es poden posar abans de la variable produint el mateix efecte</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1079,35 +1069,52 @@ Altres exemples d'ús de l'operador assignació:</p>
 </td></tr></table>
 </div>
 <p>La diferència essencial entre el postincrement i el preincrement és que el contingut de la variable, el que tenim dins la caixeta, s'avalua abans (postincrement) o després (preincrement) de sumar-li un al seu valor.</p>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
-<p>```java linenums="1
-public class operadors 
-{
-public static void main(String[] args) 
-{
-    int a = 20, b = 10, c = 0, d = 20, e = 40, f = 30;
-    boolean condition = true;</p>
-<div class="highlight"><pre><span></span><code>c = ++a;
-System.out.println(&quot;Valor de c (++a) = &quot; + c);
-
-c = b++;
-System.out.println(&quot;Valor de c (b++) = &quot; + c);
-
-c = --d;
-System.out.println(&quot;Valor de c (--d) = &quot; + c);
-
-c = e--;
-System.out.println(&quot;Valor de c (e--) = &quot; + c);
-System.out.println(&quot;Valor de !condition = &quot; + !condition);
-</code></pre></div>
-<p>}
-}
-```</p>
-</div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 5. Operadors</p>
 <p>Prova el codi anterior i digues-me el que passa.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">operadors</span> 
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">condition</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="o">++</span><span class="n">a</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (++a) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (b++) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="o">--</span><span class="n">d</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (--d) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="n">e</span><span class="o">--</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (e--) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de !condition = &quot;</span> <span class="o">+</span> <span class="o">!</span><span class="n">condition</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 </div>
 <h3 id="operadors-relacionals">Operadors relacionals</h3>
 <p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors true o false. Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé <strong>true o false.</strong></p>
@@ -1204,8 +1211,9 @@ System.out.println(&quot;Valor de !condition = &quot; + !condition);
 <li><strong>Major o igual que: &gt;=</strong> o major igual que. Exemple d'ús: 'a&gt;=b' comprova si a és major o igual que b.</li>
 <li><strong>Menor o igual que: &lt;=</strong> o menor igual que. Exemple d'ús: 'a&lt;=b' comprova si a és menor o igual que b.</li>
 </ul>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<div class="admonition question">
+<p class="admonition-title">Activitat 6. Copia i executa</p>
+<p>Còpia i executa el codi anterior en Eclipse i observa el que passa.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1258,10 +1266,6 @@ System.out.println(&quot;Valor de !condition = &quot; + !condition);
 </code></pre></div>
 </td></tr></table>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Activitat 6. Copia i executa</p>
-<p>Còpia i executa el codi anterior en Eclipse i observa el que passa.</p>
-</div>
 <h3 id="operadors-logics">Operadors lògics</h3>
 <p>Aquestos operador s'utilitzen per realitzar operacions <strong>lògiques AND</strong> i <strong>lògiques OR</strong>, és a dir, la funció semblant a la port <strong>AND</strong> i la porta <strong>OR</strong> e l'electrònica digital. Una cosa a dinre en compte és que la segona condició no s'avalua si la primera és falsa, és a dir, té un efecte de curtcircuit. S'utilitza molt per provar varies condicions per prendre una decició.</p>
 <ul>
@@ -1270,8 +1274,9 @@ System.out.println(&quot;Valor de !condition = &quot; + !condition);
 <li><strong>or (||)</strong>: or lògic.</li>
 <li><strong>or exclusivo (^)</strong>: or exclusiu.</li>
 </ul>
-<div class="admonition bug">
-<p class="admonition-title">Codi</p>
+<div class="admonition question">
+<p class="admonition-title">Activitat 7. Prova i executa</p>
+<p>Prova i executa el codi anterior. Aquest codi només es pot executar en Eclipse i no en Processing ja que en aquest últim no es pot llegir per consola.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1322,13 +1327,9 @@ System.out.println(&quot;Valor de !condition = &quot; + !condition);
 </code></pre></div>
 </td></tr></table>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Activitat 7. Prova i executa</p>
-<p>Prova i executa el codi anterior. Aquest codi només es pot executar en Eclipse i no en Processing ja que en aquest últim no es pot llegir per consola.</p>
-</div>
 <h3 id="operador-condicional-o-ternari">Operador condicional o ternari</h3>
 <p>Java inclou un operador especial de tipus ternari que de vegades s'utilitza per substituir algunes estructures if then else. Aquest és l'operador <strong>?</strong> i la seua forma general és:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">expressio1</span> <span class="o">?</span> <span class="n">expressio2</span> <span class="p">:</span> <span class="n">expressio</span> <span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
@@ -1379,7 +1380,7 @@ System.out.println(&quot;Valor de !condition = &quot; + !condition);
 <li>Mètodes definits pels usuaris dins de les classes.</li>
 <li>Comentaris.</li>
 </ul>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1438,7 +1439,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <p>Per tal de treballar amb les estructures bàsiques del paradigma de programació estructurada, utilitzarem <strong>Processing IDE</strong> que és un IDE lleuger que ens permet programar en Java sense necessitat de fer estructures de classes molt complexes.</p>
 <p>Concretament <strong>Processing IDE</strong> és un entorn integrat de desenvolupament juntament amb una llibreria gràfica que inicialment es va construir per a arts electròniques i disseny visual per tal de poder ensenyar els fonaments de la programació a <strong>no-programadors</strong> en un context visual. És per això que aquesta eina ens resultarà molt útil per tal d'aprendre els conceptes bàsics de la programació estructurada.</p>
 <p>A continuació vos mostrem un exemple d'estructura de programa en <strong>Processing IDE</strong></p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1466,7 +1467,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 </div>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
 <p>L'estructura seqüencial en Java es codifica de la següent manera:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1525,7 +1526,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <h4 id="seleccio-simple">Selecció Simple</h4>
 <p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-simple-java.png" /></p>
 <p>El seu codi en Java seria:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1587,7 +1588,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 </div>
 <p>Com que en Processing IDE resulta molt complicat el llegir per consola, per la inserció d'informació per part de l'usuari, ho farem de forma aleatòria.</p>
 <p>A l'API de Processing, <a href="https://processing.org/reference/">Processing Reference</a>, entre altres tenim una funció <strong>random(low, high)</strong> que genera nombres aleatoris dintre del rang low-hight que se li passa per paràmetre, és a dir, si volem que aquesta funció ens torne un valor aleatori entre 0 i 100, hauríem de cridar-la de la següent forma:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
@@ -1603,7 +1604,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <h4 id="if-else">if .. else</h4>
 <p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-doble-java.png" /></p>
 <p>El codi en Java seria</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1667,7 +1668,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <h4 id="if-else-if-else">if else if else</h4>
 <p><img alt="Selecció múltiple amb if" src="../assets/Tema3/Estructura-condicional-multiple-java.png" /></p>
 <p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
-<div class="admonition bug">
+<div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1785,51 +1786,50 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 </div>
 <details class="done"><summary>Solució</summary><p><img alt="Activitat 16b" src="../assets/Tema3/Activitat16b.png" /></p>
 </details>
-<blockquote>
-<p><strong>Activitat 17. Major, menor o igual</strong><br>
-Ecriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.</p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Activitat 17. Major, menor o igual</p>
+<p>Ecriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.</p>
 <p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png" /></p>
-<blockquote>
-<p><strong>Activitat 18. Diferència d'anys</strong><br>
-Escriu un programa en Processing que donat l'any actual i un any qualsevol que es genere de forma aleatòria amb la funció random i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 18. Diferència d'anys</p>
+<p>Escriu un programa en Processing que donat l'any actual i un any qualsevol que es genere de forma aleatòria amb la funció random i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any.</p>
 <p><img alt="Activitat 18" src="../assets/Tema3/Activitat18.png" /></p>
-<blockquote>
-<p><strong>Activitat 19. Millora</strong><br>
-Millora el programa anterior fent que quan la diferència siga exactament un any, mostre una frase concreta: "Només queda un any"</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 19. Millora</p>
+<p>Millora el programa anterior fent que quan la diferència siga exactament un any, mostre una frase concreta: "Només queda un any"</p>
 <p><img alt="Activitat 19" src="../assets/Tema3/Activitat19.png" /></p>
-<blockquote>
-<p><strong>Activitat 20. Múltiples</strong><br>
-Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. </p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 20. Múltiples</p>
+<p>Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. </p>
 <p><img alt="Activitat 20" src="../assets/Tema3/Activitat20.png" /></p>
-<blockquote>
-<p><strong>Activitat 21. Millor múltiples</strong><br>
-Millora el programa anterior fent que el programa avise quan s'escriguen valors negatius o nuls.</p>
-</blockquote>
-<p>&nbsp;</p>
-<blockquote>
-<p><strong>Activitat 22. Comparador</strong>
-Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 21. Millor múltiples</p>
+<p>Millora el programa anterior fent que el programa avise quan s'escriguen valors negatius o nuls.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 22. Comparador</p>
+<p>Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual.</p>
 <p><img alt="Activitat 22" src="../assets/Tema3/Activitat22.png" /></p>
-<blockquote>
-<p><strong>Activitat 23. Any bixest</strong><br>
- Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 23. Any bixest</p>
+<p>Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
 <p><img alt="Codi Example" src="../assets/Tema3/anoBisiestoPseint.jpg" /> </p>
 <p><img alt="Activitat 23" src="../assets/Tema3/Activitat23.png" /></p>
-<blockquote>
-<p><strong>Activitat 24. Càlcul d'arees</strong><br>
-Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 24. Càlcul d'arees</p>
+<p>Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.</p>
 <p><img alt="Activitat 24" src="../assets/Tema3/Activitat24.png" /></p>
-<blockquote>
-<p><strong>Activitat 25. Canvi d'unitats</strong><br>
-Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 25. Canvi d'unitats</p>
+<p>Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.</p>
+</div>
 <h4 id="switch-case">switch case</h4>
 <p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull</p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1937,21 +1937,21 @@ Un altre exemple més clar</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 26</strong><br>
-Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Activitat 26</p>
+<p>Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
 <p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png" /></p>
+</div>
 <p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 0 i 15 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
-<blockquote>
-<p><strong>Activitat 27. Dies de la setmana</strong><br>
-Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Activitat 27. Dies de la setmana</p>
+<p>Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
 <p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png" /></p>
-<blockquote>
-<p><strong>Activitat 28. if a switch</strong><br>
-Passa les activitats de l'apartat if..else a sentències switch..case</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 28. if a switch</p>
+<p>Passa les activitats de l'apartat if..else a sentències switch..case</p>
+</div>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2001,15 +2001,15 @@ Passa les activitats de l'apartat if..else a sentències switch..case</p>
     <span class="c1">//Accions default</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 29. dies del mes</strong><br>
-Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. Si fas el programa amb Processing recorda que el número del més l'hauràs de generar de forma aleatòria.</p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Activitat 29. dies del mes</p>
+<p>Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. Si fas el programa amb Processing recorda que el número del més l'hauràs de generar de forma aleatòria.</p>
 <p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png" /></p>
-<blockquote>
-<p><strong>Activitat 30. Figures geomètriques</strong><br>
-Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent.</p>
-</blockquote>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 30. Figures geomètriques</p>
+<p>Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent.</p>
+</div>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
 <p>Imaginem que tenim un vector d'enters de 100 elements i volem trobar un nombre concret. Usant les estrcutures condicionals ho podríem fer.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2072,6 +2072,8 @@ Escriure un programa que demane primer de quina figura geomètrica es vol calcul
 2. S'avalua la condició 
 3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<div class="admonition exemple">
+<p class="admonition-title">Recorrer un array</p>
 <p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2086,6 +2088,7 @@ Escriure un programa que demane primer de quina figura geomètrica es vol calcul
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+</div>
 <h4 id="do-while">do .. while</h4>
 <p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-do-while.png" /></p>
 <p>Els passos que representen el diagrama anterior són:
@@ -2094,7 +2097,8 @@ Escriure un programa que demane primer de quina figura geomètrica es vol calcul
 3. S'avalua la condició 
 4. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
-<p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
+<div class="admonition exemple">
+<p class="admonition-title">Recorrer i buscar un número</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2110,6 +2114,7 @@ Escriure un programa que demane primer de quina figura geomètrica es vol calcul
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
+</div>
 <h4 id="bucle-for">bucle for</h4>
 <p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-for.png" /></p>
 <ol>
@@ -2134,10 +2139,9 @@ Al codi anterior:
 1. Inicialització: int i = 0;
 2. Avaluació de la condició: és i &lt; 100 ?
 3. Actualització: i ++</p>
-<blockquote>
-<p><strong>Activitat 31. Dibuixa amb bucles</strong><br>
-Observa el següent codi i raona'l</p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Activitat 31. Dibuixa amb bucles</p>
+<p>Observa el següent codi i raona'l</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2148,43 +2152,47 @@ Observa el següent codi i raona'l</p>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+<span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
-      <span class="n">circle</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="n">circle</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p>El resultat d'aquest codi seria:sudo apt update; sudo apt upgrade</p>
-<p><img alt="Activitat 31" src="../assets/Tema3/Activitat31.png" /></p>
-<blockquote>
-<p><strong>Activitat 32. Dibuixa la piramid i la invertida</strong><br>
-Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
-</blockquote>
-<p><img alt="Activitat 32" src="../assets/Tema3/Activitat32.png" /></p>
-<blockquote>
-<p><strong>Activitat 33. Dibuixa la diagonal</strong><br>
-Donada una pantalla de 500 pixels d'ample i 500 d'alt, fes un programa que dibuixe quadrats de 20 per 20 pixels ocupant la diagonal de la pantalla des de la posició (0,0) fins la (500,500).</p>
-</blockquote>
-<p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png" /></p>
-<blockquote>
-<p><strong>Activitat 34. Dibuixa les dues diagonals</strong><br>
-Millora el programa anterior i fes que dibuixe les dues diagonals, des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
-</blockquote>
-<p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png" /></p>
-<blockquote>
-<p><strong>Activitat 35. Dues diagonals 640x480</strong><br>
-Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
-</blockquote>
-<p>&nbsp;</p>
-<blockquote>
-<p><strong>Activitat 36. whiles i for</strong><br>
-Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p>
-</blockquote>
+</div>
+<details class="done"><summary>Solució</summary><p>El resultat d'aquest codi seria:
+<img alt="Activitat 31" src="../assets/Tema3/Activitat31.png" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 32. Dibuixa la piramid i la invertida</p>
+<p>Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 32" src="../assets/Tema3/Activitat32.png" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 33. Dibuixa la diagonal</p>
+<p>Donada una pantalla de 500 pixels d'ample i 500 d'alt, fes un programa que dibuixe quadrats de 20 per 20 pixels ocupant la diagonal de la pantalla des de la posició (0,0) fins la (500,500).</p>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 34. Dibuixa les dues diagonals</p>
+<p>Millora el programa anterior i fes que dibuixe les dues diagonals, des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
+</div>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png" /></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Activitat 35. Dues diagonals 640x480</p>
+<p>Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Activitat 36. whiles i for</p>
+<p>Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p>
+</div>
                 
               
               

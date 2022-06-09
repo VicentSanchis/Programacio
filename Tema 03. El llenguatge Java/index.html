@@ -1,408 +1,197 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
-    
-    
-      
-        <title>3.- El llenguatge Java - PROGRAMACIÓ 1DAW</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
-        
-      
-    
-    
-    
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
-      
-    
-    
-    
-      <link rel="stylesheet" href="../stylesheet/extra.css">
-    
-    
-      
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#tema-3-el-llenguatge-java" class="md-skip">
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.7" name="generator"/>
+<title>3.- El llenguatge Java - PROGRAMACIÓ 1DAW</title>
+<link href="../assets/stylesheets/main.c772ddf0.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+<link href="../stylesheet/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tema-3-el-llenguatge-java">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             PROGRAMACIÓ 1DAW
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               3.- El llenguatge Java
             
           </span>
-        </div>
-      </div>
-    </div>
-    <div class="md-header__options">
-      
-    </div>
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      
+</div>
+</div>
+</div>
+<div class="md-header__options">
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list"></ol>
 </div>
-    
-    
-  </nav>
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" aria-label="PROGRAMACIÓ 1DAW" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
     PROGRAMACIÓ 1DAW
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
         Index
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" class="md-nav__link">
-        1.- Introducció a la programació
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
+        1.- Introducció programació
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/">
         2.- Programació Estructurada
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
           3.- El llenguatge Java
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         3.- El llenguatge Java
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduccio" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
     Introducció
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dades-variables-i-identificadors" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dades-variables-i-identificadors">
     Dades, Variables i identificadors.
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#operadors-i-expressions" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadors-i-expressions">
     Operadors i expressions
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estructures" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructures">
     Estructures
   </a>
-  
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2004.%20Programaci%C3%B3%20Modular/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2004.%20Programaci%C3%B3%20Modular/">
         4.- Programació Modular
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2005.%20Tipus%20compostos%20de%20dades/">
         5.- Tipus Compostos Dades
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
         6.- Prog Orientada Objectes
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
         7.- Herència, polimorfisme..
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/">
         8.- Entrada, eixida, excepcions
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2009.%20Gr%C3%A0fics.%20Java%20Swing/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Gr%C3%A0fics.%20Java%20Swing/">
         9.- Gràfics. Java Swing.
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/">
         10.- Accés a dades
       </a>
-    </li>
-  
-
-    
-  </ul>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                
-                <h1 id="tema-3-el-llenguatge-java">Tema 3. El llenguatge Java</h1>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="tema-3-el-llenguatge-java">Tema 3. El llenguatge Java</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Una vegada estudiat el <strong>teorema del programa estructurat</strong> juntamnet amb els diagrames de flux i psuedocodi, passem a veure aquestos conceptes teòrics en un llenguatge de programació d'alt nivell concret com és el llenguatge de programació Java.</p>
 <p>En aquest tema veurem la sintaxis bàsica de Java: paraules reservades, dades, variables, constants, identificadors i com també es codifiquen les estructures de control vistes al tema anterior en llenguatge Java.</p>
@@ -418,11 +207,11 @@
 <p class="admonition-title">Normes per construir identificadors en Java</p>
 <p>Quan triem el nom per identificar a una variable, ha de ser significatiu, és a dir, que el mateix identificador ja done alguna pista de que és el que representa.</p>
 <ul>
-<li><strong>1.</strong> Estan formats per caracters i/o digits.<br></li>
-<li><strong>2.</strong> No poden començar per digit.<br></li>
+<li><strong>1.</strong> Estan formats per caracters i/o digits.<br/></li>
+<li><strong>2.</strong> No poden començar per digit.<br/></li>
 <li><strong>3.</strong> No poden usar els següents caracters especials:
-<br>&nbsp;&nbsp;&nbsp;&nbsp; <code>+ - * / = % &amp; # ! ? ^ “ ‘ ~ \ | &lt; &gt; ( ) [ ] { } : ; . ,</code><br><br></li>
-<li><strong>4.</strong> No poden ser cap paraula reservada de Java<br></li>
+<br/>     <code>+ - * / = % &amp; # ! ? ^ “ ‘ ~ \ | &lt; &gt; ( ) [ ] { } : ; . ,</code><br/><br/></li>
+<li><strong>4.</strong> No poden ser cap paraula reservada de Java<br/></li>
 <li><strong>5.</strong> Els identificadors de Java distingeixen entre majúscules i minúscules (case sensitive)</li>
 <li><strong>6.</strong> No hi ha límit a la llargària de l'identificador, però és aconsellable utilitzar una grandària òptima entre 4 i 15 caracters.</li>
 </ul>
@@ -527,7 +316,7 @@
 <h3 id="variables">Variables</h3>
 <p>Al final tot programa s'encarrega de processar informació i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
 <p>Una variable és com un contenidor que té associat un tipus (int, float, double, char) i conté un valor, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra o símbol alfanumèric.</p>
-<p><img alt="Variables" src="../assets/Tema3/variables-en-programacion.png" /></p>
+<p><img alt="Variables" src="../assets/Tema3/variables-en-programacion.png"/></p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong></p>
 <div class="admonition code">
 <p class="admonition-title">Declaracions de variables</p>
@@ -538,25 +327,25 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Declaració d&#39;una variable en Java</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Declaració d'una variable en Java</span>
 <span class="c1">// type identifier;</span>
 <span class="c1">// Per exemple:</span>
-<span class="kt">int</span> <span class="n">a</span><span class="p">;</span>  <span class="c1">// Declaració d&#39;una variable entera amb nom a</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">;</span>  <span class="c1">// Declaració d'una variable entera amb nom a</span>
 <span class="kt">float</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Variable flotant de nom b</span>
 <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>  <span class="c1">// Variable caracter amb nom c</span>
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// En aquesta declaració s&#39;inclou també la inicialització del seu valor.</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// En aquesta declaració s'inclou també la inicialització del seu valor.</span>
 <span class="kt">long</span> <span class="n">j</span><span class="p">;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
 <p>Les variables com a contenidors d'informació, poden variar el seu valor durant l'execució del programa.</p>
-<p><img alt="Variables" src="../assets/Tema3/que_es_una_variable.png" /></p>
+<p><img alt="Variables" src="../assets/Tema3/que_es_una_variable.png"/></p>
 <p>Imaginem una aplicació en la que volem controlar la posició d'un element qualsevol, per exemple un cercle a una pantalla 2D. Per determinar la poisció de qualsevol element en un escenari 2D necessitem dues coordenades: x i y. Les variables que podriem utiltizar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar.</p>
 <div class="admonition code">
 <p class="admonition-title">Exemple de dues variables</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">posX</span><span class="p">;</span> <span class="c1">// Variables que representa la posició X de l&#39;element.</span>
-<span class="kt">int</span> <span class="n">posY</span><span class="p">;</span> <span class="c1">// Variable que representa la posició Y de l&#39;element.</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">posX</span><span class="p">;</span> <span class="c1">// Variables que representa la posició X de l'element.</span>
+<span class="kt">int</span> <span class="n">posY</span><span class="p">;</span> <span class="c1">// Variable que representa la posició Y de l'element.</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -591,12 +380,12 @@
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">maing</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">posX</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">poxY</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"PosX: "</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"PosY: "</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
         <span class="n">posX</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
         <span class="n">posY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"PosX: "</span> <span class="o">+</span> <span class="n">posX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"PosY: "</span> <span class="o">+</span> <span class="n">posY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -604,7 +393,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 1. Declaració de variables</p>
-<p>Declara variables de tots els tipus disponibles en Java i digues-me quins són els valors que s'assignen per defecte a cadascuna d'elles. És tan simple com declarar variables de tots els tipus buides (sense inicialitzar) i després mostrar-les per pantalla. Aquesta activitat la pots fer tant en Eclipse com en Processing IDE.<br>
+<p>Declara variables de tots els tipus disponibles en Java i digues-me quins són els valors que s'assignen per defecte a cadascuna d'elles. És tan simple com declarar variables de tots els tipus buides (sense inicialitzar) i després mostrar-les per pantalla. Aquesta activitat la pots fer tant en Eclipse com en Processing IDE.<br/>
 Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processing IDE?</p>
 </div>
 <div class="admonition code">
@@ -639,12 +428,12 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <span class="p">}</span>
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">bPrinted</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"PosX: "</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"PosY: "</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 0</span>
     <span class="n">iPosX</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
     <span class="n">iPosY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosX: &quot;</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;PosY: &quot;</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"PosX: "</span> <span class="o">+</span> <span class="n">iPosX</span><span class="p">);</span> <span class="c1">// PosX: 7</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"PosY: "</span> <span class="o">+</span> <span class="n">iPosY</span><span class="p">);</span> <span class="c1">// PosY: 3</span>
     <span class="n">bPrinted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -652,7 +441,7 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 </td></tr></table>
 </div>
 <p>Codi mostrat a l'executar-se el programa en Eclipse IDE.</p>
-<p><img alt="Activitat 1" src="../assets/Tema3/Activitat1.png" /></p>
+<p><img alt="Activitat 1" src="../assets/Tema3/Activitat1.png"/></p>
 <h3 id="constants">Constants</h3>
 <p>Les constants en java són semblants a les variables, és a dir, són contenidors d'informació, tenen un identificador i un tipus bàsic associat però el seu valor no canvia durant l'execució del programa.</p>
 <p>L'ús de les constants sol ser per a definir valors immutables dins d'un programa com per exemple en un tauler d'escacs el número de files i columnes és 8 sempre.</p>
@@ -669,7 +458,7 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <p class="admonition-title">Activitat 2. Prova el codi</p>
 <p>Declara una constant de tipus enter amb valor 10 i línies després intenta canviar el valor i compila a veure que passa.</p>
 </div>
-<p><img alt="Activitat 2" src="../assets/Tema3/Activitat2.png" /></p>
+<p><img alt="Activitat 2" src="../assets/Tema3/Activitat2.png"/></p>
 <h3 id="comentaris">Comentaris</h3>
 <p>Els comentaris a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga més fàcil de llegir millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. 
 En java tenim tres tipus de comentaris:</p>
@@ -697,9 +486,9 @@ En java tenim tres tipus de comentaris:</p>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Comentari d&#39;una sola línia en Java</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Comentari d'una sola línia en Java</span>
 
-<span class="cm">/* Comentari de més d&#39;una línia</span>
+<span class="cm">/* Comentari de més d'una línia</span>
 <span class="cm">linia 1</span>
 <span class="cm">linia 2</span>
 <span class="cm">...</span>
@@ -735,7 +524,7 @@ Aquestos simbols són els operadors, concretament * és l'operador aritmètic de
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// variable = expressió</span>
-<span class="c1">// Seguint l&#39;exemple anterior</span>
+<span class="c1">// Seguint l'exemple anterior</span>
 <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">z</span><span class="p">;</span>
 </code></pre></div>
@@ -765,7 +554,7 @@ Altres exemples d'ús de l'operador assignació:</p>
 
 <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">j</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span> 
-<span class="c1">// Aquesta manera peculiar d&#39;usar l&#39;operador assignació és el mateix que j = j * 2;</span>
+<span class="c1">// Aquesta manera peculiar d'usar l'operador assignació és el mateix que j = j * 2;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -807,13 +596,13 @@ Altres exemples d'ús de l'operador assignació:</p>
         <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
         <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span> 
         <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a,b,e,f = &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span>
-                        <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a,b,e,f = "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">","</span>
+                        <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
@@ -823,8 +612,8 @@ Altres exemples d'ús de l'operador assignació:</p>
         <span class="n">b</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
         <span class="n">f</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a,b,e,f (utilitzan operador curst)= &quot;</span> <span class="o">+</span> 
-                            <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a,b,e,f (utilitzan operador curst)= "</span> <span class="o">+</span> 
+                            <span class="n">a</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -839,13 +628,13 @@ Altres exemples d'ús de l'operador assignació:</p>
 
 
         <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span> 
         <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a,b,e,f = &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span>
-                        <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a,b,e,f = "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">","</span>
+                        <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
@@ -855,8 +644,8 @@ Altres exemples d'ús de l'operador assignació:</p>
         <span class="n">b</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="n">e</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
         <span class="n">f</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a,b,e,f (utilitzan operador curst)= &quot;</span> <span class="o">+</span> 
-                            <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a,b,e,f (utilitzan operador curst)= "</span> <span class="o">+</span> 
+                            <span class="n">a</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -894,14 +683,14 @@ Altres exemples d'ús de l'operador assignació:</p>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">40</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Thank&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;You&quot;</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"Thank"</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"You"</span><span class="p">;</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a + b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a - b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x + y = &quot;</span><span class="o">+</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a * b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a / b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a % b = &quot;</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a + b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a - b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x + y = "</span><span class="o">+</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a * b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a / b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a % b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -966,17 +755,17 @@ Altres exemples d'ús de l'operador assignació:</p>
         <span class="kt">boolean</span> <span class="n">condition</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
         <span class="n">c</span> <span class="o">=</span> <span class="o">++</span><span class="n">a</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (++a) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c (++a) = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
 
         <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (b++) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c (b++) = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
 
         <span class="n">c</span> <span class="o">=</span> <span class="o">--</span><span class="n">d</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (--d) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c (--d) = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
 
         <span class="n">c</span> <span class="o">=</span> <span class="n">e</span><span class="o">--</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de c (e--) = &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valor de !condition = &quot;</span> <span class="o">+</span> <span class="o">!</span><span class="n">condition</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c (e--) = "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de !condition = "</span> <span class="o">+</span> <span class="o">!</span><span class="n">condition</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1110,23 +899,23 @@ Altres exemples d'ús de l'operador assignació:</p>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
     <span class="p">{</span>
         <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Thank&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Thank&quot;</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"Thank"</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"Thank"</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">ar</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">};</span>
         <span class="kt">int</span> <span class="n">br</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">};</span>
         <span class="kt">boolean</span> <span class="n">condicion</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
         <span class="c1">// Diversos operadors relacionals</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a == b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a &lt; b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a &lt;= b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a &gt; b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a &gt;= b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a != b :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a == b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a &lt; b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a &lt;= b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a &gt; b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a &gt;= b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a != b :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">));</span>
 
         <span class="c1">// Els arrays no es poden comparar cma operadors relacionals perquè els objectes emmagatzemen referències i no el valor</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x == y : &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">ar</span> <span class="o">==</span> <span class="n">br</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"x == y : "</span> <span class="o">+</span> <span class="p">(</span><span class="n">ar</span> <span class="o">==</span> <span class="n">br</span><span class="p">));</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;condicion==true :&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">condicion</span> <span class="o">==</span> <span class="kc">true</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"condicion==true :"</span> <span class="o">+</span> <span class="p">(</span><span class="n">condicion</span> <span class="o">==</span> <span class="kc">true</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1172,21 +961,21 @@ Altres exemples d'ús de l'operador assignació:</p>
 <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
     <span class="p">{</span>
-        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;java&quot;</span><span class="p">;</span>
-        <span class="n">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;jovo&quot;</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"java"</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"jovo"</span><span class="p">;</span>
 
         <span class="n">Scanner</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Usuari:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Usuari:"</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">uuid</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Password:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Password:"</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">upwd</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
 
         <span class="c1">// Verifica usuari i contrassenya</span>
         <span class="k">if</span> <span class="p">((</span><span class="n">uuid</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">upwd</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">||</span> 
                 <span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">upwd</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Benvingut&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Benvingut"</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ID o password incorrectes&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID o password incorrectes"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1209,9 +998,9 @@ Altres exemples d'ús de l'operador assignació:</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">temperatura</span><span class="p">;</span> <span class="c1">// Variable que ens indica la temperatur ambient</span>
-<span class="kt">boolean</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  <span class="c1">// Variable booleana que ens indica si l&#39;aire condicionat està en marxa</span>
+<span class="kt">boolean</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  <span class="c1">// Variable booleana que ens indica si l'aire condicionat està en marxa</span>
 <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="o">?</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">:</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="c1">// Bàsicament el que faria aquesta espressió seria engegar l&#39;aire condicionat si la temperatura</span>
+<span class="c1">// Bàsicament el que faria aquesta espressió seria engegar l'aire condicionat si la temperatura</span>
 <span class="c1">// és superior a 25 graus.</span>
 </code></pre></div>
 </td></tr></table>
@@ -1229,7 +1018,7 @@ Altres exemples d'ús de l'operador assignació:</p>
 
         <span class="c1">// El resultat obté el màxim de tres números.</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="p">:</span> <span class="n">c</span> <span class="p">:</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">?</span> <span class="n">b</span> <span class="p">:</span> <span class="n">c</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Màximo de tres números = &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Màximo de tres números = "</span> <span class="o">+</span> <span class="n">result</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1270,7 +1059,7 @@ Altres exemples d'ús de l'operador assignació:</p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Programa principal</span>
-<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>             <span class="c1">// Llibreries amb funcions d&#39;entrada i eixida.</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>             <span class="c1">// Llibreries amb funcions d'entrada i eixida.</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">nomPrograma</span> <span class="p">{</span>    <span class="c1">// Nom de la classe principal</span>
 
     <span class="n">Calculadora</span> <span class="n">calc</span><span class="p">;</span>         <span class="c1">// Membres de la classe (una calculadora)</span>
@@ -1279,7 +1068,7 @@ Altres exemples d'ús de l'operador assignació:</p>
     <span class="n">principal</span> <span class="n">main</span>
         <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculadora</span><span class="p">();</span>              <span class="c1">// Instruccions del mètode principal.</span>
         <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Resultat: &quot;</span> <span class="o">+</span> <span class="n">result</span> <span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resultat: "</span> <span class="o">+</span> <span class="n">result</span> <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -1318,16 +1107,16 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
-<span class="c1">// Variables globals a l&#39;aplicació.</span>
-<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s&#39;executa una vegada a l&#39;inici de l&#39;execució.</span>
-    <span class="c1">// Sentències d&#39;inicialització de la nostra aplicació.</span>
+<span class="c1">// Variables globals a l'aplicació.</span>
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s'executa una vegada a l'inici de l'execució.</span>
+    <span class="c1">// Sentències d'inicialització de la nostra aplicació.</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S&#39;executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S'executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
     <span class="c1">// Codi principal del programa.</span>
 <span class="p">}</span>
 
-<span class="c1">// Declaració d&#39;altres funcions</span>
+<span class="c1">// Declaració d'altres funcions</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1390,7 +1179,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <li>Operador condicional ?</li>
 </ul>
 <h4 id="seleccio-simple">Selecció Simple</h4>
-<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-simple-java.png" /></p>
+<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-simple-java.png"/></p>
 <p>El seu codi en Java seria:</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -1437,12 +1226,12 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioSimple</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Quina hora és?:"</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
         <span class="k">if</span> <span class="p">(</span> <span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A sopar&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A sopar"</span><span class="p">);</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adeu&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Adeu"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1463,12 +1252,12 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <p class="admonition-title">Activitat 12. funció random()</p>
 <p>Utilitzant la funció <strong>random()</strong> vista a l'apartat anterior, escriu un programa en Processing que donat un nombre alelatori ens indique si aquest és parell o senar.</p>
 <p>Un possible resultat seria el següent:</p>
-<p><img alt="Activitat 12" src="../assets/Tema3/Activitat12.png" /></p>
+<p><img alt="Activitat 12" src="../assets/Tema3/Activitat12.png"/></p>
 </div>
 <p>A l'activitat anterior he generat 5 vegades un número aleatori i he comprovat si era parell o senar mostrant la informació pel terminal (ha d'estar tot el codi a la funció <strong>setup()</strong>). També podríem fer que ho mostrara a la funció draw a la pantalla principal de l'aplicació utilitzant la funció <strong>text()</strong> de l'IDE de Processing. El resultat podria ser el següent:</p>
-<p><img alt="Activitat 12b" src="../assets/Tema3/Activitat12b.png" /></p>
+<p><img alt="Activitat 12b" src="../assets/Tema3/Activitat12b.png"/></p>
 <h4 id="if-else">if .. else</h4>
-<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-doble-java.png" /></p>
+<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-doble-java.png"/></p>
 <p>El codi en Java seria</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -1516,12 +1305,12 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioDoble</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Quina hora és?:"</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
         <span class="k">if</span> <span class="p">(</span> <span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Encara és de matí&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Encara és de matí"</span><span class="p">);</span>
         <span class="k">else</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ja és de vesprada&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ja és de vesprada"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1532,7 +1321,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <p>Amplia l'exemple anterior per tal que ens indique, en cas de no ser parell, que és senar. Com que s'ha de llegir per consola, és millor que ho fages amb Eclipse.</p>
 </div>
 <h4 id="if-else-if-else">if else if else</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/Estructura-condicional-multiple-java.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/Estructura-condicional-multiple-java.png"/></p>
 <p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -1601,18 +1390,18 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">condicioMultiple</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quina hora és?:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Quina hora és?:"</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">hora</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;=</span> <span class="mi">7</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Eres matiner&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Eres matiner"</span><span class="p">);</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Deuries haver esmorzat ja&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Deuries haver esmorzat ja"</span><span class="p">);</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">12</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Es hora de dinar si no has dinat&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Es hora de dinar si no has dinat"</span><span class="p">);</span>
         <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">hora</span> <span class="o">&gt;</span> <span class="mi">15</span> <span class="o">&amp;&amp;</span> <span class="n">hora</span> <span class="o">&lt;=</span> <span class="mi">18</span><span class="p">)</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Si no has fet una migdiada oblidat&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Si no has fet una migdiada oblidat"</span><span class="p">);</span>
         <span class="k">else</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hora de la cervesa&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hora de la cervesa"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1622,7 +1411,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <p class="admonition-title">Activitat 14. Processing IDE</p>
 <p>Passa el codi anterior a Processing IDE. Com que no es pot llegir per consola, fes que l'hora i els minuts es generen de forma aleatòria amb la funció <strong>random</strong>. Al final de cada cicle de la funció <strong>draw</strong> posa un delay de 1 segon per tal que ens done temps a veure el resultat. Recorda també de fer un <strong>clear()</strong> al principi de cada cicle de draw.</p>
 </div>
-<details class="done"><summary>Solució</summary><p><img alt="Activitat 14" src="../assets/Tema3/Activitat14.png" /></p>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 14" src="../assets/Tema3/Activitat14.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activiat 15. Divisió</p>
@@ -1630,10 +1419,10 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
 <div class="highlight"><pre><span></span><code><span class="c1">// Estructura del codi que pots utilitzar.</span>
 <span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
     <span class="n">size</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span> <span class="c1">// Ens determina el tamany de la pantalla de la nostra aplicació.</span>
-    <span class="n">textAlign</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span> <span class="c1">// L&#39;ancora del text serà el cetnre mateix.</span>
+    <span class="n">textAlign</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span> <span class="c1">// L'ancora del text serà el cetnre mateix.</span>
 <span class="p">}</span>
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="n">clear</span><span class="p">();</span>  <span class="c1">// Cada vegada que s&#39;executa el draw (29 fps) s&#39;esborra la pantalla.</span>
+    <span class="n">clear</span><span class="p">();</span>  <span class="c1">// Cada vegada que s'executa el draw (29 fps) s'esborra la pantalla.</span>
     <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span> <span class="c1">// Pinta el fons de blanc</span>
     <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// per tal que el text siga negre</span>
     <span class="c1">// Afig el codi ací</span>
@@ -1641,36 +1430,36 @@ Les sentències que executa el nostre programa d'exmemple són les següents:
     <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// Retràs per tal que done temps a llegir el que escriu.</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><img alt="Activitat 15" src="../assets/Tema3/Activitat15.png" /></p>
+<p><img alt="Activitat 15" src="../assets/Tema3/Activitat15.png"/></p>
 <p>Com a apartat d'ampliació, podries fer que el tamany de la font fos un poc més gran.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 15. Divisió per zero</p>
 <p>Si s'ha dona el cas, hauràs pogut comprovar que si el divisor és 0 el programa dona error.
 Millora el programa anterior controlant el que passa quan es vol dividir per zero, mostrant un missatge en el cas que el número pel qual s'intenta dividir siga zero.</p>
-<p><img alt="Activitat 16" src="../assets/Tema3/Activitat16.png" /></p>
+<p><img alt="Activitat 16" src="../assets/Tema3/Activitat16.png"/></p>
 </div>
-<details class="done"><summary>Solució</summary><p><img alt="Activitat 16b" src="../assets/Tema3/Activitat16b.png" /></p>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 16b" src="../assets/Tema3/Activitat16b.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activitat 17. Major, menor o igual</p>
 <p>Ecriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.</p>
-<p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png" /></p>
+<p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 18. Diferència d'anys</p>
 <p>Escriu un programa en Processing que donat l'any actual i un any qualsevol que es genere de forma aleatòria amb la funció random i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any.</p>
-<p><img alt="Activitat 18" src="../assets/Tema3/Activitat18.png" /></p>
+<p><img alt="Activitat 18" src="../assets/Tema3/Activitat18.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 19. Millora</p>
 <p>Millora el programa anterior fent que quan la diferència siga exactament un any, mostre una frase concreta: "Només queda un any"</p>
-<p><img alt="Activitat 19" src="../assets/Tema3/Activitat19.png" /></p>
+<p><img alt="Activitat 19" src="../assets/Tema3/Activitat19.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 20. Múltiples</p>
 <p>Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. </p>
-<p><img alt="Activitat 20" src="../assets/Tema3/Activitat20.png" /></p>
+<p><img alt="Activitat 20" src="../assets/Tema3/Activitat20.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 21. Millor múltiples</p>
@@ -1679,18 +1468,18 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <div class="admonition question">
 <p class="admonition-title">Activitat 22. Comparador</p>
 <p>Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual.</p>
-<p><img alt="Activitat 22" src="../assets/Tema3/Activitat22.png" /></p>
+<p><img alt="Activitat 22" src="../assets/Tema3/Activitat22.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 23. Any bixest</p>
 <p>Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
-<p><img alt="Codi Example" src="../assets/Tema3/anoBisiestoPseint.jpg" /> </p>
-<p><img alt="Activitat 23" src="../assets/Tema3/Activitat23.png" /></p>
+<p><img alt="Codi Example" src="../assets/Tema3/anoBisiestoPseint.jpg"/> </p>
+<p><img alt="Activitat 23" src="../assets/Tema3/Activitat23.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 24. Càlcul d'arees</p>
 <p>Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.</p>
-<p><img alt="Activitat 24" src="../assets/Tema3/Activitat24.png" /></p>
+<p><img alt="Activitat 24" src="../assets/Tema3/Activitat24.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 25. Canvi d'unitats</p>
@@ -1770,34 +1559,34 @@ Un altre exemple més clar</p>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span><span class="p">;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
         <span class="kt">int</span> <span class="n">mes</span><span class="p">;</span>
         <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introdueix el numero del mes: &quot;</span><span class="p">);</span>                                                        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introdueix el numero del mes: "</span><span class="p">);</span>                                                        
         <span class="n">mes</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
         <span class="k">switch</span> <span class="p">(</span><span class="n">mes</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//inicio del switch</span>
-                <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GENER&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"GENER"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;FEBRER&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"FEBRER"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;MARÇ&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"MARÇ"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">4</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ABRIL&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">4</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ABRIL"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">5</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;MAIG&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">5</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"MAIG"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">6</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;JUNY&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">6</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"JUNY"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">7</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;JULIOL&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">7</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"JULIOL"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">8</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;AGOST&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">8</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"AGOST"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">9</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;SETEMBRE&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">9</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"SETEMBRE"</span><span class="p">);</span>
                          <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">10</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;OCTUBRE&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">10</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"OCTUBRE"</span><span class="p">);</span>
                          <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">11</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;NOVEMBRE&quot;</span><span class="p">);</span>                                                         
+                <span class="k">case</span> <span class="mi">11</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"NOVEMBRE"</span><span class="p">);</span>                                                         
                          <span class="k">break</span><span class="p">;</span>
-                <span class="k">case</span> <span class="mi">12</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;DESEEMBRE&quot;</span><span class="p">);</span>
+                <span class="k">case</span> <span class="mi">12</span><span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"DESEEMBRE"</span><span class="p">);</span>
                          <span class="k">break</span><span class="p">;</span>
-                <span class="k">default</span> <span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No vàlid&quot;</span><span class="p">);</span>                        
+                <span class="k">default</span> <span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No vàlid"</span><span class="p">);</span>                        
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1806,13 +1595,13 @@ Un altre exemple més clar</p>
 <div class="admonition question">
 <p class="admonition-title">Activitat 26</p>
 <p>Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
-<p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png" /></p>
+<p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png"/></p>
 </div>
 <p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 0 i 15 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
 <div class="admonition question">
 <p class="admonition-title">Activitat 27. Dies de la setmana</p>
 <p>Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
-<p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png" /></p>
+<p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 28. if a switch</p>
@@ -1870,7 +1659,7 @@ Un altre exemple més clar</p>
 <div class="admonition question">
 <p class="admonition-title">Activitat 29. dies del mes</p>
 <p>Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. Si fas el programa amb Processing recorda que el número del més l'hauràs de generar de forma aleatòria.</p>
-<p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png" /></p>
+<p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png"/></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Activitat 30. Figures geomètriques</p>
@@ -1901,28 +1690,28 @@ Un altre exemple més clar</p>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="o">[]</span> <span class="n">arrayNumeros</span><span class="p">;</span>               <span class="c1">// Declarem un array d&#39;enters</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="o">[]</span> <span class="n">arrayNumeros</span><span class="p">;</span>               <span class="c1">// Declarem un array d'enters</span>
 <span class="n">arrayNumeros</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span>      <span class="c1">// Reservem espai en memòria per 100 elements</span>
-<span class="n">inicialitzaNumeros</span><span class="p">(</span><span class="n">arrayNumeros</span><span class="p">);</span>  <span class="c1">// Emplenem de forma aleatòria l&#39;array</span>
+<span class="n">inicialitzaNumeros</span><span class="p">(</span><span class="n">arrayNumeros</span><span class="p">);</span>  <span class="c1">// Emplenem de forma aleatòria l'array</span>
 
 <span class="c1">// Comencem la recerca del número 10 per exemple</span>
 <span class="k">if</span> <span class="p">(</span> <span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 0&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 0"</span><span class="p">);</span>
 
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 1&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 1"</span><span class="p">);</span>
 
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 2&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 2"</span><span class="p">);</span>
 
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 3&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 3"</span><span class="p">);</span>
 
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 4&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 4"</span><span class="p">);</span>
 
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició 5&quot;</span><span class="p">);</span>    
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 5"</span><span class="p">);</span>    
 
 <span class="c1">// I així fins 100 ... </span>
 </code></pre></div>
@@ -1931,7 +1720,7 @@ Un altre exemple més clar</p>
 <p>Les estructures repetitives permetrien recòrrer l'array de principi a final sense necessitat d'escriure tant de codi.</p>
 <p>Veiem els següents exemples.</p>
 <h4 id="while">while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-while.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-while.png"/></p>
 <p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
 <p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
@@ -1949,14 +1738,14 @@ Un altre exemple més clar</p>
 <span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Inicialitzem una variable que ens servirà de contador.</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
     <span class="n">i</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Important incrementar el contador o entraríem en un bucle infinit.</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 </div>
 <h4 id="do-while">do .. while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-do-while.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-do-while.png"/></p>
 <p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
 2. S'executen les instruccions que conté el bloc 
@@ -1974,7 +1763,7 @@ Un altre exemple més clar</p>
 <span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Inicialitzem una variable que ens servirà de contador.</span>
 <span class="k">do</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
     <span class="n">i</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Important incrementar el contador o entraríem en un bucle infinit.</span>
 <span class="p">}</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
@@ -1982,7 +1771,7 @@ Un altre exemple més clar</p>
 </td></tr></table>
 </div>
 <h4 id="bucle-for">bucle for</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-for.png" /></p>
+<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-for.png"/></p>
 <ol>
 <li>Executem instrucció 1 (aliena al bucle for)</li>
 <li>Inicialització</li>
@@ -1997,7 +1786,7 @@ Un altre exemple més clar</p>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span> 
     <span class="k">if</span> <span class="p">(</span><span class="n">arrarNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número trobat a la posició &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -2031,25 +1820,25 @@ Al codi anterior:
 </td></tr></table>
 </div>
 <details class="done"><summary>Solució</summary><p>El resultat d'aquest codi seria:
-<img alt="Activitat 31" src="../assets/Tema3/Activitat31.png" /></p>
+<img alt="Activitat 31" src="../assets/Tema3/Activitat31.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activitat 32. Dibuixa la piramid i la invertida</p>
 <p>Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
 </div>
-<details class="done"><summary>Solució</summary><p><img alt="Activitat 32" src="../assets/Tema3/Activitat32.png" /></p>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 32" src="../assets/Tema3/Activitat32.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activitat 33. Dibuixa la diagonal</p>
 <p>Donada una pantalla de 500 pixels d'ample i 500 d'alt, fes un programa que dibuixe quadrats de 20 per 20 pixels ocupant la diagonal de la pantalla des de la posició (0,0) fins la (500,500).</p>
 </div>
-<details class="done"><summary>Solució</summary><p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png" /></p>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activitat 34. Dibuixa les dues diagonals</p>
 <p>Millora el programa anterior i fes que dibuixe les dues diagonals, des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
 </div>
-<details class="done"><summary>Solució</summary><p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png" /></p>
+<details class="done"><summary>Solució</summary><p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png"/></p>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Activitat 35. Dues diagonals 640x480</p>
@@ -2059,78 +1848,57 @@ Al codi anterior:
 <p class="admonition-title">Activitat 36. whiles i for</p>
 <p>Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p>
 </div>
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        
+</article>
+</div>
+</div>
+</main>
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a class="md-footer__link md-footer__link--prev" href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
                 Previous
               </span>
               2.- Programació Estructurada
             </div>
-          </div>
-        </a>
-      
-      
-        <a href="../Tema%2004.%20Programaci%C3%B3%20Modular/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
+</div>
+</a>
+<a class="md-footer__link md-footer__link--next" href="../Tema%2004.%20Programaci%C3%B3%20Modular/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
                 Next
               </span>
               4.- Programació Modular
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
         
         Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
           Material for MkDocs
         </a>
-        
-      </div>
-      
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
 </html>

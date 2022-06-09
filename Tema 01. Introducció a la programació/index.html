@@ -431,25 +431,25 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <p>Es pretén implementar un algorisme que s'encarregue, de la forma més eficient possible, la creació i impressió de tickets de compra per a tots els clients que entren a la nostra botiga. </p>
 <p>A la imatge següent podem observar un exemple d'algorisme de creació d'un nou ticket (nova compra).</p>
 </div>
-<details class="done" open="open"><summary>Solució</summary><p>Expliquem breument el que fa aquest diagrama: primer crea un nou ticket i afegeix un nou element (fruta o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou ticket, es calcula el preu final i s'imprimeix.</p>
-<p><div class="mermaid">graph LR
+<details class="done"><summary>Solució</summary><p>Expliquem breument el que fa aquest diagrama: primer crea un nou ticket i afegeix un nou element (fruta o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou ticket, es calcula el preu final i s'imprimeix.</p>
+<div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Crear Ticket];
     style Id1 fill:#0F0;
     B--&gt;C[Afegir Item];
-    C--&gt;D{Compra Acabada?};
+    C--&gt;D{Compra<br/>acabada?};
     D--&gt;|NO|C;
     D--&gt;|SI|E[Calcular Preu Final];
     E--&gt;F[Imprimir];
     F--&gt;Id2((Final));
     style Id2 fill:#F00;
 </div>
-<!---<img alt="Diagrama de flux - Fruiteria" src="assets/Tema1/Diagrama1.png" />--></p>
+<!---<img alt="Diagrama de flux - Fruiteria" src="assets/Tema1/Diagrama1.png" />-->
 </details>
 <div class="admonition example">
 <p class="admonition-title">Exemple 2. Trobar les claus de casa</p>
 <p>Imagineu que vull eixir de casa però no recorde on he posat les claus i sense elles no puc anar a cap lloc. Les he de buscar. El següent algorisme representat utilitzant un diagrama de flux, ens podria ajudar a trobar-les.</p>
 </div>
-<details class="done" open="open"><summary>Solució</summary><p>La diferència amb l'anterior és que té text</p>
+<details class="done"><summary>Solució</summary><p>La diferència amb l'anterior és que té text</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Buscar on sempre];
     style Id1 fill:#0F0;
@@ -477,7 +477,7 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <li>Al final del carrer moreral a l'esquerra.</li>
 </ul>
 </div>
-<details class="done" open="open"><summary>Solució</summary><p>Una possible solució a aquest problema podria ser:</p>
+<details class="done"><summary>Solució</summary><p>Una possible solució a aquest problema podria ser:</p>
 <div class="mermaid">graph LR
 
     subgraph 1
@@ -521,7 +521,7 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <li>Si sí que m'agrada, deixe el commandament i em pose comode.</li>
 </ul>
 </div>
-<details class="done" open="open"><summary>Solució</summary><div class="mermaid">graph LR
+<details class="done"><summary>Solució</summary><div class="mermaid">graph LR
     Ini((Inici))--&gt;A[Agafar Commandament TV];
     style Ini fill:#0F0;
     A--&gt;B[Engegar TV];
@@ -539,7 +539,7 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <p class="admonition-title">Exemple 5. Adolescència (Spoiler: no té solució)</p>
 <p>Durant l'adolescència cal marcar bé les prioritats abans de les diversions. Tot adolescent abans de poder eixir amb els amics primer ha de fer els deures i despreś tindre el quarto arreglat. Dissenya un algorisme que solucione aquest problema sense que l'adolescent haja de consultar a sa mare si pot eixir o no.</p>
 </div>
-<details class="done" open="open"><summary>Solució</summary><p><div class="mermaid">graph LR
+<details class="done"><summary>Solució</summary><p><div class="mermaid">graph LR
     Ini((Inici))--&gt;A{Has fet <br/> els deures?};
     style Ini fill:#0F0;
     A--&gt;|NO|B[Fes els deures];
@@ -871,6 +871,8 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
 <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({});</script></body>
+<script src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({
+    theme: "neutral"
+});</script></body>
 </html>

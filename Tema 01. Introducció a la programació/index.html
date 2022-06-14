@@ -258,11 +258,9 @@
 <div style="width:100%;text-align:center;">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Ct-lOOUqmyY" style="marging:0px auto;" title="YouTube video player" width="560"></iframe>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Activitat 101. Interprete i reescriu l'algorisme</p>
-<p>Fixa't en el vídeo anterior i escriu l'algorisme inicial que els xiquets per a que el pare els prepare un sandwich. <br/>
+<details class="question"><summary>Activitat 101. Interprete i reescriu l'algorisme</summary><p>Fixa't en el vídeo anterior i escriu l'algorisme inicial que els xiquets per a que el pare els prepare un sandwich. <br/>
 Observa el resultat de l'algorisme inicial i reescriu-lo per tal que el resultat final siga més adequat.</p>
-</div>
+</details>
 <h3 id="llenguatges-programacio">Llenguatges programació</h3>
 <p>De la mateixa manera que dues persones es comuniquen entre sí utilitzant un llenguatge natural, una persona es comunica amb una màquina utilitzant un llenguatge de programació. Evidentment, un llenguatge de programació ha de ser més simple i gens ambigu al contrari de com passa amb els llenguatges naturals. </p>
 <p>Els llenguatges de programació solen complir les següents característiques:</p>
@@ -328,14 +326,12 @@ Observa el resultat de l'algorisme inicial i reescriu-lo per tal que el resultat
 <p>És el procediment per escriure parts d'un programa mentre està actiu. Programació interactiva. Modificació d'un programa mentre aquest estigui actiu. El terme de programació interactiva no té a veure amb l'estil en què està escrit un programa, sinó amb el procés d'escriptura del codi.</p>
 <h4 id="visuals-o-no">VISUALS O NO</h4>
 <p>Permeten la programació per reutilització de components mitjançant drag and drop en un entorn gràfic o no.</p>
-<div class="admonition question">
-<p class="admonition-title">Activitat 102. Busca i classifica llenguatges de programació</p>
-<p>Busca llenguatges de programació que s'adequen a cadascuna de les categories que s'han descrit a l'apartat anterior. Per exemple:</p>
+<details class="question"><summary>Activitat 102. Busca i classifica llenguatges de programació</summary><p>Busca llenguatges de programació que s'adequen a cadascuna de les categories que s'han descrit a l'apartat anterior. Per exemple:</p>
 <div class="highlight"><pre><span></span><code>1. Llenguatges de baix nivell: Ensamblador.
 2. Llenguatges de nivell mitja: C, Pascal
-3. ....
+3. ....variable)=
 </code></pre></div>
-</div>
+</details>
 <h3 id="paraules-reservades">Paraules reservades</h3>
 <p>Els llenguatges de programació utilitzen una sèrie de paraules o símbols que fan una funció específica dins d’un programa.  A aquest conjunt de signes o combinació d’ells se les anomena paraules reservades.
 Aquestes paraules només poden usar-se en un concepte determinat, mai lliurement per l’usuari.
@@ -387,10 +383,8 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <h3 id="documentacio">Documentació</h3>
 <p>Aquesta és la fase que a cap programador li agrada fer, però en realitat és una fase que no està necessàriament al final del cicle de vida del programa, sino que es fa de forma transversal en totes les etapes del desenvolupament. </p>
 <p>Es considera documentació des dels requeriments inicials al manual d'usuari passant per el pseudocodi, diagrames de classes i ús, i també els comentaris que es posen al codi.</p>
-<div class="admonition question">
-<p class="admonition-title">Activitat 103. Simula les fases de desenvolpament software</p>
-<p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les diverses llistes de compra que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
-</div>
+<details class="question"><summary>Activitat 103. Simula les fases de desenvolpament software</summary><p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les diverses llistes de compra que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
+</details>
 <h2 id="diagrames-de-flux">Diagrames de flux</h2>
 <p>Un diagrama de flux és una <strong>representació gràfica</strong> d'un algorisme. S'utilitza en disciplines com la programació informàtica, l'economia, els processos industrials o la psicologia cognitiva. Aquests diagrames utilitzen símbols amb significats ben definits que representen els passos de l'algorisme, i representen el <strong>flux d'execució</strong> mitjançant fletxes que connecten els punts d'inici i de finalització. Un diagrama de flux sempre té un únic punt d'inici i un únic punt de finalització. A més, tot camí d'execució ha de permetre arribar des de l'inici fins al final.</p>
 <p>Les següents són <strong>accions prèvies</strong> a la realització del diagrama de flux:</p>
@@ -828,11 +822,107 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <p>Cada esquema de Processing és en realitat una subclasse de PApplet, un tipus Java que posa en funcionament la majoria de les característiques del llenguatge del Processing.</p>
 <p>En programar a Processing, totes les classes addicionals definides seran tractades com a classes internes quan el codi es tradueix en pur Java abans de compilar. Això vol dir que l'ús de variables estàtiques i mètodes de les classes està prohibit llevat que s'indiqui específicament a Processing què vol el codi en mode pur Java.</p>
 <p>Processing també permet als usuaris crear les seves pròpies classes de PApplet a la finestra. Això permet que els tipus de dades complexes puguin incloure qualsevol nombre d'arguments i evita les limitacions a l'ús de tipus de dades estàndard com int (sencer), char (caràcters), float (nombre real) o color (RGB, hexadecimal ARGB).</p>
+<h4 id="estructura-dun-programa-en-java">Estructura d'un programa en Java</h4>
+<p>El primer que s'ha de tenir en compte és que tot programa escrit en Java ha de tindre almenys un main() a la classe principal per tal que s'execute. En resum, un programa escrit en Java ha de tindre:</p>
+<ul>
+<li>Declaracions d'importació de paquets o inclusió d'altres llibreries.</li>
+<li>Declaracions de les classes que el formen.</li>
+<li>El mètode main</li>
+<li>Mètodes definits pels usuaris dins de les classes.</li>
+<li>Comentaris.</li>
+</ul>
+<div class="admonition code">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Programa principal</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>             <span class="c1">// Llibreries amb funcions d'entrada i eixida.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">nomPrograma</span> <span class="p">{</span>    <span class="c1">// Nom de la classe principal</span>
+
+    <span class="n">Calculadora</span> <span class="n">calc</span><span class="p">;</span>         <span class="c1">// Membres de la classe (una calculadora)</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Mètode </span>
+    <span class="n">principal</span> <span class="n">main</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculadora</span><span class="p">();</span>              <span class="c1">// Instruccions del mètode principal.</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resultat: "</span> <span class="o">+</span> <span class="n">result</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Una altra classe</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculadora</span> <span class="p">{</span>            <span class="c1">// Nom de la classe </span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">suma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Mètode de la classe</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Al programa anterior podem trobar una classe 'nomPrograma' que conté el mètode principal main i que al mateix temps conté el conjunt d'instruccions que es van a executar seqüencialment al nostre programa. Aquesta classe <strong>nomPrograma</strong> té un memebre calc que és un objecte (ja veurem classes i objectes més endavant) de tipus calculadora i que està definit més endavant amb la classe pública calculadora.
+Les sentències que executa el nostre programa d'exmemple són les següents:</p>
+<ul>
+<li>Instancia l'objecte calc (calc = new Calculadora()).</li>
+<li>Declara una variable de tipus enter <strong>result</strong></li>
+<li>Crida al mètode <strong>suma</strong> de l'objecte calc passant-li els paràmetres 10 i 20</li>
+<li>Deposita el resultat que retorna el mètode suma de la classe calc a la variable <strong>result</strong></li>
+<li>Mostra per pantalla el resultat de la suma.</li>
+</ul>
 <h3 id="eclipse-ide">Eclipse IDE</h3>
 <p>Eclipse és una plataforma de programari compost per un conjunt d'eines de programació de codi obert multiplataforma per desenvolupar el que el projecte anomena "Aplicacions de Client Enriquit", oposat a les aplicacions "Client-lleuià" basades en navegadors. Aquesta plataforma, típicament ha estat usada per desenvolupar entorns de desenvolupament integrats (de l'anglès IDE), com l'IDE de Java anomenat Java Development Toolkit (JDT) i el compilador (ECJ) que es lliura com a part d'Eclipse (i que són usats també per desenvolupar el mateix Eclipse).</p>
 <p>Eclipse també és una comunitat d'usuaris, estenent constantment les àrees d'aplicació cobertes. Un exemple és el recentment creat Eclipse Modeling Project, cobrint gairebé totes les àrees de Model Driven Engineering.</p>
 <p>Eclipse va ser desenvolupat originalment per IBM com el successor de la seva família d'eines per a VisualAge. Eclipse és ara desenvolupat per la Fundació Eclipse, una organització independent sense ànim de lucre que fomenta una comunitat de codi obert i un conjunt de productes complementaris, capacitats i serveis.</p>
 <p>Eclipse va ser alliberat originalment sota la Common Public License, però després va ser re-licenciado sota l'Eclipse Public License. La Free Software Foundation ha dit que ambdues llicències són llicències de programari lliure, però són incompatibles amb Llicència pública general de GNU (GNU GPL).</p>
+<h4 id="estructura-en-processing-ide">Estructura en Processing IDE</h4>
+<p>Per tal de treballar amb les estructures bàsiques del paradigma de programació estructurada, utilitzarem <strong>Processing IDE</strong> que és un IDE lleuger que ens permet programar en Java sense necessitat de fer estructures de classes molt complexes.</p>
+<p>Concretament <strong>Processing IDE</strong> és un entorn integrat de desenvolupament juntament amb una llibreria gràfica que inicialment es va construir per a arts electròniques i disseny visual per tal de poder ensenyar els fonaments de la programació a <strong>no-programadors</strong> en un context visual. És per això que aquesta eina ens resultarà molt útil per tal d'aprendre els conceptes bàsics de la programació estructurada.</p>
+<p>A continuació vos mostrem un exemple d'estructura de programa en <strong>Processing IDE</strong></p>
+<div class="admonition code">
+<p class="admonition-title">Codi</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
+<span class="c1">// Variables globals a l'aplicació.</span>
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s'executa una vegada a l'inici de l'execució.</span>
+    <span class="c1">// Sentències d'inicialització de la nostra aplicació.</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S'executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
+    <span class="c1">// Codi principal del programa.</span>
+<span class="p">}</span>
+
+<span class="c1">// Declaració d'altres funcions</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 </article>
 </div>
 </div>

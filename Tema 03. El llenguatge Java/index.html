@@ -1711,7 +1711,7 @@ font d'errors.</p>
 </code></pre></div>
 </td></tr></table>
 </div>
-<details class="question"><summary>Activitat 316. Operadors Processing</summary><p>Copia i executa aquest codi tant en Eclipse com en Processing IDE i observa el que passa.</p>
+<details class="question"><summary>Activitat 316. Operadors Processing i Eclipse IDE</summary><p>Copia i executa aquest codi tant en Eclipse com en Processing IDE i observa el que passa.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Programa Java per il·lustrar el màxim de tres nombres usant operador ternari.</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">operators</span> 
@@ -1731,7 +1731,18 @@ font d'errors.</p>
 <p>Com hem vist al tema 2, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estrucutures bàsiques amb les quals es podríen codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.</p>
 <p>En els pròxims punts veurem com es codifiquen totes aquestes estructures en llenguatge Java.</p>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
-<p>L'estructura seqüencial en Java es codifica de la següent manera:</p>
+<p>Les ordres d'un programa s'executen per defecte en ordre seqüencial. El que significa que les instruccions s'executen, com hem comentat abans, una darrere de l'altra en el mateix ordre que apareixen escrites al programa.</p>
+<div class="mermaid">
+graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0
+    Instrucció1--&gt;Instrucció2;
+    Instrucció2--&gt;Instrucció3;
+    Instrucció3--&gt;id2([Fi]);
+    style id2 fill:#F00 
+</div>
+<p>L'estructura seqüencial és l'ordre natura d'execució. Les instruccions que formen part d'aquesta estructura s'executen en ordre una a continuació de l'altra. Al final de cada instrucció hi ha un punt i coma per indicar-li al compilador el final de la sentència individual.
+Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs ( {...} ) i es codifica de la següent manera:</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1779,6 +1790,7 @@ font d'errors.</p>
 </td></tr></table>
 </details>
 <h3 id="estructures-de-seleccio">Estructures de selecció</h3>
+<p>És una de les estructures que permeten modificar l'ordre d'execució de les instruccions del programa. Una estructura condicional determina si s'executen unes accions o altres segons es compleixca o no una determinada condició. La condició que es comprova per decidir si unes instruccions s'executen o no deu ser una expressió booleana, és a dir, ha de donar com a resultat un valor booleà true o false. </p>
 <p>Com varem explicar al tema anterior, ens podem trobar les següents variants d'estructura de selecció:</p>
 <ul>
 <li>Selecció simple</li>
@@ -1787,7 +1799,20 @@ font d'errors.</p>
 <li>Operador condicional ?</li>
 </ul>
 <h4 id="seleccio-simple">Selecció Simple</h4>
-<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-simple-java.png"/></p>
+<p>És l'estructura condicional més simple en programació estructurada. S'utilitza per determinar si una instrucció o bloc d'instruccions s'executa basat en una condició. S'avalua la condició i si es true, s'executa la instrucció o bloc d'instruccions associat a la condició.</p>
+<div class="mermaid">    graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0
+    Instrucció1--&gt;Instrucció2;
+    Instrucció2--&gt;Cond1{Condició};
+    Cond1--&gt;|SI|Instrucció3;
+    Instrucció3--&gt;Instrucció4;
+    Instrucció4--&gt;Instrucció5;
+    Cond1--&gt;|NO|Instrucció5;
+    Instrucció5--&gt;id2([Fi]);
+    style id2 fill:#F00
+</div>
+<!---![Selecció simple](assets/Tema3/Estructura-condicional-simple-java.png)-->
 <p>El seu codi en Java seria:</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -1861,7 +1886,23 @@ font d'errors.</p>
 <p>A l'activitat anterior he generat 5 vegades un número aleatori i he comprovat si era parell o senar mostrant la informació pel terminal (ha d'estar tot el codi a la funció <strong>setup()</strong>). També podríem fer que ho mostrara a la funció draw a la pantalla principal de l'aplicació utilitzant la funció <strong>text()</strong> de l'IDE de Processing. El resultat podria ser el següent:</p>
 <p><img alt="Activitat 12b" src="../assets/Tema3/Activitat12b.png"/></p>
 <h4 id="if-else">if .. else</h4>
-<p><img alt="Selecció simple" src="../assets/Tema3/Estructura-condicional-doble-java.png"/></p>
+<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir camins distints depenent de si l'avaluació de la condició és true o false. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0;
+    Instrucció1--&gt;Instrucció2
+    Instrucció2--&gt;C1{Condició}
+    C1--&gt;|SI|Instrucció3;
+    Instrucció3--&gt;Instrucció4;
+    C1--&gt;|NO|Instrucció5;
+    Instrucció5--&gt;Instrucció6;
+    Instrucció4--&gt;Instrucció7;
+    Instrucció6--&gt;Instrucció7;
+    Instrucció7--&gt;Instrucció8;
+    Instrucció8--&gt;id2((FI));
+    style id2 fill:#F00
+</div>
+<!---![Selecció simple](assets/Tema3/Estructura-condicional-doble-java.png)--->
 <p>El codi en Java seria</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -1923,7 +1964,26 @@ font d'errors.</p>
 <details class="question"><summary>Activitat 320. Ampliació anterior</summary><p>Amplia l'exemple anterior per tal que ens indique, en cas de no ser parell, que és senar. Com que s'ha de llegir per consola, és millor que ho fages amb Eclipse.</p>
 </details>
 <h4 id="if-else-if-else">if else if else</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/Estructura-condicional-multiple-java.png"/></p>
+<p>Si volem avaluar més d'una condició al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0;
+    Instrucció1--&gt;|NO|C1{Condició 1};
+    C1--&gt;|NO|C2{Condició 2};
+    C2--&gt;|NO|C3{Condició 3};
+    C1--&gt;|SI|Instrucció2;
+    Instrucció2--&gt;Instrucció3;
+    C2--&gt;|SI|Instrucció4;
+    C3--&gt;|SI|Instrucció5;
+    Instrucció5--&gt;Instrucció6;
+    Instrucció6--&gt;Instrucció7;
+    Instrucció3--&gt;Instrucció10;
+    Instrucció4--&gt;Instrucció10;
+    Instrucció7--&gt;Instrucció10;
+    Instrucció10--&gt;Id2((FI));
+    style Id2 fill:#F00;
+</div>
+<!--![Selecció múltiple amb if](assets/Tema3/Estructura-condicional-multiple-java.png)-->
 <p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
 <div class="admonition code">
 <p class="admonition-title">Codi</p>
@@ -2064,7 +2124,23 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <details class="question"><summary>Activitat 332. Canvi d'unitats</summary><p>Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.</p>
 </details>
 <h4 id="switch-case">switch case</h4>
-<p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull</p>
+<p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull. Fixa't en la imatge següent:</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#F00;
+    Instrucció1--&gt;C1{Condició 1};
+    C1--&gt;|A|Instrucció2;
+    C1--&gt;|B|Instrucció3;
+    C1--&gt;|C|Instrucció4;
+    Instrucció2--&gt;D(fa:fa-spinner);
+    Instrucció3--&gt;D;
+    Instrucció4--&gt;D;
+    D--&gt;Instrucció5;
+    Instrucció5--&gt;id3((FI)); 
+    style id3 fill:#0F0;
+
+</div>
+<p>I el codi en Java seria:</p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2288,7 +2364,18 @@ Un altre exemple més clar</p>
 <p>Les estructures repetitives permetrien recòrrer l'array de principi a final sense necessitat d'escriure tant de codi.</p>
 <p>Veiem els següents exemples.</p>
 <h4 id="while">while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-while.png"/></p>
+<p>Mentre la <strong>condició</strong> (també anomenada condició d'eixida) siga avaluada com a true, s'executaríen les instruccions que hi ha dins del bucle while. </p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#0F0;
+    Instrucció1--&gt;D(fa:fa-spinner); 
+    D--&gt;C1{Condició};
+    C1--&gt;|V|Instrucció2;
+    Instrucció2--&gt;P2((Fi));
+    style P2 fill:#F00;
+    C1--&gt;|F|D;
+</div>
+<!---![Selecció múltiple amb if](assets/Tema3/diagrama-flujo-bucle-while.png)-->
 <p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
 <p>Els passos que representen el diagrama anterior són:
 1. S'executa la instrucció 1
@@ -2313,13 +2400,28 @@ Un altre exemple més clar</p>
 </td></tr></table>
 </div>
 <h4 id="do-while">do .. while</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-do-while.png"/></p>
-<p>Els passos que representen el diagrama anterior són:
-1. S'executa la instrucció 1
-2. S'executen les instruccions que conté el bloc 
-3. S'avalua la condició 
-4. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
-5. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<p>Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.</p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#F00;
+    Instrucció1--&gt;P1(fa:fa-spinner);
+    P1--&gt;Instrucció2;
+    Instrucció2--&gt;C1{Condició};
+    C1--&gt;|V|Instrucció3;
+    C1--&gt;|F|P1;
+    Instrucció3--&gt;Id2((Fi));
+    style Id2 fill:#0F0;
+
+</div>
+<!---![Selecció múltiple amb if](assets/Tema3/diagrama-flujo-bucle-do-while.png)-->
+<p>Els passos que representen el diagrama anterior són:</p>
+<ol>
+<li>S'executa la instrucció 1</li>
+<li>S'executen les instruccions que conté el bloc </li>
+<li>S'avalua la condició </li>
+<li>Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.</li>
+<li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
+</ol>
 <div class="admonition exemple">
 <p class="admonition-title">Recorrer i buscar un número</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2339,7 +2441,22 @@ Un altre exemple més clar</p>
 </td></tr></table>
 </div>
 <h4 id="bucle-for">bucle for</h4>
-<p><img alt="Selecció múltiple amb if" src="../assets/Tema3/diagrama-flujo-bucle-for.png"/></p>
+<p>La més complicada de comprendre però també possiblement la més utilitzada. Mirem un exemple.</p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#0F0;
+    Instrucció1--&gt;Inicialització;
+    Inicialització--&gt;D(fa:fa-spinner); 
+    D--&gt;C1{Condició}
+    C1--&gt;|NO|Instrucció2;
+    C1--&gt;|SI|Instruccions;
+    Instruccions--&gt;Actualització;
+    Actualització--&gt;D;
+    Instrucció2--&gt;Id3([Fi])
+    style Id3 fill:#F00;
+</div>
+<!---![Selecció múltiple amb if](assets/Tema3/diagrama-flujo-bucle-for.png)-->
+<p>I els passos serien:</p>
 <ol>
 <li>Executem instrucció 1 (aliena al bucle for)</li>
 <li>Inicialització</li>
@@ -2453,5 +2570,7 @@ Al codi anterior:
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
 <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
 <script src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js"></script>
-</body>
+<script>mermaid.initialize({
+    theme: "neutral"
+});</script></body>
 </html>

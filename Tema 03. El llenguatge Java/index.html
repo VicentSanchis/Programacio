@@ -244,7 +244,7 @@
 <p>Vejam a continuació alguns exemples d'identificadors inventats per un programador qualsevol:</p>
 <h3 id="exemples-didentificadors">Exemples d'identificadors</h3>
 <p>Observa la llista d'identificadors següents:</p>
-<p><strong> Identificadors correctes</strong></p>
+<h4 id="identificadors-correctes">Identificadors Correctes</h4>
 <ul>
 <li><strong>H0la:</strong> malgrat tindre un número comença per un caracter alfanumèric.</li>
 <li><strong>$vicent:</strong> vàlid ja que el símbol de dollar és un caracter alfanumèric vàlid per inicia un identificador.</li>
@@ -255,7 +255,7 @@
 <li><strong>aci_tens_una_variable_valida_que_representa_un_enter:</strong> identificador totalment vàlid, altra cosa és que els noms tan llargs siguen útils.</li>
 <li><strong>valor_max:</strong> el subratllat també sol ser una tècnica que s'utilitza per a serparar dues paraules que formen un identificador.</li>
 </ul>
-<p><strong>Identificadors Incorrectes</strong></p>
+<h4 id="identificadors-incorrectes">Identificadors Incorrectes</h4>
 <ul>
 <li><strong>8exemple:</strong> comença per número</li>
 <li><strong>exa+mple:</strong> el signe + no està permès</li>
@@ -350,7 +350,7 @@
 </tr>
 <tr>
 <td align="center">while</td>
-<td align="center"></td>
+<td align="center">class</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -477,10 +477,11 @@
 <h3 id="variables">Variables</h3>
 <p>Al final tot programa s'encarrega de processar <strong>informació</strong> i aquesta informació ha d'estar disponible en algun lloc del nostre codi. Per exemple si volem fer un programa que sume dos números enters, haurem de tindre la informació o el valor d'aquestos dos números en algun lloc. </p>
 <p>Una <strong>variable</strong> és com un contenidor (<em>una caixeta</em>) que té associat un <strong>tipus de dades</strong> (int, float, double, char) i conté un <strong>valor</strong>, si es tracta d'una variable de tipus enter contindrà un valor enter, si per contra es tracta d'una variable de tipus caracter contindrà una lletra o símbol alfanumèric.</p>
-<p><img alt="Variables" src="../assets/Tema3/variables-en-programacion.png"/></p>
+<p><center>
+<img alt="Variables" src="../assets/Tema3/variables-en-programacion.png"/>
+</center></p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong>. Mira els exemples a continuació:</p>
-<div class="admonition code">
-<p class="admonition-title">Declaracions de variables</p>
+<!---!!! code "Declaracions de variables"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -502,18 +503,17 @@
 <span class="kt">long</span> <span class="n">j</span><span class="p">;</span> 
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Les variables com a contenidors d'informació, <strong>poden variar</strong> (d'ahi el nom de variable) el seu <strong>valor</strong> durant l'execució del programa.</p>
-<p><img alt="Variables" src="../assets/Tema3/que_es_una_variable.png"/></p>
+<p><center>
+<img alt="Variables" src="../assets/Tema3/que_es_una_variable.png"/>
+</center></p>
 <p>Però millor vegem un exemple, imaginem una aplicació en la que volem controlar la <strong>posició</strong> d'un element qualsevol, per exemple un cercle a una pantalla 2D. Per determinar la poisció de qualsevol element en un escenari <strong>2D</strong> necessitem dues coordenades: <strong>x i y</strong>. Les <strong>variables</strong> que podriem utiltizar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple de dues variables</p>
+<!---!!! code "Exemple de dues variables"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">posX</span><span class="p">;</span> <span class="c1">// Variables que representa la posició X de l'element.</span>
 <span class="kt">int</span> <span class="n">posY</span><span class="p">;</span> <span class="c1">// Variable que representa la posició Y de l'element.</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Observa el codi anterior i basant-se en la norma de creació de variables <strong>type identifier;</strong> que hem vist abans, quins són els tipus de dades de les variables i quins els seus identificadors?</p>
 <p>Però en programació no només es pot tractar la informació mitjançant l'ús de <strong>variables</strong>, també es poden emmagatzemar dades fent ús dels <strong>literals</strong>. I què són els literals?</p>
 <h3 id="literals">Literals</h3>
@@ -997,29 +997,27 @@
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</details>
 <p>Codi mostrat a l'executar-se el programa en Eclipse IDE.</p>
 <p><img alt="Activitat 1" src="../assets/Tema3/Activitat1.png"/></p>
+</details>
 <details class="question"><summary>Activitat 307. Declaració de variables II</summary><p>Declara variables de tots els tipus disponibles en Java i digues-me quins són els valors que s'assignen per defecte a cadascuna d'elles. És tan simple com declarar variables de tots els tipus buides (sense inicialitzar) i després mostrar-les per pantalla. Aquesta activitat la pots fer tant en Eclipse com en Processing IDE.<br/>
 Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processing IDE?</p>
 </details>
 <h3 id="constants">Constants</h3>
 <p>Les <strong>constants en Java</strong> (les no literals) són semblants a les variables, és a dir, són contenidors d'informació, tenen un identificador i un tipus bàsic associat però el seu valor no canvia durant l'execució del programa. L'ús de les constants sol ser per a definir valors immutables dins d'un programa com per exemple en un tauler d'escacs el número de files i columnes és 8 sempre.</p>
 <p>Les <strong>constants</strong> en java es defineixen de la següent forma:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Constant en java</span>
 <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">totalFiles</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// totalFiles valdrà 8 durant tot el programa. </span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 308. Prova el codi</summary><p>Declara una constant de tipus enter amb valor 10 i línies després intenta canviar el valor i compila a veure que passa.</p>
 </details>
 <!---![Activitat 2](assets/Tema3/Activitat2.png)--->
 <h3 id="comentaris">Comentaris</h3>
 <p>Els <strong>comentaris</strong> a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga <strong>més fàcil de llegir</strong> millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. D'altre banda, els comentaris són part de la <strong>documentació</strong> de tot programa. És molt important escriure comentaris breus però significatius. Massa text als comentaris produirà l'efecte contrari i deixarà encara més il·legible el codi.</p>
-<div class="admonition quote">
+<div class="admonition tip">
 <p class="admonition-title">Principi en programació</p>
 <p>"Un programa s'escriu una vegada però es llig moltes vegades"</p>
 </div>
@@ -1029,8 +1027,7 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
 <li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
 </ul>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1068,7 +1065,6 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <span class="cm">*/</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 309. Comentaris al codi</summary><p>Llig el codi següent i escriu-li un comentari de documentació, almenys també un comentari de vàries línies i tants comentaris de línia com consideres necessari. Recorda que els comentaris s'han d'usar, per una banda, per a documentar el codi i per l'altra facilitar la seua lectura.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1099,17 +1095,19 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <h3 id="expressions">Expressions</h3>
 <p>Una <strong>expressió</strong> és una equació matemàtica que representa un càlcul, per exemple:</p>
 <div class="admonition info">
-<p class="admonition-title">Exemple</p>
-<p>3<em>x + 7</em>z. </p>
+<p class="admonition-title">Exemple d'expressions</p>
+<ul>
+<li>3<em>x + 7</em>z. </li>
+<li>2<em>a</em>b + a*a + 7</li>
+</ul>
 </div>
 <p><strong>L'expressió</strong> anterior la formen els següents elements: dos <strong>literals</strong> enters: 3 i 7; dos <strong>identificadors</strong> de variables (no sabem el tipus) x i z; i els <strong>simbols</strong> * i +.</p>
 <p>Al final tota operació té un <strong>valor</strong>, per exemple, si x val 3 i z val 2, el resultat (valor) de l'expressió seria 23. Que consistiria en multiplicar (*) el literal '3' per el contingut de la variable amb identificador <strong>x</strong> i després sumar-li (+) el resultat de la multiplicació del literal 7 per el contingut de la variable z.</p>
 <p>Els <strong>simbols</strong> + i * que hem vist a l'expressió anterior, són els operadors, concretament * és l'operador aritmètic de multiplicació i el símbol + representa l'operador de suma. Però abans de passar als operadors aritmètics, vejam abans l'operador assignació.</p>
 <h3 id="operador-assignacio">Operador assignació</h3>
-<p>L'operador assignació (=), com el seu nom indica, s'encarrega d'assignar-li a una variable el resultat d'una expressió matemàtica o el valor de una altra variable o un literal. S'ha de tenir en compte que el tipus de dades que representa bé l'expressió matemàtica, el literal o l'altra variable han de coincidir als dos costats de l'operació d'assignació.</p>
+<p>L'operador assignació <strong>(=)</strong>, com el seu nom indica, s'encarrega d'assignar-li a una variable el resultat d'una expressió matemàtica o el valor de una altra variable o un literal. S'ha de tenir en compte que el tipus de dades que representa bé l'expressió matemàtica, el literal o l'altra variable han de coincidir als dos costats de l'operació d'assignació.</p>
 <p>Com ja hem dit abans, l'operador assignació en Java és el símbol '=' i s'utilitza de la següent forma:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1119,11 +1117,9 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">z</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>On l'operador '=' assignaria el valor de l'expressió '3x+2z' a la variable y, és a dir, executada aquesta acció dins de la variable y hauríem depositat el valor 23.</p>
 <p>Observa el codi escrit a continuació on podràs veure altres exemples d'ús de l'operador assignació:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1145,7 +1141,6 @@ Quina diferència hi ha entre el que passa en Eclipse i el que passa en Processi
 <span class="n">j</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>    <span class="c1">// Aquesta manera peculiar d'usar l'operador assignació és el mateix que j = j * 2;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <ul>
 <li>A la línia 2 s'està assignant simultàniament el valor enter del literal 10 a les variables a, b i c.</li>
 <li>A la línia 5 assignem el valor enter 3 a la variable amb identificador 'i' acabada de crear.</li>
@@ -1269,22 +1264,22 @@ font d'errors.</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Test</span>
-<span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span>
     <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> 
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> 
 
-        <span class="c1">// Conversió automàtica de tipus</span>
-        <span class="kt">long</span> <span class="n">l</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> 
+            <span class="c1">// Conversió automàtica de tipus</span>
+            <span class="kt">long</span> <span class="n">l</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> 
 
-        <span class="c1">// Conversió automàtica de tipus</span>
-        <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Int "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Long "</span> <span class="o">+</span> <span class="n">l</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Float "</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+            <span class="c1">// Conversió automàtica de tipus</span>
+            <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span> 
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Int "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Long "</span> <span class="o">+</span> <span class="n">l</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor Float "</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1362,10 +1357,12 @@ font d'errors.</p>
 </code></pre></div>
 </td></tr></table>
 </div>
-<p>La eixida de l'execució d'aquest codi seria: 
-- Valor Double 100.04
-- Valor Long 100
-- Valor Int 100</p>
+<p>La eixida de l'execució d'aquest codi seria: </p>
+<ul>
+<li>Valor Double 100.04</li>
+<li>Valor Long 100</li>
+<li>Valor Int 100</li>
+</ul>
 <details class="question"><summary>Activitat 311. Modifica el codi</summary><p>El següent codi donarà errors de compilació per conversions de tipus no permeses. Localitza-les i modifica el codi per tal que compile i s'execute correctament.</p>
 <p>```java linenum="1"</p>
 <div class="highlight"><pre><span></span><code>class Test
@@ -1436,8 +1433,7 @@ font d'errors.</p>
 </details>
 <h3 id="operadors-increment-i-decrement-unaris">Operadors increment i decrement (unaris)</h3>
 <p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variable a la qual s'apliquen. Aquestos operadors es diuen <strong>unaris</strong> perquè només treballen sobre un sol operand. Encara que aquest operador s'aplique només sobre un element, també es tractaria d'una expressió aritmètica, per tant, també hauria de retornar un resultat númeric per ser utilitzat com a tal.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1447,10 +1443,8 @@ font d'errors.</p>
     <span class="n">x</span> <span class="o">--</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x -1 ;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Aquestos operadors també es poden posar abans de la variable produint el mateix efecte</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1460,7 +1454,6 @@ font d'errors.</p>
     <span class="o">--</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Aquest codi seria equivalent a x = x -1 ;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>La diferència essencial entre el postincrement i el preincrement és que el contingut de la variable, el que tenim dins la caixeta, s'avalua abans (postincrement) o després (preincrement) de sumar-li un al seu valor.</p>
 <details class="question"><summary>Activitat 313. Operadors</summary><p>Prova el codi anterior i digues-me el que passa.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1690,13 +1683,11 @@ font d'errors.</p>
 </details>
 <h3 id="operador-condicional-o-ternari">Operador condicional o ternari</h3>
 <p>Java inclou un operador especial de tipus ternari que de vegades s'utilitza per substituir algunes estructures if then else. Aquest és l'operador <strong>?</strong> i la seua forma general és:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">expressio1</span> <span class="o">?</span> <span class="n">expressio2</span> <span class="p">:</span> <span class="n">expressio</span> <span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a true, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a false, s'executaria l'expressió 2.</p>
+<p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a <strong>true</strong>, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a <strong>false</strong>, s'executaria l'expressió 2.</p>
 <div class="admonition info">
 <p class="admonition-title">Exemple</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1743,8 +1734,7 @@ graph LR
 </div>
 <p>L'estructura seqüencial és l'ordre natura d'execució. Les instruccions que formen part d'aquesta estructura s'executen en ordre una a continuació de l'altra. Al final de cada instrucció hi ha un punt i coma per indicar-li al compilador el final de la sentència individual.
 Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs ( {...} ) i es codifica de la següent manera:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1760,7 +1750,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing.</p>
 <details class="question"><summary>Activitat 317. Dibuixa amb Processing IDE</summary><p>Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat copiant el codi que pots veure a continuació. Després modifica alguns dels paràmetres de les funcions point, line, ellipse i square i observa el que passa.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1798,7 +1787,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <li>Selecció multiple</li>
 <li>Operador condicional ?</li>
 </ul>
-<h4 id="seleccio-simple">Selecció Simple</h4>
+<h4 id="seleccio-simple-if">Selecció Simple - if</h4>
 <p>És l'estructura condicional més simple en programació estructurada. S'utilitza per determinar si una instrucció o bloc d'instruccions s'executa basat en una condició. S'avalua la condició i si es true, s'executa la instrucció o bloc d'instruccions associat a la condició.</p>
 <div class="mermaid">    graph LR
     id1((Inici))--&gt;Instrucció1;
@@ -1814,32 +1803,26 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 <!---![Selecció simple](assets/Tema3/Estructura-condicional-simple-java.png)-->
 <p>El seu codi en Java seria:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span><span class="p">;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
-    <span class="n">instruccio</span><span class="p">;</span>
+<!---!!! code "Codi"-->
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Instrucció1</span><span class="p">();</span>
+<span class="n">Instrucció2</span><span class="p">();</span>
 
-<span class="c1">// O també</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">instruccio1</span><span class="p">;</span>
-    <span class="n">instruccio2</span><span class="p">;</span>
-    <span class="p">...</span>
-    <span class="n">instruccioN</span><span class="p">;</span>
+    <span class="n">instrucció3</span><span class="p">;</span>
+    <span class="n">Instrucció4</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="n">Instrucció5</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
-<p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
+<p>Al codi anterior s'executarien sempre les instruccions 1 i 2 abans d'avaluar-se la condició, en cas que la condició fora avaluada com a <strong>true</strong>, s'executaria l'estructura seqüencial que conté les instruccions 3 i 4 i finalment s'executaria la instrucció 5 en tot cas. </p>
+<p>Pel contrari si la condició s'avalua a <strong>false</strong> no s'executarien les instruccions que conté, és a dir, 3 i 4 i passaria directament a l'instrucció 5.</p>
 <div class="admonition info">
 <p class="admonition-title">Exemple en Java</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1874,19 +1857,18 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </details>
 <p>Com que en Processing IDE resulta molt complicat el llegir per consola, per la inserció d'informació per part de l'usuari, ho farem de forma aleatòria.</p>
 <p>A l'API de Processing, <a href="https://processing.org/reference/">Processing Reference</a>, entre altres tenim una funció <strong>random(low, high)</strong> que genera nombres aleatoris dintre del rang low-hight que se li passa per paràmetre, és a dir, si volem que aquesta funció ens torne un valor aleatori entre 0 i 100, hauríem de cridar-la de la següent forma:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"--->
 <div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
-</div>
 <details class="question"><summary>Activitat 319. funció random()</summary><p>Utilitzant la funció <strong>random()</strong> vista a l'apartat anterior, escriu un programa en Processing que donat un nombre alelatori ens indique si aquest és parell o senar.</p>
 <p>Un possible resultat seria el següent:</p>
 <p><img alt="Activitat 12" src="../assets/Tema3/Activitat12.png"/></p>
+<p>En aquesta activitat s'han generat 5 números aleatoris i s'ha comprovat si eren parell o senar mostrant la informació pel terminal (ha d'estar tot el codi a la funció <strong>setup()</strong>). També podríem fer que ho mostrara a la funció <strong>draw</strong> a la pantalla principal de l'aplicació utilitzant la funció <strong>text()</strong> de l'IDE de Processing.</p>
 </details>
-<p>A l'activitat anterior he generat 5 vegades un número aleatori i he comprovat si era parell o senar mostrant la informació pel terminal (ha d'estar tot el codi a la funció <strong>setup()</strong>). També podríem fer que ho mostrara a la funció draw a la pantalla principal de l'aplicació utilitzant la funció <strong>text()</strong> de l'IDE de Processing. El resultat podria ser el següent:</p>
-<p><img alt="Activitat 12b" src="../assets/Tema3/Activitat12b.png"/></p>
-<h4 id="if-else">if .. else</h4>
-<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir camins distints depenent de si l'avaluació de la condició és true o false. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
+<!---![Activitat 12b](assets/Tema3/Activitat12b.png)-->
+<h4 id="seleccio-doble-if-else">Selecció doble - if .. else</h4>
+<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir <strong>camins distints</strong> depenent de si l'avaluació de la condició és <strong>true o false</strong>. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
+<p>Observa el diagrama de flux següent:</p>
 <div class="mermaid">graph LR
     id1((Inici))--&gt;Instrucció1;
     style id1 fill:#0F0;
@@ -1903,9 +1885,8 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
     style id2 fill:#F00
 </div>
 <!---![Selecció simple](assets/Tema3/Estructura-condicional-doble-java.png)--->
-<p>El codi en Java seria</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<p>El seu codi en Java seria</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1931,8 +1912,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="n">instruccio8</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'if' s'avalua 'true' o 'false'. En el primer cas, amb la condició a true, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a 'false', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
+<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del <strong>'if'</strong> s'avalua <strong>'true'</strong> o <strong>'false'</strong>. En el primer cas, amb la condició a <strong>'true'</strong>, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a <strong>'false'</strong>, les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
 <div class="admonition info">
 <p class="admonition-title">Exemple en Java</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1963,8 +1943,8 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 <details class="question"><summary>Activitat 320. Ampliació anterior</summary><p>Amplia l'exemple anterior per tal que ens indique, en cas de no ser parell, que és senar. Com que s'ha de llegir per consola, és millor que ho fages amb Eclipse.</p>
 </details>
-<h4 id="if-else-if-else">if else if else</h4>
-<p>Si volem avaluar més d'una condició al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
+<h4 id="seleccio-multiple-if-else-if-else">Selecció múltiple - if else if else</h4>
+<p>Si volem avaluar <strong>més d'una condició</strong> al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
 <div class="mermaid">graph LR
     id1((Inici))--&gt;Instrucció1;
     style id1 fill:#0F0;
@@ -1985,8 +1965,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 <!--![Selecció múltiple amb if](assets/Tema3/Estructura-condicional-multiple-java.png)-->
 <p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2026,7 +2005,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="n">instruccio10</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
 <div class="admonition info">
 <p class="admonition-title">Continuació anterior</p>
@@ -2246,15 +2224,14 @@ Un altre exemple més clar</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<details class="question"><summary>Activitat 333</summary><p>Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
+<details class="question"><summary>Activitat 333. Copia i adapta el codi anterior</summary><p>Escriu el programa anterior per a Processing. Recorda que amb processing l'entrada per consola l'hem de substituir per generació de valors aleatoris amb <strong>random</strong>.</p>
 <p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png"/></p>
-</details>
 <p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 0 i 15 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
+</details>
 <details class="question"><summary>Activitat 334. Dies de la setmana</summary><p>Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
 <p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png"/></p>
 </details>
-<details class="question"><summary>Activitat 335. if a switch</summary><p>Passa les activitats de l'apartat if..else a sentències switch..case</p>
-</details>
+<details class="question"><summary>Activitat 335. if a switch</summary><p>Observa el codi a continuació que explica com es passa de if - else a stich - case i passa les activitats de l'apartat if..else a sentències switch..case</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2304,6 +2281,7 @@ Un altre exemple més clar</p>
     <span class="c1">//Accions default</span>
 </code></pre></div>
 </td></tr></table>
+</details>
 <details class="question"><summary>Activitat 336. dies del mes</summary><p>Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. Si fas el programa amb Processing recorda que el número del més l'hauràs de generar de forma aleatòria.</p>
 <p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png"/></p>
 </details>
@@ -2422,7 +2400,7 @@ Un altre exemple més clar</p>
 <li>Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.</li>
 <li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
 </ol>
-<div class="admonition exemple">
+<div class="admonition example">
 <p class="admonition-title">Recorrer i buscar un número</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>

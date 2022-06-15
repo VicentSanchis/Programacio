@@ -219,7 +219,9 @@ Aquestes estructures són:</p>
 <li><strong><u>Repetitiva:</u></strong> repetició d'un grup d'instruccions que depenen d'una sèrie de condicions.</li>
 </ul>
 <p>Al final tot algorisme escrit en un llenguatge de programació estrucuturada s'executa de forma seqüencial, és a dir, es llig la primera sentència s'executa i desprès passem a la següent fins arribar al fif niatinal. Les estructures condicional i repetitiva es poden interpretar com estructures seqüencials amb algunes particularitats. L'estructura condicional potser s'execute o no i l'estructura repetitiva s'executara un nombre de vegades.</p>
-<p><img alt="Estructures de control" src="../assets/Tema2/estructuras-de-control-java.png"/></p>
+<p><center>
+<img alt="Estructures de control" src="../assets/Tema2/estructuras-de-control-java.png"/>
+</center></p>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
 <p>Les ordres d'un programa s'executen per defecte en ordre seqüencial. El que significa que les instruccions s'executen, com hem comentat abans, una darrere de l'altra en el mateix ordre que apareixen escrites al programa.</p>
 <div class="mermaid">
@@ -228,13 +230,15 @@ graph LR
     style id1 fill:#0F0
     Instrucció1--&gt;Instrucció2;
     Instrucció2--&gt;Instrucció3;
-    Instrucció3--&gt;id2([Fi]);
+    Instrucció3--&gt;Instrucció4;
+    Instrucció4--&gt;Instrucció5;
+    Instrucció5--&gt;Instrucció6;
+    Instrucció6--&gt;id2([Fi]);
     style id2 fill:#F00 
 </div>
 <p>L'estructura seqüencial és l'ordre natura d'execució. Les instruccions que formen part d'aquesta estructura s'executen en ordre una a continuació de l'altra. Al final de cada instrucció hi ha un punt i coma per indicar-li al compilador el final de la sentència individual.
 Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs ( {...} )</p>
-<div class="admonition code">
-<p class="admonition-title">Estructura Seqüencial</p>
+<!---!!! code "Estructura Seqüencial"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -250,11 +254,9 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="exemple-destructura-sequencial">Exemple d'estructura seqüencial</h4>
 <p>Un exemple d'estructura seqüencial al món real seria com li podem donar ordres a algú per tal que puga veure la tele. Seguint el nostre exemple, s'haurien de seguir els següents passos: agafar el commandament a distància, després premer el botó ON/OFF per tal que s'engegue i finalment hauriem de escollir el canal que més ens agrade amb els controls pertinents del commandament a distància.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple</p>
+<!---!!! code "Exemple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -270,7 +272,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>En resum podríem dir que l'estructura seqüencial no és més que un conjunt de sentències o instruccions individuals agrupades.</p>
 <details class="question"><summary>Activitat 201: Millora el codi anterior</summary><p>La seqüencia d'instruccions anterior, és molt simple i segurament no cobriria una solució factible per els diversos escenaris en els que ens podriem trobar.
 Com milloraries el codi anterior per tal de fer-lo més eficient?  Escriu el codi utilitzant només l'estructura seqüencial.</p>
@@ -306,17 +307,18 @@ Com milloraries el codi anterior per tal de fer-lo més eficient?  Escriu el cod
 <li>S'executa la instrucció 1</li>
 <li>S'executa la instrucció 2</li>
 <li>S'avalua a condició</li>
-<li>Si s'acompleix: </li>
+<li>Si s'acompleix: <ol>
 <li>S'executa la instrucció 3</li>
 <li>S'executa la instruccio 4</li>
+</ol>
+</li>
 <li>S'executa la instrucció 5</li>
 <li>S'acaba l'execució de l'algorisme.</li>
 </ol>
 <p>En definitiva, al codi anterior <strong>podríen passar dues coses:</strong> que s'acompleixca la condició <strong>(true)</strong> o que no s'acompleixca <strong>(false).</strong>
 Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instrucció3, Instrucció4, Instrucció5 i Instrucció6. Pel contrari si s'avalua la condició a false, les instruccions a executar serien: Instrucció1, Instrucció2, Instrucció5 i Instrucció6. És a dir, no s'executarien la 3 i la 4.</p>
 <p>El seu codi en pseudocodi seria:</p>
-<div class="admonition code">
-<p class="admonition-title">Selecció Simple</p>
+<!---!!! code "Selecció Simple"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -327,40 +329,41 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="n">instruccio</span>
-<span class="n">fsi</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="n">instruccio</span>
+    <span class="n">fsi</span>
 
-<span class="c1">// O també</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="n">instruccio1</span>
-    <span class="n">instruccio2</span>
-    <span class="p">...</span>
-    <span class="n">instruccioN</span>
-<span class="n">fsi</span>
+    <span class="c1">// O també</span>
+    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="n">instruccio1</span>
+        <span class="n">instruccio2</span>
+        <span class="p">...</span>
+        <span class="n">instruccioN</span>
+    <span class="n">fsi</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
 <p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
 <h4 id="exemple-de-seleccio-simple">Exemple de selecció simple</h4>
-<p>A continuació expliquem un algorisme en el qual expliquem a algú com obrir la porta de casa quan arribem. Bàsicament el que estem dient és si tens la clau de casa la tregues de la butxaca i obrigues la porta.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple</p>
+<p>A continuació expliquem un algorisme en el qual expliquem a algú que ha de fer si plou a l'eixir de casa. Bàsicament el que estem dient és si està plovent que agafe el paraigües abans d'eixir de casa.</p>
+<!---!!! code "Exemple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de selecció simple</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">tensClausPantalo</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">TreuClau</span><span class="p">();</span>
-    <span class="n">ObrelaPorta</span><span class="p">();</span>
-<span class="n">fsi</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1">// Exemple de selecció simple</span>
+    <span class="n">si</span> <span class="p">(</span><span class="n">plou</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">AgafaParaigües</span><span class="p">();</span>
+    <span class="n">fsi</span>
+    <span class="nf">ObrelaPorta</span><span class="p">();</span>
+    <span class="n">IxDeCasa</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-</div>
+<details class="question"><summary>Activitat 202. Selecció Simple</summary><p>Escriu un algorisme que simule una situació al món real en el que utilitzes una estructura de selecció simple. Has de dissenyar el codi primer en diagrames de flux i després en pseudocodi.</p>
+</details>
 <h4 id="seleccio-doble">Selecció doble</h4>
-<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir camins distints depenent de si l'avaluació de la condició és true o false. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
+<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir camins <strong>distints depenent</strong> de si l'avaluació de la condició és <strong>true o false.</strong> En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
 <div class="mermaid">graph LR
     id1((Inici))--&gt;Instrucció1;
     style id1 fill:#0F0;
@@ -380,8 +383,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 ![Selecció simple](assets/Tema2/Estructura-condicional-doble-java.png)
 -->
 <p>El codi en pseudocodi del diagrama de flux anterior seria el següent:</p>
-<div class="admonition code">
-<p class="admonition-title">Selecció doble</p>
+<!---!!! code "Selecció doble"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -392,41 +394,46 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instruccio1</span>
-<span class="n">instruccio2</span>
-<span class="nf">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="n">instruccio3</span>
-    <span class="n">instruccio4</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instruccio1</span><span class="p">;</span>
+<span class="n">instruccio2</span><span class="p">;</span>
+<span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="n">instruccio3</span><span class="p">;</span>
+    <span class="n">instruccio4</span><span class="p">;</span>
 <span class="n">sino</span>
-    <span class="n">instruccio5</span>
-    <span class="n">instruccio6</span>
+    <span class="n">instruccio5</span><span class="p">;</span>
+    <span class="n">instruccio6</span><span class="p">;</span>
 <span class="n">fsi</span>
-<span class="n">instruccio7</span>
-<span class="n">instruccio8</span>
+<span class="n">instruccio7</span><span class="p">;</span>
+<span class="n">instruccio8</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'si' s'avalua 'veritable' o 'fals'. En el primer cas, amb la condició a veritat, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'si' s'avaluara a 'fals', les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
+<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'si' s'avalua 'veritable' o 'fals'. </p>
+<ul>
+<li>En el primer cas, amb la condició a <strong>'true'</strong>, s'executarien: <strong>instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8.</strong></li>
+<li>Mentre que si la condició del 'si' s'avaluara a <strong>'false'</strong>, les instruccions a executar serien: <strong>instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</strong></li>
+</ul>
 <h4 id="exemple-de-seleccio-doble">Exemple de selecció doble</h4>
 <p>Al següent exemple, utilitzarem l'estructura de selecció doble per tal de millorar l'exemple anterior de com entrar a casa amb les claus. Què passaria si no tenim les claus de casa a la butxaca quan intentem entrar a casa? Que podriem fer? Fixa't en el següent codi.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple</p>
+<!---!!! code "Exemple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de selecció doble</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">tensClausPantalo</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">TreuClau</span><span class="p">();</span>
-    <span class="n">ObrelaPorta</span><span class="p">();</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Exemple de selecció doble</span>
+<span class="n">si</span> <span class="p">(</span><span class="n">plou</span><span class="p">)</span> <span class="n">aleshores</span>
+    <span class="nf">AgafaParaigües</span><span class="p">();</span>
 <span class="n">sino</span>
-    <span class="nf">cridarAlTimbre</span><span class="p">();</span>
+    <span class="nf">PosatXancles</span><span class="p">();</span>
 <span class="n">fsi</span>
+<span class="nf">ObrelaPorta</span><span class="p">();</span>
+<span class="n">IxDeCasa</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-</div>
+<details class="question"><summary>Activitat 203. Selecció Doble</summary><p>Seguint amb l'exemple de l'activitat 102, converteix el teu exemple, si es pot, en un algorisme que utlitze l'estructura de selecció doble. Igualment que a l'activitat anterior has de dissenyar el teu codi en diagrama de flux primer i després en pseudocodi.</p>
+</details>
 <h4 id="condicionals-niats">Condicionals niats</h4>
 <p>Si volem avaluar més d'una condició al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
 <div class="mermaid">graph LR
@@ -451,8 +458,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 ![Selecció múltiple amb if](assets/Tema2/Estructura-condicional-multiple-java.png)
 -->
 <p>El mateix exemple en pseudocodi que teniu a la imatge anterior seria:</p>
-<div class="admonition code">
-<p class="admonition-title">Condicional niat</p>
+<!---!!! code "Condicional niat"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -490,12 +496,10 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">instruccio10</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
+<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1, 2 i 10 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
 <h4 id="exemple-destructura-condicional-niada">Exemple d'estructura condicional niada</h4>
 <p>Un repatidor de Mirinda segueix el següent horari de feina: el dilluns reparteix a Pego, el dimarts a Oliva, el dimecres a Ondara, el dijous a El Verger i el divendres a Els poblets. Al següent algorisme utilitzarem els condicionals niats per dissenyar un algorisme que solucione el problema del repartidor de Mirinda.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple</p>
+<!---!!! code "Exemple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -537,9 +541,10 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">fsi</span>
 </code></pre></div>
 </td></tr></table>
-</div>
+<details class="question"><summary>Activitat 204. Condicional niada</summary><p>Més difícil encara, modifica els exemples anteriors i per tal d'acoplar-hi al teu algorisme una estructura condicional niada.</p>
+</details>
 <h4 id="condicional-multiple">Condicional múltiple</h4>
-<p>La sentència de control 'switch' és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull. Fixa't en la imatge següent:</p>
+<p>La sentència de control <strong>'switch'</strong> és una altra forma de codificar la condició mùltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull. Fixa't en la imatge següent:</p>
 <div class="mermaid">graph LR
     id1((Inici))--&gt;Instrucció1;
     style id1 fill:#F00;
@@ -556,8 +561,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 
 </div>
 <p>Al diagrama de flux anterior, s'avalua una condició (que pot resultar en mès d'un cas diferent) i segons el resultat d'aquesta avaluació de la condició, realitzarà una acció o una altra. Mira com s'escriuria el codi de la condicional múltiple.</p>
-<div class="admonition code">
-<p class="admonition-title">Condicional Múltiple</p>
+<!---!!! code "Condicional Múltiple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -585,11 +589,9 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">fiCas</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>L'exemple del repartidor ens serveriria per veure aquesta estructura. La condició a avaluar seria: **Quin dia es huí?". La resposta a aquesta pregunta, com tots podem intuir, pot donar diversos resultats, concretament 7: dilluns, dimarts, dimecres, dijous, divendres, dissabte o diumenge.  </p>
 <p>Ara es tractaria d'establir les accions a realitzar segons el resultat de l'avaluació anterior com mostra el següent codi.</p>
-<div class="admonition code">
-<p class="admonition-title">Exemple</p>
+<!---!!! code "Exemple"-->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -629,9 +631,10 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">fiCas</span>
 </code></pre></div>
 </td></tr></table>
-</div>
+<details class="question"><summary>Activitat 205. Estructura condicional múltiple</summary><p>Dissenya un algorisme que t'ajude a decidir quina roba posar-te abans d'eixir de casa en funció del temps que faja. Cal tenir en compte les següents consideracions geogràfiques: estem a Pego i l'oratge pot ser molt variable. Es poden donar les següents condicions meteorològiques: ploure a cànters, fer un sol que bada penyes, fa frescoreta i també pot fer un fred que pela. El mateix programa l'has d'escriure utilitzant l'estructura <strong>encasde</strong> i la de selecció múltiple niada.</p>
+</details>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
-<p>Si les estructures condicionals serveixen per determinar quines instruccions o bloc d'instruccions s'executen, la programació estructurada també disposa d'estrutctures repetitives o també anomenades bucles, que ens permeten executar una instrucció o bloc d'instruccions diverses vegades.</p>
+<p>Si les estructures condicionals serveixen per determinar quines instruccions o bloc d'instruccions s'executen, la programació estructurada també disposa d'estrutctures repetitives o <strong>també anomenades bucles</strong>, que ens permeten executar una instrucció o bloc d'instruccions <strong>vàries vegades</strong>.</p>
 <h4 id="mentre">mentre</h4>
 <p>Mentre la <strong>condició</strong> (també anomenada condició d'eixida) siga avaluada com a true, s'executaríen les instruccions que hi ha dins del bucle while. </p>
 <div class="mermaid">graph LR
@@ -653,8 +656,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
 </ol>
 <p>El codi escrit de l'estructura <strong>mentre</strong> explicada anteriorment seria:</p>
-<div class="admonition code">
-<p class="admonition-title">Mentre</p>
+<!---!!! code "Mentre"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -664,8 +666,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">fmentre</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<details class="question"><summary>Activitat 202: Obrir tots els calaixos</summary><p>Imagina que estas buscant el mòbil. Recordes que l'has guardat a un calaix de la teua habitació. El problema és que a la teua habitació entre armaris, escriptoris, tauletes de nit i altres mobles, hi ham més de 30 calaixos. Dissenya un codi en el que busques el mòbil obrint tots els calaixos fins que el trobes.</p>
+<details class="question"><summary>Activitat 206: Obrir tots els calaixos</summary><p>Imagina que estas buscant el mòbil. Recordes que l'has guardat a un calaix de la teua habitació. El problema és que a la teua habitació entre armaris, escriptoris, tauletes de nit i altres mobles, hi ham més de 30 calaixos. Dissenya un codi en el que busques el mòbil obrint tots els calaixos fins que el trobes.</p>
 </details>
 <h4 id="repetir-mentre">repetir .. mentre</h4>
 <p>Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.</p>
@@ -690,8 +691,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
 </ol>
 <p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
-<div class="admonition code">
-<p class="admonition-title">Repetir .. mentre</p>
+<!---!!! code "Repetir .. mentre"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -701,9 +701,10 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="nf">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-</div>
+<details class="question"><summary>Activitat 207. La formigonera</summary><p>Algorisme de la formigonera. Tenim una formigonera preparada amb l'aigua i el cement necessaris i només ens faltaria posar-li l'arena necessària que està en un montó a prop de la formigonera. Disposem d'una pala per passar l'arena del montó a dins de la formigonera. Dissenya un algorisme que tire arena, pala a pala, dins de la formigonera fins que aquesta estiga plena.</p>
+</details>
 <h4 id="bucle-per">bucle per</h4>
-<p>La més complicada de comprendre però també possiblement la més utilitzada. Mirem un exemple.</p>
+<p>Aquesta estructura de repetició és possiblement la més complicada de comprendre però també possiblement la més utilitzada. Aquesta estructura de control sol utilitzar-se la majoria de les vegades quan sabem la quantitat de vegades que es repetirà la instrucció o conjunt d'instruccions que té dintre d'ella. Però mirem un exemple:</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;Instrucció1;
     style Id1 fill:#0F0;
@@ -717,17 +718,20 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     Instrucció2--&gt;Id3([Fi])
     style Id3 fill:#F00;
 </div>
+<p>El diagrama anterior està executant les següents accions: </p>
 <ol>
 <li>Executem instrucció 1 (aliena al bucle for)</li>
 <li>Inicialització</li>
 <li>Avaluació de la condició</li>
-<li>Si la condició és true</li>
+<li>Si la condició és true<ol>
 <li>Executem les instruccions del bucle for</li>
 <li>Actualitzem índex</li>
+</ol>
+</li>
 <li>Si la condició es false eixim del bucle i executem instrucció 2</li>
 </ol>
-<div class="admonition code">
-<p class="admonition-title">Selecció Múltiple</p>
+<p>Aquest mateix diagrama de flux es pot escriure en <strong>pseudocodi</strong> de la següent forma:</p>
+<!---!!! code "Selecció Múltiple"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -737,7 +741,6 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="n">fiper</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Al codi anterior:</p>
 <ol>
 <li>Inicialització: int i = 0;</li>
@@ -745,9 +748,12 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>Instruccio1 i Instruccio2</li>
 <li>Actualització: i ++</li>
 </ol>
+<details class="question"><summary>Activitat 208. Busca aigua</summary><p>Dissenya un algorisme en diagrames de flux que busque la paraula "aigua" en qualsevol llibre en les 50 primeres pàgines. És a dir, el nostre algorisme el que farà serà llegir les 50 primeres pàgines d'un llibre qualsevol i comptarà quantes vegades ha trobat la paraula aigua en total a les 50 pàgines.</p>
+<p>Has de dissenyar l'algorisme tant en diagrama de flux com en pseudocodi.</p>
+</details>
 <h2 id="activitats">Activitats</h2>
 <p>Exposem a continació algunes activitats per tal d'assolir els coneixements exposats als punts anteriors.</p>
-<details class="question"><summary>Activitat 203. Iniciar sessió a Facebook</summary><p>Dibuixa un diagrama de flux per iniciar sessió en un compte de Facebook.<br/></p>
+<details class="question"><summary>Activitat 209. Iniciar sessió a Facebook</summary><p>Dibuixa un diagrama de flux per iniciar sessió en un compte de Facebook.<br/></p>
 <ol>
 <li>Obrim el navegador web.<br/></li>
 <li>Escrivim facebook.com<br/></li>
@@ -769,7 +775,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     style Id2 fill:#0F0;
 </div>
 </details>
-<details class="question"><summary>Activitat 204. Àrea d'un rectangle</summary><p>Calcula l'àrea d'un rectangle donades les seues dimensions</p>
+<details class="question"><summary>Activitat 210. Àrea d'un rectangle</summary><p>Calcula l'àrea d'un rectangle donades les seues dimensions</p>
 <ol>
 <li>Inserim la base.</li>
 <li>Especifiquem l'alçada.</li>
@@ -788,7 +794,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Area d'un rectangle" src="assets/Tema2/AreaRectangleSolucio.jpg" />--></p>
 </details>
-<details class="question"><summary>Activitat 205. Hola món 10 vegades</summary><p>Escriu el diagrama de flux necessari per imprimr per pantalla 10 vegades "hola món"</p>
+<details class="question"><summary>Activitat 211. Hola món 10 vegades</summary><p>Escriu el diagrama de flux necessari per imprimr per pantalla 10 vegades "hola món"</p>
 <p>Resolem aquesta activitat utilitzant el concepte bucle. Creem la variable "cuenta" i l'incialitzem a 0. Després imprimim "Hola món" i incrementem la variable "cuenta" en uno.</p>
 <p>Verifiquem si "cuenta" encara és menor que 10. En cas veritable, imprimim "Hola món" i tornem a incrementar. Quan la "cuenta" valga 10 eixim del programa.</p>
 <ol>
@@ -810,7 +816,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Hola món" src="assets/Tema2/HolaMonx10.jpg" />--></p>
 </details>
-<details class="question"><summary>Activitat 206. Preparar el té</summary><p>Dibuixa el diagrama de flux amb els passos necessaris per preparar el té.</p>
+<details class="question"><summary>Activitat 212. Preparar el té</summary><p>Dibuixa el diagrama de flux amb els passos necessaris per preparar el té.</p>
 <ol>
 <li>Comprar té i/o sucre. </li>
 <li>Tindre tassa i cullera.</li>
@@ -858,7 +864,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Preparar té" src="assets/Tema2/PrepararTe.jpg" />-->
 </details>
-<details class="question"><summary>Activitat 207. Número major</summary><p>Escriu el diagrama de flux de tal forma que donats dos números ens indique quin és més gran.</p>
+<details class="question"><summary>Activitat 213. Número major</summary><p>Escriu el diagrama de flux de tal forma que donats dos números ens indique quin és més gran.</p>
 <ol>
 <li>Introudir els valors A i B</li>
 <li>Llegir els seus valors</li>
@@ -886,7 +892,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Major que" src="assets/Tema2/MajorQue.jpg" />--->
 </details>
-<details class="question"><summary>Activitat 208. Suma dos números</summary><p>Algorisme que demana dos números i els suma mostrant el resultat per pantalla.</p>
+<details class="question"><summary>Activitat 214. Suma dos números</summary><p>Algorisme que demana dos números i els suma mostrant el resultat per pantalla.</p>
 <ol>
 <li>Declarem la variable <strong>suma</strong> i la inicialitzem a 0.</li>
 <li>Inserim dos números.</li>
@@ -906,7 +912,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Sumar 10 i 20" src="assets/Tema2/Sumar.jpg" />--->
 </details>
-<details class="question"><summary>Activitat 209. Llevar la fam</summary><p>Ens trobem a casa i tenim fam. Què fem?</p>
+<details class="question"><summary>Activitat 215. Llevar la fam</summary><p>Ens trobem a casa i tenim fam. Què fem?</p>
 <ol>
 <li>Preguntem si tenim fam.</li>
 <li>Si la resposta és no s'acaba el procediment, ja estem satisfets.</li>
@@ -933,7 +939,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Com llevar la fam" src="assets/Tema2/LlevarFam.jpg" />--->
 </details>
-<details class="question"><summary>Activitat 210. Par o impar</summary><p>Algorisme que determina si el númeroJ que inserim és parell o senar.</p>
+<details class="question"><summary>Activitat 216. Par o impar</summary><p>Algorisme que determina si el númeroJ que inserim és parell o senar.</p>
 <ol>
 <li>Introduim un número 'N'</li>
 <li>Si 'N' es divideix entre 2 i el residu és 0 (N mod 2 = 0), aleshores 'N' és parell.</li>
@@ -955,7 +961,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </div>
 <!---<img alt="Parell o senar" src="assets/Tema2/ParImpar.jpg" />--->
 </details>
-<details class="question"><summary>Activitat 211. Agafar el paraigües</summary><p>Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.</p>
+<details class="question"><summary>Activitat 217. Agafar el paraigües</summary><p>Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.</p>
 <ol>
 <li>Comprovem si està plovent.</li>
 <li>Si la resposta és No, eixim al carrer sense paraigües.</li>
@@ -978,7 +984,7 @@ C--&gt;Fi((Fi));
 </div>
 <!---<img alt="Agafe el paraigües" src="assets/Tema2/Paraigues.jpg" />--->
 </details>
-<details class="question"><summary>Activitat 212. Mitjana</summary><p>Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspés". La nota mínima per aprovar és 11.</p>
+<details class="question"><summary>Activitat 218. Mitjana</summary><p>Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspés". La nota mínima per aprovar és 11.</p>
 <ol>
 <li>Declarem les variables a utilitzar: Nota1, Nota2, Nota3, Mitjana.</li>
 <li>Inserim les notes per teclat.</li>

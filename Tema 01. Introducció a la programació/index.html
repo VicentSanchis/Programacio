@@ -337,7 +337,7 @@ Observa el resultat de l'algorisme inicial i reescriu-lo per tal que el resultat
 Aquestes paraules només poden usar-se en un concepte determinat, mai lliurement per l’usuari.
 Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues només podran ser utilitzades en cas que es vullga iniciar una sentència de control condicional o bucle.</p>
 <div class="admonition info">
-<p class="admonition-title">Definició</p>
+<p class="admonition-title">Paraules Reservades</p>
 <p>Les <strong>paraules reservades</strong> són identificadors o etiquetes reservades predefinides que tenen un significat especial i no es poden utilitzar com identificadors o etiquetes en els programes.</p>
 </div>
 <h2 id="fases-de-desenvolupament-duna-aplicacio">Fases de desenvolupament d'una aplicació</h2>
@@ -346,44 +346,45 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <h3 id="analisi-del-problema">Anàlisi del problema</h3>
 <p>Estudi del problema, quina és la seua finalitat, a qui va dirigit, quins elements ha d’incloure, quines tasques ha de realitzar. En aquesta fase es realitzen entrevistes amb els usuaris o clients entre d’altres tècniques. La finalitat d’aquesta fase és fer un recull dels diferents requeriments que ha de tenir el nostre producte.</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Imaginem que ens disposem a fer una aplicació que gestione la fruteria del barri. En aquesta fase és on hauriem d'esbrinar, entre altres coses: quins productes es venen, quin preu tenen, l'agenda de clients, quina informació volem saber dels clients, quina informació volem saber de proveïdors etc. Suposem que ens farem càrrec d'una part xicoteta d'aquesta aplicació: <strong>la introducció de tickets de compra nous</strong>. En aquesta fase podriem extreure que a un ticket de compra necessitaria que es reflexara la següent informació: </p>
+<p class="admonition-title">FruitApp - Anàlisi</p>
+<p>Imaginem que ens disposem a fer una aplicació que gestione la <strong>fruteria del barri</strong>. En aquesta fase és on hauriem d'esbrinar, entre altres coses: quins productes es venen, quin preu tenen, l'agenda de clients, quina informació volem saber dels clients, quina informació volem saber de proveïdors etc. Suposem que ens farem càrrec d'una part xicoteta d'aquesta aplicació: <strong>la introducció de tickets de compra nous</strong>. En aquesta fase podriem extreure que a un ticket de compra necessitaria que es reflexara la següent informació: </p>
 <ul>
 <li>Data i hora de la compra, Llista de productes comprats: producte, preu uniitari, quantitat i total, Subtotal de la compra, IVA i descomptes aplicats, total de la compra.</li>
 </ul>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Producte</p>
+<p class="admonition-title">Producte - Anàlisi</p>
 <p>Requeriments del sistema o aplicació. En base a la informació que hem aconseguit per mitja d'entrevistes, enquestes etc.. En altres paraules: el que ha de fer la nostra aplicació, finalitat, objectius.</p>
 </div>
 <h3 id="disseny-de-lalgorisme">Disseny de l'algorisme</h3>
-<p>Es refereix a com anem a sol·lucionar els requeriments obtiguts a la fase anterior. En aquesta fase s'estudien possibles opcions d'implementació per a l'aplicació que hem de construir, així com decidir l'estructura general de la mateixa. El disseny és una estapa complexa i el seu procés s'ha de realitzar d'una forma iterativa.
-Es possible que la solució inicial no siga la més adequada, per tant en tal cas s'hauria de redefinir. Tammateix, hi ha catàlegs de patrons de disseny molt útils que recullen errades que altres han comés per no caure a la mateixa trampa.</p>
+<p>Es refereix a <strong>com anem a sol·lucionar</strong> els requeriments obtiguts a la fase anterior. En aquesta fase s'estudien possibles <strong>opcions d'implementació</strong> per a l'aplicació que hem de construir, així com decidir l'estructura general de la mateixa. El disseny és una etapa complexa i el seu procés s'ha de realitzar d'una forma iterativa.</p>
+<p>Es possible que la solució inicial no siga la més adequada, per tant en tal cas s'hauria de redefinir. Tammateix, hi ha catàlegs de patrons de disseny molt útils que recullen errades que altres han comés per no caure a la mateixa trampa.</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Continuant en la nostra aplicació de la fruteria, en aquesta fase i una vegada acabada la fase d'anàlisi d'on s'obtenen els requeriments, hauriem de, per un costat triar el paradigma de programació que escollirem: programació estructurada o programació orientada a objectes (Normalment aquest últim). El llenguatge de programació a utilitzar. Una vegada ja ho hem triat, hem de decidir com el nostre programa va a complir amb els requeriments obtesos a la fase d'analisi, és a dir, com crearem el nou ticket de compra, com afegirem els productes i com calcularem el preu final i imprimirem el document.</p>
+<p class="admonition-title">FruitApp - Disseny</p>
+<p>Continuant en la nostra aplicació de la <strong>fruteria</strong>, en aquesta fase i una vegada acabada la fase d'anàlisi d'on s'obtenen els requeriments, hauriem de, per un costat triar el <strong>paradigma de programació</strong> que escollirem: <strong>programació estructurada o programació orientada a objectes</strong> (Normalment aquest últim). El llenguatge de programació a utilitzar. Una vegada ja ho hem triat, hem de decidir com el nostre programa va a complir amb els requeriments obtesos a la fase d'analisi, és a dir, com crearem el nou ticket de compra, com afegirem els productes i com calcularem el preu final i imprimirem el document.</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Producte</p>
-<p>Si hem triat el paradigma de programació estructurada hauriem de dissenyar els diagramres flux de les diferents funcionalitats de l'aplicació, el pseudocodi, etc.. Per exemple en aquesta fase es dissenyaria l'alogorisme en pseudocodi o diagrama de flux on s'indique pas a pas com es faria la introducció d'un ticket nou.</p>
-</div>
+<p class="admonition-title">Producte - Disseny</p>
+<p>Si hem triat el paradigma de programació estructurada hauriem de dissenyar els diagramres flux de les diferents funcionalitats de l'aplicació, el pseudocodi, etc..</p>
+<p>Per exemple en aquesta fase es dissenyaria l'alogorisme en pseudocodi o diagrama de flux on s'indique pas a pas com es faria la introducció d'un ticket nou.</p>
 <p>En canvi, si pel contrari escollim el paradigma de programació orientada a objectes obtindriem casos d'ús, diagrames de classes, diagrames de comportament en UML. </p>
+</div>
 <h3 id="codificacio">Codificació</h3>
-<p>Ha arribat el moment de picar codi. A la fase de codificació, ens arriben els documents (pseudocodi, flux, diagrames de classes, UML) necessaris per poder començar a programar. En aquesta fase hem d'escollir les eines (IDEs) adequades per poder desenvolupar el nostre projecte i també escollirem (va lligat en realitat) el llenguatge de programació </p>
+<p>Ha arribat el moment de <strong>picar codi</strong>. A la fase de codificació, ens arriben els documents (pseudocodi, flux, diagrames de classes, UML) necessaris per poder <strong>començar a programar</strong>. En aquesta fase hem d'escollir les eines (IDEs) adequades per poder desenvolupar el nostre projecte i també escollirem (va lligat en realitat) el llenguatge de programació </p>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Seguint amb la fruteria i suposant que ens han passat un pseudocodi de la nostra apliació de generació de tickets, podriem per exemple triar l'IDE Visual Studio Code i C# com a llenguatge de programació o l'IDE Eclipse i Java o Visual Studio i Java...</p>
+<p class="admonition-title">FruitApp - Codificació</p>
+<p>Seguint amb la fruteria i suposant que ens han passat un pseudocodi de la nostra apliació de generació de tickets, podriem per exemple triar l'IDE <strong>Visual Studio Code i C#</strong> com a llenguatge de programació o <strong>l'IDE Eclipse i Java</strong> o Visual Studio i Java...</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Producte</p>
-<p>El projecte amb tots els fitxers que tenen el codi desenvolupat així com també els executables o binaris ja compilats i funcionant.</p>
+<p class="admonition-title">Producte - Codificació</p>
+<p>El projecte amb tots els fitxers que tenen el codi desenvolupat així com també els <strong>executables o binaris</strong> ja compilats i funcionant.</p>
 </div>
 <h3 id="prova-i-depuracio">Prova i depuració</h3>
-<p>Com que errar es d'humans, la fase de proves del cicle de vida de programari busca detectar els errors comesos en les etapes anteriors per tal de poder corregir-los. Per supost, allò ideal és fer-ho abans que l'usuari final se'ls trobe. Es diu que una prova amb exit és una prova que detecta algun error.</p>
+<p>Com que <strong>errar es d'humans</strong>, la fase de proves del cicle de vida de programari busca <strong>detectar els errors</strong> comesos en les etapes anteriors per tal de poder corregir-los. Per supost, allò ideal és fer-ho abans que l'usuari final se'ls trobe. Es diu que una prova amb exit és una prova que detecta algun error.</p>
 <h3 id="documentacio">Documentació</h3>
-<p>Aquesta és la fase que a cap programador li agrada fer, però en realitat és una fase que no està necessàriament al final del cicle de vida del programa, sino que es fa de forma transversal en totes les etapes del desenvolupament. </p>
-<p>Es considera documentació des dels requeriments inicials al manual d'usuari passant per el pseudocodi, diagrames de classes i ús, i també els comentaris que es posen al codi.</p>
-<details class="question"><summary>Activitat 103. Simula les fases de desenvolpament software</summary><p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les diverses llistes de compra que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
+<p>Aquesta és la fase que a cap programador li agrada fer, però en realitat és una fase que no està necessàriament al final del cicle de vida del programa, sino que es fa de forma <strong>transversal</strong> en totes les etapes del desenvolupament. </p>
+<p>Es considera documentació <strong>des dels requeriments inicials al manual d'usuari</strong> passant per el pseudocodi, diagrames de classes i ús, i també els comentaris que es posen al codi.</p>
+<details class="question"><summary>Activitat 103. Simula les fases de desenvolpament software</summary><p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les <strong>diverses llistes de compra</strong> que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
 </details>
 <h2 id="diagrames-de-flux">Diagrames de flux</h2>
 <p>Un diagrama de flux és una <strong>representació gràfica</strong> d'un algorisme. S'utilitza en disciplines com la programació informàtica, l'economia, els processos industrials o la psicologia cognitiva. Aquests diagrames utilitzen símbols amb significats ben definits que representen els passos de l'algorisme, i representen el <strong>flux d'execució</strong> mitjançant fletxes que connecten els punts d'inici i de finalització. Un diagrama de flux sempre té un únic punt d'inici i un únic punt de finalització. A més, tot camí d'execució ha de permetre arribar des de l'inici fins al final.</p>
@@ -560,61 +561,54 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <!---<img alt="Diagrama de flux - Adolescència" src="assets/Tema1/Adolescencia.png" />--></p>
 </details>
 <h2 id="pseudocodi">Pseudocodi</h2>
-<p>El <strong>pseudocodi</strong> (o fals llenguatge) és una descripció a molt alt nivell de l'estructura d'un programa. Encara que utilitze estructures típiques de la programació es diu que és a alt nivell perquè una persona amb pocs o sense coneixements informàtics puga entendre i interpretar la porció de codi que estiga llegint. </p>
-<p>El principal objectiu del pseudocodi és el de representar la solució a un algorisme de la manera més detallada possible, i al mateix temps el més semblant possible al llenguatge que s'utilitzarà a la fase de codificació.</p>
+<p>El <strong>pseudocodi</strong> (o fals llenguatge) és una descripció a molt alt nivell de l'estructura d'un programa. Encara que utilitze estructures típiques de la programació es diu que és a <strong>alt nivell</strong> perquè una persona amb pocs o sense coneixements informàtics puga entendre i interpretar la porció de codi que estiga llegint. </p>
+<p>El principal <strong>objectiu</strong> del pseudocodi és el de representar la solució a un algorisme de la manera més detallada possible, i al mateix temps el més semblant possible al llenguatge que s'utilitzarà a la fase de codificació.</p>
 <p>No existeix una sintaxis estàndard de pseudocodi però amb ell s'han de poder escriure totes les estructures de control de la programació estructurada. De totes formes, en aquest tema utilitzarem la següent sintaxi:</p>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
 <p>L'estructura bàsica de tots els programes és la seqüencial. És a dir, les instruccions s'executen una darrere de l'altra seguint el mateix ordre en que han estat escrites. L'ordinador llegeix la primera línia de codi en memòria i l'executa, després la següent i així successivament fins que acaba.</p>
 <p>Un exemple de estrcutura seqüencial en la vida real podria ser la següent: fes el llit, quan acabes, ves a llavar el cotxe, després fes els deures i aleshores ja podràs veure la tele.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi estructura Seqüencial</p>
+<!---!!! code "Codi estructura Seqüencial"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">accio1</span><span class="p">();</span> 
-<span class="n">accio2</span><span class="p">();</span>
-<span class="n">accio3</span><span class="p">();</span>
-<span class="p">....</span>
-<span class="n">acció</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">accio1</span><span class="p">();</span> 
+    <span class="n">accio2</span><span class="p">();</span>
+    <span class="n">accio3</span><span class="p">();</span>
+    <span class="p">....</span>
+    <span class="n">acció</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h3 id="estructura-iterativa">Estructura Iterativa</h3>
 <p>Encara que l'estructura seqüencial és la base de tots els programes, els bucles també tenen molta importància. Un bucle és una repetició d'una o varies instruccions (estructura seqüencial). De vegades serà interessant utilitzar aquest tipus d'estructura per realitzar la mateixa acció grup d'accions un nombre concret de vegades o mentre s'acompleixca algun tipus de condició.</p>
 <p>Alguns exemples en la vida real podria ser: camina fins que arribes al final del carrer. En aquest cas es repetiria l'acció caminar mentre no s'acompleixca la condició d'arribar al final de carrer, o dit d'una altra manera, caminarem fins que no arribem al final del carrer.</p>
 <p>Dins de l'estructura iterativa, repetitiva o bucles, tindriem tres variants possibles</p>
 <h4 id="fer-mentre">fer .. mentre:</h4>
 <p>Aquesta estructura realitzarà les accions que estiguen dintre d'ella mentre s'acompleixca la condició establerta al final de l'estructura. L'estructura seqüencial accions() s'executaria almenys una vegada si utilitzem aquesta estructura independentment que la condició s'avalue veritat a falsa.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi fer .. mentre</p>
+<!---!!! code "Codi fer .. mentre" --->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">fer</span>
-    <span class="nf">accions</span><span class="p">();</span>
-<span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">fer</span>
+        <span class="nf">accions</span><span class="p">();</span>
+    <span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="mentre-fer">mentre .. fer:</h4>
 <p>Molt semblant a l'anterior però amb la diferència que en aquesta estructura, la condició s'avaluarà abans de realitzar l'acció, és a dir, L'única forma que accions() s'execute en aquesta estructura és que la condició s'avalue com a veritable. Per exemple no tanques el paraigües mentre ploga.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi mentre .. fer</p>
+<!---!!! code "Codi mentre .. fer" -->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">fer</span>
-    <span class="nf">accions</span><span class="p">();</span>
-<span class="n">fimentre</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">fer</span>
+        <span class="nf">accions</span><span class="p">();</span>
+    <span class="n">fimentre</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>De totes formes sempre es pot "traduir" d'una estructura repetitiva a una altra. </p>
 <h3 id="estructura-condicional">Estructura Condicional</h3>
 <p>L'estructura condicional és dins del teorema de programació estructurada aquella estructura que, després d'avaluar una concidició, ens permet executar unes accions o unes altres. Existeixen diverses opcions: condicional simple, conicional doble o condicional múltiple. També es poden combinar entre elles segons la necessitat.</p>
 <h4 id="si-fsi">si .. fsi:</h4>
 <p>O també anomenada <strong>condicio simple</strong>. S'avalua una condició, normalment una expressio relacional o lògica, i en cas d'avaluar-se possitivament (true) s'executen les accions pertinents. Si pel contrari l'avaluació de l'expressió és negativa (false) no executa cap acció més.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi si .. fsi</p>
+<!---!!! code "Codi si .. fsi"  --->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -622,21 +616,19 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">accions</span><span class="p">();</span>
-<span class="n">fisi</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">accions</span><span class="p">();</span>
+    <span class="n">fisi</span>
 
-<span class="c1">// Exemple de codi</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">plou</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">agafaParaigues</span><span class="p">();</span>
-<span class="n">fsi</span>
+    <span class="c1">// Exemple de codi</span>
+    <span class="n">si</span> <span class="p">(</span><span class="n">plou</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">agafaParaigues</span><span class="p">();</span>
+    <span class="n">fsi</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="si-sino">si .. sino:</h4>
 <p>O <strong>condicional doble</strong> és una estructura semblant a la condicional simple però aquesta vegada i en el cas que la condició s'avalue negativament (false) podra executar accions alternatives a les que s'hagueren executat si l'expressió hagués sigut avaluada com a true.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi si .. sino</p>
+<!---!!! code "Codi si .. sino"  -->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -648,25 +640,23 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">accions1</span><span class="p">();</span>
-<span class="n">sino</span>
-    <span class="nf">accions2</span><span class="p">();</span>
-<span class="n">fisi</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">accions1</span><span class="p">();</span>
+    <span class="n">sino</span>
+        <span class="nf">accions2</span><span class="p">();</span>
+    <span class="n">fisi</span>
 
-<span class="c1">// Exemple de codi</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">faCalor</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">agafaBanynador</span><span class="p">();</span>
-<span class="n">sino</span>
-    <span class="nf">agafaPantal</span><span class="p">();</span>
-<span class="n">fsi</span>
+    <span class="c1">// Exemple de codi</span>
+    <span class="n">si</span> <span class="p">(</span><span class="n">faCalor</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">agafaBanynador</span><span class="p">();</span>
+    <span class="n">sino</span>
+        <span class="nf">agafaPantal</span><span class="p">();</span>
+    <span class="n">fsi</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="si-sino-si-sino">si .. sino si .. sino:</h4>
 <p>O <strong>condicional múĺtiple</strong>, quan una expressió pot donar més d'una possible alternativa podem utilitzar aquesta estructura.</p>
-<div class="admonition code">
-<p class="admonition-title">Codi si .. sino si .. sino</p>
+<!---!!! code "Codi si .. sino si .. sino"  --->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -684,43 +674,26 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">si</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="n">aleshoresgantt</span>
-<span class="n">title</span> <span class="n">My</span> <span class="n">Product</span> <span class="n">Roadmap</span>
-<span class="n">dateFormat</span>  <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span>
-<span class="n">section</span> <span class="n">Cool</span> <span class="n">Feature</span>
-<span class="n">A</span> <span class="n">task</span>           <span class="p">:</span><span class="n">a1</span><span class="p">,</span> <span class="mi">2022</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="n">d</span>
-<span class="n">Another</span> <span class="n">task</span>     <span class="p">:</span><span class="n">after</span> <span class="n">a1</span><span class="p">,</span> <span class="mi">20</span><span class="n">d</span>
-<span class="n">section</span> <span class="n">Rad</span> <span class="n">Feature</span>
-<span class="n">Task</span> <span class="n">in</span> <span class="n">sequence</span> <span class="p">:</span><span class="mi">2022</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mo">04</span><span class="p">,</span> <span class="mi">12</span><span class="n">d</span>
-<span class="n">Task</span><span class="p">,</span> <span class="n">No</span><span class="p">.</span> <span class="mi">2</span>      <span class="p">:</span><span class="mi">24</span><span class="n">d</span>
-    <span class="nf">accions1</span><span class="p">();</span>
-<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">accions2</span><span class="p">();</span>
-<span class="n">sino</span>
-    <span class="nf">accions3</span><span class="p">();</span>
-<span class="n">fisi</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">accions1</span><span class="p">();</span>
+    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">accions2</span><span class="p">();</span>
+    <span class="n">sino</span>
+        <span class="nf">accions3</span><span class="p">();</span>
+    <span class="n">fisi</span>
 
-<span class="c1">// Exemple de codi</span>
-<span class="n">si</span> <span class="p">(</span><span class="n">esDilluns</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">arrosAlForn</span><span class="p">();</span>
-<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimarts</span><span class="p">)</span> <span class="n">aleslhores</span>
-    <span class="nf">macarrons</span><span class="p">();</span>
-<span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimecres</span><span class="p">)</span> <span class="n">aleshores</span>
-    <span class="nf">sandwich</span><span class="p">();</span>
-<span class="n">sino</span>
-    <span class="nf">paiParxe</span><span class="p">();</span>
-<span class="n">fsi</span>
+    <span class="c1">// Exemple de codi</span>
+    <span class="n">si</span> <span class="p">(</span><span class="n">esDilluns</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">arrosAlForn</span><span class="p">();</span>
+    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimarts</span><span class="p">)</span> <span class="n">aleslhores</span>
+        <span class="nf">macarrons</span><span class="p">();</span>
+    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimecres</span><span class="p">)</span> <span class="n">aleshores</span>
+        <span class="nf">sandwich</span><span class="p">();</span>
+    <span class="n">sino</span>
+        <span class="nf">paiParxe</span><span class="p">();</span>
+    <span class="n">fsi</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h3 id="exemples_1">Exemples</h3>
 <p>A continuació farem els mateixos exemples que hem fet en diagrames de flux però en pseudocodi:</p>
 <details class="done"><summary>Exemple 1. La nostra fruteria (Solució)</summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -809,10 +782,12 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
 <p>Normalment la creació d'un programa executable (un típic.exe per a Microsoft Windows o DOS) comporta dos passos. El primer pas es diu <strong>compilació</strong> ( pròpiament dit) i tradueix el codi font escrit en un llenguatge de programació emmagatzemat en un arxiu a codi de baix nivell (normalment en codi objecte, no directament a llenguatge màquina). El segon pas es diu <strong>enllaçat</strong> en el qual s'enllaça el codi de baix nivell generat de tots els fitxers i subprogrames que s'han enviat compilar i s'afegeix el codi de les funcions que hi ha a les biblioteques del compilador perquè l'executable pugui comunicar-se directament amb el sistema operatiu, traduint així finalment el codi objecte a codi màquina, i generant un mòdul executable.</p>
 <p>Aquests dos passos es poden fer per separat, emmagatzemant el resultat de la fase de compilació en arxius objectes (un típic .obj per a Microsoft Windows, DOS o per a Unix ), per a enllaçar-los en fases posteriors, o crear directament l'executable, amb la qual cosa la fase de compilació s'emmagatzema només temporalment. Un programa podria tenir parts escrites en diversos llenguatges (per exemple C, C + + i Asm), que es podrien compilar de forma independent i després enllaçar juntes per formar un únic mòdul executable. </p>
-<p><img alt="Procés de compilació" src="../assets/Tema1/ProcesCompilacio.png"/></p>
+<p><center>
+<img alt="Procés de compilació" src="../assets/Tema1/ProcesCompilacio.png"/>
+</center></p>
 <h2 id="ides">IDE's</h2>
-<p>Un entorn de desenvolupament integrat o <strong>IDE</strong> (de l'anglés Integrated Development Environment) és una enia informàtica per al desenvolupament de programari de manera còmoda i ràpida. Així doncs és un entorn de desenvolupament que agrupa diferents funcions en un sol programa, habitualment: editor de codi, compilador, depurador i un programa de disseny d'interfície gràfica.</p>
-<p>Els IDE estan dissenyats per maximitzar la productivitat del programador proporcionant components molt units amb interfícies d'usuari similars. Els IDE presenten un únic programa en què es porta a terme tot el desenvolupament. Generalment, aquest programa sol oferir moltes característiques per a la creació, modificació, compilació, implementació i depuració de programari.</p>
+<p>Un <strong>entorn de desenvolupament</strong> integrat o <strong>IDE</strong> (de l'anglés Integrated Development Environment) és una enia informàtica per al desenvolupament de programari de manera còmoda i ràpida. Així doncs és un entorn de desenvolupament que agrupa diferents funcions en un sol programa, habitualment: editor de codi, compilador, depurador i un programa de disseny d'interfície gràfica.</p>
+<p>Els IDE estan dissenyats per <strong>maximitzar la productivitat del programador</strong> proporcionant components molt units amb interfícies d'usuari similars. Els IDE presenten un únic programa en què es porta a terme tot el desenvolupament. Generalment, aquest programa sol oferir moltes característiques per a la creació, modificació, compilació, implementació i depuració de programari.</p>
 <p>Durant el curs utilitzarem principalment dos IDEs: <strong>Processing IDE</strong> i <strong>Eclipse IDE</strong>. Una alternativa a Eclipse pot ser també <strong>Visual Studio Code</strong></p>
 <h3 id="processing-ide">Processing IDE</h3>
 <p>Processing és un llenguatge de programació i entorn de desenvolupament integrat de codi obert basat en Java, de fàcil utilització, i que serveix com a mitjà per a l'ensenyament i la producció de projectes multimèdia i interactius de disseny digital. Va ser iniciat per Ben Fry i Casey Reas, ambdós membres d'Aesthetics and Computation Group del MIT Media Lab dirigit per John Maeda.1</p>
@@ -822,6 +797,41 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <p>Cada esquema de Processing és en realitat una subclasse de PApplet, un tipus Java que posa en funcionament la majoria de les característiques del llenguatge del Processing.</p>
 <p>En programar a Processing, totes les classes addicionals definides seran tractades com a classes internes quan el codi es tradueix en pur Java abans de compilar. Això vol dir que l'ús de variables estàtiques i mètodes de les classes està prohibit llevat que s'indiqui específicament a Processing què vol el codi en mode pur Java.</p>
 <p>Processing també permet als usuaris crear les seves pròpies classes de PApplet a la finestra. Això permet que els tipus de dades complexes puguin incloure qualsevol nombre d'arguments i evita les limitacions a l'ús de tipus de dades estàndard com int (sencer), char (caràcters), float (nombre real) o color (RGB, hexadecimal ARGB).</p>
+<h4 id="estructura-en-processing-ide">Estructura en Processing IDE</h4>
+<p>Per tal de treballar amb les estructures bàsiques del paradigma de programació estructurada, utilitzarem <strong>Processing IDE</strong> que és un IDE lleuger que ens permet programar en Java sense necessitat de fer estructures de classes molt complexes.</p>
+<p>Concretament <strong>Processing IDE</strong> és un entorn integrat de desenvolupament juntament amb una llibreria gràfica que inicialment es va construir per a arts electròniques i disseny visual per tal de poder ensenyar els fonaments de la programació a <strong>no-programadors</strong> en un context visual. És per això que aquesta eina ens resultarà molt útil per tal d'aprendre els conceptes bàsics de la programació estructurada.</p>
+<p>A continuació vos mostrem un exemple d'estructura de programa en <strong>Processing IDE</strong></p>
+<!--!!! code "Codi"-->
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
+<span class="c1">// Variables globals a l'aplicació.</span>
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s'executa una vegada a l'inici de l'execució.</span>
+    <span class="c1">// Sentències d'inicialització de la nostra aplicació.</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S'executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
+    <span class="c1">// Codi principal del programa.</span>
+<span class="p">}</span>
+
+<span class="c1">// Declaració d'altres funcions</span>
+</code></pre></div>
+</td></tr></table>
+<details class="question"><summary>Activitat 104. Instal·la Processing IDE</summary><p>Descarrega l'aplicació Processing IDE de la seua pàgina oficial i instal·la-la al teu ordinador. Després copia i apega qualsevol codi (compatible amb Processing IDE) que trobes per Internet i prova el que passa.</p>
+</details>
+<h3 id="eclipse-ide">Eclipse IDE</h3>
+<p>Eclipse és una plataforma de programari compost per un conjunt d'eines de programació de codi obert multiplataforma per desenvolupar el que el projecte anomena "Aplicacions de Client Enriquit", oposat a les aplicacions "Client-lleuià" basades en navegadors. Aquesta plataforma, típicament ha estat usada per desenvolupar entorns de desenvolupament integrats (de l'anglès IDE), com l'IDE de Java anomenat Java Development Toolkit (JDT) i el compilador (ECJ) que es lliura com a part d'Eclipse (i que són usats també per desenvolupar el mateix Eclipse).</p>
+<p>Eclipse també és una comunitat d'usuaris, estenent constantment les àrees d'aplicació cobertes. Un exemple és el recentment creat Eclipse Modeling Project, cobrint gairebé totes les àrees de Model Driven Engineering.</p>
+<p>Eclipse va ser desenvolupat originalment per IBM com el successor de la seva família d'eines per a VisualAge. Eclipse és ara desenvolupat per la Fundació Eclipse, una organització independent sense ànim de lucre que fomenta una comunitat de codi obert i un conjunt de productes complementaris, capacitats i serveis.</p>
+<p>Eclipse va ser alliberat originalment sota la Common Public License, però després va ser re-licenciado sota l'Eclipse Public License. La Free Software Foundation ha dit que ambdues llicències són llicències de programari lliure, però són incompatibles amb Llicència pública general de GNU (GNU GPL).</p>
 <h4 id="estructura-dun-programa-en-java">Estructura d'un programa en Java</h4>
 <p>El primer que s'ha de tenir en compte és que tot programa escrit en Java ha de tindre almenys un main() a la classe principal per tal que s'execute. En resum, un programa escrit en Java ha de tindre:</p>
 <ul>
@@ -831,8 +841,7 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <li>Mètodes definits pels usuaris dins de les classes.</li>
 <li>Comentaris.</li>
 </ul>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
+<!---!!! code "Codi"--->
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -878,7 +887,6 @@ Es possible que la solució inicial no siga la més adequada, per tant en tal ca
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>Al programa anterior podem trobar una classe 'nomPrograma' que conté el mètode principal main i que al mateix temps conté el conjunt d'instruccions que es van a executar seqüencialment al nostre programa. Aquesta classe <strong>nomPrograma</strong> té un memebre calc que és un objecte (ja veurem classes i objectes més endavant) de tipus calculadora i que està definit més endavant amb la classe pública calculadora.
 Les sentències que executa el nostre programa d'exmemple són les següents:</p>
 <ul>
@@ -888,41 +896,8 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
 <li>Deposita el resultat que retorna el mètode suma de la classe calc a la variable <strong>result</strong></li>
 <li>Mostra per pantalla el resultat de la suma.</li>
 </ul>
-<h3 id="eclipse-ide">Eclipse IDE</h3>
-<p>Eclipse és una plataforma de programari compost per un conjunt d'eines de programació de codi obert multiplataforma per desenvolupar el que el projecte anomena "Aplicacions de Client Enriquit", oposat a les aplicacions "Client-lleuià" basades en navegadors. Aquesta plataforma, típicament ha estat usada per desenvolupar entorns de desenvolupament integrats (de l'anglès IDE), com l'IDE de Java anomenat Java Development Toolkit (JDT) i el compilador (ECJ) que es lliura com a part d'Eclipse (i que són usats també per desenvolupar el mateix Eclipse).</p>
-<p>Eclipse també és una comunitat d'usuaris, estenent constantment les àrees d'aplicació cobertes. Un exemple és el recentment creat Eclipse Modeling Project, cobrint gairebé totes les àrees de Model Driven Engineering.</p>
-<p>Eclipse va ser desenvolupat originalment per IBM com el successor de la seva família d'eines per a VisualAge. Eclipse és ara desenvolupat per la Fundació Eclipse, una organització independent sense ànim de lucre que fomenta una comunitat de codi obert i un conjunt de productes complementaris, capacitats i serveis.</p>
-<p>Eclipse va ser alliberat originalment sota la Common Public License, però després va ser re-licenciado sota l'Eclipse Public License. La Free Software Foundation ha dit que ambdues llicències són llicències de programari lliure, però són incompatibles amb Llicència pública general de GNU (GNU GPL).</p>
-<h4 id="estructura-en-processing-ide">Estructura en Processing IDE</h4>
-<p>Per tal de treballar amb les estructures bàsiques del paradigma de programació estructurada, utilitzarem <strong>Processing IDE</strong> que és un IDE lleuger que ens permet programar en Java sense necessitat de fer estructures de classes molt complexes.</p>
-<p>Concretament <strong>Processing IDE</strong> és un entorn integrat de desenvolupament juntament amb una llibreria gràfica que inicialment es va construir per a arts electròniques i disseny visual per tal de poder ensenyar els fonaments de la programació a <strong>no-programadors</strong> en un context visual. És per això que aquesta eina ens resultarà molt útil per tal d'aprendre els conceptes bàsics de la programació estructurada.</p>
-<p>A continuació vos mostrem un exemple d'estructura de programa en <strong>Processing IDE</strong></p>
-<div class="admonition code">
-<p class="admonition-title">Codi</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
-<span class="c1">// Variables globals a l'aplicació.</span>
-<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  <span class="c1">// Només s'executa una vegada a l'inici de l'execució.</span>
-    <span class="c1">// Sentències d'inicialització de la nostra aplicació.</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// S'executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
-    <span class="c1">// Codi principal del programa.</span>
-<span class="p">}</span>
-
-<span class="c1">// Declaració d'altres funcions</span>
-</code></pre></div>
-</td></tr></table>
-</div>
+<details class="question"><summary>Activitat 105. Instal·la Eclipse IDE for Developers</summary><p>Descarrega l'IDE d'Eclipse de la seua pàgina oficial i instal·la'l a la teua màquina. Després intenta crear un projecte amb una sola classe i prova d'executar.</p>
+</details>
 </article>
 </div>
 </div>

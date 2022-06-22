@@ -147,6 +147,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#pas-dobjectes-a-funcions">
+    Pas d'objectes a funcions
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#recursivitat">
     Recursivitat
   </a>
@@ -198,32 +203,73 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-4-programacio-modular">Tema 4. Programació Modular</h1>
 <h2 id="introduccio">Introducció</h2>
+<p>Anem a entrar en un món que es basa en la màxima: <strong>"Divideix i venceràs"</strong>. Si fem una analogia amb l'estratègia bèl·lica, podriem dir que en aquells casos que l'enemic és molt gran per a les nostres possibilitats, seria interessant poder, d'alguna forma, dividir-lo en troços més xicotets de tal forma que el pugam afrontar.</p>
+<div class="admonition info">
+<p class="admonition-title">Què és?</p>
 <p>La <strong>programació modular</strong> és un paradigma de programació que consisteix a dividir un programa en <strong>mòduls o subprogrames</strong> per tal de fer-lo més llegible i manejable</p>
-<p>Es presenta històricament com una evolució de la programació estructurada per solucionar problemes de programació més grans i complexos del que aquesta pot resoldre.</p>
-<p>A l'aplicar la programació modular, un problema complex ha de ser dividit en diversos subproblemes més simples, i aquests al seu torn en altres subproblemes més simples encara. Això s'ha de fer fins a obtenir subproblemes prou simples com per poder ser resolts fàcilment amb algun llenguatge de programació. Aquesta tècnica es diu refinament successiu, divideix i venceràs o anàlisi descendent (Top-Down).</p>
-<p>Un 'mòdul' és cadascuna de les parts d'un programa que resol un dels subproblemes en què es divideix el problema complex original. Cadascun d'aquests mòduls té una tasca ben definida i alguns necessiten d'altres per poder operar. En cas que un mòdul necessiti d'un altre, pot comunicar-se amb aquest mitjançant una interfície de comunicació que també ha d'estar ben definida.</p>
-<p>Si bé un mòdul es pot entendre com una part d'un programa en qualsevol de les seves formes i variats contextos, en la pràctica se'ls sol prendre com a sinònims de procediments i funcions. Però no necessària ni estrictament un mòdul és una funció o un procediment, ja que el mateix pot contenir molts d'ells. No s'ha de confondre el terme "mòdul" (en el sentit de programació modular) amb termes com "funció" o "procediment", propis de l'llenguatge que ho suporte.</p>
-<h3 id="abstraccio">Abstracció</h3>
-<p>L'abstracció és la capacitat de, observada una realitat, quedar-se amb allò important o essencial i obviar el detall. Aquest concepte serà un concepte bàsic en l'evolució de la programació estructurada i modular cap a la programació orientada a objectes.
-Per exemple, per saber conduir un cotxe no necessite saber al detall el funcionament del seu motor sino on està l'accelerador, el fre i el volant.</p>
-<p>No hem de pensar mai en un programa com un tot sino com un conjunt de mòduls relacionats entre si on cada mòdul desenvolupa una tasca molt concreta independentment de la resta i que tots junts formen el programa o aplicació.</p>
+<p>També podriem dir que és una evolució de la <strong>programació estructurada</strong> per solucionar problemes de programació més grans i complexos del que aquesta pot resoldre.</p>
+</div>
+<p>En l'aplicar la programació modular, un <strong>problema complex</strong> ha de ser dividit en <strong>diversos subproblemes més simples</strong>, i aquests al seu torn en altres subproblemes més simples encara. Això s'ha de fer fins a obtenir subproblemes prou simples com per poder ser resolts fàcilment amb algun llenguatge de programació. Aquesta tècnica es diu <strong>refinament successiu, divideix i venceràs o anàlisi descendent (Top-Down).</strong></p>
+<p>Un <strong>mòdul</strong> és cadascuna de les parts d'un programa que resol un dels <strong>subproblemes</strong> en què es divideix el problema complex original. Cadascun d'aquests mòduls té <strong>una tasca ben definida</strong> i alguns necessiten d'altres per poder operar. En cas que un mòdul necessiti d'un altre, pot comunicar-se amb aquest mitjançant una interfície de comunicació que també ha d'estar ben definida.</p>
+<p>Si bé un mòdul es pot entendre com una part d'un programa en qualsevol de les seves formes i variats contextos, en la pràctica se'ls sol prendre com a sinònims <strong>de procediments i funcions</strong>. Però no necessària ni estrictament un mòdul és una funció o un procediment, ja que el mateix pot contenir molts d'ells. No s'ha de confondre el terme "mòdul" (en el sentit de programació modular) amb termes com "funció" o "procediment", propis de l'llenguatge que ho suporte.</p>
+<details class="danger"><summary>White Stripes - Little Acorn (lletra) - Intro</summary><p>When problems overwhelm us<br/>
+And sadness smothers us<br/>
+Where do we find the will and the courage to continue?<br/>
+Well, the answer may come in the carrying voice of a friend<br/>
+A chance encounter with a book<br/>
+Or from a personal faith<br/>
+For janette help came from her faith<br/>
+But it also came from a squirrel<br/><br/>
+Shortly after her divorce<br/>
+Janette lost her father<br/>
+Then she lost her job<br/>
+She had mounthing money problems<br/>
+But Janette not only survived<br/>
+She worked her way out of despondency and now she says<br/><br/>
+"Life is good again"<br/>
+How could this happen?<br/>
+She told me that late one autumn day when she was at her lowest<br/>
+She watched a squirrel storing up nuts for the winter<br/>
+One at a time he would take them to the nest<br/>
+And she thought, "If that squirrel can take care<br/>
+of himself with the harsh winter coming on<br/>
+So can I<br/>
+Once I broke my problems into small pieces<br/>
+I was able to carry them<br/>
+Just like those acorns<br/>
+One at a time</p>
+</details>
 <h2 id="caracteristiques">Característiques</h2>
+<p>La <strong>modularitat</strong> en programació es considera la capacitat que té un llenguatge concret en dividir-se en parts o subprogrames (mòduls). Cadascun dels mòduls o parts que formaran part d'aquest programa, tenen una funció particular, són semi-independents i inclús es poden trobar en fitxers físics distints.</p>
+<p>No hem de pensar mai en un programa com un tot sino com un <strong>conjunt de mòduls</strong> relacionats entre si on cada mòdul desenvolupa una tasca molt concreta independentment de la resta i que tots junts formen el programa o aplicació.</p>
+<h4 id="avantatges">Avantatges</h4>
 <ul>
-<li>Es considera moudlaritat com la definició d'un programa com a conjunt de subprogrames (mòduls).</li>
-<li>Cada mòdul té una funció particular, és semi-independent i també pot trobar-se en fitxers de codi distints.</li>
-<li>Avantatges</li>
 <li>El codi resultant és més net i fàcil d'entendre.</li>
 <li>Permet la divisió del treball.</li>
 <li>Es pot provar de forma independent, millorant així la recerca i correcció d'errades.</li>
 <li>Facilita la definició de variables al crear diversos àmbits.</li>
 </ul>
-<p>Depenent del nivell de detall amb el que es tracten els mòduls, podem distindir tres tipus:
-- Llibreries
-- Classes
-- Funcions o mètodes</p>
-<p>Una funció és un troç de codi que realitza una funció concreta i de vegades torna algun valor com a resultat.</p>
+<h4 id="tipus-de-modularitat">Tipus de modularitat</h4>
+<p>Depenent del nivell de detall amb el que es tracten els mòduls, podem distindir tres tipus:</p>
+<ul>
+<li><strong>Llibreries:</strong> conjunt de funcions o de mòduls que comparteixen una finalitat.</li>
+<li><strong>Classes:</strong> les classes són definicions de possibles objectes. Ja ho veurem amb més detall al tema de programació orientada a objectes.</li>
+<li><strong>Funcions o mètodes:</strong> codi que realitza un funció concreta. Una funció o mètode pot estar associat tant a una llibreria com a un classe.</li>
+</ul>
+<p>Una funció és un troç de codi que realitza una funció concreta i de vegades torna algun valor com a resultat. A banda, la tècnica de programació modular també aporta alguns dels fonaments de la programació orientada a objectes com són: <strong>abstracció, encapsulament i modularitat</strong>. </p>
+<p>Veiem amb més detall que és cadascun:</p>
+<h4 id="abstraccio">Abstracció</h4>
+<p>L'abstracció és la capacitat de, observada una realitat, quedar-se amb allò important o essencial i obviar el detall. Aquest concepte serà un concepte bàsic en l'evolució de la programació estructurada i modular cap a la programació orientada a objectes.
+Per exemple, per saber conduir un cotxe no necessite saber al detall el funcionament del seu motor sino on està l'accelerador, el fre i el volant.</p>
+<h4 id="encapsulament">Encapsulament</h4>
+<p>L'encapsulament és el procés d'emmagatzemar en un mateix compartiment els elements d'una abstracció que constitueixen la seua estructura i comportament. En altres paraules, l’ocultació d’informació, de forma que les dades internes d’un mètode, funció o procediment estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
+<p>Per exemple, amb freqüència es desenvolupa codi font o projectes en els que utilitzem la classe out, més concretament el mètode println. Out es troba dins de l’espai de noms (namespace) System i no és més que una classe d’aquest paquet. Dit en altres paraules. Out és una classe i println() és un mètode de la classe Out.</p>
+<h4 id="modularitat">Modularitat</h4>
+<p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben organitzats en mòduls, facilitant així l’encapsulament i abstracció de la informació.</p>
+<p>La <strong>modularitat</strong> permet dividir una aplicació en parts. Aquestes parts han de ser   tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
 <h2 id="funcions-en-java">Funcions en Java</h2>
-<p>Una funció en Java té la següent estructura:</p>
+<p>Una vegada vistos els fonaments de la programació modular, augmentem el nivell de detall. A Java la modularitat s'implementa mitjançant l'ús de funcions. Una funció en Java és la concreció de la tècnica de programació modular, és a dir, un metode o procediment és un fragment de codi que realitza una funció concreta dins del nostre programa. </p>
+<p>Però com s'escriu una funció en Java:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -231,26 +277,32 @@ Per exemple, per saber conduir un cotxe no necessite saber al detall el funciona
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span> <span class="o">[</span><span class="n">modificador</span><span class="o">]</span> <span class="n">tipus</span> <span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span> <span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipo</span> <span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span> <span class="o">[</span><span class="n">modificador</span><span class="o">]</span> <span class="n">tipus</span> <span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span> <span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipo</span> <span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+
     <span class="cm">/*</span>
-<span class="cm">        * Bloque de instrucciones</span>
+<span class="cm">        * Bloc d'instruccions</span>
 <span class="cm">    */</span>
 
     <span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p>Tots aquells elements que estan entre claudators són opcionals
-On: 
-- <strong>Accés:</strong> public, protected, private o package
-- <strong>Modificador:</strong> static o final
-- <strong>Tipo:</strong> int, boolean, float o qualsevol tipus predefinit per l'usuari.
-- <strong>nomFuncio:</strong> cadena alfanumèrica significativa que indique el que fa la funció.
-- <strong>nomArgument:</strong> paràmetres que se li passen a la funció. Aquestos paràmetres funcionaran com variables locals a la funció.</p>
-</blockquote>
-<h3 id="exemples">Exemples</h3>
+<p>Veiem i expliquem que significa cadascun dels elements que formen el codi anterior.</p>
+<div class="admonition info">
+<p class="admonition-title">Què és què</p>
+<p>Tots aquells elements que estan entre claudators són opcionals.<br/>
+On: </p>
+<ul>
+<li><strong>Accés:</strong> public, protected, private o package</li>
+<li><strong>Modificador:</strong> static o final</li>
+<li><strong>Tipo:</strong> int, boolean, float o qualsevol tipus predefinit per l'usuari.</li>
+<li><strong>nomFuncio:</strong> cadena alfanumèrica significativa que indique el que fa la funció.</li>
+<li><strong>nomArgument:</strong> paràmetres que se li passen a la funció. Aquestos paràmetres funcionaran com variables locals a la funció.</li>
+</ul>
+</div>
+<p>Per acabar veiem exemples concrets de com s'implementen les funcions o mètodes en Java. La primera funció el que fa és saludar dient "Hola món" cada vegada que s'utilitza. Las segona diu "Hola" junt amb el nom que es passa com <strong>argument</strong> i finalment la tercera funció el que fa és agafar la cadena de caracters que se li passa per <strong>paràmetre</strong> i la inverteix. Si no entens el que són paràmetres i arguments, no et preocupes, ho veurem al punt següent.</p>
+<div class="admonition example">
+<p class="admonition-title">Funcions en Java</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -266,41 +318,411 @@ On:
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Funció simple </span>
 <span class="kt">void</span> <span class="nf">diguesHola</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola Mon"</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola Mon"</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Funció amb paràmetres</span>
 <span class="kt">void</span> <span class="nf">sayMyName</span> <span class="p">(</span><span class="n">String</span> <span class="n">strNom</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola Mon: "</span> <span class="o">+</span> <span class="n">strNom</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola Mon: "</span> <span class="o">+</span> <span class="n">strNom</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Funció que torna algun valor</span>
 <span class="n">String</span> <span class="nf">canviaNom</span> <span class="p">(</span><span class="n">String</span> <span class="n">strNom</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="n">strNom</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">strNom</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="sobre-els-arguments">Sobre els arguments</h3>
-<p>Hi ha alguns detalls al respeecte dels arguments d'una funció:
-- Una funció pot tindre una quantitat qualsevol de paràmetres, és a dir, poden tindre des de zero fins a un, dos, deu o cent paràmetres. Normalment no sol passar de cinc màxim.
-- Si la funció té més d'un paràmetre cadascun d'ells ha d'anar separat per una coma.
-- Els arguments d'una funció també tenen un tipus i nom que els identifica.
-- El tipus dels arguments pot ser qualsevol i no ha de tindre relació amb el tipus del mètode.
-- Al rebre un argument res ens obliga a fer ús d'aquest dins del mètode.
-- Els paràmetres poden passar-se per referència (es mantenen les modificacions que es facen dins del mètode) o per valor (no afectarien les modificacions a l'element original).</p>
-<h3 id="sobre-el-return">Sobre el return</h3>
-<p>Has de tenir en compte dues coses importants amb la sentència return:
-- Qualsevol instrucció que es trobe després de l'execució de return, <strong>NO</strong> serà executada.
-- És comú trobar funcions amb múltiples sentències return al seu codi, com per exemple en sentencies condicionals, però una vegada el codi execute una sentència return allò que vinga després no s'executarà.
-- El tipus de valor que es torna en una funció ha de conicidir amb el tipus declarat a la funció, és a dir, si es declara int, el valor que ha de tornar ha de ser un nombre enter.
-- En el cas de les funcions que no tornen res (void), també conegues com a procediments, poden usar la sentència return però sense cap valor i només s'usaria per acabar amb l'execució de la funció. </p>
-<h3 id="crida-a-un-funcio">Crida a un funció</h3>
-<p>Per tal de cridar una funció en Java s'ha de fer de la següent forma:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">nombre</span><span class="p">(</span><span class="o">[</span><span class="n">valor</span><span class="p">,</span><span class="o">[</span><span class="n">valor</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">);</span>
+</div>
+<details class="question"><summary>Activitat 401. Modularitza el següent codi</summary><p>El següent codi per a Processing IDE dibuixa una taula de billar amb dues boles negres, dues banques i dues rotges. Modularitza el codi de tal forma que al mètode draw només hi haurà crides a mètodes definits per tu, concretament els següents mètodes: </p>
+<ul>
+<li>dibuixarTaula.</li>
+<li>dibuixarBolesRotges.</li>
+<li>dibuixarBolesNegres.</li>
+<li>dibuixarBolesBlanques.</li>
+</ul>
+<p>Al codi teniu també el <strong>prototip</strong> de la funció dibuixarTaula() com a exemple.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">);</span>
+        <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">rect</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">330</span><span class="p">);</span>
+
+        <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span>
+
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span><span class="mi">330</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span>
+
+        <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span>
+        <span class="n">circle</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">35</span><span class="p">);</span> 
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="nf">dibuixarTaula</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Posa ací el codi que dibuixaria la taula de billar.</span>
+    <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p>Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
+</details>
+<h3 id="parametres-duna-funcio">Paràmetres d'una funció</h3>
+<p>Les <strong>funcions o mètodes</strong> en Java no només serveixen per poder dividir i simplificar el codi sino que també es poden <strong>parametritzar</strong>, és a dir, se li poden passar <strong>arguments</strong> que bé utilitzen en la seua lògica interna o bé modifiquen el comportament del mètode en qüestió.</p>
+<div class="admonition info">
+<p class="admonition-title">Què és un paràmetre ?</p>
+<p>Els <strong>paràmetres</strong> són una forma d'intercanviar informació amb el mètode en qüestió. Poden servir per introduir dades per executar el mètode (entrada) o per obtenir o modficar dades després de la seua execució (eixida).</p>
+</div>
+<p>Hi ha alguns detalls al respecte dels paràmetres d'una funció:</p>
+<ul>
+<li>Una funció pot tindre una <strong>quantitat qualsevol</strong> de paràmetres, és a dir, poden tindre des de zero fins a un, dos, deu o cent paràmetres. </li>
+<li>Encara que poden ser més, normalment no sol passar de <strong>cinc màxim</strong>.</li>
+<li>Si la funció té més d'un paràmetre cadascun d'ells ha d'anar <strong>separat per una coma</strong>.</li>
+<li>Els arguments d'una funció també tenen un <strong>tipus i nom que els identifica</strong>.</li>
+<li>El tipus dels arguments pot ser qualsevol i no ha de tindre relació amb el tipus del mètode.</li>
+<li>Al rebre un argument res ens obliga a fer ús d'aquest dins del mètode.</li>
+<li>Els paràmetres poden passar-se per <strong>referència</strong> (es mantenen les modificacions que es facen dins del mètode) o per <strong>valor</strong> (no afectarien les modificacions a l'element original).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Funció amb paràmetres en Java</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">mostraBola</span><span class="p">(</span><span class="kt">int</span> <span class="n">posX</span><span class="p">,</span> <span class="kt">int</span> <span class="n">posY</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tam</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">127</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">tam</span><span class="p">,</span><span class="n">tam</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>La funció anterior és un mètode, que si fem cas al nom, s'encarrega de dibuixar una bola. Aquesta funció té <strong>tres paràmetres:</strong> </p>
+<ul>
+<li>Un enter anomenat <strong>posX</strong> que representa la posició x on es dibuixarà la boleta</li>
+<li>Un enter amb nom <strong>posY</strong> que indica la posició y en la que es dibuixarà la boleta</li>
+<li>Un últim enter que es diu <strong>tam</strong> que li dirà a la funció quin serà el tamany de la boleta.</li>
+</ul>
+<p>Com ja s'ha comentat anteriorment, és possible passar un o més valors a una funció quan es crida. Recordeu que un valor passat a una funció es diu <strong>argument</strong>. Dins la funció, la variable que rep l'argument es diu <strong>paràmetre</strong>. Els paràmetres es declaren dins dels parèntesis que segueixen a el nom de mètode. </p>
+<p>Un <strong>paràmetre</strong> està dins de l'abast de la seua funció, i a banda de la seva tasca especial de rebre un argument, actua com qualsevol altra <strong>variable local</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Diferència entre paràmetre i argument</p>
+<p>Ací hi ha un exemple simple de l'ús de paràmetres. Dins de la classe ComprobarNumero, el mètode Espar () retorna true si el valor que es passa és parell. Retorna false en cas contrari. Per tant, <strong>esParell()</strong> té un tipus de retorn booleà.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Un exemple per diferenciar paràmetre d'argument</span>
+
+<span class="kd">class</span> <span class="nc">ComprovarNumero</span> <span class="p">{</span>
+
+    <span class="c1">// Retorna true si x es parell</span>
+    <span class="kt">boolean</span> <span class="nf">esParell</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>       
+        <span class="k">if</span> <span class="p">((</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// A la interfície del mètode anterior, entre parentesis ens trobem el PARÀMETRE int x. El nom del paràmetre és 'x'</span>
+    <span class="c1">// mentre que el tipus del paràmetre és enter 'int'</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">ParametroDemo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">ComprobarNumero</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComprobarNumero</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esParell</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1">// 10 és l'argument usat en la crida a la funció esPar</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"10 es par."</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esParell</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>   <span class="c1">// 9 és l'argument en aquesta crida</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"9 es par."</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esParell</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>   <span class="c1">// 8 és l'argument ací</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8 es par."</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Com ja s'ha comentat anteriorment un mètode pot tenir <strong>més d'un paràmetre.</strong> Simplement declare cada paràmetre, separant un el següent amb una coma. Per exemple, la classe Divisor defineix un mètode anomenat esDivisor () que determina si el primer paràmetre és divisor de el segon.</p>
+<div class="admonition example">
+<p class="admonition-title">Funcions amb més d'un paràmetre.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">boolean</span> <span class="nf">esDivisor</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">b</span><span class="o">%</span><span class="n">a</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">DivisorDemo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Divisor</span> <span class="n">x</span> <span class="o">=</span><span class="k">new</span> <span class="n">Divisor</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">esDivisor</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2 es Divisor de 20"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">esDivisor</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3 es Divisor de 20"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<details class="question"><summary>Activitat 402. Executa en Eclipse IDE</summary><p>Passa el codi anterior a Processing i executa'l. A banda del paràmetre 'int x', observa el codi amb atenció i digues si hi ha alguna altra funció amb paràmetres? Quins? </p>
+</details>
+<p>Finalment dir que els arguments poden ser <strong>literals</strong>, que corresponguen amb el tipus del paràmetre, o també poden ser <strong>variables</strong>, però que passa amb les variables que es passen com a <strong>argument</strong> si el paràmetre al qual s'assignen és modificat en temps d'execució? Es modifiquen també? Mirem la diferència entre valor i referència.</p>
+<h3 id="pas-per-valor-i-pas-per-referencia">Pas per valor i pas per referència</h3>
+<p>Entrem en més detall sobre els paràmetres, que passa amb ells quan s'acaba l'execució de la funció o mètode si són variables locals?</p>
+<p>En resum el <strong>pas per valor</strong> significa que al mètode, en la variable de l'argument li <strong>arriba una còpia</strong> del valor en el cas que es tracte d'un tipus de dades <u>primitiu</u>, és a dir, char, int, float, double, etc.. Mentre que el <strong>pas per referència</strong> en canvi, l'argument conté un <strong>punter</strong> amb l'adressa de memòria de la variable en qüestió. </p>
+<div class="admonition info">
+<p class="admonition-title">Resum valor vs referència</p>
+<ul>
+<li><strong>Pas per valor:</strong> Es crea una còpia local de la variable dins de la funció. 
+    <!---<img alt="Pas per valor" src="assets/Tema4/PasxValor.png" />---></li>
+<li><strong>Pas per referència:</strong> Es maneja directament la variable, els canvis realitzats dins de la funció li afectaran també fora.
+    <!----<img alt="Pas per referencia" src="assets/Tema4/PasxReferencia.png" />---></li>
+</ul>
+</div>
+<p>En resum, si es passa un argument per còpia, tot alló que es faja al paràmetre dins del codi de la funció no afectarà a l'original mentre que si, per contra, l'argument es passa per referència, totes aquelles accions que es realitzen sobre el paràmetre li afectaran a l'argument original.</p>
+<p><center>
+<img alt="Paràmetres" src="../assets/Tema4/ReferenciaValor.gif"/>
+</center></p>
+<p>Fixa't en el següent codi:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Valors de x i y abans de la modificació: "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" x = "</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s">" ; y = "</span> <span class="o">+</span> <span class="n">y</span> <span class="p">);</span>
+        <span class="n">modificaTiupsPrimitius</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Valors de x i y després de la modificació: "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" x = "</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s">" ; y = "</span> <span class="o">+</span> <span class="n">y</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">modificaTiupsPrimitius</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<details class="question"><summary>Activitat 403. Pas per valor i pas per referència I</summary><p>Copia el codi anterior en Eclipse IDE i respon a les següents qüestions:</p>
+<ul>
+<li>Quins són els paràmetres i de quin tipus són els de la funció modificaTiupsPrimitius?</li>
+<li>Quantes vegades es crida a la funció modificaTiupsPrimitius?</li>
+<li>Quins argument es passen a cada crida?</li>
+<li>Què passa i per què a l'executar-se el codi anterior?</li>
+<li>Estan passant-se els arguments per valor o per referència?</li>
+</ul>
+</details>
+<p>Ara mira el següent codi:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PasReferencia</span> <span class="p">{</span>
+
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Persona</span> <span class="n">persona</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Persona</span><span class="p">();</span>
+                <span class="n">modificaPersona</span><span class="p">(</span><span class="n">persona</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nom: "</span> <span class="o">+</span> <span class="n">persona</span><span class="p">.</span><span class="na">strNom</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Cognom: "</span> <span class="o">+</span> <span class="n">persona</span><span class="p">.</span><span class="na">strCognom</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Edat: "</span> <span class="o">+</span> <span class="n">persona</span><span class="p">.</span><span class="na">edat</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="kd">static</span> <span class="kt">void</span> <span class="nf">modificaPersona</span><span class="p">(</span><span class="n">Persona</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">p</span><span class="p">.</span><span class="na">strNom</span> <span class="o">=</span> <span class="s">"Manolo"</span><span class="p">;</span>
+                <span class="n">p</span><span class="p">.</span><span class="na">strCognom</span> <span class="o">=</span> <span class="s">"Unodos"</span><span class="p">;</span>
+                <span class="n">p</span><span class="p">.</span><span class="na">edat</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Persona</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">strNom</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">strCognom</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">edat</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<details class="question"><summary>Activitat 404. Pas per valor i pas per referència II</summary><p>Copia el codi anterior i respon a les següents qüestions:</p>
+<ul>
+<li>Quins són els paràmetres i de quin tipus són els de la funció modificaPersona?</li>
+<li>Quantes vegades es crida a la funció modificaPersona?</li>
+<li>Quins argument es passen a cada crida?</li>
+<li>Què passa i per què a l'executar-se el codi anterior?</li>
+<li>Estan passant-se els arguments per valor o per referència?</li>
+</ul>
+</details>
+<h3 id="sobre-el-return">Sobre el return</h3>
+<p>Com ja hauràs vist, hi ha algunes funcions que comencen per <strong>void</strong> i altres que tenen altres tipus... açò <strong>el que torna</strong> la funció. Bàsicament la diferència entre una <strong>funció i un procediment</strong> des del punt de vista conceptual és si el mètode torna o no algun valor. Si torna és un procediment sino és una funció, però aquesta és només un qüestió conceptual ja que des del punt de vista tècnic (del codi) no hi practicament cap diferència entre funció i procediment a banda del fet que retornen un valor en Java.</p>
+<p>Has de tenir en compte dues coses importants amb la sentència return:</p>
+<ul>
+<li>Qualsevol instrucció que es trobe després de l'execució de return, <strong>NO serà executada.</strong></li>
+<li>És comú trobar funcions amb <strong>múltiples sentències return</strong> al seu codi, com per exemple en sentencies condicionals, però una vegada el codi execute una sentència return allò que vinga després no s'executarà.</li>
+<li>El <strong>tipus de valor que es torna</strong> en una funció ha de conicidir amb el tipus declarat a la funció, és a dir, si es declara int, el valor que ha de tornar ha de ser un nombre enter.</li>
+<li>En el cas de les funcions que no tornen res <strong>(void)</strong>, també conegues com a procediments, poden usar la sentència <strong>return però sense cap valor</strong> i només s'usaria per acabar amb l'execució de la funció. </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Funcions i Procediments</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>        
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">dibuixaSol</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">abs</span> <span class="o">=</span> <span class="n">calculaAbsolut</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"Abs: "</span> <span class="o">+</span> <span class="n">abs</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">dibuixaSol</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">stroweWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">circle</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">calculaAbsolut</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<details class="question"><summary>Activitat 405. Revisa conceptes</summary><p>És el moment de revisar tots els conceptes vistos fins ara que no són pocs. Revisa el codi anterior i respon a les segÚents qüestions:
+    - Quants mètodes hi han al codi?
+    - Quin nom tenen?
+    - Escriu el prototip (interfície) de cadascun dels mètodes que has trobat.
+    - Per a cada mètode respon: quants paràmetres tenen? Quin és el nom i tipus dels paràmetres?
+    - Quins dels mètodes que has trobat són funcions i quins procediments? Raona la resposta.</p>
+</details>
 <h3 id="funcions-declaracio-i-crida">Funcions: declaració i crida</h3>
+<p>Hem vist ja la gran part tècnica de com funcionen els mètodes en Java pel que fa a la part de sintaxis i les diferents paraules claus que s'utilitzen. En altres paraules, ja sabem construir funcions i procediments tant des del <strong>punt de vista tècnic</strong> (com és construiexen), com des del <strong>punt de vista semàntic</strong> (què signifiquen) però, com fem ús d'aquestes funcions o procediments?</p>
+<p>Primer cal que distinguim entre la declaració d'un mètode i la crida a aquest.</p>
+<ul>
+<li><strong>Declaració d'un mètode:</strong> definició del procediment o funció on s'inclou tant la capçalera (interfície o prototip) i el cos (codi de la funció).</li>
+<li><strong>Crida a un mètode:</strong> ús del mètode per mitjà d'una crida a aquest utilitzant el prototip i els paràmetres en cas de tenir-los.</li>
+<li><strong>Prototip, interfície o signatura:</strong> la signatura d'un mètode és la combinació de nom, tipus de paràmetres, nom d'aquestos i ordre.</li>
+</ul>
+<p>Per tal d'utilitzar una funció o mètode en Java hem de <strong>cridar</strong> a eixa funció. Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -354,127 +776,9 @@ On:
 <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">suma</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 1</strong><br/>
-Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
-</blockquote>
-<h3 id="detalls-per-invocar-funcions">Detalls per invocar funcions</h3>
-<ul>
-<li>
-<p>No importa si es tracta d’un mètode en Java o d’una funció o d’un mètode, només els debats ocupen d’enviar els paràmetres de la forma correcta per invocar-los. </p>
-</li>
-<li>
-<p>El nombre ha de coincidir exactament al moment d’invocar, és l’única forma d’identificar-lo.L’ordenació dels paràmetres i el tipus ha de coincidir. </p>
-</li>
-<li>
-<p>Cal tindre cura en el moment d'enviar els paràmetres, hem de fer-ho en el mateix ordre en que varen ser declarats i han de ser del mateix tipus.</p>
-</li>
-<li>
-<p>Cada paràmetre enviat també va separat per comes.</p>
-</li>
-<li>
-<p>Si una funció no rep paràmetres, simplement no posem res a l'interior de la parèntesi, però sempre debem posar la parèntesi.</p>
-</li>
-<li>
-<p>Invocar una funció sigue sentint una sentència comuna i corrent en Java, així que ha de finalitzar amb ';' com sempre.</p>
-</li>
-<li>
-<p>El valor retornat per un mètode o funció pot ser assignat a una variable del mateix tipus, però no podem fer això amb un procediment, no es pot retornar valor algú.</p>
-</li>
-<li>
-<p>Una funció pot llamar a una altra dins de sí mateixa o fins i tot pot ser enviada com a paràmetre a una altra (mira el següent exemple).</p>
-</li>
-</ul>
-<h3 id="parametres-duna-funcio">Paràmetres d'una funció</h3>
-<p>És possible passar un o més valors a una funció quan es crida. Recordeu que un valor passat a una funció es diu <strong>argument</strong>. Dins la funció, la variable que rep l'argument es diu <strong>paràmetre</strong>. Els paràmetres es declaren dins dels parèntesis que segueixen a el nom de mètode. La sintaxi de declaració de paràmetre és la mateixa que la utilitzada per a les variables.</p>
-<p>Un paràmetre està dins de l'abast de la seua funció, i a banda de la seva tasca especial de rebre un argument, actua com qualsevol altra variable local.</p>
-<p>Ací hi ha un exemple simple de l'ús de paràmetres. Dins de la classe ComprobarNumero, el mètode Espar () retorna true si el valor que es passa és parell. Retorna false en cas contrari. Per tant, Espar () té un tipus de retorn booleà.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Un exemple simple de l'ús de paramètres</span>
-<span class="kd">class</span> <span class="nc">ComprovarNumero</span> <span class="p">{</span>
-    <span class="c1">// Retorna true si x es parell</span>
-    <span class="kt">boolean</span> <span class="nf">esParell</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
-        <span class="k">if</span> <span class="p">((</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">ParametroDemo</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ComprobarNumero</span> <span class="n">e</span><span class="o">=</span><span class="k">new</span> <span class="n">ComprobarNumero</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esPar</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"10 es par."</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esPar</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"9 es par."</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">esPar</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8 es par."</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<blockquote>
-<p><strong>Activitat 2</strong><br/>
-Passa el codi anterior a Processing i executa'l.</p>
-</blockquote>
-<p>Un mètode pot tenir més d'un paràmetre. Simplement declare cada paràmetre, separant un el següent amb una coma. Per exemple, la classe Divisor defineix un mètode anomenat esDivisor () que determina si el primer paràmetre és divisor de el segon.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Un exemple sempre de l'ús de paramètres</span>
-
-<span class="kd">class</span> <span class="nc">Divisor</span> <span class="p">{</span>
-
-    <span class="kt">boolean</span> <span class="nf">esDivisor</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
-        <span class="k">if</span> <span class="p">((</span><span class="n">b</span><span class="o">%</span><span class="n">a</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="kd">class</span> <span class="nc">DivisorDemo</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Divisor</span> <span class="n">x</span> <span class="o">=</span><span class="k">new</span> <span class="n">Divisor</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">esDivisor</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2 es Divisor de 20"</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">esDivisor</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3 es Divisor de 20"</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-Depenent del tipus de dada que enviem a la funció com a argument, podem diferenciar dos comportaments: </p>
-<ul>
-<li><strong>Pas per valor:</strong> Es crea una còpia local de la variable dins de la funció. </li>
-</ul>
-<p><img alt="Pas per valor" src="../assets/Tema4/PasxValor.png"/></p>
-<ul>
-<li><strong>Pas per referència:</strong> Es maneja directament la variable, els canvis realitzats dins de la funció li afectaran també fora.</li>
-</ul>
-<p><img alt="Pas per referencia" src="../assets/Tema4/PasxReferencia.png"/></p>
-<blockquote>
-<p><strong>Activitat 3</strong><br/>
-Passa el següent codi a processing, executa'l i raona el que està passant.</p>
-</blockquote>
+<details class="question"><summary>Activitat 406. Copia i raona el codi anterior</summary><p>Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
+</details>
+<details class="question"><summary>Activitat 407. Crida als mètodes de forma correcta</summary><p>A continuació vos he deixat un codi amb 4 funcions. Observeu-les i després feu ús de totes elles des de la funció draw.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -500,7 +804,88 @@ Passa el següent codi a processing, executa'l i raona el que està passant.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Escriu el codi de les funcions ací.</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">fesAlgo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"Algo faré"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">f2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">"El nombre és parell"</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">"El nombre no és parell"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">funcio3</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"El caracter és "</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">" mentre que el número és: "</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">funcio4</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">String</span> <span class="nf">funcio5</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">""</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="s">"Buida"</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">str</span><span class="p">.</span><span class="na">toUpper</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<h3 id="detalls-per-cridar-funcions">Detalls per cridar funcions</h3>
+<ul>
+<li>El <strong>nom ha de coincidir</strong> exactament al moment de cridar, és l’única forma d’identificar-lo.</li>
+<li><strong>L’ordre dels paràmetres</strong> i el tipus ha de coincidir. </li>
+<li>Cal tindre cura en el moment d'enviar els paràmetres, hem de fer-ho en el <strong>mateix ordre</strong> en que varen ser declarats i han de ser del <strong>mateix tipus</strong>.</li>
+<li>Cada paràmetre enviat també va separat per comes.</li>
+<li>Si una funció <strong>no rep paràmetres</strong>, simplement no posem res a l'interior de la parèntesi, però sempre debem posar la parèntesi.</li>
+<li>Invocar una funció segueix sent <strong>una sentència normal</strong> i corrent en Java, així que ha de finalitzar amb ';' com sempre.</li>
+<li>El <strong>valor retornat</strong> per un mètode o funció pot ser assignat a una variable del <strong>mateix tipus</strong>.</li>
+<li>Si es tracta d'un <strong>procediment</strong> no es pot retornar valor algú.</li>
+<li>Una funció pot <strong>cridar a una altra dins</strong> de sí mateixa o fins i tot pot ser enviada com a paràmetre a una altra (mira el següent exemple).</li>
+</ul>
+<details class="question"><summary>Activitat 408. Copia i raona el següent codi</summary><p>Passa el següent codi a processing, executa'l i raona el que està passant. Quin altre nom alternatiu li podriem posar a la funció per tal que aquest siga més significatiu?</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
     <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="kt">int</span> <span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
@@ -517,9 +902,7 @@ Passa el següent codi a processing, executa'l i raona el que està passant.</p>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-
     <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
-
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">funcio</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
@@ -528,10 +911,8 @@ Passa el següent codi a processing, executa'l i raona el que està passant.</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 4</strong><br/>
-Escriu el següent codi en Processing i executa'l</p>
-</blockquote>
+</details>
+<details class="question"><summary>Activitat 409. Executa el codi en Processing IDE</summary><p>Escriu el següent codi en Processing i executa'l. </p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -564,64 +945,62 @@ Escriu el següent codi en Processing i executa'l</p>
 <span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Variables globals</span>
 <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
 <span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
-  <span class="n">x</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>
-  <span class="n">y</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-  <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
-  <span class="c1">// Dibuixem la cara cercle</span>
-  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-  <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-  <span class="n">circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+    <span class="c1">// Dibuixem la cara cercle</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 
-  <span class="c1">// Dibuixem ulls</span>
-  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-  <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-  <span class="n">circle</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
-  <span class="n">circle</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
-  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-  <span class="n">point</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
-  <span class="n">point</span><span class="p">(</span><span class="mi">168</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
+    <span class="c1">// Dibuixem ulls</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">circle</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">circle</span><span class="p">(</span><span class="mi">165</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    <span class="n">point</span><span class="p">(</span><span class="mi">133</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
+    <span class="n">point</span><span class="p">(</span><span class="mi">168</span><span class="p">,</span><span class="mi">110</span><span class="p">);</span>
 
-  <span class="c1">// Dibuixem la boca</span>
-  <span class="n">noFill</span><span class="p">();</span>
-  <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-  <span class="n">arc</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PI</span><span class="p">);</span>
+    <span class="c1">// Dibuixem la boca</span>
+    <span class="n">noFill</span><span class="p">();</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">arc</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PI</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
 Aquest codi mostra el següent dibuix</p>
 <p><img alt="Activitat 4" src="../assets/Tema4/Activitat4.png"/></p>
-<blockquote>
-<p><strong>Activitat 5. Divideix-lo en funcions.</strong><br/>
-Separa el codi en funcions, has d'afegir les funcions dibuixaUlls i dibuixaBoca seguint els prototips que et mostre a continuació.</p>
-</blockquote>
+</details>
+<details class="question"><summary>Activitat 410. Divideix-lo en funcions</summary><p>Separa el codi en funcions, has d'afegir les funcions dibuixaCara, dibuixaUlls i dibuixaBoca seguint els prototips que et mostre a continuació.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de funcions</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de funcions</span>
+<span class="kt">void</span> <span class="nf">dibuixaCara</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">dibuixaUlls</span><span class="p">();</span>
 <span class="kt">void</span> <span class="nf">dibuixaBoca</span><span class="p">();</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 6. Paràmetres coordenades.</strong><br/>
-Modifica el codi anterior per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dues funcions: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenads x i y i a partir d'aquestes ha de dibuixar els ulls i la boca on corresponga.</p>
-</blockquote>
+</details>
+<details class="question"><summary>Activitat 411. Paràmetres coordenades</summary><p>Modifica el codi anterior per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dues funcions: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenads x i y i a partir d'aquestes ha de dibuixar els ulls i la boca on corresponga.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de les funcions</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Prototips de les funcions</span>
+<span class="kt">void</span> <span class="nf">dibuixaCara</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">dibuixaUlls</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">dibuixaBoca</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 7</strong><br/> 
-Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de quedar el codi de la funció draw</p>
-</blockquote>
-<p><img alt="Activitat 7" src="../assets/Tema4/Activitat7.png"/></p>
+</details>
+<details class="question"><summary>Activitat 412. Dibuixar cares - Ampliació</summary><p>Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de quedar el codi de la funció draw</p>
+<p><center><img alt="Activitat 7" src="../assets/Tema4/Activitat7.png"/></center></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -695,10 +1074,8 @@ Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<blockquote>
-<p><strong>Activitat 8. Dibuixar peça domino.</strong><br/>
-Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
-</blockquote>
+</details>
+<details class="question"><summary>Activitat 413. Dibuixar peça domino</summary><p>Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -720,112 +1097,19 @@ Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatg
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><img alt="Activitat 8" src="../assets/Tema4/Activitat8.png"/></p>
-<blockquote>
-<p><strong>Activitat 9</strong><br/>
-Què passa si en lloc de 5 i 4 pasarem 6 i 6 per paràmetre? Dibuixa el que esperes que dibuixe? Fes les modficacions necessàries al codi per tal que funcione com s'espera. 
-<strong>Ampliació:</strong> fes que el teu algorisme mostre totes les peces del dominó ordenades en files i columnes.</p>
-</blockquote>
-<h3 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h3>
-<p>Quan passem un tipus primitiu a una funció, es passa per valor. Però quan vam passar un objecte a una funció, la situació canvia dràsticament, perquè els objectes es passen pel que efectivament és anomenat, <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència. Bàsicament, la funció no pot canviar un paràmetre, però la funció pot demanar-li a l'paràmetre que es canviï a si mateix cridant a algun mètode dins d'ell.</p>
-<p>A l'crear una variable d'un tipus de classe (un objecte), només vam crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
-<p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús de trucada per referència.</p>
-<p>Els canvis en l'objecte dins el mètode es reflecteixen en l'objecte utilitzat com a argument.</p>
+<p><center><img alt="Activitat 8" src="../assets/Tema4/Activitat8.png"/></center></p>
+</details>
+<details class="question"><summary>Activitat 414. Dibuixar peça dominó parametritzada</summary><p>Què passa si en lloc de 5 i 4 pasarem 6 i 6 per paràmetre? Dibuixa el que esperes que dibuixe? </p>
+<p>Fes les modficacions necessàries al codi per tal que funcione com s'espera. </p>
+<p><strong>Ampliació:</strong> fes que el teu algorisme mostre totes les peces del dominó ordenades en files i columnes.</p>
+</details>
+<h2 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h2>
+<p>Quan passem un <strong>tipus primitiu</strong> a una funció, es passa <strong>per valor</strong>. Però quan vam passar <strong>un objecte</strong> a una funció, la situació canvia dràsticament, perquè els objectes es passen <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència.</p>
+<p>A l'crear una variable d'un tipus de classe <strong>(un objecte)</strong>, només varem crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
+<p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús del <strong>pas per referència.</strong></p>
+<p><strong>IMPORTANT:</strong> Els canvis en l'objecte dins el mètode es reflecteixen en l'objecte utilitzat com a argument.</p>
+<p>Però vejam un exemple per tal que quede més clar:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Programa Java per demostrar el pas d'objectes a funcions</span>
-<span class="kd">class</span> <span class="nc">Demo</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
-    <span class="n">Demo</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Torna true si els valors són els mateixos</span>
-    <span class="kt">boolean</span> <span class="nf">equalTo</span><span class="p">(</span><span class="n">Demo</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span> <span class="o">==</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">obj</span><span class="p">.</span><span class="na">b</span> <span class="o">==</span> <span class="n">b</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
-        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Demo</span> <span class="n">ob1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
-            <span class="n">Demo</span> <span class="n">ob2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
-            <span class="n">Demo</span> <span class="n">ob3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<p>Eixida</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">obj1</span> <span class="o">==</span> <span class="n">obj2</span><span class="p">:</span> <span class="kc">true</span>
-<span class="n">obj1</span> <span class="o">==</span> <span class="n">obj3</span><span class="p">:</span> <span class="kc">false</span>
-</code></pre></div>
-</td></tr></table>
-<p>Explicació en imatges:
-1. Es creen tres objectes:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Demo</span> <span class="n">ob1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
-<span class="n">Demo</span> <span class="n">ob2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
-<span class="n">Demo</span> <span class="n">ob3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
-<p><img alt="Pas 1" src="../assets/Tema4/Explicacio1.png"/></p>
-<ol>
-<li>Des del costat de la funció, es declara una referència de tipus Demo amb un objecte obj i s'assigna inicialment null. </li>
-</ol>
-<p><img alt="Pas 2" src="../assets/Tema4/Explicacio2.png"/></p>
-<ol>
-<li>Com cridem al mètode equalTo, la referència 'obj' s'assignarà a l'objecte que es passa com a paràmetre, és a dir, 'obj' es referirà a 'obj2' quan la següent sentència s'execute.</li>
-</ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
-</code></pre></div>
-</td></tr></table>
-<p><img alt="Pas 3" src="../assets/Tema4/Explicacio3.png"/></p>
-<ol>
-<li>Ara com podem observar, es crida al mètode equalTo sobre 'obj1' i 'obj' fa referència a 'obj2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si (condició) és veritat, aleshores tornarà true.</li>
-</ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span> <span class="o">==</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">obj</span><span class="p">.</span><span class="na">b</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<ol>
-<li>De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència.</li>
-</ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
-</code></pre></div>
-</td></tr></table>
-<p><img alt="Pas 4" src="../assets/Tema4/Explicacio4.png"/></p>
-<ol>
-<li>Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</li>
-</ol>
-<h2 id="recursivitat">Recursivitat</h2>
-<blockquote>
-<p>En general, la recursivitat és el procés de definir alguna cosa en termes de si mateix i és una cosa semblant a una definició circular. El component clau d'un mètode recursiu és una declaració que executa una crida a si mateix. La recursivitat és un poderós mecanisme de control.</p>
-</blockquote>
-<p>L'exemple clàssic de recursivitat és el càlcul de l'factorial d'un nombre. El factorial d'un nombre N és el producte de tots els nombres enters que es trobin entre 1 i N. Per exemple, el factorial de 3 és 1 × 2 × 3, és a dir, és de 6.</p>
-<p>El següent programa mostra una forma recursiva de calcular el factorial d'un nombre. Per a propòsits de comparació, també s'inclou un equivalent no recursiu (iteratiu).</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -855,25 +1139,132 @@ Què passa si en lloc de 5 i 4 pasarem 6 i 6 per paràmetre? Dibuixa el que espe
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Un simple programa de recursividad</span>
-<span class="kd">class</span> <span class="nc">Factorial</span>
-<span class="p">{</span>
-    <span class="c1">// Esto es un método recursivo</span>
-    <span class="kt">int</span> <span class="nf">facR</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-        <span class="kt">int</span> <span class="n">resultado</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">resultado</span><span class="o">=</span><span class="n">facR</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">resultado</span><span class="p">;</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Programa Java per demostrar el pas d'objectes a funcions</span>
+
+<span class="c1">// Classe Demo</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">b</span><span class="p">;</span>
+
+    <span class="c1">// Constructor de la classe</span>
+    <span class="n">Demo</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="c1">// Esto es un equivalente iterativo</span>
-    <span class="kt">int</span> <span class="nf">facI</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-        <span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="n">resultado</span><span class="p">;</span>
-        <span class="n">resultado</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">t</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">t</span><span class="o">++</span><span class="p">)</span> <span class="n">resultado</span> <span class="o">*=</span><span class="n">t</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">resultado</span><span class="p">;</span>
+
+    <span class="c1">// Torna true si els valors són els mateixos</span>
+    <span class="kt">boolean</span> <span class="nf">equalTo</span><span class="p">(</span><span class="n">Demo</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="na">a</span> <span class="o">&amp;&amp;</span> <span class="n">obj</span><span class="p">.</span><span class="na">b</span> <span class="o">==</span> <span class="k">this</span><span class="p">.</span><span class="na">b</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-    <span class="kd">class</span> <span class="nc">Recursividad</span><span class="p">{</span>
+
+<span class="c1">// Classe Test: que usarem per provar la classe Demo</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Demo</span> <span class="n">ob1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>       <span class="c1">// Creem un nou objecte ob1 de la classe Demo amb valors 100 i 22</span>
+        <span class="n">Demo</span> <span class="n">ob2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>       <span class="c1">// Creem un nou objecte ob2 de la classe Demo amb valors 100 i 22</span>
+        <span class="n">Demo</span> <span class="n">ob3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>        <span class="c1">// Creem un nou objecte ob3 de la classe Demo amb valors -1 i -1</span>
+
+        <span class="c1">// Comparem els objectes entre ells</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Eixida</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">obj1</span> <span class="o">==</span> <span class="n">obj2</span><span class="p">:</span> <span class="kc">true</span>
+<span class="n">obj1</span> <span class="o">==</span> <span class="n">obj3</span><span class="p">:</span> <span class="kc">false</span>
+</code></pre></div>
+</td></tr></table>
+<p>Explicació en imatges:</p>
+<p><strong>1.Primer:</strong> S'instancien els tres objectes ob1, ob2 i ob3.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Demo</span> <span class="n">ob1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
+<span class="n">Demo</span> <span class="n">ob2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
+<span class="n">Demo</span> <span class="n">ob3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p><center><img alt="Pas 1" src="../assets/Tema4/Explicacio1.png"/></center></p>
+<p><strong>2. Segon:</strong> En la funció <strong>equalTo</strong>, es declara una referència de classe Demo amb un objecte <strong>obj</strong> i s'assigna inicialment <strong>null</strong>. </p>
+<p><center><img alt="Pas 2" src="../assets/Tema4/Explicacio2.png"/></center></p>
+<p><strong>3. Tercer:</strong> En la primera crida al mètode <strong>equalTo</strong> (ob1.equalTo(ob2)), al paràmetre obj del prototip del mètode, se li passa l'argument <strong>'ob2'</strong>, és a dir, 'obj' passa a ser una referència a 'ob2' quan la següent sentència s'execute.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
+</code></pre></div>
+</td></tr></table>
+<p><center><img alt="Pas 3" src="../assets/Tema4/Explicacio3.png"/></center></p>
+<p><strong>4. Quart:</strong> Ara com podem observar, es crida al mètode equalTo sobre 'ob1' i 'obj' fa referència a 'ob2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si la condició és veritat, tornarà <strong>true</strong>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span> <span class="o">==</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">obj</span><span class="p">.</span><span class="na">b</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>5. Cinqué:</strong> De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència com s'ha fet al pas tercer.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span> <span class="o">+</span> <span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
+</code></pre></div>
+</td></tr></table>
+<p><center><img alt="Pas 4" src="../assets/Tema4/Explicacio4.png"/></center></p>
+<p><strong>6. Sisé:</strong> Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</p>
+<details class="question"><summary>Activitat 415. Copia el codi</summary><p>Copia i executa el codi anterior en Eclipse IDE</p>
+</details>
+<h2 id="recursivitat">Recursivitat</h2>
+<div class="admonition info">
+<p class="admonition-title">Definició</p>
+<p>En general, la recursivitat és el procés de definir alguna cosa en termes de si mateix i és una cosa semblant a una definició circular. El component clau d'un mètode recursiu és una declaració que executa una crida a si mateix. La recursivitat és un poderós mecanisme de control.</p>
+</div>
+<p>L'exemple clàssic de recursivitat és el càlcul del <strong>factorial</strong> d'un nombre. El factorial d'un nombre N és el producte de tots els nombres enters que es troben entre 1 i N. Per exemple, el factorial de 3 és 1 × 2 × 3, és a dir, és de 6.</p>
+<p>El següent programa mostra una forma recursiva de calcular el factorial d'un nombre. Per a propòsits de comparació, també s'inclou un equivalent no recursiu (iteratiu).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Un simple programa de recursivitat</span>
+<span class="kd">class</span> <span class="nc">Factorial</span>
+<span class="p">{</span>
+    <span class="c1">// Aquest mètode és recursiu</span>
+    <span class="kt">int</span> <span class="nf">facR</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">resultat</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">resultat</span><span class="o">=</span><span class="n">facR</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">resultat</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// El seu equivalent iteratiu</span>
+    <span class="kt">int</span> <span class="nf">facI</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="n">resultat</span><span class="p">;</span>
+        <span class="n">resultat</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">t</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">t</span><span class="o">++</span><span class="p">)</span> <span class="n">resultat</span> <span class="o">*=</span><span class="n">t</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">resultat</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+    <span class="kd">class</span> <span class="nc">Recursivitat</span><span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Factorial</span> <span class="n">f</span><span class="o">=</span> <span class="k">new</span> <span class="n">Factorial</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Factorial utlitzant un mètode recursiu:"</span><span class="p">);</span>
@@ -888,7 +1279,7 @@ Què passa si en lloc de 5 i 4 pasarem 6 i 6 per paràmetre? Dibuixa el que espe
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-Eixida
+<p>Eixida</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -903,12 +1294,15 @@ Eixida
 <span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">és</span><span class="p">:</span> <span class="mi">6</span>
 <span class="n">El</span> <span class="n">factorial</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">és</span><span class="p">:</span> <span class="mi">720</span>
 </code></pre></div>
-</td></tr></table></p>
-<h3 id="stack-overflow">Stack Overflow</h3>
+</td></tr></table>
+<!--### Stack Overflow-->
+<div class="admonition danger">
+<p class="admonition-title">Stack Overflow</p>
 <p>Les versions recursives de moltes rutines poden executar-se una mica més lentament que els seus equivalents iteratius causa de la sobrecàrrega addicional de les trucades a mètodes addicionals. Massa crides recursives a un mètode podrien causar un desbordament de la pila.</p>
-<p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que la pila s 'ha esgotat. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una excepció. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torni boja.</p>
-<p>El principal avantatge de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+</div>
+<p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que <strong>la pila s'acabe esgotant</strong>. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una <strong>excepció</strong>. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torne loca.</p>
+<p>El <strong>principal avantatge</strong> de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -925,7 +1319,7 @@ Eixida
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-En l'exemple anterior: Si es diu a fact (10), cridarà a fac (9), fact (8), fact (7), etc., però el nombre mai arribarà a 100. Per tant, no s'assoleix la condició base. Si la memòria s'esgota amb aquests mètodes en la pila, provocarà un error de desbordament de pila.</p>
+<p>En l'exemple anterior: Si es diu a fact (10), cridarà a fact(9), fact(8), fact(7), etc., però el nombre mai arribarà a 100. Per tant, no s'assoleix la condició base. Si la memòria s'esgota amb aquests mètodes en la pila, provocarà un error de <strong>desbordament de pila</strong>.</p>
 <h2 id="la-api-de-java">La API de Java</h2>
 <p>L'API Java és una interfície de programació d'aplicacions (API, per les seves sigles de l'anglès: Application Programming Interface) proveïda pels creadors de el llenguatge de programació Java, que dóna als programadors els mitjans per desenvolupar aplicacions Java.</p>
 <p>Com el llenguatge Java és un llenguatge orientat a objectes, l'API de Java proveeix d'un conjunt de classes utilitàries per a efectuar tota mena de tasques necessàries dins d'un programa.</p>

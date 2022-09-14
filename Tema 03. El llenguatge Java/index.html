@@ -6,16 +6,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.0.7" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.1" name="generator"/>
 <title>3.- El llenguatge Java - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.c772ddf0.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.9299cb39.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 </head>
 <body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -49,8 +50,6 @@
           </span>
 </div>
 </div>
-</div>
-<div class="md-header__options">
 </div>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
@@ -1246,9 +1245,7 @@ font d'errors.</p>
 <li>Quan assignem el valor de un tipus de dades més menut a un tipus de dades més gran.</li>
 <li>Tipus de dades ordenats per tamany: <strong>byte &gt; short &gt; int &gt; long &gt; float &gt; dobule</strong></li>
 </ul>
-<p>Per exemple, en Java, els tipus de dades numèrics són compatibles entre sí, però no s'admet la conversió automàtica de tipus numèric a char o boolean. A més a més, char i boolean no són compatibles entre ells.</p>
-<div class="admonition example">
-<p class="admonition-title">Conversió automàtica en Java</p>
+<p>Per exemple, en Java, els tipus de dades numèrics són compatibles entre sí, però no s'admet la conversió automàtica de tipus numèric a char o boolean. A més a més, char i boolean no són compatibles entre ells. Mira el codi a continuació on es produeix una conversió automàtica en Java.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1282,7 +1279,6 @@ font d'errors.</p>
     <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="conversio-explicita-de-tipus-o-casting">Conversió explicita de tipus o casting</h4>
 <p>Si volem assignar un valor de tipus de dades més gran a un tipus de dades més xicotet, farem un <strong>casting</strong> o el que també es coneix com conversio de tipus explicit.</p>
 <ul>
@@ -1290,8 +1286,7 @@ font d'errors.</p>
 <li>char i int no són compatibles entre ells i donarà un error de compilació.</li>
 <li>On necessitarem la conversió explicita: <strong>double &gt; float &gt; long &gt; int &gt; short &gt; byte</strong></li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Tipus incompatibles</p>
+<p>Mira el següent codi on hi ha un cas de tipus incompatibles.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1311,10 +1306,7 @@ font d'errors.</p>
     <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
-<p>L'exemple anterior donaria un error a la línia 7 diguent que no es pot convertir d'int a char. Per tant com podriem fer aquesta conversió explicita?</p>
-<div class="admonition example">
-<p class="admonition-title">Conversió explicita</p>
+<p>L'exemple anterior donaria un error a la línia 7 diguent que no es pot convertir d'int a char. Per tant com podriem fer aquesta conversió explicita?. Una possible forma d'evitar aquestos casos de tipus incompatibles és la conversió explicita, on hem d'indicar al compilador especificament a quin tipus volem convertir.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1356,7 +1348,6 @@ font d'errors.</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <p>La eixida de l'execució d'aquest codi seria: </p>
 <ul>
 <li>Valor Double 100.04</li>
@@ -1687,21 +1678,18 @@ font d'errors.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">expressio1</span> <span class="o">?</span> <span class="n">expressio2</span> <span class="p">:</span> <span class="n">expressio</span> <span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a <strong>true</strong>, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a <strong>false</strong>, s'executaria l'expressió 2.</p>
-<div class="admonition info">
-<p class="admonition-title">Exemple</p>
+<p>Expressió 1: és l'expressió que avalua un valor booleà, d'aquesta forma, si l'expressió 1 s'avalua com a <strong>true</strong>, s'executaria l'expressió 2 mentre que si l'expressió 1 s'avalua a <strong>false</strong>, s'executaria l'expressió 2. Mira l'exemple següent:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">temperatura</span><span class="p">;</span> <span class="c1">// Variable que ens indica la temperatur ambient</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Bàsicament el que faria aquesta espressió seria engegar l'aire condicionat si la temperatura és superior a 25 graus.</span>
+
+<span class="kt">double</span> <span class="n">temperatura</span><span class="p">;</span>     <span class="c1">// Variable que ens indica la temperatur ambient</span>
 <span class="kt">boolean</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  <span class="c1">// Variable booleana que ens indica si l'aire condicionat està en marxa</span>
 <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="o">?</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">:</span> <span class="n">AC_ON</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="c1">// Bàsicament el que faria aquesta espressió seria engegar l'aire condicionat si la temperatura</span>
-<span class="c1">// és superior a 25 graus.</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 316. Operadors Processing i Eclipse IDE</summary><p>Copia i executa aquest codi tant en Eclipse com en Processing IDE i observa el que passa.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Programa Java per il·lustrar el màxim de tres nombres usant operador ternari.</span>
 
@@ -1822,9 +1810,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div>
 </td></tr></table>
 <p>Al codi anterior s'executarien sempre les instruccions 1 i 2 abans d'avaluar-se la condició, en cas que la condició fora avaluada com a <strong>true</strong>, s'executaria l'estructura seqüencial que conté les instruccions 3 i 4 i finalment s'executaria la instrucció 5 en tot cas. </p>
-<p>Pel contrari si la condició s'avalua a <strong>false</strong> no s'executarien les instruccions que conté, és a dir, 3 i 4 i passaria directament a l'instrucció 5.</p>
-<div class="admonition info">
-<p class="admonition-title">Exemple en Java</p>
+<p>Pel contrari si la condició s'avalua a <strong>false</strong> no s'executarien les instruccions que conté, és a dir, 3 i 4 i passaria directament a l'instrucció 5. Observa el següent exemple:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1852,7 +1838,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 318. Escriu el codi anterior amb Eclipse IDE i observa que passa</summary><p>Escriu el codi anterior amb Eclipse i observa que passa</p>
 </details>
 <p>Com que en Processing IDE resulta molt complicat el llegir per consola, per la inserció d'informació per part de l'usuari, ho farem de forma aleatòria.</p>
@@ -1913,8 +1898,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div>
 </td></tr></table>
 <p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del <strong>'if'</strong> s'avalua <strong>'true'</strong> o <strong>'false'</strong>. En el primer cas, amb la condició a <strong>'true'</strong>, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a <strong>'false'</strong>, les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
-<div class="admonition info">
-<p class="admonition-title">Exemple en Java</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1940,7 +1923,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 320. Ampliació anterior</summary><p>Amplia l'exemple anterior per tal que ens indique, en cas de no ser parell, que és senar. Com que s'ha de llegir per consola, és millor que ho fages amb Eclipse.</p>
 </details>
 <h4 id="seleccio-multiple-if-else-if-else">Selecció múltiple - if else if else</h4>
@@ -2005,10 +1987,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="n">instruccio10</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
-<div class="admonition info">
-<p class="admonition-title">Continuació anterior</p>
-<p>Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else</p>
+<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional. Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2046,7 +2025,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <details class="question"><summary>Activitat 321. Processing IDE</summary><p>Passa el codi anterior a Processing IDE. Com que no es pot llegir per consola, fes que l'hora i els minuts es generen de forma aleatòria amb la funció <strong>random</strong>. Al final de cada cicle de la funció <strong>draw</strong> posa un delay de 1 segon per tal que ens done temps a veure el resultat. Recorda també de fer un <strong>clear()</strong> al principi de cada cicle de draw.</p>
 </details>
 <details class="done"><summary>Solució</summary><p><img alt="Activitat 14" src="../assets/Tema3/Activitat14.png"/></p>
@@ -2360,9 +2338,7 @@ Un altre exemple més clar</p>
 2. S'avalua la condició 
 3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
 4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
-<div class="admonition example">
-<p class="admonition-title">Recorrer un array</p>
-<p>Exemple: Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?</p>
+<p>Com faríem el codi necessari per recòrrer el nostre array de 100 elements fins trobar el número que busquem?. Mira el codi següent:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2376,7 +2352,6 @@ Un altre exemple més clar</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="do-while">do .. while</h4>
 <p>Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.</p>
 <div class="mermaid">graph LR
@@ -2400,8 +2375,7 @@ Un altre exemple més clar</p>
 <li>Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.</li>
 <li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
 </ol>
-<div class="admonition example">
-<p class="admonition-title">Recorrer i buscar un número</p>
+<p>A l'exemple següent podem veure el codi necessari per buscar un número dins d'un array d'enters (Ja veurem més endavant que és un array).</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2417,7 +2391,6 @@ Un altre exemple més clar</p>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-</div>
 <h4 id="bucle-for">bucle for</h4>
 <p>La més complicada de comprendre però també possiblement la més utilitzada. Mirem un exemple.</p>
 <div class="mermaid">graph LR
@@ -2444,7 +2417,7 @@ Un altre exemple més clar</p>
 <li>Actualitzem índex</li>
 <li>Si la condició es false eixim del bucle i executem instrucció 2</li>
 </ol>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span> 
@@ -2453,10 +2426,12 @@ Un altre exemple més clar</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-Al codi anterior:
-1. Inicialització: int i = 0;
-2. Avaluació de la condició: és i &lt; 100 ?
-3. Actualització: i ++</p>
+<p>Al codi anterior:</p>
+<ol>
+<li>Inicialització: int i = 0;</li>
+<li>Avaluació de la condició: és i &lt; 100 ?</li>
+<li>Actualització: i ++</li>
+</ol>
 <details class="question"><summary>Activitat 338. Dibuixa amb bucles</summary><p>Observa el següent codi i raona'l</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2468,14 +2443,14 @@ Al codi anterior:
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-<span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
-    <span class="n">circle</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
+            <span class="n">circle</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -2546,9 +2521,6 @@ Al codi anterior:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-<script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
-<script src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({
-    theme: "neutral"
-});</script></body>
+<script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

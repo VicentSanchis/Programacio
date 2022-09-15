@@ -6,17 +6,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.1" name="generator"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
 <title>1.- Introducció programació - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.9299cb39.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
-<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -30,10 +30,10 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -52,20 +52,22 @@
 </div>
 </div>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </label>
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
 </button>
+</nav>
 </form>
 <div class="md-search__output">
 <div class="md-search__scrollwrap" data-md-scrollfix="">
@@ -90,7 +92,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
@@ -204,11 +206,17 @@
 <h2 id="hola-mon">Hola món!</h2>
 <p>HOla a tots i benvinguts al món de la programació. En aquest curs aprendrem com escriure codi utilitzant el <strong>llenguatge de programació Java</strong>. Com podreu observar, programar bàsicament consisteix en poder comunicar-se amb una màquina per tal que segueixca adequadament les <strong>instruccions</strong> que li donem, és a dir, aprendre a programar és aprendre un <strong>idioma nou</strong>, però no patiu, no es tracta d'un idioma com l'anglès o el llenguatge musical, ja que per tal que aquesta comunicació entre persona i màquina siga eficient i efectiva, el llenguatge a aprendre ha de ser molt més simple i sobre tot lliure d'ambigüitats. </p>
 <p>Però no avancem aconteixements. Millor comencem pel principi. <strong>Què és un programa?</strong></p>
-<details class="info"><summary>segons el DNV: Diccionari Normatiu Valencia</summary><p>Conjunt d'instruccions detallades i codificades que es donen a un sistema informàtic perquè execute unes determinades operacions</p>
+<details class="info">
+<summary>segons el DNV: Diccionari Normatiu Valencia</summary>
+<p>Conjunt d'instruccions detallades i codificades que es donen a un sistema informàtic perquè execute unes determinades operacions</p>
 </details>
-<details class="info"><summary>segons el Termcat: Centre de Terminologia en llengua catalana</summary><p>Conjunt de dades i d'instruccions codificades que són l'expressió completa d'un procediment que pot executar un sistema informàtic</p>
+<details class="info">
+<summary>segons el Termcat: Centre de Terminologia en llengua catalana</summary>
+<p>Conjunt de dades i d'instruccions codificades que són l'expressió completa d'un procediment que pot executar un sistema informàtic</p>
 </details>
-<details class="done"><summary>Conclusió</summary><p>Podríem dir que <strong>programar</strong> és l’acció d’elaborar un programa.</p>
+<details class="done">
+<summary>Conclusió</summary>
+<p>Podríem dir que <strong>programar</strong> és l’acció d’elaborar un programa.</p>
 </details>
 <p>En altres paraules un programa és un <strong>conjunt d’instruccions</strong> escrites en un llenguatge de programació que s’utilitzen per donar ordres o indicacions a un ordinador.</p>
 <p>El més paregut a programar que hi ha en el món real seria elaborar un conjunt d'instruccions de tal forma que una altra persona siga capaç de llegir, interpretar i executar satisfactòriament obtenint un resultat. Una <strong>recepta de cuina</strong> per exemple és un conjunt d'instruccions que <strong>qualsevol</strong> és capaç de llegir, interpretar i executar obtenint al final un resultat.</p>
@@ -252,7 +260,9 @@
 <div style="width:100%;text-align:center;">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Ct-lOOUqmyY" style="marging:0px auto;" title="YouTube video player" width="560"></iframe>
 </div>
-<details class="question"><summary>Activitat 101. Interprete i reescriu l'algorisme</summary><p>Fixa't en el vídeo anterior i escriu l'algorisme inicial que els xiquets per a que el pare els prepare un sandwich. <br/>
+<details class="question">
+<summary>Activitat 101. Interprete i reescriu l'algorisme</summary>
+<p>Fixa't en el vídeo anterior i escriu l'algorisme inicial que els xiquets per a que el pare els prepare un sandwich. <br/>
 Observa el resultat de l'algorisme inicial i reescriu-lo per tal que el resultat final siga més adequat.</p>
 </details>
 <h3 id="llenguatges-programacio">Llenguatges programació</h3>
@@ -320,7 +330,9 @@ Observa el resultat de l'algorisme inicial i reescriu-lo per tal que el resultat
 <p>És el procediment per escriure parts d'un programa mentre està actiu. Programació interactiva. Modificació d'un programa mentre aquest estigui actiu. El terme de programació interactiva no té a veure amb l'estil en què està escrit un programa, sinó amb el procés d'escriptura del codi.</p>
 <h4 id="visuals-o-no">VISUALS O NO</h4>
 <p>Permeten la programació per reutilització de components mitjançant drag and drop en un entorn gràfic o no.</p>
-<details class="question"><summary>Activitat 102. Busca i classifica llenguatges de programació</summary><p>Busca llenguatges de programació que s'adequen a cadascuna de les categories que s'han descrit a l'apartat anterior. Per exemple:</p>
+<details class="question">
+<summary>Activitat 102. Busca i classifica llenguatges de programació</summary>
+<p>Busca llenguatges de programació que s'adequen a cadascuna de les categories que s'han descrit a l'apartat anterior. Per exemple:</p>
 <div class="highlight"><pre><span></span><code>1. Llenguatges de baix nivell: Ensamblador.
 2. Llenguatges de nivell mitja: C, Pascal
 3. ....variable)=
@@ -378,7 +390,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <h3 id="documentacio">Documentació</h3>
 <p>Aquesta és la fase que a cap programador li agrada fer, però en realitat és una fase que no està necessàriament al final del cicle de vida del programa, sino que es fa de forma <strong>transversal</strong> en totes les etapes del desenvolupament. </p>
 <p>Es considera documentació <strong>des dels requeriments inicials al manual d'usuari</strong> passant per el pseudocodi, diagrames de classes i ús, i també els comentaris que es posen al codi.</p>
-<details class="question"><summary>Activitat 103. Simula les fases de desenvolpament software</summary><p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les <strong>diverses llistes de compra</strong> que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
+<details class="question">
+<summary>Activitat 103. Simula les fases de desenvolpament software</summary>
+<p>Imagina que tens el projecte d'una aplicació té com a finalitat gestionar les <strong>diverses llistes de compra</strong> que poden haver a una casa. Simula que passes per cadascuna de les fases de desenvolupament de programari vistes a l'apartat anterior i genera tota la documentació necessària.</p>
 </details>
 <h2 id="diagrames-de-flux">Diagrames de flux</h2>
 <p>Un diagrama de flux és una <strong>representació gràfica</strong> d'un algorisme. S'utilitza en disciplines com la programació informàtica, l'economia, els processos industrials o la psicologia cognitiva. Aquests diagrames utilitzen símbols amb significats ben definits que representen els passos de l'algorisme, i representen el <strong>flux d'execució</strong> mitjançant fletxes que connecten els punts d'inici i de finalització. Un diagrama de flux sempre té un únic punt d'inici i un únic punt de finalització. A més, tot camí d'execució ha de permetre arribar des de l'inici fins al final.</p>
@@ -433,7 +447,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p>Es pretén implementar un algorisme que s'encarregue, de la forma més eficient possible, la creació i impressió de tickets de compra per a tots els clients que entren a la nostra botiga. </p>
 <p>A la imatge següent podem observar un exemple d'algorisme de creació d'un nou ticket (nova compra).</p>
 </div>
-<details class="done"><summary>Solució</summary><p>Expliquem breument el que fa aquest diagrama: primer crea un nou ticket i afegeix un nou element (fruta o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou ticket, es calcula el preu final i s'imprimeix.</p>
+<details class="done">
+<summary>Solució</summary>
+<p>Expliquem breument el que fa aquest diagrama: primer crea un nou ticket i afegeix un nou element (fruta o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou ticket, es calcula el preu final i s'imprimeix.</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Crear Ticket];
     style Id1 fill:#0F0;
@@ -451,7 +467,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p class="admonition-title">Exemple 2. Trobar les claus de casa</p>
 <p>Imagineu que vull eixir de casa però no recorde on he posat les claus i sense elles no puc anar a cap lloc. Les he de buscar. El següent algorisme representat utilitzant un diagrama de flux, ens podria ajudar a trobar-les.</p>
 </div>
-<details class="done"><summary>Solució</summary><p>La diferència amb l'anterior és que té text</p>
+<details class="done">
+<summary>Solució</summary>
+<p>La diferència amb l'anterior és que té text</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Buscar on sempre];
     style Id1 fill:#0F0;
@@ -479,7 +497,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <li>Al final del carrer moreral a l'esquerra.</li>
 </ul>
 </div>
-<details class="done"><summary>Solució</summary><p>Una possible solució a aquest problema podria ser:</p>
+<details class="done">
+<summary>Solució</summary>
+<p>Una possible solució a aquest problema podria ser:</p>
 <div class="mermaid">graph LR
 
     subgraph 1
@@ -523,7 +543,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <li>Si sí que m'agrada, deixe el commandament i em pose comode.</li>
 </ul>
 </div>
-<details class="done"><summary>Solució</summary><div class="mermaid">graph LR
+<details class="done">
+<summary>Solució</summary>
+<div class="mermaid">graph LR
     Ini((Inici))--&gt;A[Agafar Commandament TV];
     style Ini fill:#0F0;
     A--&gt;B[Engegar TV];
@@ -541,7 +563,9 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p class="admonition-title">Exemple 5. Adolescència (Spoiler: no té solució)</p>
 <p>Durant l'adolescència cal marcar bé les prioritats abans de les diversions. Tot adolescent abans de poder eixir amb els amics primer ha de fer els deures i despreś tindre el quarto arreglat. Dissenya un algorisme que solucione aquest problema sense que l'adolescent haja de consultar a sa mare si pot eixir o no.</p>
 </div>
-<details class="done"><summary>Solució</summary><p><div class="mermaid">graph LR
+<details class="done">
+<summary>Solució</summary>
+<p><div class="mermaid">graph LR
     Ini((Inici))--&gt;A{Has fet <br/> els deures?};
     style Ini fill:#0F0;
     A--&gt;|NO|B[Fes els deures];
@@ -571,17 +595,16 @@ L'estructura bàsica de tots els programes és la seqüencial. És a dir, les in
 Un exemple de estrcutura seqüencial en la vida real podria ser la següent: fes el llit, quan acabes, ves a llavar el cotxe, després fes els deures i aleshores ja podràs veure la tele. -->
 <!---!!! code "Codi estructura Seqüencial"--->
 <!--
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">accio1</span><span class="p">();</span> 
-    <span class="n">accio2</span><span class="p">();</span>
-    <span class="n">accio3</span><span class="p">();</span>
-    <span class="p">....</span>
-    <span class="n">acció</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">accio1</span><span class="p">();</span><span class="w"> </span>
+<span class="w">    </span><span class="n">accio2</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">accio3</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">....</span><span class="w"></span>
+<span class="w">    </span><span class="n">acció</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 ### Estructura Iterativa
 
@@ -595,26 +618,24 @@ Dins de l'estructura iterativa, repetitiva o bucles, tindriem tres variants poss
 Aquesta estructura realitzarà les accions que estiguen dintre d'ella mentre s'acompleixca la condició establerta al final de l'estructura. L'estructura seqüencial accions() s'executaria almenys una vegada si utilitzem aquesta estructura independentment que la condició s'avalue veritat a falsa.-->
 <!---!!! code "Codi fer .. mentre" --->
 <!-->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">fer</span>
-        <span class="nf">accions</span><span class="p">();</span>
-    <span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">fer</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 #### mentre .. fer:
 Molt semblant a l'anterior però amb la diferència que en aquesta estructura, la condició s'avaluarà abans de realitzar l'acció, és a dir, L'única forma que accions() s'execute en aquesta estructura és que la condició s'avalue com a veritable. Per exemple no tanques el paraigües mentre ploga.-->
 <!---!!! code "Codi mentre .. fer" -->
 <!-->
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">mentre</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">fer</span>
-        <span class="nf">accions</span><span class="p">();</span>
-    <span class="n">fimentre</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fimentre</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 De totes formes sempre es pot "traduir" d'una estructura repetitiva a una altra. 
 
@@ -627,29 +648,28 @@ L'estructura condicional és dins del teorema de programació estructurada aquel
 O també anomenada **condicio simple**. S'avalua una condició, normalment una expressio relacional o lògica, i en cas d'avaluar-se possitivament (true) s'executen les accions pertinents. Si pel contrari l'avaluació de l'expressió és negativa (false) no executa cap acció més.-->
 <!---!!! code "Codi si .. fsi"  --->
 <!-->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">accions</span><span class="p">();</span>
-    <span class="n">fisi</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
 
-    <span class="c1">// Exemple de codi</span>
-    <span class="n">si</span> <span class="p">(</span><span class="n">plou</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">agafaParaigues</span><span class="p">();</span>
-    <span class="n">fsi</span>
-</code></pre></div>
-</td></tr></table>
+<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
+<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">agafaParaigues</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 #### si .. sino:
 O **condicional doble** és una estructura semblant a la condicional simple però aquesta vegada i en el cas que la condició s'avalue negativament (false) podra executar accions alternatives a les que s'hagueren executat si l'expressió hagués sigut avaluada com a true.-->
 <!---!!! code "Codi si .. sino"  -->
 <!--
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -660,26 +680,25 @@ O **condicional doble** és una estructura semblant a la condicional simple per�
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">accions1</span><span class="p">();</span>
-    <span class="n">sino</span>
-        <span class="nf">accions2</span><span class="p">();</span>
-    <span class="n">fisi</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions1</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions2</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
 
-    <span class="c1">// Exemple de codi</span>
-    <span class="n">si</span> <span class="p">(</span><span class="n">faCalor</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">agafaBanynador</span><span class="p">();</span>
-    <span class="n">sino</span>
-        <span class="nf">agafaPantal</span><span class="p">();</span>
-    <span class="n">fsi</span>
-</code></pre></div>
-</td></tr></table>
+<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
+<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">faCalor</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">agafaBanynador</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="nf">agafaPantal</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 #### si .. sino si .. sino:
 O **condicional múĺtiple**, quan una expressió pot donar més d'una possible alternativa podem utilitzar aquesta estructura.-->
 <!---!!! code "Codi si .. sino si .. sino"  --->
 <!-->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -696,65 +715,62 @@ O **condicional múĺtiple**, quan una expressió pot donar més d'una possible 
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="n">si</span> <span class="p">(</span><span class="n">condicio1</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">accions1</span><span class="p">();</span>
-    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">condicio2</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">accions2</span><span class="p">();</span>
-    <span class="n">sino</span>
-        <span class="nf">accions3</span><span class="p">();</span>
-    <span class="n">fisi</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio1</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions1</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio2</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions2</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="nf">accions3</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
 
-    <span class="c1">// Exemple de codi</span>
-    <span class="n">si</span> <span class="p">(</span><span class="n">esDilluns</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">arrosAlForn</span><span class="p">();</span>
-    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimarts</span><span class="p">)</span> <span class="n">aleslhores</span>
-        <span class="nf">macarrons</span><span class="p">();</span>
-    <span class="n">sino</span> <span class="nf">si</span> <span class="p">(</span><span class="n">esDimecres</span><span class="p">)</span> <span class="n">aleshores</span>
-        <span class="nf">sandwich</span><span class="p">();</span>
-    <span class="n">sino</span>
-        <span class="nf">paiParxe</span><span class="p">();</span>
-    <span class="n">fsi</span>
-</code></pre></div>
-</td></tr></table>
+<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
+<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDilluns</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">arrosAlForn</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDimarts</span><span class="p">)</span><span class="w"> </span><span class="n">aleslhores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">macarrons</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDimecres</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">sandwich</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="nf">paiParxe</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 ### Exemples
 A continuació farem els mateixos exemples que hem fet en diagrames de flux però en pseudocodi:
 
 ??? done "Exemple 1. La nostra fruteria (Solució)"
 
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">createTicket</span><span class="p">();</span>
-<span class="n">fer</span> <span class="p">{</span>
-    <span class="n">afegirElement</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="n">mentre</span> <span class="k">continue</span> <span class="n">comprant</span>
-<span class="nf">calcularPreuFinal</span><span class="p">();</span>
-<span class="n">ImprimirTicket</span><span class="p">();</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">createTicket</span><span class="p">();</span><span class="w"></span>
+<span class="n">fer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">afegirElement</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">mentre</span><span class="w"> </span><span class="k">continue</span><span class="w"> </span><span class="n">comprant</span><span class="w"></span>
+<span class="nf">calcularPreuFinal</span><span class="p">();</span><span class="w"></span>
+<span class="n">ImprimirTicket</span><span class="p">();</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 ??? done "Exemple 2. Trobar les claus de casa (Solució)"
 
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">buscaClausOnSempre</span><span class="p">();</span>
-<span class="n">mentre</span> <span class="p">(</span><span class="n">noTrobabesLesClaus</span><span class="p">())</span> <span class="n">fes</span>
-    <span class="nf">buscaClausEnUnAltreLloc</span><span class="p">()</span>
-<span class="n">fiMentre</span>
-<span class="nf">EixirDeCasa</span><span class="p">();</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">buscaClausOnSempre</span><span class="p">();</span><span class="w"></span>
+<span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">noTrobabesLesClaus</span><span class="p">())</span><span class="w"> </span><span class="n">fes</span><span class="w"></span>
+<span class="w">    </span><span class="nf">buscaClausEnUnAltreLloc</span><span class="p">()</span><span class="w"></span>
+<span class="n">fiMentre</span><span class="w"></span>
+<span class="nf">EixirDeCasa</span><span class="p">();</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 ??? done "Exemple 3. Com anar de l'ajuntament al paseig (Solució)"
 
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -772,43 +788,41 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">fer</span>
-    <span class="nx">caminarNord</span><span class="p">();</span>
-    <span class="nx">fins</span> <span class="p">(</span><span class="nx">arribarAlCarre</span><span class="p">(</span><span class="s2">&quot;Ramon i Cajal&quot;</span><span class="p">));</span>
-<span class="nx">fifer</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fer</span><span class="w"></span>
+<span class="w">    </span><span class="nx">caminarNord</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fins</span><span class="w"> </span><span class="p">(</span><span class="nx">arribarAlCarre</span><span class="p">(</span><span class="s2">&quot;Ramon i Cajal&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="nx">fifer</span><span class="w"></span>
 
-<span class="nx">repetir</span> <span class="nx">caminar</span> <span class="nx">fins</span> <span class="nx">arribar</span><span class="p">(</span><span class="nx">Farmacia</span><span class="p">);</span>
-<span class="nx">firepetir</span>
+<span class="nx">repetir</span><span class="w"> </span><span class="nx">caminar</span><span class="w"> </span><span class="nx">fins</span><span class="w"> </span><span class="nx">arribar</span><span class="p">(</span><span class="nx">Farmacia</span><span class="p">);</span><span class="w"></span>
+<span class="nx">firepetir</span><span class="w"></span>
 
-<span class="nx">girarEsquerra</span><span class="p">()</span>
+<span class="nx">girarEsquerra</span><span class="p">()</span><span class="w"></span>
 
-<span class="nx">mentre</span> <span class="nx">NoArribesA</span><span class="p">(</span><span class="s2">&quot;Mestre Esteve&quot;</span><span class="p">)</span>
-    <span class="nx">caminar</span><span class="p">()</span>
-<span class="nx">fimentre</span>
+<span class="nx">mentre</span><span class="w"> </span><span class="nx">NoArribesA</span><span class="p">(</span><span class="s2">&quot;Mestre Esteve&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">caminar</span><span class="p">()</span><span class="w"></span>
+<span class="nx">fimentre</span><span class="w"></span>
 
-<span class="nx">AgafarCarrer</span><span class="p">(</span><span class="s2">&quot;Moreral&quot;</span><span class="p">);</span>
+<span class="nx">AgafarCarrer</span><span class="p">(</span><span class="s2">&quot;Moreral&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">fins</span> <span class="nx">arribarA</span><span class="p">(</span><span class="s2">&quot;Passeig&quot;</span><span class="p">);</span>
-    <span class="nx">caminar</span><span class="p">();</span>
-<span class="nx">fifins</span>
-</code></pre></div>
-</td></tr></table>
+<span class="nx">fins</span><span class="w"> </span><span class="nx">arribarA</span><span class="p">(</span><span class="s2">&quot;Passeig&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">caminar</span><span class="p">();</span><span class="w"></span>
+<span class="nx">fifins</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 ??? done "Exemple 4. Fer zapping (Solució)"
 
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">engegarTele</span><span class="p">();</span>
-<span class="nx">fer</span>
-    <span class="nx">si</span> <span class="p">(</span><span class="nx">noAgradaCanal</span><span class="p">()</span> <span class="p">)</span> <span class="nx">fes</span>
-        <span class="nx">canviaCanal</span><span class="p">();</span>
-    <span class="nx">fsi</span>
-<span class="nx">fins</span> <span class="p">(</span><span class="nx">trobarCanalQueAgrade</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">engegarTele</span><span class="p">();</span><span class="w"></span>
+<span class="nx">fer</span><span class="w"></span>
+<span class="w">    </span><span class="nx">si</span><span class="w"> </span><span class="p">(</span><span class="nx">noAgradaCanal</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nx">fes</span><span class="w"></span>
+<span class="w">        </span><span class="nx">canviaCanal</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fsi</span><span class="w"></span>
+<span class="nx">fins</span><span class="w"> </span><span class="p">(</span><span class="nx">trobarCanalQueAgrade</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 -->
 <h2 id="proces-de-compilacio">Procés de compilació</h2>
 <p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
@@ -834,7 +848,7 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <p>Concretament <strong>Processing IDE</strong> és un entorn integrat de desenvolupament juntament amb una llibreria gràfica que inicialment es va construir per a arts electròniques i disseny visual per tal de poder ensenyar els fonaments de la programació a <strong>no-programadors</strong> en un context visual. És per això que aquesta eina ens resultarà molt útil per tal d'aprendre els conceptes bàsics de la programació estructurada.</p>
 <p>A continuació vos mostrem un exemple d'estructura de programa en <strong>Processing IDE</strong></p>
 <!--!!! code "Codi"-->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -846,22 +860,23 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span>
-<span class="c1">// Variables globals a l'aplicació.</span>
-<span class="c1">// Funció setup: només s'executa una vegada a l'inici de l'execució.</span>
-<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  
-    <span class="c1">// Sentències d'inicialització de la nostra aplicació.</span>
-<span class="p">}</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Referències a altres llibrerires.</span><span class="w"></span>
+<span class="c1">// Variables globals a l'aplicació.</span><span class="w"></span>
+<span class="c1">// Funció setup: només s'executa una vegada a l'inici de l'execució.</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="c1">// Sentències d'inicialització de la nostra aplicació.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="c1">// Funció draw: s'executa 60 vegades per segon (60Hz freqüencia del monitor)</span>
-<span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> 
-    <span class="c1">// Codi principal del programa.</span>
-<span class="p">}</span>
+<span class="c1">// Funció draw: s'executa 60 vegades per segon (60Hz freqüencia del monitor)</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">// Codi principal del programa.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="c1">// Declaració d'altres funcions</span>
-</code></pre></div>
-</td></tr></table>
-<details class="question"><summary>Activitat 104. Instal·la Processing IDE</summary><p>Descarrega l'aplicació Processing IDE de la seua pàgina oficial i instal·la-la al teu ordinador. Després copia i apega qualsevol codi (compatible amb Processing IDE) que trobes per Internet i prova el que passa.</p>
+<span class="c1">// Declaració d'altres funcions</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 104. Instal·la Processing IDE</summary>
+<p>Descarrega l'aplicació Processing IDE de la seua pàgina oficial i instal·la-la al teu ordinador. Després copia i apega qualsevol codi (compatible amb Processing IDE) que trobes per Internet i prova el que passa.</p>
 </details>
 <h3 id="eclipse-ide">Eclipse IDE</h3>
 <p>Eclipse és una plataforma de programari compost per un conjunt d'eines de programació de codi obert multiplataforma per desenvolupar el que el projecte anomena "Aplicacions de Client Enriquit", oposat a les aplicacions "Client-lleuià" basades en navegadors. Aquesta plataforma, típicament ha estat usada per desenvolupar entorns de desenvolupament integrats (de l'anglès IDE), com l'IDE de Java anomenat Java Development Toolkit (JDT) i el compilador (ECJ) que es lliura com a part d'Eclipse (i que són usats també per desenvolupar el mateix Eclipse).</p>
@@ -878,7 +893,7 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <li>Comentaris.</li>
 </ul>
 <!---!!! code "Codi"--->
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -907,38 +922,37 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Programa principal</span>
-<span class="c1">// Llibreries amb funcions d'entrada i eixida.</span>
-<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Programa principal</span><span class="w"></span>
+<span class="c1">// Llibreries amb funcions d'entrada i eixida.</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">// Nom de la classe principal</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">nomPrograma</span> <span class="p">{</span>    
+<span class="c1">// Nom de la classe principal</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">nomPrograma</span><span class="w"> </span><span class="p">{</span><span class="w">    </span>
 
-    <span class="c1">// Membres de la classe (una calculadora)</span>
-    <span class="n">Calculadora</span> <span class="n">calc</span><span class="p">;</span>         
+<span class="w">    </span><span class="c1">// Membres de la classe (una calculadora)</span><span class="w"></span>
+<span class="w">    </span><span class="n">Calculadora</span><span class="w"> </span><span class="n">calc</span><span class="p">;</span><span class="w">         </span>
 
-    <span class="c1">// Mètode principal main</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> 
-        <span class="c1">// Instruccions del mètode principal.</span>
-        <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculadora</span><span class="p">();</span>              
-        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resultat: "</span> <span class="o">+</span> <span class="n">result</span> <span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="c1">// Mètode principal main</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="c1">// Instruccions del mètode principal.</span><span class="w"></span>
+<span class="w">        </span><span class="n">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">();</span><span class="w">              </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resultat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="c1">// Una altra classe</span>
-<span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="c1">// Una altra classe</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">// Nom de la classe </span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculadora</span> <span class="p">{</span>            
+<span class="c1">// Nom de la classe </span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span><span class="w">            </span>
 
-    <span class="c1">// Mètode de la classe</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">suma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>   
-        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
+<span class="w">    </span><span class="c1">// Mètode de la classe</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">suma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <p>Al programa anterior podem trobar una classe 'nomPrograma' que conté el mètode principal main i que al mateix temps conté el conjunt d'instruccions que es van a executar seqüencialment al nostre programa. Aquesta classe <strong>nomPrograma</strong> té un memebre calc que és un objecte (ja veurem classes i objectes més endavant) de tipus calculadora i que està definit més endavant amb la classe pública calculadora.
 Les sentències que executa el nostre programa d'exmemple són les següents:</p>
 <ul>
@@ -948,7 +962,9 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
 <li>Deposita el resultat que retorna el mètode suma de la classe calc a la variable <strong>result</strong></li>
 <li>Mostra per pantalla el resultat de la suma.</li>
 </ul>
-<details class="question"><summary>Activitat 105. Instal·la Eclipse IDE for Developers</summary><p>Descarrega l'IDE d'Eclipse de la seua pàgina oficial i instal·la'l a la teua màquina. Després intenta crear un projecte amb una sola classe i prova d'executar.</p>
+<details class="question">
+<summary>Activitat 105. Instal·la Eclipse IDE for Developers</summary>
+<p>Descarrega l'IDE d'Eclipse de la seua pàgina oficial i instal·la'l a la teua màquina. Després intenta crear un projecte amb una sola classe i prova d'executar.</p>
 </details>
 </article>
 </div>
@@ -956,9 +972,9 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a class="md-footer__link md-footer__link--prev" href=".." rel="prev">
+<a aria-label="Previous: Index" class="md-footer__link md-footer__link--prev" href=".." rel="prev">
 <div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
 <div class="md-footer__title">
 <div class="md-ellipsis">
@@ -969,7 +985,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
             </div>
 </div>
 </a>
-<a class="md-footer__link md-footer__link--next" href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/" rel="next">
+<a aria-label="Next: 2.- Programació Estructurada" class="md-footer__link md-footer__link--next" href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
@@ -979,18 +995,19 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
             </div>
 </div>
 <div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
-<div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-          Material for MkDocs
-        </a>
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
 </div>
 </div>
 </div>
@@ -999,7 +1016,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-<script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

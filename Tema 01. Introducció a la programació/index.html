@@ -447,7 +447,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p>Es pretén implementar un algorisme que s'encarregue, de la forma més eficient possible, la creació i impressió de tickets de compra per a tots els clients que entren a la nostra botiga. </p>
 <p>A la imatge següent podem observar un exemple d'algorisme de creació d'un nou ticket (nova compra).</p>
 </div>
-<details class="done">
+<details class="done" open="open">
 <summary>Solució</summary>
 <p>Expliquem breument el que fa aquest diagrama: primer crea un nou ticket i afegeix un nou element (fruta o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou ticket, es calcula el preu final i s'imprimeix.</p>
 <div class="mermaid">graph LR
@@ -467,7 +467,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p class="admonition-title">Exemple 2. Trobar les claus de casa</p>
 <p>Imagineu que vull eixir de casa però no recorde on he posat les claus i sense elles no puc anar a cap lloc. Les he de buscar. El següent algorisme representat utilitzant un diagrama de flux, ens podria ajudar a trobar-les.</p>
 </div>
-<details class="done">
+<details class="done" open="open">
 <summary>Solució</summary>
 <p>La diferència amb l'anterior és que té text</p>
 <div class="mermaid">graph LR
@@ -497,7 +497,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <li>Al final del carrer moreral a l'esquerra.</li>
 </ul>
 </div>
-<details class="done">
+<details class="done" open="open">
 <summary>Solució</summary>
 <p>Una possible solució a aquest problema podria ser:</p>
 <div class="mermaid">graph LR
@@ -543,7 +543,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <li>Si sí que m'agrada, deixe el commandament i em pose comode.</li>
 </ul>
 </div>
-<details class="done">
+<details class="done" open="open">
 <summary>Solució</summary>
 <div class="mermaid">graph LR
     Ini((Inici))--&gt;A[Agafar Commandament TV];
@@ -563,7 +563,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p class="admonition-title">Exemple 5. Adolescència (Spoiler: no té solució)</p>
 <p>Durant l'adolescència cal marcar bé les prioritats abans de les diversions. Tot adolescent abans de poder eixir amb els amics primer ha de fer els deures i despreś tindre el quarto arreglat. Dissenya un algorisme que solucione aquest problema sense que l'adolescent haja de consultar a sa mare si pot eixir o no.</p>
 </div>
-<details class="done">
+<details class="done" open="open">
 <summary>Solució</summary>
 <p><div class="mermaid">graph LR
     Ini((Inici))--&gt;A{Has fet <br/> els deures?};
@@ -617,7 +617,7 @@ Dins de l'estructura iterativa, repetitiva o bucles, tindriem tres variants poss
 #### fer .. mentre:
 Aquesta estructura realitzarà les accions que estiguen dintre d'ella mentre s'acompleixca la condició establerta al final de l'estructura. L'estructura seqüencial accions() s'executaria almenys una vegada si utilitzem aquesta estructura independentment que la condició s'avalue veritat a falsa.-->
 <!---!!! code "Codi fer .. mentre" --->
-<!-->
+<!--
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">fer</span><span class="w"></span>
@@ -628,7 +628,7 @@ Aquesta estructura realitzarà les accions que estiguen dintre d'ella mentre s'a
 #### mentre .. fer:
 Molt semblant a l'anterior però amb la diferència que en aquesta estructura, la condició s'avaluarà abans de realitzar l'acció, és a dir, L'única forma que accions() s'execute en aquesta estructura és que la condició s'avalue com a veritable. Per exemple no tanques el paraigües mentre ploga.-->
 <!---!!! code "Codi mentre .. fer" -->
-<!-->
+<!--
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -647,7 +647,7 @@ L'estructura condicional és dins del teorema de programació estructurada aquel
 
 O també anomenada **condicio simple**. S'avalua una condició, normalment una expressio relacional o lògica, i en cas d'avaluar-se possitivament (true) s'executen les accions pertinents. Si pel contrari l'avaluació de l'expressió és negativa (false) no executa cap acció més.-->
 <!---!!! code "Codi si .. fsi"  --->
-<!-->
+<!--
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -697,7 +697,7 @@ O **condicional doble** és una estructura semblant a la condicional simple per�
 #### si .. sino si .. sino:
 O **condicional múĺtiple**, quan una expressió pot donar més d'una possible alternativa podem utilitzar aquesta estructura.-->
 <!---!!! code "Codi si .. sino si .. sino"  --->
-<!-->
+<!--
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

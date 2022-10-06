@@ -578,252 +578,10 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 </div>
 <!---<img alt="Diagrama de flux - Adolescència" src="assets/Tema1/Adolescencia.png" />--></p>
 </details>
-<!--- DEPRECATED: també està al següent tema i no té sentit mostrar pseudocodi sense haver vist primer el teorema d'estructura de Dijkstra
-
-## Pseudocodi
-
-El **pseudocodi** (o fals llenguatge) és una descripció a molt alt nivell de l'estructura d'un programa. Encara que utilitze estructures típiques de la programació es diu que és a **alt nivell** perquè una persona amb pocs o sense coneixements informàtics puga entendre i interpretar la porció de codi que estiga llegint. 
-
-El principal **objectiu** del pseudocodi és el de representar la solució a un algorisme de la manera més detallada possible, i al mateix temps el més semblant possible al llenguatge que s'utilitzarà a la fase de codificació.
-
-No existeix una sintaxis estàndard de pseudocodi però amb ell s'han de poder escriure totes les estructures de control de la programació estructurada. De totes formes, en aquest tema utilitzarem la següent sintaxi:
-
-### Estructura Seqüencial
-
-L'estructura bàsica de tots els programes és la seqüencial. És a dir, les instruccions s'executen una darrere de l'altra seguint el mateix ordre en que han estat escrites. L'ordinador llegeix la primera línia de codi en memòria i l'executa, després la següent i així successivament fins que acaba.
-
-Un exemple de estrcutura seqüencial en la vida real podria ser la següent: fes el llit, quan acabes, ves a llavar el cotxe, després fes els deures i aleshores ja podràs veure la tele. -->
-<!---!!! code "Codi estructura Seqüencial"--->
-<!--
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">accio1</span><span class="p">();</span><span class="w"> </span>
-<span class="w">    </span><span class="n">accio2</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">accio3</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">....</span><span class="w"></span>
-<span class="w">    </span><span class="n">acció</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-### Estructura Iterativa
-
-Encara que l'estructura seqüencial és la base de tots els programes, els bucles també tenen molta importància. Un bucle és una repetició d'una o varies instruccions (estructura seqüencial). De vegades serà interessant utilitzar aquest tipus d'estructura per realitzar la mateixa acció grup d'accions un nombre concret de vegades o mentre s'acompleixca algun tipus de condició.
-
-Alguns exemples en la vida real podria ser: camina fins que arribes al final del carrer. En aquest cas es repetiria l'acció caminar mentre no s'acompleixca la condició d'arribar al final de carrer, o dit d'una altra manera, caminarem fins que no arribem al final del carrer.
-
-Dins de l'estructura iterativa, repetitiva o bucles, tindriem tres variants possibles
-
-#### fer .. mentre:
-Aquesta estructura realitzarà les accions que estiguen dintre d'ella mentre s'acompleixca la condició establerta al final de l'estructura. L'estructura seqüencial accions() s'executaria almenys una vegada si utilitzem aquesta estructura independentment que la condició s'avalue veritat a falsa.-->
-<!---!!! code "Codi fer .. mentre" --->
-<!--
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">fer</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">mentre</span><span class="p">(</span><span class="n">condicio</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-#### mentre .. fer:
-Molt semblant a l'anterior però amb la diferència que en aquesta estructura, la condició s'avaluarà abans de realitzar l'acció, és a dir, L'única forma que accions() s'execute en aquesta estructura és que la condició s'avalue com a veritable. Per exemple no tanques el paraigües mentre ploga.-->
-<!---!!! code "Codi mentre .. fer" -->
-<!--
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fimentre</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-De totes formes sempre es pot "traduir" d'una estructura repetitiva a una altra. 
-
-### Estructura Condicional
-
-L'estructura condicional és dins del teorema de programació estructurada aquella estructura que, després d'avaluar una concidició, ens permet executar unes accions o unes altres. Existeixen diverses opcions: condicional simple, conicional doble o condicional múltiple. També es poden combinar entre elles segons la necessitat.
-
-#### si .. fsi:
-
-O també anomenada **condicio simple**. S'avalua una condició, normalment una expressio relacional o lògica, i en cas d'avaluar-se possitivament (true) s'executen les accions pertinents. Si pel contrari l'avaluació de l'expressió és negativa (false) no executa cap acció més.-->
-<!---!!! code "Codi si .. fsi"  --->
-<!--
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
-<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">agafaParaigues</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-#### si .. sino:
-O **condicional doble** és una estructura semblant a la condicional simple però aquesta vegada i en el cas que la condició s'avalue negativament (false) podra executar accions alternatives a les que s'hagueren executat si l'expressió hagués sigut avaluada com a true.-->
-<!---!!! code "Codi si .. sino"  -->
-<!--
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions1</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions2</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
-<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">faCalor</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">agafaBanynador</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"></span>
-<span class="w">        </span><span class="nf">agafaPantal</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-#### si .. sino si .. sino:
-O **condicional múĺtiple**, quan una expressió pot donar més d'una possible alternativa podem utilitzar aquesta estructura.-->
-<!---!!! code "Codi si .. sino si .. sino"  --->
-<!--
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio1</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions1</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio2</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions2</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"></span>
-<span class="w">        </span><span class="nf">accions3</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fisi</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// Exemple de codi</span><span class="w"></span>
-<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDilluns</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">arrosAlForn</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDimarts</span><span class="p">)</span><span class="w"> </span><span class="n">aleslhores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">macarrons</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">esDimecres</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
-<span class="w">        </span><span class="nf">sandwich</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">sino</span><span class="w"></span>
-<span class="w">        </span><span class="nf">paiParxe</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-### Exemples
-A continuació farem els mateixos exemples que hem fet en diagrames de flux però en pseudocodi:
-
-??? done "Exemple 1. La nostra fruteria (Solució)"
-
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">createTicket</span><span class="p">();</span><span class="w"></span>
-<span class="n">fer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">afegirElement</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="n">mentre</span><span class="w"> </span><span class="k">continue</span><span class="w"> </span><span class="n">comprant</span><span class="w"></span>
-<span class="nf">calcularPreuFinal</span><span class="p">();</span><span class="w"></span>
-<span class="n">ImprimirTicket</span><span class="p">();</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-??? done "Exemple 2. Trobar les claus de casa (Solució)"
-
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">buscaClausOnSempre</span><span class="p">();</span><span class="w"></span>
-<span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">noTrobabesLesClaus</span><span class="p">())</span><span class="w"> </span><span class="n">fes</span><span class="w"></span>
-<span class="w">    </span><span class="nf">buscaClausEnUnAltreLloc</span><span class="p">()</span><span class="w"></span>
-<span class="n">fiMentre</span><span class="w"></span>
-<span class="nf">EixirDeCasa</span><span class="p">();</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-??? done "Exemple 3. Com anar de l'ajuntament al paseig (Solució)"
-
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fer</span><span class="w"></span>
-<span class="w">    </span><span class="nx">caminarNord</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="nx">fins</span><span class="w"> </span><span class="p">(</span><span class="nx">arribarAlCarre</span><span class="p">(</span><span class="s2">&quot;Ramon i Cajal&quot;</span><span class="p">));</span><span class="w"></span>
-<span class="nx">fifer</span><span class="w"></span>
-
-<span class="nx">repetir</span><span class="w"> </span><span class="nx">caminar</span><span class="w"> </span><span class="nx">fins</span><span class="w"> </span><span class="nx">arribar</span><span class="p">(</span><span class="nx">Farmacia</span><span class="p">);</span><span class="w"></span>
-<span class="nx">firepetir</span><span class="w"></span>
-
-<span class="nx">girarEsquerra</span><span class="p">()</span><span class="w"></span>
-
-<span class="nx">mentre</span><span class="w"> </span><span class="nx">NoArribesA</span><span class="p">(</span><span class="s2">&quot;Mestre Esteve&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">caminar</span><span class="p">()</span><span class="w"></span>
-<span class="nx">fimentre</span><span class="w"></span>
-
-<span class="nx">AgafarCarrer</span><span class="p">(</span><span class="s2">&quot;Moreral&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="nx">fins</span><span class="w"> </span><span class="nx">arribarA</span><span class="p">(</span><span class="s2">&quot;Passeig&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">caminar</span><span class="p">();</span><span class="w"></span>
-<span class="nx">fifins</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-??? done "Exemple 4. Fer zapping (Solució)"
-
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">engegarTele</span><span class="p">();</span><span class="w"></span>
-<span class="nx">fer</span><span class="w"></span>
-<span class="w">    </span><span class="nx">si</span><span class="w"> </span><span class="p">(</span><span class="nx">noAgradaCanal</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nx">fes</span><span class="w"></span>
-<span class="w">        </span><span class="nx">canviaCanal</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="nx">fsi</span><span class="w"></span>
-<span class="nx">fins</span><span class="w"> </span><span class="p">(</span><span class="nx">trobarCanalQueAgrade</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
--->
+<div class="admonition question">
+<p class="admonition-title">Activitat 104. Recepta Thermomix</p>
+<p>Busca per Internet el repertori de possibles ordres que se li poden donar a un robot de cuina com és la Thermomix i després dissenya un diagrama de flux que ens serveixca per poder fer salsa Bolonyesa.</p>
+</div>
 <h2 id="proces-de-compilacio">Procés de compilació</h2>
 <p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
 <p>Normalment la creació d'un programa executable (un típic.exe per a Microsoft Windows o DOS) comporta dos passos. El primer pas es diu <strong>compilació</strong> ( pròpiament dit) i tradueix el codi font escrit en un llenguatge de programació emmagatzemat en un arxiu a codi de baix nivell (normalment en codi objecte, no directament a llenguatge màquina). El segon pas es diu <strong>enllaçat</strong> en el qual s'enllaça el codi de baix nivell generat de tots els fitxers i subprogrames que s'han enviat compilar i s'afegeix el codi de les funcions que hi ha a les biblioteques del compilador perquè l'executable pugui comunicar-se directament amb el sistema operatiu, traduint així finalment el codi objecte a codi màquina, i generant un mòdul executable.</p>
@@ -875,8 +633,8 @@ A continuació farem els mateixos exemples que hem fet en diagrames de flux per�
 <span class="c1">// Declaració d'altres funcions</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 104. Instal·la Processing IDE</summary>
-<p>Descarrega l'aplicació Processing IDE de la seua pàgina oficial i instal·la-la al teu ordinador. Després copia i apega qualsevol codi (compatible amb Processing IDE) que trobes per Internet i prova el que passa.</p>
+<summary>Activitat 105. Instal·la Processing IDE</summary>
+<p>Descarrega l'aplicació Processing IDE de la seua pàgina oficial i instal·la-la al teu ordinador. Després copia i apega qualsevol codi (compatible amb Processing IDE) que trobes per Internet i prova el que passa. Fes-li modificacions al codi per que actue de forma diferent a l'original.</p>
 </details>
 <h3 id="eclipse-ide">Eclipse IDE</h3>
 <p>Eclipse és una plataforma de programari compost per un conjunt d'eines de programació de codi obert multiplataforma per desenvolupar el que el projecte anomena "Aplicacions de Client Enriquit", oposat a les aplicacions "Client-lleuià" basades en navegadors. Aquesta plataforma, típicament ha estat usada per desenvolupar entorns de desenvolupament integrats (de l'anglès IDE), com l'IDE de Java anomenat Java Development Toolkit (JDT) i el compilador (ECJ) que es lliura com a part d'Eclipse (i que són usats també per desenvolupar el mateix Eclipse).</p>
@@ -963,7 +721,7 @@ Les sentències que executa el nostre programa d'exmemple són les següents:</p
 <li>Mostra per pantalla el resultat de la suma.</li>
 </ul>
 <details class="question">
-<summary>Activitat 105. Instal·la Eclipse IDE for Developers</summary>
+<summary>Activitat 106. Instal·la Eclipse IDE for Developers</summary>
 <p>Descarrega l'IDE d'Eclipse de la seua pàgina oficial i instal·la'l a la teua màquina. Després intenta crear un projecte amb una sola classe i prova d'executar.</p>
 </details>
 </article>

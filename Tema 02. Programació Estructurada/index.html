@@ -5,12 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" rel="prev"/>
-<link href="../Tema%2003.%20El%20llenguatge%20Java/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.15" name="generator"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
 <title>2.- Programació Estructurada - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -18,19 +17,18 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tema-2-programacio-estructurada">
+<a class="md-skip" href="#tema-2-programacio-estructuradarlasdfasdfadf">
           Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -78,7 +76,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+<ol class="md-search-result__list"></ol>
 </div>
 </div>
 </div>
@@ -111,7 +109,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           2.- Programació Estructurada
           <span class="md-nav__icon md-icon"></span>
@@ -200,7 +198,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tema-2-programacio-estructurada">Tema 2 - Programació Estructurada</h1>
+<h1 id="tema-2-programacio-estructuradarlasdfasdfadf">Tema 2 - Programació Estructuradarlasdfasdfadf</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Al inici dels temps del la informàtica moderna  segona meitat dels segle XX i considerant ordinador programable aquell que seguia <strong>l'arquitectura de von Neumann</strong>, els primers programes s'escrivien en binari (llenguatge màquina) en <strong>tarjetes perforades.</strong></p>
 <p>Aquestes targetes perforades s'utilitzaven per escriure programes sencers amb una <strong>finalitat molt concreta</strong>. Les targetes s'utilitzaven com a entrada de dades a la màquina que s'encarregava de llegir les instruccions escrites en binari, i una a una, carregar-les a memòria i executar-les. Un problema d'aquest incipient <strong>paradigma de programació</strong> és que cada conjunt d'instruccions és específic a cada màquina.</p>
@@ -208,7 +206,7 @@
 <p>A la decada dels anys 60, <strong>Böhm i Jacopini</strong> escriuen el teorema de la programació estructurada, basant-se per supost en part en aquells llenguatges de programació que ja exisitien, i arriben a la conclusió què: la sentència <strong>GOTO</strong> era una sentència considerada perjudicial per a la programació i per entendre els programes escrits en qualsevol llenguatge i també que amb només les estructures seqüencial, iterativa i condicional era suficient per escriure qualsevol programa.</p>
 <p>En aquest tema veurem quine són les estructures de control de la programació estructurada i com s'utilitzen, així com també les seues corresponents representacions gràfiques en programes escrits en diagrames de flux, pseudocodi o algun llenguatge de programació d'alt nivell.</p>
 <p><center>
-<img alt="Targeta perforada buida" src="../assets/Tema2/Perforada.jpg"/>
+<img alt="Targeta perforada buida" src="assets/Tema2/Perforada.jpg"/>
 </center></p>
 <h2 id="conceptes-basics">Conceptes bàsics</h2>
 <p>El teorema de el programa estructurat és un resultat en la teoria de llenguatges de programació. Estableix que tota funció computable pot ser implementada en un llenguatge de programació que combine només tres estructures lògiques. Aquestes tres formes també anomenades <strong>estructures de control</strong> específicament són:</p>
@@ -467,13 +465,13 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple de bloc - estructura seqüencial</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Instrucció1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Instrucció2</span><span class="p">;</span>
-<span class="w">    </span><span class="p">...</span>
-<span class="w">    </span><span class="n">InstruccióN</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple de bloc - estructura seqüencial</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instrucció1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instrucció2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">InstruccióN</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="exemple-destructura-sequencial">Exemple d'estructura seqüencial</h4>
 <p>Un exemple d'estructura seqüencial al món real seria com li podem donar ordres a algú per tal que puga veure la tele. Seguint el nostre exemple, s'haurien de seguir els següents passos: agafar el commandament a distància, després premer el botó ON/OFF per tal que s'engegue i finalment hauriem de escollir el canal que més ens agrade amb els controls pertinents del commandament a distància.</p>
@@ -484,13 +482,13 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple d'estructura seqüencial.</span>
-<span class="c1">// Com engegar la TV</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">AgafarCommandament</span><span class="p">();</span>
-<span class="w">    </span><span class="n">PremerBotoOn</span><span class="p">();</span>
-<span class="w">    </span><span class="n">TriarCanal</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple d'estructura seqüencial.</span><span class="w"></span>
+<span class="c1">// Com engegar la TV</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">AgafarCommandament</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">PremerBotoOn</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">TriarCanal</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>En resum podríem dir que l'estructura seqüencial no és més que un conjunt de sentències o instruccions individuals agrupades.</p>
 <details class="question">
@@ -549,17 +547,17 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">        </span><span class="n">instruccio</span>
-<span class="w">    </span><span class="n">fsi</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="n">instruccio</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// O també</span>
-<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">        </span><span class="n">instruccio1</span>
-<span class="w">        </span><span class="n">instruccio2</span>
-<span class="w">        </span><span class="p">...</span>
-<span class="w">        </span><span class="n">instruccioN</span>
-<span class="w">    </span><span class="n">fsi</span>
+<span class="w">    </span><span class="c1">// O també</span><span class="w"></span>
+<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="n">instruccio1</span><span class="w"></span>
+<span class="w">        </span><span class="n">instruccio2</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">instruccioN</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>En el primer cas si quan s'avalua la condició aquesta és veritat, s'executaria la instrucció si pel contrari la condició és falsa, no es fa res.</p>
 <p>Al segon cas és igual que el primer però en cas d'avaluar-se possitivament la condició no s'executaria una sola instrucció si no que s'executaria (seqüencialment) el bloc d'instruccions següent: instrucció1, instrucció2 fins instruccióN.</p>
@@ -571,12 +569,12 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="c1">// Exemple de selecció simple</span>
-<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">        </span><span class="nf">AgafaParaigües</span><span class="p">();</span>
-<span class="w">    </span><span class="n">fsi</span>
-<span class="w">    </span><span class="nf">ObrelaPorta</span><span class="p">();</span>
-<span class="w">    </span><span class="n">IxDeCasa</span><span class="p">();</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="c1">// Exemple de selecció simple</span><span class="w"></span>
+<span class="w">    </span><span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">        </span><span class="nf">AgafaParaigües</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fsi</span><span class="w"></span>
+<span class="w">    </span><span class="nf">ObrelaPorta</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">IxDeCasa</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 204. Selecció Simple</summary>
@@ -616,17 +614,17 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">instruccio1</span><span class="p">;</span>
-<span class="n">instruccio2</span><span class="p">;</span>
-<span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="n">instruccio3</span><span class="p">;</span>
-<span class="w">    </span><span class="n">instruccio4</span><span class="p">;</span>
-<span class="n">sino</span>
-<span class="w">    </span><span class="n">instruccio5</span><span class="p">;</span>
-<span class="w">    </span><span class="n">instruccio6</span><span class="p">;</span>
-<span class="n">fsi</span>
-<span class="n">instruccio7</span><span class="p">;</span>
-<span class="n">instruccio8</span><span class="p">;</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">instruccio1</span><span class="p">;</span><span class="w"></span>
+<span class="n">instruccio2</span><span class="p">;</span><span class="w"></span>
+<span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio4</span><span class="p">;</span><span class="w"></span>
+<span class="n">sino</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio5</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio6</span><span class="p">;</span><span class="w"></span>
+<span class="n">fsi</span><span class="w"></span>
+<span class="n">instruccio7</span><span class="p">;</span><span class="w"></span>
+<span class="n">instruccio8</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenenet si la condició del 'si' s'avalua 'veritable' o 'fals'. </p>
 <ul>
@@ -643,17 +641,17 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple de selecció doble</span>
-<span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">AgafaParaigües</span><span class="p">();</span>
-<span class="n">sino</span>
-<span class="w">    </span><span class="nf">PosatXancles</span><span class="p">();</span>
-<span class="n">fsi</span>
-<span class="nf">ObrelaPorta</span><span class="p">();</span>
-<span class="n">IxDeCasa</span><span class="p">();</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple de selecció doble</span><span class="w"></span>
+<span class="n">si</span><span class="w"> </span><span class="p">(</span><span class="n">plou</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">AgafaParaigües</span><span class="p">();</span><span class="w"></span>
+<span class="n">sino</span><span class="w"></span>
+<span class="w">    </span><span class="nf">PosatXancles</span><span class="p">();</span><span class="w"></span>
+<span class="n">fsi</span><span class="w"></span>
+<span class="nf">ObrelaPorta</span><span class="p">();</span><span class="w"></span>
+<span class="n">IxDeCasa</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 203. Selecció Doble</summary>
+<summary>Activitat 205. Selecció Doble</summary>
 <p>Seguint amb l'exemple de l'activitat 202, converteix el teu exemple, si es pot, en un algorisme que utlitze l'estructura de selecció doble. Igualment que a l'activitat anterior has de dissenyar el teu codi en diagrama de flux primer i després en pseudocodi. En altres paraules, millora o amplia l'exemple de la vida real afegint-li les estructures noves.</p>
 </details>
 <h4 id="condicionals-niats">Condicionals niats</h4>
@@ -700,24 +698,24 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">instruccio1</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">instruccio1</span><span class="w"></span>
 
-<span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio1</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="n">instruccio2</span>
-<span class="w">    </span><span class="n">instruccio3</span>
+<span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio1</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio2</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio3</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio2</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="n">instruccio4</span>
+<span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio2</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio4</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio3</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="n">instruccio5</span>
-<span class="w">    </span><span class="n">instruccio6</span>
-<span class="w">    </span><span class="n">instruccio7</span>
+<span class="n">sino</span><span class="w"> </span><span class="nf">si</span><span class="w"> </span><span class="p">(</span><span class="n">condicio3</span><span class="p">)</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio5</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio6</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio7</span><span class="w"></span>
 <span class="n">sino</span><span class="w"> </span>
-<span class="w">    </span><span class="n">instruccio8</span>
-<span class="w">    </span><span class="n">instruccio9</span>
-<span class="n">fsi</span>
-<span class="n">instruccio10</span>
+<span class="w">    </span><span class="n">instruccio8</span><span class="w"></span>
+<span class="w">    </span><span class="n">instruccio9</span><span class="w"></span>
+<span class="n">fsi</span><span class="w"></span>
+<span class="n">instruccio10</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1, 2 i 10 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional.</p>
 <h4 id="exemple-destructura-condicional-niada">Exemple d'estructura condicional niada</h4>
@@ -742,29 +740,29 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple: El repartidor de Mirinda</span>
-<span class="n">si</span><span class="w">  </span><span class="n">huiEsDilluns</span><span class="w">  </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">repartirPego</span><span class="p">();</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple: El repartidor de Mirinda</span><span class="w"></span>
+<span class="n">si</span><span class="w">  </span><span class="n">huiEsDilluns</span><span class="w">  </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">repartirPego</span><span class="p">();</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDimarts</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">repartir</span><span class="p">(</span><span class="n">Oliva</span><span class="p">();</span>
+<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDimarts</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">repartir</span><span class="p">(</span><span class="n">Oliva</span><span class="p">();</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDimecres</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">repartirOndara</span><span class="p">();</span><span class="n">fa</span><span class="p">:</span><span class="n">fa</span><span class="o">-</span><span class="n">spinner</span>
+<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDimecres</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">repartirOndara</span><span class="p">();</span><span class="n">fa</span><span class="p">:</span><span class="n">fa</span><span class="o">-</span><span class="n">spinner</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDijous</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">repartirElVerger</span><span class="p">();</span>
+<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDijous</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">repartirElVerger</span><span class="p">();</span><span class="w"></span>
 
-<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDivendres</span><span class="w"> </span><span class="n">aleshores</span>
-<span class="w">    </span><span class="nf">repartirElsPoblets</span><span class="p">();</span>
+<span class="n">sino</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">huiEsDivendres</span><span class="w"> </span><span class="n">aleshores</span><span class="w"></span>
+<span class="w">    </span><span class="nf">repartirElsPoblets</span><span class="p">();</span><span class="w"></span>
 
-<span class="n">sino</span>
-<span class="w">    </span><span class="nf">NoEsTreballaHui</span><span class="p">();</span>
+<span class="n">sino</span><span class="w"></span>
+<span class="w">    </span><span class="nf">NoEsTreballaHui</span><span class="p">();</span><span class="w"></span>
 
-<span class="n">fsi</span>
+<span class="n">fsi</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 204. Condicional niada</summary>
+<summary>Activitat 206. Condicional niada</summary>
 <p>Més difícil encara, modifica els exemples anteriors i per tal d'acoplar-hi al teu algorisme una estructura condicional niada.</p>
 </details>
 <h4 id="condicional-multiple">Condicional múltiple</h4>
@@ -799,19 +797,19 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enCasDe</span><span class="w"> </span><span class="p">(</span><span class="n">expressió</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span>
-<span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">opcio1</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
-<span class="w">    </span><span class="n">Instruccio2</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enCasDe</span><span class="w"> </span><span class="p">(</span><span class="n">expressió</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
+<span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">opcio1</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">opcio2</span><span class="o">&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Instruccio3</span>
-<span class="w">        </span><span class="n">Instruccio4</span>
+<span class="w">        </span><span class="n">Instruccio3</span><span class="w"></span>
+<span class="w">        </span><span class="n">Instruccio4</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">sino</span>
-<span class="w">        </span><span class="n">Instruccio5</span>
-<span class="w">        </span><span class="n">Instruccio6</span>
-<span class="n">fiCas</span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="n">Instruccio5</span><span class="w"></span>
+<span class="w">        </span><span class="n">Instruccio6</span><span class="w"></span>
+<span class="n">fiCas</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>L'exemple del repartidor ens serveriria per veure aquesta estructura. La condició a avaluar seria: **Quin dia es huí?". La resposta a aquesta pregunta, com tots podem intuir, pot donar diversos resultats, concretament 7: dilluns, dimarts, dimecres, dijous, divendres, dissabte o diumenge.  </p>
 <p>Ara es tractaria d'establir les accions a realitzar segons el resultat de l'avaluació anterior com mostra el següent codi.</p>
@@ -834,28 +832,28 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enCasDe</span><span class="w"> </span><span class="p">(</span><span class="n">huiQuinDiaEs</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span>
-<span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dilluns</span><span class="o">&gt;</span>
-<span class="w">        </span><span class="nf">RepartirPego</span><span class="p">();</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enCasDe</span><span class="w"> </span><span class="p">(</span><span class="n">huiQuinDiaEs</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
+<span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dilluns</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nf">RepartirPego</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dimarts</span><span class="o">&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="nf">RepartirOliva</span><span class="p">();</span>
+<span class="w">        </span><span class="nf">RepartirOliva</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dimecres</span><span class="o">&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="nf">RepartirOndara</span><span class="p">();</span>
+<span class="w">        </span><span class="nf">RepartirOndara</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dijous</span><span class="o">&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="nf">RepartirElVerger</span><span class="p">();</span>
+<span class="w">        </span><span class="nf">RepartirElVerger</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Divendres</span><span class="o">&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="nf">RepartirElsPoblets</span><span class="p">();</span>
+<span class="w">        </span><span class="nf">RepartirElsPoblets</span><span class="p">();</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">sino</span>
-<span class="w">        </span><span class="nf">HuiNoEsTreballa</span><span class="p">();</span>
-<span class="n">fiCas</span>
+<span class="w">    </span><span class="n">sino</span><span class="w"></span>
+<span class="w">        </span><span class="nf">HuiNoEsTreballa</span><span class="p">();</span><span class="w"></span>
+<span class="n">fiCas</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 205. Estructura condicional múltiple.</summary>
+<summary>Activitat 207. Estructura condicional múltiple.</summary>
 <p>Dissenya un algorisme que t'ajude a decidir quina roba posar-te abans d'eixir de casa en funció del temps que faja. Cal tenir en compte les següents consideracions geogràfiques: estem a Pego i l'oratge pot ser molt variable. Es poden donar les següents condicions meteorològiques: ploure a cànters, fer un sol que bada penyes, fa frescoreta i també pot fer un fred que pela. El mateix programa l'has d'escriure utilitzant l'estructura <strong>encasde</strong> i la de selecció múltiple niada.</p>
 </details>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
@@ -886,13 +884,13 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
-<span class="w">    </span><span class="n">Instruccio2</span>
-<span class="n">fmentre</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
+<span class="n">fmentre</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 206: Obrir tots els calaixos. Mentre fer</summary>
+<summary>Activitat 208: Obrir tots els calaixos. Mentre fer</summary>
 <p>Imagina que estas buscant el mòbil. Recordes que l'has guardat a un calaix de la teua habitació. El problema és que a la teua habitació entre armaris, escriptoris, tauletes de nit i altres mobles, hi ham més de 30 calaixos. Dissenya un codi en el que busques el mòbil obrint tots els calaixos fins que el trobes.</p>
 </details>
 <h4 id="repetir-mentre">repetir .. mentre</h4>
@@ -922,13 +920,13 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fer</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
-<span class="w">    </span><span class="n">Instruccio2</span>
-<span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fer</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
+<span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 207. La formigonera. Fer mentre</summary>
+<summary>Activitat 209. La formigonera. Fer mentre</summary>
 <p>Algorisme de la formigonera. Tenim una formigonera preparada amb l'aigua i el cement necessaris i només ens faltaria posar-li l'arena necessària que està en un montó a prop de la formigonera. Disposem d'una pala per passar l'arena del montó a dins de la formigonera. Dissenya un algorisme que tire arena, pala a pala, dins de la formigonera fins que aquesta estiga plena.</p>
 </details>
 <h4 id="bucle-per">bucle per</h4>
@@ -964,10 +962,10 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">per</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="w"> </span><span class="n">mentre</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">incrementa</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">fer</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
-<span class="w">    </span><span class="n">Instruccio2</span>
-<span class="n">fiper</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">per</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="w"> </span><span class="n">mentre</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">incrementa</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
+<span class="n">fiper</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior:</p>
 <ol>
@@ -977,7 +975,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>Actualització: incrementa i en 1</li>
 </ol>
 <details class="question">
-<summary>Activitat 208. Busca aigua. Bucle per</summary>
+<summary>Activitat 210. Busca aigua. Bucle per</summary>
 <p>Dissenya un algorisme en diagrames de flux que busque la paraula "aigua" en qualsevol llibre en les 50 primeres pàgines. És a dir, el nostre algorisme el que farà serà llegir les 50 primeres pàgines d'un llibre qualsevol i comptarà quantes vegades ha trobat la paraula aigua en total a les 50 pàgines.</p>
 <p>Has de dissenyar l'algorisme tant en diagrama de flux com en pseudocodi.</p>
 </details>
@@ -985,7 +983,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <p>Exposem a continació algunes activitats per tal d'assolir els coneixements exposats als punts anteriors.</p>
 <!-- Combinació de seqüencial i repetir mentre -->
 <details class="question">
-<summary>Activitat 209. Iniciar sessió a Facebook</summary>
+<summary>Activitat 211. Iniciar sessió a Facebook</summary>
 <p>Dibuixa un diagrama de flux per iniciar sessió en un compte de Facebook.<br/></p>
 <ol>
 <li>Obrim el navegador web.<br/></li>
@@ -1013,7 +1011,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Seqüencial amb instruccions d'entrada - eixida -->
 <details class="question">
-<summary>Activitat 210. Àrea d'un rectangle</summary>
+<summary>Activitat 212. Àrea d'un rectangle</summary>
 <p>Calcula l'àrea d'un rectangle donades les seues dimensions</p>
 <ol>
 <li>Inserim la base.</li>
@@ -1036,7 +1034,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Utilització del bucle per o un altre amb condició menor que 10 -->
 <details class="question">
-<summary>Activitat 211. Hola món 10 vegades</summary>
+<summary>Activitat 213. Hola món 10 vegades</summary>
 <p>Escriu el diagrama de flux necessari per imprimr per pantalla 10 vegades "hola món"</p>
 <p>Resolem aquesta activitat utilitzant el concepte bucle. Creem la variable "cuenta" i l'incialitzem a 0. Després imprimim "Hola món" i incrementem la variable "cuenta" en uno.</p>
 <p>Verifiquem si "cuenta" encara és menor que 10. En cas veritable, imprimim "Hola món" i tornem a incrementar. Quan la "cuenta" valga 10 eixim del programa.</p>
@@ -1062,7 +1060,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Combinació de sel·lecció i bollir i disoldre són bucles -->
 <details class="question">
-<summary>Activitat 212. Preparar el té</summary>
+<summary>Activitat 214. Preparar el té</summary>
 <p>Dibuixa el diagrama de flux amb els passos necessaris per preparar el té.</p>
 <ol>
 <li>Comprar té i/o sucre. </li>
@@ -1114,7 +1112,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Hi han instruccions d'entrada-eixida tant per mostra text en pantalla com per llegir variables -->
 <details class="question">
-<summary>Activitat 213. Número major</summary>
+<summary>Activitat 215. Número major</summary>
 <p>Escriu el diagrama de flux de tal forma que donats dos números ens indique quin és més gran.</p>
 <ol>
 <li>Introudir els valors A i B</li>
@@ -1146,7 +1144,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Instruccions d'entrada eixida i seqüencial -->
 <details class="question">
-<summary>Activitat 214. Suma dos números</summary>
+<summary>Activitat 216. Suma dos números</summary>
 <p>Algorisme que demana dos números i els suma mostrant el resultat per pantalla.</p>
 <ol>
 <li>Declarem la variable <strong>suma</strong> i la inicialitzem a 0.</li>
@@ -1170,7 +1168,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Condicional múltiple -->
 <details class="question">
-<summary>Activitat 215. Llevar la fam</summary>
+<summary>Activitat 217. Llevar la fam</summary>
 <p>Ens trobem a casa i tenim fam. Què fem?</p>
 <ol>
 <li>Preguntem si tenim fam.</li>
@@ -1201,7 +1199,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Condicional doble -->
 <details class="question">
-<summary>Activitat 216. Par o impar</summary>
+<summary>Activitat 218. Par o impar</summary>
 <p>Algorisme que determina si el númeroJ que inserim és parell o senar.</p>
 <ol>
 <li>Introduim un número 'N'</li>
@@ -1227,7 +1225,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Bucle repetir -->
 <details class="question">
-<summary>Activitat 217. Agafar el paraigües</summary>
+<summary>Activitat 219. Agafar el paraigües</summary>
 <p>Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.</p>
 <ol>
 <li>Comprovem si està plovent.</li>
@@ -1254,7 +1252,7 @@ C--&gt;Fi((Fi));
 </details>
 <!-- Entrada i exidia i bucle per a calcular la mitjana (complicat) -->
 <details class="question">
-<summary>Activitat 218. Mitjana</summary>
+<summary>Activitat 220. Mitjana</summary>
 <p>Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspés". La nota mínima per aprovar és 11.</p>
 <ol>
 <li>Declarem les variables a utilitzar: Nota1, Nota2, Nota3, Mitjana.</li>
@@ -1291,6 +1289,34 @@ C--&gt;Fi((Fi));
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 1.- Introducció programació" class="md-footer__link md-footer__link--prev" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              1.- Introducció programació
+            </div>
+</div>
+</a>
+<a aria-label="Next: 3.- El llenguatge Java" class="md-footer__link md-footer__link--next" href="../Tema%2003.%20El%20llenguatge%20Java/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              3.- El llenguatge Java
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1308,8 +1334,8 @@ C--&gt;Fi((Fi));
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

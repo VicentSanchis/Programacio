@@ -204,7 +204,7 @@ El primer ens permet crear una jerarquia de classes relacionades entre sí de ta
 <p>En aquest tema veurem com Java implementa el mecanisme de l’herència i quines són les opcions que ens dona.</p>
 <p>Suposem el cas en el que disposem de dues classes (amb menys classes resultaria impossible l’herència), una s’anomenarà: classe base, superclasse o classe pare; mentre que l’altra serà la classe derivada, subclasse o classe filla.</p>
 <p>En el nostre cas la classe pare, superclasse o classe base serà «Instrument» i la classe derivada, filla o subclasse serà «Guitarra» que en llenguatge natural es podria traduir com que una guitarra és un tipus d’instrument.</p>
-<p><img alt="Banda de Rock" src="assets/Tema7/RockBand1.png"/></p>
+<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand1.png"/></p>
 <p>La classe base en una jerarquia d’herència és la classe que conté els atributs i mètodes comuns a totes les classes derivades i és per això que s’evita la redundància del codi que es produiria si haguérem de repetir codi comú a cadascuna de les subclasses, per tant, es podria deduir que una classe derivada és de facto una ampliació de les funcionalitats de la classe base ja que contindrà tant els membres de la classe base com els que s'afegeixen de més a la classe derivada.</p>
 <h3 id="declaracio-duna-classe-derivada">Declaració d'una classe derivada</h3>
 <p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada ‘extends’. Mira l’exemple següent:</p>
@@ -215,7 +215,7 @@ El primer ens permet crear una jerarquia de classes relacionades entre sí de ta
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama de classes quedaria així:</p>
-<p><img alt="Banda de Rock" src="assets/Tema7/RockBand2.png"/></p>
+<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand2.png"/></p>
 <p>El codi en Java resultant seria el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -245,7 +245,7 @@ Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama 
 <p>Al utilitzar el mecanisme de l’herència en programació orientada a objectes hem d’intentar sempre tindre un màxim de membres a la superclasse i després a les diferents subclasses només aquells membres o atributs que fan de discriminador, és a dir, que diferencien la classe especialitzada (o subclasse) de la classe superior.
 Ampliem el nostre exemple de banda de rock anterior i afegim atributs i membres a totes les classes. Per exemple cada instrument tindrà amo, any, tipus, marca, model i clau d’afinació. A més a més, podrà afinar i tocar. </p>
 <p>Ja més específicament d’una bateria hem de saber el total de Toms que té, el total de pedals (hi ha bateries amb doble pedal) i el total de plats a banda de poder tocar un redoble. D’una guitarra hem d’especificar quin ampli utilitza i quantes cordes té (pot tenir-ne fins 12). Finalment pel que fa al teclat, sabrem el nombre de tecles que té i podrà tocar melodies.</p>
-<p><img alt="Banda de Rock" src="assets/Tema7/RockBand3.png"/></p>
+<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand3.png"/></p>
 <p>El codi resultant d’aquest disseny seria el següent:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -385,7 +385,7 @@ Del codi anterior es pot extreure la següent informació:</p>
  mateix nom però una llista diferent d’arguments </p>
 <p>Si pel contrari tenim un mateix mètode amb el mateix nom i la mateixa signatura (els mateixos paràmetres) el que estem fent es sobreescriure (overridint) i no sobrecarregar (overloading)</p>
 <p>Seguint amb l’exemple de la nostra banda de rock mireu el següent codi:</p>
-<p><img alt="Banda de Rock" src="assets/Tema7/RockBand4.png"/></p>
+<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand4.png"/></p>
 <p>Com es pot observar a la imatge anterior hi ha una sobrecarrega del mètode afinar a cada classe derivada perquè seria el mateix que el de la classe pare però amb diferents paràmetres mentre que el mètode tocar està sobreescrit ja que la interfície és idèntica. En codi podria quedar de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -695,7 +695,7 @@ Del codi anterior es pot extreure la següent informació:</p>
 <p>El mètode super(), es crida només quan s’utilitzen constructors sobrecarregats per tal que execute també el constructor de la superclasse amb paràmetres i no el constructor per defecte que és el que faria si no li diguem el contrari.</p>
 <h3 id="exemple">Exemple</h3>
 <p>Que executaria el següent codi?</p>
-<p><img alt="Exemple Constructors" src="assets/Tema7/Exemple1.png"/></p>
+<p><img alt="Exemple Constructors" src="../assets/Tema7/Exemple1.png"/></p>
 <p>A més a més, super() també ens permet cridar a mètodes de la classe pare de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">super</span><span class="p">.</span><span class="na">metode</span><span class="p">(</span><span class="n">argumnets</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>

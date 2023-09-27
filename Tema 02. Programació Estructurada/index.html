@@ -206,7 +206,7 @@
 <p>A la decada dels anys 60, <strong>Böhm i Jacopini</strong> escriuen el teorema de la programació estructurada, basant-se per supost en part en aquells llenguatges de programació que ja exisitien, i arriben a la conclusió què: la sentència <strong>GOTO</strong> era una sentència considerada perjudicial per a la programació i per entendre els programes escrits en qualsevol llenguatge i també que amb només les estructures seqüencial, iterativa i condicional era suficient per escriure qualsevol programa.</p>
 <p>En aquest tema veurem quine són les estructures de control de la programació estructurada i com s'utilitzen, així com també les seues corresponents representacions gràfiques en programes escrits en diagrames de flux, pseudocodi o algun llenguatge de programació d'alt nivell.</p>
 <p><center>
-<img alt="Targeta perforada buida" src="assets/Tema2/Perforada.jpg"/>
+<img alt="Targeta perforada buida" src="../assets/Tema2/Perforada.jpg"/>
 </center></p>
 <h2 id="conceptes-basics">Conceptes bàsics</h2>
 <p>El teorema de el programa estructurat és un resultat en la teoria de llenguatges de programació. Estableix que tota funció computable pot ser implementada en un llenguatge de programació que combine només tres estructures lògiques. Aquestes tres formes també anomenades <strong>estructures de control</strong> específicament són:</p>
@@ -867,9 +867,9 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     Instrucció1--&gt;D(fa:fa-spinner); 
     D--&gt;C1{Condició};
     C1--&gt;|V|Instrucció2;
-    Instrucció2--&gt;P2((Fi));
+    C1--&gt;|F|P2((Fi));
+    Instrucció2--&gt;D;
     style P2 fill:#F00;
-    C1--&gt;|F|D;
 </div>
 <p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
 <p>Els passos que representen el diagrama anterior són:</p>
@@ -884,8 +884,8 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
-<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Instrucció1</span><span class="w"></span>
+<span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
 <span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
 <span class="n">fmentre</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -920,10 +920,12 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fer</span><span class="w"></span>
-<span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Instrucció1</span><span class="w"></span>
+<span class="n">fer</span><span class="w"></span>
 <span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
 <span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"></span>
+<span class="n">Instrucció3</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 209. La formigonera. Fer mentre</summary>
@@ -1176,7 +1178,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>Si la resposta és si busquem el menjar a la nevera.</li>
 <li>Si hi ha menjar a la nevera la calfem i mengem</li>
 <li>Si no hi ha res a la nevera,    </li>
-<li>Ini((Inici))--&gt;A[/Introdueix un nombre:/];</li>
+<li>Anar a comprar</li>
 </ol>
 </details>
 <details class="done" open="open">

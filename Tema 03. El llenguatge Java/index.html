@@ -195,7 +195,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-3-el-llenguatge-java">Tema 3. El llenguatge Java</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>Una vegada estudiat el <strong>teorema del programa estructurat</strong> juntamnet amb els diagrames de flux i psuedocodi, passem a veure aquestos conceptes teòrics en un llenguatge de programació d'alt nivell concret com és el llenguatge de programació Java.</p>
+<p>Una vegada estudiat el <strong>teorema del programa estructurat</strong> juntament amb els diagrames de flux i pseudocodi, passem a veure aquests conceptes teòrics en un llenguatge de programació d'alt nivell concret com és el llenguatge de programació Java.</p>
 <p>El <strong>Java</strong> és un llenguatge de programació dissenyat el 1990 per <strong>James Gosling</strong> amb altres companys de Sun Microsystems a partir del <strong>llenguatge C</strong>. Des del seu naixement fou pensat com un llenguatge orientat a objectes. Entre el 13 de novembre de 2006 i el maig del 2007 Sun va alliberar parts de Java com a <strong>programari lliure de codi obert amb llicència GPL</strong>. És un dels llenguatges de programació més utilitzats, i s'utilitza tant per aplicacions web com per aplicacions d'escriptori.</p>
 <p>El Java és un llenguatge <strong>compilat amb una màquina virtual</strong> d'intermediari i, per tant, pot semblar lent en comparació amb altres llenguatges, però ofereix un índex de re-utilització de codi molt elevat, sent possible trobar moltes <strong>llibreries lliures de Java</strong>. És un llenguatge flexible i potent tot i la facilitat amb la qual es programa i dels resultats que ofereix. Un dels trets que el caracteritza i que el fa una eina molt valorada a l'hora de desenvolupar aplicacions distribuïdes, és el fet que és un llenguatge multi-plataforma.</p>
 <p>Generalment els programes de Java es compilen en un <strong>bytecode</strong> (fitxer .class) que pot córrer en una <strong>Màquina Virtual Java.</strong> Sun Microsystems disposa de tres implementacions diferents de Java: <strong>J2SE</strong> per a aplicacions d'escriptori; J2EE per a aplicacions distribuïdes i J2ME per a plataformes amb recursos més reduïts com ara mòbils o PDAs. Per a cada una de les tres implementacions és possible descarregar el JRE (entorn d'execució Java) per a executar aplicacions o el SDK (Eines per al desenvolupament d'aplicacions) per a programar aplicacions en Java, aquest últim també inclou el JRE.</p>
@@ -218,12 +218,12 @@
 <h2 id="dades-variables-identificadors">Dades, Variables, identificadors.</h2>
 <p>Eventualment la informàtica el que tracta de fer és interpretar i processar <strong>informació</strong>, per tant, el primer pas hauria de ser implementar el mecanisme que s'encarregue de representar la informació tal i com la interpretem nosaltres al món real. </p>
 <p>La <strong>informació</strong> en informàtica és el contingut d'una o més <strong>dades</strong>, fent abstracció de la representació concreta que adopta.</p>
-<p>Dit d'una altra manera. Imagineu el caixer d'un supermercat. Al final del dia el treballador que està a càrrec del caixer, treurà tota la recaudació del dia i la comptarà. En aquest cas la <strong>informació</strong> seria la quantitat total de diners que s'han recaudat, i es representa en forma de <strong>dada numèrica</strong> utilitzant nombres i algun signe de puntuació, <strong>1.200,45€</strong> seria la dada que representa la informació que es vol saber al final del dia.</p>
+<p>Dit d'una altra manera. Imagineu el caixer d'un supermercat. Al final del dia el treballador que està a càrrec del caixer, traurà tota la recaptació del dia i la comptarà. En aquest cas la <strong>informació</strong> seria la quantitat total de diners que s'han recaptat, i es representa en forma de <strong>dada numèrica</strong> utilitzant nombres i algun signe de puntuació, <strong>1.200,45€</strong> seria la dada que representa la informació que es vol saber al final del dia.</p>
 <details class="info" open="open">
 <summary>Què són les Dades</summary>
 <p>Una <strong>dada</strong> és "la representació convencional de la informació en un format adequat perquè puga ser processada, comunicada o interpretada per mitjans manuals o automàtics."</p>
 </details>
-<p>Ara la qüestió és com aquesta informació que al món real es representa utilitzant números la podem representar en forma de dada per tal que una màquina siga capaç de processar.  En qualsevol llenguatge de programació, la informació es pot representar de forma constant, amb <strong>literals</strong> per exemple, o de forma <strong>variable</strong> utilitzant <strong>identficadors</strong>.  Mirem a continuació amb més detall aquestos conceptes.</p>
+<p>Ara la qüestió és com aquesta informació que al món real es representa utilitzant números la podem representar en forma de dada per tal que una màquina siga capaç de processar.  En qualsevol llenguatge de programació, la informació es pot representar de forma constant, amb <strong>literals</strong> per exemple, o de forma <strong>variable</strong> utilitzant <strong>identificadors</strong>.  Mirem a continuació amb més detall aquests conceptes.</p>
 <details class="info" open="open">
 <summary>Què són les Variables</summary>
 <p>Una <strong>variable</strong> en el camp de les <strong>matemàtiques</strong> és una quantitat que pot créixer o decréixer d'una manera contínua o discontínua. Mentre que en <strong>informàtica</strong> és un símbol emprat en programació per a emmagatzemar en memòria valors canviants.</p>
@@ -232,9 +232,9 @@
 <p>Però no ens avancem encara i estudiem bé què és un <strong>identificador</strong>. En tot llenguatge de programació existeixen una sèrie d'elements com variables, constants, funcions, llibreries. Aquestos elements requereixen d'un nom per tal de distingir-lo de la resta. Aquestos noms es diuen <strong>identificadors</strong></p>
 <details class="info" open="open">
 <summary>Què són els identificadors</summary>
-<p>Un <strong>identificador</strong> és una cadena alfanúmerica que representa o dona un nom a un element dins del nostre programa. Els <strong>identificadors</strong> de les variables són noms que s'inventa el programador i s'hauria de tindre en consideració al següent màxima: <strong>han de ser significatius</strong></p>
+<p>Un <strong>identificador</strong> és una cadena alfanumèrica que representa o dona un nom a un element dins del nostre programa. Els <strong>identificadors</strong> de les variables són noms que s'inventa el programador i s'hauria de tindre en consideració al següent màxima: <strong>han de ser significatius</strong></p>
 </details>
-<p>En altres paraules, un <strong>identificador</strong> és una etiqueta que podem utilitzar per anomenar "coses" en un programa informàtic. Pel que fa al concepte de <strong>significatiu</strong>, vol dir que el nom que escollim per a l'etiqueta hauria de ser suficientment esclaridor per saber què és el que representa. Per exemple, si volem posar una etiquta (amb una enganxina) a una botella d'aigua que tenim a la nevera, una bona elecció seria: <strong>AIGUA</strong>.</p>
+<p>En altres paraules, un <strong>identificador</strong> és una etiqueta que podem utilitzar per anomenar "coses" en un programa informàtic. Pel que fa al concepte de <strong>significatiu</strong>, vol dir que el nom que escollim per a l'etiqueta hauria de ser suficientment esclaridor per saber què és el que representa. Per exemple, si volem posar una etiqueta (amb un adhesiu) a una botella d'aigua que tenim a la nevera, una bona elecció seria: <strong>AIGUA</strong>.</p>
 <p>Una última cosa, com en tot llenguatge de programació, Java té una sèrie de normes que hem de seguir per construir identificadors vàlids. LLig i revisa les normes de construcció d'identificadors de Java, que d'altra banda, són molt semblants a la majoria de llenguatges de programació.</p>
 <div class="admonition tip">
 <p class="admonition-title">Normes per construir identificadors en Java</p>
@@ -256,7 +256,7 @@
 <ul>
 <li><strong>H0la:</strong> malgrat tindre un número comença per un caracter alfanumèric.</li>
 <li><strong>$vicent:</strong> vàlid ja que el símbol de dollar és un caracter alfanumèric vàlid per inicia un identificador.</li>
-<li><strong>_strNom:</strong> els identificadors poden començar per '_' és més de vegades és un convecionalisme per algun tipus concret de variable.</li>
+<li><strong>_strNom:</strong> els identificadors poden començar per '_' és més de vegades és un convencionalisme per algun tipus concret de variable.</li>
 <li><strong>_3variable:</strong> seria incorrecta si no tingués '_' com a primer caracter de l'identificador.</li>
 <li><strong>VarTest:</strong> totalment correcta.</li>
 <li><strong>variabletest:</strong> cap incorrecció</li>
@@ -420,7 +420,7 @@
 </details>
 <h3 id="paraules-reservades">Paraules reservades</h3>
 <p>Uns dels principals <strong>identificadors</strong> que ens trobarem a tot llenguatge de programació són les <strong>paraules reservades</strong>. Per entendre-ho, el conjunt de paraules reservades d'un llenguatge de programació són el diccionari de totes les paraules que té aquest llenguatge. </p>
-<p>Aquetes paraules reservades no poden utilitzar-se per cap altra cosa més, per exemple, si Java té la paraula reservada <strong>public</strong>, el programador no podrà crear cap variable utilitzant l'identificador public.</p>
+<p>Aquestes paraules reservades no poden utilitzar-se per cap altra cosa més, per exemple, si Java té la paraula reservada <strong>public</strong>, el programador no podrà crear cap variable utilitzant l'identificador public.</p>
 <table>
 <thead>
 <tr>
@@ -510,7 +510,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Paraules reservades en Processing IDE</p>
 <p>Com que Processing IDE no és  més que una capa afegida a l'entorn de programació en Java, té les mateixes paraules reservades que Java i a més afegeix les següents: <strong>setup, draw, mouseClicked, keyPressed, delay, background, size, clear, rect, ellipse, circle, triangle, pushMatris, popMatrix, translate, PVector, PImage</strong> etc..</p>
-<p>No existeix una taula on les pugam consultar totes, és qüestió d'anar treballant amb Processing i aprendre-les conforme les anem utilitzant.</p>
+<p>No existeix una taula on les podem consultar totes, és qüestió d'anar treballant amb Processing i aprendre-les conforme les anem utilitzant.</p>
 </div>
 <details class="question">
 <summary>Activitat 302. Identifica i classifica identificadors</summary>
@@ -556,7 +556,7 @@
 <ul>
 <li><strong><u>Nombres enters:</u></strong> on podem trobar el <strong>byte, short, long i int.</strong> Aquestos tipus admeten valors no fraccionables en parts més xicotetes que la unitat. Per exemple: 1, 3, 5, 15, 20, 132... </li>
 <li><strong><u>Punt flotant:</u></strong> aquest grup inclou el <strong>float</strong> i el <strong>double</strong> on es representen els nombres decimals, és a dir, aquells que sí admeten fraccions. Per exemple: 1.3, 5.802039, etc..</li>
-<li><strong><u>Caracters:</u></strong> char representa a tot el conjunt de <strong>caracters</strong> del nostre sistema alfabètic inclosos els símbols. Per exmple: a, b, c, $, ?...</li>
+<li><strong><u>Caracters:</u></strong> char representa a tot el conjunt de <strong>caracters</strong> del nostre sistema alfabètic inclosos els símbols. Per exemple: a, b, c, $, ?...</li>
 <li><strong><u>Booleà:</u></strong> boolean és un tipus especial que només pot tindre dos possibles valors: <strong>true o false</strong>. Què són els dos valors lògics de l'algebra de George Boole.</li>
 </ul>
 <h3 id="taula-de-tipus-de-dades-en-java">Taula de tipus de dades en Java</h3>
@@ -648,11 +648,11 @@
 <span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// En aquesta declaració s'inclou també la inicialització del seu valor.</span><span class="w"></span>
 <span class="kt">long</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-<p>Les variables com a contenidors d'informació, <strong>poden variar</strong> (d'ahi el nom de variable) el seu <strong>valor</strong> durant l'execució del programa.</p>
+<p>Les variables com a contenidors d'informació, <strong>poden variar</strong> (d'ací el nom de variable) el seu <strong>valor</strong> durant l'execució del programa.</p>
 <p><center>
 <img alt="Variables" src="../assets/Tema3/que_es_una_variable.png"/>
 </center></p>
-<p>Però millor vegem un exemple, imaginem una aplicació en la que volem controlar la <strong>posició</strong> d'un element qualsevol, per exemple un cercle a una pantalla 2D (o una boleta). Per determinar la poisció de qualsevol element en un escenari <strong>2D</strong> necessitem dues coordenades: <strong>x i y</strong>. Les <strong>variables</strong> que podriem utiltizar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar. Si vullguerem fer un sistema on les posicions tingueren més precissió, podriem usar floats en lloc d'ints.</p>
+<p>Però millor vegem un exemple, imaginem una aplicació en la que volem controlar la <strong>posició</strong> d'un element qualsevol, per exemple un cercle a una pantalla 2D (o una boleta). Per determinar la posició de qualsevol element en un escenari <strong>2D</strong> necessitem dues coordenades: <strong>x i y</strong>. Les <strong>variables</strong> que podriem utilitzar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar. Si volguerem fer un sistema on les posicions tingueren més precisió, podriem usar floats en lloc d'ints.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -676,12 +676,12 @@
 </details>
 <h3 id="literals">Literals</h3>
 <p>En programació no només es pot tractar la informació mitjançant l'ús de <strong>variables</strong>, també es poden emmagatzemar dades fent ús dels <strong>literals</strong>. I què són els literals?</p>
-<p>Un literal és, segons el termCAT,  una expressió o part d'una instrucció que representa <strong>explícitament</strong> un valor. En altres paraules, mentre que les <strong>variables</strong> són cadenes alfanumèriques que representen un valor canviant, un <strong>literal</strong> és una cadena alfanumèrica que representa exactament el que posa.  Des del punt de vista més específic de la informàtica, un literal és un valor alfanumèric que s'utlitza com una <strong>constant</strong>, és a dir, que el seu valor no varia durant l'execució del programa.</p>
+<p>Un literal és, segons el termCAT,  una expressió o part d'una instrucció que representa <strong>explícitament</strong> un valor. En altres paraules, mentre que les <strong>variables</strong> són cadenes alfanumèriques que representen un valor canviant, un <strong>literal</strong> és una cadena alfanumèrica que representa exactament el que posa.  Des del punt de vista més específic de la informàtica, un literal és un valor alfanumèric que s'utilitza com una <strong>constant</strong>, és a dir, que el seu valor no varia durant l'execució del programa.</p>
 <p>Però com podem distingir el tipus dels literals o si són correctes o no? Mirem primer quins tipus de terminals ens podem trobar en Java.</p>
 <ul>
 <li><strong>Literals enters:</strong> existeixen tres formes de el valor d'un número enter. Si s'escriu solament el número, aquest representa una xifra en <strong>base decimal</strong>. Si té un 0 davant estem escrivint números en <strong>sistema octal</strong> i si té el prefix "0x" aleshores està representat en <strong>base hexadecimal</strong>. Finalment si el que volem és representar un literal de tipus <strong>long</strong> ho farem afegint un caracter 'L' al final de la cadena numèrica.</li>
 <li><strong>Literals decimals:</strong> Per representar literals en coma flotant podem utilitzar el '.' per exemple: 10.3, o la notació científica com 10.3e+5 que seria l'equivalent a 10.3 per 10 elevat a 5.</li>
-<li><strong>Literals caracters i cadenes:</strong> Un literal de tipus caracter emmagatzema un caracter <strong>Unicode</strong>. Aquest sistema de codificació amplia les opcions que té la codificació <strong>ASCCII</strong> per incluir altres alfabets. Podem escriure en grec, hebreu o vietnamita sense que el compilador proteste. Un literal de tipus char s'expressa envoltant el caracter entre <strong>cometes simples.</strong> Una altra manera de representar un caracter és indicant el codi <strong>Unicode</strong> en hexadecimal, posant com a <strong>prefix</strong> la cadena \u, tot entre cometes simples. D'aquesta forma el símbol '@' s'escriuria: '\u0040.</li>
+<li><strong>Literals caracters i cadenes:</strong> Un literal de tipus caracter emmagatzema un caracter <strong>Unicode</strong>. Aquest sistema de codificació amplia les opcions que té la codificació <strong>ASCCII</strong> per incloure altres alfabets. Podem escriure en grec, hebreu o vietnamita sense que el compilador proteste. Un literal de tipus char s'expressa envoltant el caracter entre <strong>cometes simples.</strong> Una altra manera de representar un caracter és indicant el codi <strong>Unicode</strong> en hexadecimal, posant com a <strong>prefix</strong> la cadena \u, tot entre cometes simples. D'aquesta forma el símbol '@' s'escriuria: '\u0040.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Literal</p>
@@ -1084,8 +1084,8 @@
 </table>
 </details>
 <h3 id="declaracio-inicialitzacio-de-variables">Declaració, inicialització de variables</h3>
-<p>Cal diferenciar entre la <strong>declaració d'una variable</strong>, quan li donen nom i el tipus base com hem fet a l'activitat 303, <strong>i la inicialització</strong> d'aquesta mateixa, quan li donem valor. Si recordeu l'exemple al qual necessitavem dues variables per representar la posició d'un element en un escenari 2D, haviem declarat les variables de tipus enter <strong>posX</strong> i <strong>posY</strong> però no els hauriem donat cap valor incial.</p>
-<p>Si per declarar una variable és necessari l'ús d'un <strong>identificador</strong> que ens servirà d'etiqueta per poder accedir a dita variable, per tal d'assingar-li un valor hem de fer ús d'un <strong>literal</strong>.</p>
+<p>Cal diferenciar entre la <strong>declaració d'una variable</strong>, quan li donen nom i el tipus base com hem fet a l'activitat 303, <strong>i la inicialització</strong> d'aquesta mateixa, quan li donem valor. Si recordeu l'exemple al qual necessitavem dues variables per representar la posició d'un element en un escenari 2D, haviem declarat les variables de tipus enter <strong>posX</strong> i <strong>posY</strong> però no els hauriem donat cap valor inicial.</p>
+<p>Si per declarar una variable és necessari l'ús d'un <strong>identificador</strong> que ens servirà d'etiqueta per poder accedir a dita variable, per tal d'assignar-li un valor hem de fer ús d'un <strong>literal</strong>.</p>
 <p>Per defecte Java inicialitzaria aquestes dues variables a zero, és a dir, dins la caixa (contenidor) de cada variable, tindriem el valor zero si no s'indica el contrari.</p>
 <details class="question">
 <summary>Activitat 307. Inicialització de variables</summary>
@@ -1104,7 +1104,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <h3 id="comentaris">Comentaris</h3>
-<p>Els <strong>comentaris</strong> a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga <strong>més fàcil de llegir</strong> millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. D'altre banda, els comentaris són part de la <strong>documentació</strong> de tot programa. És molt important escriure comentaris breus però significatius. Massa text als comentaris produirà l'efecte contrari i deixarà encara més il·legible el codi.</p>
+<p>Els <strong>comentaris</strong> a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga <strong>més fàcil de llegir</strong> millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. D'altre banda, els comentaris són part de la <strong>documentació</strong> de tot programa. És molt important escriure comentaris breus però significatius. Massa text als comentaris produirà l'efecte contrari i deixarà encara més illegible el codi.</p>
 <div class="admonition tip">
 <p class="admonition-title">Principi en programació</p>
 <p>"Un programa s'escriu una vegada però es llig moltes vegades"</p>
@@ -1113,7 +1113,7 @@
 <ul>
 <li><strong>Comentaris en línia:</strong> S'utilitzen per comentar parts concretes del codi</li>
 <li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
-<li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
+<li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les eines que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1143,7 +1143,7 @@
 <span class="cm">/**</span>
 <span class="cm">* Troba la mitjana de tres números!</span>
 <span class="cm">* El programa FindAvg implementa una aplicacio que</span>
-<span class="cm">* simplement calcula la mitjana de tres enteros i els mostra</span>
+<span class="cm">* simplement calcula la mitjana de tres enters i els mostra</span>
 <span class="cm">* a la eixida per pantalla.</span>
 <span class="cm">*</span>
 <span class="cm">* @author  Aleix Caminou</span>
@@ -1162,7 +1162,7 @@
 <p>Recorda que has de guardar aquest fitxer com a <strong>CognomNomAct309.pde</strong> per lliurar-lo.</p>
 </details>
 <h2 id="operadors-i-expressions">Operadors i expressions</h2>
-<p>Ha arribat el moment de revisar el que hem vist. Fins ara hem vist les <strong>dades</strong> com a unitat d'emmagatzemament <strong>d'informació</strong>. Els diferents <strong>tipus de dades</strong> que ens proporciona Java, com les <strong>variables</strong> i les <strong>constants</strong> poden emmagatzemar dades que poden variar o no han de variar durant l'execució del programa. I finalment també hem estudiat els <strong>literals</strong> i com construir <strong>identificadors</strong> per tal d'etiquetar distints elements dins del nostre programa.  En definitva em vist en detall com es pot representar tota classe d'informació en un llenguatge de programació com Java però, com varem dir al primer tema, un programa informàtic s'encarrega (entre d'altres) de <strong>processar l'informació</strong>. Bé doncs, nosaltres de moment només hem estudiat els diferents mecanismes que proporciona Java per gestionar eixa informació però no hem vist encara com la podem processar.  Per tal de poder processar la informació haurem primer d'estudiar que són esl <strong>operadors i les expressions.</strong></p>
+<p>Ha arribat el moment de revisar el que hem vist. Fins ara hem vist les <strong>dades</strong> com a unitat d'emmagatzemament <strong>d'informació</strong>. Els diferents <strong>tipus de dades</strong> que ens proporciona Java, com les <strong>variables</strong> i les <strong>constants</strong> poden emmagatzemar dades que poden variar o no han de variar durant l'execució del programa. I finalment també hem estudiat els <strong>literals</strong> i com construir <strong>identificadors</strong> per tal d'etiquetar distints elements dins del nostre programa.  En definitiva em vist en detall com es pot representar tota classe d'informació en un llenguatge de programació com Java però, com varem dir al primer tema, un programa informàtic s'encarrega (entre d'altres) de <strong>processar l'informació</strong>. Bé doncs, nosaltres de moment només hem estudiat els diferents mecanismes que proporciona Java per gestionar eixa informació però no hem vist encara com la podem processar.  Per tal de poder processar la informació haurem primer d'estudiar que són esl <strong>operadors i les expressions.</strong></p>
 <h3 id="expressions">Expressions</h3>
 <p>Una <strong>expressió</strong> és una equació matemàtica que representa un càlcul, per exemple:</p>
 <div class="admonition info">
@@ -1199,7 +1199,7 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="c1">// Tant a com b com c tindríen valor 10</span><span class="w"></span>
+<span class="c1">// Tant a com b com c tindrien valor 10</span><span class="w"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
 <span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
@@ -1250,11 +1250,11 @@
 font d'errors.</p>
 <p>En <strong>Java</strong> ens podem trobar dos escenaris diferents: un en el que els tipus que es volen convertir són compatibles, en aquest cas Java fa una conversió automàtica o l'escenari al qual els dos tipus de dades de l'assignació no són compatibles per la qual cosa haurem de forçar aquesta conversió amb un <strong>casting</strong>.</p>
 <h4 id="conversio-automatica-de-tipus-o-ampliacio">Conversió automàtica de tipus o ampliació</h4>
-<p>La conversió automàtica de tipuso ampliació es produeix quan dos tipus de dades es converteixen automàticament. Açò passa quan:</p>
+<p>La conversió automàtica de tipus ampliació es produeix quan dos tipus de dades es converteixen automàticament. Açò passa quan:</p>
 <ul>
 <li>Els dos tipus de dades són compatibles</li>
 <li>Quan assignem el valor de un tipus de dades més menut a un tipus de dades més gran.</li>
-<li>Tipus de dades ordenats per tamany: <strong>byte &lt; short &lt; int &lt; long &lt; float &lt; dobule</strong></li>
+<li>Tipus de dades ordenats per grandària: <strong>byte &lt; short &lt; int &lt; long &lt; float &lt; dobule</strong></li>
 </ul>
 <p>Per exemple, en Java, els tipus de dades numèrics són compatibles entre sí, però no s'admet la conversió automàtica de tipus numèric a char o boolean. A més a més, char i boolean no són compatibles entre ells. Mira el codi a continuació on es produeix una conversió automàtica en Java.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1303,7 +1303,7 @@ font d'errors.</p>
 <span class="w">        </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>L'exemple anterior donaria un error a la línia 7 diguent que no es pot convertir d'int a char. Per tant com podriem fer aquesta conversió explicita?. Una possible forma d'evitar aquestos casos de tipus incompatibles és la conversió explicita, on hem d'indicar al compilador especificament a quin tipus volem convertir.</p>
+<p>L'exemple anterior donaria un error a la línia 7 dient que no es pot convertir d'int a char. Per tant com podriem fer aquesta conversió explicita?. Una possible forma d'evitar aquestos casos de tipus incompatibles és la conversió explicita, on hem d'indicar al compilador especificament a quin tipus volem convertir.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

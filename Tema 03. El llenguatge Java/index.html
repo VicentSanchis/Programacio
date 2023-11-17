@@ -630,7 +630,6 @@
 <img alt="Variables" src="../assets/Tema3/variables-en-programacion.png"/>
 </center></p>
 <p>La <strong>variable</strong> és l'unitat bàsica d'emmagatzemament en Java. Una <strong>variable</strong> en java es defineix amb la combinació d'un <strong>identificador</strong> i el seu <strong>tipus de dades</strong>. Mira els exemples a continuació:</p>
-<!---!!! code "Declaracions de variables"--->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -656,7 +655,6 @@
 <img alt="Variables" src="../assets/Tema3/que_es_una_variable.png"/>
 </center></p>
 <p>Però millor vegem un exemple, imaginem una aplicació en la que volem controlar la <strong>posició</strong> d'un element qualsevol, per exemple un cercle a una pantalla 2D (o una boleta). Per determinar la poisció de qualsevol element en un escenari <strong>2D</strong> necessitem dues coordenades: <strong>x i y</strong>. Les <strong>variables</strong> que podriem utiltizar serien dos variables de tipus enter on al seu nom s'indique clarament el que intenten representar. Si vullguerem fer un sistema on les posicions tingueren més precissió, podriem usar floats en lloc d'ints.</p>
-<!---!!! code "Exemple de dues variables"-->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1119,7 +1117,6 @@
 <li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
 <li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les enies que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
 </ul>
-<!---!!! code "Codi"-->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1183,7 +1180,6 @@
 <h3 id="operador-assignacio">Operador assignació</h3>
 <p>L'operador assignació <strong>(=)</strong>, com el seu nom indica, s'encarrega d'assignar-li a una variable el resultat d'una expressió matemàtica o el valor de una altra variable o un literal. S'ha de tenir en compte que el tipus de dades que representa bé l'expressió matemàtica, el literal o l'altra variable han de coincidir als dos costats de l'operació d'assignació.</p>
 <p>Com ja hem dit abans, l'operador assignació en Java és el símbol '=' i s'utilitza de la següent forma:</p>
-<!---!!! code "Codi"--->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1194,7 +1190,6 @@
 </code></pre></div></td></tr></table></div>
 <p>On l'operador '=' assignaria el valor de l'expressió '3x+2z' a la variable y, és a dir, executada aquesta acció dins de la variable y hauríem depositat el valor 23.</p>
 <p>Observa el codi escrit a continuació on podràs veure altres exemples d'ús de l'operador assignació:</p>
-<!---!!! code "Codi"-->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1251,77 +1246,6 @@
 <span class="w">                            </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-</details>
-<h3 id="projecte-boleta">Projecte Boleta</h3>
-<p>Abans de continuar amb l'exemple de la boleta anem a refrescar un poc la memòria sobre les fases de desenvolupament de programari que varem veure al primer tema i la tècnica de disseny de diagrames de flux i la aplicarem al nostre projecte.</p>
-<p><strong>1. Fase d'analisi o què volem fer:</strong> Es pretèn fer una aplicació amb una pantalla de temany 320 píxels d'ample  i 240 píxels d'alt amb fons blanc i una boleta de 20 píxels de diametre al mig de la pantalla en la seua posició inicial. Una vegada arranque l'aplicació la boleta anirà caiguent aplicant la llei de la gravetat tenint en compte que la seua velocitat incial és zero. Quan arribe al terra, la bola desapareixerà i s'acabarà el programa.</p>
-<div class="highlight"><pre><span></span><code>- Requeriment 1: La pantalla de l'aplicació és de 320 píxels d'ample per 240 píxels d'alt.
-- Requeriment 2: La posició inicial de la boleta és al mig de la pantalla (160,120)
-- Requeriment 3: La velocitat inicial de la boleta és zero.
-- Requeriment 4: L'acceleració de la boleta és de 9,8 m/s².
-- Requeriment 5: Quan la boleta toque terra anirà desapareixent i acabarà l'execució del programa.
-</code></pre></div>
-<p><strong>2. Fase de disseny:</strong> Basant-nos en l'especificació de la fase d'analisi anterior i els requeriments que hem aonseguit treure, dissenyem el nostre algorisme utilitzant, per exemple, la tècnica dels <strong>diagrames de flux</strong>. Un possible resultat podria ser el següent:</p>
-<div class="mermaid">graph LR
-        Ini((Inici))--&gt;A[Establir Dimensions\nAmple=320\nAlt=240];
-        style Ini fill:#0F0;
-        A--&gt;B[Establir Posició Inicial\nposX=160\nposY=120];
-        B--&gt;C[GRV=0.098];
-        C--&gt;D[Dibuixar Bola];
-        D--&gt;E[Actualitzar Posició Bola];
-        E--draw: Bucle Joc--&gt;D;
-</div>
-<p><strong>3. Fase d'implementació:</strong> Ara hem de passar el disseny a codi en Java. Coses a tenir en compte: </p>
-<ol>
-<li>Les dimensions de la boleta seran constants o variables?</li>
-<li>Els identificadors de la posició de la boleta són variables o constants?.</li>
-<li>La acceleració és una variable o una constant?</li>
-<li>Com puc dibuixar una boleta amb Processing IDE?</li>
-<li>Com s'actualitza la posició de la boleta?</li>
-<li>L'unitat de temps no és el segon si no el frame. Com sé en quin frame estic a l'actualitat?</li>
-<li>L'unitat de mesura no són els metres si no el píxel.</li>
-</ol>
-<p>En realitat, l'única qüestió per a la que no tingau resposta és la cinquena i és en aquesta part on realment aplicarem operacions aritmètiques per tal d'actualitzar la posició de la boleta. Per saber la posició de la boleta a cada frame utilitzarem les formules del <strong>MRUA</strong> per calcular la velocitat en tot moment i així poder actualitzar la posició. </p>
-<p>Una última consideració és que com que estem fent un simulador simple, no cal ser precisos amb les unitats de mesura i els seus valors, per exemple: la gravetat és 9,88 metres per segon cada segon però per al nostre simulador anem a establir que la gravetat és de 1 pixel per frame cada frame.</p>
-<div class="admonition info">
-<p class="admonition-title">Moviment Rectilini Uniformement Accelerat</p>
-<p>Amb les formules del MRUA podem saber en tot moment on es troba la boleta. Si a l'inici la boleta es troba en la posició y=120 i la velocitat inicial Vo=0, passat una unitat de temps (1 frame) la distància recorreguda per part de la boleta seria:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Frame</span><span class="w"> </span><span class="mi">0</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">t</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="n">t</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="n">PosY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PosY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-</code></pre></div>
-<p>És a dir, a l'instant zero la boleta es troba en la seua posició inicial i té una velocitat de 0 (pixels/frame). Lògic no?</p>
-<div class="highlight"><pre><span></span><code><span class="n">Frame</span><span class="w"> </span><span class="mi">1</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">t</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="mi">1</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-<span class="n">PosY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PosY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">Frame</span><span class="w"> </span><span class="mi">2</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">t</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="mi">1</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
-<span class="n">PosY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PosY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
-</code></pre></div>
-<p>És a dir, passada una unitat de temps (1 frame) la boleta haurà recorregut 1 pixels. Continuem:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Frame</span><span class="w"> </span><span class="mi">3</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">t</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="mi">2</span>
-<span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
-<span class="n">PosY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Posy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span>
-</code></pre></div>
-<p>I axí successivament fins que la boleta acabaria desapareguent per la part de baix de la nostra apliació.</p>
-</div>
-<details class="question">
-<summary>Activitat 309. Fer caure la boleta</summary>
-<p>Escriu un programa en Java amb Processing IDE en base a les especificacions anteriors i que resolga el problema de la boleta. És a dir, que a l'inici el programa dibuixe una boleta a la posició x=160 i y=120 i que com a conseqüència de la força de la gravetat vaja caiguen fins desapareixer de lap pantalla.</p>
-<p>Les variables que determinen la posició x i y de la boleta han de tenir precisió flotant (float) ja que com has pogut observar a l'apartat del moviment rectilini uniformement accelerat, les distintes operacions que s'han de fer utilitzen decimals.</p>
-<p><center>
-<img alt="Boleta" src="../assets/Tema3/Boleta.gif"/>
-</center></p>
-<p>Entrega un fitxer amb nom <strong>CognomNomAct310.pde</strong> per aules. </p>
 </details>
 <h3 id="conversio-de-tipus">Conversió de tipus</h3>
 <p>Hem dit que en una expressió d'assignació de valors, els tipus de dades han de ser el mateix als dos costats de l'operació, però, què passa si aquestos no coincideixen? És a dir, que passa si a una variable de tipus enter li assignem un nombre decmal? o un caracter? Amb Java és possible transformar el tipus d'una variable o objecte en un altre diferent a l'original amb el que inicialment va ser declarat. Aquest procediment s'anomena <strong>"Conversió de tipus"</strong>, encara que també podreu trobar aquest terme com a <strong>tipat</strong> o <strong>moldejat</strong> o <strong>casting</strong> i és un mecanisme que hem de utilitzar amb cura ja que un mal ús d'aquest és una 
@@ -1458,22 +1382,6 @@ font d'errors.</p>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<details class="question">
-<summary>Activitat 310. Augmentem la precissió de la boleta</summary>
-<p>En aquesta activitat anem a fer que la boleta no aparega sempre a la posició x=160, y=120 si no que cada vegada que arranquem l'aplicació, aparega en un lloc diferent. </p>
-<p>Per tal d'aconseguir aquesta aleatorietat, utilitzarem la funció de Processing IDE <strong>random</strong>. </p>
-<p>A l'API de Processing, <a href="https://processing.org/reference/">Processing Reference</a>, entre altres tenim una funció <strong>random(low, high)</strong> que genera nombres aleatoris dintre del rang low-hight que se li passa per paràmetre, és a dir, si volem que aquesta funció ens torne un valor aleatori entre 0 i 100, hauríem de cridar-la de la següent forma:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">   </span><span class="c1">// Genera un nombre aleatori entre 0 i 100 i l'emmagatzema a f</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span><span class="w"> </span><span class="c1">// Genera un nombre aleatori entre 50 i 90 i l'emmagatzema a m</span>
-</code></pre></div></td></tr></table></div>
-<p>Primer fes que tant les variables que determinen la posició x i y de la boleta les genere la funció random i no siguen fixes.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Per exmple</span>
-<span class="n">posX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">320</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-<p>Finalment fes que la gravetat també tinga major precissió i assigna-li un valor de 0.0098.</p>
-</details>
 <h3 id="operadors-aritmetics">Operadors aritmètics</h3>
 <p>Els operador aritmètics en Java serveixen per realitzar operacions bàsiques algebraiques com: la suma, resta, multiplicació o divisió. Els resultats de tota expressió aritmètica és de tipus de dades numèric, per tant, podrà ser assignat a una variable numèrica o podra ser utilitzant en qualsevol altra operació numèrica.  </p>
 <ul>
@@ -1484,7 +1392,7 @@ font d'errors.</p>
 <li><strong>Divisió (Residu):</strong> símbol (%). Exemple 10%2. Resultat 0.</li>
 </ul>
 <details class="question">
-<summary>Activitat 311. Executa el següent codi d'operadors aritmètics</summary>
+<summary>Activitat 309. Executa el següent codi d'operadors aritmètics</summary>
 <p>Còpia i compila el codi anterior i observa el que mostra pel terminal. Has de fer l'activitat amb Processing IDE</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1514,8 +1422,7 @@ font d'errors.</p>
 </code></pre></div></td></tr></table></div>
 </details>
 <h3 id="operadors-increment-i-decrement-unaris">Operadors increment i decrement (unaris)</h3>
-<p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variable a la qual s'apliquen. Aquestos operadors es diuen <strong>unaris</strong> perquè només treballen sobre un sol operand. Encara que aquest operador s'aplique només sobre un element, també es tractaria d'una expressió aritmètica, per tant, també hauria de retornar un resultat númeric per ser utilitzat com a tal.</p>
-<!---!!! code "Codi"-->
+<p>En programació i com herència de C i C++ existeixen els operadors increment (++) i decrement (--) que el que fan és incrementar o decrementar en una unitat la variable a la qual s'apliquen. Aquestos operadors es diuen <strong>unaris</strong> perquè només treballen sobre un sol operand. Encara que aquest operador s'aplique només sobre un element, també es tractaria d'una expressió aritmètica, per tant, també hauria de retornar un resultat numèric per ser utilitzat com a tal.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1525,7 +1432,6 @@ font d'errors.</p>
 <span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// Aquest codi seria equivalent a x = x -1 ;</span>
 </code></pre></div></td></tr></table></div>
 <p>Aquestos operadors també es poden posar abans de la variable produint el mateix efecte</p>
-<!---!!! code "Codi"-->
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1536,7 +1442,7 @@ font d'errors.</p>
 </code></pre></div></td></tr></table></div>
 <p>La diferència essencial entre el <strong>postincrement</strong> i el <strong>preincrement</strong> és que el contingut de la variable, el que tenim dins la caixeta, s'avalua abans (postincrement) o després (preincrement) de sumar-li un al seu valor.</p>
 <details class="question">
-<summary>Activitat 312. Operadors postincrement i preincrement</summary>
+<summary>Activitat 310. Operadors postincrement i preincrement</summary>
 <p>Prova el codi següent i digues-me el que passa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1645,7 +1551,7 @@ font d'errors.</p>
 </ul>
 <p>Així tenim que una <strong>expressió relacional</strong>, que com hem explicat ha de donar un resultat booleà, es podrà utilitzar bé en altres expressions relacionals o en avaluacions de condicions per a les estructures de control que veurem en pròxims apartats.</p>
 <details class="question">
-<summary>Activitat 313. Copia i executa en Processing IDE</summary>
+<summary>Activitat 311. Copia i executa en Processing IDE</summary>
 <p>Còpia i executa el codi anterior en Processing i observa el que passa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1701,7 +1607,7 @@ font d'errors.</p>
 <li><strong>or exclusivo (^)</strong>: or exclusiu.</li>
 </ul>
 <details class="question">
-<summary>Activitat 314. Operadors lògics</summary>
+<summary>Activitat 312. Operadors lògics</summary>
 <p>Prova i executa el codi anterior. Has de fer l'activitat en Processing IDE.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1770,8 +1676,7 @@ font d'errors.</p>
 <p>En els pròxims punts veurem com es codifiquen totes aquestes estructures en llenguatge Java.</p>
 <h3 id="estructura-sequencial">Estructura Seqüencial</h3>
 <p>Les ordres d'un programa s'executen per defecte en ordre seqüencial. El que significa que les instruccions s'executen, com hem comentat abans, una darrere de l'altra en el mateix ordre que apareixen escrites al programa.</p>
-<div class="mermaid">
-graph LR
+<div class="mermaid">graph LR
     id1((Inici))--&gt;Instrucció1;
     style id1 fill:#0F0
     Instrucció1--&gt;Instrucció2;
@@ -1797,7 +1702,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div></td></tr></table></div>
 <p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing.</p>
 <details class="question">
-<summary>Activitat 315. Dibuixa amb Processing IDE</summary>
+<summary>Activitat 313. Dibuixa amb Processing IDE</summary>
 <p>Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat copiant el codi que pots veure a continuació. Després modifica alguns dels paràmetres de les funcions point, line, ellipse i square i observa el que passa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1826,7 +1731,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </details>
 <p>Ara que ja has vist algunes de les funcions que ens ofereix l'API de Processing per tal de dibuixar, investiga quines altres funcions permet i aplica-les a la següent activitat.</p>
 <details class="question">
-<summary>Activitat 316. Dibuixa amb Processing IDE. Ampliació</summary>
+<summary>Activitat 314. Dibuixa amb Processing IDE. Ampliació</summary>
 <p>Utilitzant altres primitives de dibuix que ens proporciona l'API de Processing IDE, dibuixa alguna cosa concreta. Has de tindre en compte que la majoria de primitives (funcions) són geomètriques, per tant, et podries inspirirar en algun dibuix geomètric. Pots buscar per Internet.</p>
 </details>
 <h3 id="estructures-de-seleccio">Estructures de selecció</h3>
@@ -1871,101 +1776,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior s'executarien sempre les instruccions 1 i 2 abans d'avaluar-se la condició, en cas que la condició fora avaluada com a <strong>true</strong>, s'executaria l'estructura seqüencial que conté les instruccions 3 i 4 i finalment s'executaria la instrucció 5 en tot cas. </p>
 <p>Pel contrari si la condició s'avalua a <strong>false</strong> no s'executarien les instruccions que conté, és a dir, 3 i 4 i passaria directament a l'instrucció 5.</p>
-<p>Continuema amb la boleta i ampliem funcionalitats i millorem el diagrama de flux de la fase de disseny</p>
-<div class="mermaid">graph LR
-        Ini((Inici))--&gt;A[Establir Dimensions\nAmple=320\nAlt=240];
-        style Ini fill:#0F0;
-        A--&gt;B[Establir Posició Inicial\nposX=160\nposY=120];
-        B--&gt;C[Acceleració=1];
-        C--&gt;D[Dibuixar Bola];
-        D--&gt;E[Actualitzar Posició Bola];
-        E--&gt;F{Ha tocat terra?};
-        F--&gt;|SI|G[posX=0];
-        G--&gt;H[velocitat = 0];
-        H--&gt;D;
-        F--&gt;|NO|D;        
-</div>
-<details class="question">
-<summary>Activitat 317. Que no desaparega la boleta</summary>
-<p>Hem d'aconseguir que la boleta no desaparega quan arribe a la part de baix de l'aplicació sino torne a apareixer per dalt. Què singfica que la boleta ha arribat al terra? o dit d'una altra manera, com sabem que la boleta ha arribat baix del tot? Per què la el valor de la variable que indica la posició a l'eix Y de la boleta és major que l'alt de la nostra aplicació, és a dir: 240. Per tant podem deduir que: "Si la posició Y de la boleta és major que 240 aleshores la fem apareixer per dalt..."</p>
-<p>Com podeu observar, l'afirmació anterior és un <strong>if</strong>, si posY és major (&gt;) altura aleshores fes apareixer per dalt de nou la boleta. Però quines són les accions a realitzar per tal que la boleta aparega per dalt? tornar a posar la posició Y de la boleta a 0.</p>
-<p>Un problema que ens trobarem ací és que no podem ja utilitzar la variable de sistema <strong>frameCount</strong> ja que quan la boleta torne a apareixer per dalt el número de frames (el que utilitzem com a unitat de temps) ha de començar de zero una altra vegada. La solució és crear una variable <strong>numFrames</strong> com a global que s'inicialitze a zero al setup i cada vegada que haja d'apareixer per dalt, es torna a assignar un zero a aquesta variable.</p>
-<p>També s'ha de reiniciar la velocitat a zero sino no pararà d'accelerar.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="c1">// Constants</span>
-<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">GRV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Força de la gravetat</span>
-<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w">   </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">  </span><span class="c1">// Tamany de la boleta</span>
-
-<span class="w">    </span><span class="c1">// Variables Globals</span>
-<span class="w">    </span><span class="kt">int</span><span class="w">   </span><span class="n">numFrames</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">velocitat</span><span class="p">;</span><span class="w">              </span><span class="c1">// Velocitat inicial de l'objecte quan arranquem el programa.</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">posX</span><span class="p">,</span><span class="w"> </span><span class="n">posY</span><span class="p">;</span><span class="w">             </span><span class="c1">// Variables que determinen la posició de la boleta en un escenari de dues dimensions</span>
-
-<span class="w">    </span><span class="c1">// Mètode setup: inicialitza la nostra aplicació, dona valors inicials.</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span><span class="w">               </span><span class="c1">// Establir dimensions</span>
-<span class="w">        </span><span class="n">posX</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span><span class="w">  </span><span class="c1">// Establim posició X inicial</span>
-<span class="w">        </span><span class="n">posY</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">220</span><span class="p">);</span><span class="w">  </span><span class="c1">// Establim posició Y inicial</span>
-<span class="w">        </span><span class="n">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">               </span><span class="c1">// Establim la velocitat inicial</span>
-<span class="w">        </span><span class="n">numFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">               </span><span class="c1">// Variable necessària per controlar l'acceleració.</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Metode draw: bucle del joc, aquest mètode s'executa de forma continua</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">clear</span><span class="p">();</span>
-<span class="w">        </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-<span class="w">        </span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">ellipse</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span><span class="n">posY</span><span class="p">,</span><span class="n">TAM</span><span class="p">,</span><span class="n">TAM</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// Actualitzem la posició utilitzant la velocitat</span>
-<span class="w">        </span><span class="n">posY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">velocitat</span><span class="p">;</span>
-<span class="w">        </span><span class="n">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocitat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">G</span><span class="o">*</span><span class="n">numFrames</span><span class="p">;</span><span class="w">  </span><span class="c1">// Vf = Vo + acc*temps;</span>
-<span class="w">        </span><span class="n">numFrames</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
-
-<span class="w">        </span><span class="c1">// Codi if que controle si ha arribat al terra o no.</span>
-<span class="w">        </span><span class="c1">// if...</span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<center>
-<kbd style="border:1px solid black;"><img alt="Boleta" src="../assets/Tema3/Act319.gif"/></kbd>
-</center></p>
-</details>
-<details class="question">
-<summary>Activitat 318. Correcció d'errades amb el depurador</summary>
-<p>Com hauràs vist quan has executat el codi, el comportament del que fa el nostre codi amb la boleta no és el que esperavem, o almenys jo ho imaginava d'una altra manera. Revisa-ho i canvia alguns detalls. Fes una depuració línia a línia del codi amb el <strong>Debugger</strong> de Processing IDE i deixa l'apliació com a tu t'agradaria.</p>
-<p>Pista: igual quan torna a apareixer per dalt la velocitat no deuria ser zero...</p>
-</details>
 <h4 id="seleccio-doble-if-else">Selecció doble - if .. else</h4>
 <p>Amb aquesta estructura condicional de la programació estructurada es poden seguir <strong>camins distints</strong> depenent de si l'avaluació de la condició és <strong>true o false</strong>. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
 <p>Observa el diagrama de flux següent:</p>
@@ -2038,36 +1848,9 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"Ja és de vesprada"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<!--
-??? question "Activitat 320. Nombres parells i senars amb la funció random()"
-    Amplia l'exemple 320 per tal que ens indique, en cas de no ser parell, que és senar, és a dir, utilitzant una estructura de selecció doble.
--->
-<p>Continuem amb el <strong>Projecte Boleta</strong>. Per tal de treballar l'estructura condicional doble que acabem de veure ampliarem les funcionalitat de la nostra aplicació. Ara volem que quan la boleta toque terra siga de color roig i quan no estiga tocant, continue siguent negra.  </p>
-<p>El diagrama de flux amb els <strong>nous requeriments</strong> quedaria així:</p>
-<div class="mermaid">graph LR
-        Ini((Inici))--&gt;A[Establir Dimensions\nAmple=320\nAlt=240];
-        style Ini fill:#0F0;
-        A--&gt;B[Establir Posició Inicial\nposX=160\nposY=120];
-        B--&gt;C[Acceleració=1];
-        C--&gt;D[Dibuixar Bola];
-        D--&gt;E[Actualitzar Posició Bola];
-        E--&gt;F{Ha tocat terra?};
-        F--&gt;|SI|G[posX=0\nPintaRoig];
-        G--&gt;H[velocitat = 0];
-        H--&gt;D;
-        F--&gt;|NO|I[PintaNegre];
-        I--&gt;D;        
-</div>
 <details class="question">
-<summary>Activitat 319. Boleta de dos colors</summary>
-<p>observa el diagrama de flux anterior i modifica el codi de l'activitat 319 per tal d'afegir-li les noves funcionalitats. Finalment l'aplicació quearia de la següent forma:</p>
-<p><center>
-<kbd style="border:1px solid black;"><img alt="Boleta" src="../assets/Tema3/Act322.gif"/></kbd>
-</center></p>
-<p><strong>Ampliació:</strong> Fes que la boleta quan comence a apareixer per dalt siga totalment negra i poc a poc conforme va baixant vaja anant cap al color roig gradualment. Només pots utilitzar les estructures que hem vist fins ara: seqüencial, if simple i if - else.</p>
-<p><center>
-<kbd style="border:1px solid black;"><img alt="Boleta" src="../assets/Tema3/Act322b.gif"/></kbd>
-</center></p>
+<summary>Activitat 315. Nombres parells i senars amb la funció random()</summary>
+<p>Amplia l'exemple 320 per tal que ens indique, en cas de no ser parell, que és senar, és a dir, utilitzant una estructura de selecció doble.</p>
 </details>
 <h4 id="seleccio-niada-if-else-if-else">Selecció niada - if else if else</h4>
 <p>Si volem avaluar <strong>més d'una condició</strong> al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar varios if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
@@ -2131,7 +1914,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional. Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else:</p>
 <details class="question">
-<summary>Activitat 320. Copia i executa a Processing IDE</summary>
+<summary>Activitat 316. Copia i executa a Processing IDE</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2181,17 +1964,6 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <kbd style="border:1px solid black;"><img alt="Actitivtat 324" src="../assets/Tema3/Activitat14.png"/></kbd>
 </center></p>
 </details>
-<details class="question">
-<summary>Activitat 321. Canvi de color de la boleta segons l'altura en la que es troba</summary>
-<p>Anem a fer que en el nostre projecte de <strong>la boleta que cau</strong>, aquesta canvie de color segons l'altura de la pantalla a la qual es troba. </p>
-<p>Tenint en compte que la nostra pantalla té una altura de 240 píxels, dividirem la nostra pantalla en 6 franges de 40 píxels d'altura cadascuna (6*40=240). Mentre la bola estiga passant per la primera franja (0-40) aquesta serà de color roig, a la segona franja (40-80) la pintarem de color taronja. A la tercera (80-120) groga, (120-160) verda, (160-200) blava i finalment a l'última franja (200-240) serà de color morat.</p>
-<p>Traduit al llenguatge natural podria ser: si la posició (posY) de la boleta esta entre 0 i 40 pinta-la de roig, sino si la boleta esta entre 40 i 40 pinta-la de taronja sino si ....</p>
-<p>Al final el resultat de l'aplicació podria ser el següent:</p>
-<p><center>
-<kbd style="border:1px solid black;"><img alt="Boleta" src="../assets/Tema3/Act323.gif"/></kbd>
-</center></p>
-<p><strong>Ampliació:</strong> Observa els codis rgb dels colors i intenta que el canvi de color de la boleta siga gradual i no de cop.</p>
-</details>
 <h4 id="activitats-sobre-estructures-de-seleccio">Activitats sobre estructures de selecció</h4>
 <p>Mira i fes les següents activitats per tal de reforçar els conceptes vistos sobre les diferents estructures de selecció de la programació estructurada.</p>
 <details class="question">
@@ -2215,54 +1987,54 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <p>Com a apartat d'ampliació, podries fer que el tamany de la font fos un poc més gran.</p>
 </details>
 <details class="question">
-<summary>Activitat 322. Divisió per zero</summary>
+<summary>Activitat 317. Divisió per zero</summary>
 <p>Si s'ha dona el cas, hauràs pogut comprovar que si el divisor és 0 el programa dona error.
 Millora el programa anterior controlant el que passa quan es vol dividir per zero, mostrant un missatge en el cas que el número pel qual s'intenta dividir siga zero.</p>
 <p><img alt="Activitat 16" src="../assets/Tema3/Activitat16.png"/></p>
 <p><img alt="Activitat 16b" src="../assets/Tema3/Activitat16b.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 323. Major, menor o igual</summary>
+<summary>Activitat 318. Major, menor o igual</summary>
 <p>Ecriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.</p>
 <p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 324. Diferència d'anys</summary>
+<summary>Activitat 319. Diferència d'anys</summary>
 <p>Escriu un programa en Processing que donat l'any actual i un any qualsevol que es genere de forma aleatòria amb la funció random i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any.</p>
 <p><img alt="Activitat 18" src="../assets/Tema3/Activitat18.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 325. Millora</summary>
+<summary>Activitat 320. Millora</summary>
 <p>Millora el programa anterior fent que quan la diferència siga exactament un any, mostre una frase concreta: "Només queda un any"</p>
 <p><img alt="Activitat 19" src="../assets/Tema3/Activitat19.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 326. Múltiples</summary>
+<summary>Activitat 321. Múltiples</summary>
 <p>Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. </p>
 <p><img alt="Activitat 20" src="../assets/Tema3/Activitat20.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 327. Millor múltiples</summary>
+<summary>Activitat 322. Millor múltiples</summary>
 <p>Millora el programa anterior fent que el programa avise quan s'escriguen valors negatius o nuls.</p>
 </details>
 <details class="question">
-<summary>Activitat 328. Comparador</summary>
+<summary>Activitat 323. Comparador</summary>
 <p>Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual.</p>
 <p><img alt="Activitat 22" src="../assets/Tema3/Activitat22.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 329. Any bixest</summary>
+<summary>Activitat 324. Any bixest</summary>
 <p>Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
 <p><img alt="Codi Example" src="../assets/Tema3/anoBisiestoPseint.jpg"/> </p>
 <p><img alt="Activitat 23" src="../assets/Tema3/Activitat23.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 330. Càlcul d'arees</summary>
+<summary>Activitat 325. Càlcul d'arees</summary>
 <p>Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.</p>
 <p><img alt="Activitat 24" src="../assets/Tema3/Activitat24.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 331. Canvi d'unitats</summary>
+<summary>Activitat 326. Canvi d'unitats</summary>
 <p>Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.</p>
 </details>
 <h4 id="seleccio-multiple-switch-case">Selecció múltiple - switch case</h4>
@@ -2309,88 +2081,6 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<details class="question">
-<summary>Activitat 332. Boleta amb cursors</summary>
-<p>Seguint amb l'exemple de la boleta en Processing IDE, completa el següent codi per tal que quan premem un cursor del nostre teclat, la boleta comence a menejar-se en eixa direcció. A l'inici de l'aplicació, la boleta estarà parada.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Variables globals</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">posX</span><span class="p">,</span><span class="w"> </span><span class="n">posY</span><span class="p">,</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span>
-
-<span class="c1">// Configuració de l'aplicació (només s'executa una vegada al principi)</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span><span class="w">  </span><span class="c1">// Tamany de monitor estàndard VGA</span>
-<span class="w">    </span><span class="n">posX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span>
-<span class="w">    </span><span class="n">posY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">240</span><span class="p">;</span>
-<span class="w">    </span><span class="n">vel</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">clear</span><span class="p">();</span>
-<span class="w">    </span><span class="n">bacground</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-<span class="w">    </span><span class="n">ellipse</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span><span class="w"> </span><span class="n">posY</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">posX</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">640</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="n">posX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">keyCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">UP</span><span class="p">:</span>
-<span class="w">            </span><span class="c1">// Ací anirà el codi per que la boleta es meneje cap amunt</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">DOWN</span><span class="p">:</span>
-<span class="w">            </span><span class="c1">// Ací anirà el codi per que la boleta vaja cap avall.</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">LEFT</span><span class="p">:</span>
-<span class="w">            </span><span class="c1">// Codi per moure la boleta cap a l'esquerra.</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="n">RIGHT</span><span class="p">:</span>
-<span class="w">            </span><span class="c1">// Codi per moure la boleta cap a la dreta.</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p>Un altre exemple més clar que diu el nom del mes a partir d'un número entre 1 i 12</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2469,18 +2159,18 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 333. Copia i adapta el codi anterior</summary>
+<summary>Activitat 327. Copia i adapta el codi anterior</summary>
 <p>Escriu el programa anterior per a Processing i comprova que funciona. Afegeix el codi necessari per tal que a banda de dir-te quin mes és, et diga també a quina estació de l'any estem.</p>
 <p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png"/></p>
 <p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 1 i 12 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
 </details>
 <details class="question">
-<summary>Activitat 334. Dies de la setmana</summary>
+<summary>Activitat 328. Dies de la setmana</summary>
 <p>Escriun un programa que donat un número entre 1 i 7 et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
 <p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 335. if a switch</summary>
+<summary>Activitat 329. if a switch</summary>
 <p>Observa el codi a continuació que explica com es passa de if - else a stich - case i passa les activitats de l'apartat if..else a sentències switch..case</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2532,12 +2222,12 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="question">
-<summary>Activitat 336. dies del mes</summary>
+<summary>Activitat 330. dies del mes</summary>
 <p>Escriu un programa que ens demane el mes i l'any i ens mostre per pantalla el total de dies que té eixe mes. </p>
 <p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 337. Figures geomètriques</summary>
+<summary>Activitat 331. Figures geomètriques</summary>
 <p>Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent.</p>
 </details>
 <h3 id="estructures-de-repeticio">Estructures de repetició</h3>
@@ -2678,7 +2368,6 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
     Instrucció2--&gt;Id3([Fi])
     style Id3 fill:#F00;
 </div>
-<!---![Selecció múltiple amb if](assets/Tema3/diagrama-flujo-bucle-for.png)-->
 <p>I els passos serien:</p>
 <ol>
 <li>Executem instrucció 1 (aliena al bucle for)</li>
@@ -2704,7 +2393,7 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <li>Actualització: i ++</li>
 </ol>
 <details class="question">
-<summary>Activitat 338. Dibuixa amb bucles</summary>
+<summary>Activitat 332. Dibuixa amb bucles</summary>
 <p>Observa el següent codi i raona'l</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2730,22 +2419,22 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <img alt="Activitat 31" src="../assets/Tema3/Activitat31.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 342. Dibuixa la piramid i la invertida</summary>
+<summary>Activitat 333. Dibuixa la piramid i la invertida</summary>
 <p>Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
 <p>![Activitat 32](assets/Tema3/Activitaquestion</p>
 <p><img alt="Activitat 33" src="../assets/Tema3/Activitat33.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 343. Dibuixa les dues diagonals</summary>
+<summary>Activitat 334. Dibuixa les dues diagonals</summary>
 <p>Millora el programa anterior i fes que dibuixe les dues diagonals, des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
 <p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 344. Dues diagonals 640x480</summary>
+<summary>Activitat 335. Dues diagonals 640x480</summary>
 <p>Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
 </details>
 <details class="question">
-<summary>Activitat 345. whiles i for</summary>
+<summary>Activitat 336. whiles i for</summary>
 <p>Fes les activitat anteriors canviant els bulces while per for i a l'inrevés.</p>
 </details>
 </article>

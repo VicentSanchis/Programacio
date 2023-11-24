@@ -156,6 +156,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#estic-aci-ara-falta-per-modificar">
+    EStic AcÍ ara falta per modificar.
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#algorismes-dordenacio">
     Algorismes d'ordenació
   </a>
@@ -429,14 +434,13 @@
 <p>Implicitament amb l'aparició de les estructures de dades complexes en programació que, en certa manera, es podrien entendre com a <strong>conjunts</strong>, apareix la necessitat de poder <strong>fer receques</strong> elements dintre d'aquestos conjunts. Existeixen dos <strong>algorismes de recerca</strong> que veurem en aquest apartat: la recerca <strong>seqüencial</strong> i la recerca <strong>binaria</strong>. A l’element que estem buscant li direm <strong>clau</strong>.</p>
 <p>Però abans d'anar per feina, canviarem temporalment l'entorn de programació de Processing IDE a <strong>Eclipse IDE</strong> i veurem un poc més que són les classes i els objectes i com funcionen en Java abans de veure-ho amb més detall al tema següent. Realitza les activitats següents abans de continuar.</p>
 <details class="question">
-<summary>Activitat 506. Crea la classe TAD</summary>
-<p>Aquesta primera activitat en Eclipse IDE és senzilla, només hauràs de crear un nou projecte en Java i copiar el codi següent però primer, veiem amb més detall qué és el que es preten aconseguir.  </p>
-<p>Volem crear una classe amb nom TAD que tinga les següents característiques:</p>
+<summary>Activitat 506. Crea el projecte base</summary>
+<p>Aquesta primera activitat en Processing IDE és senzilla, només hauràs de crear un nou projecte en Java i copiar el codi següent però primer, veiem amb més detall qué és el que es preten aconseguir.  </p>
+<p>Volem crear un projecte que tinga les següents característiques:</p>
 <ul>
-<li>Ha de ser una classe pública</li>
 <li>Ha de tindre mínim una constant que ens indicarà el total d’elements que tindran els arrays, tant el d’enters com el de caràcters.</li>
-<li>Com membres de la classe ha de tindre almenys un array de caràcters i un d’enters.</li>
-<li>També ha de tenir un mètode main static on s’iniciarà el programa.</li>
+<li>Com a global ha de tindre almenys un array de caràcters i un d’enters.</li>
+<li>També ha de tenir un mètode setup i un draw que inicalitzen i executen l'aplicació.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -471,59 +475,86 @@
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
-<span class="cm">* Classe TAD</span>
-<span class="cm">* Classe Java que utilitzarem per veure la part dels tipus compostos de dades, recerca i ordenació.</span>
-<span class="cm">* @author: Vicent Sanchis</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">* Projecte Tipus Compostos</span>
+<span class="cm">* Projecte escrit en Processing IDE en el que tractarem els tipus compostos de dades en Java.</span>
+<span class="cm">* A aquest projecte se li anrian afegint funcionalitats conforme avancem en els continguts del Tema 5</span>
+<span class="cm">* @author  Vicent Sanchis</span>
+<span class="cm">* @since   10/11/23</span>
+<span class="cm">* @version 1.0</span>
 <span class="cm">*/</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TAD</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Membres de la classe</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayCaracters</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">// Constructor de la classe</span>
+<span class="c1">// CONSTANTS</span>
+<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 
+<span class="c1">// Varialbes Globals</span>
+<span class="kt">int</span><span class="w">  </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayCaracters</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cm">/**</span>
+<span class="cm"> * Mètode setup: s'executa a l'inici només una vegada</span>
+<span class="cm"> * sol utilitzar-se per incialitzar les aplicacions</span>
+<span class="cm"> * @return void</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w">  </span><span class="p">{</span>
 
-<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="cm">/**</span>
+<span class="cm"> * Mètode draw: o bucle del joc s'executa unes 60 vegades per segon aprox.</span>
+<span class="cm"> * @return void</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">generaNumAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">generaCharAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">generaNumAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">char</span><span class="w"> </span><span class="nf">generaCharAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>En aquesta primera activitat haureu de copiar aquest codi en un nou projecte java d'Eclipse IDE i si et fixes, aquesta classe TAD, disposa dels mètodes: <strong>mostraEnters, mostraCaracters, generaNumAleatori i generaCharAleatori</strong> que ja havieu implementat a les activitats anteriors. Translada el codi de Processing IDE als mètodes de la classe TAD en Eclipse IDE per tal que tot compile correctament.</p>
+<p>En aquesta primera activitat haureu de copiar aquest codi en un nou projecte java de Processing IDE i si et fixes, aquest projecte disposa dels mètodes: <strong>mostraEnters, mostraCaracters, generaNumAleatori i generaCharAleatori</strong> que ja havieu implementat a les activitats anteriors. Aprofita i reutilitza el codi que ja havies escrit en activitats anteriors.</p>
 </details>
 <details class="question">
 <summary>Activitat 507. Inicialització d'arrays</summary>
-<p>En aquest punt aprofitarem per crear un <strong>constructor</strong> a la nostra classe TAD. Un <strong>constructor</strong> de classe és la funció que s’executa en el moment que s’instancia un objecte i és en aquest punt on s’haurien d'inicialitzar aquells elements de la classe que ho necessiten. En el nostre cas els arrays. </p>
-<p>Còpia el codi següent i posa'l just baix el comentari que diu: "Constructor de la classe"</p>
+<p>En aquest punt aprofitarem per crear un <strong>mètode inicialitzador</strong> al nostre projecte. Com que volem que s’execute en el moment que s’inicia l'aplicació, aquest mètode es cridarà des del mètode setup i és ací on inicialitzarà els nostres arrays: el d'enters i el de caracters.</p>
+<p>Còpia el següent codi i posa'l al teu projecte.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">TAD</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">arrayEnters</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
-<span class="w">        </span><span class="n">arrayCaracters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">inicialitzaVectors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">arrayEnters</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="n">arrayCaracters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Afegeix i implementa els mètodes emplenaArrayNumeros() i emplenaArrayCaracters() per tal que es criden des del constructor de la classe i utilitzen els mètodes generaNumAleatori() i generaCharAleatori().</p>
-<p>Finalment i per tal de comprovar que anem bé de moment, afegeix la següent línia al mètode estàtic main de la nostra classe TAD.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">TAD</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TAD</span><span class="p">();</span>
-</code></pre></div></td></tr></table></div>
+<h2 id="estic-aci-ara-falta-per-modificar">EStic AcÍ ara falta per modificar.</h2>
+<p>Afegeix i implementa els mètodes emplenaArrayNumeros() i emplenaArrayCaracters() per tal que es criden des del <strong>setup</strong> i utilitzen els mètodes generaNumAleatori() i generaCharAleatori().</p>
+<p>Finalment i per tal de comprovar que anem bé de moment, implementa els mètodes mostraEnters() i mostraCaracters() i crida'ls al mètode <strong>draw</strong> i executa l'aplicació.</p>
 <p>Depura el codi anterior i comprova que tot està funcionant com s'espera que funcione.</p>
 </details>
 <details class="question">
@@ -543,7 +574,8 @@
 </details>
 <details class="question">
 <summary>Activitat 509. Mostrar menú</summary>
-<p>Fes una funció que mostre per pantalla el menú de forma amigable.</p>
+<p>Fes una funció que mostre per pantalla el menú de forma amigable. El menú s'haurà de mostrar a la pantalla de l'aplicació, amb text(), i no pel terminal.
+Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal que execute alguna de les opcions que es mostraran al menú. Tin en compte que l'aplicació que estem dissenyant només haurà de fer alguna acció si es premen els números del 1 al 9.</p>
 </details>
 <h3 id="sequencial">Seqüencial</h3>
 <p>També anomenada <strong>recerca lineal</strong>, es recorren tots els elements de l’array des del principi fins que es troba la clau (element que estem buscant) o fins que s’arriba a l’últim element de l’array.</p>
@@ -602,11 +634,11 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 510. Afegeix mètodes seqüencial i binari</summary>
-<p>Afegeix el mètode de recerca seqüencial i el de recerca binaria a la classe TAD. També has d’implementar el codi necessari per tal que quan l’usuari seleccione una de les dues opcions de la nostra aplicació, demane el número a buscar i mostre el resultat per pantalla. En cas que es seleccione la recerca binària, hauríem de comprovar si el vector està ordenat</p>
+<p>Afegeix el mètode de recerca seqüencial i el de recerca binaria al projecte. També has d’implementar el codi necessari per tal que quan l’usuari seleccione una de les dues opcions de la nostra aplicació, demane el número a buscar i mostre el resultat per pantalla. En cas que es seleccione la recerca binària, hauríem de comprovar si el vector està ordenat.</p>
 </details>
 <details class="question">
 <summary>Activitat 511. Compara eficiències</summary>
-<p>Comparem l’eficiència dels dos algorismes de recerca vistos. Fes una funció a la nostra classe TAD en la que es compten el total de vegades que s’accedeix  l’array de números per arribar a trobar la clau. Hauràs de posar una opció més al menú, per exemple: «Comparar eficiència dels algoritmes». Aquesta nova opció haurà d’executar varies vegades els dos algorismes de recerca amb vectors de números diferents.</p>
+<p>Comparem l’eficiència dels dos algorismes de recerca vistos. Fes una funció al teu projecte en la que es compten el total de vegades que s’accedeix  l’array de números per arribar a trobar la clau. Hauràs de posar una opció més al menú, per exemple: «Comparar eficiència dels algoritmes». Aquesta nova opció haurà d’executar varies vegades els dos algorismes de recerca amb vectors de números diferents.</p>
 </details>
 <h2 id="algorismes-dordenacio">Algorismes d'ordenació</h2>
 <p>Els algorismes d’ordenació permeten ordenar un array en funció d’un criteri establert al propi algorisme. Hi han diferents tipus d’algorismes d’ordenació: selecció, inserció, bombolla, Shell i Quicksort.</p>
@@ -640,10 +672,9 @@
 <span class="w">      </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<!--![Ordenació per selecció](assets/Tema5/SeleccioTrace.png)-->
 <details class="question">
 <summary>Activitat 512. Algorisme d'ordenació per selecció</summary>
-<p>Implementa l’algorisme d’ordenació per selecció a la classe TAD i vicula-la a l’opció del menú corresponent. </p>
+<p>Implementa l’algorisme d’ordenació per selecció al projecte i vicula-la a l’opció del menú corresponent. </p>
 </details>
 <h2 id="insercio">Inserció</h2>
 <p>Aquest algorisme consisteix en generar un nou array a partir del que ja es té, tal que cada nou element inserit es posa a la seua posició correcta.
@@ -689,7 +720,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 </center></p>
 <details class="question">
 <summary>Activitat 513. Algorisme ordenació per inserció</summary>
-<p>Implementa l’algorisme d’ordenació per inserció a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<p>Implementa l’algorisme d’ordenació per inserció al projecte i vincula-la a l’opció del menú corresponent. </p>
 </details>
 <h2 id="bombolla">Bombolla</h2>
 <p>L’algorisme d’ordenació per bombolla és el més conegut i també el menys eficient, ja que a cada passada per ordenar un element compara cadascun d’ells amb el seu adjacent de forma que si les seues posicions són incorrectes, s’intercanvien. Al finalitzar cada passada l’element més gran es va posant al final de la llista</p>
@@ -735,7 +766,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 </center></p>
 <details class="question">
 <summary>Activitat 515. Ordenació per bombolla</summary>
-<p>Implementa l’algorisme d’ordenació per bombolla a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<p>Implementa l’algorisme d’ordenació per bombolla al projecte i vincula-la a l’opció del menú corresponent. </p>
 </details>
 <h2 id="shell">Shell</h2>
 <p>L’algorisme Shell és una millora de l’algorisme d’inserció directa. Compara elements separats per un espai de vàries posicions el que permet que un element faja passos més grans fins trobar la seua posició esperada. </p>
@@ -797,7 +828,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 516. Ordenació per Shell</summary>
-<p>Implementa l’algorisme d’ordenació shell a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<p>Implementa l’algorisme d’ordenació shell al projecte i vincula-la a l’opció del menú corresponent. </p>
 </details>
 <h2 id="quicksort">Quicksort</h2>
 <p>Aquest és un dels algorismes d’ordenació més ràpids i eficients. Utilitza la tècnica «divideix i venceràs» de tal forma que divideix l’array a ordenar en parts que ordenarà al mateix temps. Bàsicament es tria l’element de l’array com a pivot tal que es forme dos subArrays, en un d’ells s’emmagatzemen els elements menors que l’element que hem triat com a pivot i a l’altre array es guarden els element majors que el pivot. Una vegada fet, s’aplica el mateix procediment als subarrays obtinguts.</p>
@@ -811,7 +842,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>{2, 3, 5, 7, 9, 12, 13}</p>
 <details class="question">
 <summary>Activitat 517. Algorisme Quicksort</summary>
-<p>Implementa l’algorisme d’ordenació quicksort a la classe TAD i vincula-la a l’opció del menú corresponent. </p>
+<p>Implementa l’algorisme d’ordenació quicksort al projecte i vincula-la a l’opció del menú corresponent. </p>
 </details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -868,8 +899,8 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Fes que en cada algorisme d’ordenació es mostre una traça on a cada passada de l’algoritme, és a dir, cada vegada que mou un element a l’array, mostre aquest per pantalla.</p>
 </details>
 <details class="question">
-<summary>Activitat 519. Entrega TAD</summary>
-<p>Entrega mitjançant la plataforma aules la classe TAD que inclou de les activitats 1 a la 13 amb totes les funcions tant de recerca com d’ordenació sobre arrays unidimensionals.</p>
+<summary>Activitat 519. Entrega del projecte</summary>
+<p>Entrega mitjançant la plataforma aules el projecte final que inclou de les activitats 506 a 518 amb totes les funcions tant de recerca com d’ordenació sobre arrays unidimensionals.</p>
 </details>
 <h2 id="arrays-multidimensionals">Arrays multidimensionals</h2>
 <p>Fins ara hem estan utilitzant arrays d’una sola dimensió, coneguts també com vectors, taules o llistes. Aquests arrays es recorren amb ajuda d’un sol índex (tenen una sola dimensió). En aquest apartat estudiarem arrays de més d’una dimensió per als que necessitarem més d’un índex a l’hora de ser recorreguts. 
@@ -960,7 +991,7 @@ Per exemple, per declarar i crear una matriu d’enters de 5 files i 10 columnes
 <li>Mitjançant l’ús d’una sentència de control repetitiva.</li>
 </ul>
 <p><strong>Inicialització i accés a cada element de l'array</strong>
-Per accedir a una dada en un array multimensional hem de coneixer els índex de posició d’aquest. En un array de dues dimensions, per accedir a una dada s’ha d’indicar la fila i la columna d’on es troba aquesta informació.</p>
+Per accedir a una dada en un array multidimensional hem de coneixer els índex de posició d’aquest. En un array de dues dimensions, per accedir a una dada s’ha d’indicar la fila i la columna d’on es troba aquesta informació.</p>
 <p>Per exemple, imaginem que tenim la següent taula (array de dos dimensions)</p>
 <table>
 <thead>
@@ -1025,7 +1056,7 @@ Per accedir a una dada en un array multimensional hem de coneixer els índex de 
 <p>Es tracta de desenvolupar una aplicació que realitze operacions utilitzant matrius de 3x3.<br/>
 El menú ha de mostrar el següent:</p>
 <ol>
-<li>Emplena la primera matriu<br/></li>
+<li>Emplena la primera matriu</li>
 <li>Emplena la segona matriu</li>
 <li>Visualitza les matrius4</li>
 <li>Suma les matrius</li>

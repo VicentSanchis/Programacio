@@ -270,18 +270,18 @@ Una vegada ja tenim importats els paquets del driver JDBC, hem d'establir la con
 <span class="kn">import</span><span class="w"> </span><span class="nn">javax.sql.*</span><span class="p">;</span><span class="w"></span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConnectaBD</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MySqlConnection</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">MySqlConnection</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="c1">// 1. Establim la connexió amb la base de dades.</span><span class="w"></span>
-<span class="w">            </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">"jdbc:mysql://localhost:3306/CicleFormatiu"</span><span class="p">,</span><span class="w"> </span><span class="s">"root"</span><span class="p">,</span><span class="w"> </span><span class="s">"******"</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error Accés BD"</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">			</span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">"jdbc:mysql://localhost:3306/CicleFormatiu"</span><span class="p">,</span><span class="w"> </span><span class="s">"root"</span><span class="p">,</span><span class="w"> </span><span class="s">"******"</span><span class="p">);</span><span class="w"></span>
+<span class="w">			</span>
+<span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error Accés BD"</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 I des del main o la classe Test que conté el mètode main estàtic:</p>
@@ -299,9 +299,9 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestBD</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">ConnectaBD</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnectaBD</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">ConnectaBD</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnectaBD</span><span class="p">();</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -332,22 +332,22 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">javax.sql.*</span><span class="p">;</span><span class="w"></span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConnectaBD</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Statement</span><span class="w"> </span><span class="n">stat</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ConnectaBD</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">ConnectaBD</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="c1">// 1. Establim la connexió amb la base de dades.</span><span class="w"></span>
-<span class="w">            </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">"jdbc:mysql://localhost:3306/CicleFormatiu"</span><span class="p">,</span><span class="w"> </span><span class="s">"root"</span><span class="p">,</span><span class="w"> </span><span class="s">"******"</span><span class="p">);</span><span class="w"></span>
+<span class="w">			</span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">"jdbc:mysql://localhost:3306/CicleFormatiu"</span><span class="p">,</span><span class="w"> </span><span class="s">"root"</span><span class="p">,</span><span class="w"> </span><span class="s">"******"</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">            </span><span class="c1">// 2. Creem l'objecte Statement.</span><span class="w"></span>
 <span class="w">            </span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error Accés BD"</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">			</span>
+<span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error Accés BD"</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Ara hauriem de poder executar les sentències SQL que necessitem. Per poder executar sentències Sql utilitzarem el mètode <strong>executeQuery()</strong> que és un mètode que pertany a l'objecte <strong>Statement</strong> anteriorment creat. Aquest mètode ens resornarà un <strong>ResultSet</strong> què és on tindrem la informació obtesa de la base de dades.</p>
@@ -365,7 +365,7 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <span class="normal">11</span>
 <span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">ResultSet</span><span class="w"> </span><span class="nf">ExecutarSQL</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strQuery</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">strQuery</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -374,7 +374,7 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error executant SQL"</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">rs</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Amb aquest codi, des de la nostra classe on es troba el mètode main estatic podriem fer el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -392,10 +392,10 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestBD</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">ConnectaBD</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnectaBD</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="na">ExecutarSQL</span><span class="p">(</span><span class="s">"SELECT * FROM Alumnes;"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">ConnectaBD</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnectaBD</span><span class="p">();</span><span class="w"></span>
+<span class="w">		</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="na">ExecutarSQL</span><span class="p">(</span><span class="s">"SELECT * FROM Alumnes;"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -445,7 +445,6 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+<script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
 </body>
 </html>

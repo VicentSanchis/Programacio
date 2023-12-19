@@ -1222,7 +1222,7 @@
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"></span>
 
-
+<span class="w">        </span>
 <span class="w">        </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor de c = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"> </span>
 <span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
@@ -1269,19 +1269,23 @@ font d'errors.</p>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"></span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">// Conversió automàtica de tipus</span><span class="w"></span>
 <span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">// Conversió automàtica de tipus</span><span class="w"></span>
 <span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Int "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Long "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">l</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Float "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span>
 </code></pre></div></td></tr></table></div>
 <h4 id="conversio-explicita-de-tipus-o-casting">Conversió explicita de tipus o casting</h4>
 <p>Si volem assignar un valor de tipus de dades més gran a un tipus de dades més xicotet, farem un <strong>casting</strong> o el que també es coneix com conversio de tipus explicit.</p>
@@ -1323,17 +1327,17 @@ font d'errors.</p>
 <span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.04</span><span class="p">;</span><span class="w"> </span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//casting de tipo</span><span class="w"></span>
 <span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">d</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//casting de tipo</span><span class="w"></span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">l</span><span class="p">;</span><span class="w"> </span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Double "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//parte fraccionaria perdida</span><span class="w"></span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Long "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">l</span><span class="p">);</span><span class="w"> </span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//parte fraccionaria perdida</span><span class="w"></span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor Int "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"> </span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span>
@@ -1368,12 +1372,12 @@ font d'errors.</p>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">257</span><span class="p">;</span><span class="w"> </span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">323.142</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Conversion de int a byte."</span><span class="p">);</span><span class="w"> </span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//i%256</span><span class="w"></span>
 <span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"i = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" b = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\nConversion de double a byte."</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">        </span>
 <span class="w">        </span><span class="c1">//d%256</span><span class="w"></span>
 <span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"d = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" b= "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
@@ -1409,7 +1413,7 @@ font d'errors.</p>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Thank"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"You"</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"a + b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"a - b = "</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"x + y = "</span><span class="o">+</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
@@ -1463,16 +1467,16 @@ font d'errors.</p>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de c (++a) = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de c (b++) = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">--</span><span class="n">d</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de c (--d) = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de c (e--) = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de !condition = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">!</span><span class="n">condition</span><span class="p">);</span><span class="w"></span>
@@ -2050,7 +2054,7 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
     D--&gt;Instrucció5;
     Instrucció5--&gt;id3((FI)); 
     style id3 fill:#0F0;
-
+    
 </div>
 <p>I el codi en Java seria:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2073,7 +2077,7 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// INstrucciones 2</span><span class="w"></span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// Instruccions per defecte</span><span class="w"></span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
@@ -2119,13 +2123,13 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <span class="normal">37</span>
 <span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="c1">//Programa que demana un numero i diu quin mes és</span><span class="w"></span>
 
-
+<span class="w">    </span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mes</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-
+<span class="w">    </span>
+<span class="w">    </span>
 <span class="w">    </span><span class="n">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//inicio del switch</span><span class="w"></span>
@@ -2325,7 +2329,7 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
     C1--&gt;|F|P1;
     Instrucció3--&gt;Id2((Fi));
     style Id2 fill:#0F0;
-
+    
 </div>
 <!---![Selecció múltiple amb if](assets/Tema3/diagrama-flujo-bucle-do-while.png)-->
 <p>Els passos que representen el diagrama anterior són:</p>
@@ -2489,8 +2493,7 @@ Millora el programa anterior controlant el que passa quan es vol dividir per zer
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+<script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({
     theme: "forest"
 });</script></body>

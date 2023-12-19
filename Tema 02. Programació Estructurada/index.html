@@ -144,7 +144,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#activitats">
+<a class="md-nav__link" href="#activitats_1">
     Activitats
   </a>
 </li>
@@ -270,10 +270,6 @@
 <summary>Exemple 1. La nostra fruiteria</summary>
 <p>Es pretén implementar un algorisme que s'encarregue, de la forma més eficient possible, la creació i impressió de tiquets de compra per a tots els clients que entren a la nostra botiga. </p>
 <p>A la imatge següent podem observar un exemple d'algorisme de creació d'un nou tiquet (nova compra).</p>
-</details>
-<details class="success" open="open">
-<summary>Solució</summary>
-<p>Expliquem breument el que fa aquest diagrama: primer crea un nou tiquet i afegeix un nou element (fruita o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou tiquet, es calcula el preu final i s'imprimeix.</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Crear Tiquet Nou];
     style Id1 fill:#0F0;
@@ -284,16 +280,12 @@
     E--&gt;F[Imprimir];
     F--&gt;Id2((Final));
     style Id2 fill:#F00;
-
 </div>
+<p>Expliquem breument el que fa aquest diagrama: primer crea un nou tiquet i afegeix un nou element (fruita o verdura), aquesta acció última es repeteix fins que acabe de comprar. Quan s'acaba d'afegir items al nou tiquet, es calcula el preu final i s'imprimeix.</p>
 </details>
 <details class="example">
 <summary>Exemple 2. Trobar les claus de casa</summary>
 <p>Imagineu que vull eixir de casa però no recorde on he posat les claus i sense elles no puc anar a cap lloc. Les he de buscar. El següent algorisme representat utilitzant un diagrama de flux, ens podria ajudar a trobar-les.</p>
-</details>
-<details class="success" open="open">
-<summary>Solució</summary>
-<p>La diferència amb l'anterior és que té text</p>
 <div class="mermaid">graph LR
     Id1((Inici))--&gt;B[Buscar on sempre];
     style Id1 fill:#0F0;
@@ -304,9 +296,7 @@
     D--&gt;|SI|E[Eixir de casa];
     E--&gt;Id2((Fi));
     style Id2 fill:#F00;
-
 </div>
-<!---<img alt="Diagrama de flux - Buscar Claus" src="assets/Tema1/Diagrama2.png" />-->
 </details>
 <details class="example">
 <summary>Exemple 3. Com anar de l'ajuntament al passeig</summary>
@@ -320,10 +310,7 @@
 <li>Agafa el carrer moreral</li>
 <li>Al final del carrer moreral a l'esquerra.</li>
 </ul>
-</details>
-<details class="success" open="open">
-<summary>Solució</summary>
-<p>Una possible solució a aquest problema podria ser:</p>
+<p>Una possible solució al problema anterior seria:</p>
 <div class="mermaid">graph LR
 
     subgraph 1
@@ -334,7 +321,7 @@
         B--&gt;|SI|C[Gira a la dreta];
         C--&gt;D[Camina pel Ramón i Cajal]; 
     end
-
+    
     subgraph 2    
         D--&gt;E;
         E{Hem arribat <br/>a la farmacia?}--&gt;|SI|F[Gira a l'esquerra];
@@ -343,7 +330,7 @@
         G--&gt;H{Hem arribat al<br/>carrer Moreral?}
         H--&gt;|NO|G;    
     end
-
+    
     subgraph 3
         H--&gt;|SI|I[Baixa pel carrer Moreral];
         I--&gt;J{Has arribat al <br/>final del carrer?};
@@ -353,9 +340,7 @@
         L--&gt;Final((Fi));
         style Final fill:#F00;
     end
-
 </div>
-<!---<img alt="Diagrama de flux - Anar al Passeig" src="assets/Tema1/AnarAlPasseig.png" />-->
 </details>
 <details class="example">
 <summary>Exemple 4. Fer Zapping</summary>
@@ -366,9 +351,6 @@
 <li>Si no m'agrada canvie de canal</li>
 <li>Si sí que m'agrada, deixe el comandament i em pose comode.</li>
 </ul>
-</details>
-<details class="success" open="open">
-<summary>Solució</summary>
 <div class="mermaid">graph LR
     Ini((Inici))--&gt;A[Agafar Comandament TV];
     style Ini fill:#0F0;
@@ -381,15 +363,11 @@
     D--&gt;Fi((Fi));
     style Fi fill:#F00;
 </div>
-<!---<img alt="Diagrama de flux - Fer Zapping" src="assets/Tema1/Zapping.png" />-->
 </details>
 <details class="example">
 <summary>Exemple 5. Adolescència (Spoiler: no té solució)</summary>
 <p>Durant l'adolescència cal marcar bé les prioritats abans de les diversions. Tot adolescent abans de poder eixir amb els amics primer ha de fer els deures i després tindre el quarto arreglat. Dissenya un algorisme que solucione aquest problema sense que l'adolescent haja de consultar a sa mare si pot eixir o no.</p>
-</details>
-<details class="success" open="open">
-<summary>Solució</summary>
-<p><div class="mermaid">graph LR
+<div class="mermaid">graph LR
     Ini((Inici))--&gt;A{Has fet <br/> els deures?};
     style Ini fill:#0F0;
     A--&gt;|NO|B[Fes els deures];
@@ -400,8 +378,8 @@
     E--&gt;Fi((Fi));
     style Fi fill:#F00;
 </div>
-<!---<img alt="Diagrama de flux - Adolescència" src="assets/Tema1/Adolescencia.png" />--></p>
 </details>
+<h3 id="activitats">Activitats</h3>
 <details class="question">
 <summary>Activitat 201. Ús del transport públic.</summary>
 <p>Acabes d'arribar a l'estació del Nord de València i necessites anar al Campus de tarongers, concretament a l'UPV, utilitzant els transports públics de la ciutat. </p>
@@ -416,7 +394,25 @@
 <p>Com podeu observar les instruccions que se li poden donar a la Thermomix ® a través de la seua interfície són molt reduides però si investigueu un poc per Internet trobareu que el total de receptes que es poden fer amb aquest set d'instruccions és molt abundant.</p>
 <details class="question">
 <summary>Activitat 202. Recepta Thermomix®</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Instruccions Thermomix</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Busca per Internet una recepta que t'agrade i amb la tècnica abans vista dels diagrames de flux, dissenya un algorisme per al robot de cuina Thermomix ®, tenint el seu repertori d'instruccions que hem vist abans. Recorda que depenent de la recepta que tries, pot ser que estiga dividida en parts i hi haja una part de l'algorisme on s'indiquen instruccions per al/la cuiner/a.</p>
+</div>
+<div class="tabbed-block">
+<p>A la Thermomix se li poden donar tres tipus de ordres: a quina temperatura ha de cuinar des de 0 fins a 120 graus, la velocitat de les aspes de 0 fins a 7 i el temps de cocció en minuts i segons.</p>
+<ul>
+<li>Temperatura: des de 0 graus fins a 120 graus.</li>
+<li>Velocitats: enrere, 0, SL (Slow), o de 0 fins a 7</li>
+<li>Temps: minuts i segons</li>
+</ul>
+<p>Per exemple, si vullguerem bollir aigua, donariem les següents instruccions:
+    - Temperatura: 100 graus.
+    - Temps: 5:00
+    - Velocitat: SL</p>
+</div>
+</div>
+</input></input></div>
 </details>
 <h2 id="estructures">Estructures</h2>
 <p>Com ja hem anomenat als primers punts d'aquest tema, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estructures bàsiques amb les quals es podrien codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.
@@ -768,7 +764,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     D--&gt;Instrucció5;
     Instrucció5--&gt;id3((FI)); 
     style id3 fill:#0F0;
-
+    
 </div>
 <p>Al diagrama de flux anterior, s'avalua una condició (que pot resultar en mès d'un cas diferent) i segons el resultat d'aquesta avaluació de la condició, realitzarà una acció o una altra. Mira com s'escriuria el codi de la condicional múltiple.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -787,11 +783,11 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">opcio1</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="n">Instruccio1</span><span class="w"></span>
 <span class="w">    </span><span class="n">Instruccio2</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">opcio2</span><span class="o">&gt;</span><span class="w"> </span>
 <span class="w">        </span><span class="n">Instruccio3</span><span class="w"></span>
 <span class="w">        </span><span class="n">Instruccio4</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">sino</span><span class="w"></span>
 <span class="w">        </span><span class="n">Instruccio5</span><span class="w"></span>
 <span class="w">        </span><span class="n">Instruccio6</span><span class="w"></span>
@@ -820,7 +816,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">enCasDe</span><span class="w"> </span><span class="p">(</span><span class="n">huiQuinDiaEs</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span><span class="w"></span>
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dilluns</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="nf">RepartirPego</span><span class="p">();</span><span class="w"></span>
-
+<span class="w">    </span>
 <span class="w">    </span><span class="n">cas</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Dimarts</span><span class="o">&gt;</span><span class="w"> </span>
 <span class="w">        </span><span class="nf">RepartirOliva</span><span class="p">();</span><span class="w"></span>
 
@@ -890,7 +886,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     C1--&gt;|F|P1;
     Instrucció3--&gt;Id2((Fi));
     style Id2 fill:#0F0;
-
+    
 </div>
 <p>Els passos que representen el diagrama anterior són:</p>
 <ol>
@@ -962,7 +958,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <p>Dissenya un algorisme en diagrames de flux que busque la paraula "aigua" en qualsevol llibre en una pàgina qualsevol. És a dir, el nostre algorisme el que farà serà llegir una pàgina d'un llibre qualsevol i comptarà quantes vegades ha trobat la paraula aigua en total.</p>
 <p>Has de dissenyar l'algorisme tant en diagrama de flux com en pseudocodi.</p>
 </details>
-<h2 id="activitats">Activitats</h2>
+<h2 id="activitats_1">Activitats</h2>
 <p>Exposem a continuació algunes activitats per tal d'assolir els coneixements exposats als punts anteriors.</p>
 <!-- Combinació de seqüencial i repetir mentre -->
 <details class="question">
@@ -1142,8 +1138,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+<script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({
     theme: "forest"
 });</script></body>

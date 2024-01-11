@@ -283,7 +283,7 @@ Per exemple, per saber conduir un cotxe no necessite saber al detall el funciona
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">modificador</span><span class="o">]</span><span class="w"> </span><span class="n">tipus</span><span class="w"> </span><span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipo</span><span class="w"> </span><span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">modificador</span><span class="o">]</span><span class="w"> </span><span class="n">tipus</span><span class="w"> </span><span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="cm">/*</span>
 <span class="cm">        * Bloc d'instruccions</span>
@@ -515,7 +515,7 @@ On: </p>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">esDivisor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="w">        </span><span class="n">printl</span><span class="p">(</span><span class="s">"a és divisor de b"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"a és divisor de b"</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">boolean</span><span class="w"> </span><span class="nf">esDivisor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -539,7 +539,7 @@ On: </p>
 <p>Finalment dir que els arguments poden ser <strong>literals</strong>, que corresponguen amb el tipus del paràmetre, o també poden ser <strong>variables</strong>, però que passa amb les variables que es passen com a <strong>argument</strong> si el paràmetre al qual s'assignen és modificat en temps d'execució? Es modifiquen també? Mirem la diferència entre valor i referència.</p>
 <h3 id="pas-per-valor-i-pas-per-referencia">Pas per valor i pas per referència</h3>
 <p>Entrem en més detall sobre els paràmetres, que passa amb ells quan s'acaba l'execució de la funció o mètode si són variables locals?</p>
-<p>En resum el <strong>pas per valor</strong> significa que al mètode, en la variable de l'argument li <strong>arriba una còpia</strong> del valor en el cas que es tracte d'un tipus de dades <u>primitiu</u>, és a dir, char, int, float, double, etc.. Mentre que el <strong>pas per referència</strong> en canvi, l'argument conté un <strong>punter</strong> amb l'adressa de memòria de la variable en qüestió. </p>
+<p>En resum el <strong>pas per valor</strong> significa que al mètode, en la variable de l'argument li <strong>arriba una còpia</strong> del valor en el cas que es tracte d'un tipus de dades <u>primitiu</u>, és a dir, char, int, float, double, etc.. Mentre que el <strong>pas per referència</strong> en canvi, l'argument conté un <strong>punter</strong> amb l'adreça de memòria de la variable en qüestió. </p>
 <div class="admonition info">
 <p class="admonition-title">Resum valor vs referència</p>
 <ul>
@@ -551,7 +551,7 @@ On: </p>
 </li>
 </ul>
 </div>
-<p>En resum, si es passa un argument per còpia, tot alló que es faja al paràmetre dins del codi de la funció no afectarà a l'original mentre que si, per contra, l'argument es passa per referència, totes aquelles accions que es realitzen sobre el paràmetre li afectaran a l'argument original.</p>
+<p>En resum, si es passa un argument per còpia, tot allò que es faja al paràmetre dins del codi de la funció no afectarà a l'original mentre que si, per contra, l'argument es passa per referència, totes aquelles accions que es realitzen sobre el paràmetre li afectaran a l'argument original.</p>
 <p><center>
 <img alt="Paràmetres" src="../assets/Tema4/ReferenciaValor.gif"/>
 </center></p>
@@ -583,13 +583,13 @@ On: </p>
 <span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="w">		</span><span class="n">print</span><span class="p">(</span><span class="s">"Valors de a i b abans de la modificació: "</span><span class="p">);</span>
 <span class="w">		</span><span class="n">println</span><span class="p">(</span><span class="s">" a = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ; b = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">);</span>
-<span class="w">		</span><span class="n">modificaTiupsPrimitius</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="w">		</span><span class="n">modificaTipusPrimitius</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
 <span class="w">		</span><span class="n">print</span><span class="p">(</span><span class="s">"Valors de a i b després de la modificació: "</span><span class="p">);</span>
 <span class="w">		</span><span class="n">println</span><span class="p">(</span><span class="s">" a = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ; b = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">);</span>
 <span class="w">	</span><span class="p">}</span>
 <span class="w"> </span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">modificaTiupsPrimitius</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">modificaTipusPrimitius</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
@@ -601,8 +601,8 @@ On: </p>
 <div class="tabbed-block">
 <p>Copia el codi anterior en Processing IDE i respon a les següents qüestions:</p>
 <ol>
-<li>Quins són els paràmetres i de quin tipus són els de la funció modificaTiupsPrimitius?</li>
-<li>Quantes vegades es crida a la funció modificaTiupsPrimitius?</li>
+<li>Quins són els paràmetres i de quin tipus són els de la funció modificaTipusPrimitius?</li>
+<li>Quantes vegades es crida a la funció modificaTipusPrimitius?</li>
 <li>Quins argument es passen a cada crida?</li>
 <li>Què passa i per què a l'executar-se el codi anterior?</li>
 <li>Estan passant-se els arguments per valor o per referència?</li>
@@ -705,7 +705,7 @@ On: </p>
 <ul>
 <li>Qualsevol instrucció que es trobe després de l'execució de return, <strong>NO serà executada.</strong></li>
 <li>És comú trobar funcions amb <strong>múltiples sentències return</strong> al seu codi, com per exemple en sentencies condicionals, però una vegada el codi execute una sentència return allò que vinga després no s'executarà.</li>
-<li>El <strong>tipus de valor que es torna</strong> en una funció ha de conicidir amb el tipus declarat a la funció, és a dir, si es declara int, el valor que ha de tornar ha de ser un nombre enter.</li>
+<li>El <strong>tipus de valor que es torna</strong> en una funció ha de coincidir amb el tipus declarat a la funció, és a dir, si es declara int, el valor que ha de tornar ha de ser un nombre enter.</li>
 <li>En el cas de les funcions que no tornen res <strong>(void)</strong>, també conegues com a procediments, poden usar la sentència <strong>return però sense cap valor</strong> i només s'usaria per acabar amb l'execució de la funció. </li>
 </ul>
 <h4 id="funcions-i-procediments">Funcions i procediments</h4>
@@ -744,7 +744,7 @@ On: </p>
 <span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaSol</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
 <span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="n">stroweWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="w">    </span><span class="n">circle</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -782,14 +782,14 @@ On: </p>
 </div>
 </details>
 <h3 id="funcions-declaracio-i-crida">Funcions: declaració i crida</h3>
-<p>Hem vist ja la gran part tècnica de com funcionen els mètodes en Java pel que fa a la part de sintaxis i les diferents paraules claus que s'utilitzen. En altres paraules, ja sabem construir funcions i procediments tant des del <strong>punt de vista tècnic</strong> (com és construiexen), com des del <strong>punt de vista semàntic</strong> (què signifiquen) però, com fem ús d'aquestes funcions o procediments?</p>
+<p>Hem vist ja la gran part tècnica de com funcionen els mètodes en Java pel que fa a la part de sintaxis i les diferents paraules claus que s'utilitzen. En altres paraules, ja sabem construir funcions i procediments tant des del <strong>punt de vista tècnic</strong> (com és construeixen), com des del <strong>punt de vista semàntic</strong> (què signifiquen) però, com fem ús d'aquestes funcions o procediments?</p>
 <p>Primer cal que distingim entre la declaració d'un mètode i la crida a aquest.</p>
 <ul>
 <li><strong>Declaració d'un mètode:</strong> definició del procediment o funció on s'inclou tant la capçalera (interfície o prototip) i el cos (codi de la funció).</li>
 <li><strong>Crida a un mètode:</strong> ús del mètode per mitjà d'una crida a aquest utilitzant el prototip i els paràmetres en cas de tenir-los.</li>
 <li><strong>Prototip, interfície o signatura:</strong> la signatura d'un mètode és la combinació de nom, tipus de paràmetres, nom d'aquestos i ordre.</li>
 </ul>
-<p>Per tal d'utilitzar una funció o mètode en Java hem de <strong>cridar</strong> a eixa funció. Una funció en Java es crida utilitzant el nom del mètode i entre paréntesis s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
+<p>Per tal d'utilitzar una funció o mètode en Java hem de <strong>cridar</strong> a eixa funció. Una funció en Java es crida utilitzant el nom del mètode i entre parentesi s'han de passar els paràmetres que s'indica a la declaració de la funció. Aquestos paràmetres que es passen han de coincidir en número, si la declaració del funció té 3 paràmetres s'hauran de passar tres paràmetres, i també han de coincidir en el títol.  Però millor vegem un exemple:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -956,7 +956,7 @@ On: </p>
 <li><strong>L’ordre dels paràmetres</strong> i el tipus ha de coincidir. </li>
 <li>Cal tindre cura en el moment d'enviar els paràmetres, hem de fer-ho en el <strong>mateix ordre</strong> en que varen ser declarats i han de ser del <strong>mateix tipus</strong>.</li>
 <li>Cada paràmetre enviat també va separat per comes.</li>
-<li>Si una funció <strong>no rep paràmetres</strong>, simplement no posem res a l'interior de la parèntesi, però sempre debem posar la parèntesi.</li>
+<li>Si una funció <strong>no rep paràmetres</strong>, simplement no posem res a l'interior de la parèntesi, però sempre deguem posar la parèntesi.</li>
 <li>Invocar una funció segueix sent <strong>una sentència normal</strong> i corrent en Java, així que ha de finalitzar amb ';' com sempre.</li>
 <li>El <strong>valor retornat</strong> per un mètode o funció pot ser assignat a una variable del <strong>mateix tipus</strong>.</li>
 <li>Si es tracta d'un <strong>procediment</strong> no es pot retornar valor algú.</li>
@@ -998,11 +998,11 @@ On: </p>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
 <span class="w">        </span><span class="n">array</span><span class="o">[</span><span class="n">a</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Abans de la cirda a la funció:"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Abans de la crida a la funció:"</span><span class="p">);</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"i="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">);</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"array[5]="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="p">);</span>
 <span class="w">    </span><span class="n">funcio</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">array</span><span class="p">);</span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Després de la cirda a la funció:"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Després de la crida a la funció:"</span><span class="p">);</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"i="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">);</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"array[5]="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="p">);</span>
 <span class="p">}</span>
@@ -1357,11 +1357,11 @@ Aquest codi mostra el següent dibuix</p>
 <p><strong>4. Quart:</strong> Ara com podem observar, es crida al mètode equalTo sobre 'ob1' i 'obj' fa referència a 'ob2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si la condició és veritat, tornarà <strong>true</strong>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>5. Cinqué:</strong> De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència com s'ha fet al pas tercer.</p>
+<p><strong>5. Cinquè:</strong> De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència com s'ha fet al pas tercer.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <p><center><img alt="Pas 4" src="../assets/Tema4/Explicacio4.png"/></center></p>
-<p><strong>6. Sisé:</strong> Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</p>
+<p><strong>6. Sisè:</strong> Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</p>
 <details class="question">
 <summary>Activitat 415. Copia el codi</summary>
 <p>Copia i executa el codi anterior en Processing IDE</p>
@@ -1414,7 +1414,7 @@ Aquest codi mostra el següent dibuix</p>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Factorial utlitzant un mètode recursiu:"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Factorial utilitzant un mètode recursiu:"</span><span class="p">);</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"El factorial de 3 és: "</span><span class="o">+</span><span class="n">factorialRecursiu</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
 <span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"El factorial de 6 és: "</span><span class="o">+</span><span class="n">factorialRecursiu</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
 <span class="w">    </span><span class="n">println</span><span class="p">();</span>
@@ -1467,7 +1467,7 @@ Aquest codi mostra el següent dibuix</p>
 <p class="admonition-title">Stack Overflow</p>
 <p>Les versions recursives de moltes rutines poden executar-se una mica més lentament que els seus equivalents iteratius causa de la sobrecàrrega addicional de les trucades a mètodes addicionals. Massa crides recursives a un mètode podrien causar un desbordament de la pila.</p>
 </div>
-<p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que <strong>la pila s'acabe esgotant</strong>. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una <strong>excepció</strong>. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torne loca.</p>
+<p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que <strong>la pila s'acabe esgotant</strong>. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una <strong>excepció</strong>. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torne boja.</p>
 <p>El <strong>principal avantatge</strong> de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>

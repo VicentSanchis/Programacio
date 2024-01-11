@@ -236,7 +236,7 @@
 <p>Ens podem trobar diversos tipus de dades compostos i en aquest tema veurem: </p>
 <ul>
 <li><strong>Cadenes de caracters:</strong> conjunt d'elements de tipus bàsic caracter.</li>
-<li><strong>Arrays:</strong> també coneguts com vectors o arreglos, contenen elements d'un mateix tipus base o objectes de la mateixa classe.</li>
+<li><strong>Arrays:</strong> també coneguts com vectors o <em>arreglos</em>, contenen elements d'un mateix tipus base o objectes de la mateixa classe.</li>
 <li><strong>Estructures:</strong> conjunt d'elements heterogenis, no tenen per què ser del mateix tipus base.</li>
 </ul>
 <h2 id="arrays">Arrays</h2>
@@ -280,7 +280,7 @@
 <p>D’aquesta forma hauríem creat un array de 5 enters que contindria els nombres parells fins al 10.</p>
 <div class="admonition tip">
 <p class="admonition-title">Diferència entre declaració creació i inicialització</p>
-<p>És molt important que conegau bé aquestos conceptes:</p>
+<p>És molt important que coneixeu bé aquestos conceptes:</p>
 <ul>
 <li><strong>Declaració:</strong> assignació de nom i tipus.</li>
 <li><strong>Creació:</strong> reserva d'espai necessari.</li>
@@ -296,14 +296,14 @@
 </code></pre></div></td></tr></table></div>
 <p>Repassem el codi anterior. A la línia 1 de codi i només amb aquesta línia hem aconseguit:</p>
 <ol>
-<li><strong>Declaració:</strong> es declara una variablem amb identificador 'a' i de tipus enter</li>
+<li><strong>Declaració:</strong> es declara una variable amb identificador 'a' i de tipus enter</li>
 <li><strong>Creació:</strong> automaticament el compilador li reserva l'espai necessari per a representar un enter: 4 bytes.</li>
 <li><strong>Inicialització:</strong> per defecte se li dona valor 0.</li>
 </ol>
 <p>Ara si mirem les línies següents podrem observar que:</p>
 <ol>
-<li>A la línia 2 del codi es produeix la <strong>declaració de l'array</strong>. Hem creat l'array i li hem assignat idendtificador però, quans elements pot emmagatzemar?</li>
-<li>A la línia 3 del codi és on es <strong>crea l'array</strong>, és a dir, es reserva espai en mèmoria. Al nostre cas 10 enters, és a dir, 40 bytes.</li>
+<li>A la línia 2 del codi es produeix la <strong>declaració de l'array</strong>. Hem creat l'array i li hem assignat identificador però, quants elements pot emmagatzemar?</li>
+<li>A la línia 3 del codi és on es <strong>crea l'array</strong>, és a dir, es reserva espai en memòria. Al nostre cas 10 enters, és a dir, 40 bytes.</li>
 <li>En aquest cas com que el tipus base de l'array és enter, la <strong>inicialització</strong> d'aquest vindria implicita en la reserva de memòria assignant-se valor 0 a tots els elements.</li>
 </ol>
 <p>Però com poden inicialitzar cadascun dels elements del nostre array de forma manual?</p>
@@ -365,7 +365,7 @@
 </details>
 <h3 id="arrays-com-a-parametres">Arrays com a paràmetres</h3>
 <p>Com qualsevol altre tipus de dades, un array també es pot passar com a <strong>paràmetre a un mètode.</strong> Els arrays sempre es passen <strong>per referència</strong>, és a dir, quan passem un array per paràmetre a un mètode, el que en realitat estem passant és un adreça de memòria que és la que ens indicaria on està l’inici del contingut d’aquest. Passar per referència qualsevol paràmetre significa que qualsevol modificació que es faja dins del mètode afectarà també a l’array fora d’aquest.</p>
-<p>No passa el mateix si passem un element concret de l’array, en aquest cas a l’igual que amb els altres paràmetres, aquestos es passen per valor, per tant les  modificacions o canvis que es produeixquen dins del mètode no afectaran fora d’aquest.</p>
+<p>No passa el mateix si passem un element concret de l’array, en aquest cas a l’igual que amb els altres paràmetres, aquestos es passen per valor, per tant les  modificacions o canvis que es produeixen dins del mètode no afectaran fora d’aquest.</p>
 <details class="question">
 <summary>Activitat 503. Mostra array amigablement</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
@@ -394,7 +394,7 @@
 </div>
 </details>
 <h3 id="bucle-for-en-java">Bucle for en Java</h3>
-<p>A les activitats anteriors t'hauràs trobat amb el dilema de com recòrrer tant l'array d'enters com el de caracters per tal d'inicialitzar-lo. Si vares entendre bé el <strong>terorema d'estructura i les estructures iteratives</strong>, segurament hauràs utilitzat un bucle while, un do while o un for. Però aquestos bucles a l'hora de recòrrer arrays tenen un inconvenient: el <strong>tamany de l'array</strong>. El programador ha de controlar quan s'arriba al final de l'array per tal que l'aplicació no done una errada inesperada i aixó de vegades no és senzill. Mira el següent exemple:</p>
+<p>A les activitats anteriors t'hauràs trobat amb el dilema de com recórrer tant l'array d'enters com el de caracters per tal d'inicialitzar-lo. Si vares entendre bé el <strong>teorema d'estructura i les estructures iteratives</strong>, segurament hauràs utilitzat un bucle while, un do while o un for. Però aquestos bucles a l'hora de recórrer arrays tenen un inconvenient: el <strong>grandària de l'array</strong>. El programador ha de controlar quan s'arriba al final de l'array per tal que l'aplicació no done una errada inesperada i això de vegades no és senzill. Mira el següent exemple:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -471,7 +471,7 @@
 </div>
 </details>
 <h2 id="algorismes-de-recerca">Algorismes de recerca</h2>
-<p>Implicitament amb l'aparició de les estructures de dades complexes en programació que, en certa manera, es podrien entendre com a <strong>conjunts</strong>, apareix la necessitat de poder <strong>fer receques</strong> elements dintre d'aquestos conjunts. Existeixen dos <strong>algorismes de recerca</strong> que veurem en aquest apartat: la recerca <strong>seqüencial</strong> i la recerca <strong>binaria</strong>. A l’element que estem buscant li direm <strong>clau</strong>.</p>
+<p>Implicitament amb l'aparició de les estructures de dades complexes en programació que, en certa manera, es podrien entendre com a <strong>conjunts</strong>, apareix la necessitat de poder <strong>fer recerques</strong> elements dintre d'aquestos conjunts. Existeixen dos <strong>algorismes de recerca</strong> que veurem en aquest apartat: la recerca <strong>seqüencial</strong> i la recerca <strong>binaria</strong>. A l’element que estem buscant li direm <strong>clau</strong>.</p>
 <p>Però abans d'anar per feina, canviarem temporalment l'entorn de programació de Processing IDE a <strong>Eclipse IDE</strong> i veurem un poc més que són les classes i els objectes i com funcionen en Java abans de veure-ho amb més detall al tema següent. Realitza les activitats següents abans de continuar.</p>
 <details class="question">
 <summary>Activitat 506. Crea el projecte base</summary>
@@ -483,7 +483,7 @@
 <ul>
 <li>Ha de tindre mínim una constant que ens indicarà el total d’elements que tindran els arrays, tant el d’enters com el de caràcters.</li>
 <li>Com a global ha de tindre almenys un array de caràcters i un d’enters.</li>
-<li>També ha de tenir un mètode setup i un draw que inicalitzen i executen l'aplicació.</li>
+<li>També ha de tenir un mètode setup i un draw que inicialitzen i executen l'aplicació.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -535,7 +535,7 @@
 <span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
 <span class="cm">* Projecte Tipus Compostos</span>
 <span class="cm">* Projecte escrit en Processing IDE en el que tractarem els tipus compostos de dades en Java.</span>
-<span class="cm">* A aquest projecte se li anrian afegint funcionalitats conforme avancem en els continguts del Tema 5</span>
+<span class="cm">* A aquest projecte se li aniran afegint funcionalitats conforme avancem en els continguts del Tema 5</span>
 <span class="cm">* @author  Vicent Sanchis</span>
 <span class="cm">* @since   10/11/23</span>
 <span class="cm">* @version 1.0</span>
@@ -544,13 +544,13 @@
 <span class="c1">// CONSTANTS</span>
 <span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 
-<span class="c1">// Varialbes Globals</span>
+<span class="c1">// Variables Globals</span>
 <span class="kt">int</span><span class="w">  </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span>
 <span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayCaracters</span><span class="p">;</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Mètode setup: s'executa a l'inici només una vegada</span>
-<span class="cm"> * sol utilitzar-se per incialitzar les aplicacions</span>
+<span class="cm"> * sol utilitzar-se per inicialitzar les aplicacions</span>
 <span class="cm"> * @return void</span>
 <span class="cm"> */</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w">  </span><span class="p">{</span>
@@ -558,7 +558,7 @@
 <span class="p">}</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Mètode draw: o bucle del joc s'executa unes 60 vegades per segon aprox.</span>
+<span class="cm"> * Mètode draw: o bucle del joc s'executa unes 60 vegades per segon aproximadament.</span>
 <span class="cm"> * @return void</span>
 <span class="cm"> */</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -963,11 +963,11 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Aquest és un dels algorismes d’ordenació més ràpids i eficients. Utilitza la tècnica «divideix i venceràs» de tal forma que divideix l’array a ordenar en parts que ordenarà al mateix temps. Bàsicament es tria l’element de l’array com a pivot tal que es forme dos subArrays, en un d’ells s’emmagatzemen els elements menors que l’element que hem triat com a pivot i a l’altre array es guarden els element majors que el pivot. Una vegada fet, s’aplica el mateix procediment als subarrays obtinguts.</p>
 <p>Seguint amb el mateix array dels exemples anteriors, aplicarem l’algorisme d’ordenació quicksort.</p>
 <p>{12, 5, 3, 13, 2, 9, 7}</p>
-<p>Triem un valor que fara el paper de pivot, per exmple el primer element de l’array, el 12 i a partir d’aquest creem dos arrays, un amb els números menors que el pivot i l’altre amb els números majors que el pivot:</p>
+<p>Triem un valor que fara el paper de pivot, per exemple el primer element de l’array, el 12 i a partir d’aquest creem dos arrays, un amb els números menors que el pivot i l’altre amb els números majors que el pivot:</p>
 <p>pivot: {12}; menors: {5, 3, 2, 9, 7}; majors {13}</p>
 <p>El subarray de majors ja està ordenada ja que només té un número. Ara ordenem el subarray de menors: {5, 3, 2, 9, 7} per la qual cosa escollim com a pivot el primer element de l’array, és a dir, el 5.</p>
 <p>pivot: {5}; menors {3, 2}; majors: {9, 7}.</p>
-<p>Seguim dividint en subarrays, Una vegada els subarrays estan ordenats sempre sempre s’ensamblaran col·locant subarrays de menors, seguides de pivot i subarrays de majors</p>
+<p>Seguim dividint en subarrays, Una vegada els subarrays estan ordenats sempre sempre s’assamblaran col·locant subarrays de menors, seguides de pivot i subarrays de majors</p>
 <p>{2, 3, 5, 7, 9, 12, 13}</p>
 <details class="question">
 <summary>Activitat 517. Algorisme Quicksort</summary>
@@ -1125,7 +1125,7 @@ Les matrius, com es coneixen els arrays bidimensionals es forme per files i colu
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">array</span><span class="o">[]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Ara que volem crear una matriu (array de dues dimensions) utilitzarem dos parells de claudàtors.</p>
-<p>És fàcil deduir que si vulguerem declarar un array de tres dimensions, hauriem d’utilitzar tres parells de claudàtors.</p>
+<p>És fàcil deduir que si volguerem declarar un array de tres dimensions, hauriem d’utilitzar tres parells de claudàtors.</p>
 <p>Amb aquesta instrucció el que estem fent es declarar la matriu però no li hem dit quina grandària tindrà. Eixa és la diferència entre declaració i creació. Per tal de crear, és a dir, reservar espai per a la nostra matriu, hem de fer el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">matriu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusBase</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
@@ -1454,7 +1454,7 @@ Mireu el següent exemple:</p>
 </div>
 </details>
 <h2 id="cadenes-de-caracters">Cadenes de caracters</h2>
-<p>En Java hem vist que quan volem emmagatzemar un valor enter, definim una variable de tipus int, si pel contrari, el que volem és emmagatzemar un valor amb decimals, definim una variable de tipus double o float. Ara bé, si el que volem és emmagatzemar una cadena de caracters, per exemple el nom d’una pesona, hem de definir un objecte de tipus String</p>
+<p>En Java hem vist que quan volem emmagatzemar un valor enter, definim una variable de tipus int, si pel contrari, el que volem és emmagatzemar un valor amb decimals, definim una variable de tipus double o float. Ara bé, si el que volem és emmagatzemar una cadena de caracters, per exemple el nom d’una persona, hem de definir un objecte de tipus String</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un objecte string</span>
 <span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Manolo</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">bombo</span><span class="err">»</span><span class="p">;</span>
@@ -1468,11 +1468,11 @@ Mireu el següent exemple:</p>
 <li><strong>char charAt (int i):</strong> ens diu quin caracter està a la posició ‘i’</li>
 <li><strong>String substring(int i):</strong> ens retorna la subcadena que hi ha a partir de la posició ‘i’ fins el final de la cadena</li>
 <li><strong>String substring(int i, int j):</strong> ens retorna la subcadena que es troba des de l’índex i fins el j</li>
-<li><strong>String concat(String str):</strong> concadena la cadena ‘str’ que es passa com a paràmetre al final de la cadena. Per exemple:</li>
+<li><strong>String concat(String str):</strong> concatena la cadena ‘str’ que es passa com a paràmetre al final de la cadena. Per exemple:</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">tring</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="err">»</span><span class="p">;</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="err">»</span><span class="p">;</span>
 <span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Pego</span><span class="err">»</span><span class="p">;</span>
 <span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w"> </span><span class="c1">// El resultat seria «JavaPego»</span>
 </code></pre></div></td></tr></table></div>
@@ -1486,13 +1486,13 @@ Mireu el següent exemple:</p>
 <ul>
 <li><strong>int indexOf(String s, int i):</strong> retorna l’índex dins de la cadena de la primera aparició de la subcadena s a partir de l’índex i</li>
 <li><strong>int lastIndexOf(int ch):</strong> torna l’índex de l’última vegada que apareix el caracter ‘ch’ dins de la cadena.</li>
-<li><strong>boolean equals(Sring str):</strong> Compara l’string amb l’objecte que es passa per paràmetre.</li>
+<li><strong>boolean equals(String str):</strong> Compara l’string amb l’objecte que es passa per paràmetre.</li>
 <li><strong>boolean equalsIgnoreCase (String otroString):</strong> Compara dues cadenes sense tenir en compte majúscules i minúscules.</li>
 <li><strong>int compareTo (String otroString):</strong> compara dues cadenes lexicogràficament. En altres paraules, diu quina és major que l’altra.</li>
 <li><strong>int compareToIgnoreCase (String otroString):</strong> com el mètode anterior però sense tenir en compte majúscules ni minúscules.</li>
 <li><strong>String toLowerCase():</strong> converteix la cadena a minúscules.</li>
 <li><strong>String toUpperCase():</strong> converteix la cadena a majúscules.</li>
-<li><strong>String trim():</strong> suprimeix els espais en blanc que puguen haver als extremps de la cadena</li>
+<li><strong>String trim():</strong> suprimeix els espais en blanc que puguen haver als extrems de la cadena</li>
 <li><strong>String replace (char oldChar, char newChar):</strong> substitueix totes les ocurrències de oldChar que hi ha a la cadena per newChar</li>
 </ul>
 <h2 id="enumeracions">Enumeracions</h2>

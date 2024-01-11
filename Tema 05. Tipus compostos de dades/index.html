@@ -186,8 +186,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cadenes-de-caracters">
-    Cadenes de caracters
+<a class="md-nav__link" href="#string-cadenes-de-caracters">
+    string: Cadenes de caracters
   </a>
 </li>
 <li class="md-nav__item">
@@ -969,19 +969,6 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>pivot: {5}; menors {3, 2}; majors: {9, 7}.</p>
 <p>Seguim dividint en subarrays, Una vegada els subarrays estan ordenats sempre sempre s’assamblaran col·locant subarrays de menors, seguides de pivot i subarrays de majors</p>
 <p>{2, 3, 5, 7, 9, 12, 13}</p>
-<details class="question">
-<summary>Activitat 517. Algorisme Quicksort</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Implementa l’algorisme d’ordenació quicksort al projecte i vincula-la a l’opció del menú corresponent. </p>
-</div>
-<div class="tabbed-block">
-<p>Encara no disponible</p>
-</div>
-</div>
-</div>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1032,6 +1019,19 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="w">		</span><span class="n">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ultim</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 517. Algorisme Quicksort</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Implementa l’algorisme d’ordenació quicksort al projecte i vincula-la a l’opció del menú corresponent. </p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
 <details class="question">
 <summary>Activitat 518. Mostrar traça algorismes ordenació</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solució</label></div>
@@ -1234,6 +1234,30 @@ Mireu el següent exemple:</p>
 </div>
 </div>
 </details>
+<h3 id="arrays-irregulars">Arrays irregulars</h3>
+<p>Una matriu irregular o escalonada no és més que un array de taules, on cadascuna de les taules que formen l’array no necessàriament han de tenir la mateixa grandària.</p>
+<p><img alt="Arrays Irregulars" src="../assets/Tema5/Irregulars.png"/></p>
+<p>La declaració d’un array irregular en java seria de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració d’una matriu (files)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">mat</span><span class="p">;</span>
+
+<span class="c1">// Primer creem la quantitat de files deixant les columnes buit</span>
+<span class="n">mat</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span>
+
+<span class="c1">// Després creem cada fila indicant la quantitat d’elements</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">1</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">2</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 521. Alumnes i assignatures</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><input id="__tabbed_20_2" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">Problema</label><label for="__tabbed_20_2">Solució</label></div>
@@ -1295,30 +1319,7 @@ Mireu el següent exemple:</p>
 </div>
 </div>
 </details>
-<h3 id="arrays-irregulars">Arrays irregulars</h3>
-<p>Una matriu irregular o escalonada no és més que un array de taules, on cadascuna de les taules que formen l’array no necessàriament han de tenir la mateixa grandària.</p>
-<p><img alt="Arrays Irregulars" src="../assets/Tema5/Irregulars.png"/></p>
-<p>La declaració d’un array irregular en java seria de la següent manera:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració d’una matriu (files)</span>
-<span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">mat</span><span class="p">;</span>
-
-<span class="c1">// Primer creem la quantitat de files deixant les columnes buit</span>
-<span class="n">mat</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span>
-
-<span class="c1">// Després creem cada fila indicant la quantitat d’elements</span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">1</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">2</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<h3 id="un-sudoku-simple">Un sudoku simple</h3>
 <details class="question">
 <summary>Activitat 522. Un sudoku simple</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
@@ -1449,11 +1450,13 @@ Mireu el següent exemple:</p>
 </code></pre></div></td></tr></table></div>
 <p>Escriu un programa utilitzant Processing IDE que et mostre un Sudoku per pantalla, que permeta al jugador emplenar les cel·les buides i que comprove si el número escollit es vàlid o no.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
 </div>
 </div>
 </details>
-<h2 id="cadenes-de-caracters">Cadenes de caracters</h2>
+<h2 id="string-cadenes-de-caracters">string: Cadenes de caracters</h2>
 <p>En Java hem vist que quan volem emmagatzemar un valor enter, definim una variable de tipus int, si pel contrari, el que volem és emmagatzemar un valor amb decimals, definim una variable de tipus double o float. Ara bé, si el que volem és emmagatzemar una cadena de caracters, per exemple el nom d’una persona, hem de definir un objecte de tipus String</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un objecte string</span>

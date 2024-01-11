@@ -1320,6 +1320,7 @@ Mireu el següent exemple:</p>
 </div>
 </details>
 <h3 id="un-sudoku-simple">Un sudoku simple</h3>
+<p>Llig l'enunciat de la següent activitat i fes un <strong>sudoku</strong> simple.</p>
 <details class="question">
 <summary>Activitat 522. Un sudoku simple</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
@@ -1540,6 +1541,61 @@ Mireu el següent exemple:</p>
 <span class="w">	</span><span class="n">XS</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<details class="example">
+<summary>Com usar una enumeració</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">enum</span><span class="w"> </span><span class="n">Colors</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  		</span><span class="n">RED</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">BLUE</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">YELLOW</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">GREEN</span>
+<span class="w">	</span><span class="p">}</span>
+
+<span class="w">	</span><span class="n">Colors</span><span class="w"> </span><span class="n">myColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="na">YELLOW</span><span class="p">;</span>
+
+<span class="w">	</span><span class="k">switch</span><span class="p">(</span><span class="n">myColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">RED</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is red"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">BLUE</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is blue"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">YELLOW</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is yellow"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">GREEN</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is green"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </article>
 </div>
 </div>

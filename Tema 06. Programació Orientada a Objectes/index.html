@@ -156,6 +156,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realitzacio-de-programes-orientats-a-objectes">
+    Realització de programes orientats a objectes
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#classes-i-objectes">
     Classes i Objectes
   </a>
@@ -168,11 +173,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#la-paraula-reservada-this">
     La paraula reservada 'this'
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#desenvolupament-dun-projecte-en-java">
-    Desenvolupament d'un projecte en Java
   </a>
 </li>
 <li class="md-nav__item">
@@ -244,7 +244,7 @@
 <p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben organitzats en mòduls, facilitant així l’encapsulament i abstracció de la informació.</p>
 <p>La modularitat permet dividir una aplicació en parts. Aquestes parts han de ser   tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
 <h3 id="jerarquia-i-herencia">Jerarquia i herència</h3>
-<p>La jerarquia és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
+<p>La <strong>jerarquia</strong> és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
 <p><center>
 <img alt="Herència" src="../assets/Tema6/Herencia.jpg"/>
 </center></p>
@@ -287,7 +287,7 @@ Comercial: Plus
 Comercial: calculaSou()
 </div>
 </center></p>
-<h3 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h3>
+<h2 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h2>
 <p>A partir d’ara, quan hajam de resoldre un problema hem de començar a pensar d’una forma diferent a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema 
 on les dades presenten una major importància.</p>
 <p>L’objectiu de l’orientació a objectes és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
@@ -299,18 +299,40 @@ on les dades presenten una major importància.</p>
 </ul>
 <p>Per exemple, a l’hora de desenvolupar l’aplicació per al un taller de reparacions de vehicles, podem resoldre les següents qüestions per determinar els elements que inclourem:</p>
 <ol>
-<li>
-<ol>
 <li>Quins elements del taller han de ser desats o s’han de tenir en compte a la nostra aplicació? Els vehicles i els empleats</li>
-</ol>
-</li>
 <li>De cada element, quines dades ens interessen? Dels vehicles: l’hora d’entrada al taller, danys que presenta, matrícula, marca i model, etc.. de cada empleat: nom i cognoms, adreça, sou, càrrec, reparacions associades, etc..</li>
 <li>A cada element, quines operacions associarem? A un vehicle podem canviar-li l’oli, reparar la xapa, canviar el color, posar a punt, etc.. als empleats podem modificar-los el sou base, establir hores de treball etc..</li>
 <li>Pel que fa a l’aplicació principal que utilitze aquests objectes, podem plantejar un programa que emmagatzeme de forma dinàmica els vehicles que van entrant al taller, així com també els empleats que treballen en ell estructurar la funcionalitat mitjançant un menú d’opcions que permeta utilitzar les operacions anteriorment plantejades per a cada objecte.</li>
 </ol>
 <details class="question">
-<summary>Activitat 601. Gestor de préstecs</summary>
-<p>Fes un anàlisi semblant al de l’aplicació del taller però per a una aplicació de gestió de préstecs. Quants objectes diferents hi ha? Quines són les seues característiques principals? Quines accions poden realitzar?</p>
+<summary>Activitat 601. Projecte Agenda</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>En aquest tema i per tal de començar a treballar amb classes i objectes, desenvoluparem una xicoteta aplicació de gestió de contactes personals. El que es pretén és poder administrar un recull de contactes a mode d'agenda personal. </p>
+<p>De cada contacte es necessitaria saber la següent informació:
+- Nom
+- Cognoms
+- Tèlefon
+- Correu electrònic</p>
+<p>A l'iniciar-se la nostra apliació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:
+- Llistar contactes
+- Buscar contacte
+- Editar contacte
+- Afegir contacte
+- Esborrar contacte</p>
+<p>Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'apliació.
+- Quants objectes diferents hi ha?
+- Quines són les seues característiques principals?
+- Quines accions poden realitzar cada objecte?
+- Quines relacions hi ha entre els objectes?</p>
+<p>Dibuixa primer un diagrama de classes el més detallat possible.</p>
+</div>
+<div class="tabbed-block">
+<p>No disponible encara.</p>
+</div>
+</div>
+</input></input></div>
 </details>
 <h2 id="classes-i-objectes">Classes i Objectes</h2>
 <p>Una classe és la definició d’un objecte, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.</p>
@@ -399,31 +421,31 @@ on les dades presenten una major importància.</p>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Punt</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Punt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Punt</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 <span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirX</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirX</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirY</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirY</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span>
 <span class="p">}</span>
@@ -431,6 +453,21 @@ on les dades presenten una major importància.</p>
 <p>Una vegada tenim la definició de la classe punt, instanciarem un punt concret que es troba a les coordenades 10 i 5</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Punt</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 602. Defineix les classes del Projecte Agenda</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Obre Processing IDE i declara les classes resultants de l'activitat 601. 
+Recorda que totes les característiques i accions que hages anotat a l'activitat anterior hauran de convertir-se en atributs i mètodes de les classes que dissenyes.
+Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</input></input></div>
+</details>
 <h3 id="visibilitat-dels-membres-de-la-classe">Visibilitat dels membres de la classe</h3>
 <p>Un principi fonamental en la programació orientada a objectes  és l’ocultació de la informació, açò significa que no es pot accedir per mètodes externs de la classe a determinada informació interna. El mecanisme principal per aconseguir-ho és posar-los dins d’una classe i fer-los privats i així només es podrà accedir a aquests des de dins de la classe</p>
 <p>Existeixen tres diferents especificacions d’accés o modificadors de visibilitat:</p>
@@ -590,6 +627,19 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 <span class="w">	</span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 603. Visibilitat de classes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A partir de les classes que hages dissenyat a l'última activitat, assigna-li la visibilitat corresponent a les classes i a cada membre de la classe, bé siga un atribut o un mètode.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
 <h3 id="instancies">Instàncies</h3>
 <p>La declaració d’una classe no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, instanciar o crear un objecte a partir d’aquesta classe.</p>
 <p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
@@ -647,6 +697,19 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="w">	</span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 604. Constructors</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Declara (només la interfície i amb el cos buit) dos constructors, un sense paràmetres i un amb els paràmetres necessaris, per a cada classe que tingues al teu Projecte Agenda.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
 <h3 id="acces-als-membres-de-la-classe">Accés als membres de la classe</h3>
 <p>Podrem accedir als membres d’una classe en funció de la seua visibilitat i el lloc on es desitge accedir. Els modificadors de visibilitat són: public, private, protected i internal.</p>
 <p>Per accedir a un membre de la classe utilitzem el «.» (punt): NomClasse.membre</p>
@@ -671,6 +734,19 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Tanmateix no podríem accedir als membres privats de la classe des de fora, per exemple, no podríem fer vicent.nom= «Antonio» ja que nom és un membre privat.</p>
+<details class="question">
+<summary>Activitat 605. Dissenya el constructor parametritzat</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Implementa amb codi el constructor parametritzat de l'activitat anterior. Després al programa principal, instancia una agenda amb almenys un contacte que continga informació.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
 <h2 id="la-paraula-reservada-this">La paraula reservada 'this'</h2>
 <p>La paraula reservada «this» s’utilitza per fer referència a l’objecte actual. Si estàs dissenyant una classe, «this» fa referència a la pròpia classe.</p>
 <p>Quan es crida a un mètode, es passa automàticament un argument implícit que és una referència a l’objecte invocat, és a dir, l’objecte sobre el que es crida al mètode. Aquesta referència és «this». Amb els atributs de la classe també passa el mateix.</p>
@@ -698,20 +774,32 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Aquesta paraula clau sol utilitzar-se quan hi han bé mètodes o atributs (membres) a dues classes diferents amb el mateix nom per exemple.</p>
-<h2 id="desenvolupament-dun-projecte-en-java">Desenvolupament d'un projecte en Java</h2>
-<p>Vista ja un poc la teoria de com és el paradigma de programació orientada a objectes i continuant amb l’activitat d'anàlisi del joc de «Batalla Naval», ha arribat el moment de desenvolupar un projecte utilitzant la metodologia POO amb el llenguatge de programació Java.</p>
-<p>Donarem per suposat que les fases d’anàlisi i disseny ja han sigut realitzades i disposem de l’esquema UML amb el diagrama de classes del nostre joc.</p>
-<p><img alt="Diagrama de classes" src="../assets/Tema6/Projecte1.png"/></p>
-<h3 id="per-on-comencem">Per on comencem</h3>
-<p>Si disposem d’una eina de modelat UML, podríem a partir del diagrama de classes que ens han passat generar el codi en Java que ens serviria per poder començar a programar ja el seu comportament.</p>
-<p>Existeixen múltiples eines lliures que s’encarreguen de fer aquesta tasca automàticament com són: StarUML, ArgoUML, Umbrello i altres extensions que podem afegir a alguns IDEs com són Eclipse. Aquestes eines el que fan és generar els esquelets de les classes amb tots els membres especificats al diagrama, és a dir: constructors, atributs i mètodes. La qual cosa ens estalviarà un munt de feina. </p>
-<p>Una vegada ja tenim cadascun dels esquelets de les nostres classes en fitxers, hauríem de crear un nou projecte i afegir-li aquestes classes. Aquesta part es podria fer amb un IDE tipus Eclipse, NetBeans o Visual Studio Code per exemple.</p>
-<p><img alt="Crear Projecte" src="../assets/Tema6/Projecte2.png"/></p>
-<p>Arribats a aquest punt ja tenim preparat el nostre projecte i ja podem començar a «picar codi»</p>
-<h3 id="la-funcio-main-a-java">La funció main a Java</h3>
-<p>El mètode main a Java és un estàndard utilitzat per la maquina virtual de Java o JVM per iniciar la execució de qualsevol programa escrit en Java. Aquest mètode es coneix com el punt d’entrada de l’aplicació Java. </p>
-<p>En altres paraules, per poder executar la nostra aplicació «Batalla Naval» haurem de tindre un mètode main que instancie i utilitze les classes que hem creat a partir del diagrama de classes que ens han passat. Aquest mètode main ha d’estar dins d’una classe, per tant, ens creem una classe nova que es diga «Joc» i en ella podrem implementar el mètode main.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<!--
+## Desenvolupament d'un projecte en Java
+Vista ja un poc la teoria de com és el paradigma de programació orientada a objectes i continuant amb l’activitat d'anàlisi del joc de «Batalla Naval», ha arribat el moment de desenvolupar un projecte utilitzant la metodologia POO amb el llenguatge de programació Java.
+
+Donarem per suposat que les fases d’anàlisi i disseny ja han sigut realitzades i disposem de l’esquema UML amb el diagrama de classes del nostre joc.
+
+
+![Diagrama de classes](assets/Tema6/Projecte1.png)
+### Per on comencem
+Si disposem d’una eina de modelat UML, podríem a partir del diagrama de classes que ens han passat generar el codi en Java que ens serviria per poder començar a programar ja el seu comportament.
+
+Existeixen múltiples eines lliures que s’encarreguen de fer aquesta tasca automàticament com són: StarUML, ArgoUML, Umbrello i altres extensions que podem afegir a alguns IDEs com són Eclipse. Aquestes eines el que fan és generar els esquelets de les classes amb tots els membres especificats al diagrama, és a dir: constructors, atributs i mètodes. La qual cosa ens estalviarà un munt de feina. 
+
+Una vegada ja tenim cadascun dels esquelets de les nostres classes en fitxers, hauríem de crear un nou projecte i afegir-li aquestes classes. Aquesta part es podria fer amb un IDE tipus Eclipse, NetBeans o Visual Studio Code per exemple.
+
+![Crear Projecte](assets/Tema6/Projecte2.png)
+
+Arribats a aquest punt ja tenim preparat el nostre projecte i ja podem començar a «picar codi»
+
+### La funció main a Java
+
+El mètode main a Java és un estàndard utilitzat per la maquina virtual de Java o JVM per iniciar la execució de qualsevol programa escrit en Java. Aquest mètode es coneix com el punt d’entrada de l’aplicació Java. 
+
+En altres paraules, per poder executar la nostra aplicació «Batalla Naval» haurem de tindre un mètode main que instancie i utilitze les classes que hem creat a partir del diagrama de classes que ens han passat. Aquest mètode main ha d’estar dins d’una classe, per tant, ens creem una classe nova que es diga «Joc» i en ella podrem implementar el mètode main.
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -721,24 +809,32 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="w">	</span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació i per tant ha de ser accessible de fora de la classe i ha de ser «static» perquè és un mètode que s’ha de poder cridar sense necessitat d’instanciar un objecte de la classe Joc.</p>
-<details class="question">
-<summary>Activitat 602. Tenda d'electrodomèstics</summary>
-<p>Manolo és el propietari d’una tenda d’electrodomèstics en la té: televisors, neveres, microones, forns, llavadores, estufes i altres. A Manolo li agradaria tindre una aplicació en la que puga emmagatzemar la informació relativa a tots els electrodomèstics que té a la tenda en estoc així com també li agradaria tindre la informació guardada de tots els clients en una agenda i quines són les compres que li han realitzat. </p>
-<p>De cada electrodomèstic vol saber coses com la marca, el model, el número de referència, eficiència energètica i ja més específicament la potència dels microones, el volum i l’altura de les neveres així com si tenen o no congelador, les polzades i tipus de definició dels televisors, potència i volum del forn, programes de les llavadores i capacitat, potencia de les estufes etc...</p>
-<p>De cada client vol saber el seu nom, cognoms, adreça, DNI i tots els electrodomèstics que ha comprat a la tenda. També seria interessant poder guardar un inventari de la disponibilitat d’electrodomèstics que hi han actualment. </p>
-<p>Les accions que podrà realitzar la nostra aplicació seran: donar de alta i baixa electrodomèstics i clients, comprar electrodomèstics per part dels clients, consultar l'estoc etc..</p>
-<p>El diagrama de classes resultant de l’anàlisi anterior podria ser el següent:</p>
-<p><img alt="Tenda Electrodomèstics" src="../assets/Tema6/Projecte3.png"/></p>
-</details>
-<details class="question">
-<summary>Activitat 603. Sèries i pèl·licules</summary>
-<p>Imagina que volem fer una aplicació sobre sèries i pel·lícules de les distintes plataformes d’streaming que existeixen en l’actualitat. Aquesta aplicació tindrà usuaris que es connectaran mitjançant unes credencials (nick i contrasenya) i cada usuari podrà afegir sèries o pel·lícules, a banda de posar qualificacions amb comentaris als continguts. El nick de cada usuari d’aquesta aplicació serà el seu correu electrònic, d’aquesta forma ens assegurem un nom únic per cada usuari. També s’enregistrarà per cada usuari el seu nom i cognoms. </p>
-<p>De cada pel·lícula ens agradaria saber: títol, any, país de producció, genere i resum de la mateixa. Els generes disponibles seran: acció, aventures, animació, comèdia, documental, drama, terror, musical, romàntica, ciència ficció.</p>
-<p>A banda també s’haurà de guardar informació relativa a les actrius i actors que intervenen així com també el director. De les quals haurem de saber el seu nom i cognoms així com també la seua nacionalitat i l’any de naixement.</p>
-<p>Pel que fa  les sèries, a banda de la informació que també tenen les pel·lícules, també ens agradaria saber el número de temporades que té, de quin any és la temporada i quants capítols té amb el seu títol i breu sinopsis.</p>
-<p>Finalment cada usuari del nostre sistema podrà afegir tant sèries com pel·lícules i podrà qualificar-les (de 0 a 10) a banda d’acompanyar la qualificació d’un comentari al respecte.</p>
-</details>
+Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació i per tant ha de ser accessible de fora de la classe i ha de ser «static» perquè és un mètode que s’ha de poder cridar sense necessitat d’instanciar un objecte de la classe Joc.
+
+??? question "Activitat 602. Tenda d'electrodomèstics"
+    Manolo és el propietari d’una tenda d’electrodomèstics en la té: televisors, neveres, microones, forns, llavadores, estufes i altres. A Manolo li agradaria tindre una aplicació en la que puga emmagatzemar la informació relativa a tots els electrodomèstics que té a la tenda en estoc així com també li agradaria tindre la informació guardada de tots els clients en una agenda i quines són les compres que li han realitzat. 
+
+    De cada electrodomèstic vol saber coses com la marca, el model, el número de referència, eficiència energètica i ja més específicament la potència dels microones, el volum i l’altura de les neveres així com si tenen o no congelador, les polzades i tipus de definició dels televisors, potència i volum del forn, programes de les llavadores i capacitat, potencia de les estufes etc...
+
+    De cada client vol saber el seu nom, cognoms, adreça, DNI i tots els electrodomèstics que ha comprat a la tenda. També seria interessant poder guardar un inventari de la disponibilitat d’electrodomèstics que hi han actualment. 
+
+    Les accions que podrà realitzar la nostra aplicació seran: donar de alta i baixa electrodomèstics i clients, comprar electrodomèstics per part dels clients, consultar l'estoc etc..
+
+    El diagrama de classes resultant de l’anàlisi anterior podria ser el següent:
+
+    ![Tenda Electrodomèstics](assets/Tema6/Projecte3.png)
+
+??? question "Activitat 603. Sèries i pèl·licules"
+    Imagina que volem fer una aplicació sobre sèries i pel·lícules de les distintes plataformes d’streaming que existeixen en l’actualitat. Aquesta aplicació tindrà usuaris que es connectaran mitjançant unes credencials (nick i contrasenya) i cada usuari podrà afegir sèries o pel·lícules, a banda de posar qualificacions amb comentaris als continguts. El nick de cada usuari d’aquesta aplicació serà el seu correu electrònic, d’aquesta forma ens assegurem un nom únic per cada usuari. També s’enregistrarà per cada usuari el seu nom i cognoms. 
+
+    De cada pel·lícula ens agradaria saber: títol, any, país de producció, genere i resum de la mateixa. Els generes disponibles seran: acció, aventures, animació, comèdia, documental, drama, terror, musical, romàntica, ciència ficció.
+
+    A banda també s’haurà de guardar informació relativa a les actrius i actors que intervenen així com també el director. De les quals haurem de saber el seu nom i cognoms així com també la seua nacionalitat i l’any de naixement.
+
+    Pel que fa  les sèries, a banda de la informació que també tenen les pel·lícules, també ens agradaria saber el número de temporades que té, de quin any és la temporada i quants capítols té amb el seu títol i breu sinopsis.
+
+    Finalment cada usuari del nostre sistema podrà afegir tant sèries com pel·lícules i podrà qualificar-les (de 0 a 10) a banda d’acompanyar la qualificació d’un comentari al respecte.
+-->
 <h2 id="metodes-variables-i-blocs-statics">Mètodes, variables i blocs statics</h2>
 <p>La paraula reservada «static» en Java és un modificador que en Java es pot aplicar a variables, mètodes, classes i blocs de codi</p>
 <h3 id="variables-estatiques">Variables estàtiques</h3>
@@ -755,6 +851,19 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 </ul>
 <h3 id="blocs-estatics">Blocs estàtics</h3>
 <p>El bloc estàtic és un bloc d’instruccions dins de la classe (static { ... }) que s’executa quan una classe es carrega per primera vegada en la màquina virtual de Java (JVM). Bàsicament un bloc estàtic inicialitza variables de tipus estàtic dins d’una classe, de la mateixa forma que un constructor de classe ajuden a inicialitzar les variables d’instància, un bloc estàtic inicialitza les variables tipus static de la classe.</p>
+<details class="question">
+<summary>Activitat 606. Projecte Agenda</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Finalitza el projecte de l'agenda amb totes les classes i mètodes implementats.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
 <h2 id="sobrecarrega-doperadors">Sobrecàrrega d'operadors</h2>
 <p>En Java és possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteix nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
 <p>En les cridades als mètodes sobrecarregats, el compilador determina quin és el mètode invocat basant-se en el nombre i tipus d’arguments passats; per tant, els mètodes sobrecarregats han de diferir en nombre i tipus de paràmetres. Quan Java troba una trucada a un mètode sobrecarregat, s’executa la versió del que té paràmetres (número i tipus) que coincideixen amb els arguments utilitzats en la trucada.</p>
@@ -789,7 +898,8 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 <script>mermaid.initialize({
     theme: "forest"
 });</script></body>

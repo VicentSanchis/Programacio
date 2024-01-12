@@ -5,12 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" rel="prev"/>
-<link href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.15" name="generator"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
 <title>6.- Prog Orientada Objectes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -18,8 +17,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -30,7 +28,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -78,7 +76,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+<ol class="md-search-result__list"></ol>
 </div>
 </div>
 </div>
@@ -131,7 +129,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           6.- Prog Orientada Objectes
           <span class="md-nav__icon md-icon"></span>
@@ -217,14 +215,15 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-6-programacio-orientada-a-objectes">Tema 6. Programació Orientada a Objectes.</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>La programació orientada a objectes també coneguda com POO és el paradigma de programació que més s’utilitza hui en dia i que permet modelar de manera més eficient la realitat des del punt de vista del programari.</p>
-<p>La programació orientada a objectes intenta proporcionar un model de programació basat en objectes que contenen dades i procediments associats coneguts com a mètodes. Aquests objectes, que són instàncies de les classes, són tipus abstractes de dades que encapsulen (amaguen) tant les dades com les funcions per accedir-hi.</p>
-<p>Un dels objectius de la programació orientada a objectes és reflectir la realitat, de forma que els elements d’un programa s’ajusten a elements de la vida quotidiana. Per exemple, suposem que volem realitzar una aplicació per un taller de vehicles. En un programa estructurat definiríem funcions independentment de les dades, tal que per un costat crearíem el codi de la funció i posteriorment al programa principal s’establiria una variable o variables sobre les que aplicaríem canvis, podria ser un array d’una estructura a la que guardaríem tipus de vehicle, matrícula, color, etc. En programació orientada a objectes creem un objecte que simula un cotxe amb les seues característiques generals i les funcions incloses, tal que en la funció principal de la nostra aplicació, crearem variables d’aquest objecte i usarem els mètodes aplicats a unes dades concretes a cada moment.</p>
+<p>La <strong>programació orientada a objectes</strong> també coneguda com <strong>POO</strong> és el paradigma de programació que més s’utilitza hui en dia i que permet modelar de manera més eficient la realitat des del punt de vista del programari.</p>
+<p>La programació orientada a objectes intenta proporcionar un <strong>model de programació basat en objectes</strong> que contenen dades i procediments associats coneguts com a mètodes. Aquests objectes, que són instàncies de les classes, són tipus abstractes de dades que encapsulen (amaguen) tant les dades com les funcions per accedir-hi.</p>
+<p>Un dels <strong>objectius</strong> de la programació orientada a objectes és reflectir la realitat, de forma que els elements d’un programa s’ajusten a elements de la vida quotidiana. Per exemple, suposem que volem realitzar una aplicació que dibuixe sobre un llenç figures geomètriques bàsiques com: un punt, una línia, un cercle, un triangle i un rectangle. En un programa estructurat definiríem funcions independentment de les dades, tal que per un costat creariem el codi de la funció i posteriorment al programa principal s'establiria una variable o variables sobre les que s'aplicarien els canvis, per exemple un punt l'emmagatzemariem usant dues variables de tipus flotant, les coordenades x i y. En canvi per al cercle necessitariem un centre (x,y) i una variable per guardar el radi.</p>
+<p>En <strong>programació orientada a objectes</strong> creem un objecte que simula una <strong>figura geomètrica</strong>, per exemple <strong>cercle</strong> amb les seues característiques generals i les funcions incloses, tal que en la funció principal de la nostra aplicació, crearem variables d’aquest objecte i usarem els mètodes aplicats a unes dades concretes a cada moment.</p>
 <p>La programació orientada a objectes permet la creació de programari cada vegada més complexe a partir d’unitats o blocs de codi reutilitzables.</p>
 <h2 id="caracteristiques-principals">Característiques principals</h2>
 <p>Les propietats principals o característiques fonamentals del paradigma de programació orientada a objectes són:</p>
 <h3 id="abstraccio">Abstracció</h3>
-<p>Abstraure's és aïllar mentalment, considerar separadament (un o diversos atributs o qualitats) d'una cosa. Per exemple abstraure els conceptes més importants d'un discurs, és a dir, quedar-se amb el important.</p>
+<p>Abstraure's és <strong>aïllar mentalment</strong>, considerar separadament (un o diversos atributs o qualitats) d'una cosa. Per exemple abstraure els conceptes més importants d'un discurs, és a dir, <strong>quedar-se amb el important.</strong></p>
 <p>En programació orientada a objectes abstraure’s, l’abstracció, seria mostrar únicament les característiques essencials, que fa l’objecte i per a que es crea, deixant de banda elements com la implementació.</p>
 <p>L’abstracció permet representar les característiques essencials d’un objecte, deixant enrere aquelles que no tenen tanta importància. A més a més, es centra en l’objecte tal i com el coneixem en la vida real, de forma que ens centrem en allò que es capaç de fer però no en com ho fa. Bàsicament, definiríem l’abstracció com la forma de descriure una entitat del món real sense importar la complexitat que està present i el poder utilitzar aquesta en qualsevol aplicació.</p>
 <p><center>
@@ -235,75 +234,157 @@
 <img alt="Abstracció" src="../assets/Tema6/Abstraccio2.jpg"/>
 </center></p>
 <h3 id="encapsulament">Encapsulament</h3>
-<p>L’encapsulament és, en altres paraules, l’ocultació d’informació, de forma que les dades internes d’un objecte estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
+<p>L’encapsulament és, en altres paraules, <strong>l’ocultació d’informació</strong>, de forma que les dades internes d’un objecte estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
 <p>Per exemple, amb freqüència es desenvolupa codi font o projectes en els que utilitzem la classe out, més concretament el mètode println. Out es troba dins de l’espai de noms (namespace) System i no és més que una classe d’aquest paquet. Dit en altres paraules. Out és una classe i println() és un mètode de la classe Out.</p>
 <p><center>
 <img alt="Encapsulament" src="../assets/Tema6/Encapsulament.jpg"/>
 </center></p>
 <h3 id="modularitat">Modularitat</h3>
-<p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben organitzats en mòduls, facilitant així l’encapsulament i abstracció de la informació.</p>
-<p>La modularitat permet dividir una aplicació en parts. Aquestes parts han de ser   tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
+<p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben <strong>organitzats en mòduls</strong>, facilitant així l’encapsulament i abstracció de la informació.</p>
+<p>La modularitat permet dividir una aplicació en parts. Aquestes parts han de ser tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
 <h3 id="jerarquia-i-herencia">Jerarquia i herència</h3>
 <p>La <strong>jerarquia</strong> és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
 <p><center>
 <img alt="Herència" src="../assets/Tema6/Herencia.jpg"/>
 </center></p>
-<p>Suposem una aplicació d’un taller de vehicles en el qual treballen moltes persones però cadascuna fa una funció diferent al taller. Malgrat que cadascuna es dedique a un tasca concreta i no sàpiga res de la resta de feines que es fan al taller, tots els empleats són persones, és a dir, tots tenen un sèrie de característiques comuns: Nom, cognoms, DNI, data de naixement etc.. Mentre que al mateix temps hi ha algunes característiques especifiques per a cada tipus d’empleat </p>
-<p>Imaginem que tenim dos classes d’empleats: els mecànics i els comercials. Dels primers hem de guardar informació del nombre d’hores extra que fa al mes mentre que dels segons hem de gestionar informació sobre les cites que té amb clients durant la setmana.</p>
+<p>Seguint amb l'exemple de les <strong>figures geomètriques</strong>, hauràs pogut observar que hi han diverses classes de figura geomètrica: punt, línia, cercle... totes elles són figures geomètriques amb coses comunes com les coordenades en les que es dibuixarà però cadascuna té alguna particularitat que les diferència com el radi d'un cercle, només el cercle té una propietat radi.</p>
+<p>Mira el següent diagrama de classes</p>
 <p><center>
 <div class="mermaid">classDiagram
-Empleat &lt;|-- Mecanic
-Empleat &lt;|-- Comercial
+Figura &lt;|-- Linea
+Figura &lt;|-- Punt
+Figura &lt;|-- Cercle
+Figura &lt;|-- Triangle
+Figura &lt;|-- Rectangle
 
-Empleat : Nom
-Empleat : Cognoms
-Empleat : SouBase
+Figura : x0
+Figura : y0
 
-Mecanic : HoresExtra
-Comercial: Cites
-Comercial: Plus
+Línia : xF
+Línia : yF
+
+Cercle : radi
+
+Triangle : x2
+Triangle : y2
+Triangle : x3
+Triangle : y3
+
+Rectangle : ample
+Rectangle : alt
 </div>
 </center></p>
 <h3 id="polimorfisme">Polimorfisme</h3>
-<p>Polimorfisme és una paraula grega que significa «moltes formes». Aquesta paraula és ideal per definir aquesta característica de la programació orientada a objectes ja que en POO podem tindre objectes amb el mateix nom que realitzen funcions distintes o implementen codi diferent.</p>
+<p>Polimorfisme és una paraula grega que significa <strong>«moltes formes»</strong>. Aquesta paraula és ideal per definir aquesta característica de la programació orientada a objectes ja que en POO podem tindre objectes amb el <strong>mateix nom</strong> que realitzen <strong>funcions distintes</strong> o implementen codi diferent.</p>
 <p>El polimorfisme és un mecanisme que s’utilitza molt en POO juntament amb l’herència tal que quan una classe deriva d’una altra hereta les seues característiques i operacions. A la classe que hereta es pot redefinir qualsevol mètode heretat, de forma que en funció de la referència a objectes que usem a cada moment s’estarà executant un mètode o un altre.</p>
 <p>Un mateix missatge enviat a objectes diferents donarà com a resposta eixides diferents, és a dir, si tenim diversos objectes amb mètodes similars, segons es referencie l’un o l’altre objecte el resultat final serà diferent. </p>
-<p>Per exemple seguint amb l’esquema dels empleats de la nostra empresa suposem que la classe («superclasse») té un mètode que es diu «calcularSou», aquest mètode l’hereten tant el mecànic com el comercial però el seu càlcul seria diferent en un i l’altre. El sou del mecànic serà el sou base més el número d’hores extra multiplicades pel preu al que es paguen les hores extra, mentre que el sou del comercial seria el sou base més el plus.</p>
+<p>Per exemple seguint amb l’esquema de les figures geomètriques suposem que la classe ("superClasse") té un mètode que es diu "dibuixa", aquest mètode l'hereten totes i cadascuna de les figures geomètriques (punt, línia, cercle, triangle i rectangle) però és evident que el resultat de dibuixar un cercle no és el mateix que el de dibuixar un triangle encara que el nom de la funció siga el mateix.</p>
 <p><center>
 <div class="mermaid">classDiagram
-Empleat &lt;|-- Mecanic
-Empleat &lt;|-- Comercial
+Figura &lt;|-- Punt
+Figura &lt;|-- Línia
+Figura &lt;|-- Cercle
+Figura &lt;|-- Triangle
+Figura &lt;|-- Rectangle
 
-Empleat : Nom
-Empleat : Cognoms
-Empleat : SouBase
-Empleat : calculaSou()
+Figura : x0
+Figura : y0
+Figura : dibuixa()
 
-Mecanic : HoresExtra
-Mecanic : calculaSou()
+Punt : dibuixa()
 
-Comercial: Cites
-Comercial: Plus
-Comercial: calculaSou()
+Línia : xF
+Línia : yF
+Línia : dibuixa()
+
+Cercle : radi
+Cercle : dibuixa()
+
+Triangle : x2
+Triangle : y2
+Triangle : x3
+Triangle : y3
+Triangle : dibuixa()
+
+Rectangle : ample
+Rectangle : alt
+Rectangle : dibuixa()
 </div>
 </center></p>
 <h2 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h2>
-<p>A partir d’ara, quan hajam de resoldre un problema hem de començar a pensar d’una forma diferent a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema 
-on les dades presenten una major importància.</p>
-<p>L’objectiu de l’orientació a objectes és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
+<p>A partir d’ara, quan hajam de resoldre un problema hem de començar a <strong>pensar d’una forma diferent</strong> a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema on les dades presenten una major importància.</p>
+<p><strong>L’objectiu</strong> de l’orientació a objectes és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
 <ul>
-<li>Ens preguntarem sobre aquells elements dels que realment es interessant emmagatzemar informació, és a dir, localitzarem els possibles objectes del nostre programa.</li>
-<li>De cada element hem de conèixer quines són les seues característiques o quines són les característiques que el representen.</li>
-<li>De cada element hem de conèixer les operacions a realitzar ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
+<li>Ens preguntarem sobre aquells elements dels que realment es interessant emmagatzemar informació, és a dir, <strong>localitzarem els possibles objectes</strong> del nostre programa.</li>
+<li>De cada element hem de conèixer quines són les seues <strong>característiques</strong> o quines són les característiques que el representen.</li>
+<li>De cada element hem de conèixer les <strong>operacions a realitzar</strong>, accions que hi poden fer,  ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
 <li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
 </ul>
-<p>Per exemple, a l’hora de desenvolupar l’aplicació per al un taller de reparacions de vehicles, podem resoldre les següents qüestions per determinar els elements que inclourem:</p>
+<p>Per exemple, a l'hora de desenvolupar l'aplicació de les figures geomètriques, podem resoldre les següents qüestions per determinar els elements que inclourem:</p>
 <ol>
-<li>Quins elements del taller han de ser desats o s’han de tenir en compte a la nostra aplicació? Els vehicles i els empleats</li>
-<li>De cada element, quines dades ens interessen? Dels vehicles: l’hora d’entrada al taller, danys que presenta, matrícula, marca i model, etc.. de cada empleat: nom i cognoms, adreça, sou, càrrec, reparacions associades, etc..</li>
-<li>A cada element, quines operacions associarem? A un vehicle podem canviar-li l’oli, reparar la xapa, canviar el color, posar a punt, etc.. als empleats podem modificar-los el sou base, establir hores de treball etc..</li>
-<li>Pel que fa a l’aplicació principal que utilitze aquests objectes, podem plantejar un programa que emmagatzeme de forma dinàmica els vehicles que van entrant al taller, així com també els empleats que treballen en ell estructurar la funcionalitat mitjançant un menú d’opcions que permeta utilitzar les operacions anteriorment plantejades per a cada objecte.</li>
+<li>
+<p>Quins elements de la nostra aplicació han de ser desats o s'han de tenir en compte?</p>
+<ul>
+<li>Les distintes figures geomètriques que volem dibuixar: punt, línia, cercle, triangle i rectangle</li>
+</ul>
+</li>
+<li>
+<p>De cada element, quines dades ens interessen? </p>
+<ul>
+<li><strong>Punt:</strong> punt de dibuix, color..</li>
+<li><strong>Línia:</strong> punt inicial i punt final, color..</li>
+<li><strong>Cercle:</strong> punt de dibuix (centre), radi, colorVora, colorIntern..</li>
+<li><strong>Triangle:</strong> punt de dibuix, punt segon, punt tercer, tipus, colorVora, colorIntern</li>
+<li><strong>Rectangle:</strong> punt de dibuix, ample, alt, colorVora, colorIntern</li>
+</ul>
+</li>
+<li>
+<p>A cada element, quines operacions associarem? </p>
+<ul>
+<li>Totes les figures geomètriques s'haurien de poder dibuixar, pintar..</li>
+</ul>
+</li>
+<li>
+<p>Pel que fa a l’aplicació principal que utilitze aquests objectes, podem plantejar un programa que emmagatzeme de forma dinàmica les figures i estructurar la funcionalitat mitjançant un menú d’opcions que permeta utilitzar les operacions anteriorment plantejades per a cada objecte.</p>
+</li>
 </ol>
+<p>El <strong>diagrama de classes</strong> que deduiríem de les especificacions anteriors podria ser el següent:</p>
+<p><center>
+<div class="mermaid">classDiagram
+Figura &lt;|-- Punt
+Figura &lt;|-- Línia
+Figura &lt;|-- Cercle
+Figura &lt;|-- Triangle
+Figura &lt;|-- Rectangle
+
+Figura : x0
+Figura : y0
+Figura : dibuixa()
+Figura : pinta()
+
+Punt : dibuixa()
+
+Línia : xF
+Línia : yF
+Línia : dibuixa()
+Línia : pinta()
+
+Cercle : radi
+Cercle : dibuixa()
+Cercle : pinta()
+
+Triangle : x2
+Triangle : y2
+Triangle : x3
+Triangle : y3
+Triangle : dibuixa()
+Triangle : pinta()
+
+Rectangle : ample
+Rectangle : alt
+Rectangle : dibuixa()
+Rectangle : pinta()
+</div></center></p>
 <details class="question">
 <summary>Activitat 601. Projecte Agenda</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
@@ -313,15 +394,15 @@ on les dades presenten una major importància.</p>
 <p>De cada contacte es necessitaria saber la següent informació:
 - Nom
 - Cognoms
-- Tèlefon
+- Telèfon
 - Correu electrònic</p>
-<p>A l'iniciar-se la nostra apliació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:
+<p>A l'iniciar-se la nostra aplicació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:
 - Llistar contactes
 - Buscar contacte
 - Editar contacte
 - Afegir contacte
 - Esborrar contacte</p>
-<p>Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'apliació.
+<p>Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'aplicació.
 - Quants objectes diferents hi ha?
 - Quines són les seues característiques principals?
 - Quines accions poden realitzar cada objecte?
@@ -335,23 +416,26 @@ on les dades presenten una major importància.</p>
 </input></input></div>
 </details>
 <h2 id="classes-i-objectes">Classes i Objectes</h2>
-<p>Una classe és la definició d’un objecte, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.</p>
-<p>Per exemple, si continuem utilitzant el nostre taller de vehicles, una classe podria ser la classe cotxe, en la que es descriu de forma general aquest element de la vida quotidiana. S’establiria que un cotxe es caracteritza per:</p>
+<p>Una <strong>classe és la definició d’un objecte</strong>, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.</p>
+<p>Per exemple, si continuem utilitzant la nostra app de dibuix de figures geomètriques, una classe seria el <strong>triangle</strong> en la que es descriu de forma general aquest element. S'establiria que el triangle es caracteritzaria per:</p>
 <ul>
-<li>Tindre rodes</li>
-<li>Tindre matricula</li>
-<li>Tindre portes</li>
-<li>Se d’una marca i un model concrets.</li>
-<li>Etc..</li>
+<li>Tindre un punt de dibuix</li>
+<li>Tindre un punt segon</li>
+<li>Tindre un punt tercer</li>
+<li>Tindre un color</li>
+<li>Tindre una vora</li>
+<li>Ser de tipus equilater, isosceles o escalé</li>
 </ul>
-<p>Ara bé, si al nostre taller entra un Seat Arosa de tres portes, les característiques abans esmentades adopten certs valors:</p>
+<p>Ara bé, si al nostre programa dibuixen un triangle, les característiqes abans esmentades adopten certs valors:</p>
 <ul>
-<li>Quatre més la de recanvi. </li>
-<li>Matricula. 1234ACB</li>
-<li>3 portes</li>
-<li>Seat. Model Arosa</li>
+<li>Punt de dibuix: 20, 20</li>
+<li>Punt segon: 60, 20</li>
+<li>Punt tercer: 40, 0</li>
+<li>Color: #FF0000</li>
+<li>Vora: #000000</li>
+<li>Tipus: isosceles</li>
 </ul>
-<p>Així tenim per un costat la classe cotxe i per l’altra l’objecte Seat Arosa.</p>
+<p>Així tenim per un costat la classe triangle i per l’altra l’objecte triangle isosceles.</p>
 <p>Alhora de crear una classe definim el que denominem propietats o atributs i mètodes de classe.</p>
 <ul>
 <li>
@@ -369,9 +453,9 @@ on les dades presenten una major importància.</p>
 <p>Les definicions o especificacions no constitueixen un codi de programa executable si no que s’utilitzen per assignar memòria on emmagatzemar els valors dels atributs que utilitza el programa i reconèixer els mètodes que aquesta utilitzarà; normalment es situen en arxius formant packages, utilitzant un arxiu per vàries classes relacionades.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="n">llista_de_membres</span>
-<span class="p">}</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">llista_de_membres</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 - nomClasse: definit per l’usuari i identifica la classe; pot incloure lletres, números i subratllats com qualsevol identificador.
 - llista_de_membres: són els mètodes i atributs de la classe, etc..</p>
@@ -382,13 +466,13 @@ on les dades presenten una major importància.</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="n">llista_de_constants</span><span class="p">;</span>
-<span class="w">	</span><span class="n">llista_de_atributs</span><span class="p">;</span>
-<span class="w">	</span><span class="n">constructor_de_classe</span><span class="p">;</span>
-<span class="w">	</span><span class="n">constructor_de_còpia</span><span class="p">;</span>
-<span class="w">	</span><span class="n">mètodes</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">llista_de_constants</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">llista_de_atributs</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">constructor_de_classe</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">constructor_de_còpia</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">mètodes</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>En realitat si la definició de les parts de la classe es fera en un altre ordre, no afectaria a la compilació i execució d’aquesta però sí a la lectura del codi i el faria més complicat d’interpretar.</p>
 <p>Exemple de classe: per tal d’il·lustrar com es defineix una classe amb un exemple, definirem la classe ‘punt’. Aquesta classe determina les coordenades a les quals es troba un punt concret: x i y;</p>
@@ -420,38 +504,38 @@ on les dades presenten una major importància.</p>
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Punt</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Punt</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirX</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirX</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirY</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirY</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">FixarY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Una vegada tenim la definició de la classe punt, instanciarem un punt concret que es troba a les coordenades 10 i 5</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Punt</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Punt</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 602. Defineix les classes del Projecte Agenda</summary>
@@ -488,16 +572,16 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Les variables d’instància també anomenades membres són declarades a la classe però els seus valors son canviats i fixats a l’objectes ja que una classe no és més que un esquema que defineix com seran les persones al nostre programa.</p>
 <p>A més de les variables d’instància hi ha variables de classe, les quals 
@@ -521,22 +605,22 @@ persona podria quedar de la següent forma:</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="c1">// Atributs</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Atributs</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="c1">// Mètodes</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creixer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">estatura</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">menjar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pes</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tintarse</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">colorNou</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">colorCabells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorNou</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="c1">// Mètodes</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creixer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">estatura</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">menjar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pes</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tintarse</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">colorNou</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">colorCabells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorNou</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Fixeu-se que mentre els atributs de la classe tenen un modificador de visibilitat private, els mètodes el solen tindre public. Encara que no necessàriament ha de ser així sempre però és molt habitual.
 Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o funcions fora d’aquestes. La seua implementació s’inclou dins del cos de la classe.</p>
@@ -562,27 +646,27 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Triangle</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Triangle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>A continuació la classe quadrat</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -605,27 +689,27 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Quadrat</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Quadrat</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Quadrat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Quadrat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 603. Visibilitat de classes</summary>
@@ -643,7 +727,7 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 <h3 id="instancies">Instàncies</h3>
 <p>La declaració d’una classe no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, instanciar o crear un objecte a partir d’aquesta classe.</p>
 <p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>La paraula «new» s’encarrega de reservar espai en memòria i torna una referència a l’adreça de memòria on s’ha emmagatzemat l’objecte. </p>
 <ul>
@@ -676,26 +760,26 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Empleat</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strCognom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strDNI</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dSouBase</span><span class="p">;</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Empleat</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strCognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strDNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dSouBase</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"00000000Z"</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"00000000Z"</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">C1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span>
-<span class="w">		</span><span class="n">strNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<span class="w">		</span><span class="n">strCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C1</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleat</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">C1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">strDNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">strNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">strCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C1</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 604. Constructors</summary>
@@ -723,15 +807,15 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Programa</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="n">Persona</span><span class="w"> </span><span class="n">manolo</span><span class="p">;</span>
-<span class="w">		</span><span class="n">manolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">(</span><span class="s">"11111111A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Garibolo"</span><span class="p">);</span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">tintar</span><span class="p">(</span><span class="s">"blau"</span><span class="p">);</span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">menjar</span><span class="p">();</span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">creixer</span><span class="p">();</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Programa</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">Persona</span><span class="w"> </span><span class="n">manolo</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">manolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">(</span><span class="s">"11111111A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Garibolo"</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">tintar</span><span class="p">(</span><span class="s">"blau"</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">menjar</span><span class="p">();</span><span class="w"></span>
+<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">creixer</span><span class="p">();</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Tanmateix no podríem accedir als membres privats de la classe des de fora, per exemple, no podríem fer vicent.nom= «Antonio» ja que nom és un membre privat.</p>
 <details class="question">
@@ -761,17 +845,17 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">cognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">cognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Aquesta paraula clau sol utilitzar-se quan hi han bé mètodes o atributs (membres) a dues classes diferents amb el mateix nom per exemple.</p>
 <!--
@@ -803,11 +887,11 @@ En altres paraules, per poder executar la nostra aplicació «Batalla Naval» ha
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Joc</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Joc</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació i per tant ha de ser accessible de fora de la classe i ha de ser «static» perquè és un mètode que s’ha de poder cridar sense necessitat d’instanciar un objecte de la classe Joc.
 
@@ -876,6 +960,34 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 5.- Tipus Compostos Dades" class="md-footer__link md-footer__link--prev" href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              5.- Tipus Compostos Dades
+            </div>
+</div>
+</a>
+<a aria-label="Next: 7.- Herència, polimorfisme.." class="md-footer__link md-footer__link--next" href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              7.- Herència, polimorfisme..
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -893,8 +1005,8 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

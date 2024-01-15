@@ -251,7 +251,7 @@
 <p>Mira el següent diagrama de classes</p>
 <p><center>
 <div class="mermaid">classDiagram
-Figura &lt;|-- Linea
+Figura &lt;|-- Línia
 Figura &lt;|-- Punt
 Figura &lt;|-- Cercle
 Figura &lt;|-- Triangle
@@ -321,33 +321,17 @@ Rectangle : dibuixa()
 <li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
 </ul>
 <p>Per exemple, a l'hora de desenvolupar l'aplicació de les figures geomètriques, podem resoldre les següents qüestions per determinar els elements que inclourem:</p>
-<ol>
-<li>
-<p>Quins elements de la nostra aplicació han de ser desats o s'han de tenir en compte?</p>
-<ul>
-<li>Les distintes figures geomètriques que volem dibuixar: punt, línia, cercle, triangle i rectangle</li>
-</ul>
-</li>
-<li>
-<p>De cada element, quines dades ens interessen? </p>
-<ul>
-<li><strong>Punt:</strong> punt de dibuix, color..</li>
-<li><strong>Línia:</strong> punt inicial i punt final, color..</li>
-<li><strong>Cercle:</strong> punt de dibuix (centre), radi, colorVora, colorIntern..</li>
-<li><strong>Triangle:</strong> punt de dibuix, punt segon, punt tercer, tipus, colorVora, colorIntern</li>
-<li><strong>Rectangle:</strong> punt de dibuix, ample, alt, colorVora, colorIntern</li>
-</ul>
-</li>
-<li>
-<p>A cada element, quines operacions associarem? </p>
-<ul>
-<li>Totes les figures geomètriques s'haurien de poder dibuixar, pintar..</li>
-</ul>
-</li>
-<li>
+<p><strong>1. Quins elements de la nostra aplicació han de ser desats o s'han de tenir en compte?</strong>
+    - Les distintes figures geomètriques que volem dibuixar: punt, línia, cercle, triangle i rectangle</p>
+<p><strong>2. De cada element, quines dades ens interessen?</strong>
+    - <strong>Punt:</strong> punt de dibuix, color..
+    - <strong>Línia:</strong> punt inicial i punt final, color..
+    - <strong>Cercle:</strong> punt de dibuix (centre), radi, colorVora, colorIntern..
+    - <strong>Triangle:</strong> punt de dibuix, punt segon, punt tercer, tipus, colorVora, colorIntern
+    - <strong>Rectangle:</strong> punt de dibuix, ample, alt, colorVora, colorIntern</p>
+<p><strong>3. A cada element, quines operacions associarem?</strong>
+    - Totes les figures geomètriques s'haurien de poder dibuixar, pintar..</p>
 <p>Pel que fa a l’aplicació principal que utilitze aquests objectes, podem plantejar un programa que emmagatzeme de forma dinàmica les figures i estructurar la funcionalitat mitjançant un menú d’opcions que permeta utilitzar les operacions anteriorment plantejades per a cada objecte.</p>
-</li>
-</ol>
 <p>El <strong>diagrama de classes</strong> que deduiríem de les especificacions anteriors podria ser el següent:</p>
 <p><center>
 <div class="mermaid">classDiagram
@@ -391,22 +375,28 @@ Rectangle : pinta()
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En aquest tema i per tal de començar a treballar amb classes i objectes, desenvoluparem una xicoteta aplicació de gestió de contactes personals. El que es pretén és poder administrar un recull de contactes a mode d'agenda personal. </p>
-<p>De cada contacte es necessitaria saber la següent informació:
-- Nom
-- Cognoms
-- Telèfon
-- Correu electrònic</p>
-<p>A l'iniciar-se la nostra aplicació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:
-- Llistar contactes
-- Buscar contacte
-- Editar contacte
-- Afegir contacte
-- Esborrar contacte</p>
-<p>Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'aplicació.
-- Quants objectes diferents hi ha?
-- Quines són les seues característiques principals?
-- Quines accions poden realitzar cada objecte?
-- Quines relacions hi ha entre els objectes?</p>
+<p>De cada contacte es necessitaria saber la següent informació:</p>
+<ul>
+<li>Nom</li>
+<li>Cognoms</li>
+<li>Telèfon</li>
+<li>Correu electrònic</li>
+</ul>
+<p>A l'iniciar-se la nostra aplicació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:</p>
+<ul>
+<li>Llistar contactes</li>
+<li>Buscar contacte</li>
+<li>Editar contacte</li>
+<li>Afegir contacte</li>
+<li>Esborrar contacte</li>
+</ul>
+<p>Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'aplicació.</p>
+<ul>
+<li>Quants objectes diferents hi ha?</li>
+<li>Quines són les seues característiques principals?</li>
+<li>Quines accions poden realitzar cada objecte?</li>
+<li>Quines relacions hi ha entre els objectes?</li>
+</ul>
 <p>Dibuixa primer un diagrama de classes el més detallat possible.</p>
 </div>
 <div class="tabbed-block">
@@ -424,9 +414,9 @@ Rectangle : pinta()
 <li>Tindre un punt tercer</li>
 <li>Tindre un color</li>
 <li>Tindre una vora</li>
-<li>Ser de tipus equilater, isosceles o escalé</li>
+<li>Ser de tipus equilater, isosceles o escalè</li>
 </ul>
-<p>Ara bé, si al nostre programa dibuixen un triangle, les característiqes abans esmentades adopten certs valors:</p>
+<p>Ara bé, si al nostre programa dibuixen un triangle, les característiques abans esmentades adopten certs valors:</p>
 <ul>
 <li>Punt de dibuix: 20, 20</li>
 <li>Punt segon: 60, 20</li>
@@ -445,8 +435,9 @@ Rectangle : pinta()
 <p><strong>Mètodes de la classe:</strong> donen funcionalitat a la classe, és a dir, reflecteixen les operacions que aquesta pot fer sobre els atributs. Els mètodes són similars a les funcions o procediments que creàvem en programació estructurada però orientats a modificar i actuar sobre les propietats d’una classe.</p>
 </li>
 </ul>
-<p>Un objecte dona valors concrets als atributs que defineix la classe i utilitza els seus mètodes. Quan un objecte utilitza un mètode concret es diu que aquesta enviant un missatge. D’alguna manera açò té lògica ja que estem donant una ordre a un component que reflecteix la realitat. Si a un taller hem de canviar el color d’un vehicle, direm canvia el color a l’operari que estiga treballant, li estem enviant un missatge de que ha de realitzar aquesta acció concreta.</p>
-<p>A l’hora de enviar un missatge a un element concret d’un objecte utilitzarem l’operador punt, per exemple, arosa.canviaColor().</p>
+<p>Un objecte dona valors concrets als atributs que defineix la classe i utilitza els seus mètodes. Quan un objecte utilitza un mètode concret es diu que aquesta enviant un missatge. D’alguna manera açò té lògica ja que estem donant una ordre a un component que reflecteix la realitat. </p>
+<p>Si a la nostra aplicació de les figures geomètriques volem pintar un triangle per exemple li estem enviant un missatge al triangle per tal que es pinte per dins.</p>
+<p>A l’hora de enviar un missatge a un element concret d’un objecte utilitzarem l’operador punt, per exemple: <strong>triangle.pinta().</strong></p>
 <p>A sovint donem el nom d’estat als valors que en un objecte té en un moment concret de la vida del programa on s’està utilitzant. A més a més, quan creem un objecte, donem valors a les propietats de la classe, diem que estem instanciant aquesta classe.</p>
 <h2 id="definicio-de-classes-en-java">Definició de classes en Java</h2>
 <p>Una vegada ja sabem que són les classes i els objectes veurem com es defineixen classes i instancien objectes en el llenguatge Java. Definir una classe implica donar-li nom a ella i als elements que emmagatzemen la seua informació, així com també descriure els mètodes que realitzaran les accions considerades als objectes.</p>
@@ -495,27 +486,9 @@ Rectangle : pinta()
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Punt</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Punt</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
 <span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="w">	</span><span class="n">Punt</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
 
 <span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="nf">LlegirX</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
@@ -533,9 +506,6 @@ Rectangle : pinta()
 <span class="w">		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
 <span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<p>Una vegada tenim la definició de la classe punt, instanciarem un punt concret que es troba a les coordenades 10 i 5</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Punt</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 602. Defineix les classes del Projecte Agenda</summary>
@@ -624,7 +594,7 @@ persona podria quedar de la següent forma:</p>
 </code></pre></div></td></tr></table></div>
 <p>Fixeu-se que mentre els atributs de la classe tenen un modificador de visibilitat private, els mètodes el solen tindre public. Encara que no necessàriament ha de ser així sempre però és molt habitual.
 Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o funcions fora d’aquestes. La seua implementació s’inclou dins del cos de la classe.</p>
-<p>Exemple: A continuació modelarem una sèrie de classes geomètriques sobre les quals farem una sèrie de càlculs. Utilitzant un llenguatge de programació orientada a objectes com és Java, modelarem un triangle i un quadrat.</p>
+<p>Exemple: A continuació modelarem el nostre exemple de figures geomètriques sobre les quals farem una sèrie de càlculs. Utilitzant un llenguatge de programació orientada a objectes com és Java, modelarem un triangle i un quadrat.</p>
 <p>Primer la classe triangle.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -635,79 +605,33 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Triangle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Triangle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">dibuixa</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">triangle</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>A continuació la classe quadrat</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Quadrat</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">iTotalCostats</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dArea</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dCostat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Quadrat</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Quadrat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dAltura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">dCostat</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">dLong</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">iTotalCostats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">dCostat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dLong</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">dCostat</span><span class="o">*</span><span class="n">dAltura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">dibuixa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">ample</span><span class="p">,</span><span class="w"> </span><span class="n">alt</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -724,19 +648,7 @@ Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o func
 </div>
 </div>
 </details>
-<h3 id="instancies">Instàncies</h3>
-<p>La declaració d’una classe no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, instanciar o crear un objecte a partir d’aquesta classe.</p>
-<p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<p>La paraula «new» s’encarrega de reservar espai en memòria i torna una referència a l’adreça de memòria on s’ha emmagatzemat l’objecte. </p>
-<ul>
-<li><strong>nom_classe:</strong> en el primer cas és el nom de la classe que es vol instanciar. A la segon part es refereix al constructor de la classe que ha de ser igual que el nom d’aquesta. El constructor és un mètode especial de la classe i com a mètode que és pot rebre paràmetres.</li>
-<li><strong>nom_instancia:</strong> identificador amb el que s’identificarà l’objecte instanciat.</li>
-</ul>
-<p>L’espai reservat a memòria per un objecte dependrà de la quantitat d’elements  o membres que continga. Quan un objecte no està siguen referenciat es treu de memòria per tal d’alliberar espai pel «garbage collector»</p>
-<p>Quan creem un objecte d’una classe, cada atribut serà inicialitzat amb els valors per defecte del tipus de dades utilitzat o bé pel valor establert al constructor.</p>
-<h3 id="constructors">Constructors</h3>
+<h3 id="constructors-i-instancies">Constructors i instàncies</h3>
 <p>Un constructor és un mètode membre d’una classe que s’executa de forma automàtica quan es crea un instancia d’aquesta. El constructor d’una classe es diferencia de la resta perquè s’ha d’anomenar igual que la classe (respectant majúscules i minúscules) i mai s’especifica a la seua definició un tipus de dades a retornar encara que siga void.</p>
 <p>El constructor admet paràmetres, sent un mètode que es pot sobrecarregar, és a dir, podem tindre diversos constructors amb un nombre diferent de paràmetres o diferents tipus de dades. Els constructors tenen com a finalitat principal la inicialització de les variables o atributs de la classe.</p>
 <p>No és obligatori definir un constructor a cada classe, encara que es sol fer. 
@@ -781,8 +693,19 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="w">	</span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
+<p>La declaració d’una classe no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, instanciar o crear un objecte a partir d’aquesta classe.</p>
+<p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>La paraula «new» s’encarrega de reservar espai en memòria i torna una referència a l’adreça de memòria on s’ha emmagatzemat l’objecte. </p>
+<ul>
+<li><strong>nom_classe:</strong> en el primer cas és el nom de la classe que es vol instanciar. A la segon part es refereix al constructor de la classe que ha de ser igual que el nom d’aquesta. El constructor és un mètode especial de la classe i com a mètode que és pot rebre paràmetres.</li>
+<li><strong>nom_instancia:</strong> identificador amb el que s’identificarà l’objecte instanciat.</li>
+</ul>
+<p>L’espai reservat a memòria per un objecte dependrà de la quantitat d’elements  o membres que continga. Quan un objecte no està siguen referenciat es treu de memòria per tal d’alliberar espai pel «garbage collector»</p>
+<p>Quan creem un objecte d’una classe, cada atribut serà inicialitzat amb els valors per defecte del tipus de dades utilitzat o bé pel valor establert al constructor.</p>
 <details class="question">
-<summary>Activitat 604. Constructors</summary>
+<summary>Activitat 604. Constructors i instàncies</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -797,30 +720,78 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <h3 id="acces-als-membres-de-la-classe">Accés als membres de la classe</h3>
 <p>Podrem accedir als membres d’una classe en funció de la seua visibilitat i el lloc on es desitge accedir. Els modificadors de visibilitat són: public, private, protected i internal.</p>
 <p>Per accedir a un membre de la classe utilitzem el «.» (punt): NomClasse.membre</p>
-<p>Basant-nos en la classe Persona dels punts anteriors farem un programa que instàncie un objecte Persona i veurem com s’accedeix als membres de la classes</p>
+<p>Basant-nos en la classe Persona dels punts anteriors farem un programa que instancie un objecte Persona i veurem com s’accedeix als membres de la classes</p>
 <p>Suposem que persona té un constructor de la classe al qual li passem els següents paràmetres: DNI, nom, cognom, estatura, pes i color del pèl.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Programa</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">Persona</span><span class="w"> </span><span class="n">manolo</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">manolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">(</span><span class="s">"11111111A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Garibolo"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">tintar</span><span class="p">(</span><span class="s">"blau"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">menjar</span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">manolo</span><span class="p">.</span><span class="na">creixer</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Main</label><label for="__tabbed_5_2">Persona</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Variables globals</span><span class="w"></span>
+<span class="n">Persona</span><span class="w"> </span><span class="n">manolo</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">(</span><span class="s">"11111111A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Garibolo"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">tintar</span><span class="p">(</span><span class="s">"blau"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">menjar</span><span class="p">();</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">creixer</span><span class="p">();</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Atributs</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="c1">// Mètodes</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creixer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">estatura</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">menjar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pes</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tintarse</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">colorNou</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">colorCabells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorNou</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w">	</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <p>Tanmateix no podríem accedir als membres privats de la classe des de fora, per exemple, no podríem fer vicent.nom= «Antonio» ja que nom és un membre privat.</p>
 <details class="question">
 <summary>Activitat 605. Dissenya el constructor parametritzat</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Implementa amb codi el constructor parametritzat de l'activitat anterior. Després al programa principal, instancia una agenda amb almenys un contacte que continga informació.</p>
@@ -858,73 +829,14 @@ Així establim els valors que desitgem per quan un atribut de forma automàtica 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Aquesta paraula clau sol utilitzar-se quan hi han bé mètodes o atributs (membres) a dues classes diferents amb el mateix nom per exemple.</p>
-<!--
-## Desenvolupament d'un projecte en Java
-Vista ja un poc la teoria de com és el paradigma de programació orientada a objectes i continuant amb l’activitat d'anàlisi del joc de «Batalla Naval», ha arribat el moment de desenvolupar un projecte utilitzant la metodologia POO amb el llenguatge de programació Java.
-
-Donarem per suposat que les fases d’anàlisi i disseny ja han sigut realitzades i disposem de l’esquema UML amb el diagrama de classes del nostre joc.
-
-
-![Diagrama de classes](assets/Tema6/Projecte1.png)
-### Per on comencem
-Si disposem d’una eina de modelat UML, podríem a partir del diagrama de classes que ens han passat generar el codi en Java que ens serviria per poder començar a programar ja el seu comportament.
-
-Existeixen múltiples eines lliures que s’encarreguen de fer aquesta tasca automàticament com són: StarUML, ArgoUML, Umbrello i altres extensions que podem afegir a alguns IDEs com són Eclipse. Aquestes eines el que fan és generar els esquelets de les classes amb tots els membres especificats al diagrama, és a dir: constructors, atributs i mètodes. La qual cosa ens estalviarà un munt de feina. 
-
-Una vegada ja tenim cadascun dels esquelets de les nostres classes en fitxers, hauríem de crear un nou projecte i afegir-li aquestes classes. Aquesta part es podria fer amb un IDE tipus Eclipse, NetBeans o Visual Studio Code per exemple.
-
-![Crear Projecte](assets/Tema6/Projecte2.png)
-
-Arribats a aquest punt ja tenim preparat el nostre projecte i ja podem començar a «picar codi»
-
-### La funció main a Java
-
-El mètode main a Java és un estàndard utilitzat per la maquina virtual de Java o JVM per iniciar la execució de qualsevol programa escrit en Java. Aquest mètode es coneix com el punt d’entrada de l’aplicació Java. 
-
-En altres paraules, per poder executar la nostra aplicació «Batalla Naval» haurem de tindre un mètode main que instancie i utilitze les classes que hem creat a partir del diagrama de classes que ens han passat. Aquest mètode main ha d’estar dins d’una classe, per tant, ens creem una classe nova que es diga «Joc» i en ella podrem implementar el mètode main.
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Joc</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació i per tant ha de ser accessible de fora de la classe i ha de ser «static» perquè és un mètode que s’ha de poder cridar sense necessitat d’instanciar un objecte de la classe Joc.
-
-??? question "Activitat 602. Tenda d'electrodomèstics"
-    Manolo és el propietari d’una tenda d’electrodomèstics en la té: televisors, neveres, microones, forns, llavadores, estufes i altres. A Manolo li agradaria tindre una aplicació en la que puga emmagatzemar la informació relativa a tots els electrodomèstics que té a la tenda en estoc així com també li agradaria tindre la informació guardada de tots els clients en una agenda i quines són les compres que li han realitzat. 
-
-    De cada electrodomèstic vol saber coses com la marca, el model, el número de referència, eficiència energètica i ja més específicament la potència dels microones, el volum i l’altura de les neveres així com si tenen o no congelador, les polzades i tipus de definició dels televisors, potència i volum del forn, programes de les llavadores i capacitat, potencia de les estufes etc...
-
-    De cada client vol saber el seu nom, cognoms, adreça, DNI i tots els electrodomèstics que ha comprat a la tenda. També seria interessant poder guardar un inventari de la disponibilitat d’electrodomèstics que hi han actualment. 
-
-    Les accions que podrà realitzar la nostra aplicació seran: donar de alta i baixa electrodomèstics i clients, comprar electrodomèstics per part dels clients, consultar l'estoc etc..
-
-    El diagrama de classes resultant de l’anàlisi anterior podria ser el següent:
-
-    ![Tenda Electrodomèstics](assets/Tema6/Projecte3.png)
-
-??? question "Activitat 603. Sèries i pèl·licules"
-    Imagina que volem fer una aplicació sobre sèries i pel·lícules de les distintes plataformes d’streaming que existeixen en l’actualitat. Aquesta aplicació tindrà usuaris que es connectaran mitjançant unes credencials (nick i contrasenya) i cada usuari podrà afegir sèries o pel·lícules, a banda de posar qualificacions amb comentaris als continguts. El nick de cada usuari d’aquesta aplicació serà el seu correu electrònic, d’aquesta forma ens assegurem un nom únic per cada usuari. També s’enregistrarà per cada usuari el seu nom i cognoms. 
-
-    De cada pel·lícula ens agradaria saber: títol, any, país de producció, genere i resum de la mateixa. Els generes disponibles seran: acció, aventures, animació, comèdia, documental, drama, terror, musical, romàntica, ciència ficció.
-
-    A banda també s’haurà de guardar informació relativa a les actrius i actors que intervenen així com també el director. De les quals haurem de saber el seu nom i cognoms així com també la seua nacionalitat i l’any de naixement.
-
-    Pel que fa  les sèries, a banda de la informació que també tenen les pel·lícules, també ens agradaria saber el número de temporades que té, de quin any és la temporada i quants capítols té amb el seu títol i breu sinopsis.
-
-    Finalment cada usuari del nostre sistema podrà afegir tant sèries com pel·lícules i podrà qualificar-les (de 0 a 10) a banda d’acompanyar la qualificació d’un comentari al respecte.
--->
 <h2 id="metodes-variables-i-blocs-statics">Mètodes, variables i blocs statics</h2>
 <p>La paraula reservada «static» en Java és un modificador que en Java es pot aplicar a variables, mètodes, classes i blocs de codi</p>
 <h3 id="variables-estatiques">Variables estàtiques</h3>
-<p>Una variable estàtica (static) és una variable que pertany a la classe en la que va ser declarada i s’inicialitza només una vegada a l’inici de l’execució del programa, la característica principal d’aquest tipus de variables és que es pot accedir directamen amb el nom de la classe sense necessitat d’instanciar un objecte. A banda també:
-- És una variable que pertany a la classe (variable de classe) i no a l’objecte.
-- Les variables static s’inicialitzen només una vegada, a l’inici de l’execució. Aquestes variables s’inicialitzaran primer abans de la inicialització de qualsevol variable d’instància.</p>
+<p>Una variable estàtica (static) és una variable que pertany a la classe en la que va ser declarada i s’inicialitza només una vegada a l’inici de l’execució del programa, la característica principal d’aquest tipus de variables és que es pot accedir directament amb el nom de la classe sense necessitat d’instanciar un objecte. A banda també:</p>
+<ul>
+<li>És una variable que pertany a la classe (variable de classe) i no a l’objecte.</li>
+<li>Les variables static s’inicialitzen només una vegada, a l’inici de l’execució. Aquestes variables s’inicialitzaran primer abans de la inicialització de qualsevol variable d’instància.</li>
+</ul>
 <h3 id="metodes-estatics">Mètodes estàtics</h3>
 <p>Un mètode estàtic només pot accedir a les variables o tipus de dades estàtiques i no pot accedir a les dades no estàtiques.</p>
 <ul>
@@ -937,7 +849,7 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 <p>El bloc estàtic és un bloc d’instruccions dins de la classe (static { ... }) que s’executa quan una classe es carrega per primera vegada en la màquina virtual de Java (JVM). Bàsicament un bloc estàtic inicialitza variables de tipus estàtic dins d’una classe, de la mateixa forma que un constructor de classe ajuden a inicialitzar les variables d’instància, un bloc estàtic inicialitza les variables tipus static de la classe.</p>
 <details class="question">
 <summary>Activitat 606. Projecte Agenda</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Finalitza el projecte de l'agenda amb totes les classes i mètodes implementats.</p>
@@ -954,7 +866,7 @@ Main ha de ser «public» perquè és el punt d’entrada a la nostra aplicació
 <h3 id="sobrecarrega-de-constructors">Sobrecarrega de constructors</h3>
 <p>En Java es possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteixen nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
 <p>La classe descriu un conjunt d'objectes amb les mateixes propietats i comportament; quan l’objecte es crea, es inicialitza amb valors predeterminats o amb els que es transmeten en el moment de la instància; el mètode que realitza la inicialització de l’objecte és el constructor, aquest té el mateix nombre que la classe i no té tipus de retorn.</p>
-<p>A més de la sobrecàrrega de mètodes normals, es poden sobrecarregar els constructors; estos últims normalment es sobrecarregaran a la majoria de les classes creades, encara que no es regla; fins i tot una classe pot definir-se sense constructor i, per ende, sense arguments.</p>
+<p>A més de la sobrecàrrega de mètodes normals, es poden sobrecarregar els constructors; estos últims normalment es sobrecarregaran a la majoria de les classes creades, encara que no es regla; fins i tot una classe pot definir-se sense constructor i, per extensió, sense arguments.</p>
 </article>
 </div>
 </div>

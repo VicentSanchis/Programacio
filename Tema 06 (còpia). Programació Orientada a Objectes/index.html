@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
+<title>Tema 6. Programació Orientada a Objectes. - PROGRAMACIÓ 1DAW</title>
+<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheet/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tema-6-programacio-orientada-a-objectes">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Tema 6. Programació Orientada a Objectes.
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    PROGRAMACIÓ 1DAW
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
+        1.- Introducció programació
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2002.%20Programaci%C3%B3%20Estructurada/">
+        2.- Programació Estructurada
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2003.%20El%20llenguatge%20Java/">
+        3.- El llenguatge Java
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2004.%20Programaci%C3%B3%20Modular/">
+        4.- Programació Modular
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2005.%20Tipus%20compostos%20de%20dades/">
+        5.- Tipus Compostos Dades
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
+        6.- Prog Orientada Objectes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+        7.- Herència, polimorfisme..
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/">
+        8.- Entrada, eixida, excepcions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Gr%C3%A0fics.%20Java%20Swing/">
+        9.- Gràfics. Java Swing.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/">
+        10.- Accés a dades
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="tema-6-programacio-orientada-a-objectes">Tema 6. Programació Orientada a Objectes.</h1>
+<h2 id="introduccio">Introducció</h2>
+<p>La <strong>programació orientada a objectes</strong> també coneguda com <strong>POO</strong> és el paradigma de programació que més s’utilitza hui en dia i que permet <strong>modelar</strong> de manera més eficient la realitat des del punt de vista del programari.</p>
+<p>La programació orientada a objectes intenta proporcionar un <strong>model de programació basat en objectes</strong> que contenen dades i procediments associats coneguts com a mètodes a diferència del disseny procedimental que s'utilitzava en la programació estructurada. Aquests <strong>objectes</strong>, que són instàncies de les <strong>classes</strong>, són tipus abstractes de dades que encapsulen (amaguen) tant les dades com les funcions per accedir-hi.</p>
+<p>Un dels <strong>objectius</strong> de la programació orientada a objectes és reflectir la realitat, de forma que els elements d’un programa s’ajusten a elements de la vida quotidiana. Per exemple, suposem que volem realitzar una aplicació per una banda de rock a la que li direm <strong>RockCase</strong>. En un programa estructurat definiríem funcions independentment de les dades, tal que per un costat creariem el codi de les funcions i posteriorment, al programa principal, s'establirien les dades en forma de variables sobre les que s'aplicarien els canvis. </p>
+<p>És a dir, es farien els diagrames de flux corresponents utilitzant les estructures vistes al teorema de programació estructurada a cadascun dels procediments que li suposem a la nostra aplicació i els programariem en el llenguatge de programació corresponent. Per exemple, una banda de rock pot tocar un tema (procediment) que al final no és més que una successió (estructura seqüencial) de sons, instruments i parts de la cançó que es toquen seguint una lògica fins que acaba la cançó.</p>
+<p>En canvi en <strong>POO</strong> es dona prioritat a la <strong>modelació de les dades</strong> i no als procediments. En un escenari de programació orientada a objectes, a la fase d'anàlisi es determinen els diferents actors del programa (objectes) i a partir d'ahi se li assignen els diferents atributs i accions que pot realitzar.</p>
+<p>Però veiem-ho amb l'exemple del <strong>RockCase</strong>. Si ens parem a analitzar la nostra aplicació, arribarem a la conclusió que un dels objectes més importants seran els músics. És a dir, la nostra aplicació bàsicament és uh conjunt de músics amb una sèrie de característiques o <strong>atributs</strong> i que poden realitzar una sèrie <strong>d'accions</strong> (tocar, ferSolos, cantar, etc..). Doncs bé, a diferència del paradigma de programació estructurada, ací programarem primer els objectes (definirem les classes) i després els utilitzarem al programa principal.  </p>
+<p>En aquesta aplicació ens podriem trobar els següents objectes: bateria, baix, guitarra i cantant.</p>
+<p>La programació orientada a objectes permet la creació de programari cada vegada més complexe a partir d’unitats o blocs de codi reutilitzables.</p>
+<h2 id="caracteristiques-principals">Característiques principals</h2>
+<p>Les propietats principals o característiques fonamentals del paradigma de programació orientada a objectes són:</p>
+<h3 id="abstraccio">Abstracció</h3>
+<p>Abstraure's és <strong>aïllar mentalment</strong>, considerar separadament (un o diversos atributs o qualitats) d'una cosa. Per exemple abstraure els conceptes més importants d'un discurs, és a dir, <strong>quedar-se amb el important.</strong></p>
+<p>En programació orientada a objectes abstraure’s, l’abstracció, seria mostrar únicament les característiques essencials, que fa l’objecte i per a que es crea, deixant de banda elements com la implementació.</p>
+<p>L’abstracció permet representar les característiques essencials d’un objecte, deixant enrere aquelles que no tenen tanta importància. A més a més, es centra en l’objecte tal i com el coneixem en la vida real, de forma que ens centrem en allò que es capaç de fer però no en com ho fa. Bàsicament, definiríem l’abstracció com la forma de descriure una entitat del món real sense importar la complexitat que està present i el poder utilitzar aquesta en qualsevol aplicació.</p>
+<p><center>
+<img alt="Abstracció" src="../assets/Tema6/Abstraccio.jpg"/>
+</center></p>
+<p>Un altre exemple d'abstracció:</p>
+<p><center>
+<img alt="Abstracció" src="../assets/Tema6/Abstraccio2.jpg"/>
+</center></p>
+<p>Basant-nos en l'app <strong>RockCase</strong> de la que hem parlat a l'apartat anterior, necessitariem d'alguna manera representar cadascun dels components del nostre grup i cadascun dels membres reflectiria unes característiques o unes altres. Deuriem poden emmagatzemar informació: nom, instrument que toca, llista de cançons...</p>
+<h3 id="encapsulament">Encapsulament</h3>
+<p>L’encapsulament és, en altres paraules, <strong>l’ocultació d’informació</strong>, de forma que les dades internes d’un objecte estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
+<p>Per exemple, amb freqüència es desenvolupa codi font o projectes en els que utilitzem la classe out, més concretament el mètode println. Out es troba dins de l’espai de noms (namespace) System i no és més que una classe d’aquest paquet. Dit en altres paraules. Out és una classe i println() és un mètode de la classe Out.</p>
+<p><center>
+<img alt="Encapsulament" src="../assets/Tema6/Encapsulament.jpg"/>
+</center></p>
+<p>Respecte de la banda de rock que estem "dissenyant", tocar, tocarSolo, cantar... L'encapsulament en aquest cas es refereix a que nosaltres només necessitem saber quines són les possibles accions que la nostra persona pot fer però no hem de saber com ho fa (el codi dels mètodes)</p>
+<h3 id="modularitat">Modularitat</h3>
+<p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben <strong>organitzats en mòduls</strong>, facilitant així l’encapsulament i abstracció de la informació.</p>
+<p>La modularitat permet dividir una aplicació en parts. Aquestes parts han de ser tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
+<h3 id="jerarquia-i-herencia">Jerarquia i herència</h3>
+<p>La <strong>jerarquia</strong> és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
+<p><center>
+<img alt="Herència" src="../assets/Tema6/Herencia.jpg"/>
+</center></p>
+<p>Si et fixes en l'exemple de la <strong>RockCase</strong> hauràs observat que malgrat tenim quatre tipus de músic diferents al nostre grup (bateria, veu, baix i guitarra) en realitat tots tenen una sèrie d'atributs comuns. Tots són persones. Per tant podriem dir que al final tant un bateria com un guitarra com un cantant com un baix (subClasses) són persones (superClasse).</p>
+<p>Mira el següent diagrama de classes:</p>
+<p><center>
+<div class="mermaid">	classDiagram
+	Persona &lt;|-- Bateria
+	Persona &lt;|-- Cantant
+	Persona &lt;|-- Baix
+	Persona &lt;|-- Guitarra
+	Persona &lt;|-- Cantant
+
+	Persona: nom
+	Persona: cognom
+	Persona: nick
+	Persona: foto
+
+	Bateria: marcaBateria
+	Bateria: repicar()
+
+	Cantant: tipusMicro
+	Cantant: cantar()
+
+	Baix: tocarBaix()
+
+	Guitarra: nomGuitarra
+	Guitarra: tocarSolo
+	Guitarra: tocarQuintes()
+</div>
+</center></p>
+<h3 id="polimorfisme">Polimorfisme</h3>
+<p>Polimorfisme és una paraula grega que significa <strong>«moltes formes»</strong>. Aquesta paraula és ideal per definir aquesta característica de la programació orientada a objectes ja que en POO podem tindre objectes amb el <strong>mateix nom</strong> que realitzen <strong>funcions distintes</strong> o implementen codi diferent.</p>
+<p>El polimorfisme és un mecanisme que s’utilitza molt en POO juntament amb l’herència tal que quan una classe deriva d’una altra hereta les seues característiques i operacions. A la classe que hereta es pot redefinir qualsevol mètode heretat, de forma que en funció de la referència a objectes que usem a cada moment s’estarà executant un mètode o un altre.</p>
+<p>Un mateix missatge enviat a objectes diferents donarà com a resposta eixides diferents, és a dir, si tenim diversos objectes amb mètodes similars, segons es referencie l’un o l’altre objecte el resultat final serà diferent. </p>
+<p>Per exemple, seguint amb l'esquema de les persones del <strong>RockCase</strong> suposem que la classe (<strong>"SuperClasse</strong>) Persona té un mètode que es diu "tocar", aquest mètode l'hereten totes i cadascuna de les <strong>subClasses</strong> però és evident que el resultat de tocar no serà el mateix si és un baix que un guitarra que un bateria.</p>
+<h2 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h2>
+<p>A partir d’ara, quan hajam de resoldre un problema hem de començar a <strong>pensar d’una forma diferent</strong> a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema on les dades presenten una major importància.</p>
+<p><strong>L’objectiu</strong> de l’orientació a objectes és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
+<ul>
+<li>Ens preguntarem sobre aquells elements dels que realment es interessant emmagatzemar informació, és a dir, <strong>localitzarem els possibles objectes</strong> del nostre programa.</li>
+<li>De cada element hem de conèixer quines són les seues <strong>característiques</strong> o quines són les característiques que el representen.</li>
+<li>De cada element hem de conèixer les <strong>operacions a realitzar</strong>, accions que hi poden fer,  ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
+<li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
+</ul>
+<p>Per exemple, a l'hora de desenvolupar l'aplicació, podem resoldre les següents qüestions per determinar els elements que inclourem:</p>
+<p><strong>1. Quins elements de la nostra aplicació han de ser desats o s'han de tenir en compte?</strong>
+    - Les distintes tipus de músics que formen la nostra banda</p>
+<p><strong>2. De cada element, quines dades ens interessen?</strong>
+    - <strong>Persona:</strong> nom, cognoms, foto
+    - <strong>Baix:</strong>
+    - <strong>Guitarra:</strong>
+    - <strong>Cantant:</strong>
+    - <strong>Bateria:</strong></p>
+<p><strong>3. A cada element, quines operacions associarem?</strong>
+    - El cantant canta, el baix toca, el guitarra fa solos i acompanyaments i el bateria toca i fa solos de bateria.</p>
+<p>Pel que fa a l’aplicació principal que utilitze aquests objectes, podem plantejar un programa que emmagatzeme de forma dinàmica les persones i estructurar la funcionalitat mitjançant un menú d’opcions que permeta utilitzar les operacions anteriorment plantejades per a cada objecte.</p>
+<p>El <strong>diagrama de classes</strong> que deduiríem de les especificacions anteriors podria ser el següent:</p>
+<p><center>
+<div class="mermaid">		classDiagram
+		Persona &lt;|-- Bateria
+		Persona &lt;|-- Cantant
+		Persona &lt;|-- Baix
+		Persona &lt;|-- Guitarra
+		Persona &lt;|-- Cantant
+
+		Persona: nom
+		Persona: cognom
+		Persona: nick
+		Persona: foto
+
+		Bateria: marcaBateria
+		Bateria: repicar()
+		Bateria: ferSolo()
+
+		Cantant: tipusMicro
+		Cantant: cantar()
+
+		Baix: amplificador
+		Baix: tocarBaix()
+		Baix: ferSlap()
+
+		Guitarra: nomGuitarra
+		Guitarra: amplificador
+		Guitarra: tocarSolo()
+		Guitarra: tocarQuintes()
+		Guitarra: ferAcompanyament()
+	```
+</div></center>
+
+??? question "Activitat 601. Projecte Agenda"
+	=== "Problema"
+		En aquest tema i per tal de començar a treballar amb classes i objectes, desenvoluparem una xicoteta aplicació de gestió de contactes personals. El que es pretén és poder administrar un recull de contactes a mode d'agenda personal. 
+		
+		De cada contacte es necessitaria saber la següent informació:
+
+		- Nom
+		- Cognoms
+		- Telèfon
+		- Correu electrònic
+
+		A l'iniciar-se la nostra aplicació es carregaran un mínim de cinc contactes que emmagatzemarem en un array. Mentre a la pantalla principal es mostrarà un menú amb les accions que es poden realitzar en la nostra app:
+
+		- Llistar contactes
+		- Buscar contacte
+		- Editar contacte
+		- Afegir contacte
+		- Esborrar contacte
+
+		Fes una anàlisi semblant a la que hem fet al taller i especifica els requeriments de la teua aplicació a més a més de localitzar les classes que penses que tindrà l'aplicació.
+
+		- Quants objectes diferents hi ha?
+		- Quines són les seues característiques principals?
+		- Quines accions poden realitzar cada objecte?
+		- Quines relacions hi ha entre els objectes?
+
+		Dibuixa primer un diagrama de classes el més detallat possible.
+
+	=== "Solució"
+		No disponible encara.
+
+## Classes i Objectes
+Una **classe és la definició d’un objecte**, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.
+
+Per exemple, si continuem utilitzant la nostra app de l'institut, una classe seria **Estudiant** en la que es descriu de forma general aquest element. S'establiria que l'estudiant es caracteritzaria per:
+
+- Tindre un NIA
+- Tindre un nom
+- Tindre uns cognoms
+- Tindre una foto
+- Ser d'ESO, Batxiller o Cicles.
+
+Ara bé, si al nostre programa mostrem informació d'un estudiant concret, les característiques abans esmentades adopten certs valors:
+  
+- NIA: 120239202
+- Nom: Braulio
+- Cognom: Estrella
+- Foto: 
+- Curs: BAT
+
+Així per un costat tenim la classe Persona i per l'altre l'objecte "Braulio"
+
+Alhora de crear una classe definim el que denominem propietats o atributs i mètodes de classe.
+
+- **Atributs:** una característica concreta d’un objecte de la vida quotidiana. Quan s’estableix un atribut a una classe, es defineix com quan creàvem variables als nostres programes estructurats, indicant tipus de dades i nom amb el que el reconeixem.
+  
+- **Mètodes de la classe:** donen funcionalitat a la classe, és a dir, reflecteixen les operacions que aquesta pot fer sobre els atributs. Els mètodes són similars a les funcions o procediments que creàvem en programació estructurada però orientats a modificar i actuar sobre les propietats d’una classe.
+
+Un objecte dona valors concrets als atributs que defineix la classe i utilitza els seus mètodes. Quan un objecte utilitza un mètode concret es diu que aquesta enviant un missatge. D’alguna manera açò té lògica ja que estem donant una ordre a un component que reflecteix la realitat. 
+
+Si a la nostra aplicació de les persones de l'institut volem mostrar la fitxa d'un estudiant li estem enviant un missatge a la persona per tal que mostre la fitxa per pantalla.
+
+A l'hora d'enviar un missatge a un objecte concret utilitzarem l'operador punt, per exemple: **braulio.mostraFitxa().**
+
+A sovint donem el nom d’estat als valors que en un objecte té en un moment concret de la vida del programa on s’està utilitzant. A més a més, quan creem un objecte, donem valors a les propietats de la classe, diem que estem instanciant aquesta classe.
+
+## Definició de classes en Java
+Una vegada ja sabem que són les classes i els objectes veurem com es defineixen classes i instancien objectes en el llenguatge Java. Definir una classe implica donar-li nom a ella i als elements que emmagatzemen la seua informació, així com també descriure els mètodes que realitzaran les accions considerades als objectes.
+
+Les definicions o especificacions no constitueixen un codi de programa executable si no que s’utilitzen per assignar memòria on emmagatzemar els valors dels atributs que utilitza el programa i reconèixer els mètodes que aquesta utilitzarà; normalment es situen en arxius formant packages, utilitzant un arxiu per vàries classes relacionades.
+
+```java linenums="1"
+class nomClasse {
+	llista_de_membres
+}
+</p></article></div>
+- nomClasse: definit per l’usuari i identifica la classe; pot incloure lletres, números i subratllats com qualsevol identificador.
+- llista_de_membres: són els mètodes i atributs de la classe, etc..
+<p>Més concretament, una classe es podria definir de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">llista_de_constants</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">llista_de_atributs</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">constructor_de_classe</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">constructor_de_còpia</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">mètodes</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>En realitat si la definició de les parts de la classe es fera en un altre ordre, no afectaria a la compilació i execució d’aquesta però sí a la lectura del codi i el faria més complicat d’interpretar.</p>
+<p>Exemple de classe: per tal d’il·lustrar com es defineix una classe amb un exemple, definirem la classe 'Persona'. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">cobra</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 602. Defineix les classes del Projecte Agenda</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Obre Processing IDE i declara les classes resultants de l'activitat 601. 
+Recorda que totes les característiques i accions que hages anotat a l'activitat anterior hauran de convertir-se en atributs i mètodes de les classes que dissenyes.
+Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</input></input></div>
+</details>
+<h3 id="visibilitat-dels-membres-de-la-classe">Visibilitat dels membres de la classe</h3>
+<p>Un principi fonamental en la programació orientada a objectes  és l’ocultació de la informació, açò significa que no es pot accedir per mètodes externs de la classe a determinada informació interna. El mecanisme principal per aconseguir-ho és posar-los dins d’una classe i fer-los privats i així només es podrà accedir a aquests des de dins de la classe</p>
+<p>Existeixen tres diferents especificacions d’accés o modificadors de visibilitat:</p>
+<ul>
+<li><strong>public (+):</strong> un mètode o atribut té una visibilitat pública quan totes les demès classes poden accedir a ells, bé siga una altra classe o una subclasse.</li>
+<li><strong>Private (-):</strong> sols es pot accedir a ells des del propi codi de la classe.</li>
+<li><strong>Protected (#):</strong> només des del propi codi de la classe o de les seues subclasses es pot accedir.</li>
+<li><strong>Package (~):</strong> només accessible per membres del paquet.</li>
+</ul>
+<h3 id="atributs">Atributs</h3>
+<p>Els atributs són les característiques individuals que diferencien un objecte d’un altre i determinen la seua aparença, estat o altres qualitats. Els atributs es desen en variables anomenades variables d’instància i cada objecte particular pot tindre valors distints per a aquestes variables.  Per exemple, la classe persona que hem definit als exemples anteriors té els següents atributs: nom, cognom, NIF, dataNaixement, email.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Les variables d’instància també anomenades membres són declarades a la classe però els seus valors son canviats i fixats a l’objectes ja que una classe no és més que un esquema que defineix com seran les persones al nostre programa.</p>
+<p>A més de les variables d’instància hi ha variables de classe, les quals s’apliquen a la classe i a totes les instàncies. Per exemple, el número de rodes d’un cotxe és el mateix per a tots els objectes cotxe.</p>
+<h3 id="metodes">Mètodes</h3>
+<p>Els mètode són aquelles accions que pot realitzar la classe que estem definint. Bàsicament el que fa un mètode és modificar l’estat de l’objecte mitjançant el canvi del valor dels seus atributs. Continuant amb la classe persona que hem definit al punt anterior, caldria que ens férem les següents qüestions: quines accions són les que pot realitzar la nostra persona? En que afecta eixes accions als atributs que hem escollit per definir-la?</p>
+<p>A la qüestió primera diríem que una persona pot: caminar, botar, córrer, menjar, créixer, tintar-se els cabells, etc.. Pel que fa a la segon qüestió, podríem dir que només modifiquen atributs: menjar, augmentant de pes; créixer, modificant l’estatura i tintar-se els cabells, canviant el color del pel. Així la classe 
+persona podria quedar de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cobra</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Fixeu-se que mentre els atributs de la classe tenen un modificador de visibilitat private, els mètodes el solen tindre public. Encara que no necessàriament ha de ser així sempre però és molt habitual.
+Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o funcions fora d’aquestes. La seua implementació s’inclou dins del cos de la classe.</p>
+<p>Exemple: A continuació modelarem el nostre exemple de persones d'institut. </p>
+<p>Primer la classe Estudiant.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estudiant</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">NIA</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">curs</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ferExamen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">println</span><span class="p">(</span><span class="s">"No he estudiat"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">prenApunts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">println</span><span class="p">(</span><span class="s">"M'he deixat la llibreta"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>A continuació la classe Professor</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="n">Professor</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">departament</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">sou</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">corregir</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">println</span><span class="p">(</span><span class="s">"Tots suspesos"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">donarClasse</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 603. Visibilitat de classes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A partir de les classes que hages dissenyat a l'última activitat, assigna-li la visibilitat corresponent a les classes i a cada membre de la classe, bé siga un atribut o un mètode.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</input></div>
+</details>
+<h3 id="constructors-i-instancies">Constructors i instàncies</h3>
+<p>Un constructor és un mètode membre d’una classe que s’executa de forma automàtica quan es crea un instancia d’aquesta. El constructor d’una classe es diferencia de la resta perquè s’ha d’anomenar igual que la classe (respectant majúscules i minúscules) i mai s’especifica a la seua definició un tipus de dades a retornar encara que siga void.</p>
+<p>El constructor admet paràmetres, sent un mètode que es pot sobrecarregar, és a dir, podem tindre diversos constructors amb un nombre diferent de paràmetres o diferents tipus de dades. Els constructors tenen com a finalitat principal la inicialització de les variables o atributs de la classe.</p>
+<p>No és obligatori definir un constructor a cada classe, encara que es sol fer. 
+Així establim els valors que desitgem per quan un atribut de forma automàtica a la creació de l’objecte, en lloc de fer-ho en un altre moment mitjançant altres mètodes. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"00000000Z"</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">NIF</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">C1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="n">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NIF</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="n">cognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C1</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>La declaració d’una classe no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, instanciar o crear un objecte a partir d’aquesta classe.</p>
+<p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>La paraula «new» s’encarrega de reservar espai en memòria i torna una referència a l’adreça de memòria on s’ha emmagatzemat l’objecte. </p>
+<ul>
+<li><strong>nom_classe:</strong> en el primer cas és el nom de la classe que es vol instanciar. A la segon part es refereix al constructor de la classe que ha de ser igual que el nom d’aquesta. El constructor és un mètode especial de la classe i com a mètode que és pot rebre paràmetres.</li>
+<li><strong>nom_instancia:</strong> identificador amb el que s’identificarà l’objecte instanciat.</li>
+</ul>
+<p>L’espai reservat a memòria per un objecte dependrà de la quantitat d’elements  o membres que continga. Quan un objecte no està siguen referenciat es treu de memòria per tal d’alliberar espai pel «garbage collector»</p>
+<p>Quan creem un objecte d’una classe, cada atribut serà inicialitzat amb els valors per defecte del tipus de dades utilitzat o bé pel valor establert al constructor.</p>
+<details class="question">
+<summary>Activitat 604. Constructors i instàncies</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Declara (només la interfície i amb el cos buit) dos constructors, un sense paràmetres i un amb els paràmetres necessaris, per a cada classe que tingues al teu Projecte Agenda.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
+<h3 id="acces-als-membres-de-la-classe">Accés als membres de la classe</h3>
+<p>Podrem accedir als membres d’una classe en funció de la seua visibilitat i el lloc on es desitge accedir. Els modificadors de visibilitat són: public, private, protected i internal.</p>
+<p>Per accedir a un membre de la classe utilitzem el «.» (punt): NomClasse.membre</p>
+<p>Basant-nos en la classe Persona dels punts anteriors farem un programa que instancie un objecte Persona i veurem com s’accedeix als membres de la classes</p>
+<p>Suposem que persona té un constructor de la classe al qual li passem els següents paràmetres: DNI, nom, cognom, estatura, pes i color del pèl.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Main</label><label for="__tabbed_4_2">Persona</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Variables globals</span><span class="w"></span>
+<span class="n">Persona</span><span class="w"> </span><span class="n">manolo</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">(</span><span class="s">"11111111A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Garibolo"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">tintar</span><span class="p">(</span><span class="s">"blau"</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">menjar</span><span class="p">();</span><span class="w"></span>
+<span class="w">	</span><span class="n">manolo</span><span class="p">.</span><span class="na">creixer</span><span class="p">();</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Atributs</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognoms</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataNaixement</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">estatura</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pes</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorUlls</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">colorCabells</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="c1">// Mètodes</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creixer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">estatura</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">menjar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pes</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tintarse</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">colorNou</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">colorCabells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorNou</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w">	</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>Tanmateix no podríem accedir als membres privats de la classe des de fora, per exemple, no podríem fer vicent.nom= «Antonio» ja que nom és un membre privat.</p>
+<details class="question">
+<summary>Activitat 605. Dissenya el constructor parametritzat</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Implementa amb codi el constructor parametritzat de l'activitat anterior. Després al programa principal, instancia una agenda amb almenys un contacte que continga informació.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="la-paraula-reservada-this">La paraula reservada 'this'</h2>
+<p>La paraula reservada «this» s’utilitza per fer referència a l’objecte actual. Si estàs dissenyant una classe, «this» fa referència a la pròpia classe.</p>
+<p>Quan es crida a un mètode, es passa automàticament un argument implícit que és una referència a l’objecte invocat, és a dir, l’objecte sobre el que es crida al mètode. Aquesta referència és «this». Amb els atributs de la classe també passa el mateix.</p>
+<p>Per comprendre-ho millor, mirem el següent exemple: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cognom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DNI</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">cognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cognom</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">DNI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DNI</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Aquesta paraula clau sol utilitzar-se quan hi han bé mètodes o atributs (membres) a dues classes diferents amb el mateix nom per exemple.</p>
+<h2 id="metodes-variables-i-blocs-statics">Mètodes, variables i blocs statics</h2>
+<p>La paraula reservada «static» en Java és un modificador que en Java es pot aplicar a variables, mètodes, classes i blocs de codi</p>
+<h3 id="variables-estatiques">Variables estàtiques</h3>
+<p>Una variable estàtica (static) és una variable que pertany a la classe en la que va ser declarada i s’inicialitza només una vegada a l’inici de l’execució del programa, la característica principal d’aquest tipus de variables és que es pot accedir directament amb el nom de la classe sense necessitat d’instanciar un objecte. A banda també:</p>
+<ul>
+<li>És una variable que pertany a la classe (variable de classe) i no a l’objecte.</li>
+<li>Les variables static s’inicialitzen només una vegada, a l’inici de l’execució. Aquestes variables s’inicialitzaran primer abans de la inicialització de qualsevol variable d’instància.</li>
+</ul>
+<h3 id="metodes-estatics">Mètodes estàtics</h3>
+<p>Un mètode estàtic només pot accedir a les variables o tipus de dades estàtiques i no pot accedir a les dades no estàtiques.</p>
+<ul>
+<li>Un mètode estàtic només pot accedir a dades estàtiques. No pot accedir a dades no estàtiques (variables d’instància)</li>
+<li>Un mètode estàtic pot cridar només a mètodes estàtics i no pot invocar un mètode no estàtic a partir d’ell.</li>
+<li>Un mètode estàtic es pot accedir directament pel nom de la classe i no es necessita crear un objecte per accedir al mètode.</li>
+<li>Un mètode estàtic no pot fer referència a «this» o «super»</li>
+</ul>
+<h3 id="blocs-estatics">Blocs estàtics</h3>
+<p>El bloc estàtic és un bloc d’instruccions dins de la classe (static { ... }) que s’executa quan una classe es carrega per primera vegada en la màquina virtual de Java (JVM). Bàsicament un bloc estàtic inicialitza variables de tipus estàtic dins d’una classe, de la mateixa forma que un constructor de classe ajuden a inicialitzar les variables d’instància, un bloc estàtic inicialitza les variables tipus static de la classe.</p>
+<details class="question">
+<summary>Activitat 606. Projecte Agenda</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Finalitza el projecte de l'agenda amb totes les classes i mètodes implementats.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="sobrecarrega-doperadors">Sobrecàrrega d'operadors</h2>
+<p>En Java és possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteix nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
+<p>En les cridades als mètodes sobrecarregats, el compilador determina quin és el mètode invocat basant-se en el nombre i tipus d’arguments passats; per tant, els mètodes sobrecarregats han de diferir en nombre i tipus de paràmetres. Quan Java troba una trucada a un mètode sobrecarregat, s’executa la versió del que té paràmetres (número i tipus) que coincideixen amb els arguments utilitzats en la trucada.</p>
+<h3 id="sobrecarrega-de-constructors">Sobrecarrega de constructors</h3>
+<p>En Java es possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteixen nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
+<p>La classe descriu un conjunt d'objectes amb les mateixes propietats i comportament; quan l’objecte es crea, es inicialitza amb valors predeterminats o amb els que es transmeten en el moment de la instància; el mètode que realitza la inicialització de l’objecte és el constructor, aquest té el mateix nombre que la classe i no té tipus de retorn.</p>
+<p>A més de la sobrecàrrega de mètodes normals, es poden sobrecarregar els constructors; estos últims normalment es sobrecarregaran a la majoria de les classes creades, encara que no es regla; fins i tot una classe pot definir-se sense constructor i, per extensió, sense arguments.</p>
+
+</div>
+</main></div>
+
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+<script src="../js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+<script>mermaid.initialize({
+    theme: "forest"
+});</script></body>
+</html>

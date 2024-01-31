@@ -195,28 +195,27 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-7-herencia-polimorfisme-i-interficies">Tema 7. Herència, polimorfisme i interfícies</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>Un dels mecanismes més potents que incorpora el paradigma de programació orientada a objectes són l’herència i el polimorfisme. 
-El primer ens permet crear una jerarquia de classes relacionades entre sí de tal forma que la quantitat de codi, especialment el codi redundant, es redueix significativament. </p>
-<p>El segon permet redefinir mètodes de tal forma que realitzen funcions diferents depenent del context en el qual es troben. En altres paraules, el polimorfisme és el mecanisme de la programació orientada a objectes que permet que una funció amb el mateix nom realitze tasques diferents depenent de l’objecte des del qual es fa referència. </p>
-<p>Finalment també veurem com a les interfícies podrem especificar les operacions que haurien de definir-se a les classes que la implementen. Una interfície és un mitjà per a que els objectes no relacionats es comuniquen entres sí. Aquestes són les definicions de mètodes i valors sobre els quals els objectes estan d’acord per cooperar.</p>
+<p>Un dels mecanismes més potents que incorpora el <strong>paradigma de programació orientada a objectes</strong> són <strong>l’herència</strong> i el <strong>polimorfisme.</strong> </p>
+<p>El <strong>primer</strong> ens permet crear una jerarquia de classes relacionades entre sí de tal forma que la quantitat de codi, especialment el codi redundant, es redueix significativament. </p>
+<p>El <strong>segon</strong> permet redefinir mètodes de tal forma que realitzen funcions diferents depenent del context en el qual es troben. En altres paraules, el <strong>polimorfisme</strong> és el mecanisme de la programació orientada a objectes que permet que una funció amb el mateix nom realitze tasques diferents depenent de l’objecte des del qual es fa referència. </p>
+<p>Finalment també veurem com a les <strong>interfícies</strong> podrem especificar les operacions que haurien de definir-se a les classes que la implementen. Una interfície és un mitjà per a que els objectes no relacionats es comuniquen entres sí. Aquestes són les definicions de mètodes i valors sobre els quals els objectes estan d’acord per cooperar.</p>
 <h2 id="herencia">Herència</h2>
-<p>En programació orientada a objectes l’herència és un mecanisme que permet potenciar la reutilització i l’extensibilitat en el desenvolupament de programari a banda de reduir la quantitat de codi redundant. Aquest mecanisme permet crear noves classes a partir d’una classe o jerarquia de classes preexistent (ja comprovades i verificades) evitant d’aquesta forma el redisseny, la modificació i verificació de la part ja implementada. L’herència facilita la creació d’objectes a partir d’altres ja existents i implica que una subclasse obté tot el comportament (mètodes) i finalment els atributs (variables) de la seua superclasse.</p>
+<p>En programació orientada a objectes l’herència és un mecanisme que permet potenciar la reutilització i l’extensibilitat en el desenvolupament de programari a banda de <strong>reduir la quantitat de codi redundant.</strong> Aquest mecanisme permet crear noves classes a partir d’una classe o <strong>jerarquia de classes</strong> preexistent (ja comprovades i verificades) evitant d’aquesta forma el redisseny, la modificació i verificació de la part ja implementada. L’herència facilita la creació d’objectes a partir d’altres ja existents i implica que una subclasse obté tot el comportament (mètodes) i finalment els atributs (variables) de la seua superclasse.</p>
 <p>En aquest tema veurem com Java implementa el mecanisme de l’herència i quines són les opcions que ens dona.</p>
 <p>Suposem el cas en el que disposem de dues classes (amb menys classes resultaria impossible l’herència), una s’anomenarà: classe base, superclasse o classe pare; mentre que l’altra serà la classe derivada, subclasse o classe filla.</p>
-<p>En el nostre cas la classe pare, superclasse o classe base serà «Instrument» i la classe derivada, filla o subclasse serà «Guitarra» que en llenguatge natural es podria traduir com que una guitarra és un tipus d’instrument.</p>
-<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand1.png"/></p>
-<p>La classe base en una jerarquia d’herència és la classe que conté els atributs i mètodes comuns a totes les classes derivades i és per això que s’evita la redundància del codi que es produiria si haguérem de repetir codi comú a cadascuna de les subclasses, per tant, es podria deduir que una classe derivada és de facto una ampliació de les funcionalitats de la classe base ja que contindrà tant els membres de la classe base com els que s'afegeixen de més a la classe derivada.</p>
+<p>Seguint amb l'exemple del tema anterior <strong>RockCase</strong> (mira l'apartat d'herència) la classe pare, superclasse o classe base serà "Músic" i les classes derivades, filles o subclasses serien: guitarra, baix, bateria i cantant, que en llenguatge natural es podria traduir com que un bateria és un tipus de músic.</p>
+<p>Per començar ho farem amb un esquema de classes buit i anirem afegint la informació que creien necessària.</p>
+<p><center>
+<div class="mermaid">	classDiagram
+	Músic &lt;|-- Bateria
+	Músic &lt;|-- Cantant
+	Músic &lt;|-- Baix
+	Músic &lt;|-- Guitarra
+</div>
+</center></p>
+<p>La <strong>classe base</strong> en una jerarquia d’herència és la classe que conté els <strong>atributs i mètodes comuns</strong> a totes les classes derivades i és per això que s’evita la redundància del codi que es produiria si haguérem de repetir codi comú a cadascuna de les subclasses, per tant, es podria deduir que una classe derivada és de facto una ampliació de les funcionalitats de la classe base ja que contindrà tant els membres de la classe base com els que s'afegeixen de més a la classe derivada.</p>
 <h3 id="declaracio-duna-classe-derivada">Declaració d'una classe derivada</h3>
-<p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada ‘extends’. Mira l’exemple següent:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama de classes quedaria així:</p>
-<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand2.png"/></p>
-<p>El codi en Java resultant seria el següent:</p>
+<p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada <strong>‘extends’</strong>. Mira l’exemple següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -227,15 +226,31 @@ Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama 
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Baix</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Baix</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bateria</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cantant</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -243,9 +258,40 @@ Afegim al nostre exemple dos instruments més; un baix i un teclat. El diagrama 
 <h3 id="disseny-de-subclasses">Disseny de subclasses</h3>
 <p>Dissenyar és adaptar la realitat que es vol representar a un model concret, en el nostre cas els diagrames de classes d’UML. És en aquest pas en el que s’han de prendre les decisions que poden condicionar el resultat final de la nostra aplicació i no sempre és fàcil determinar quines són les relacions que s’han d’establir.  És per això que cal tenir en ment sempre la següent màxima: «La jerarquia de classes més eficient i efectiva és aquella que minimitza el codi al redundant al màxim i simplifica el codi»</p>
 <p>Al utilitzar el mecanisme de l’herència en programació orientada a objectes hem d’intentar sempre tindre un màxim de membres a la superclasse i després a les diferents subclasses només aquells membres o atributs que fan de discriminador, és a dir, que diferencien la classe especialitzada (o subclasse) de la classe superior.
-Ampliem el nostre exemple de banda de rock anterior i afegim atributs i membres a totes les classes. Per exemple cada instrument tindrà amo, any, tipus, marca, model i clau d’afinació. A més a més, podrà afinar i tocar. </p>
-<p>Ja més específicament d’una bateria hem de saber el total de Toms que té, el total de pedals (hi ha bateries amb doble pedal) i el total de plats a banda de poder tocar un redoble. D’una guitarra hem d’especificar quin ampli utilitza i quantes cordes té (pot tenir-ne fins 12). Finalment pel que fa al teclat, sabrem el nombre de tecles que té i podrà tocar melodies.</p>
-<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand3.png"/></p>
+Ampliem el nostre exemple de banda de rock anterior i afegim atributs i membres a totes les classes. Per exemple cada membre de la banda (classe Music) podria tindre com atributs el nom, el cognom, el malnom (si el té) i tots els músics poden sonoritzar.</p>
+<p>Ja més específicament, a les subclasses, d'un guitarra ens interessaria saber la marca, el model, any i tipus. Un guitarra pot tocar i també fer solos.
+El baixista és molt semblant a la guitarra per tant també tindriem els atributs marca, el model, any i tipus. Les accions que hi pot fer un baixista són tocar i fer slapping.</p>
+<p>La bateria...</p>
+<p>Finalment el cantant...</p>
+<p>A més a més, tot músic pot afinar i tocar el seu instrument.</p>
+<p>Ja més específicament d’una bateria hem de saber el total de Toms que té, el total de pedals (hi ha bateries amb doble pedal) i el total de plats a banda de poder tocar un redoble. D’una guitarra hem d’especificar quin ampli utilitza i quantes cordes té (pot tenir-ne fins 12). Pel que fa al baixista podria fer a banda de tocar la línia de baix, fer slap. De la cantant ens interessaria saber el registre de veu que té des de la nota més aguda que pot fer fins la nota més greu. També li podriem afegir informació sobre l'estil de cant que té.</p>
+<p><center>
+<div class="mermaid">    classDiagram
+	Músic &lt;|-- Bateria
+	Músic &lt;|-- Cantant
+	Músic &lt;|-- Baix
+	Músic &lt;|-- Guitarra
+
+	Músic: nom
+	Músic: cognom
+	Músic: nick
+	Músic: foto
+    Músic: 
+
+	Bateria: marcaBateria
+	Bateria: repicar()
+
+	Cantant: tipusMicro
+	Cantant: cantar()
+
+	Baix: tocarBaix()
+
+	Guitarra: nomGuitarra
+	Guitarra: tocarSolo
+	Guitarra: tocarQuintes()
+
+</div>
+</center></p>
 <p>El codi resultant d’aquest disseny seria el següent:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -940,5 +986,7 @@ La classe que implementa la interfície ha d’especificar el codi (la implement
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
-</body>
+<script>mermaid.initialize({
+    theme: "forest"
+});</script></body>
 </html>

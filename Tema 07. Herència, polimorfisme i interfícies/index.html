@@ -203,19 +203,10 @@
 <p>En programació orientada a objectes l’herència és un mecanisme que permet potenciar la reutilització i l’extensibilitat en el desenvolupament de programari a banda de <strong>reduir la quantitat de codi redundant.</strong> Aquest mecanisme permet crear noves classes a partir d’una classe o <strong>jerarquia de classes</strong> preexistent (ja comprovades i verificades) evitant d’aquesta forma el redisseny, la modificació i verificació de la part ja implementada. L’herència facilita la creació d’objectes a partir d’altres ja existents i implica que una subclasse obté tot el comportament (mètodes) i finalment els atributs (variables) de la seua superclasse.</p>
 <p>En aquest tema veurem com Java implementa el mecanisme de l’herència i quines són les opcions que ens dona.</p>
 <p>Suposem el cas en el que disposem de dues classes (amb menys classes resultaria impossible l’herència), una s’anomenarà: classe base, superclasse o classe pare; mentre que l’altra serà la classe derivada, subclasse o classe filla.</p>
-<p>Seguint amb l'exemple del tema anterior <strong>RockCase</strong> (mira l'apartat d'herència) la classe pare, superclasse o classe base serà "Músic" i les classes derivades, filles o subclasses serien: guitarra, baix, bateria i cantant, que en llenguatge natural es podria traduir com que un bateria és un tipus de músic.</p>
-<p>Per començar ho farem amb un esquema de classes buit i anirem afegint la informació que creien necessària.</p>
-<p><center>
-<div class="mermaid">	classDiagram
-	Músic &lt;|-- Bateria
-	Músic &lt;|-- Cantant
-	Músic &lt;|-- Baix
-	Músic &lt;|-- Guitarra
-</div>
-</center></p>
+<p>Seguint amb l'exemple del tema anterior del <a href="../assets/Tema7/Volcano.zip">Volcano</a> i basant-no en el que varem explicar a l'apartat sobre <strong>herència</strong>, haviem dissenyat una sèrie de classes derivades de <strong>Piroclast</strong> com es pot observar al següent esquema. Aquestes subclasses seran: la <strong>Cendra</strong>, <strong>Lava</strong> i <strong>Roca</strong>. Tots tres són <strong>Piroclasts</strong>, és a dir, tots tenen: posició, direcció, velocitat, color i grandaria i a tots els afecten les lleis de la gravetat però cadascuna de les subclasses tenen certes peculiaritats. La cendra ofereix més resistència a l'aire i de vegades dona la sensació que sura. La lava pot ser des de liquida fins quasi sòlida i els colors varien, finalment les roques a banda de ser sòlides, poden adoptar moltes formes diferents.</p>
 <p>La <strong>classe base</strong> en una jerarquia d’herència és la classe que conté els <strong>atributs i mètodes comuns</strong> a totes les classes derivades i és per això que s’evita la redundància del codi que es produiria si haguérem de repetir codi comú a cadascuna de les subclasses, per tant, es podria deduir que una classe derivada és de facto una ampliació de les funcionalitats de la classe base ja que contindrà tant els membres de la classe base com els que s'afegeixen de més a la classe derivada.</p>
 <h3 id="declaracio-duna-classe-derivada">Declaració d'una classe derivada</h3>
-<p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada <strong>‘extends’</strong>. Mira l’exemple següent:</p>
+<p>Per tal de declarar que una classe hereta d’una altra, Java utilitza la paraula reservada <strong>extends</strong>. Si ens basem en el diagrama de classes anteriors, el codi quedaria de la segÚent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -230,70 +221,57 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Codi de la classe Piroclast</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cendra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Codi de la clsse Cendra</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Baix</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Lava</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Codi de la classe Lava</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bateria</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cantant</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Music</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Roca</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Codi de la classe Roca</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Respecte de la visibilitat dels membre de la superclasse, les subclasses tindran accés als membres, siguen atributs o mètodes, public o protected mentre que no heretaran els membres privats de la classe pare. </p>
 <h3 id="disseny-de-subclasses">Disseny de subclasses</h3>
 <p>Dissenyar és adaptar la realitat que es vol representar a un model concret, en el nostre cas els diagrames de classes d’UML. És en aquest pas en el que s’han de prendre les decisions que poden condicionar el resultat final de la nostra aplicació i no sempre és fàcil determinar quines són les relacions que s’han d’establir.  És per això que cal tenir en ment sempre la següent màxima: «La jerarquia de classes més eficient i efectiva és aquella que minimitza el codi al redundant al màxim i simplifica el codi»</p>
-<p>Al utilitzar el mecanisme de l’herència en programació orientada a objectes hem d’intentar sempre tindre un màxim de membres a la superclasse i després a les diferents subclasses només aquells membres o atributs que fan de discriminador, és a dir, que diferencien la classe especialitzada (o subclasse) de la classe superior.
-Ampliem el nostre exemple de banda de rock anterior i afegim atributs i membres a totes les classes. Per exemple cada membre de la banda (classe Music) podria tindre com atributs el nom, el cognom, el malnom (si el té) i tots els músics poden sonoritzar.</p>
-<p>Ja més específicament, a les subclasses, d'un guitarra ens interessaria saber la marca, el model, any i tipus. Un guitarra pot tocar i també fer solos.
-El baixista és molt semblant a la guitarra per tant també tindriem els atributs marca, el model, any i tipus. Les accions que hi pot fer un baixista són tocar i fer slapping.</p>
-<p>La bateria...</p>
-<p>Finalment el cantant...</p>
-<p>A més a més, tot músic pot afinar i tocar el seu instrument.</p>
-<p>Ja més específicament d’una bateria hem de saber el total de Toms que té, el total de pedals (hi ha bateries amb doble pedal) i el total de plats a banda de poder tocar un redoble. D’una guitarra hem d’especificar quin ampli utilitza i quantes cordes té (pot tenir-ne fins 12). Pel que fa al baixista podria fer a banda de tocar la línia de baix, fer slap. De la cantant ens interessaria saber el registre de veu que té des de la nota més aguda que pot fer fins la nota més greu. També li podriem afegir informació sobre l'estil de cant que té.</p>
+<p>Al utilitzar el mecanisme de l’herència en programació orientada a objectes hem d’intentar sempre tindre un màxim de membres a la superclasse i després a les diferents subclasses només aquells membres o atributs que fan de discriminador, és a dir, que diferencien la classe especialitzada (o subclasse) de la classe superior.</p>
+<p>A la nostra classe Piroclast ens interessa saber com ja haviem fet al tema anterior: la posició, la direcció, velocitat, color i grandària. Mentre que de les subclasses seria interessant saber de la cendra el seu índex de flotabilitat i que pot volar, de la lava volem saber la densitat i la temperatura mentre que de la roca ens interssa la forma que té.</p>
 <p><center>
-<div class="mermaid">    classDiagram
-	Músic &lt;|-- Bateria
-	Músic &lt;|-- Cantant
-	Músic &lt;|-- Baix
-	Músic &lt;|-- Guitarra
+<div class="mermaid">	classDiagram 
+		Piroclast &lt;|-- Cendra
+		Piroclast &lt;|-- Lava
+		Piroclast &lt;|-- Roca
 
-	Músic: nom
-	Músic: cognom
-	Músic: nick
-	Músic: foto
-    Músic: 
+		Piroclast: posicio
+		Piroclast: direccio
+		Piroclast: velocitat
+		Piroclast: color
+		Piroclast: grandaria
+		Piroclast: update()
+		Piroclast: display()
 
-	Bateria: marcaBateria
-	Bateria: repicar()
+		Cendra: flotabilitat
+		Cendra: volar()
 
-	Cantant: tipusMicro
-	Cantant: cantar()
+		Lava: densitat
+		Lava: temperatura
 
-	Baix: tocarBaix()
-
-	Guitarra: nomGuitarra
-	Guitarra: tocarSolo
-	Guitarra: tocarQuintes()
-
+		Roca: forma
 </div>
 </center></p>
-<p>El codi resultant d’aquest disseny seria el següent:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>El codi resultant de les classes d’aquest disseny seria el següent:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Piroclast</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -306,305 +284,74 @@ El baixista és molt semblant a la guitarra per tant també tindriem els atribut
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Instrument</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">amo</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">any</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">clauAfinacio</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afinar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guitarra</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numCordes</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ampli</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ferSolo</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Teclat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Teclat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalTecles</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocarMelodia</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bateria</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bateria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalToms</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pedals</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPlats</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ferRedoble</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-Del codi anterior es pot extreure la següent informació:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cendra</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cendra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">flotabilitat</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">volar</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Lava</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Lava</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">densitat</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">temperatura</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Roca</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Roca</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">forma</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Fixa't que ací els atributs de la classe pare o superclasse ja no usen el modificador de visibilitat private sino protected. Si no les subclasses no podrien heretar els atributs de la classe pare.</p>
+<p>Del codi anterior es pot extreure la següent informació:</p>
 <ul>
-<li>Amo és un atribut que no hereta cap subclasse al ser privat.</li>
-<li>Totes les subclasses tindran accés, encara que al codi no estiga, a any, marca, model i clauAfinació.</li>
-<li>Totes les subclasses quan criden als mètodes afinar i tocar, executaran el codi que hi ha a la superclasse sempre que no es s’indique el contrari (sobrecàrrega)</li>
-<li>Guitarra i Bateria no tenen accés a l’atribut totalTecles.</li>
-<li>Teclat i Bateria no tenen poden fer solos.</li>
+<li>Totes les subclasses tindran accés, encara que al codi no estiga als atributs de la superclasse.</li>
+<li>Totes les subclasses quan criden als mètodes display i update, executaran el codi que hi ha a la superclasse sempre que no es s’indique el contrari (sobrecàrrega).</li>
+<li>Lava i Cendra no tenen forma.</li>
+<li>La cendra pot volar.</li>
 </ul>
 <h3 id="sobrecarrega-de-metodes-a-la-classe-derivada">Sobrecàrrega de mètodes a la classe derivada</h3>
 <p>La sobrecàrrega de mètodes és la creació de diversos mètodes amb el mateix nom però amb diferent llista de tipus de paràmetres. Java diferencia entre els mètodes sobrecarregats en base al número i tipus de paràmetres o arguments que té el mètode i no pel tipus que retorna.</p>
 <p>classe derivada pot redefinir un mètode de la classe base amb el 
  mateix nom però una llista diferent d’arguments </p>
 <p>Si pel contrari tenim un mateix mètode amb el mateix nom i la mateixa signatura (els mateixos paràmetres) el que estem fent es sobreescriure (overridint) i no sobrecarregar (overloading)</p>
-<p>Seguint amb l’exemple de la nostra banda de rock mireu el següent codi:</p>
-<p><img alt="Banda de Rock" src="../assets/Tema7/RockBand4.png"/></p>
-<p>Com es pot observar a la imatge anterior hi ha una sobrecarrega del mètode afinar a cada classe derivada perquè seria el mateix que el de la classe pare però amb diferents paràmetres mentre que el mètode tocar està sobreescrit ja que la interfície és idèntica. En codi podria quedar de la següent forma:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Instrument</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">amo</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">any</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">clauAfinacio</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afinar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Afinar la superclasse"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tocar instrument"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guitarra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guitarra</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numCordes</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ampli</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ferSolo</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tocar Guitarra"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afinar</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Afinar guitarra en clau "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">clau</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Teclat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Teclat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalTecles</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocarMelodia</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tocar Teclat"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afinar</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Afinar teclat en clau "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">clau</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bateria</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Instrument</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bateria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalToms</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pedals</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPlats</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ferRedoble</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tocar</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tocar Bateria"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afinar</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Afinar bateria en clau "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">clau</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
+<p>Seguint amb l'exemple del nostre volcà, mireu el següent codi:</p>
 <h3 id="herencia-publica">Herència pública</h3>
 <p>En Java tenim la possibilitat de fer protected (#) private (-) public (+) i package (~) ens determina la visibilitat dels membres d’una classe. Java considera que l’herència és sempre pública i que la classe derivada tindrà per tant accés als membres protected i public de la classe pare però no als membres privats. El fet de poder tindre elements privats a la nostra classe base seria per poder ocultar informació a les classes derivades.</p>
 <h3 id="constructors-en-herencia">Constructors en herència</h3>

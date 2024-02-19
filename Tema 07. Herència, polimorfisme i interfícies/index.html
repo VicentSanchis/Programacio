@@ -221,7 +221,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </center></p>
 <p>Ara tenim una superclasse <strong>Piroclast</strong> amb les subclasses associades <strong>Fum</strong>, <strong>Lava</strong> i <strong>Roca</strong>. Tots tres són <strong>Piroclasts</strong>, és a dir, tots tenen: posició, direcció, velocitat, color inicial, color final, temps de vida i grandaria a banda d'altres atributs que anirem veient i, a més a més, a tots els afecten les lleis de la física, però cadascuna de les subclasses tenen certes <strong>peculiaritats:</strong></p>
 <ul>
-<li>El <strong>fum</strong> sol anar sempre cap amunt es disipa amb facilitat i es sol veure afectat per la direcció en la que va el vent.</li>
+<li>El <strong>fum</strong> sol anar sempre cap amunt es dissipa amb facilitat i es sol veure afectat per la direcció en la que va el vent.</li>
 <li>La <strong>lava</strong> pot ser des de liquida fins quasi sòlida, els colors varien mentre cau i al final s'esclafa en terra.</li>
 <li>Les <strong>roques</strong> a banda de ser sòlides, poden adoptar moltes formes diferents i quan cauen reboten.</li>
 </ul>
@@ -302,7 +302,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
         Piroclast: + estaParada() 
         
 
-        Fum: - disipacio
+        Fum: - dissipacio
         Fum: - expansio
         Fum: + display()
         Fum: + update()
@@ -375,8 +375,8 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cendra</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">disipacio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fum</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">dissipacio</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">expansio</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fum</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">posCrater</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
@@ -431,6 +431,10 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </div>
 </div>
 </input></input></input></input></div>
+<details class="question">
+<summary>Activitat 701. El joc dels escacs</summary>
+<p>Fes un diagrama de classes per al joc dels escacs utilitzant els mecanismes d'herència com hem vist amb l'exemple del Volcano.</p>
+</details>
 <h3 id="herencia-publica">Herència pública</h3>
 <p>En Java tenim la possibilitat de fer protected <strong>(#)</strong> private <strong>(-)</strong> public <strong>(+)</strong> i package <strong>(~)</strong> ens determina la visibilitat dels membres d’una classe. Java considera que l’herència és sempre pública i que la classe derivada tindrà per tant accés als membres protected i public de la classe pare però no als membres privats. El fet de poder tindre elements privats a la nostra classe base seria per poder ocultar informació a les classes derivades.</p>
 <p>Fixa't que ací els atributs de la classe pare o <strong>superclasse</strong> ja no usen el modificador de visibilitat private sino <strong>protected</strong>. Si no les subclasses no podrien heretar els atributs de la classe pare.</p>
@@ -444,6 +448,10 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 <p>Per poder acoblar el nostre volcà al nou sistema de partícules (fum, lava i roques) haurem de fer alguns canvis.
 El primer és conceptual, a partir d'ara el nostre <strong>Crater</strong> contindrà un conjunt de <strong>roques, laves i partícules de fum</strong>.
 El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expulsat, aquest podrà ser una de les tres opcions anteriors, però com decidim el tipus? Doncs els frames parells crearem lava mentre que als cicles senars crearem roques, el fum es genera a tots els frames.</p>
+<details class="question">
+<summary>Activitat 702. Visibilitat</summary>
+<p>Revisa i comprova que has posat de forma correcta els modificadors de visibilitat al teu projecte.</p>
+</details>
 <h3 id="constructors-en-herencia">Constructors en herència</h3>
 <p>De la mateixa manera que s’hereten mètodes i atributs també s’hereten els constructors de la classe. D’aquesta forma si declarem un objecte d’una classe derivada, primer s’executa el constructor de la classe base i a continuació s’executa la part de codi de la classe derivada.</p>
 <p>Si executes el codi anterior veuràs que dona un error d'execució i no funciona però, què està passant realment? Si feu una traça al codi veureu que el problema està quan s'intenten dibuixar com que no hem inicialitzat els valors de posició etc a les classes derivades, el programa para d'executar-se. I això és perquè quan creem una nova instància de roca per exemple, aquesta crida al constructor de la classe Piroclast sense paràmetres i no assigna valors inicials. Si volem que cride al constructor de la superclasse parametritzat, afegiriem el següent codi al constructor per defecte de les subclasses:</p>
@@ -646,7 +654,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w">     </span><span class="c1">// Magnitud en metres per segon</span><span class="w"></span>
-<span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w">     </span><span class="c1">// Tamany del piroclast en píxels</span><span class="w"></span>
+<span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w">     </span><span class="c1">// Grandaria del piroclast en píxels</span><span class="w"></span>
 <span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w">      </span><span class="c1">// Temps de vida que li queda en frames</span><span class="w"></span>
 <span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">colorInicial</span><span class="p">;</span><span class="w">  </span><span class="c1">// Color base o inicial del piroclast</span><span class="w"></span>
 <span class="w">        </span><span class="kd">protected</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">colorActual</span><span class="p">;</span><span class="w">   </span><span class="c1">// Color amb el que el piroclast està pintat</span><span class="w"></span>
@@ -765,7 +773,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">       </span><span class="n">ample</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Base del volcà en píxels</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">       </span><span class="n">alt</span><span class="p">;</span><span class="w">                        </span><span class="c1">// Alt del volcà en píxels</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">     </span><span class="n">col</span><span class="p">;</span><span class="w">                        </span><span class="c1">// Color del volcà</span><span class="w"></span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">PVector</span><span class="w">   </span><span class="n">posicio</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Posició en la que es troba el volcà que també posiciona el cráter</span><span class="w"></span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">PVector</span><span class="w">   </span><span class="n">posicio</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Posició en la que es troba el volcà que també posiciona el cràter</span><span class="w"></span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">   </span><span class="c1">// Col·lecció de piroclasts que el volcà va expulsant</span><span class="w"></span>
 <span class="w">        </span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Crater</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -861,14 +869,14 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fum</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">disipacio</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valor que determina la velocitat (píxels) a la que es dissipa el fum</span><span class="w"></span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dissipacio</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valor que determina la velocitat (píxels) a la que es dissipa el fum</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">expansio</span><span class="p">;</span><span class="w">   </span><span class="c1">// Valor que determina la velocitat (píxels) amb la que s'expandeix el fum</span><span class="w"></span>
 <span class="w">        </span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fum</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">posCrater</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="kd">super</span><span class="w"> </span><span class="p">(</span><span class="n">posCrater</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">170</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.1</span><span class="p">));</span><span class="w"></span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">disipacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">dissipacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">expansio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">190</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
@@ -887,7 +895,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">frameCount</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">expansio</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">disipacio</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">dissipacio</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -1110,6 +1118,10 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 </div>
 </div>
 </div>
+<details class="question">
+<summary>Activitat 703. Constructors de classe</summary>
+<p>Implementa els constructors de les classes que has dissenyat per al teu projecte dels Escacs.</p>
+</details>
 <h3 id="sobrecarrega-i-sobreescriptura-de-metodes">Sobrecàrrega i sobreescriptura de mètodes</h3>
 <p>La <strong>sobrecàrrega</strong> de mètodes és la creació de diversos mètodes amb el mateix nom però amb diferent llista de tipus de paràmetres o de funcionalitat. Java diferencia entre els mètodes sobrecarregats en base al número i tipus de paràmetres o arguments que té el mètode i no pel tipus que retorna.</p>
 <p>D'aquesta forma una classe derivada pot redefinir un mètode de la classe base amb el mateix nom però una llista diferent d’arguments </p>
@@ -1138,7 +1150,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Piroclast</span><span class="w"> </span><span class="n">piro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="n">Fum</span><span class="w"> </span><span class="n">fum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cendra</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+<span class="n">Fum</span><span class="w"> </span><span class="n">fum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fum</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
 <span class="n">Roca</span><span class="w"> </span><span class="n">roca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Roca</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
 
 <span class="n">piro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fum</span><span class="p">;</span><span class="w">  </span><span class="c1">// Conversió automàtica</span><span class="w"></span>
@@ -1175,7 +1187,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Normalment els mètodes d’una classe abstracta també seran abstractes.</p>
-<p>Una classe abstracta sol ser aquella que no existeix com a tal en la realitat que volem modelar. Al nostre exemple de volcà, el piroclast podria ser implementat com una classe abstracta ja que en el nostre sistema de particules, mai instanciarem un objecte piroclast. Bé instanciarem un objecte Cendra, Lava o Roca, però mai un objecte Piroclast.</p>
+<p>Una classe abstracta sol ser aquella que no existeix com a tal en la realitat que volem modelar. Al nostre exemple de volcà, el piroclast podria ser implementat com una classe abstracta ja que en el nostre sistema de particules, mai instanciarem un objecte piroclast. Bé instanciarem un objecte Fum, Lava o Roca, però mai un objecte Piroclast.</p>
 <p><strong>Mètodes Abstractes</strong>
 Un mètode abstracte és un mètode que defineix un comportament o funcionalitat concreta però no especifica la seua implementació i ha de ser la classe filla la que implemente el mètode. En altres paraules, a la classe pare o superclasse podem tindre mètodes abstractes sempre i quan no tinguen codi.</p>
 <p>La implementació de mètodes abstractes per part de les classes filles en una jerarquia utilitzen la lligadura dinàmica ja que no es possible determinar el codi que s’ha d’executar en temps de compilació.</p>
@@ -1188,6 +1200,10 @@ Un mètode abstracte és un mètode que defineix un comportament o funcionalitat
 <li>Les instàncies d’aquestes classes s’usen mitjançant una referència a la base amb lligadura dinàmica la qual és l’essència del polimorfisme a Java</li>
 </ol>
 <p>Finalment, en realitat no és necessari declarar abstractes els mètodes a la classe base si després es redefineixen amb la mateixa signatura (nom més paràmetres) a la classe derivada.</p>
+<details class="question">
+<summary>Activitat 704. Classe fitxa abstracta</summary>
+<p>Converteix la classe pare fitxa en una classe abstracta. També has de fer abstractes els mètodes que consideres.</p>
+</details>
 <h3 id="avantatges-del-polimorfisme">Avantatges del polimorfisme</h3>
 <p>El polimorfisme fa el seu sistema més flexible, sense perdre cap dels avantatges de la compilació estàtica de tipus que tenen lloc en temps de compilació; tal és el cas de Java.</p>
 <p>Les aplicacions més freqüents del polimorfisme són:
@@ -1197,8 +1213,8 @@ Un mètode abstracte és un mètode que defineix un comportament o funcionalitat
 amb relacions d'herència que es poden estendre fàcilment.</p>
 <h3 id="metodes-no-derivables-atribut-final">Mètodes no derivables: atribut final</h3>
 <p>Al context de l’herència, la paraula reservada final, s’utilitza per protegir la redefinició dels mètodes de la classe base; un mètode que té l’atribut final, no pot tornar a definir-se a la o les classes derivades.</p>
-<p>Però veiem com podem aplicar aquestos conceptes al nostre volcà. Per tal d'il·lustrar-ho farem que els diferents tipus de Piroclast es comporten de forma diferent i que tinguen un aspecte diferent. Per un costat la cendra ha de poder volar de volta en quan i no caure, la Lava canviarà de color roig a taronja conforme vaja caent i la roca tindrà una forma de requadre i ha d'anar girant sobre l'eix z.</p>
-<p>Per tal d'aconseguir-ho, la manera més fàcil és convertir el mètode <strong>display</strong> de la classe Piroclast en <strong>abstract</strong> i després a cada classe filla li escriurem el codi d'acord amb el seu suposat comportament. Haurem de fer el mateix per al mètode <strong>update</strong> ja que el moviment tampoc serà igual per a tots els tipus de Piroclasts. Per tant haurem de substituir el mètode update sobreescrit de la classe Cendra que haviem fet abans però mantenint el codi anterior al mètode update.</p>
+<p>Però veiem com podem aplicar aquestos conceptes al nostre volcà. Per tal d'il·lustrar-ho farem que els diferents tipus de Piroclast es comporten de forma diferent i que tinguen un aspecte diferent. Per un costat el fum ha de poder volar envolar-se amb el vent, la Lava canviarà de color roig a taronja conforme vaja caent i la roca tindrà una forma de requadre i ha d'anar girant sobre l'eix z.</p>
+<p>Per tal d'aconseguir-ho, la manera més fàcil és convertir el mètode <strong>display</strong> de la classe Piroclast en <strong>abstract</strong> i després a cada classe filla li escriurem el codi d'acord amb el seu suposat comportament. Haurem de fer el mateix per al mètode <strong>update</strong> ja que el moviment tampoc serà igual per a tots els tipus de Piroclasts. Per tant haurem de substituir el mètode update sobreescrit de la classe fum que haviem fet abans però mantenint el codi anterior al mètode update.</p>
 <p>Finalment només ens quedaria afegir el codi necessari als mètodes display i update per tal que el fum vole amb el vent, que la lava canvie gradualment de color i s'esclafe quan arriba a terra que la roca siga un requadre que gira i que rebota a terra fins que perd tota l'energia..</p>
 <p>El resultat final seria el següent:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:6"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><input id="__tabbed_4_5" name="__tabbed_4" type="radio"/><input id="__tabbed_4_6" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Main</label><label for="__tabbed_4_2">Piroclast</label><label for="__tabbed_4_3">Crater</label><label for="__tabbed_4_4">Fum</label><label for="__tabbed_4_5">Lava</label><label for="__tabbed_4_6">Roca</label></div>
@@ -1412,7 +1428,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">       </span><span class="n">ample</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Base del volcà en píxels</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">       </span><span class="n">alt</span><span class="p">;</span><span class="w">                        </span><span class="c1">// Alt del volcà en píxels</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">     </span><span class="n">col</span><span class="p">;</span><span class="w">                        </span><span class="c1">// Color del volcà</span><span class="w"></span>
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">PVector</span><span class="w">   </span><span class="n">posicio</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Posició en la que es troba el volcà que també posiciona el cráter</span><span class="w"></span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">PVector</span><span class="w">   </span><span class="n">posicio</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Posició en la que es troba el volcà que també posiciona el cràter</span><span class="w"></span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">   </span><span class="c1">// Col·lecció de piroclasts que el volcà va expulsant</span><span class="w"></span>
 <span class="w">        </span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Crater</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1508,14 +1524,14 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fum</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">disipacio</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valor que determina la velocitat (píxels) a la que es dissipa el fum</span><span class="w"></span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dissipacio</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valor que determina la velocitat (píxels) a la que es dissipa el fum</span><span class="w"></span>
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">expansio</span><span class="p">;</span><span class="w">   </span><span class="c1">// Valor que determina la velocitat (píxels) amb la que s'expandeix el fum</span><span class="w"></span>
 <span class="w">        </span>
 <span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fum</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">posCrater</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="kd">super</span><span class="w"> </span><span class="p">(</span><span class="n">posCrater</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">170</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.1</span><span class="p">));</span><span class="w"></span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">disipacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">dissipacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">expansio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">190</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
@@ -1534,7 +1550,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">frameCount</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">expansio</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span>
-<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">disipacio</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">dissipacio</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -1757,6 +1773,10 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 </div>
 </div>
 </div>
+<details class="question">
+<summary>Activitat 705. Polimorfisme</summary>
+<p>Modifica els mètodes de les classes derivades per tal d'aconseguir que les fitxes es moguen de forma diferent i tinguen una aparença distinta entre elles.</p>
+</details>
 <h2 id="interficies">Interfícies</h2>
 <p>Una interfície en Java, és sintàcticament similar a una classe abstracta, en la qual pot especificar un o més mètodes que no tenen cos. Aquests mètodes han de ser implementats per una classe perquè es defineixen les seues accions.</p>
 <p>Per tant, una interfície especifica què s'ha de fer, però no com fer-ho. Una vegada que es defineix una interfície, qualsevol quantitat de classes pot implementar-la. A més, una classe pot implementar qualsevol quantitat d'interfícies.</p>

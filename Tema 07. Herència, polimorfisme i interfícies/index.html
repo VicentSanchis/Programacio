@@ -332,7 +332,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 <summary>Activitat 701. El joc dels escacs</summary>
 <p>Fes un diagrama de classes per al joc dels escacs utilitzant els mecanismes d'herència com hem vist amb l'exemple del Volcano.</p>
 <p><center>
-<kbd style="border:1px solid #888;"><img alt="Volcano" src="../assets/Tema7/Escacs.gif"/></kbd>
+<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="../assets/Tema7/Escacs.gif"/></kbd>
 </center></p>
 <p>Basant-nos en la imatge anterior, podriem fer un dissenya amb un tauler de joc una classe base fitxa que aglutine tots els atributs i mètodes comuns i després per cada una de les fitxes diferents: torre, cavall, àlfil, peó, torre, rei i reina es podrien crear classes derivades on especificariem les diferències en aparença, cada fitxa té una forma, i en comportament, cada fitxa es mou d'una forma diferent.</p>
 </details>
@@ -445,18 +445,17 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </div>
 </input></input></input></input></div>
 <p>Del codi anterior es pot extreure la següent informació:</p>
-<ul>
-<li>Totes les subclasses tindran accés, encara que al codi no estiga als atributs de la superclasse.</li>
-<li>Totes les subclasses quan criden als mètodes display i update, executaran el codi que hi ha a la superclasse sempre que no es s’indique el contrari (sobrecàrrega o sobreescriptura).</li>
-<li>La lava no rebota mentre que la roca sí.</li>
-<li>El fum vola cap amunt</li>
-</ul>
+<div class="highlight"><pre><span></span><code>- Totes les subclasses tindran accés, encara que al codi no estiga als atributs de la superclasse.
+- Totes les subclasses quan criden als mètodes display i update, executaran el codi que hi ha a la superclasse sempre que no es s’indique el contrari (sobrecàrrega o sobreescriptura).
+- La lava no rebota mentre que la roca sí.
+- El fum vola cap amunt
+</code></pre></div>
 <p>Per poder acoblar el nostre volcà al nou sistema de partícules (fum, lava i roques) haurem de fer alguns canvis.
 El primer és conceptual, a partir d'ara el nostre <strong>Crater</strong> contindrà un conjunt de <strong>roques, laves i partícules de fum</strong>.
 El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expulsat, aquest podrà ser una de les tres opcions anteriors, però com decidim el tipus? Doncs els frames parells crearem lava mentre que als cicles senars crearem roques, el fum es genera a tots els frames.</p>
 <details class="question">
 <summary>Activitat 702. Visibilitat</summary>
-<p>Revisa i comprova que has posat de forma correcta els modificadors de visibilitat al teu projecte.</p>
+<p>Revisa i comprova que has posat de forma correcta els modificadors de visibilitat al teu projecte. Recorda que a les classes base o pare normalment es posen com a protected els elements susceptibles de ser heretats per les classes derivades.</p>
 </details>
 <h3 id="constructors-en-herencia">Constructors en herència</h3>
 <p>De la mateixa manera que s’hereten mètodes i atributs també s’hereten els constructors de la classe. D’aquesta forma si declarem un objecte d’una classe derivada, primer s’executa el constructor de la classe base i a continuació s’executa la part de codi de la classe derivada.</p>
@@ -466,7 +465,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <p>El que fem amb el codi anterior i la crida a <strong>super</strong> és cridar al constructor de la classe pare passant-li els paràmetres que demana per tal d'inicialitzar els diferents piroclasts de forma correcta.</p>
 <p>Per tal de distingir les diferents subclasses, els assignarem diferents colors a les diferents subclasses.</p>
 <p><center>
-<kbd style="border:1px solid #888;"><img alt="Volcano" src="../assets/Tema7/VolcanoT7.gif"/></kbd>
+<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="../assets/Tema7/VolcanoT7.gif"/></kbd>
 </center></p>
 <p>A més a més, super() també ens permet cridar a mètodes de la classe pare de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">super</span><span class="p">.</span><span class="na">metode</span><span class="p">(</span><span class="n">arguments</span><span class="p">);</span>
@@ -1119,7 +1118,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 </div>
 <details class="question">
 <summary>Activitat 703. Constructors de classe</summary>
-<p>Implementa els constructors de les classes que has dissenyat per al teu projecte dels Escacs.</p>
+<p>Implementa els constructors de les classes que has dissenyat per al teu projecte dels Escacs. Recorda que almenys vas a tindre un constructor per cada una de les classes. També has de tindre en compte el que hem vist sobre l'herència de constructors, de com es pot cridar als constructors de la classe pare, on s'executa tot el codi comú a les classes derivades i després ja s'executaria el codi propi i específic de les classes derivades.</p>
 </details>
 <h3 id="sobrecarrega-i-sobreescriptura-de-metodes">Sobrecàrrega i sobreescriptura de mètodes</h3>
 <p>La <strong>sobrecàrrega</strong> de mètodes és la creació de diversos mètodes amb el mateix nom però amb diferent llista de tipus de paràmetres o de funcionalitat. Java diferencia entre els mètodes sobrecarregats en base al número i tipus de paràmetres o arguments que té el mètode i no pel tipus que retorna.</p>
@@ -1152,7 +1151,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <span class="n">Fum</span><span class="w"> </span><span class="n">fum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fum</span><span class="w"> </span><span class="p">();</span>
 <span class="n">Roca</span><span class="w"> </span><span class="n">roca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Roca</span><span class="w"> </span><span class="p">();</span>
 
-<span class="n">piro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fum</span><span class="p">;</span><span class="w">  </span><span class="c1">// Conversió automàtica</span>
+<span class="n">piro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fum</span><span class="p">;</span><span class="w">   </span><span class="c1">// Conversió automàtica</span>
 <span class="n">piro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">roca</span><span class="p">;</span><span class="w">  </span><span class="c1">// Conversió automàtica</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="classes-no-derivables-atribut-final">Classes no derivables: atribut final</h3>
@@ -1201,7 +1200,7 @@ Un mètode abstracte és un mètode que defineix un comportament o funcionalitat
 <p>Finalment, en realitat no és necessari declarar abstractes els mètodes a la classe base si després es redefineixen amb la mateixa signatura (nom més paràmetres) a la classe derivada.</p>
 <details class="question">
 <summary>Activitat 704. Classe fitxa abstracta</summary>
-<p>Converteix la classe pare fitxa en una classe abstracta. També has de fer abstractes els mètodes que consideres.</p>
+<p>Converteix la classe pare fitxa en una classe abstracta. També has de fer abstractes els mètodes que consideres. Ara és un bon moment per <strong>refactoritzar</strong> el codi, és a dir, revisar aquelles sentències que s'executen comunes a totes les classes derivades i podem posar a la classe general per tal d'evitar redundàncies.</p>
 </details>
 <h3 id="avantatges-del-polimorfisme">Avantatges del polimorfisme</h3>
 <p>El polimorfisme fa el seu sistema més flexible, sense perdre cap dels avantatges de la compilació estàtica de tipus que tenen lloc en temps de compilació; tal és el cas de Java.</p>
@@ -1774,7 +1773,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 </div>
 <details class="question">
 <summary>Activitat 705. Polimorfisme</summary>
-<p>Modifica els mètodes de les classes derivades per tal d'aconseguir que les fitxes es moguen de forma diferent i tinguen una aparença distinta entre elles.</p>
+<p>Modifica els mètodes de les classes derivades per tal d'aconseguir que les fitxes es moguen de forma diferent i tinguen una aparença distinta entre elles. El que es preten en aquesta activitat és un poc imitar el que hem fet amb el Volcano, que cada classe derivada tinga una imatge i un comportament diferents.</p>
 </details>
 <h2 id="interficies">Interfícies</h2>
 <p>Una interfície en Java, és sintàcticament similar a una classe abstracta, en la qual pot especificar un o més mètodes que no tenen cos. Aquests mètodes han de ser implementats per una classe perquè es defineixen les seues accions.</p>
@@ -1862,7 +1861,6 @@ La classe que implementa la interfície ha d’especificar el codi (la implement
 </code></pre></div></td></tr></table></div>
 <h3 id="classes-internes">Classes internes</h3>
 <p>Una classe interna és una classe que es declara dintre d’una altra classe.</p>
-<canvas data-processing-sources="assets/Tema8/jocDomino.pde"></canvas>
 </article>
 </div>
 </div>

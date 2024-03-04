@@ -5,12 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/" rel="prev"/>
-<link href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.15" name="generator"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
 <title>9.- Gràfics. Java Swing. - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -18,7 +17,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -30,7 +29,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -54,6 +53,16 @@
 </div>
 </div>
 </div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
@@ -78,7 +87,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list" role="presentation"></ol>
+<ol class="md-search-result__list"></ol>
 </div>
 </div>
 </div>
@@ -102,7 +111,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="..">
-        Index
+        Índex
       </a>
 </li>
 <li class="md-nav__item">
@@ -146,7 +155,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           9.- Gràfics. Java Swing.
           <span class="md-nav__icon md-icon"></span>
@@ -166,48 +175,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#la-llibreria-swing">
-    La llibreria Swing
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creacio-dun-jframe">
-    Creació d'un JFrame
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jframe">
-    JFrame
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#layout-manager-gestor-de-posicionament">
-    Layout Manager - Gestor de posicionament
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#etiqutes">
-    Etiqutes
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#botons">
-    Botons
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#botons-amb-dos-estats">
-    Botons amb dos estats
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#components-de-text">
-    Components de text
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#esdeveniments">
-    Esdeveniments
+<a class="md-nav__link" href="#la-llibreria-controlp5">
+    La llibreria ControlP5
   </a>
 </li>
 </ul>
@@ -227,1178 +196,83 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-9-grafics-java-swing">Tema 9. Gràfics. Java Swing</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>Fins ara hem estat utilitzant la consola i el teclat a les nostres aplicacions per tal de comunicar-nos amb l'usuari. En aquest tema utilitzarem l'API de Java per al desenvolupament de components gràfics Swing.</p>
-<p>Swing és un conjunt d'eines per a Java. És una API que proporciona interfície gràfica d'usuari (GUI) per a programes de Java. Entre d'altres Swing conté: frames, botons, textbox, menús a banda dels events associats als elements.</p>
-<p>Swing va ser desenvolupat per a proporcionar un conjunt més complex de components GUI que l'anterior Abstract Window Toolkit (AWT). Swing proporciona un aspecte i aparença natiu que emula diverses plataformes, també dóna suport a extensions d'aspecte i aparença que permeten a les aplicacions tindre un aspecte i apareça que no guarda relació amb la plataforma subjacent.</p>
-<p>Huí en dia la majoria de desenvolupadors Java utilitzen Swing o JavaFX per construir interfícies d'usuari</p>
-<h2 id="la-llibreria-swing">La llibreria Swing</h2>
-<p>Com tot en Java, swing no anava a ser menys, està dissenyat com una llibreria de classes, interfícies, recursos, etc.. per la construcció d'insterfícies gràfiques. Swing conté tres APIs una per a components 2D, una altra per al Drag &amp; Drop i l'última per facilitar l'accés. Swing està basada en AWT però és independent de la plataforma, és a dir, sempre mostra la mateixa aparença independentment del sistema en el que s'execute l'aplicació a diferència d'AWT.</p>
-<p>Amb Swing podem fer:
-- Marcs: Finestres amb de títol, menú, botons maximitzar, minimitzar i tancar.
-- Contenidors: poden agrupar diversos controls.
+<p>Fins ara hem estat utilitzant els esdeveniments keyPressed i mouseClicked per tal d'interactuar amb l'usuari o bé també utilitzant diàlegs popup.....</p>
+<p>En aquest tema utilitzarem una llibreria de Processing IDE que es diu controlP5 que s'instal·la des del menú <strong> Tools --&gt; Manage Tools</strong>. Al diàleg que s'obre anem a la pestanya <strong>Libraries</strong> i busquem i instal·lem la llibreria <strong>ControlP5</strong></p>
+<h2 id="la-llibreria-controlp5">La llibreria ControlP5</h2>
+<p>ControlP5 és una col·lecció de controladors per crear una interfície d'usuari gràfica a la part superior del vostre esbós de processament inclouen controls lliscants, botons, commutadors, botons, camps de text, botons de ràdio, caselles de verificació, entre d'altres, i es poden afegir fàcilment a un esbós de processament. Es poden organitzar en contextos PGraphics de control separats i es poden organitzar en pestanyes o grups.</p>
+<p>Amb ControlP5 podem fer:
+- Grups: poden agrupar diversos controls.
 - Botons
-- Etiqutes: text
+- Etiquetes: text
 - Camps i arees de text.
-- Desplegables</p>
-<p>Per tal de poder utilitzar les llibreries Swing de Java hauriem d'afegir al nostre codi el següent:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="components-i-contenidors">Components i contenidors</h3>
-<p>En general, els components Swing es deriven de la classe JComponent. Les úniques excepcions són els quatre contenidors de nivell superior. JComponent proporciona la funcionalitat que és comú a tots els components. Per exemple, JComponent admet la look &amp; feel conectables. JComponent hereta les classes AWT Container i Component. Per tant, un component Swing està integrat i es compatible amb un component AWT.</p>
-<p>Tots els components de Swing estan representats per classes definides dins del paquet javax.swing com hem explicat abans. La següent taula mostra els noms de classe per als components Swing inclosos els contenidors.</p>
-<h4 id="components-java-swing">Components Java Swing</h4>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JApplet</td>
-<td>JButton</td>
-<td>JCheckBox</td>
-<td>JCheckBoxMenuItem</td>
-<td>JColorChooser</td>
-<td>JComboBox</td>
-</tr>
-<tr>
-<td>JComponent</td>
-<td>JDesktopPane</td>
-<td>JDialog</td>
-<td>JEditorPane</td>
-<td>JFileChooser</td>
-<td>JFormattedTextField</td>
-</tr>
-<tr>
-<td>JFrame</td>
-<td>JInternalFrame</td>
-<td>JLabel</td>
-<td>JLayer</td>
-<td>JLayeredPane</td>
-<td>JList</td>
-</tr>
-<tr>
-<td>JMenu</td>
-<td>JMenuBar</td>
-<td>JMenuItem</td>
-<td>JOptionPane</td>
-<td>JPanel</td>
-<td>JPasswordField</td>
-</tr>
-<tr>
-<td>JPopUpMenu</td>
-<td>JProgressBar</td>
-<td>JRadioButton</td>
-<td>JRadioButtonMenuItem</td>
-<td>JRootPane</td>
-<td>JScrollBar</td>
-</tr>
-<tr>
-<td>JScrollPane</td>
-<td>JSeparator</td>
-<td>JSlider</td>
-<td>JSpineer</td>
-<td>JSplitPane</td>
-<td>JTabbedPane</td>
-</tr>
-<tr>
-<td>JTable</td>
-<td>JTextArea</td>
-<td>JTextField</td>
-<td>JTextPane</td>
-<td>JTogglebutton</td>
-<td>JToolBar</td>
-</tr>
-<tr>
-<td>JToolTip</td>
-<td>JTree</td>
-<td>JViewport</td>
-<td>JWindows</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>La majora de noms solen ser prou significatius i resulta intuitiu a primer cop d'ull saber quina és la finalitat de cadascun dels components.</p>
-<h4 id="contenidors-java-swing">Contenidors Java Swing</h4>
-<p>Swing defineix dos tipus de contenidors. Els primers són contenidors de nivell superior: JFrame, JApplet, JWindow i JDialog. (JApplet, que admet applets basats en Swing, ha estat descartat per JDK 9.) Aquests contenidors no hereten JComponent. No obstant això, hereten les classes AWT Component i Container. A diferència d'altres components de Swing, que són lightweight, els contenidors de nivell superior són heavyweight. Això fa que els contenidors de nivell superior siguin un cas especial a la biblioteca de components Swing.</p>
-<p>Com el seu nom indica, un contenidor de nivell superior ha d'estar a la part superior d'una jerarquia de contenció. Un contenidor de nivell superior no està contingut en cap altre contenidor. A més, cada jerarquia de contenció ha de començar amb un contenidor de nivell superior. El més comunament utilitzat per les aplicacions és JFrame.</p>
-<p>El segon tipus de contenidor compatible amb Swing és el contenidor lightweight. Els contenidors lightweight hereten JComponent. Exemples de contenidors lightweight són JPanel, JScrollPane i JRootPane. Els contenidors lightweight sovint es fan servir per a organitzar i administrar col·lectivament grups de components relacionats perquè un contenidor lightweight es pot contenir dins d'un altre contenidor. Per tant, pot utilitzar contenidors lightweight per crear subgrups de controls relacionats que estan continguts dins d'un contenidor extern.</p>
-<h3 id="swing-vs-awt">Swing vs AWT</h3>
-<p>És possible utilitzar Swing i AWT a la mateixa interfície, però podria donar problemes. És recomanable utilitzar només components Swing, ja que tot component AWT té el seu equivalent Swing.</p>
-<p>La majoria de classes Swing comencen per J, per exemple: JButton, JFrame... encara que també existeixen Frame i Button que pertanyen a la llibreria AWT. Cal tindre molta cura en no oblidar de posar la 'J' davant dels components ja que si no podria portar a inconsistències a causa de mesclar components.</p>
-<p>A l'actualitat quasi tota la programació gràfica en Java es fa amb Swing que implemente una interfície gràfica normalment va a tenir quatre tipus d'elements:
-1. Un contenidor de nivell superior: un marc (JFrame), un applet (JApplet) o bé
-objectes JDialog. Aquests contenidors no estan dins d'una altra finestra, són les finestres
-principals.
-2. Components de la interfície gràfica: botons, camps de text, etcètera, que se situen
-a la finestra principal o en contenidors.
-3. Contenidors dissenyats per altres elements de la interfície; JPanel i JScrollPane
-són dos contenidors i, a el mateix temps, són components.
-4. Elements per a la gestió d'esdeveniments.
-Els components sempre s'afegeixen a una làmina o panell; pot ser la de el marc, o
-bé un panell tipus JPanel.
-En general, sempre es creen classes derivades de les classes contenidors de nivell superior;
-tot marc serà una subclasse de JFrame, a l'igual que un applet és una subclasse de
-JApplet.</p>
-<h2 id="creacio-dun-jframe">Creació d'un JFrame</h2>
-<p>La diferència entre crear programes que es comuniquen amb l'usuari mitjançant el terminal i el teclat i fer programes amb Swing és considerable. Al crear una aplicació Swing s'han de tenir en compte conceptes nous com el <strong>threading</strong>. Però per entendre-ho tot millor, farem un programa Swing d'exemple.</p>
-<p>Per al programa d'exemple crearem un <strong>JFrame</strong> al qual li posarem una <strong>JLabel</strong></p>
-<h3 id="exemple-1-programa-simple-swing">Exemple 1. Programa simple Swing</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Un simple programa Swing</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwingDemo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">SwingDemo</span><span class="p">(){</span>
-<span class="w">        </span><span class="n">JFrame</span><span class="w"> </span><span class="n">jfrm</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">JFrame</span><span class="p">(</span><span class="s">"Aplicació Simple Swing"</span><span class="p">);</span><span class="w">        </span><span class="c1">// Crea un nou contenidor JFrame.</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">475</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span><span class="w">                                   </span><span class="c1">// Establim el tamany inicial</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span><span class="w">     </span><span class="c1">// Acabe el programa quan l'usuari tanque l'aplicació.</span>
-<span class="w">        </span><span class="n">JLabel</span><span class="w"> </span><span class="n">jLabel</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Programació GUI amb Swing."</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creem una etiqueta</span>
-<span class="w">        </span><span class="n">jLabel</span><span class="p">.</span><span class="na">setHorizontalAlignment</span><span class="p">(</span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span><span class="w">    </span><span class="c1">// Situem l'etiqueta al centre del frame</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">jLabel</span><span class="p">);</span><span class="w">                                        </span><span class="c1">// Afegim l'etiqueta al frame</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">                                   </span><span class="c1">// Visualitzem el marc.</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">(){</span>
-<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">SwingDemo</span><span class="p">();</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">});</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>El resultat del codi anterior seria el següent:</p>
-<p><img alt="Exemple 1. Programa simple amb Swing" src="../assets/Tema9/SwingSimple.png"/></p>
-<p><strong>JFrame</strong> és un contenidor de nivell superior que s'utilitza de forma comú a les aplicacions Swing, mentre que <strong>JLabel</strong> és una etiqueta que ens servirà per posar text.</p>
-<p>Expliquem amb més detall el que fa la funció main:
-- SwingUtilities.invokeLater() 
-  -  static void invokeLater(Runnable doRun): Executa un doRun.run() per tal que s'execute de forma asincrona al AWT event dispatching thread. A aquets mètode se li ha de passar un objecte Runnable
-- new Runnable() { }:
-  - Objecte Runnable que s'ha de passar al mètode invokeLater
-- public void run() { }: Mètode run que s'executa de l'objecte runnable que se li passa a InvokeLater
-- new SwingDemo()
-  - Codi del mètode run de l'objecte runnable.</p>
-<p>Una aplicació que implemente una interfície gràfica normalment va a tindre quatre tipus d'elements.
-1.  Un contenidor de nivell superior: un marc (JFrame), un applet (JApplet) o bé diàlegs (JDialog) que faran el paper de finestra principal.
-2.  Components de la interfície gràfica: botons, camps de text, etc, que s'afegiran al contenidor de nivell superior anterior.
-3.  Contenidors dissenyats per altres elements de la interfície: JPanel i JScrollPane són dos contenidors i al mateix temps són components.
-4.  Elements per la gestió d'events. </p>
-<p>Els components sempre s'afegeixen a una làmina o paper; pot ser la del marc o bé un panel tipus JPanel. En general, sempre es creen classes derivades de les classes contenidores de nivell superior. Tot marc serà una subclasse de JFrame, de la mateixa forma que un applet és una subclasse de JApplet</p>
-<h2 id="jframe">JFrame</h2>
-<p>La classe JFrame és un tipus de contenidor que hereta de la classe java.awt.Frame. JFrame funciona com la finestra principal on components com etiquetes, botons, camps de text etc, s'afegeixen per crear una interfície gràfica.</p>
-<h3 id="metodes">Mètodes</h3>
-<table>
-<thead>
-<tr>
-<th>Mètode</th>
-<th>Descripció</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JFrame()</td>
-<td>Constructor de la classe. Crea un marca sense títol</td>
-</tr>
-<tr>
-<td>JFrame (String titol)</td>
-<td>Crea un marc amb títol.</td>
-</tr>
-<tr>
-<td>void setTitle (String titlo)</td>
-<td>Estableix el títol del marc</td>
-</tr>
-<tr>
-<td>void setIconImage ( Image img )</td>
-<td>Estableix la icona del marc</td>
-</tr>
-<tr>
-<td>void setDefaultCloseOperation (int op )</td>
-<td>programa el comportament del marca quan es tanca. Possibles valors: EXIT_ON_CLOSE, DO_NOTHING_ON_CLOSE, DISPOSE_ON_CLOSE, HIDE_ON_CLOSE</td>
-</tr>
-<tr>
-<td>Container getContentPane ()</td>
-<td>proporciona el layout de continguts del marc, és a dir, les vores</td>
-</tr>
-<tr>
-<td>void setResizable ( boolean r )</td>
-<td>si r val true, es pot redimensionar el marc</td>
-</tr>
-<tr>
-<td>void add (Component c)</td>
-<td>Afegeix el component c al marc</td>
-</tr>
-<tr>
-<td>void removeComponent (Component c)</td>
-<td>elimina el component c del marc</td>
-</tr>
-<tr>
-<td>Component add (Component c, int p)</td>
-<td>Coloca el component c a la posició p del marc</td>
-</tr>
-<tr>
-<td>void setLayout (LayoutManager mngr)</td>
-<td>estableix la forma de distribuir el components al marc, els quals normalment es distribueixen en posicions relatives, segons el layout que tinga associat el marc</td>
-</tr>
-<tr>
-<td>void setVisible (boolean b)</td>
-<td>fa visible el component si b és true</td>
-</tr>
-<tr>
-<td>void setBounds (int x, int y, int ample, int alt)</td>
-<td>situa el component i canvia el seu tamany</td>
-</tr>
-<tr>
-<td>void setLocation (int x, int y)</td>
-<td>situa el component a les coordenades x i y</td>
-</tr>
-<tr>
-<td>void setLocation (Point p)</td>
-<td>situa el component al punt p</td>
-</tr>
-<tr>
-<td>void setSize (int ample, int alt)</td>
-<td>estableix les dimensions del component</td>
-</tr>
-<tr>
-<td>void setSize (Dimension dim)</td>
-<td>estableix la dimensió del component a dim</td>
-</tr>
-</tbody>
-</table>
-<h2 id="layout-manager-gestor-de-posicionament">Layout Manager - Gestor de posicionament</h2>
-<p>A diferència d'altres aplicacions que es dediquen al disseny d'interfícies gràfiques, les posicions dels elements dintre del nostre contenidor no es fan en pixels ni valors absoluts, s'utilitzen els <strong>Layout Manager</strong> que ho podriem traduir com "gestors de disposició" o "gestor de plantilla" o "gestor de posicionament". Aquestos gestors de posicionament són elements que implementen la interfície "LayoutManager".</p>
-<p>Cada cotenidor té associat un Layout Manager que pot ser: BorderLayout, FlowLayout, GridLayout, BoxLayout, GridBagLayout, CardLayout, SpringLayout...</p>
-<p>Veiem un exemple:</p>
-<h3 id="exemple-2-marc-de-prova">Exemple 2. Marc de prova</h3>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">JFrame</span><span class="w"> </span><span class="n">marc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JFrame</span><span class="p">(</span><span class="s">"MarcProva"</span><span class="p">);</span>
-<span class="n">marco</span><span class="p">.</span><span class="na">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">GridLayout</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
-</code></pre></div></td></tr></table></div>
-El que hem fet al codi anterior és crear i instanciar un nou marc de tipus JFrame amb el títol "MarcProva" i després hem establert el seu gestor de posicionament de tipus GridLayout. </p>
-<p>A continuació detallarem els més utilitzats</p>
-<h3 id="borderlayout">BorderLayout</h3>
-<p>Gestor de posicionament per defecte dels marcs (JFrame) i diàlegs (JDialog). Divideix al contenidor en cinc zones: nord, sud, est, oest i centre, que es corresponen a: BorderLayout.NORTH, BorderLayout.SOUTH, BorderLayout.EAST, BorderLayout.WEST i BorderLayout.CENTER</p>
-<p>Veiem un exemple:</p>
-<h3 id="exemple-3-marc-amb-vora">Exemple 3. Marc amb vora</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcBorder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="w"> </span><span class="o">=</span><span class="mi">350</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcBorder</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"Títol Marc"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Nord"</span><span class="p">,</span><span class="w"> </span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">),</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">NORTH</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Sud"</span><span class="p">,</span><span class="w"> </span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">),</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">SOUTH</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Centre"</span><span class="p">,</span><span class="w"> </span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">),</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Oest"</span><span class="p">,</span><span class="w"> </span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">),</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">WEST</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Est"</span><span class="p">,</span><span class="w"> </span><span class="n">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">),</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">EAST</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">AMPLE</span><span class="p">,</span><span class="n">ALT</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span><span class="w">      </span>
-<span class="w">        </span><span class="n">MarcBorder</span><span class="w"> </span><span class="n">marc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcBorder</span><span class="p">();</span>
-<span class="w">        </span><span class="n">marc</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>El resultat del codi anterior és:</p>
-<p><img alt="Exemple 3. Marc amb Vora" src="../assets/Tema9/MarcBorder.png"/></p>
-<h3 id="flowlayout">FlowLayout</h3>
-<p>Amb aquest gestor podem colocar els elements d'esquerra cap a dreta i de dalt cap avall. La classe FlowLayout disposa de diversos constructors, un d'ells ens permet establir l'alineació dels components <strong>FlowLayout(int align)</strong> on align pot ser: FlowLayout.RIGHT, FlowLayout.CENTER, FlowLayout.LEFT. </p>
-<h3 id="exemple-4-flowlayout">Exemple 4. Flowlayout</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcFlow</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="w"> </span><span class="o">=</span><span class="mi">175</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcFlow</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"El meu marc"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FlowLayout</span><span class="p">());</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="w">   </span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Primera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Segona"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Tercera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Quarta"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Cinquena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Sisena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">AMPLE</span><span class="p">,</span><span class="n">ALT</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">MarcFlow</span><span class="w"> </span><span class="n">marc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcFlow</span><span class="p">();</span>
-<span class="w">        </span><span class="n">marc</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>I aquest és el resultat:
-<img alt="Exemple 4. Marc amb FlowLayout" src="../assets/Tema9/MarcFlow.png"/></p>
-<h3 id="gridlayout">GridLayout</h3>
-<p>Aquest gestor de posicionament distribueix els components del container associat en forma de graella de cel·les iguals en forma de quadricula de dalt cap avall i de esquerra a dreta, és a dir, en files i columnes.</p>
-<h3 id="exemple-5-gridlayout">Exemple 5. GridLayout</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcGrid</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="w"> </span><span class="o">=</span><span class="mi">175</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcGrid</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"El meu marc"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">GridLayout</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Primera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Segona"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Tercera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Quarta"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Cinquena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Sisena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">AMPLE</span><span class="p">,</span><span class="n">ALT</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">MarcGrid</span><span class="w"> </span><span class="n">marc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcGrid</span><span class="p">();</span>
-<span class="w">        </span><span class="n">marc</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Resultat del codi anterior:</p>
-<p><img alt="Exemple 5. Marc amb Graella" src="../assets/Tema9/MarcGrid.png"/></p>
-<h3 id="boxlayout">BoxLayout</h3>
-<p>Aquest gestor coloca els components en una única fila o una única columna, s'assembla a una caixa amb orientació horitzontal o vertical; el constructor necessita un argument amb el contenidor que es va a utilitzar i l'orientació que pot ser: BoxLayout.X_AXIS o BoxLayout.Y_AXIS. </p>
-<p>El format del constructor és: BoxLayout (Container desti, int orientacio)</p>
-<h3 id="exemple-6-boxlayout">Exemple 6. BoxLayout</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcBox</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="w"> </span><span class="o">=</span><span class="mi">175</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcBox</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"El meu marcBox"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JPanel</span><span class="w"> </span><span class="n">panel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JPanel</span><span class="p">()</span><span class="w"> </span><span class="p">;</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BoxLayout</span><span class="p">(</span><span class="n">panel</span><span class="p">,</span><span class="w"> </span><span class="n">BoxLayout</span><span class="p">.</span><span class="na">Y_AXIS</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Primera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Segona"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Tercera"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Quarta"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Cinquena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">panel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Sisena"</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">panel</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">AMPLE</span><span class="p">,</span><span class="n">ALT</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">MarcBox</span><span class="w"> </span><span class="n">miMarcBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcBox</span><span class="p">();</span>
-<span class="w">        </span><span class="n">miMarcBox</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="Exemple 6. Marc de tipus BoxLayout" src="../assets/Tema9/MarcBox.png"/></p>
-<h3 id="boxlayout-box">BoxLayout - Box</h3>
-<p>Box o caixa, és un contenidor que té com gestor de posicionament (LayoutManager) predeterminat un BoxLayout; utilitzant aquest contenidor no cal crear un panel perquè directament es crea un objecte Box i a continuació s'afegeixen els components.</p>
-<p>La classe Box disposa de dos mètodes static (mètodes factoria) que creen l'objecte, i són: </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Box</span><span class="p">.</span><span class="na">createHorizontalBox</span><span class="p">();</span>
-<span class="n">Box</span><span class="p">.</span><span class="na">createVerticalBox</span><span class="p">();</span>
-</code></pre></div></td></tr></table></div>
-<p>Aleshores, per crear un Box no s'utilitza el constructor sino que es crida a un d'aquestos dos mètodes; per un objecte Box amb orientació horitzontal, per exemple:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Box</span><span class="w"> </span><span class="n">caixaHoriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Box</span><span class="p">.</span><span class="na">createHorizontalBox</span><span class="p">();</span>
-</code></pre></div></td></tr></table></div>
-<p>Al contenidor se li afegeix el component caixaHoriz.add(element) i després el contenidor al marc.</p>
-<h3 id="exemple-7-boxlayout-box">Exemple 7. BoxLayout - Box</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Marc2Box</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="w"> </span><span class="o">=</span><span class="mi">275</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">175</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Marc2Box</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">"El meu marc"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto1"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto2"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto3"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto4"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto5"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">b6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Boto6"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">Box</span><span class="w"> </span><span class="n">caixaH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Box</span><span class="p">.</span><span class="na">createHorizontalBox</span><span class="p">();</span><span class="w"> </span><span class="c1">// método factoría</span>
-<span class="w">        </span><span class="n">caixaH</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// separación horizontal de 10 pixeles</span>
-<span class="w">        </span><span class="n">caixaH</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Box</span><span class="p">.</span><span class="na">createHorizontalStrut</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
-<span class="w">        </span><span class="n">caixaH</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b2</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// zona rígida, separación horizontal</span>
-<span class="w">        </span><span class="n">caixaH</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Box</span><span class="p">.</span><span class="na">createRigidArea</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Dimension</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)));</span>
-<span class="w">        </span><span class="n">caixaH</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b3</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">caixaH</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">NORTH</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">Box</span><span class="w"> </span><span class="n">caixaV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Box</span><span class="p">.</span><span class="na">createVerticalBox</span><span class="p">();</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Box</span><span class="p">.</span><span class="na">createHorizontalStrut</span><span class="p">(</span><span class="mi">70</span><span class="p">));</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b4</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// separación horizontal 10 pixeles</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Box</span><span class="p">.</span><span class="na">createVerticalStrut</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b5</span><span class="p">);</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Box</span><span class="p">.</span><span class="na">createRigidArea</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Dimension</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)));</span>
-<span class="w">        </span><span class="n">caixaV</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b6</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">caixaV</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">AMPLE</span><span class="p">,</span><span class="n">ALT</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Marc2Box</span><span class="w"> </span><span class="n">marcBox2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Marc2Box</span><span class="p">();</span>
-<span class="w">        </span><span class="n">marcBox2</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="Exemple 7. Marc amb dos BoxLayout" src="../assets/Tema9/MarcBox2.png"/></p>
-<h3 id="combinar-layouts">Combinar Layouts</h3>
-<p>JFrame, JDialog i JPanel només poden tindre un gestor de posicionament però si agafem un contenidor de primer nivell com un marc, podríem combinar diversos layouts niats (nested). Al següent exemple podem veure una combinació de tres gestors de posicionament en un mateix contenidor.</p>
-<h3 id="exemple-8-combinacio-de-disposicions-layouts">Exemple 8. Combinació de disposicions (layouts)</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcGestors</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcGestors</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">JPanel</span><span class="w"> </span><span class="n">pa1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JPanel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FlowLayout</span><span class="p">());</span>
-<span class="w">        </span><span class="n">JPanel</span><span class="w"> </span><span class="n">pa2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JPanel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">());</span>
-<span class="w">        </span><span class="n">JPanel</span><span class="w"> </span><span class="n">pa3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JPanel</span><span class="p">();</span>
-<span class="w">        </span><span class="n">pa3</span><span class="p">.</span><span class="na">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BoxLayout</span><span class="p">(</span><span class="n">pa3</span><span class="p">,</span><span class="w"> </span><span class="n">BoxLayout</span><span class="p">.</span><span class="na">Y_AXIS</span><span class="p">));</span>
-
-<span class="w">        </span><span class="c1">// componentes del panel 1</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">opc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Alta mar"</span><span class="p">,</span><span class="w"> </span><span class="s">"Baixa mar"</span><span class="p">,</span><span class="w"> </span><span class="s">" Muntanya"</span><span class="p">};</span>
-<span class="w">        </span><span class="n">pa1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="w"> </span><span class="p">(</span><span class="s">"Tria.."</span><span class="p">,</span><span class="w"> </span><span class="n">JLabel</span><span class="p">.</span><span class="na">CENTER</span><span class="p">));</span>
-<span class="w">        </span><span class="n">pa1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JList</span><span class="p">(</span><span class="n">opc</span><span class="p">));</span>
-<span class="w">        </span><span class="n">pa1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Prèmer"</span><span class="p">));</span>
-
-<span class="w">        </span><span class="c1">// componentes del panel 2</span>
-<span class="w">        </span><span class="n">JTextField</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JTextField</span><span class="p">(</span><span class="s">"Raons "</span><span class="p">);</span>
-<span class="w">        </span><span class="n">j</span><span class="p">.</span><span class="na">setEditable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-<span class="w">        </span><span class="n">pa2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">WEST</span><span class="p">);</span>
-<span class="w">        </span><span class="n">pa2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Botó"</span><span class="p">),</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">EAST</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// componentes del panel 3</span>
-<span class="w">        </span><span class="n">pa3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JCheckBox</span><span class="p">(</span><span class="s">"Box "</span><span class="p">,</span><span class="kc">false</span><span class="p">));</span>
-<span class="w">        </span><span class="n">pa3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="w"> </span><span class="p">(</span><span class="s">"Calendari"</span><span class="p">,</span><span class="w"> </span><span class="n">JLabel</span><span class="p">.</span><span class="na">CENTER</span><span class="p">));</span>
-<span class="w">        </span><span class="n">pa3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JRadioButton</span><span class="p">(</span><span class="s">"Bot Radio"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">));</span>
-
-<span class="w">        </span><span class="c1">// asigna layout al marco y se ponen los paneles</span>
-<span class="w">        </span><span class="n">setLayout</span><span class="p">(</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">pa1</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">NORTH</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">pa2</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">pa3</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">SOUTH</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">MarcGestors</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">        </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcGestors</span><span class="p">();</span>
-<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
-<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">setLocation</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
-<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">setResizable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>El resultat seria:</p>
-<p><img alt="Exemple 9. Combinació de disposicions" src="../assets/Tema9/MarcsNiats.png"/></p>
-<h3 id="desactivar-gestor-de-posicionament">Desactivar gestor de posicionament</h3>
-<p>Per defecte un contenidor sempre té associat un gestor de posicionament (layout) però de vegades ens pot resultar interessant desactivar aquest gestor de posicionament. Utilitzarem el mètode setLayout i li passarem per parametre null.</p>
-<h2 id="etiqutes">Etiqutes</h2>
-<p>Una etiqueta és un component només lectura al qual li podem modificar el text que conté i que normalment s'utilitza per posar algun missatge significatiu de la nostra interfície a l'usuari final. En altres paraules, són components de text fixe que només mostren text però que no reben cap event. Per gestionar les etiquetes a Java utilitzem la classe <strong>JLabel</strong></p>
-<h3 id="metodes_1">Mètodes</h3>
-<ul>
-<li><strong>JLabel ():</strong> Crea una etiqueta sense text associat.</li>
-<li><strong>JLabel (String msg):</strong> Crea una etiqueta amb el text msg.</li>
-<li><strong>JLabel (String msg, Icon icona):</strong> Crea una etiqueta amb el text msg i la icona icon.</li>
-<li><strong>JLabel (String msg, int align):</strong> crea una etiqueta amb el text msg alineat segons el segon argument que pot ser SwingConstants.CENTER, SwingConstants.LEFT o SwingConstants.RIGHT.</li>
-<li><strong>public String getText ():</strong> torna el text de l'etiqueta</li>
-<li><strong>public void setText (String msg):</strong> estableix el text de l'etiqueta.</li>
-</ul>
-<h2 id="botons">Botons</h2>
-<p>A Swing es defineixe diversos tipus de botons, la classe base dels quals és <strong>Abstract Button</strong>, és una classe abstracta que encapsula propietats i mètodes comuns als diversos tipus de botons</p>
-<h3 id="metodes_2">Mètodes</h3>
-<ul>
-<li><strong>void setText (String text)</strong>: Estableix el text del botó.</li>
-<li><strong>String getText ()</strong>: Obté el text del botó.</li>
-<li><strong>boolean isSelected()</strong>: true si s'ha seleccionat el botó.</li>
-<li><strong>void setSelectes (boolean b)</strong>: selecciona el botó.</li>
-<li><strong>void doClick (int temps)</strong>: tria el botó durant temps milisegons</li>
-<li><strong>void setIcon (Icon icona)</strong>: estableix la icona del botó.</li>
-<li><strong>void setMnemonic (int mnemonic)</strong>: relaciona una tecla amb el botó.</li>
-<li><strong>void addActionListener(ActionListener al)</strong>: assigna un listener per controlar events.</li>
-</ul>
-<h3 id="jbutton">JButton</h3>
-<p>La classe JButton representa el botó comú; es crea especificament una cadena, una icona, ambdos, o un element encara sense especificar; els constructors de la classe són:
-- <strong>JButton()</strong>: Constructor de la classe
-- <strong>JButton(String text)</strong>: Constructor amb text del botó.
-- <strong>JButton(String text, Icon icona)</strong>: Constructor amb text i icona.</p>
-<p>La classe deriva d'AbstractButton per tant tots els seus mètodes estaran disponibles també.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">JButton</span><span class="w"> </span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="n">b3</span><span class="p">;</span>
-<span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">();</span><span class="w"> </span>
-<span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"GROC"</span><span class="p">);</span>
-<span class="n">b3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">LibroIcon</span><span class="p">());</span><span class="w"> </span>
-</code></pre></div></td></tr></table></div>
-<h2 id="botons-amb-dos-estats">Botons amb dos estats</h2>
-<p><strong>JToogleButton</strong> és la classe base dels botons amb dos estats; JRadioButton que s'utilitza per definir un grup de botons d'opció única; per agrupar botons d'opció única s'utilitza la classe ButtonGroup, primer es crea un objecte ButtonGroup (constructor sense arguments); a continuació s'afegeix JRadioButton amb el mètode de ButtonGroup, add(AbstracButton b).</p>
-<h3 id="constructors-de-jradiobutton">Constructors de JRadioButton</h3>
-<ul>
-<li><strong>JRadioButton()</strong>: Constructor per defecte.</li>
-<li><strong>JRadioButton(String msg)</strong>: Constructor amb text del botó.</li>
-<li><strong>JRadioButton(String msg, boolean sel)</strong>: Constructor amb el text i si sel és true, el botó ja estaria seleccionat.</li>
-</ul>
-<h3 id="exemple-9-diversons-botons">Exemple 9. Diversons botons</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kd">class</span> <span class="nc">PanelJRadio</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JPanel</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">ButtonGroup</span><span class="w"> </span><span class="n">grb</span><span class="p">;</span>
-<span class="w">    </span><span class="n">JRadioButton</span><span class="w"> </span><span class="n">jr1</span><span class="p">,</span><span class="w"> </span><span class="n">jr2</span><span class="p">,</span><span class="w"> </span><span class="n">jr3</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">PanelJRadio</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">grb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ButtonGroup</span><span class="p">();</span>
-<span class="w">        </span><span class="n">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">GridLayout</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
-<span class="w">        </span><span class="n">add</span><span class="w"> </span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Selecció excloent"</span><span class="p">));</span>
-
-<span class="w">        </span><span class="c1">// se crea botón de radio, se añade al panel y a la agrupación</span>
-<span class="w">        </span><span class="n">jr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JRadioButton</span><span class="p">(</span><span class="s">"Avió"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">jr1</span><span class="p">);</span>
-<span class="w">        </span><span class="n">grb</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">jr1</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// se crea botón de radio, se añade al panel y a la agrupación</span>
-<span class="w">        </span><span class="n">jr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JRadioButton</span><span class="p">(</span><span class="s">"Tren"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">jr2</span><span class="p">);</span>
-<span class="w">        </span><span class="n">grb</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">jr2</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// se crea botón de radio, se añade al panel y a la agrupación</span>
-<span class="w">        </span><span class="n">jr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JRadioButton</span><span class="p">(</span><span class="s">"Cotxe"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">jr3</span><span class="p">);</span>
-<span class="w">        </span><span class="n">grb</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">jr3</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p><strong>JCheckBox</strong> o també anomenat: casella de verificació, check o checkbox.</p>
-<h3 id="constructors-de-jcheckbox">Constructors de JCheckBox</h3>
-<ul>
-<li><strong>JCheckBox():</strong> Constructor per defecte.</li>
-<li><strong>JCheckBox(String text):</strong>: Constructor amb el text associat.</li>
-<li><strong>JCheckBox(String text, boolean sel):</strong> Constructor amb text i si sel és true, la casella vindria ja marcada.</li>
-</ul>
-<p>La classe <strong>JComboBox</strong> no està a la jerarquia de botons, no deriva d'AbstractButton; combina en un sol component un botó amb una llista d'elements. Una <strong>JComboBox</strong> s'utilitza per crear una llista desplegable a la que es poden afegir opcions, editarles o fer seleccions.</p>
-<h3 id="constructors-de-jcombobox">Constructors de JComboBox</h3>
-<ul>
-<li><strong>JComboBox():</strong> Constructor per defecte.</li>
-<li><strong>JComboBox(Object llista[]):</strong> Constructor amb una llista d'objectes per paràmetre.</li>
-</ul>
-<p>Alguns dels seus mètodes són:
-- <strong>public void addItem(Object q):</strong> afegeix un element a la llista (pel final).
-- <strong>public insertItemAt(Object q, int indice):</strong> insereix en índex l'element.
-- <strong>public void setEditable(boolean flag):</strong> si flag és true l'element de llista seleccionat és editable.
-- <strong>public void setMaximumRowCount(int n):</strong> posa el màxim d'elements a mostrar en el combo, si hi ha més elements apareix la barra d'scroll.
-- <strong>public Object getSelectedItem():</strong> torna l'element seleccionat.</p>
-<p>Els mètodes següents són per la gestió d'events al combobox:
-- <strong>public void actionPerformed(ActionEvent ev);</strong>
-- <strong>public void addActionListener(ActionListener ae);</strong>
-- <strong>public void addItemListener(ItemListener it);</strong>
-- <strong>public void addStateChanged(ItemEvent ev);</strong></p>
-<h3 id="exemple-10-combobox">Exemple 10. ComboBox</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.event.*</span><span class="p">;</span>
-
-<span class="kd">class</span> <span class="nc">PanelJCombo</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JPanel</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">JComboBox</span><span class="w"> </span><span class="n">jcb</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">PanelJCombo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">jcb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JComboBox</span><span class="p">();</span>
-<span class="w">        </span><span class="n">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">());</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MAD - BCN"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MAD - AGP"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MAD - XRY"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"BRU - TFN"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"LEN - BCN"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"ROM - BCN"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jcb</span><span class="p">.</span><span class="na">setMaximumRowCount</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">jcb</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">NORTH</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="components-de-text">Components de text</h2>
-<p>Els components Swing que s'utilitzen per editar o mostrar text formen una jerarquia de classes la base de la qual és JTextComponent; aquesta última és una classe abstracta que es troba al paquet <strong>java.swing.text</strong></p>
-<h3 id="jtextcomponent">JTextComponent</h3>
-<p>Els components de text suporten una ampla varietat de caracters de còdis alfabètics; en ells es pot inserir, esborrar o seleccionar caracters; és text modificable per l'usuari; la classe disposa del constructor <strong>JTextComponent()</strong> que crea una component de text editable. </p>
-<p>Els seus mètodes són:
-- <strong>String getText():</strong> torna el text que té el component.
-- <strong>String getText(int dspl,int lon):</strong> torna el text del component a partir del desplaçament dspl i de la longitud lon.
-- <strong>void setText(String txt):</strong>: substituieix el text del component per txt; si txt és null o és una cadena buida, esborra el text del component.
-- <strong>void setEditable(boolean b):</strong> un component de text és editable per omisió; amb aquest mètode s'especifica si és o no.</p>
-<h3 id="jtextfield-jpasswordtext">JTextField, JPasswordText</h3>
-<p>La classe <strong>JTextField</strong> representa un camp de text modificable per l'usuar; amb aquest component s'edita una línia de text amb l'ample, alineació i tipus de lletra que es desitge.</p>
-<p><strong>JPasswordField</strong> es deriva de JTextField; representa un camp de text amb la particularitat de que emmascara els caracters quan es visualitza; s'utilitza per editar una clau secreta, contrasenya o password; per omisió, cada caracter de un JPasswordField es substitueix per un '*'.</p>
-<p>Els constructors de <strong>JTextField</strong> són:
-- <strong>JTextField():</strong> camp de text buit de 0 columnes.
-- <strong>JTextField(int cols):</strong> camp de text buit de cols columnes.
-- <strong>JTextField(String msg):</strong> camp de text ajustat a la cadena msg.
-- <strong>JTextField(String msg,int col):</strong> camp de text amb la cadena msg i de cols columnes.</p>
-<p>Els constructors de <strong>JPasswordField</strong> tenen els mateixos arguments que JTextField; els seus mètodes són:
-- <strong>void setFont(Font tipo)</strong>
-- <strong>void setHorizontalAlignment(int alig):</strong> alineació del text; els valors possibles d'alig son les constants de <strong>SwingConstants</strong>: RIGHT, LEFT, CENTER, TRAILING, LEADING (aquest és el predeterminat)
-- <strong>void setColumns(int cols):</strong> posa el número de columnes preferit per al camp.</p>
-<p><strong>JPasswordField</strong> hereta els mètodes anteriors i a més a més disposa d'aquestos:
-- <strong>void setEchoChar(char c):</strong> coloca c per emmascarar els caracters del camp.
-- <strong>char getEchoChar():</strong> torna el caracter que emmascara; per defecte '<em>'.
-- </em><em>char[] getPassword():</em>* torna la cadena del camp en un array de caracters.</p>
-<h3 id="exemple-11-passwords-i-labels">Exemple 11. Passwords i Labels</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.event.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MarcPassWord</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">JFrame</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AMPLE</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">ALT</span><span class="o">=</span><span class="mi">150</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">JPasswordField</span><span class="w"> </span><span class="n">clau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">JLabel</span><span class="w"> </span><span class="n">et1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">JLabel</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">MarcPassWord</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">        </span><span class="n">setSize</span><span class="p">(</span><span class="n">ANCHO</span><span class="p">,</span><span class="n">ALTO</span><span class="p">);</span>
-<span class="w">        </span><span class="n">creaComponentes</span><span class="p">();</span>
-<span class="w">        </span><span class="n">pack</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creaComponents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">clau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JPasswordField</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<span class="w">        </span><span class="n">et1</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">();</span>
-
-<span class="w">        </span><span class="c1">// oyente para proceso de la acción del usuario</span>
-<span class="w">        </span><span class="n">clave</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">procesoAccionUser</span><span class="p">(</span><span class="n">evt</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">});</span>
-
-<span class="w">        </span><span class="c1">// pone el campo de texto con la clave</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">clau</span><span class="p">,</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// crea y pone la etiqueta en el marco</span>
-<span class="w">        </span><span class="n">et1</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">awt</span><span class="p">.</span><span class="na">Font</span><span class="p">(</span><span class="s">"Times New Roman"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">));</span>
-<span class="w">        </span><span class="n">et1</span><span class="p">.</span><span class="na">setHorizontalAlignment</span><span class="p">(</span><span class="n">javax</span><span class="p">.</span><span class="na">swing</span><span class="p">.</span><span class="na">SwingConstants</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
-<span class="w">        </span><span class="n">et1</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"PASSWORD "</span><span class="p">);</span>
-<span class="w">        </span><span class="n">et1</span><span class="p">.</span><span class="na">setToolTipText</span><span class="p">(</span><span class="s">"Exemple"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">add</span><span class="p">(</span><span class="n">et1</span><span class="p">,</span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">NORTH</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// método que se ejecuta al actuar el usuario sobre el campo</span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">procesoAccionUser</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">pas</span><span class="o">[]</span><span class="p">;</span>
-<span class="w">            </span><span class="n">pas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clau</span><span class="p">.</span><span class="na">getPassword</span><span class="p">();</span>
-<span class="w">            </span><span class="n">res</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
-<span class="w">            </span><span class="n">res</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Font</span><span class="p">(</span><span class="s">"Book Antiqua"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">));</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pas</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Teclejar Password "</span><span class="p">);</span>
-<span class="w">                </span><span class="n">et1</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"PASSWORD(teclejar) "</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">clau</span><span class="p">.</span><span class="na">setEditable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-<span class="w">                </span><span class="n">res</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"Es valida la clau"</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="n">add</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="w"> </span><span class="n">BorderLayout</span><span class="p">.</span><span class="na">SOUTH</span><span class="p">);</span>
-<span class="w">            </span><span class="n">validate</span><span class="p">();</span>
-<span class="w">            </span><span class="n">pack</span><span class="p">();</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">MarcPassWord</span><span class="w"> </span><span class="n">marc</span><span class="p">;</span>
-<span class="w">            </span><span class="n">marc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MarcPassWord</span><span class="p">(</span><span class="s">"Marc amb password"</span><span class="p">);</span>
-<span class="w">            </span><span class="n">marc</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">            </span><span class="n">marc</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Resultat</p>
-<p><img alt="Exemple 11. Password Text Box" src="../assets/Tema9/MarcPassword.png"/></p>
-<h3 id="jtextarea">JTextArea</h3>
-<p>El component <strong>JTextArea</strong> s'utilitza amb la finalitat de mostrar moltes línies de text; disposa de mètodes per fixar l'ample de cada línia i l'acció a realitzar si la línia que s'insereix és major que l'ample prefixat; també permet decidir si es trenquen o no les paraules al canvi de línia.</p>
-<p>Aquest component no disposa de barra d'scroll <strong>JScrollPane</strong>, cal crear l'scroll i associar-lo al component; per exemple: es crea el component areaText:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">JTextArea</span><span class="w"> </span><span class="n">areaText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JTextArea</span><span class="p">();</span>
-<span class="c1">// A continuació es crea l'scroll i s'associa a **areaText**:</span>
-<span class="n">JScrollPane</span><span class="w"> </span><span class="n">barra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JScrollPane</span><span class="p">(</span><span class="n">areaText</span><span class="p">);</span>
-<span class="c1">// Per últim, l'scroll es posa al marc</span>
-<span class="n">areaText</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">barra</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-Els constructors són:
-- <strong>JTextArea():</strong> crea el component amb cadena nula, zero files i columnes.
-- <strong>JTextArea(int filas,int cols):</strong> crea amb cadena nula i el número de files i columnes especificat.
-- <strong>JTextArea(String t):</strong> crea el component amb cadena t i zero files i columnes.
-- <strong>JTextArea(String t,int filas, int col):</strong>  crea el component amb cadena t i el número de files i columnes especificat.</p>
-<p>Els seus mètodes són:
-- <strong>public void append(String t):</strong> afegeix la cadena t al final del document.
-- <strong>public void insert(String t,int p):</strong> insereix la cadena t a partir de la posició p.
-- <strong>void replaceRange(String t, int inici, int fi):</strong> substitueix el text del document al rang inici-fi per la cadena t.
-- <strong>public void setColumns(int cols):</strong> fixa l'ample de cada línia.
-- <strong>public void setLineWrap(boolean f):</strong> si f és true activa el canvi automàtica de línia.
-- <strong>public void setWrapStyleWord(boolean f):</strong> si f és true no 'trenca' les paraules en el canvi de línia.</p>
-<h2 id="esdeveniments">Esdeveniments</h2>
-<p>En aquest punt tractarem l'ús dels <strong>esdeveniments</strong> per tal que la nostra aplicació interactue amb l'usuari. </p>
-<blockquote>
-<p><strong>Esdeveniment:</strong> Allò que s'esdevé. Fet considerat extraordinari o molt important en la vida d'una persona o col·lectivitat. </p>
-<p><strong>Esdeveniment (Informàtica):</strong>  Fet que s'esdevé o canvi d'un conjunt particular de circumstàncies. </p>
-</blockquote>
-<p>En altres paraules un esdeveniment en una aplicació informàtica és alló que passa sense que necessariament estiga controlat al codi. </p>
-<p>Exemples d'esdeveniments:
-- Fer clic a un botó.
-- Fer clic dins d'un textbox.
-- Minimitzar una finestra.
-- Escriure al teclat
-- etc</p>
-<p>Arribats a aquest punt podriem tindre una interfície totalment dissenyada però no completament funcional, és a dir, imagineu que hem dissenyat la interfície per a una calculadora amb tots els seus controls necessaris. Què passa si fem clic en algun botó de la calculadora? No res ,veritat. Encara hem de programar el comportament d'aquesta calculadora i per tal d'aconseguir-ho hem de fer ús de la programació d'esdeveniments. Aquest procediment es diu <strong>Event Handling</strong> i es pot aplicar a aquells elements gràfics que produeixen algun esdeveniment.</p>
-<p>Els esdeveniments són essencials per als usuaris interactuen amb els components de una aplicació gràfica; el model d'esdeveniments segueix el AWT de Java. Aquest capítol estudia la forma general de captura d'esdeveniments, la jerarquia de classes del model i les interfaces desenvolupades per a la seva captura; inclou exemples senzills de captura d’esdeveniments de los botons.</p>
-<p>Veiem un exemple</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.event.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EventDemo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">JLabel</span><span class="w"> </span><span class="n">lab</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EventDemo</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">JFrame</span><span class="w"> </span><span class="n">jfrm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JFrame</span><span class="w"> </span><span class="p">(</span><span class="s">"Esdeveniments"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setLayout</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FlowLayout</span><span class="p">());</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">btnAlpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Alpha"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">JButton</span><span class="w"> </span><span class="n">btnBeta</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JButton</span><span class="p">(</span><span class="s">"Beta"</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="n">btnAlpha</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">ae</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">lab</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"Alpha Pressed"</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-
-<span class="w">        </span><span class="p">});</span>
-
-<span class="w">        </span><span class="n">btnBeta</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ActionListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">ae</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">lab</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">"Beta Pressed"</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-
-<span class="w">        </span><span class="p">});</span>
-
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">btnAlpha</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">btnBeta</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">lab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="p">(</span><span class="s">"Apreta un botó"</span><span class="p">);</span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">lab</span><span class="p">);</span>
-<span class="w">    </span>
-<span class="w">        </span><span class="n">jfrm</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">SwingUtilities</span><span class="p">.</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">EventDemo</span><span class="p">();</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">});</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>El resultat seria</p>
-<p><img alt="Event Demo" src="../assets/Tema9/EventDemo.png"/></p>
-<h3 id="jlist-selection-listener">Jlist Selection Listener</h3>
-<p>A continuació escriurem un 'listener' per a un control JList. Suposem una llista que només pot sel·leccionar un element de la llista</p>
+- Desplegables
+- etc..</p>
+<p>Per tal de poder utilitzar les llibreries ControlP5 de Processing només hauriem d'instal·lar la llibreria com s'ha explicat al punt anterior.</p>
+<h3 id="botons">Botons</h3>
+<details class="question">
+<summary>Activitat 901. Crea una aplicació amb un botó</summary>
+</details>
+<h3 id="checkbox">CheckBox</h3>
+<details class="question">
+<summary>Activitat 902. Crea una aplicació amb un checkbox</summary>
+</details>
+<h3 id="dropdownlist">DropDownList</h3>
+<details class="question">
+<summary>Activitat 903. Crea una aplicació amb un desplegable</summary>
+</details>
+<h3 id="radiobutton">RadioButton</h3>
+<details class="question">
+<summary>Activitat 904. Crea una aplicació amb un radiobutton</summary>
+</details>
+<h3 id="textfield">TextField</h3>
+<details class="question">
+<summary>Activitat 905. Crea una aplicació amb un camp de text</summary>
+</details>
+<h3 id="textarea">TextArea</h3>
+<details class="question">
+<summary>Activitat 906. Crea una aplicació amb una àrea de text</summary>
+</details>
+<h3 id="grup">Grup</h3>
+<details class="question">
+<summary>Activitat 907. Crea una aplicació amb un grup de controls</summary>
+</details>
+<h3 id="colorpicker">ColorPicker</h3>
+<details class="question">
+<summary>Activitat 908. Crea una aplicació amb un colorPicker</summary>
+</details>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 8.- Entrada, eixida, excepcions" class="md-footer__link md-footer__link--prev" href="../Tema%2008.%20Entrada%2C%20eixida%20i%20excepcions/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              8.- Entrada, eixida, excepcions
+            </div>
+</div>
+</a>
+<a aria-label="Next: 10.- Accés a dades" class="md-footer__link md-footer__link--next" href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              10.- Accés a dades
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1416,8 +290,8 @@ Els constructors són:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

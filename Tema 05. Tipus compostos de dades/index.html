@@ -5,11 +5,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2004.%20Programaci%C3%B3%20Modular/" rel="prev"/>
+<link href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.1.15" name="generator"/>
 <title>5.- Tipus Compostos Dades - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -29,7 +31,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -56,11 +58,11 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 <input aria-label="Switch to system preference" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to system preference">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 </form>
 <label class="md-header__button md-icon" for="__search">
@@ -87,7 +89,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -135,7 +137,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           5.- Tipus Compostos Dades
           <span class="md-nav__icon md-icon"></span>
@@ -270,26 +272,26 @@
 <h3 id="declaracio-i-creacio-dun-array-en-java">Declaració i creació d'un array en Java</h3>
 <p>Un array en Java és una estructura de dades que ens permet emmagatzemar un conjunt de dades del mateix tipus. El grandària de l’array es determina en la seua declaració i no es permet la seua modificació posterior</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">nomArray</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span><span class="w"></span>
-<span class="n">nomArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusBase</span><span class="o">[</span><span class="n">grandària</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">nomArray</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span>
+<span class="n">nomArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusBase</span><span class="o">[</span><span class="n">grandària</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Alguns exemples:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">mes</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span><span class="w">             </span><span class="c1">// Declarem un array mes d'enters (sense espai)</span><span class="w"></span>
-<span class="n">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">30</span><span class="o">]</span><span class="p">;</span><span class="w">     </span><span class="c1">// Creem espai per a 30 elements a l'array mes</span><span class="w"></span>
-<span class="kt">char</span><span class="w"> </span><span class="n">grups</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span><span class="w">          </span><span class="c1">// Declarem un array de caracters (sense espai assignat)</span><span class="w"></span>
-<span class="n">grups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">   </span><span class="c1">// Creem espai per a 5 elements</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">mes</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span><span class="w">             </span><span class="c1">// Declarem un array mes d'enters (sense espai)</span>
+<span class="n">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">30</span><span class="o">]</span><span class="p">;</span><span class="w">     </span><span class="c1">// Creem espai per a 30 elements a l'array mes</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">grups</span><span class="w"> </span><span class="o">[]</span><span class="p">;</span><span class="w">          </span><span class="c1">// Declarem un array de caracters (sense espai assignat)</span>
+<span class="n">grups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">   </span><span class="c1">// Creem espai per a 5 elements</span>
 </code></pre></div></td></tr></table></div>
 <p>Aquesta forma de declarar i inicialitzar arrays es pot fer en una sola línia de la següent forma:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">agendaMensual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">30</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declarem un array d'enters i reservem 30 posicions de memòria</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">agendaMensual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">30</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declarem un array d'enters i reservem 30 posicions de memòria</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="inicialitzacio-dun-array">Inicialització d'un array</h3>
 <p>Per tal d’accedir a les dades que conté un array necessitem l’identificador d’aquest així com també la posició concreta a la qual volem accedir. Per exemple, imaginem un array d’enters que es diu números.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">números</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">   </span><span class="c1">// Declarem un array d'enters de cinc posicions</span><span class="w"></span>
-<span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">};</span><span class="w">  </span><span class="c1">// Inicialització dels cinc valors</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">números</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">   </span><span class="c1">// Declarem un array d'enters de cinc posicions</span>
+<span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">};</span><span class="w">  </span><span class="c1">// Inicialització dels cinc valors</span>
 </code></pre></div></td></tr></table></div>
 <p>D’aquesta forma hauríem creat un array de 5 enters que contindria els nombres parells fins al 10.</p>
 <div class="admonition tip">
@@ -324,8 +326,8 @@
 <h3 id="acces-als-elements-dun-array">Accés als elements d'un array</h3>
 <p>Una vegada ja tenim la declaració de l’array i la seua inicialització, si volem bé accedir al seu contingut o modificar-ho, necessitaríem l’identificador de l’array i l’índex al qual volem accedir. És molt important tenir en compte que el primer element d’un array en Java està a la posició (índex) 0 i no a la posició 1 com ens indicaria la lògica.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">primerNumero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// primerNumero valdria 2</span><span class="w"></span>
-<span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w">  </span><span class="c1">// Canviem el  primer numero de l’array</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">primerNumero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// primerNumero valdria 2</span>
+<span class="n">números</span><span class="p">.</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w">  </span><span class="c1">// Canviem el  primer numero de l’array</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 501. Declara, crea i inicialitza</summary>
@@ -353,14 +355,14 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració de l’array vocals que contindrà un total de 5 posicions en memòria</span><span class="w"></span>
-<span class="kt">char</span><span class="w"> </span><span class="n">vocals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració de l’array vocals que contindrà un total de 5 posicions en memòria</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">vocals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
 
-<span class="c1">// Inicialització de l'array amb les vocals de l'alfabet.</span><span class="w"></span>
+<span class="c1">// Inicialització de l'array amb les vocals de l'alfabet.</span>
 <span class="n">vocals</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">‘</span><span class="n">a</span><span class="err">’</span><span class="p">,</span><span class="err">’</span><span class="n">e</span><span class="err">’</span><span class="p">,</span><span class="err">’</span><span class="n">i</span><span class="err">’</span><span class="p">,</span><span class="err">’</span><span class="n">o</span><span class="err">’</span><span class="p">,</span><span class="err">’</span><span class="n">u</span><span class="err">’</span><span class="p">}</span><span class="w"> </span>
 
-<span class="c1">// Accés a l'element primer (0) de l'array per modificar el seu valor</span><span class="w"></span>
-<span class="n">vocals</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">z</span><span class="err">’</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Accés a l'element primer (0) de l'array per modificar el seu valor</span>
+<span class="n">vocals</span><span class="w"> </span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">z</span><span class="err">’</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 502. Array de caracters</summary>
@@ -394,13 +396,13 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Codi per mostrar el vector d'enters</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Codi per mostrar el vector d'enters</span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Codi per mostrar el vector de caracters</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Codi per mostrar el vector de caracters</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Igual podria ser útil que li afegires coordenades (x,y) com a paràmetres a la funció de mostrar arrays per tal de poder indicar-li on vols que es mostren.</p>
 </div>
@@ -432,27 +434,27 @@
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span><span class="w"></span>
-<span class="n">arrayEnters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span>
+<span class="n">arrayEnters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
 
-<span class="c1">// Recorrem l'array amb un for</span><span class="w"></span>
+<span class="c1">// Recorrem l'array amb un for</span>
 
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
-<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
 
-<span class="c1">// Recorrem l'array amb un while</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="p">)</span><span class="w"></span>
-<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Recorrem l'array amb un while</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="p">)</span>
+<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
 
-<span class="c1">// Recorrem l'array amb un do while</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Recorrem l'array amb un do while</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">arrayEnters</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">;</span>
+<span class="w">	</span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 504. Fes una traça</summary>
@@ -470,8 +472,8 @@
 <p>La millor forma de recórrer un array sense haver de controlar quan s’arriba al final és la sentència for usada d’una manera alternativa. Si per exemple tenim un array d’enters que s’anomena «vector» i volem llistar tots els seus elements, podríem fer el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">:</span><span class="w"> </span><span class="n">vector</span><span class="p">){</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Accions a realitzar</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">:</span><span class="w"> </span><span class="n">vector</span><span class="p">){</span>
+<span class="w">	</span><span class="c1">// Accions a realitzar</span>
 <span class="p">}</span><span class="w">	</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
@@ -564,49 +566,49 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 <span class="cm">* @author  Vicent Sanchis</span>
 <span class="cm">* @since   10/11/23</span>
 <span class="cm">* @version 1.0</span>
-<span class="cm">*/</span><span class="w"></span>
-<span class="c1">// -----------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">// CONSTANTS</span><span class="w"></span>
-<span class="c1">// -----------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="c1">// -----------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="c1">// Variables Globals</span><span class="w"></span>
-<span class="c1">// -----------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="kt">int</span><span class="w">  </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span><span class="w"></span>
-<span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayCaracters</span><span class="p">;</span><span class="w"></span>
-<span class="c1">// -----------------------------------------------------------------------------------------------------</span><span class="w"></span>
+<span class="cm">*/</span>
+<span class="c1">// -----------------------------------------------------------------------------------------------------</span>
+<span class="c1">// CONSTANTS</span>
+<span class="c1">// -----------------------------------------------------------------------------------------------------</span>
+<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="c1">// -----------------------------------------------------------------------------------------------------</span>
+<span class="c1">// Variables Globals</span>
+<span class="c1">// -----------------------------------------------------------------------------------------------------</span>
+<span class="kt">int</span><span class="w">  </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayEnters</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayCaracters</span><span class="p">;</span>
+<span class="c1">// -----------------------------------------------------------------------------------------------------</span>
 <span class="cm">/**</span>
 <span class="cm"> * Mètode setup: Mètode de configuració i inicialització de la nostra aplicació. </span>
 <span class="cm"> * Aquest mètode només s'executa una vegada a l'inici de l'aplicació.</span>
 <span class="cm"> * @return void</span>
-<span class="cm">*/</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w">  </span><span class="p">{</span>
 <span class="w">	</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 <span class="cm">/**</span>
 <span class="cm"> * Metode draw: aquest mètode funciona com una espècies de bucle del joc. </span>
 <span class="cm"> * S'executa a 60Hz, és a dir, 60 vegades o frames per segon.</span>
 <span class="cm"> * És en aquest mètode on s'aprofita per fer animacions</span>
-<span class="cm">*/</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">	</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mostraEnters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mostraCaracters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">generaNumAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">generaNumAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="kt">char</span><span class="w"> </span><span class="nf">generaCharAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="nf">generaCharAleatori</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -628,10 +630,10 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">inicialitzaArrays</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">arrayEnters</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">arrayCaracters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">inicialitzaArrays</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">arrayEnters</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
+<span class="w">	</span><span class="n">arrayCaracters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">[</span><span class="n">TAM</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -690,12 +692,12 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">sequencial</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">sequencial</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 <span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">clau</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="binaria">Binària</h3>
 <p>En aquest algoritme existeix la precondició que l’array o vector sobre el qual vaja a fer-se la recerca, ha d’estar ordenat. Aquest mètode és més òptim. El funcionament d’aquest algorisme és el següent: en una primera iteració es compara la clau (element que estem buscant) amb el valor al centre, que s’anomena pivot, de l’array. Poden passar tres coses: 
@@ -720,25 +722,25 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">recercaBinaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">posCentre</span><span class="p">,</span><span class="w"> </span><span class="n">posInici</span><span class="p">,</span><span class="w"> </span><span class="n">posFinal</span><span class="p">,</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">posInici</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">posFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">posInici</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">posFinal</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">posCentre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">posInici</span><span class="o">+</span><span class="n">posFinal</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">valorCentral</span><span class="o">=</span><span class="n">array</span><span class="o">[</span><span class="n">posCentre</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">clau</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">posCentre</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">clau</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">posFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posCentro</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">posInici</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posCentro</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">recercaBinaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">clau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">posCentre</span><span class="p">,</span><span class="w"> </span><span class="n">posInici</span><span class="p">,</span><span class="w"> </span><span class="n">posFinal</span><span class="p">,</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">;</span>
+<span class="w">	</span><span class="n">posInici</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">	</span><span class="n">posFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">posInici</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">posFinal</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">posCentre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">posInici</span><span class="o">+</span><span class="n">posFinal</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">		</span><span class="n">valorCentral</span><span class="o">=</span><span class="n">array</span><span class="o">[</span><span class="n">posCentre</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">clau</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">posCentre</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">clau</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">valorCentral</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">posFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posCentro</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">posInici</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posCentro</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 510. Afegeix mètodes seqüencial i binari</summary>
@@ -791,17 +793,17 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
-<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">posMinim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="p">){</span><span class="w"></span>
-<span class="w">                  </span><span class="n">posMinim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">	  </span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">	  </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">	  </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">posMinim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TAM</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="p">){</span>
+<span class="w">                  </span><span class="n">posMinim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">	  </span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">	  </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="p">;</span>
+<span class="w">	  </span><span class="n">array</span><span class="o">[</span><span class="n">posMinim</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 512. Algorisme d'ordenació per selecció</summary>
@@ -842,18 +844,18 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">insercio</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span><span class="n">j</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">insercio</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">		</span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+<span class="w">			</span><span class="n">j</span><span class="o">--</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><center>
 <img alt="Ordenació per Inserció" src="../assets/Tema5/Insercio.gif"/>
@@ -898,17 +900,17 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">bombolla</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">				</span><span class="kt">int</span><span class="w"> </span><span class="n">canvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">				</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">				</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canvi</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">bombolla</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="kt">int</span><span class="w"> </span><span class="n">canvi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">				</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">				</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canvi</span><span class="p">;</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <center>
 <img alt="Ordenació per Bombolla" src="../assets/Tema5/Bombolla.gif"/>
@@ -964,25 +966,25 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">shellSort</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">interval</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="n">interval</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span><span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">				</span><span class="n">k</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="n">interval</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">	</span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">	</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">interval</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="n">interval</span><span class="p">;</span>
+<span class="w">			</span><span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="n">k</span><span class="o">=</span><span class="n">j</span><span class="o">+</span><span class="n">interval</span><span class="p">;</span>
 <span class="w">				</span><span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">)</span><span class="w"> </span>
-<span class="w">					</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">				</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">					</span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">					</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">					</span><span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w"></span>
-<span class="w">					</span><span class="n">j</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">interval</span><span class="p">;</span><span class="w"></span>
-<span class="w">				</span><span class="p">}</span><span class="w"></span>
-<span class="w">			</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">					</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">				</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">					</span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">					</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">;</span>
+<span class="w">					</span><span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">					</span><span class="n">j</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">interval</span><span class="p">;</span>
+<span class="w">				</span><span class="p">}</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="w">	</span><span class="p">}</span><span class="w">	</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 515. Ordenació per Shell</summary>
@@ -1036,36 +1038,36 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">esquerra</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dreta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">esquerra</span><span class="o">]</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Agafem el primer elment com a pivot</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esquerra</span><span class="p">;</span><span class="w">                             </span><span class="c1">// L'index i fa la recerca de esquerra a dreta</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dreta</span><span class="p">;</span><span class="w">                                </span><span class="c1">// L'index j fa la recerca de dreta a esquerra</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">esquerra</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dreta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">esquerra</span><span class="o">]</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Agafem el primer elment com a pivot</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esquerra</span><span class="p">;</span><span class="w">                             </span><span class="c1">// L'index i fa la recerca de esquerra a dreta</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dreta</span><span class="p">;</span><span class="w">                                </span><span class="c1">// L'index j fa la recerca de dreta a esquerra</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
 <span class="w"> </span>
-<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">){</span><span class="w">                                </span><span class="c1">// Mentre no es creuen les recerques                                   </span><span class="w"></span>
-<span class="w">     </span><span class="k">while</span><span class="p">(</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w">        </span><span class="c1">// Busca l'element major que el pivot </span><span class="w"></span>
-<span class="w">       </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">){</span><span class="w">                                </span><span class="c1">// Mentre no es creuen les recerques                                   </span>
+<span class="w">     </span><span class="k">while</span><span class="p">(</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w">        </span><span class="c1">// Busca l'element major que el pivot </span>
+<span class="w">       </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">       </span>
-<span class="w">     </span><span class="k">while</span><span class="p">(</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">pivot</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Busca l'element menor que el pivot </span><span class="w"></span>
+<span class="w">     </span><span class="k">while</span><span class="p">(</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">pivot</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Busca l'element menor que el pivot </span>
 <span class="w">       </span><span class="n">j</span><span class="o">--</span><span class="p">;</span><span class="w">      </span>
 <span class="w">       </span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                              </span><span class="c1">// Si no s'han creuat els intercanvia (swap)                      </span><span class="w"></span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                              </span><span class="c1">// Si no s'han creuat els intercanvia (swap)                      </span>
 <span class="w">         </span><span class="n">aux</span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">                      </span>
-<span class="w">         </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">         </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]=</span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">     </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">         </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">         </span><span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]=</span><span class="n">aux</span><span class="p">;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
 <span class="w">   </span>
-<span class="w">   </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">esquerra</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">               </span><span class="c1">// Es posa el pivot de tal forma que teni els menors a l'esquerra i els majors a la dreta. </span><span class="w"></span>
+<span class="w">   </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">esquerra</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">               </span><span class="c1">// Es posa el pivot de tal forma que teni els menors a l'esquerra i els majors a la dreta. </span>
 <span class="w">   </span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pivot</span><span class="p">;</span><span class="w">      </span>
 <span class="w">   </span>
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esquerra</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">esquerra</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// Ordenem el subarray esquerre</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esquerra</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">esquerra</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// Ordenem el subarray esquerre</span>
 <span class="w">      </span>
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dreta</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">dreta</span><span class="p">);</span><span class="w">           </span><span class="c1">// Ordenem el subarray dret</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">dreta</span><span class="p">)</span>
+<span class="w">      </span><span class="n">Quicksort</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">dreta</span><span class="p">);</span><span class="w">           </span><span class="c1">// Ordenem el subarray dret</span>
+<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 516. Algorisme Quicksort</summary>
@@ -1167,25 +1169,25 @@ Els arrays multidimensionals més comuns són els de dues dimensions o bidimensi
 Les matrius, com es coneixen els arrays bidimensionals es forme per files i columnes.</p>
 <h3 id="declaracio-i-creacio">Declaració i creació</h3>
 <p>Per tal de declarar una matriu en java, és a dir, un array de dues dimensions, ho farem de la següent forma:Ç</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">matriu</span><span class="w"> </span><span class="o">[][]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">matriu</span><span class="w"> </span><span class="o">[][]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Si es fixeu, mentre quan declaravem un array d’una sola dimensió utilitzavem només un parell de claudàtors: </p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">array</span><span class="o">[]</span><span class="p">;</span><span class="w"></span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tipusBase</span><span class="w"> </span><span class="n">array</span><span class="o">[]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Ara que volem crear una matriu (array de dues dimensions) utilitzarem dos parells de claudàtors.</p>
 <p>És fàcil deduir que si volguerem declarar un array de tres dimensions, hauriem d’utilitzar tres parells de claudàtors.</p>
 <p>Amb aquesta instrucció el que estem fent es declarar la matriu però no li hem dit quina grandària tindrà. Eixa és la diferència entre declaració i creació. Per tal de crear, és a dir, reservar espai per a la nostra matriu, hem de fer el següent:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">matriu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusBase</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">matriu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusBase</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>On n i m són valors enters que ens indiquen la grandària de cada dimensió. 
 Per exemple, per declarar i crear una matriu d’enters de 5 files i 10 columnes fariem el següent:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="w"> </span><span class="o">[][]</span><span class="p">;</span><span class="w"></span>
-<span class="n">matriuEnters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="c1">// També ho podriem fer en una sola instrucció</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="w"> </span><span class="o">[][]</span><span class="p">;</span>
+<span class="n">matriuEnters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="c1">// També ho podriem fer en una sola instrucció</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Encara no disponible</p>
 <h3 id="inicialitzacio-i-acces">Inicialització i accés</h3>
@@ -1249,11 +1251,11 @@ Per accedir a una dada en un array multidimensional hem de coneixer els índex d
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FILES</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="w"> </span><span class="n">COLUMNES</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FILES</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="w"> </span><span class="n">COLUMNES</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">array</span><span class="w"> </span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Per tal d’entendre el concepte de matriu o array bidimensional, realitzarem un exercici on treballarem amb les típiques matrius matemàtiques, realitzant les operacions pròpies d’aquestes.</p>
 <details class="question">
@@ -1296,16 +1298,16 @@ Mireu el següent exemple:</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració d’una matriu (files)</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">mat</span><span class="p">;</span><span class="w"></span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Declaració d’una matriu (files)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">mat</span><span class="p">;</span>
 
-<span class="c1">// Primer creem la quantitat de files deixant les columnes buit</span><span class="w"></span>
-<span class="n">mat</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Primer creem la quantitat de files deixant les columnes buit</span>
+<span class="n">mat</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][]</span><span class="p">;</span>
 
-<span class="c1">// Després creem cada fila indicant la quantitat d’elements</span><span class="w"></span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">1</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="n">mat</span><span class="o">[</span><span class="mi">2</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Després creem cada fila indicant la quantitat d’elements</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">1</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+<span class="n">mat</span><span class="o">[</span><span class="mi">2</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 520. Alumnes i assignatures</summary>
@@ -1441,67 +1443,67 @@ Eixir tancaria l'apliació.</p>
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">inicialitzaArraySudoku</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">arraySudoku</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Primera fase: inicialitzem la matriu</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">inicialitzaArraySudoku</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[][]</span><span class="w"> </span><span class="n">arraySudoku</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Primera fase: inicialitzem la matriu</span>
+<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fil</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span>
-<span class="w">			</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fil</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">%</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">))</span><span class="w"></span>
-<span class="w">			</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">arraySudoku</span><span class="o">[</span><span class="p">(</span><span class="n">fil</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="o">][</span><span class="n">col</span><span class="o">]+</span><span class="mi">3</span><span class="o">*</span><span class="n">fil</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">			</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">col</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fil</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">%</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">fil</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">))</span>
+<span class="w">			</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">arraySudoku</span><span class="o">[</span><span class="p">(</span><span class="n">fil</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="o">][</span><span class="n">col</span><span class="o">]+</span><span class="mi">3</span><span class="o">*</span><span class="n">fil</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="c1">// Segona fase: barallem files</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">f2</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">fil</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">fil</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="p">(</span><span class="n">f1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f2</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Segona fase: barallem files</span>
+<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">f2</span><span class="p">;</span>
+<span class="w">		</span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">fil</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">fil</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">while</span><span class="p">(</span><span class="n">f1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f2</span><span class="p">);</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f1</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f1</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f2</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f2</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f1</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f1</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f2</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">f2</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="c1">// Tercera fase: barallem les columnes</span><span class="w"></span>
-<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">col</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">col</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="p">(</span><span class="n">c1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c2</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Tercera fase: barallem les columnes</span>
+<span class="w">	</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+<span class="w">		</span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">col</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">col</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">while</span><span class="p">(</span><span class="n">c1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c2</span><span class="p">);</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c1</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fil</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">fil</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c1</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c2</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">fil</span><span class="o">][</span><span class="n">c2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="c1">// Quarta fase: interncanviem dues files de submatrius </span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">sm1</span><span class="p">,</span><span class="w"> </span><span class="n">sm2</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">sm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">sm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="k">while</span><span class="p">(</span><span class="n">sm1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sm2</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Quarta fase: interncanviem dues files de submatrius </span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">sm1</span><span class="p">,</span><span class="w"> </span><span class="n">sm2</span><span class="p">;</span>
+<span class="w">	</span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">sm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="n">sm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">while</span><span class="p">(</span><span class="n">sm1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sm2</span><span class="p">);</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">val1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">sm1</span><span class="o">+</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">val2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">sm2</span><span class="o">+</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val1</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val1</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val2</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val2</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">val1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">sm1</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">val2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">sm2</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val1</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val1</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val2</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">arraySudoku</span><span class="o">[</span><span class="n">val2</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aux</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Escriu un programa utilitzant Processing IDE que et mostre un Sudoku per pantalla, que permeta al jugador emplenar les cel·les buides i que comprove si el número escollit es vàlid o no.</p>
 </div>
@@ -1514,11 +1516,11 @@ Eixir tancaria l'apliació.</p>
 <h2 id="string-cadenes-de-caracters">string: Cadenes de caracters</h2>
 <p>En Java hem vist que quan volem emmagatzemar un valor enter, definim una variable de tipus int, si pel contrari, el que volem és emmagatzemar un valor amb decimals, definim una variable de tipus double o float. Ara bé, si el que volem és emmagatzemar una cadena de caracters, per exemple el nom d’una persona, hem de definir un objecte de tipus String</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un objecte string</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Manolo</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">bombo</span><span class="err">»</span><span class="p">;</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un objecte string</span>
+<span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Manolo</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">bombo</span><span class="err">»</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Aquest codi el que fa és crear un objectes string strNom que conté el nom: «Manolo el del bombo». També podriem crear un string de la següent manera:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strNome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="err">«</span><span class="n">Manolo</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">bombo</span><span class="err">»</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strNome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="err">«</span><span class="n">Manolo</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">bombo</span><span class="err">»</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Al tractar-se d’una classe, la forma natural de treballar amb ella serà mitjançant l’ús dels mètodes que disposa la classe. Aquests mètodes són:</p>
 <ul>
@@ -1530,16 +1532,16 @@ Eixir tancaria l'apliació.</p>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="err">»</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Pego</span><span class="err">»</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w"> </span><span class="c1">// El resultat seria «JavaPego»</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="err">»</span><span class="p">;</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Pego</span><span class="err">»</span><span class="p">;</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w"> </span><span class="c1">// El resultat seria «JavaPego»</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>int indexOf(String s):</strong> Ens retorna l’index dins de la cadena de la primera aparició de la subcadena s. Per exemple:</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Pego</span><span class="err">»</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="err">«</span><span class="n">Pego</span><span class="err">»</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna 7</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="n">Java</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Pego</span><span class="err">»</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="err">«</span><span class="n">Pego</span><span class="err">»</span><span class="p">);</span><span class="w"> </span><span class="c1">// Retorna 7</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>int indexOf(String s, int i):</strong> retorna l’índex dins de la cadena de la primera aparició de la subcadena s a partir de l’índex i</li>
@@ -1574,26 +1576,26 @@ Eixir tancaria l'apliació.</p>
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple 1. Dies de la setmana</span><span class="w"></span>
-<span class="kd">enum</span><span class="w"> </span><span class="n">Dies</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">Dilluns</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Dimarts</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Dimecres</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Dijous</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Divendres</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Dissabte</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">Diumenge</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple 1. Dies de la setmana</span>
+<span class="kd">enum</span><span class="w"> </span><span class="n">Dies</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Dilluns</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Dimarts</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Dimecres</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Dijous</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Divendres</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Dissabte</span><span class="p">,</span>
+<span class="w">	</span><span class="n">Diumenge</span>
+<span class="p">}</span>
 
-<span class="c1">// Exemple 2. Talles de roba</span><span class="w"></span>
-<span class="kd">enum</span><span class="w"> </span><span class="n">Talles</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">XXL</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">XL</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">L</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">M</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">S</span><span class="p">,</span><span class="w"></span>
-<span class="w">	</span><span class="n">XS</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="c1">// Exemple 2. Talles de roba</span>
+<span class="kd">enum</span><span class="w"> </span><span class="n">Talles</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">XXL</span><span class="p">,</span>
+<span class="w">	</span><span class="n">XL</span><span class="p">,</span>
+<span class="w">	</span><span class="n">L</span><span class="p">,</span>
+<span class="w">	</span><span class="n">M</span><span class="p">,</span>
+<span class="w">	</span><span class="n">S</span><span class="p">,</span>
+<span class="w">	</span><span class="n">XS</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>Com usar una enumeració</summary>
@@ -1622,32 +1624,32 @@ Eixir tancaria l'apliació.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">enum</span><span class="w"> </span><span class="n">Colors</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  		</span><span class="n">RED</span><span class="p">,</span><span class="w"></span>
-<span class="w">  		</span><span class="n">BLUE</span><span class="p">,</span><span class="w"></span>
-<span class="w">  		</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"></span>
-<span class="w">  		</span><span class="n">GREEN</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">enum</span><span class="w"> </span><span class="n">Colors</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  		</span><span class="n">RED</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">BLUE</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">YELLOW</span><span class="p">,</span>
+<span class="w">  		</span><span class="n">GREEN</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="n">Colors</span><span class="w"> </span><span class="n">myColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="na">YELLOW</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">Colors</span><span class="w"> </span><span class="n">myColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="na">YELLOW</span><span class="p">;</span>
 
-<span class="w">	</span><span class="k">switch</span><span class="p">(</span><span class="n">myColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">RED</span><span class="p">:</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is red"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="k">switch</span><span class="p">(</span><span class="n">myColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">RED</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is red"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
 
-<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">BLUE</span><span class="p">:</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is blue"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">BLUE</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is blue"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
 
-<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">YELLOW</span><span class="p">:</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is yellow"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">YELLOW</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is yellow"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
 
-<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">GREEN</span><span class="p">:</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is green"</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">GREEN</span><span class="p">:</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The color is green"</span><span class="p">);</span>
+<span class="w">		</span><span class="k">break</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="colleccions">Col·leccions</h2>
@@ -1687,54 +1689,26 @@ Eixir tancaria l'apliació.</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span><span class="w"></span>
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 
-<span class="c1">// Després afegim elements a la llista</span><span class="w"></span>
-<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Després afegim elements a la llista</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span>
 <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Vijay"</span><span class="p">);</span><span class="w">  </span>
 <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
 <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ajay"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
 
-<span class="c1">// Recorrem la llista i mostrem per pantalla</span><span class="w"></span>
+<span class="c1">// Recorrem la llista i mostrem per pantalla</span>
 <span class="n">Iterator</span><span class="w"> </span><span class="n">itr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span><span class="w">  </span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="w"> </span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="w">	</span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="p">());</span><span class="w">  </span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 4.- Programació Modular" class="md-footer__link md-footer__link--prev" href="../Tema%2004.%20Programaci%C3%B3%20Modular/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              4.- Programació Modular
-            </div>
-</div>
-</a>
-<a aria-label="Next: 6.- Prog Orientada Objectes" class="md-footer__link md-footer__link--next" href="../Tema%2006.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              6.- Prog Orientada Objectes
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1752,13 +1726,9 @@ Eixir tancaria l'apliació.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
-<script src="../js/mathjax.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 <script>mermaid.initialize({
     theme: "neutral",
     darkmode: true

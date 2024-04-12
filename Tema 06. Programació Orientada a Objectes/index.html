@@ -5,11 +5,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" rel="prev"/>
+<link href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.1.15" name="generator"/>
 <title>6.- Prog Orientada Objectes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -29,7 +31,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -56,11 +58,11 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 <input aria-label="Switch to system preference" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to system preference">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 </form>
 <label class="md-header__button md-icon" for="__search">
@@ -87,7 +89,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -140,7 +142,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           6.- Prog Orientada Objectes
           <span class="md-nav__icon md-icon"></span>
@@ -338,71 +340,71 @@
 <span class="cm">	* @author  Vicent Sanchis</span>
 <span class="cm">	* @since   29/01/24</span>
 <span class="cm">	* @version 1.0</span>
-<span class="cm">	*/</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Llibreries, imports, packages ..</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
+<span class="cm">	*/</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
+<span class="w">	</span><span class="c1">// Llibreries, imports, packages ..</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
 
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Constants</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">	</span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ERUPCIO_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="n">ERUPCIO_Y</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span><span class="w">    </span><span class="c1">// Punt des d'on es produiran les erupcions del volcà</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Variables globals</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
-<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPosicions</span><span class="p">;</span><span class="w">                   </span><span class="c1">// ArrayList al que guardem les posicions de les boletes </span><span class="w"></span>
-<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alDireccions</span><span class="p">;</span><span class="w">                  </span><span class="c1">// ArrayList que contindrà les direccions de les boletes</span><span class="w"></span>
-<span class="w">	</span><span class="n">ArrayList</span><span class="w">           </span><span class="n">aVelocitats</span><span class="p">;</span><span class="w">                   </span><span class="c1">// ArrayList on s'emmagatzemen les velocitats de les boletes</span><span class="w"></span>
-<span class="w">	</span><span class="n">ArrayList</span><span class="w">           </span><span class="n">aLifeSpan</span><span class="p">;</span><span class="w">                     </span><span class="c1">// ArrayList on es controla el temps de vida que queda</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
+<span class="w">	</span><span class="c1">// Constants</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
+<span class="w">	</span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ERUPCIO_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="n">ERUPCIO_Y</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span><span class="w">    </span><span class="c1">// Punt des d'on es produiran les erupcions del volcà</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
+<span class="w">	</span><span class="c1">// Variables globals</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
+<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPosicions</span><span class="p">;</span><span class="w">                   </span><span class="c1">// ArrayList al que guardem les posicions de les boletes </span>
+<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">PVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alDireccions</span><span class="p">;</span><span class="w">                  </span><span class="c1">// ArrayList que contindrà les direccions de les boletes</span>
+<span class="w">	</span><span class="n">ArrayList</span><span class="w">           </span><span class="n">aVelocitats</span><span class="p">;</span><span class="w">                   </span><span class="c1">// ArrayList on s'emmagatzemen les velocitats de les boletes</span>
+<span class="w">	</span><span class="n">ArrayList</span><span class="w">           </span><span class="n">aLifeSpan</span><span class="p">;</span><span class="w">                     </span><span class="c1">// ArrayList on es controla el temps de vida que queda</span>
+<span class="w">	</span><span class="c1">// ---------------------------------------------------------------------------------------------------------------</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 * Mètode setup: Mètode de configuració i inicialització de la nostra aplicació.</span>
 <span class="cm">	 * Aquest mètode només s'executa una vegada a l'inici de l'aplicació.</span>
 <span class="cm">	 * @return void</span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 * Metode draw: aquest mètode funciona com una espècies de bucle del joc.</span>
 <span class="cm">	 * S'executa a 60Hz, és a dir, 60 vegades o frames per segon.</span>
 <span class="cm">	 * És en aquest mètode on s'aprofita per fer animacions</span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">clear</span><span class="w">             </span><span class="p">()</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">background</span><span class="w">        </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">creaBoleta</span><span class="w">        </span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">actualitzaBoletes</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">dibuixaBoletes</span><span class="w">    </span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">dibuixaVolca</span><span class="w">      </span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">clear</span><span class="w">             </span><span class="p">()</span><span class="w"> </span><span class="p">;</span>
+<span class="w">		</span><span class="n">background</span><span class="w">        </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">		</span><span class="n">creaBoleta</span><span class="w">        </span><span class="p">();</span>
+<span class="w">		</span><span class="n">actualitzaBoletes</span><span class="w"> </span><span class="p">();</span>
+<span class="w">		</span><span class="n">dibuixaBoletes</span><span class="w">    </span><span class="p">();</span>
+<span class="w">		</span><span class="n">dibuixaVolca</span><span class="w">      </span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	* Crea una boleta nova afegint una nova posició (PVector) a l'array de boletes global</span>
 <span class="cm">	* per tal que puga ser expulsada del volcà. Cada boleta tindrà una direcció (alDireccions) i una velocitat (aVelocitats)</span>
-<span class="cm">	*/</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">creaBoleta</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	*/</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">creaBoleta</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	* Actualitza a cada frame la posició, velocitat i direcció de la boleta aplicant les lleis de la gravetat i una xicoteta</span>
 <span class="cm">	* fricció de l'aire. A cada frame anirà també apagant les boletes reduint el lifeSpan que es troba en un array global</span>
-<span class="cm">	*/</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzaBoletes</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	*/</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzaBoletes</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	* Recorre els arrays de les boletes i les dibuixa al la posició que els pertoque amb la quantitat de vida que els queda (transparència)</span>
 <span class="cm">	* Per no complicar més el programa, totes les boletes tindran una grandària de 20 píxels i seran de color roig</span>
 <span class="cm">	*/</span><span class="w">  </span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoletes</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoletes</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	* Dibuixa un triangle de color negre de tal forma que coincidisca la punta de dalt amb les coordenades d'expulsió de les boletes.</span>
-<span class="cm">	*/</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaVolca</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	*/</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaVolca</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Posa el codi necessari ací</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -615,9 +617,9 @@ Agenda "1" --&gt; "*" Contacte
 <p>En resum, un atribut en programació orientada a objectes ve a ser el mateix que una variable en programació estructurada. De fet, es defineix de la mateixa forma.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="c1">// Definició d'un atribut o propietat en POO</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// tipusBase identificador [= valor];</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">175</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest atribut podria estar definint l'altura d'una persona</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="c1">// Definició d'un atribut o propietat en POO</span>
+<span class="w">	</span><span class="c1">// tipusBase identificador [= valor];</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">175</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest atribut podria estar definint l'altura d'una persona</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="metodes">Mètodes</h3>
 <p>Els mètode són aquelles <strong>accions que pot realitzar la classe</strong> que estem definint. Bàsicament el que fa un mètode és modificar l’estat de l’objecte mitjançant el canvi del valor dels seus atributs. De fet la definició dels mètodes dins d'una classe és identica a la creació de funcions en programació estructurada.</p>
@@ -628,14 +630,14 @@ Agenda "1" --&gt; "*" Contacte
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">modificador</span><span class="o">]</span><span class="w"> </span><span class="n">tipus</span><span class="w"> </span><span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span><span class="n">acces</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">modificador</span><span class="o">]</span><span class="w"> </span><span class="n">tipus</span><span class="w"> </span><span class="nf">nomFuncio</span><span class="p">(</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="p">,</span><span class="o">[</span><span class="n">tipus</span><span class="w"> </span><span class="n">nomArgument</span><span class="o">]</span><span class="p">...</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="cm">/*</span>
 <span class="cm">        * Bloc d'instruccions</span>
-<span class="cm">    */</span><span class="w"></span>
+<span class="cm">    */</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Els <strong>Mètodes de la classe</strong> donen funcionalitat a la classe, és a dir, reflecteixen les <strong>operacions</strong> que aquesta pot fer sobre els atributs. Els mètodes són similars a les <strong>funcions</strong> o procediments que creàvem en programació estructurada però orientats a modificar i actuar sobre les propietats d’una classe. </p>
 <p>Un objecte dona valors concrets als atributs que defineix la classe i utilitza els seus mètodes. Quan un objecte utilitza un mètode concret es diu que aquesta enviant un missatge. D’alguna manera açò té lògica ja que estem donant una ordre a un component que reflecteix la realitat. </p>
@@ -670,9 +672,9 @@ Agenda "1" --&gt; "*" Contacte
 <p>Les definicions o especificacions no constitueixen un codi de programa executable si no que s’utilitzen per assignar memòria on emmagatzemar els valors dels atributs que utilitza el programa i reconèixer els mètodes que aquesta utilitzarà; normalment es situen en arxius formant packages, utilitzant un arxiu per vàries classes relacionades.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">llista_de_membres</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">llista_de_membres</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>nomClasse:</strong> definit per l’usuari i identifica la classe; pot incloure lletres, números i subratllats com qualsevol identificador.</li>
@@ -683,11 +685,11 @@ Agenda "1" --&gt; "*" Contacte
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">llista_de_constants</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">llista_de_atributs</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">mètodes</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">llista_de_constants</span><span class="p">;</span>
+<span class="w">	</span><span class="n">llista_de_atributs</span><span class="p">;</span>
+<span class="w">	</span><span class="n">mètodes</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>llista_de_constants:</strong> declaració de variables estàtiques que no varien durant la vida de l'objecte.</li>
@@ -714,23 +716,23 @@ Agenda "1" --&gt; "*" Contacte
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">	</span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Piroclast</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode update de la classe Piroclast</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Piroclast</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode update de la classe Piroclast</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -748,21 +750,21 @@ Agenda "1" --&gt; "*" Contacte
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span>
+<span class="w">	</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -771,12 +773,12 @@ Agenda "1" --&gt; "*" Contacte
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Mètode d'inicialització de l'aplicació principal</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Bucle del joc</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Mètode d'inicialització de l'aplicació principal</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Bucle del joc</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -848,23 +850,23 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Piroclast</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode update de la classe Piroclast</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Piroclast</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode update de la classe Piroclast</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -882,21 +884,21 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -905,12 +907,12 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Mètode d'inicialització de l'aplicació principal</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Bucle del joc</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Mètode d'inicialització de l'aplicació principal</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// Bucle del joc</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -965,36 +967,36 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="c1">// Codi del mètode display de la classe Piroclast</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="c1">// Codi del mètode update de la classe Piroclast</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="c1">// Codi del mètode display de la classe Piroclast</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="c1">// Codi del mètode update de la classe Piroclast</span>
+<span class="w">		</span><span class="p">}</span>
 <span class="w">		</span><span class="cm">/**</span>
 <span class="cm">		 *  Mètode set de l'atribut grandària</span>
 <span class="cm">		 * </span>
-<span class="cm">		 */</span><span class="w"></span>
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="cm">		 */</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
 <span class="w">		</span><span class="cm">/**</span>
 <span class="cm">		 * Mètode per obtenir el valor de la grandaria </span>
-<span class="cm">		 */</span><span class="w"></span>
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">		 */</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1020,29 +1022,29 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
 
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="c1">// Codi del mètode display de la classe Con</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="c1">// Codi del mètode display de la classe Con</span>
+<span class="w">		</span><span class="p">}</span>
 
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="c1">// Codi del mètode expulsar de la classe Con</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="c1">// Codi del mètode expulsar de la classe Con</span>
+<span class="w">		</span><span class="p">}</span>
 
-<span class="w">		</span><span class="c1">// Exemples de get per a la classe Con</span><span class="w"></span>
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="c1">// Exemples de get per a la classe Con</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1119,54 +1121,54 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">	</span><span class="c1">// Constructor per defecte</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Constructor per defecte</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Constructor parametritzat</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">gravetat</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.05f</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="p">.</span><span class="na">mult</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="c1">// Constructor parametritzat</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">gravetat</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.05f</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="p">.</span><span class="na">mult</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="p">);</span>
 <span class="w">		</span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 *  Mètode set de l'atribut grandària</span>
 <span class="cm">	 * </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 * Mètode per obtenir el valor de la grandaria </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1197,34 +1199,34 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alt</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">ample</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">alt</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="w"> </span><span class="mi">195</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">ample</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">alt</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="w"> </span><span class="mi">195</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="c1">// Exemples de get per a la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode display de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Codi del mètode expulsar de la classe Con</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="c1">// Exemples de get per a la classe Con</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1234,13 +1236,13 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1261,7 +1263,7 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <h3 id="instancies">Instàncies</h3>
 <p>La <strong>declaració d’una classe</strong> no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, <strong>instanciar</strong> o crear un objecte a partir d’aquesta classe.</p>
 <p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w">  </span><span class="c1">// Els paràmetres només en cas que tinga un constructor parametritzat</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nom_classe</span><span class="w"> </span><span class="n">nom_instancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">nom_classe</span><span class="p">(</span><span class="n">paràmetres</span><span class="p">);</span><span class="w">  </span><span class="c1">// Els paràmetres només en cas que tinga un constructor parametritzat</span>
 </code></pre></div></td></tr></table></div>
 <p>La paraula «new» s’encarrega de reservar espai en memòria i torna una referència a l’adreça de memòria on s’ha emmagatzemat l’objecte. </p>
 <ul>
@@ -1284,17 +1286,17 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="c1">// Variables globals</span><span class="w"></span>
-<span class="w">	</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">pedrot</span><span class="p">,</span><span class="w"> </span><span class="n">esputo</span><span class="p">;</span><span class="w"></span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="c1">// Variables globals</span>
+<span class="w">	</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">pedrot</span><span class="p">,</span><span class="w"> </span><span class="n">esputo</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">pedrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="p">();</span><span class="w">  </span><span class="c1">// Creem un objecte de la classe Piroclast amb identificador pedrot usant el constructor per defecte</span><span class="w"></span>
-<span class="w">		</span><span class="n">esputo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// Objecte Piroclast amb el constructor parametritzat</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">pedrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="p">();</span><span class="w">  </span><span class="c1">// Creem un objecte de la classe Piroclast amb identificador pedrot usant el constructor per defecte</span>
+<span class="w">		</span><span class="n">esputo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// Objecte Piroclast amb el constructor parametritzat</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <p>Al nostre simulador de volcans el que tindrem al programa principal serà un <strong>con</strong>, per tant haurem d'instanciar un objecte <strong>con</strong> al nostre programa principal. Després, totes les instàncies de la classe <strong>Piroclast</strong> es faran dins de la classe con aprofitant el mètode <strong>expulsar</strong>, que el què farà serà afegir una nova instància de <strong>piroclast</strong> al con, és a dir, al l'array de piroclasts de la classe <strong>con</strong> utilitzant el constructor de la classe <strong>Piroclast</strong>, però veiem-ho a l'exemple.</p>
@@ -1305,11 +1307,11 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="n">Con</span><span class="w"> </span><span class="n">vesubio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="n">Con</span><span class="w"> </span><span class="n">vesubio</span><span class="p">;</span>
 
 <span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">	</span>
-<span class="w">		</span><span class="n">vesubio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Con</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="n">vesubio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Con</span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1357,51 +1359,51 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">	</span><span class="c1">// Constructor parametritzat</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Constructor parametritzat</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">color</span><span class="w"> </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">lifeSpan</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">--</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">noStroke</span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">grandaria</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">color</span><span class="w"> </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">lifeSpan</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">--</span><span class="p">;</span>
+<span class="w">		</span><span class="n">noStroke</span><span class="p">();</span>
+<span class="w">		</span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span>
+<span class="w">		</span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">grandaria</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 *  Mètode set de l'atribut grandària</span>
 <span class="cm">	 * </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 * Mètode per obtenir el valor de la grandaria </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1430,32 +1432,32 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">fill</span><span class="p">(</span><span class="n">col</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">triangle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">-</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">+</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">fill</span><span class="p">(</span><span class="n">col</span><span class="p">);</span>
+<span class="w">		</span><span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>
+<span class="w">		</span><span class="n">triangle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">-</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">+</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
-<span class="w">		</span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">		</span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="c1">// Exemples de get per a la classe Con</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Exemples de get per a la classe Con</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1492,18 +1494,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="n">Con</span><span class="w"> </span><span class="n">vesubio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="n">Con</span><span class="w"> </span><span class="n">vesubio</span><span class="p">;</span>
 
 <span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">	</span>
-<span class="w">		</span><span class="n">vesubio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Con</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="n">vesubio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Con</span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">clear</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">background</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">clear</span><span class="w"> </span><span class="p">();</span>
+<span class="w">		</span><span class="n">background</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
 <span class="w">		</span><span class="n">vesubio</span><span class="p">.</span><span class="na">display</span><span class="w">  </span><span class="p">();</span><span class="w">	</span>
-<span class="w">		</span><span class="n">vesubio</span><span class="p">.</span><span class="na">expulsar</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="n">vesubio</span><span class="p">.</span><span class="na">expulsar</span><span class="w"> </span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1551,51 +1553,51 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span><span class="w"></span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Piroclast</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">velocitat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w">     </span><span class="n">lifeSpan</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w">   </span><span class="n">col</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">	</span><span class="c1">// Constructor parametritzat</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// Constructor parametritzat</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">color</span><span class="w"> </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">lifeSpan</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">--</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="n">noStroke</span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">grandaria</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">color</span><span class="w"> </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">lifeSpan</span><span class="p">);</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">lifeSpan</span><span class="w"> </span><span class="o">--</span><span class="p">;</span>
+<span class="w">		</span><span class="n">noStroke</span><span class="p">();</span>
+<span class="w">		</span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span>
+<span class="w">		</span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">grandaria</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">		</span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 *  Mètode set de l'atribut grandària</span>
 <span class="cm">	 * </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrandaria</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tam</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span><span class="cm">/**</span>
 <span class="cm">	 * Mètode per obtenir el valor de la grandaria </span>
-<span class="cm">	 */</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cm">	 */</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getGrandaria</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1633,41 +1635,41 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span><span class="w"></span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Con</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">;</span><span class="w">  </span><span class="c1">// Aquest arrayList representa la relació u a molts entre Con i Piroclast del diagrama de classes.</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Con</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">fill</span><span class="p">(</span><span class="n">col</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">triangle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">-</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">+</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">fill</span><span class="p">(</span><span class="n">col</span><span class="p">);</span>
+<span class="w">		</span><span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>
+<span class="w">		</span><span class="n">triangle</span><span class="w"> </span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">-</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="o">+</span><span class="p">(</span><span class="n">ample</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="o">+</span><span class="n">alt</span><span class="p">);</span>
 
-<span class="w">		</span><span class="n">mostraPiroclasts</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="n">mostraPiroclasts</span><span class="w"> </span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w">	</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
-<span class="w">		</span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">expulsar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Piroclast</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">		</span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  			</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">  			</span><span class="n">p</span><span class="p">.</span><span class="na">display</span><span class="p">();</span><span class="w"></span>
-<span class="w">  			</span><span class="n">p</span><span class="p">.</span><span class="na">update</span><span class="p">();</span><span class="w"></span>
-<span class="w"> 		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  			</span><span class="n">Piroclast</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alPiroclasts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">  			</span><span class="n">p</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">  			</span><span class="n">p</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w"> 		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Piroclast</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">getTotalPiroclasts</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">alPiroclasts</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1713,10 +1715,10 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fisiques</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.005</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mf">0.0001</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.0001</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fisiques</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">gravetat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.005</span><span class="p">);</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">friccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mf">0.0001</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.0001</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="sobrecarrega-doperadors">Sobrecàrrega d'operadors</h2>
 <p>En Java és possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteix nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
@@ -1743,34 +1745,6 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 5.- Tipus Compostos Dades" class="md-footer__link md-footer__link--prev" href="../Tema%2005.%20Tipus%20compostos%20de%20dades/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              5.- Tipus Compostos Dades
-            </div>
-</div>
-</a>
-<a aria-label="Next: 7.- Herència, polimorfisme.." class="md-footer__link md-footer__link--next" href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              7.- Herència, polimorfisme..
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1788,13 +1762,9 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
-<script src="../js/mathjax.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script "="" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 <script>mermaid.initialize({
     theme: "neutral",
     darkmode: true

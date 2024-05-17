@@ -9,7 +9,7 @@
 <link href="../Tema%2010.%20Acc%C3%A9s%20a%20dades/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.1.15" name="generator"/>
-<title>9.- Gràfics. Java Swing. - PROGRAMACIÓ 1DAW</title>
+<title>9.- Gràfics. ControlP5 - PROGRAMACIÓ 1DAW</title>
 <link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tema-9-grafics-java-swing">
+<a class="md-skip" href="#tema-9-grafics-la-llibreria-controlp5">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              9.- Gràfics. Java Swing.
+              9.- Gràfics. ControlP5
             
           </span>
 </div>
@@ -159,11 +159,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          9.- Gràfics. Java Swing.
+          9.- Gràfics. ControlP5
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        9.- Gràfics. Java Swing.
+        9.- Gràfics. ControlP5
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -196,27 +196,653 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tema-9-grafics-java-swing">Tema 9. Gràfics. Java Swing</h1>
+<h1 id="tema-9-grafics-la-llibreria-controlp5">Tema 9. Gràfics. La llibreria ControlP5</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Fins ara hem estat utilitzant els esdeveniments keyPressed i mouseClicked per tal d'interactuar amb l'usuari o bé també utilitzant diàlegs popup.....</p>
 <p>En aquest tema utilitzarem una llibreria de Processing IDE que es diu controlP5 que s'instal·la des del menú <strong> Tools --&gt; Manage Tools</strong>. Al diàleg que s'obre anem a la pestanya <strong>Libraries</strong> i busquem i instal·lem la llibreria <strong>ControlP5</strong></p>
 <h2 id="la-llibreria-controlp5">La llibreria ControlP5</h2>
 <p>ControlP5 és una col·lecció de controladors per crear una interfície d'usuari gràfica a la part superior del vostre esbós de processament inclouen controls lliscants, botons, commutadors, botons, camps de text, botons de ràdio, caselles de verificació, entre d'altres, i es poden afegir fàcilment a un esbós de processament. Es poden organitzar en contextos PGraphics de control separats i es poden organitzar en pestanyes o grups.</p>
-<p>Amb ControlP5 podem fer:
-- Grups: poden agrupar diversos controls.
-- Botons
-- Etiquetes: text
-- Camps i arees de text.
-- Desplegables
-- etc..</p>
-<p>Per tal de poder utilitzar les llibreries ControlP5 de Processing només hauriem d'instal·lar la llibreria com s'ha explicat al punt anterior.</p>
+<p>Amb ControlP5 podem fer:</p>
+<ul>
+<li>Grups: poden agrupar diversos controls.</li>
+<li>Botons</li>
+<li>Etiquetes de text o labels.</li>
+<li>Camps i arees de text.</li>
+<li>Desplegables</li>
+<li>Entre molts altres..</li>
+</ul>
+<p><center>
+<kbd style="border:1px solid #888;width:80%;"><img alt="ControlP5 Library" src="../assets/Tema9/controlp5-controllers-range.png"/></kbd>
+</center></p>
+<p>Per tal de poder utilitzar les llibreries ControlP5 de Processing només hauriem d'instal·lar la llibreria com s'instal·len les llibreries a Processing IDE.</p>
+<div class="admonition danger">
+<p class="admonition-title">Particularitats Processing IDE i ControlP5<p>Una vegada ja tens instal·lada la llibreria i abans de passar a utilitzar-la, has de tenir en compte una sèrie de consideracions molt importants per tal que funcione correctament.</p>
+<ol>
+<li>
+<p>Processing treballa la part gràfica de l'entorn amb una classe anomenada PApplet que és la que s'utilitza per a dibuixar els <strong>sketch</strong> i a la qual també s'associen els controls derivats de la llibreria <strong>ControlP5</strong>. Per tant per poder utilitzar-la als nostres projectes ens hem d'assegurar que la classe que continga els controls ha de tindre accés al PApplet principal (main).</p>
+</li>
+<li>
+<p>La classe que continga els controls, una classe Menú per exemple, si volem que la interacció amb l'usuari funcione de forma correcta, haurà d'implementar la interfície <strong>ControlListener</strong>  per tant, haurà de tindre el mètode public void controlEvent(ControlEvent theEvent).</p>
+</li>
+</ol>
+</p>
+</div>
 <h3 id="botons">Botons</h3>
+<p>Un botó dispara un esdeveniment després de que s'allibere. Els esdeveniments del botó es poden associar a funcions dins de la teua aplicació. Si vols veure més informació d'aquest control pots anar a la documentació de la <a href="https://sojamo.de/libraries/controlP5/reference/index.html?controlP5/Button.html">classe Controller</a>.</p>
+<p>Primer crearem una xicoteta aplicació per posar botons i veure amb un poc més de detall com funcionen i que es pot fer amb ells. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">Menu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">Menu</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="w">        </span><span class="n">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Menu</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">menu</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Menu</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">boto1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Menu</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="n">boto1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"BOTÓ"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">150</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">            </span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">boto1</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<p>Al codi anterior s'ha creat la <strong>classe Menú</strong> que és la que contindrà els controls de <strong>controlP5</strong>. Al nostre cas es tractarà inicialment d'un sol botó amb text <strong>BOTO1</strong> a la posició (250,150) amb una grandària de 150 per 150 píxels de color blau. Com pots observar també he implementat el mètode (buit de moment) <strong>controlEvent</strong> ja que es tracta d'una classe que implementa la interfície <strong>ControlListener</strong>. Finalment hem posat un mètode <strong>display</strong> public en el que bàsicament el que es fa és cridar al mètode <strong>show()</strong> de la classe Button de la llibreria ControlP5.</p>
+<p>Al executar eixe codi es mostra el següent:</p>
+<p><center>
+<img alt="ControlP5 Library" src="../assets/Tema9/ProvaBoto1.png"/>
+</center></p>
+<p>Ara ens quedaria com aconseguir que es puga interactuar amb l'usuari, en altres paraules, que quan l'usuari prema el botó l'aplicació faja alguna cosa. Per aconseguir-ho cal fer dues coses: la primera és afegir-li a l'objecte controlP5 qui serà el que està escoltant les accions que es poden realitzar amb els controls que conté, bàsicament fer clic sobre el botó en el nostre cas. Això es fa afegint-li al controlP5 un <strong>listener</strong> just després de la instanciació d'aquest.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>En altres paraules el que li estem dient al botó és que quan el premem, el codi que ha d'executar-se associat al botó es troba a la mateixa classe <strong>Menu</strong> (this) mitjançant el mètode <strong>controlEvent</strong> de la interfície <strong>ControlListener</strong></p>
+<p>Finalment ens quedaria escriure el codi necessari al mètode <strong>controlEvent</strong> amb les accions que volem que es produeixen quan fem clic sobre el botó.</p>
+<div class="admonition danger">
+<p class="admonition-title">ControlEvent NO és un mètode de botó<p>Heu de tenir en compte que el mètode <strong>controlEvent</strong> és un mètode que pot respondre a accions de l'usuari en diferents controls de la mateixa classe. És a dir, que la nostra classe menú pot tindre més d'un botó i tots els esdeveniments executaran el mètode en qüestió.</p>
+</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Main</label><label for="__tabbed_2_2">Menu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">Menu</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="w">        </span><span class="n">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Menu</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">menu</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Menu</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">boto1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Menu</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="n">boto1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"BOTÓ"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">150</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="s">"boto1"</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">println</span><span class="p">(</span><span class="s">"cas 1"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(){</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<p>Per acabar, què passa si el que volem quan es premi un botó modifique l'estat del programa principal? Hem d'aprofitar que al constructor de la classe menú se li passa el <strong>pare</strong> (programa principal en el nostre cas) i per tant des dels esdeveniments de la classe <strong>Menú</strong> podriem cridar a mètodes de la classe pare. Per tant tot allò que volem que siga susceptible de modificar-se des de classes externes com el menú, haurem de crear mètodes als quals podem cridar des del menú.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Main</label><label for="__tabbed_3_2">Menu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">Menu</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="w">        </span><span class="n">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Menu</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">menu</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraText</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strText</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">strText</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Menu</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">boto1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Menu</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="n">boto1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"BOTÓ"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">150</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="s">"boto1"</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">mostraText</span><span class="p">(</span><span class="s">"Clic botó 1"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(){</span>
+<span class="w">            </span><span class="n">boto1</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<p>Al codi anterior hi ha un exemple amb el codi necessari per tal que un botó quan es premi mostre per terminal un text, però compliquem-ho un poc més. A continuació farem una aplicació simple amb tres botons (centrats) dalt d'una pantalla de 640 per 480 píxels on cadascun dels botons el que farà serà pintar la pantalla de fons d'un color concret. Per exemple: un botó que es diga <strong>Roig</strong> i pinte de roig el fons, un botó <strong>Verd</strong> que pinte de verd i finalment un botó <strong>Blau</strong> que pinte de blau.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Main</label><label for="__tabbed_4_2">Menu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">Menu</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="n">fons</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Menu</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">background</span><span class="p">(</span><span class="n">fons</span><span class="p">);</span>
+<span class="w">    </span><span class="n">menu</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraText</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strText</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">strText</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Menu</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Button</span><span class="w"> </span><span class="n">btnRoig</span><span class="p">,</span><span class="w"> </span><span class="n">btnVerd</span><span class="p">,</span><span class="w"> </span><span class="n">btnBlau</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Menu</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"ROIG"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="n">createFont</span><span class="p">(</span><span class="s">"Arial"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">));</span><span class="w"> </span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"VERD"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="n">createFont</span><span class="p">(</span><span class="s">"Arial"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">));</span><span class="w"> </span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addButton</span><span class="p">(</span><span class="s">"BLAU"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">450</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="p">.</span><span class="na">setColorActive</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">));</span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="n">createFont</span><span class="p">(</span><span class="s">"Arial"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">));</span><span class="w">                 </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"ROIG"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">mostraText</span><span class="p">(</span><span class="s">"Pintem de roig"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">fons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"VERD"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"Pintem de verd"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">fons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"BLAU"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"Pintem de blau"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">fons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"Ni idea de que ha passat"</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(){</span>
+<span class="w">            </span><span class="n">btnRoig</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">btnVerd</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">btnBlau</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <details class="question">
 <summary>Activitat 901. Crea una aplicació amb un botó</summary>
+<p>Dissenya una aplicació amb un menú que tinga quatre botons.</p>
+<ol>
+<li>El primer s'encarregarà d'alternar el color de fons de l'aplicació entre pistatxo i fuchsia.</li>
+<li>El segon demanarà el nom de l'usuari utilitzant la classe JOptionPane i després saludarà amb el text: "Hola ..."</li>
+<li>El tercer botó dibuixarà cercles del color contrari del fons en una posició aleatòria i de grandària 20 píxels.</li>
+<li>El quart botó ha de tancar l'aplicació.</li>
+</ol>
 </details>
 <h3 id="checkbox">CheckBox</h3>
+<p>En informàtica, una casella de verificació, check box, checkbox, tickbox o tick box es un element de interacció de la interfície gràfica d'usuari del Sistema Operatiu, que permet a este fer selecciones múltiples d'un conjunto de opcions, marcar respostes, etc.. </p>
+<p>Però vegem un exemple. Crearem un checkbox amb sis opcions múltiples que l'usuari podrà marca i desmarcar. Després entrarem més en detall de com controlar els esdeveniments dispara la interacció de l'usuari amb el checkbox.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Main</label><label for="__tabbed_5_2">Opcions</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">Opcions</span><span class="w"> </span><span class="n">opcions</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<span class="w">        </span><span class="n">opcions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Opcions</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">opcions</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Opcions</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Button</span><span class="w"> </span><span class="n">boto1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">CheckBox</span><span class="w"> </span><span class="n">checkbox</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Opcions</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">                </span>
+<span class="w">            </span><span class="n">checkbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addCheckBox</span><span class="p">(</span><span class="s">"checkBox"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setColorLabels</span><span class="p">(</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setItemsPerRow</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setSpacingColumn</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">setSpacingRow</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO1"</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO2"</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO3"</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO4"</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO5"</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">    </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="s">"checkBox"</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">println</span><span class="p">(</span><span class="s">"CheckBox clicat"</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">println</span><span class="p">(</span><span class="s">"ERROR (controlEvent): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(){</span>
+<span class="w">            </span><span class="n">checkbox</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>Ara ens queda la part en la que obtenim del nostre checkbox quina o quines són les opcions seleccionades, recorda que un checkbox és un control de selecció múltiple, i quines són les accions a realitzar en base a les opcions clicades, és a dir, programar els esdeveniments associats al checkbox. Per això canviarem el nom de les opcions per tal que siguen més significatives del que es suposa que faran.</p>
+<p>Canvia al codi anterior les línies <strong>addItem</strong> per les següents:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"ROIG"</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"FONT GRAN"</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"VORA"</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">);</span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO4"</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO5"</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">    </span>
+</code></pre></div></td></tr></table></div>
+<p>Ara hauriem de implementar el mètode <strong>controlEvent(ControlEvent theEvent)</strong>. Escriu el següent codi i observa el que passa:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s">"checkBox"</span><span class="p">:</span>
+<span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"CheckBox clicat"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">List</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Toggle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">optionsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">checkbox</span><span class="p">.</span><span class="na">getItems</span><span class="p">();</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Toggle</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">optionsList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"opció "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" - "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="na">getState</span><span class="p">());</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">default</span><span class="p">:</span>
+<span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"ERROR (controlEvent): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Amb el codi anterior, quan fages clic sobre alguna de les opcions del nostre control de selecció múltiple, es mostraran al terminal totes les opcions com les hem programades i quin valor tenen: true (checked), false (not checked).</p>
 <details class="question">
 <summary>Activitat 902. Crea una aplicació amb un checkbox</summary>
+<p>Crea una aplicació que tinga una llista d'opcions (checkbox) i un botó. Al llistat d'opcions (checkbox) l'usuari determinarà les característiques d'un rectangle que es dibuixarà quan fem clic sobre el botó.</p>
+<p>Les característiques que es podran determinar del rectangle són:</p>
+<div class="highlight"><pre><span></span><code>1. Si te vora o no te vora.
+2. Si està pintat per dins o no.
+3. Si la grandaria de la font es gran o no.
+4. Si té les vores arrodonides.
+</code></pre></div>
+<p>L'usuari seleccionarà les opcions que considere i quan faja clic al botó, aquest es dibuixarà un rectangle amb les característiques seleccionades.</p>
 </details>
 <h3 id="dropdownlist">DropDownList</h3>
 <details class="question">

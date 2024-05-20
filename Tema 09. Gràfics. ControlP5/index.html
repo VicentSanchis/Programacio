@@ -181,6 +181,46 @@
     La llibreria ControlP5
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#botons">
+    Botons
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checkbox">
+    CheckBox
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llistes-desplegables">
+    Llistes desplegables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radiobutton">
+    RadioButton
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#textfield">
+    TextField
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#textarea">
+    TextArea
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grup">
+    Grup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colorpicker">
+    ColorPicker
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -227,7 +267,7 @@
 </ol>
 </p>
 </div>
-<h3 id="botons">Botons</h3>
+<h2 id="botons">Botons</h2>
 <p>Un botó dispara un esdeveniment després de que s'allibere. Els esdeveniments del botó es poden associar a funcions dins de la teua aplicació. Si vols veure més informació d'aquest control pots anar a la documentació de la <a href="https://sojamo.de/libraries/controlP5/reference/index.html?controlP5/Button.html">classe Controller</a>.</p>
 <p>Primer crearem una xicoteta aplicació per posar botons i veure amb un poc més de detall com funcionen i que es pot fer amb ells. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">Menu</label></div>
@@ -667,14 +707,14 @@
 <details class="question">
 <summary>Activitat 901. Crea una aplicació amb un botó</summary>
 <p>Dissenya una aplicació amb un menú que tinga quatre botons.</p>
-<ol>
-<li>El primer s'encarregarà d'alternar el color de fons de l'aplicació entre pistatxo i fuchsia.</li>
-<li>El segon demanarà el nom de l'usuari utilitzant la classe JOptionPane i després saludarà amb el text: "Hola ..."</li>
-<li>El tercer botó dibuixarà cercles del color contrari del fons en una posició aleatòria i de grandària 20 píxels.</li>
-<li>El quart botó ha de tancar l'aplicació.</li>
-</ol>
+<div class="highlight"><pre><span></span><code>1. El primer s'encarregarà d'alternar el color de fons de l'aplicació entre pistatxo i fuchsia.
+2. El segon demanarà el nom de l'usuari utilitzant la classe JOptionPane i després saludarà amb el text: "Hola ..."
+3. El tercer botó dibuixarà cercles del color contrari del fons en una posició aleatòria i de grandària 20 píxels.
+4. El quart botó ha de tancar l'aplicació.
+</code></pre></div>
+<p><a href="../assets/Tema9/act901.zip">Descarrega la solució ací</a></p>
 </details>
-<h3 id="checkbox">CheckBox</h3>
+<h2 id="checkbox">CheckBox</h2>
 <p>En informàtica, una casella de verificació, check box, checkbox, tickbox o tick box es un element de interacció de la interfície gràfica d'usuari del Sistema Operatiu, que permet a este fer selecciones múltiples d'un conjunto de opcions, marcar respostes, etc.. </p>
 <p>Però vegem un exemple. Crearem un checkbox amb sis opcions múltiples que l'usuari podrà marca i desmarcar. Després entrarem més en detall de com controlar els esdeveniments dispara la interacció de l'usuari amb el checkbox.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Main</label><label for="__tabbed_5_2">Opcions</label></div>
@@ -798,8 +838,8 @@
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"ROIG"</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
 <span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"FONT GRAN"</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
 <span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"VORA"</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">);</span>
-<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO4"</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
-<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OPCIO5"</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">    </span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"VERTICAL"</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">checkbox</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"HORITZONTAL"</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">    </span>
 </code></pre></div></td></tr></table></div>
 <p>Ara hauriem de implementar el mètode <strong>controlEvent(ControlEvent theEvent)</strong>. Escriu el següent codi i observa el que passa:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -840,31 +880,400 @@
 <div class="highlight"><pre><span></span><code>1. Si te vora o no te vora.
 2. Si està pintat per dins o no.
 3. Si la grandaria de la font es gran o no.
-4. Si té les vores arrodonides.
+4. El·lipse vertical.
+5. El·lipse horitzontal.
 </code></pre></div>
-<p>L'usuari seleccionarà les opcions que considere i quan faja clic al botó, aquest es dibuixarà un rectangle amb les característiques seleccionades.</p>
+<p>L'usuari seleccionarà les opcions que considere i quan faja clic al botó, es modificaran les característiques de l'el·lipse que es dibuixarà al centre de la pantalla de la nostra aplicació.</p>
+<p><a href="../assets/Tema9/act902.zip">Descarrega la solució ací</a></p>
 </details>
-<h3 id="dropdownlist">DropDownList</h3>
+<h2 id="llistes-desplegables">Llistes desplegables</h2>
+<p>Les llistes desplegables són un tipus de control que permet a l'usuari seleccionar una opció de totes les que conté la llista. Quan una llista desplegable està desactivat només mostra un valor, en canvi si està activat, és a dir, si fem clic sobre ella, desplegarà una llista amb totes les opcions disponibles per tal que l'usuari puga triar-ne alguna.</p>
+<p>Aquest tipus de control l'hauràs vist per exemple a formularis de subscripció on pot triar la data de naixement, els mesos solen apareixer representats en una llista desplegable.</p>
+<p>Veja'm un exemple. Fem una aplicació simple en la que es mostren tres desplegables on podrem triar la data de naixement (dd/mm/aaaa) i cada vegada que canviem algun element de les nostres llistes desplegables, mostrarà un missatge felicitant-nos l'aniversari.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Main</label><label for="__tabbed_6_2">Controls</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>```java linenums="1"
+    Opcions opcions;</p>
+<div class="highlight"><pre><span></span><code>void setup () {
+    size(640,480);
+    opcions = new Opcions(this);
+    strDia = "1";
+    strMes = "GENER";
+    strAny = "1900";
+}
+
+void draw () {
+    clear();
+    background(200);
+    opcions.display();
+    textSize(40);
+    textAlign(CENTER);
+    text(strDia + " - " + strMes + " - " + strAny, 320, 240); 
+}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Opcions</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ScrollableList</span><span class="w"> </span><span class="n">ddlDia</span><span class="p">,</span><span class="w"> </span><span class="n">ddlMes</span><span class="p">,</span><span class="w"> </span><span class="n">ddlAny</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Opcions</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">PFont</span><span class="w"> </span><span class="n">pfont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createFont</span><span class="p">(</span><span class="s">"Arial"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span>
+<span class="w">            </span><span class="n">ControlFont</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlFont</span><span class="p">(</span><span class="n">pfont</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="n">font</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"dia"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setPosition</span><span class="w"> </span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span>
+<span class="w">                </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"mes"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"GENER"</span><span class="p">,</span><span class="w">  </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"FEBRER"</span><span class="p">,</span><span class="w">  </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MARÇ"</span><span class="p">,</span><span class="w">  </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"ABRIL"</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MAIG"</span><span class="p">,</span><span class="w">  </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"JUNY"</span><span class="p">,</span><span class="w">  </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"JULIOL"</span><span class="p">,</span><span class="w">  </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"AGOST"</span><span class="p">,</span><span class="w">  </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"SETEMBRE"</span><span class="p">,</span><span class="w">  </span><span class="mi">9</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OCTUBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"NOVEMBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"DESEMBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"any"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1950</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2020</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>Al codi anterior pots observar que el controlP5 que usem és <strong>ScrollableList</strong>. En total hem instanciant tres ScrollableLists, una per als dies del mes (1-31), la segona per als mesos ("GENER - DESEMBRE") i finalment una altra per a l'any de la data de naixement.</p>
+<div class="admonition danger">
+<p class="admonition-title">ControlP5 DropDownList</p>
+<p>També existeix dins del repositori de controls de la llibreria <strong>ControlP5</strong> el control <strong>DropdownList</strong> però aquest està obsolet i no és recomanable utilitzar-lo si existeixen alternatives.</p>
+</div>
+<p>Una vegada tenim els controls creats el que hem fet ha sigut afegir-los els items que hi mostraran i el valor que tenen per poder treballar amb ells a posteriori.</p>
+<p>La part més complicada d'aquest tipus de controls està en com capturem la informació una vegada la llista llença un esdeveniment (clic normalment o value changed), en altres paraules, què fem quan l'usuari canvie algun valor d'alguna llista desplegable. Mir a el codi i prova'l.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Main</label><label for="__tabbed_7_2">Controls</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>```java linenums="1"
+    Opcions opcions;
+    String strDia, strMes, strAny;</p>
+<div class="highlight"><pre><span></span><code>void setup () {
+    size(640,480);
+    opcions = new Opcions(this);
+    strDia = "1";
+    strMes = "GENER";
+    strAny = "1900";
+}
+
+void draw () {
+    clear();
+    background(200);
+    opcions.display();
+    textSize(40);
+    textAlign(CENTER);
+    text(strDia + " - " + strMes + " - " + strAny, 320, 240); 
+}
+
+void setDia (String d) {
+    this.strDia = d;
+}
+
+void setMes (String m) {
+    this.strMes = m;
+}
+
+void setAny (String y) {
+    this.strAny = y;
+}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Opcions</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ControlListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ControlP5</span><span class="w"> </span><span class="n">cp5</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">ScrollableList</span><span class="w"> </span><span class="n">ddlDia</span><span class="p">,</span><span class="w"> </span><span class="n">ddlMes</span><span class="p">,</span><span class="w"> </span><span class="n">ddlAny</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">Opcions</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">parent</span><span class="p">){</span>
+<span class="w">            </span><span class="n">PFont</span><span class="w"> </span><span class="n">pfont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createFont</span><span class="p">(</span><span class="s">"Arial"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span>
+<span class="w">            </span><span class="n">ControlFont</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlFont</span><span class="p">(</span><span class="n">pfont</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">            </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cp5</span><span class="p">.</span><span class="na">setFont</span><span class="p">(</span><span class="n">font</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"dia"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setPosition</span><span class="w"> </span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"mes"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"GENER"</span><span class="p">,</span><span class="w">  </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"FEBRER"</span><span class="p">,</span><span class="w">  </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MARÇ"</span><span class="p">,</span><span class="w">  </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"ABRIL"</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"MAIG"</span><span class="p">,</span><span class="w">  </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"JUNY"</span><span class="p">,</span><span class="w">  </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"JULIOL"</span><span class="p">,</span><span class="w">  </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"AGOST"</span><span class="p">,</span><span class="w">  </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"SETEMBRE"</span><span class="p">,</span><span class="w">  </span><span class="mi">9</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"OCTUBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"NOVEMBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"DESEMBRE"</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">addScrollableList</span><span class="p">(</span><span class="s">"any"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setBarHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setItemHeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">setOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1950</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2020</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">controlEvent</span><span class="p">(</span><span class="n">ControlEvent</span><span class="w"> </span><span class="n">theEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theEvent</span><span class="p">.</span><span class="na">getController</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">theEvent</span><span class="p">.</span><span class="na">getController</span><span class="p">().</span><span class="na">getValue</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp5</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ScrollableList</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">).</span><span class="na">getItem</span><span class="p">(</span><span class="n">index</span><span class="p">).</span><span class="na">get</span><span class="p">(</span><span class="s">"name"</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"dia"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"dia: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+<span class="w">                </span><span class="n">setDia</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"mes"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"mes: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+<span class="w">                </span><span class="n">setMes</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"any"</span><span class="p">:</span>
+<span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="s">"any: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+<span class="w">                </span><span class="n">setAny</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ddlDia</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">ddlMes</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">ddlAny</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>A aquest codi se li han afegit els mètodes setDia, setMes i setAny al main per tal que puguen ser cridats des de la classe Opcions on tenim les llistes desplegables. Quan algun valor en alguna llista desplegable canvie, es dispara automàticament el mètode controlEvent. Primer esbrinem quina és la llista que ha provocat aquest esdeveniment amb el <strong>getName()</strong> i després cridem al mètode corresponent del main per tal que modifique els valors de dia, mes o any.</p>
 <details class="question">
 <summary>Activitat 903. Crea una aplicació amb un desplegable</summary>
+<p>Utilitza aquest control en algun exemple que t'inventes.</p>
 </details>
-<h3 id="radiobutton">RadioButton</h3>
+<h2 id="radiobutton">RadioButton</h2>
 <details class="question">
 <summary>Activitat 904. Crea una aplicació amb un radiobutton</summary>
 </details>
-<h3 id="textfield">TextField</h3>
+<h2 id="textfield">TextField</h2>
 <details class="question">
 <summary>Activitat 905. Crea una aplicació amb un camp de text</summary>
 </details>
-<h3 id="textarea">TextArea</h3>
+<h2 id="textarea">TextArea</h2>
 <details class="question">
 <summary>Activitat 906. Crea una aplicació amb una àrea de text</summary>
 </details>
-<h3 id="grup">Grup</h3>
+<h2 id="grup">Grup</h2>
 <details class="question">
 <summary>Activitat 907. Crea una aplicació amb un grup de controls</summary>
 </details>
-<h3 id="colorpicker">ColorPicker</h3>
+<h2 id="colorpicker">ColorPicker</h2>
 <details class="question">
 <summary>Activitat 908. Crea una aplicació amb un colorPicker</summary>
 </details>

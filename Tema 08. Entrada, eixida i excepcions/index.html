@@ -5,11 +5,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="prev"/>
+<link href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.1.15" name="generator"/>
 <title>8.- Entrada, eixida, excepcions - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -29,7 +31,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -87,7 +89,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -150,7 +152,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           8.- Entrada, eixida, excepcions
           <span class="md-nav__icon md-icon"></span>
@@ -280,23 +282,23 @@ D’altra banda Java també ofereix el mecanisme d’excepcions per controlar el
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple per a Visual Studio Code o Eclipse IDE</span><span class="w"></span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple per a Visual Studio Code o Eclipse IDE</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
 
-<span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span><span class="w"></span>
-<span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">);</span><span class="w"></span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span>
-<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"S'ha produit un error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"></span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"S'ha produit un error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span><span class="w"> </span>
-<span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">reader</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// És molt important tancar els streams</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">reader</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// És molt important tancar els streams</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Consideracions de l'exemple anterior:</p>
 <ul>
@@ -314,15 +316,15 @@ D’altra banda Java també ofereix el mecanisme d’excepcions per controlar el
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple per a Visual Studio Code o Eclipse IDE</span><span class="w"></span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Exemple per a Visual Studio Code o Eclipse IDE</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Per favor escriu el teu nom i prem Intro"</span><span class="p">);</span><span class="w"></span>
-<span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Per favor escriu el teu nom i prem Intro"</span><span class="p">);</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hola: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Algunes consideracions:</p>
 <ul>
@@ -357,30 +359,30 @@ D’altra banda Java també ofereix el mecanisme d’excepcions per controlar el
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">;</span><span class="w"></span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Open the file from the createWriter() example</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Open the file from the createWriter() example</span>
 <span class="w">  </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createReader</span><span class="p">(</span><span class="s">"positions.txt"</span><span class="p">);</span><span class="w">    </span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 <span class="w"> </span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Stop reading because of an error or file is empty</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Stop reading because of an error or file is empty</span>
 <span class="w">    </span><span class="n">noLoop</span><span class="p">();</span><span class="w">  </span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">pieces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">TAB</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">pieces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">TAB</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <h3 id="flux-darxius">Flux d'arxius</h3>
@@ -399,10 +401,10 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="n">File</span><span class="w"> </span><span class="n">fitxer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// Fes el que vullgues fer amb el fitxer</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="n">File</span><span class="w"> </span><span class="n">fitxer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span>
+<span class="c1">// Fes el que vullgues fer amb el fitxer</span>
 </code></pre></div></td></tr></table></div>
 <p>En l’exemple anterior hem utilitzat la <strong>classe File</strong> per tal d’instanciar un stream al fitxer que li hem passat per paràmetre «prova.txt». Compte que s’ha de passar la ruta absoluta d’on es troba el fitxer utilitzant la funció de Processing IDE <strong>sketchPath()</strong>.</p>
 <p>Hi ha alternatives al constructor de la classe File que hem mostrat a l’exemple anterior, es pot construir també amb dos paràmetres: ruta i nom del fitxer o inclús indicar-li la ruta mitjançant un altre objecte File.</p>
@@ -510,11 +512,11 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"provat.txt"</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// Fem el que hem de fer amb le fitxer i després s'ha de tancar</span><span class="w"></span>
-<span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"provat.txt"</span><span class="p">);</span>
+<span class="c1">// Fem el que hem de fer amb le fitxer i després s'ha de tancar</span>
+<span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>La classe <strong>FileInputStream</strong> s’utilitza per llegir bytes o grups de bytes del fitxer associat. Tots els mètodes tenen visibilitat pública i s’ha de tenir en compte quina és l’excepció que llencen per controlar els possibles errors en temps d’execució.</p>
 <table>
@@ -580,29 +582,29 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"resultat.txt"</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="w">      </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span>
+<span class="w">      </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"resultat.txt"</span><span class="p">);</span>
 
-<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span><span class="w"></span>
-<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="n">fout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">byteLlegit</span><span class="p">);</span><span class="w"></span>
-<span class="w">         </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">      </span><span class="n">fout</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer no trobat"</span><span class="p">);</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Error d'entrada eixida"</span><span class="p">);</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="n">fout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">byteLlegit</span><span class="p">);</span>
+<span class="w">         </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">      </span><span class="n">fout</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer no trobat"</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Error d'entrada eixida"</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <details class="question">
@@ -622,12 +624,12 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileInputStream</span><span class="w"> </span><span class="n">gs</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span><span class="w"></span>
-<span class="n">DataInputStream</span><span class="w"> </span><span class="n">ent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">gs</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// Treballem amb ells i com passava amb els streams anteriors també els hem de tancar</span><span class="w"></span>
-<span class="n">gs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="n">FileInputStream</span><span class="w"> </span><span class="n">gs</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span>
+<span class="n">DataInputStream</span><span class="w"> </span><span class="n">ent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">gs</span><span class="p">);</span>
+<span class="c1">// Treballem amb ells i com passava amb els streams anteriors també els hem de tancar</span>
+<span class="n">gs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Observa el codi anterior:</strong> Primer s'instancia un objecte de la classe <strong>FileInputStream</strong> (derivada de InputStream) en la que se li indica la ruta del fitxer amb el que volem treballar. Després aquest objecte FileInputStream s'utilitza per poder instanciar un objecte de la classe <strong>DataInputStream</strong> que utilitzarem per llegir tipus de dades primitius del fitxer.</p>
 <p>Bàsicament aquestes classes el que fan és organitzar els bytes en tipus primitius de tal forma que ja podem treballar llegint i escrivint als fluxos: enters, caràcters, reals, cadenes etc..</p>
@@ -688,12 +690,12 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"result.txt"</span><span class="p">);</span><span class="w"></span>
-<span class="n">DataOutputStream</span><span class="w"> </span><span class="n">snb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fn</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// Treballem amb ells i tanquem.</span><span class="w"></span>
-<span class="n">fn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="n">snb</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"result.txt"</span><span class="p">);</span>
+<span class="n">DataOutputStream</span><span class="w"> </span><span class="n">snb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fn</span><span class="p">);</span>
+<span class="c1">// Treballem amb ells i tanquem.</span>
+<span class="n">fn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">snb</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>Al contrari que passava amb el DataInputStream, al codi anterior estem instanciant un objecte de la classe <strong>DataOutputStream</strong> que utilitzarem per escriure la informació desitjada.</p>
 <table>
@@ -776,28 +778,28 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">inst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">input</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">available</span><span class="p">();</span><span class="w">  </span><span class="c1">// Quants bytes té l'arxiu</span><span class="w"></span>
-<span class="w">    </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">inst</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">;</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">inst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">available</span><span class="p">();</span><span class="w">  </span><span class="c1">// Quants bytes té l'arxiu</span>
+<span class="w">    </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="n">inst</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="w"> </span><span class="n">byt</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">byt</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// Si no es tracta del caracter EOF (10 ASCII)</span><span class="w"></span>
-<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">byt</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="n">ki</span><span class="o">+</span><span class="s">"-"</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Algo val mal"</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="w"> </span><span class="n">byt</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">byt</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// Si no es tracta del caracter EOF (10 ASCII)</span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">byt</span><span class="p">;</span>
+<span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="n">ki</span><span class="o">+</span><span class="s">"-"</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Algo val mal"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>A continuació podem veure un exemple en el que fem ús del <strong>DataOutputStream i DataInputStream</strong>. El que fa aquest exemple és escriure a un fitxer d’eixida «pluges.dat» dos valors double aleatoris per després llegir-los amb un DataInputStream i mostrar-los per pantalla. </p>
 <p>El codi podria ser el següent:</p>
@@ -829,35 +831,35 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span><span class="w"></span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
+<span class="w">    </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primer valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segon valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primer valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segon valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">fis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fitxer no existeix"</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error IO inesperat"</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="n">fis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fitxer no existeix"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error IO inesperat"</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 803. Data Input i Data Output</summary>
@@ -870,11 +872,11 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"Complex.dat"</span><span class="p">;</span><span class="w"></span>
-<span class="n">PrintStream</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">));</span><span class="w"></span>
-<span class="c1">// Treballem i tanquem</span><span class="w"></span>
-<span class="n">ps</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"Complex.dat"</span><span class="p">;</span>
+<span class="n">PrintStream</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">));</span>
+<span class="c1">// Treballem i tanquem</span>
+<span class="n">ps</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <table>
 <thead>
@@ -932,20 +934,20 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Text que volem escriure dintre del fitxer"</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Text que volem escriure dintre del fitxer"</span><span class="p">;</span>
 
-<span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">PrintStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">PrintStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
 
-<span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
-<span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 804. LLig per teclat i copia</summary>
@@ -982,16 +984,16 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <p>Els fluxos de la classe <strong>InputStreamReader</strong> envolten (wrap) a un flux de bytes; converteixen la seqüència de bytes en seqüència de caràcters i així ja no ho hem de fer nosaltres; la classe deriva directament de Reader, pel que té disponibles els mètodes read() de la seua classe pare per la lectura de caràcters</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">InputStreamReader</span><span class="w"> </span><span class="n">ent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// En acabar tanquem l'stream</span><span class="w"></span>
-<span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">InputStreamReader</span><span class="w"> </span><span class="n">ent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="c1">// En acabar tanquem l'stream</span>
+<span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 La classe <strong>OutputStreamWriter</strong> que deriva de <strong>writer</strong>, permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">ot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">arxiu</span><span class="p">));</span><span class="w"></span>
-<span class="c1">// Després hem de recordar de tancar l'stream</span><span class="w"></span>
-<span class="n">ot</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">ot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">arxiu</span><span class="p">));</span>
+<span class="c1">// Després hem de recordar de tancar l'stream</span>
+<span class="n">ot</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 Els mètodes de la classe <strong>InputStreamReader</strong> són:</p>
 <table>
@@ -1070,9 +1072,9 @@ Els mètodes de la classe <strong>InputStreamReader</strong> són:</p>
 <p>Per exemple</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">fr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<span class="n">fr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 Els constructors de la classe <strong>FileReader</strong> són:</p>
 <table>
@@ -1107,10 +1109,10 @@ Els constructors de la classe <strong>FileReader</strong> són:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">nr</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">"Frase qualsevol a escriure"</span><span class="p">);</span><span class="w"></span>
-<span class="n">nr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<span class="n">nr</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">"Frase qualsevol a escriure"</span><span class="p">);</span>
+<span class="n">nr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <table>
@@ -1206,19 +1208,19 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">File</span><span class="w"> </span><span class="n">someFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(...);</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span><span class="w"></span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">File</span><span class="w"> </span><span class="n">someFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(...);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span>
 
-<span class="c1">// Count the number of 'a' characters.</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'a'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">aCount</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"There are "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 'a' characters in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">someFile</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Count the number of 'a' characters.</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'a'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">aCount</span><span class="o">++</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"There are "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 'a' characters in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">someFile</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>BufferedWriter</strong>, per un altre costat, escriu text en un flux de sortida de caràcters, guarda els caràcters en memòria intermèdia (buffer) per tal de proporcionar una escriptura eficient de caràcters, matrius i cadenes individuals.</p>
 <p>Es pot especificar la mida de la memòria intermèdia o es pot acceptar la mida predeterminada. El valor predeterminat és prou gran per a la majoria de propòsits.</p>
@@ -1282,29 +1284,29 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span><span class="w"></span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is the data in the output file"</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is the data in the output file"</span><span class="p">;</span>
 
-<span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Creates a FileWriter</span><span class="w"></span>
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span><span class="w"></span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Creates a FileWriter</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">FileWriter</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">FileWriter</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Creates a BufferedWriter</span><span class="w"></span>
-<span class="w">  </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Creates a BufferedWriter</span>
+<span class="w">  </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Writes the string to the file</span><span class="w"></span>
-<span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Writes the string to the file</span>
+<span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Closes the writer</span><span class="w"></span>
-<span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Closes the writer</span>
+<span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
 <span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <h3 id="printwriter">PrintWriter</h3>
@@ -1378,22 +1380,22 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span><span class="w"></span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is a text inside the file."</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is a text inside the file."</span><span class="p">;</span>
 
-<span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
 
-<span class="n">PrintWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
+<span class="n">PrintWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
 
-<span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
-<span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 806. FileWriter, FileReader, BufferedReader i PrintWriter</summary>
@@ -1409,7 +1411,7 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <p><strong>Serialització:</strong> és el procés de convertir un objecte (incloses les referències a altres objectes) a una seqüència de bytes, així com també l'acció de reconstruir eixos bytes en un objecte viu en un futur. La serialització s'utilitza quan vols <strong>persistir</strong> un objecte, és a dir, que dure més que el que dura l'execució d'un programa o aplicació.</p>
 <p>La declaració de la classe els objectes de la qual van a ser persistents, han de implementar la interfície <strong>«serializable»</strong> del paquet java.io, la qual és buida, no declara mètodes, simplement indica a la màquina virtual de Java que les instàncies d’aquestes classes podran gravar-se en un fitxer.</p>
 <p>Exemples</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">racional</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">serializable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span> <span class="nc">racional</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">serializable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1424,24 +1426,24 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Serializable</span><span class="p">;</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Serializable</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SerialClass</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SerialClass</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span>
 
-<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">SerialClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">currentTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getTime</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">SerialClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">currentTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getTime</span><span class="p">();</span>
+<span class="w">   </span><span class="p">}</span>
 
-<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">getCurrentTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">getCurrentTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="objectoutputstream">ObjectOutputStream</h3>
 <p>Els fluxos de la classe ObjectOutputStream s’utilitzen per gravar objectes persistents. El mètode writeObject() escriu qualsevol objecte d’una classe serializable en el flux de bytes associat. Pot llençar excepcions del tipus IOException que és necessari processar.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeObject</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeObject</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>El constructor de la classe espera un argument de tipus OutputStream, que és la base dels fluxos d’eixida a nivell de bytes, per tant, per crear aquest tipus de fluxos primer es crea un d’eixida a nivell de bytes associat a un arxiu extern i a continuació, es passa com argument al constructor de ObjectOutputStream, per exemple:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1449,32 +1451,32 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"dadesRac.dat"</span><span class="p">;</span><span class="w"></span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">FileOutputStream</span><span class="w"> </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span><span class="w"></span>
-<span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">fobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">bn</span><span class="p">);</span><span class="w"></span>
-<span class="n">bn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"dadesRac.dat"</span><span class="p">;</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<span class="n">FileOutputStream</span><span class="w"> </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">fobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">bn</span><span class="p">);</span>
+<span class="n">bn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>A continuació es pot escriure qualsevol objecte al flux:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Persona</span><span class="w"> </span><span class="n">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">"Juan"</span><span class="p">,</span><span class="s">"Martin"</span><span class="p">,</span><span class="w"> </span><span class="s">"123432123X"</span><span class="p">);</span><span class="w"></span>
-<span class="n">fobj</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">juan</span><span class="p">);</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="p">(</span><span class="s">"Cadena de favors"</span><span class="p">);</span><span class="w"></span>
-<span class="n">fobj</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
-<span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Persona</span><span class="w"> </span><span class="n">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">"Juan"</span><span class="p">,</span><span class="s">"Martin"</span><span class="p">,</span><span class="w"> </span><span class="s">"123432123X"</span><span class="p">);</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">juan</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="p">(</span><span class="s">"Cadena de favors"</span><span class="p">);</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="objectinputstream">ObjectInputStream</h3>
 <p>El objectes guardats en arxius amb fluxos de la classe ObjectOutputStream es recuperen i lligen amb fluxos d’entrada del tipus ObjectInputStream, aquesta classe és una extensió d’InputStream, a més a més, implementa la interfície DataInput, per això disposa de diversos mètodes d’entrada (read) per cadascun dels tipus de dades com readInt() o altres. El mètode més important definit per la classe ObjectInputStream és readObject(), el qual llig un objecte del flux d’entrada, és a dir, de l’arxiu associat al flux de baix nivell; l’objecte llegit es va escriure en el seu moment amb el mètode writeObject()</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="nf">readObject</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="nf">readObject</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>El constructor de fluxos ObjectInputStream té com entrada un altre flux de baix nivell de qualsevol tipus derivat d’InputStream, per exemple: FileInputStream associat amb l’arxiu d’objectes. A continuació es crea un flux d’entrada per llegir els objectes de l’arxiu «arxiuObjects.dat»</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"arxiuObjects.dat"</span><span class="p">));</span><span class="w"></span>
-<span class="n">obj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"arxiuObjects.dat"</span><span class="p">));</span>
+<span class="n">obj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>El constructor de la classe <strong>ObjectOutputStream</strong> llença una excepció si, per exemple, l’arxiu no existeix, aquella és del tipus «ClassNotFoundException» o «IOException», és necessari poder capturar aquestes excepcions</p>
 <details class="danger" open="open">
@@ -1488,9 +1490,9 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Creates an object of Dog class</span><span class="w"></span>
-<span class="w">  </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Tyson"</span><span class="p">,</span><span class="w"> </span><span class="s">"Labrador"</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">dog</span><span class="p">.</span><span class="na">save</span><span class="p">();</span><span class="w"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Creates an object of Dog class</span>
+<span class="w">  </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Tyson"</span><span class="p">,</span><span class="w"> </span><span class="s">"Labrador"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dog</span><span class="p">.</span><span class="na">save</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1535,48 +1537,48 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">39</span>
 <span class="normal">40</span>
 <span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
 
-<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
 
-<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span>
 
-<span class="w">            </span><span class="c1">// Creates an ObjectOutputStream</span><span class="w"></span>
-<span class="w">            </span><span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Creates an ObjectOutputStream</span>
+<span class="w">            </span><span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
 
-<span class="w">            </span><span class="c1">// Writes objects to the output stream</span><span class="w"></span>
-<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Writes objects to the output stream</span>
+<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span>
 
-<span class="w">            </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fileStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fileStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span>
 
-<span class="w">            </span><span class="c1">// Creates an ObjectInputStream</span><span class="w"></span>
-<span class="w">            </span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="n">fileStream</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Creates an ObjectInputStream</span>
+<span class="w">            </span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="n">fileStream</span><span class="p">);</span>
 
-<span class="w">            </span><span class="c1">// Reads the objects</span><span class="w"></span>
-<span class="w">            </span><span class="n">Dog</span><span class="w"> </span><span class="n">newDog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Dog</span><span class="p">)</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Reads the objects</span>
+<span class="w">            </span><span class="n">Dog</span><span class="w"> </span><span class="n">newDog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Dog</span><span class="p">)</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span>
 
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Name: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">name</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Breed: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">breed</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Name: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Breed: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">breed</span><span class="p">);</span>
 
-<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
 
-<span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
 <span class="w">      </span><span class="p">}</span><span class="w">    </span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1630,20 +1632,20 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">escolta</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="c1">// Codi del metode escolta</span><span class="w"></span>
-<span class="w">   </span><span class="c1">// ...</span><span class="w"></span>
-<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">escolta</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="c1">// Codi del metode escolta</span>
+<span class="w">   </span><span class="c1">// ...</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">();</span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">escolta</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// Codi a executar quan es produeix una excepció.</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">escolta</span><span class="p">();</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Codi a executar quan es produeix una excepció.</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior hem crear un mètode escolta que l’únic que fa és llençar una excepció. Quan al mètode main cridem a la funció escolta, si volem fer ús del sistema d’excepcions de Java, l’haurem de posar dins del bloc try. Just desprès d’acabar el conjunt d’instruccions del bloc try posem un catch indicant-li quina és la classe d’excepció que hauriem de capturar, al nostre cas Exception, i dins del bloc catch posariem el codi que s’hauria d’executar en cas de produir-se eixe error. Normalment es solen posar missatges d’error que alerten l’usuari de l’aplicació.</p>
 <p>A continuació explicarem amb més detall què és el que fan cadascun dels blocs del mecanisme d’excepcions que ha dissenyat Java.</p>
@@ -1664,21 +1666,21 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">escolta</span><span class="p">();</span><span class="w"></span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">escolta</span><span class="p">();</span>
 
-<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="n">tornaAEscoltar</span><span class="p">();</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="c1">// Codi excepció interna</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// Codi excepció externa</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="n">tornaAEscoltar</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="c1">// Codi excepció interna</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Codi excepció externa</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>A l’exemple anterior és pot observar un codi amb dos blocs try niats on el primer bloc try té dos blocs catch per controlar varies excepcions</p>
 <h3 id="bloc-throw">Bloc throw</h3>
@@ -1698,34 +1700,6 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 7.- Herència, polimorfisme.." class="md-footer__link md-footer__link--prev" href="../Tema%2007.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              7.- Herència, polimorfisme..
-            </div>
-</div>
-</a>
-<a aria-label="Next: 9.- Gràfics. ControlP5" class="md-footer__link md-footer__link--next" href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              9.- Gràfics. ControlP5
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1743,8 +1717,8 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </body>
 </html>

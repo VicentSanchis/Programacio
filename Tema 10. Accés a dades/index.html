@@ -5,11 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/" rel="prev"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.5.0" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.1.15" name="generator"/>
 <title>10.- Accés a dades - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.2e8b5541.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -29,7 +30,7 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -87,7 +88,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -160,7 +161,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
           10.- Accés a dades
           <span class="md-nav__icon md-icon"></span>
@@ -192,11 +193,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#creacio-i-execucio-de-sentencies-sql">
     Creació i execució de sentències SQL
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#obtencio-de-dades">
-    Obtenció de dades
   </a>
 </li>
 </ul>
@@ -237,11 +233,11 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Una vegada ja tenim importats els paquets del driver <strong>JDBC</strong>, hem d'establir la connexió a la base de dades mitjançant un objecte connexió i aquest objecte connexió estarà relacionat amb un String on s'emmagatzemarà la cadena de connexió a la base de dades. Veiem alguns exemples de cadenes de connexió:</p>
 <ul>
@@ -250,8 +246,8 @@
 <li>jdbc:oracle:usuari@servidor:port:BD</li>
 </ul>
 <p>Cal tindre també l'usuari i la contrasenya d'accés a la base de dades. També esl pot donar el cas que es llence una excepció, per tant, necessitarem posar el codi dins d'un bloc try..catch.</p>
-<p>En definitiva per tal d'establir una connexió amb la nostra base de dades en Java ho fariem de la següent forma:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>En definitiva per tal d'establir una connexió amb la nostra base de dades en Java ho fariem al mètode <strong>setup</strong> de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -271,52 +267,34 @@
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span><span class="w"></span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span>
 
-<span class="c1">//String url = "jdbc:mysql://localhost:3306/nom_base_de_dades";</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"jdbc:mysql://localhost:3306/instituto"</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"root"</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"root"</span><span class="p">;</span><span class="w"></span>
-<span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//String url = "jdbc:mysql://localhost:3306/nom_base_de_dades";</span>
+<span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"jdbc:mysql://localhost:3306/instituto"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"root"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"root"</span><span class="p">;</span>
+<span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Connexió establerta."</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Error de connexió: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-I des del main o la classe Test que conté el mètode main estàtic:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.sql.*</span><span class="p">;</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestBD</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">ConnectaBD</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConnectaBD</span><span class="p">();</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Connexió establerta."</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">	</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Error de connexió: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Arribats a aquest punt ja tindriem establerta la connexio entre la nostra aplicació i la base de dades</p>
 <h2 id="creacio-i-execucio-de-sentencies-sql">Creació i execució de sentències SQL</h2>
-<p>El següent pas, una vegada ja tenim establerta la connexió amb la nostra base de dades hem de crear un objecte <strong>Statement</strong> des del objecte connexió amb el mètode <strong>createStatement()</strong> que ens retornarà un objecte de tipus <strong>Statement</strong>.</p>
+<p>El següent pas, una vegada ja tenim establerta la connexió amb la nostra base de dades hem de crear un objecte <strong>Statement</strong> des del draw amb el mètode <strong>createStatement()</strong> que ens retornarà un objecte de tipus <strong>Statement</strong>.</p>
+<p>Ara hauriem de poder executar les sentències SQL que necessitem. Per poder executar sentències Sql utilitzarem el mètode <strong>executeQuery()</strong> que és un mètode que pertany a l'objecte <strong>Statement</strong> anteriorment creat. Aquest mètode ens retornarà un <strong>ResultSet</strong> què és on tindrem la informació obtinguda de la base de dades.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -335,28 +313,32 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">background</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">				</span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"></span>
-<span class="w">				</span><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM alumno"</span><span class="p">;</span><span class="w"></span>
-<span class="w">				</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">query</span><span class="p">);</span><span class="w"></span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">background</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<span class="w">				</span><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM alumno"</span><span class="p">;</span>
+<span class="w">				</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
 
-<span class="w">				</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">					</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"nombre"</span><span class="p">);</span><span class="w"></span>
-<span class="w">					</span><span class="n">println</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span><span class="w"></span>
-<span class="w">				</span><span class="p">}</span><span class="w"></span>
-<span class="w">				</span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">				</span><span class="n">stmt</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">			</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">				</span><span class="n">println</span><span class="p">(</span><span class="s">"Error executant la consulta: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"></span>
-<span class="w">			</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">				</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">					</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"nombre"</span><span class="p">);</span>
+<span class="w">					</span><span class="n">println</span><span class="p">(</span><span class="n">valor</span><span class="p">);</span>
+<span class="w">				</span><span class="p">}</span>
+<span class="w">				</span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">				</span><span class="n">stmt</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">			</span><span class="p">}</span><span class="w"> </span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="n">println</span><span class="p">(</span><span class="s">"Error executant la consulta: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ara hauriem de poder executar les sentències SQL que necessitem. Per poder executar sentències Sql utilitzarem el mètode <strong>executeQuery()</strong> que és un mètode que pertany a l'objecte <strong>Statement</strong> anteriorment creat. Aquest mètode ens retornarà un <strong>ResultSet</strong> què és on tindrem la informació obtinguda de la base de dades.</p>
-<p>En el nostre exemple, crearem un mètode nou a la classe <strong>MySqlConnection</strong> de tipus public al qual se li passarà un objecte strQuery de tipus String i ens retornarà un ResultSet. Veiem el codi c continuació:</p>
+<p>Amb les instruccions vistes als punts anteriors, ja podem connectar-nos a una base de dades i realitzar les consultes mitjançant <strong>queries</strong> però una forma més correcta d'implementar-ho seria creant una classe que s'encarregue de la interacció entre la nostra aplicació i la base de dades sense haver de posar el codi a l'esborrany principal i és en aquesta classe on posarem tots els atributs i mètodes necessaris per poder realitzar connexions a la Base de Dades de manera més eficient.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">BDConnection</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -368,43 +350,211 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">ResultSet</span><span class="w"> </span><span class="nf">ExecutarSQL</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strQuery</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">strQuery</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stat</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">strQuery</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error executant SQL"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">rs</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.JFrame</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.JScrollPane</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.JTable</span><span class="p">;</span>
+
+<span class="w">	</span><span class="n">BDConnection</span><span class="w"> </span><span class="n">bdCon</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"jdbc:mysql://localhost:3306/Alumnes"</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"root"</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"password"</span><span class="p">;</span>
+
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">size</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
+<span class="w">		</span><span class="n">bdCon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BDConnection</span><span class="w"> </span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">background</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bdCon</span><span class="p">.</span><span class="na">isConnected</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">String</span><span class="w"> </span><span class="n">strQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SELECT * FROM Alumnes"</span><span class="p">;</span>
+<span class="w">			</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bdCon</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">strQuery</span><span class="p">);</span>
+<span class="w">	</span>
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="k">while</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">					</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"Nom"</span><span class="p">);</span>
+<span class="w">					</span><span class="n">String</span><span class="w"> </span><span class="n">co1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"Cognom 1"</span><span class="p">);</span>
+<span class="w">					</span><span class="n">String</span><span class="w"> </span><span class="n">co2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"Cognom 2"</span><span class="p">);</span>
+<span class="w">					</span><span class="n">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">co1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">co2</span><span class="p">);</span>
+<span class="w">				</span><span class="p">}</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="n">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="n">bdCon</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Una vegada executat i comprovat aquest codi, deuriem tindre tots els alumnes de la nostra base de dades.</p>
-<h2 id="obtencio-de-dades">Obtenció de dades</h2>
-<p>I ara com llegim els registres de la BD?</p>
-<p>En el <strong>ResultSet</strong> que hem obtingut al pas anterior, el que tindrem serà una espècie de taula on podrem recorrer tota la informació.  Per poder accedir a aquest resultSet podem utilitzar els mètodes <strong>getString()</strong> i <strong>next()</strong> de l'objecte <strong>resultSet</strong>.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.ResultSet</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BDConnection</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">usr</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">pwd</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
+<span class="w">		</span><span class="kd">private</span><span class="w"> </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="p">;</span>
+
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="nf">BDConnection</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strURL</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strUSR</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strPWD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">this</span><span class="p">.</span><span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strURL</span><span class="p">;</span>
+<span class="w">			</span><span class="k">this</span><span class="p">.</span><span class="na">usr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strUSR</span><span class="p">;</span>
+<span class="w">			</span><span class="k">this</span><span class="p">.</span><span class="na">pwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strPWD</span><span class="p">;</span>
+
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    			</span><span class="k">this</span><span class="p">.</span><span class="na">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+<span class="w">    			</span><span class="n">println</span><span class="p">(</span><span class="s">"Connexió establerta."</span><span class="p">);</span>
+<span class="w">			</span><span class="p">}</span><span class="w"> </span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    			</span><span class="n">println</span><span class="p">(</span><span class="s">"Error de connexió: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="n">ResultSet</span><span class="w"> </span><span class="nf">executeQuery</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strQuery</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<span class="w">  				</span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">strQuery</span><span class="p">);</span><span class="w">        </span>
+<span class="w">			</span><span class="p">}</span><span class="w"> </span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="n">println</span><span class="p">(</span><span class="s">"Error executant la consulta: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">rs</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isConnected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="kt">boolean</span><span class="w"> </span><span class="n">bConnected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="n">bConnected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="na">con</span><span class="p">.</span><span class="na">isClosed</span><span class="p">();</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="n">println</span><span class="p">(</span><span class="s">"Error en BDConnection.isConnected()"</span><span class="p">);</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">bConnected</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">close</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="k">this</span><span class="p">.</span><span class="na">con</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">  				</span><span class="n">println</span><span class="p">(</span><span class="s">"Connexió tancada."</span><span class="p">);</span>
+<span class="w">  				</span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  				</span><span class="n">println</span><span class="p">(</span><span class="s">"Error tancant la connexió: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">  				</span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 9.- Gràfics. ControlP5" class="md-footer__link md-footer__link--prev" href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              9.- Gràfics. ControlP5
-            </div>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -422,8 +572,8 @@ I des del main o la classe Test que conté el mètode main estàtic:</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </body>
 </html>

@@ -161,6 +161,16 @@
     Estructures
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructures-de-salt">
+    Estructures de salt
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proces-de-compilacio">
+    Procés de compilació
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1934,169 +1944,6 @@
 <span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalFiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// totalFiles valdrà 8 durant tot el programa. </span>
 </code></pre></div></td></tr></table></div>
 </div>
-<h3 id="comentaris">Comentaris</h3>
-<p>Els <strong>comentaris</strong> a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga <strong>més fàcil de llegir</strong> millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. D'altre banda, els comentaris són part de la <strong>documentació</strong> de tot programa. És molt important escriure comentaris breus però significatius. Massa text als comentaris produirà l'efecte contrari i deixarà encara més illegible el codi.</p>
-<div class="admonition tip">
-<p class="admonition-title">Principi en programació</p>
-<p>"Un programa s'escriu una vegada però es llig moltes vegades"</p>
-</div>
-<p>En java tenim tres tipus de comentaris:</p>
-<ul>
-<li><strong>Comentaris en línia:</strong> S'utilitzen per comentar parts concretes del codi</li>
-<li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
-<li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les eines que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Comentari d'una sola línia en Java</span>
-
-<span class="cm">/* Comentari de més d'una línia</span>
-<span class="cm">linia 1</span>
-<span class="cm">linia 2</span>
-<span class="cm">...</span>
-<span class="cm">linia final */</span>
-
-<span class="cm">/**</span>
-<span class="cm">* Troba la mitjana de tres números!</span>
-<span class="cm">* El programa FindAvg implementa una aplicacio que</span>
-<span class="cm">* simplement calcula la mitjana de tres enters i els mostra</span>
-<span class="cm">* a la eixida per pantalla.</span>
-<span class="cm">*</span>
-<span class="cm">* @author  Aleix Caminou</span>
-<span class="cm">* @version 1.0</span>
-<span class="cm">* @since   2020-2-2</span>
-<span class="cm">*/</span>
-</code></pre></div></td></tr></table></div>
-<details class="question">
-<summary>Activitat 309. Comentaris al codi</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Visita el següent lloc web sobre <a href="https://www.tutorialspoint.com/java/java_documentation.htm">comentaris de java</a> i després amb el codi de l'última activitat, posa els següents comentaris: </p>
-<ul>
-<li>Un comentari de documentació a nivell de fitxer explicant que fa l'aplicació.</li>
-<li>Un comentari de documentació per mètode explicant que fa cada mètode.</li>
-<li>Comentaris de línia (tant simple com múltiple) als llocs que consideres que siga necessari.</li>
-</ul>
-<p>Recorda que has de guardar aquest fitxer com a <strong>CognomNomAct309.pde</strong> per lliurar-lo.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Activitat 309. Comentaris de codi</span>
-<span class="cm"> * -----------------------------------------------</span>
-<span class="cm"> * En aquesta activitat es demana que s'escriga un comentari de documentació explicant el que fa l'aplicació.</span>
-<span class="cm"> * Bàsicament en aquesta aplicació es declaren una sèrie de variables globals on s'emmagatzemarà informació</span>
-<span class="cm"> * relativa a un jugador de bàsquet com: nom, edat, pes etc...</span>
-<span class="cm"> */</span>
-
-<span class="w"> </span><span class="c1">// Declaració de variables per a un jugador de bàsquet</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nomJugador</span><span class="p">;</span><span class="w">      </span><span class="c1">// El nom d'un jugador és una cadena de caracters.</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">primerCognom</span><span class="p">;</span><span class="w">    </span><span class="c1">// El primer cognom també és una cadena</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">segonCognom</span><span class="p">;</span><span class="w">     </span><span class="c1">// Igual passa  amb el segon cognom</span>
-<span class="w">    </span><span class="kt">float</span><span class="w">  </span><span class="n">pes</span><span class="p">;</span><span class="w">             </span><span class="c1">// El pes es podria representar amb un decimal: 70,3 kg</span>
-<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">alçada</span><span class="p">;</span><span class="w">          </span><span class="c1">// Si la alçada és en centímetres amb un enter sobraria</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w">         </span><span class="c1">// Les posicions poden ser: base, ala, ala-pivot, escolta o pivot per tant un String</span>
-<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">puntsAnuals</span><span class="p">;</span><span class="w">     </span><span class="c1">// Els punts són un valor enter</span>
-<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">assistències</span><span class="p">;</span><span class="w">    </span><span class="c1">// Idem que amb els punts</span>
-<span class="w">    </span><span class="kt">float</span><span class="w">  </span><span class="n">efectivitat</span><span class="p">;</span><span class="w">     </span><span class="c1">// La efectivitat és un percentatge per tant he d'usar un float</span>
-
-<span class="w">    </span><span class="cm">/**</span>
-<span class="cm">    * Mètode setup.</span>
-<span class="cm">    * Aquest és el mètode de configuració de la nostra aplicació.</span>
-<span class="cm">    * S'executa només una vegada quan comença l'aplicació.</span>
-<span class="cm">    * És en aquesta funció on hem de posar totes les inicialitzacions per exemple</span>
-<span class="cm">    * @return void</span>
-<span class="cm">    */</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nomJugador</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">;</span>
-<span class="w">        </span><span class="n">primerCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Studamaier"</span><span class="p">;</span>
-<span class="w">        </span><span class="n">segonCognom</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"Junior"</span><span class="p">;</span>
-<span class="w">        </span><span class="n">pes</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">95.7f</span><span class="p">;</span>
-<span class="w">        </span><span class="n">alçada</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">210</span><span class="p">;</span>
-<span class="w">        </span><span class="n">posicio</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">"Ala-pivot"</span><span class="p">;</span>
-<span class="w">        </span><span class="n">puntsAnuals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
-<span class="w">        </span><span class="n">assistències</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span>
-<span class="w">        </span><span class="n">efectivitat</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">0.9f</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="cm">/**</span>
-<span class="cm">    * Mètode draw</span>
-<span class="cm">    * També anomenat bucle del joc. Aquest mètode s'executa amb una freqüència de 60 vegades per segon (60Hz)</span>
-<span class="cm">    * Aquest és el mètode principal de les aplicacions amb Processing IDE i és el que ens permet poder fer animacions.</span>
-<span class="cm">    * @return void</span>
-<span class="cm">    */</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</details>
-<div class="admonition tip">
-<p class="admonition-title">Utilitza l'estructura anterior</p>
-<p>Pots utilitzar el codi de l'activitat anterior com a base de les pròximes activitats o programes que fages en Processing IDE. Tin en compte que els comentaris dels mètodes <strong>draw</strong> i <strong>setup</strong> sempre seran els mateixos o molt similar. Bàsicament el que hauries de fer és canviar el comentari de l'aplicació que serà diferent abans de començar a picar codi.</p>
-<p>Recorda que primer has d'esborrar tota la part de la declaració i inicialització de variables del jugador de bàsquet.  Fes-ho i guarda el fitxer resultant com a <strong>estructuraBasica.pde</strong> per poder-lo utilitzar quan ho necessites.</p>
-</div>
 <h2 id="operadors-i-expressions">Operadors i expressions</h2>
 <p>Ha arribat el moment de revisar el que hem vist. Fins ara hem vist les <strong>dades</strong> com a unitat d'emmagatzemament <strong>d'informació</strong>. Els diferents <strong>tipus de dades</strong> que ens proporciona Java, com les <strong>variables</strong> i les <strong>constants</strong> poden emmagatzemar dades que poden variar o no han de variar durant l'execució del programa. I finalment també hem estudiat els <strong>literals</strong> i com construir <strong>identificadors</strong> per tal d'etiquetar distints elements dins del nostre programa.  En definitiva em vist en detall com es pot representar tota classe d'informació en un llenguatge de programació com Java però, com varem dir al primer tema, un programa informàtic s'encarrega (entre d'altres) de <strong>processar l'informació</strong>. Bé doncs, nosaltres de moment només hem estudiat els diferents mecanismes que proporciona Java per gestionar eixa informació però no hem vist encara com la podem processar.  Per tal de poder processar la informació haurem primer d'estudiar que són esl <strong>operadors i les expressions.</strong></p>
 <h3 id="expressions">Expressions</h3>
@@ -2284,8 +2131,8 @@ font d'errors.</p>
 <li>Valor Long 100</li>
 <li>Valor Int 100</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Exemple de conversió de tipus</p>
+<details class="question">
+<summary>Activitat 309. Exemple de conversió de tipus</summary>
 <p>Observa el següent codi i raona el que pot ser el seu resultat i anota'l. Després còpia el codi a un programa de Processing i executa'l. Compara el resultat del programa amb el que tu havies anotat. Què està passant? Per què?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2319,7 +2166,7 @@ font d'errors.</p>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"d = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" b= "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</div>
+</details>
 <h3 id="operadors-aritmetics">Operadors aritmètics</h3>
 <p>Els operador aritmètics en Java serveixen per realitzar operacions bàsiques algebraiques com: la suma, resta, multiplicació o divisió. Els resultats de tota expressió aritmètica és de tipus de dades numèric, per tant, podrà ser assignat a una variable numèrica o podra ser utilitzant en qualsevol altra operació numèrica.  </p>
 <ul>
@@ -2362,7 +2209,7 @@ font d'errors.</p>
 <p>A l'exemple anterior has pogut observar com s'escriuen en java algunes expressions aritmètiques. A l'activitat següent hauràs d'escriure tu aquestes expressions o operacions aritmètiques en un programa de Processing IDE.</p>
 <details class="question">
 <summary>Activitat 311. Operacions i expressions aritmètiques</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -2822,7 +2669,7 @@ font d'errors.</p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 315. Estudia i resol les següents expressions relacionals i lògiques</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -2997,6 +2844,181 @@ font d'errors.</p>
 </div>
 </div>
 </details>
+<h3 id="comentaris">Comentaris</h3>
+<p>Els <strong>comentaris</strong> a qualsevol llenguatge de programació, s'utilitzen per fer que el codi siga <strong>més fàcil de llegir</strong> millorant així el manteniment. Els comentaris són totalment ignorats pel compilador. D'altre banda, els comentaris són part de la <strong>documentació</strong> de tot programa. És molt important escriure comentaris breus però significatius. Massa text als comentaris produirà l'efecte contrari i deixarà encara més illegible el codi.</p>
+<div class="admonition tip">
+<p class="admonition-title">Principi en programació</p>
+<p>"Un programa s'escriu una vegada però es llig moltes vegades"</p>
+</div>
+<p>En java tenim tres tipus de comentaris:</p>
+<ul>
+<li><strong>Comentaris en línia:</strong> S'utilitzen per comentar parts concretes del codi</li>
+<li><strong>Comentaris de vàries línies:</strong> Si un programador vol descriure més detalladament un codi més complex i no es pot utilitzar el comentari d'una línia perquè requereix més text</li>
+<li><strong>Comentaris de documentació:</strong> Aquest tipus de comentaris ajuda a l'hora de generar documentació de forma automatitzada per alguns dels IDEs que s'utilitzen a l'actualitat o les eines que porten amb ells. Un exemple d'eina de generar documentació de referència és <strong>javadoc</strong></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Comentari d'una sola línia en Java</span>
+
+<span class="cm">/* Comentari de més d'una línia</span>
+<span class="cm">linia 1</span>
+<span class="cm">linia 2</span>
+<span class="cm">...</span>
+<span class="cm">linia final */</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Troba la mitjana de tres números!</span>
+<span class="cm">* El programa FindAvg implementa una aplicacio que</span>
+<span class="cm">* simplement calcula la mitjana de tres enters i els mostra</span>
+<span class="cm">* a la eixida per pantalla.</span>
+<span class="cm">*</span>
+<span class="cm">* @author  Aleix Caminou</span>
+<span class="cm">* @version 1.0</span>
+<span class="cm">* @since   2020-2-2</span>
+<span class="cm">*/</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 316. Escriu comentaris al codi</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Visita el següent lloc web sobre <a href="https://www.tutorialspoint.com/java/java_documentation.htm">comentaris de java</a> i després amb el codi de l'última activitat, posa els següents comentaris: </p>
+<ul>
+<li>Un comentari de documentació a nivell de fitxer explicant que fa l'aplicació.</li>
+<li>Un comentari de documentació per mètode explicant que fa cada mètode.</li>
+<li>Comentaris de línia (tant simple com múltiple) als llocs que consideres que siga necessari.</li>
+</ul>
+<p>Recorda que has de guardar aquest fitxer com a <strong>CognomNomAct309.pde</strong> per lliurar-lo.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Activitat 316. Comentaris de codi</span>
+<span class="cm"> * -----------------------------------------------</span>
+<span class="cm"> * En aquesta activitat es demana que s'escriga un comentari de documentació explicant el que fa l'aplicació.</span>
+<span class="cm"> * Bàsicament en aquesta aplicació es declaren una sèrie de variables globals on s'emmagatzemarà informació</span>
+<span class="cm"> * relativa a un jugador de bàsquet com: nom, edat, pes etc...</span>
+<span class="cm"> */</span>
+
+<span class="w"> </span><span class="c1">// Declaració de variables per a un jugador de bàsquet</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nomJugador</span><span class="p">;</span><span class="w">      </span><span class="c1">// El nom d'un jugador és una cadena de caracters.</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">primerCognom</span><span class="p">;</span><span class="w">    </span><span class="c1">// El primer cognom també és una cadena</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">segonCognom</span><span class="p">;</span><span class="w">     </span><span class="c1">// Igual passa  amb el segon cognom</span>
+<span class="w">    </span><span class="kt">float</span><span class="w">  </span><span class="n">pes</span><span class="p">;</span><span class="w">             </span><span class="c1">// El pes es podria representar amb un decimal: 70,3 kg</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">alçada</span><span class="p">;</span><span class="w">          </span><span class="c1">// Si la alçada és en centímetres amb un enter sobraria</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span><span class="w">         </span><span class="c1">// Les posicions poden ser: base, ala, ala-pivot, escolta o pivot per tant un String</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">puntsAnuals</span><span class="p">;</span><span class="w">     </span><span class="c1">// Els punts són un valor enter</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="n">assistències</span><span class="p">;</span><span class="w">    </span><span class="c1">// Idem que amb els punts</span>
+<span class="w">    </span><span class="kt">float</span><span class="w">  </span><span class="n">efectivitat</span><span class="p">;</span><span class="w">     </span><span class="c1">// La efectivitat és un percentatge per tant he d'usar un float</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">    * Mètode setup.</span>
+<span class="cm">    * Aquest és el mètode de configuració de la nostra aplicació.</span>
+<span class="cm">    * S'executa només una vegada quan comença l'aplicació.</span>
+<span class="cm">    * És en aquesta funció on hem de posar totes les inicialitzacions per exemple</span>
+<span class="cm">    * @return void</span>
+<span class="cm">    */</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">nomJugador</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">primerCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Studamaier"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">segonCognom</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"Junior"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pes</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">95.7f</span><span class="p">;</span>
+<span class="w">        </span><span class="n">alçada</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">210</span><span class="p">;</span>
+<span class="w">        </span><span class="n">posicio</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">"Ala-pivot"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">puntsAnuals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+<span class="w">        </span><span class="n">assistències</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span>
+<span class="w">        </span><span class="n">efectivitat</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">0.9f</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">    * Mètode draw</span>
+<span class="cm">    * També anomenat bucle del joc. Aquest mètode s'executa amb una freqüència de 60 vegades per segon (60Hz)</span>
+<span class="cm">    * Aquest és el mètode principal de les aplicacions amb Processing IDE i és el que ens permet poder fer animacions.</span>
+<span class="cm">    * @return void</span>
+<span class="cm">    */</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Utilitza l'estructura anterior</p>
+<p>Pots utilitzar el codi de l'activitat anterior com a base de les pròximes activitats o programes que fages en Processing IDE. Tin en compte que els comentaris dels mètodes <strong>draw</strong> i <strong>setup</strong> sempre seran els mateixos o molt similar. Bàsicament el que hauries de fer és canviar el comentari de l'aplicació que serà diferent abans de començar a picar codi.</p>
+<p>Recorda que primer has d'esborrar tota la part de la declaració i inicialització de variables del jugador de bàsquet.  Fes-ho i guarda el fitxer resultant com a <strong>estructuraBasica.pde</strong> per poder-lo utilitzar quan ho necessites.</p>
+</div>
+<h3 id="javadoc">Javadoc</h3>
+<p>Javadoc és una eina que ens facilita la creació de documentació de classes java basant-se en allò que hem escrit als comentaris. Per poder utilitzar aquesta eina en Processing IDE, primer hem d'anar al menú <strong>Eines --&gt; Gestionar eines</strong> i assegurar-nos que tenim instal·lada l'utilitat com mostra la imatge següent:</p>
+<p><center>
+<img alt="Eina JavaDoc Instal·lada" src="../assets/Tema3/JavaDocTool.png"/>
+</center></p>
+<p>Si ja tenim l'eina de generació de documentació de java instal·lada, obrim algun projecte que tinga els comentaris de documentació ben escrits i anem al menú <strong>Eines --&gt; genera JavaDoc</strong> i passats uns segons, tindriem ja disponible la documentació a la carpeta <strong>reference</strong> que l'eina hauria creat dins de la pròpia carpeta del projecte. </p>
+<p>Com pots observar, la documentació que genera l'eina javadoc és una documentació en format html en la qual podem navegar i passar d'un fitxer a un altre si el projecte té mès d'un fitxer.</p>
+<p>Aquesta eina serà de molta importància quan comencem a implementar classes i objectes reutilitzables.</p>
+<details class="question">
+<summary>Activitat 317. Documentació javadoc</summary>
+<p>Agafa alguna practica que hages fet durant el curs, comprova que tens els comentaris de documentació ben escrits i genera amb javadoc la documentació.</p>
+</details>
 <h2 id="estructures">Estructures</h2>
 <p>Com hem vist al tema 2, el <strong>teorema de la programació estructurada</strong> preveu una sèrie d'estructures bàsiques amb les quals es podrien codificar tots els algorismes sense necessitat d'usar cap sentència <strong>GOTO</strong> o similar.</p>
 <p>En els pròxims punts veurem com es codifiquen totes aquestes estructures en llenguatge Java.</p>
@@ -3028,7 +3050,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div></td></tr></table></div>
 <p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing.</p>
 <details class="question">
-<summary>Activitat 316. Dibuixa amb Processing IDE</summary>
+<summary>Activitat 318. Dibuixa amb Processing IDE</summary>
 <p>Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat copiant el codi que pots veure a continuació. Després modifica alguns dels paràmetres de les funcions point, line, ellipse i square i observa el que passa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -3057,7 +3079,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </details>
 <p>Ara que ja has vist algunes de les funcions que ens ofereix l'<strong>API de Processing</strong> per tal de dibuixar, investiga quines altres funcions permet i aplica-les a la següent activitat.</p>
 <details class="question">
-<summary>Activitat 317. Dibuix lliure amb Processing IDE.</summary>
+<summary>Activitat 319. Dibuix lliure amb Processing IDE.</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3201,7 +3223,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 318. Nombres parells i senars amb la funció random()</summary>
+<summary>Activitat 320. Nombres parells i senars amb la funció random()</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3292,7 +3314,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </code></pre></div></td></tr></table></div>
 <p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional. Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else:</p>
 <details class="question">
-<summary>Activitat 319. Copia i executa a Processing IDE</summary>
+<summary>Activitat 321. Copia i executa a Processing IDE</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3346,7 +3368,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <h4 id="activitats-sobre-estructures-de-seleccio">Activitats sobre estructures de selecció</h4>
 <p>Mira i fes les següents activitats per tal de reforçar els conceptes vistos sobre les diferents estructures de selecció de la programació estructurada.</p>
 <details class="question">
-<summary>Activitat 320. Divisió</summary>
+<summary>Activitat 322. Divisió</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3362,7 +3384,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 </details>
 <details class="question">
-<summary>Activitat 321. Divisió per zero i altres problemes</summary>
+<summary>Activitat 323. Divisió per zero i altres problemes</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">Problema</label><label for="__tabbed_15_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3380,7 +3402,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 </details>
 <details class="question">
-<summary>Activitat 322. Major, menor o igual</summary>
+<summary>Activitat 324. Major, menor o igual</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3399,7 +3421,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 <p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 323. Diferència d'anys</summary>
+<summary>Activitat 325. Diferència d'anys</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3414,7 +3436,7 @@ Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs (
 </div>
 </details>
 <details class="question">
-<summary>Activitat 324. Millora la diferència d'anys</summary>
+<summary>Activitat 326. Millora la diferència d'anys</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio"/><input id="__tabbed_18_2" name="__tabbed_18" type="radio"/><div class="tabbed-labels"><label for="__tabbed_18_1">Problema</label><label for="__tabbed_18_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3430,7 +3452,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 325. Nombres múltiples</summary>
+<summary>Activitat 327. Nombres múltiples</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio"/><input id="__tabbed_19_2" name="__tabbed_19" type="radio"/><div class="tabbed-labels"><label for="__tabbed_19_1">Problema</label><label for="__tabbed_19_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3444,7 +3466,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 326. Nombre múltiples amb negatius i zeros</summary>
+<summary>Activitat 328. Nombre múltiples amb negatius i zeros</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><input id="__tabbed_20_2" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">Problema</label><label for="__tabbed_20_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3460,7 +3482,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 327. Comparador de tres números</summary>
+<summary>Activitat 329. Comparador de tres números</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3480,7 +3502,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 328. Any bixest</summary>
+<summary>Activitat 330. Any bixest</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio"/><input id="__tabbed_22_2" name="__tabbed_22" type="radio"/><div class="tabbed-labels"><label for="__tabbed_22_1">Problema</label><label for="__tabbed_22_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3494,12 +3516,12 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </div>
 </details>
-<!--??? question "Activitat 329. Càlcul d'arees"
+<!--??? question "Activitat 331. Càlcul d'arees"
     Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.
 
     ![Activitat 24](assets/Tema3/Activitat24.png)
 
-??? question "Activitat 330. Canvi d'unitats"
+??? question "Activitat 332. Canvi d'unitats"
     Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.-->
 <h4 id="seleccio-multiple-switch-case">Selecció múltiple - switch case</h4>
 <p>La sentència de control 'switch' és una altra forma de codificar la condició múltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull. Fixa't en la imatge següent:</p>
@@ -3673,7 +3695,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 329. Copia i adapta el codi anterior</summary>
+<summary>Activitat 331. Copia i adapta el codi anterior</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio"/><input id="__tabbed_23_2" name="__tabbed_23" type="radio"/><div class="tabbed-labels"><label for="__tabbed_23_1">Problema</label><label for="__tabbed_23_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3688,7 +3710,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 330. Dies de la setmana</summary>
+<summary>Activitat 332. Dies de la setmana</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio"/><input id="__tabbed_24_2" name="__tabbed_24" type="radio"/><div class="tabbed-labels"><label for="__tabbed_24_1">Problema</label><label for="__tabbed_24_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3702,7 +3724,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 331. Passar d'if a switch</summary>
+<summary>Activitat 333. Passar d'if a switch</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio"/><input id="__tabbed_25_2" name="__tabbed_25" type="radio"/><div class="tabbed-labels"><label for="__tabbed_25_1">Problema</label><label for="__tabbed_25_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3763,7 +3785,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </div>
 </details>
 <details class="question">
-<summary>Activitat 332. Quants dies té el mes</summary>
+<summary>Activitat 334. Quants dies té el mes</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio"/><input id="__tabbed_26_2" name="__tabbed_26" type="radio"/><div class="tabbed-labels"><label for="__tabbed_26_1">Problema</label><label for="__tabbed_26_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3778,7 +3800,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </details>
 <details class="question">
-<summary>Activitat 333. Figures geomètriques</summary>
+<summary>Activitat 335. Figures geomètriques</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio"/><input id="__tabbed_27_2" name="__tabbed_27" type="radio"/><div class="tabbed-labels"><label for="__tabbed_27_1">Problema</label><label for="__tabbed_27_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3980,7 +4002,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 <img alt="Activitat 31" src="../assets/Tema3/Activitat31.png"/></p>
 </details>
 <details class="question">
-<summary>Activitat 334. Dibuixa la piràmide i la invertida</summary>
+<summary>Activitat 336. Dibuixa la piràmide i la piràmide invertida</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio"/><input id="__tabbed_28_2" name="__tabbed_28" type="radio"/><div class="tabbed-labels"><label for="__tabbed_28_1">Problema</label><label for="__tabbed_28_2">Solucio</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3994,7 +4016,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </details>
 <details class="question">
-<summary>Activitat 335. Dibuixa les dues diagonals</summary>
+<summary>Activitat 337. Dibuixa les dues diagonals (500x500)</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio"/><input id="__tabbed_29_2" name="__tabbed_29" type="radio"/><div class="tabbed-labels"><label for="__tabbed_29_1">Problema</label><label for="__tabbed_29_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4008,7 +4030,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </details>
 <details class="question">
-<summary>Activitat 336. Dues diagonals 640x480</summary>
+<summary>Activitat 338. Dues diagonals 640x480</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio"/><input id="__tabbed_30_2" name="__tabbed_30" type="radio"/><div class="tabbed-labels"><label for="__tabbed_30_1">Problema</label><label for="__tabbed_30_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4021,7 +4043,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </details>
 <details class="question">
-<summary>Activitat 337. whiles i for</summary>
+<summary>Activitat 339. whiles i for</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio"/><input id="__tabbed_31_2" name="__tabbed_31" type="radio"/><div class="tabbed-labels"><label for="__tabbed_31_1">Problema</label><label for="__tabbed_31_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4034,7 +4056,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </details>
 <details class="question">
-<summary>Activitat 338. Optimització del codi</summary>
+<summary>Activitat 340. Optimització del codi</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio"/><input id="__tabbed_32_2" name="__tabbed_32" type="radio"/><div class="tabbed-labels"><label for="__tabbed_32_1">Problema</label><label for="__tabbed_32_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4045,6 +4067,123 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 </div>
 </div>
 </div>
+</details>
+<h2 id="estructures-de-salt">Estructures de salt</h2>
+<p>En java finalment ens podem trobar amb les instruccions <strong>break i continue</strong> que són sentències que modifiquen el flux normal d'execució en bucles i estructures de control. Poden ser útils per a eixir d'un bucle prematurament en casos particulars o per ometre una iteració en particular.</p>
+<h3 id="break">break</h3>
+<p>La sentència <strong>break</strong> s'utilitza per sortir immediatament d'un bucle (for, while o do-while). Quan s'executa una sentència break, el control del programa surt del bucle i continua amb l'execució del codi que hi ha després del bucle.</p>
+<p>Quan utilitzar break:
+- Quan es compleix una condició específica i ja no és necessari seguir iterant.
+- Per evitar iteracions innecessàries quan ja s'ha trobat el que es busca.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="s">"S'ha trobat el número 7!"</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span><span class="w">  </span><span class="c1">// Eixim del bucle perquè ja hem trobat el número 7</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En aquest exemple, el bucle s'atura quan es troba el número 7, evitant iteracions innecessàries sobre la resta dels números.</p>
+<h3 id="continue">continue</h3>
+<p>La sentència continue s'utilitza per saltar l'iteració actual d'un bucle i continuar amb la següent iteració. Quan s'executa una sentència continue, el control del programa torna al començament del bucle per a la següent iteració, sense executar les línies de codi restants de l'iteració actual.</p>
+<p>Quan utilitzar continue:
+- Quan es compleix una condició específica i es vol saltar a la següent iteració del bucle.
+- Per ometre certes iteracions basades en una condició.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Suposem que tenim una llista de números i volem imprimir tots els números excepte el 7</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span>
+<span class="w">        </span><span class="k">continue</span><span class="p">;</span><span class="w">  </span><span class="c1">// Saltem aquesta iteració perquè no volem imprimir el número 7</span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+En aquest exemple, quan el número és 7, la sentència continue fa que el bucle salti directament a la següent iteració, evitant que es mostre el número 7.
+Conclusió</p>
+<div class="admonition tip">
+<p class="admonition-title">En resum</p>
+<p>break s'utilitza per sortir completament d'un bucle quan es compleix una condició específica.
+continue s'utilitza per saltar l'iteració actual i passar a la següent quan es compleix una condició específica.</p>
+</div>
+<details class="question">
+<summary>Activitat 341. Analitzar una llista de nombres</summary>
+<p>Crear un programa en Java que itere sobre una llista de nombres sencers i faça diferents operacions utilitzant les sentències break i continue.  </p>
+<p>Al codi següent tens un programa en Processing IDE que conté una llista de 20 nombres que s'han generat de forma aleatòria. 
+- Part 1 (break): Escriu el codi que busque el número 15 a la llista, si el troba mostra per pantalla un missatge i ix del bucle.
+- Part 2 (continue): Escriu el codi necessari per tal que es mostren tots els números menys els parells.
+- Part 3. Escriure un codi que busqui el primer nombre parell major que 10. Utilitzar continue per saltar els números senars. Utilitzar break per sortir del bucle quan es trobi el primer nombre parell major que 10 i imprimir-lo.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">arrayNumeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">20</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
+<span class="w">            </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Activitat 342. Combinació d'estructures</summary>
+<p>Crear un programa en Processing que dibuixi un patró de cercles en una graella, però que ometi certs cercles segons unes condicions específiques utilitzant les sentències break i continue.</p>
+<p>Configuració Inicial:
+    - Configurar la mida de la finestra.
+    - Definir el diàmetre dels cercles i la separació entre ells.</p>
+<p>Dibuix de la Graella de Cercles:
+    - Utilitzar dos bucles for imbricats per dibuixar una graella de cercles.
+    - Utilitzar una estructura de selecció per decidir si es dibuixa o no un cercle segons la seva posició.</p>
+<p>Condicions per Ometre Cercles:
+    - Si la suma dels índexs dels bucles (x, y) és un múltiple de 5, ometre el cercle (utilitzar continue).
+    - Si s'arriba al cercle de la posició (7, 7), aturar el dibuix completament (utilitzar break).</p>
+</details>
+<h2 id="proces-de-compilacio">Procés de compilació</h2>
+<p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
+<p>Normalment la creació d'un programa executable (un típic.exe per a Microsoft Windows o DOS) comporta dos passos. El primer pas es diu <strong>compilació</strong> ( pròpiament dit) i tradueix el codi font escrit en un llenguatge de programació emmagatzemat en un arxiu a codi de baix nivell (normalment en codi objecte, no directament a llenguatge màquina). El segon pas es diu <strong>enllaçat</strong> en el qual s'enllaça el codi de baix nivell generat de tots els fitxers i subprogrames que s'han enviat compilar i s'afegeix el codi de les funcions que hi ha a les biblioteques del compilador perquè l'executable pugui comunicar-se directament amb el sistema operatiu, traduint així finalment el codi objecte a codi màquina, i generant un mòdul executable.</p>
+<p>Aquests dos passos es poden fer per separat, emmagatzemant el resultat de la fase de compilació en arxius objectes (un típic .obj per a Microsoft Windows, DOS o per a Unix ), per a enllaçar-los en fases posteriors, o crear directament l'executable, amb la qual cosa la fase de compilació s'emmagatzema només temporalment. Un programa podria tenir parts escrites en diversos llenguatges (per exemple C, C + + i Asm), que es podrien compilar de forma independent i després enllaçar juntes per formar un únic mòdul executable. </p>
+<p><center>
+<img alt="Procés de compilació" src="../assets/Tema1/ProcesCompilacio.png"/>
+</center></p>
+<h3 id="el-depurador-de-processing-ide">El depurador de Processing IDE</h3>
+<p>Ha arribat el moment que aprengues com funciona el depurador que és una eina molt important per a desenvolupar codi. El depurador o <strong>debugger</strong> és una eina molt important i necessària que porten tots els entorns de desenvolupament integrat com Processing. Aquesta eina ens permet executar el codi pas a pas al mateix temps que podem monitoritzar el valor de les variables, l'estat dels diferent objectes que formen part de la nostra aplicació. </p>
+<p><center>
+<img alt="Debugger" src="../assets/Tema3/Debugger.png"/>
+</center></p>
+<p>Per poder activar el depurador hem de fer clic al botó redó que es troba dalt a la dreta de l'editor com es mostra a la imatge anterior. Una vegada tenim el depurador activat, se'ns obre el <strong>monitor de variables</strong> que ens permetrà controlar com canvien les variables de valor. </p>
+<p>A la part esquerra ens apareixeran els controls que ens habilitaran per poder navegar pas a pas o entrar en funcions i mètodes del codi.</p>
+<p>Finalment és molt important també per a la depuració de codi el terme <strong>breakpoint</strong> per fer que el depurador pare en un lloc específic del nostre codi, li ho hem d'indicar amb punts de ruptura o breakpoints. Per poder posar un breakpoint només hem de fer clic sobre el número de la línia sobre la que volem que s'apare l'execució del programa.  Per tal de llevar-lo tornem a punxar sobre la mateixa línia.</p>
+<p>Una vegada hages provat el depurador de Processing IDE i tingues més o menys clar com funciona, fes l'activitat següent.</p>
+<details class="question">
+<summary>Activitat 343. Prova el codi anterior</summary>
+<p>Posa l'entorn de desenvolupament Processing IDE en mode <strong>debugg</strong>. Posa un <strong>breakpont</strong> a la primera línia del mètode setup i executa pas a pas observant el que s'executa i el que no.</p>
 </details>
 </article>
 </div>
@@ -4072,7 +4211,7 @@ El fet de voler saber l'any és per tenir en compte també que els anys bixestos
 <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({
-    theme: "neutral",
+    theme: "forest",
     darkmode: true
 });</script></body>
 </html>

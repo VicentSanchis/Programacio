@@ -161,6 +161,11 @@
     Activitats
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projecte-final">
+    Projecte Final
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -861,9 +866,9 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
     Instrucció1--&gt;D(fa:fa-spinner); 
     D--&gt;C1{Condició};
     C1--&gt;|V|Instrucció2;
-    Instrucció2--&gt;P2((Fi));
+    Instrucció2--&gt;D;
     style P2 fill:#F00;
-    C1--&gt;|F|D;
+    C1--&gt;|F|P2((Fi));
 </div>
 <p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
 <p>Els passos que representen el diagrama anterior són:</p>
@@ -877,8 +882,8 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Instrucció1</span>
+<span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="n">fer</span>
 <span class="w">    </span><span class="n">Instruccio2</span>
 <span class="n">fmentre</span>
 </code></pre></div></td></tr></table></div>
@@ -913,10 +918,12 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fer</span>
-<span class="w">    </span><span class="n">Instruccio1</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Instrucció1</span>
+<span class="n">fer</span>
 <span class="w">    </span><span class="n">Instruccio2</span>
 <span class="nf">mentre</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span>
+<span class="n">Instruccio3</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 209. La formigonera. Fer mentre</summary>
@@ -968,11 +975,12 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </ol>
 <details class="question">
 <summary>Activitat 210. Busca aigua. Bucle per</summary>
-<p>Dissenya un algorisme en diagrames de flux que busque la paraula "aigua" en qualsevol llibre en una pàgina qualsevol. És a dir, el nostre algorisme el que farà serà llegir una pàgina d'un llibre qualsevol i comptarà quantes vegades ha trobat la paraula aigua en total.</p>
+<p>Imagina que hi ha un text que té un total de 200 paraules i vols saber quantes vegades es repeteix la paraula aigua. Dissenya un algorisme en diagrames de flux que busque la paraula "aigua" en eixe text. És a dir, el nostre algorisme el que farà serà llegir el text i comptarà quantes vegades ha trobat la paraula aigua en total.</p>
 <p>Has de dissenyar l'algorisme tant en diagrama de flux com en pseudocodi.</p>
 </details>
 <h2 id="activitats_1">Activitats</h2>
-<p>Exposem a continuació algunes activitats per tal d'assolir els coneixements exposats als punts anteriors.</p>
+<p>Una vegada hem vist les estructures que es desenvolupen al teorema d'estructura, les combinarem entre elles per tal de donar solució a problemes un poc més complexos que els vistos fins ara.</p>
+<p>Llig i fes les activitats que es mostren a continuació per tal d'assolir els coneixements exposats als punts anteriors.</p>
 <!-- Combinació de seqüencial i repetir mentre -->
 <details class="question">
 <summary>Activitat 211. Iniciar sessió a una xarxa social</summary>
@@ -1039,7 +1047,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Instruccions d'entrada eixida i seqüencial -->
 <details class="question">
-<summary>Activitat 217. Suma dos números</summary>
+<summary>Activitat 216. Suma dos números</summary>
 <p>Algorisme que demana dos números i els suma mostrant el resultat per pantalla.</p>
 <ol>
 <li>Declarem la variable <strong>suma</strong> i la inicialitzem a 0.</li>
@@ -1050,20 +1058,20 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Condicional múltiple -->
 <details class="question">
-<summary>Activitat 218. Llevar la fam</summary>
+<summary>Activitat 217. Llevar la fam</summary>
 <p>Ens trobem a casa i tenim fam. Què fem?</p>
 <ol>
 <li>Preguntem si tenim fam.</li>
 <li>Si la resposta és no s'acaba el procediment, ja estem satisfets.</li>
 <li>Si la resposta és si busquem el menjar a la nevera.</li>
 <li>Si hi ha menjar a la nevera la calfem i mengem</li>
-<li>Si no hi ha res a la nevera,    </li>
-<li>Ini((Inici))--&gt;A[/Introdueix un nombre:/];</li>
+<li>Si no hi ha res a la nevera, anem a comprar algo al super.</li>
+<li>Calfem el menjar comprat i mengem.</li>
 </ol>
 </details>
 <!-- Condicional doble -->
 <details class="question">
-<summary>Activitat 219. Parell o senar</summary>
+<summary>Activitat 218. Parell o senar</summary>
 <p>Algorisme que determina si el númeroJ que inserim és parell o senar.</p>
 <ol>
 <li>Introduim un número 'N'</li>
@@ -1073,7 +1081,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Bucle repetir -->
 <details class="question">
-<summary>Activitat 220. Agafar el paraigües</summary>
+<summary>Activitat 219. Agafar el paraigües</summary>
 <p>Algorisme per determinar quan ixc de casa si necessite o no agafar un paraigües.</p>
 <ol>
 <li>Comprovem si està plovent.</li>
@@ -1085,7 +1093,7 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 </details>
 <!-- Entrada i eixida i bucle per a calcular la mitjana (complicat) -->
 <details class="question">
-<summary>Activitat 221. Mitjana</summary>
+<summary>Activitat 220. Mitjana</summary>
 <p>Algorisme que calcula la mitjana d'un alumne amb tres notes i mostra per pantalla si està "Aprovat" o "Suspès". La nota mínima per aprovar és 11.</p>
 <ol>
 <li>Declarem les variables a utilitzar: Nota1, Nota2, Nota3, Mitjana.</li>
@@ -1096,6 +1104,13 @@ Si s'avalua true la condició el codi seria: Instrucció1, Instrucció2, Instruc
 <li>En cas contrari escrivim "Suspès" </li>
 </ol>
 </details>
+<details class="question">
+<summary>Activitat 221. Localitza les estructures</summary>
+<p>Si has entès bé quines són les estructures del diagrama d'estructura que hem vist i les seues variants, així com també saps com es representen en diagrama de flux, revisa els exemples que hem mostrat al principi del tema i localitza les estructures amb les que s'han dissenyat els algorismes dels exemples.</p>
+</details>
+<h2 id="projecte-final">Projecte Final</h2>
+<p>Veiem que has aprés en aquest tema. Al següent enllaç podràs veure com està dissenyat l'algorisme per solucionar el cub de Rúbik</p>
+<p><a href="https://platzi.com/blog/7-pasos-para-resolver-y-memorizar-el-algoritmo-del-cubo-de-rubbik/">Punxa ací per veure l'algorisme Rúbik</a></p>
 </article>
 </div>
 </div>

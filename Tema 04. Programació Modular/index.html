@@ -347,7 +347,7 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 401. Modularitza el següent codi</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>El següent codi per a Processing IDE dibuixa una taula de billar amb dues boles negres, dues banques i dues roges. Modularitza el codi de tal forma que al mètode draw només hi haurà crides a mètodes definits per tu, concretament els següents mètodes: </p>
@@ -419,12 +419,15 @@ On: </p>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema4/act401.pde">Descarrega la solució al problema de la modularització del codi</a></p>
 </div>
-</div>
-</input></input></div>
+</input></div>
 </details>
+<!--
+    === "Solució" 
+        [Descarrega la solució al problema de la modularització del codi](assets/Tema4/act401.pde)
+-->
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <h3 id="parametres-duna-funcio">Paràmetres d'una funció</h3>
 <p>Les <strong>funcions o mètodes</strong> en Java no només serveixen per poder dividir i simplificar el codi sino que també es poden <strong>parametritzar</strong>, és a dir, se li poden passar <strong>arguments</strong> que bé utilitzen en la seua lògica interna o bé modifiquen el comportament del mètode en qüestió.</p>
 <div class="admonition info">
@@ -525,7 +528,7 @@ On: </p>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esDivisor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">esDivisor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 <span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"a és divisor de b"</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -534,17 +537,20 @@ On: </p>
 <span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Comprova el codi anterior amb atenció i digues si hi ha alguna funció amb paràmetres. Quina i quins paràmetres.</p>
 <details class="question">
-<summary>Activitat 402. Modularitza dibuix lliure</summary>
+<summary>Activitat 402. Executa en Processing IDE</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Al tema anterior, quan estavem estudiant l'estructura seqüencial, a l'activitat 319 varem fer un dibuix lliure. Basant-te en aquesta activitat, modularitza codi seguint el que hem vist fins ara.</p>
+<p>Passa el codi anterior a Processing i executa'l. Observa el codi amb atenció i digues si hi ha alguna funció amb paràmetres? Quins? </p>
 </div>
 </div>
 </input></div>
 </details>
+<!--
+    === "Solució"
+        La funció esDivisor té dos paràmetres a i b que són de tipus enter. El que fa aquesta funció és determinar si a és divisor de b.
+-->
 <p>Finalment dir que els arguments poden ser <strong>literals</strong>, que corresponguen amb el tipus del paràmetre, o també poden ser <strong>variables</strong>, però que passa amb les variables que es passen com a <strong>argument</strong> si el paràmetre al qual s'assignen és modificat en temps d'execució? Es modifiquen també? Mirem la diferència entre valor i referència.</p>
 <h3 id="pas-per-valor-i-pas-per-referencia">Pas per valor i pas per referència</h3>
 <p>Entrem en més detall sobre els paràmetres, que passa amb ells quan s'acaba l'execució de la funció o mètode si són variables locals?</p>
@@ -864,13 +870,13 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 406. Copia i raona el codi anterior</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
 </div>
 </div>
-</div>
+</input></div>
 </details>
 <!--
     === "Solució"

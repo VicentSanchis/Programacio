@@ -256,7 +256,7 @@
 </div>
 <details class="question">
 <summary>Activitat 601. Volcano - Programació Estructurada</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Amb el que saps ja de programació en java, intenta fer una aplicació semblant a la del volcà de la imatge anterior. Pots utilitzar com a estructura bàsica el següent codi:</p>
@@ -407,12 +407,14 @@
 <span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act601.pde">Descarrega la solució estructurada per al volcà</a></p>
 </div>
-</div>
-</input></input></div>
+</input></div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega la solució estructurada per al volcà](assets/Tema6/act601.pde)
+
+-->
 <p>En canvi en <strong>POO</strong> es dona prioritat a la <strong>modelació de les dades</strong> i no als procediments. En un escenari de programació orientada a objectes, a la fase d'anàlisi es determinen els diferents actors del programa (objectes) i a partir d'ací se li assignen els diferents atributs i accions que pot realitzar.</p>
 <p>Però veiem-ho amb més deteniment amb <strong>l'exemple del Volcano</strong>. Si ens parem a analitzar la nostra aplicació, arribarem a la conclusió que podem trobar dos objectes evidents, per un costat el volcà en sí mateix o <strong>con</strong> i per l'altre els elements que expulsa en volcà quan entra en erupció que es diuen <strong>piroclasts</strong> </p>
 <p>Tots i cadascun dels nostres objectes van a tenir una sèrie de característiques o <strong>atributs com la posició, grandària, color..</strong> i poden realitzar una sèrie <strong>d'accions com entrar en erupció, moure's..</strong></p>
@@ -533,7 +535,7 @@
 <p>Fes el mateix que estem fent fins ara però per un nou projecte: <strong>Projecte Agenda</strong></p>
 <details class="question">
 <summary>Activitat 602. Projecte Agenda</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En aquest tema i per tal de començar a treballar amb classes i objectes, desenvoluparem una xicoteta aplicació de gestió de contactes personals. El que es pretén és poder administrar un recull de contactes a mode d'agenda personal. </p>
@@ -561,29 +563,31 @@
 </ul>
 <p>Dibuixa primer un diagrama de classes el més detallat possible. Pots utilitzar d'exemple l'esquema anterior dels piroclasts.</p>
 </div>
-<div class="tabbed-block">
-<p>```mermaid
-    classDiagram
-    direction LR
-    Agenda: llistarContactes()
-    Agenda: obtenirContacte(int index)
-    Agenda: buscarContactes(String criteri)
-    Agenda: guardarContacte(Contacte c)
-    Agenda: afegirContacteNou(Contacte c)
-    Agenda: esborrarContacte(Contacte c)</p>
-<div class="highlight"><pre><span></span><code>Contacte: nom
-Contacte: cognoms
-Contacte: telefon
-Contacte: email
-
-Agenda "1" --&gt; "*" Contacte
-</code></pre></div>
 </div>
-</div>
-</input></input></div>
-<p>```</p>
-<p>Fixeu-se que en algunes de les accions que hi pot realitzar la classe Agenda apareixen paràmetres tal i com els varem veure al tema de programació modular.</p>
+</input></div>
 </details>
+<!--
+    === "Solució"
+        ```mermaid
+            classDiagram
+            direction LR
+            Agenda: llistarContactes()
+            Agenda: obtenirContacte(int index)
+            Agenda: buscarContactes(String criteri)
+            Agenda: guardarContacte(Contacte c)
+            Agenda: afegirContacteNou(Contacte c)
+            Agenda: esborrarContacte(Contacte c)
+
+            Contacte: nom
+            Contacte: cognoms
+            Contacte: telefon
+            Contacte: email
+
+            Agenda "1" -> "*" Contacte  // li he llevat un guionet a -> per què fotia el comentari
+    ```
+-->
+<div class="highlight"><pre><span></span><code>Fixeu-se que en algunes de les accions que hi pot realitzar la classe Agenda apareixen paràmetres tal i com els varem veure al tema de programació modular.
+</code></pre></div>
 <h2 id="classes-i-objectes">Classes i Objectes</h2>
 <p>Una <strong>classe és la definició d’un objecte</strong>, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.</p>
 <p>Per exemple, si continuem utilitzant la nostra app <strong>Volcano</strong>, una classe seria <strong>Piroclast</strong> en la que es descriu de forma general aquest element. S'establiria que un piroclast es caracteritza per:</p>
@@ -697,7 +701,7 @@ Agenda "1" --&gt; "*" Contacte
 <li><strong>mètodes:</strong> funcionalitats de la classe. </li>
 </ul>
 <p>En realitat si la definició de les parts de la classe es fera en un altre ordre, no afectaria a la compilació i execució d’aquesta però sí a la lectura del codi i el faria més complicat d’interpretar.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Piroclast</label><label for="__tabbed_3_2">Con</label><label for="__tabbed_3_3">Main</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Piroclast</label><label for="__tabbed_3_2">Con</label><label for="__tabbed_3_3">Main</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -782,22 +786,23 @@ Agenda "1" --&gt; "*" Contacte
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></div>
+</input></input></input></div>
 <details class="question">
 <summary>Activitat 603. Defineix les classes del Projecte Agenda</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Obre Processing IDE i declara les classes resultants de l'activitat 602. 
 Recorda que totes les característiques i accions que hages anotat a l'activitat anterior hauran de convertir-se en atributs i mètodes de les classes que dissenyes.
 Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act603.zip">Descarrega la definició de classes per al Projecte Agenda</a></p>
 </div>
-</div>
-</div>
+</input></div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega la definició de classes per al Projecte Agenda](assets/Tema6/act603.zip)
+-->
 <h3 id="visibilitat-dels-membres-de-la-classe">Visibilitat dels membres de la classe</h3>
 <p>Un principi fonamental en la programació orientada a objectes  és l’ocultació de la informació, açò significa que no es pot accedir per mètodes externs de la classe a determinada informació interna. El mecanisme principal per aconseguir-ho és posar-los dins d’una classe i fer-los privats i així només es podrà accedir a aquests des de dins de la classe</p>
 <p>Existeixen tres diferents especificacions d’accés o modificadors de visibilitat:</p>
@@ -921,17 +926,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <p>Els mètodes a Java sempre són membres d’una classe, no hi ha mètodes o funcions fora d’aquestes. La seua implementació s’inclou dins del cos de la classe.</p>
 <details class="question">
 <summary>Activitat 604. Visibilitat de classes al Projecte Agenda</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>A partir de les classes que hages dissenyat a l'última activitat, assigna-li la visibilitat corresponent a les classes i a cada membre de la classe, bé siga un atribut o un mètode.</p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act604.zip">Descarrega el Projecte Agenda amb modificadors de visibilitat</a></p>
-</div>
 </div>
 </div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega el Projecte Agenda amb modificadors de visibilitat](assets/Tema6/act604.zip)
+-->
 <h4 id="gets-sets">Gets &amp; Sets</h4>
 <p>Com hem explicat abans, són normalment els mètodes els que s'encarreguen de modificar els atributs d'un objecte variant en conseqüència el seu estat i és per això que se'ls sol posar private o protected (superClasses) a tots els atributs. L'inconvenient és que, per exemple, a la classe <strong>Piroclast</strong> en la que tenim alguns atributs als que no s'accedirà des de cap mètode, ens resultaria impossible poder modificar l'estat de qualsevol objecte Piroclast.</p>
 <p>Per això hi han uns mètodes especials <strong>get</strong> que serveix per a obtenir el valor d'algun atribut privat o protected de la classe i els <strong>set</strong> que fan la funció contraria, és a dir, estableixen un valor a l'atribut privat</p>
@@ -1051,17 +1057,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </div>
 <details class="question">
 <summary>Activitat 605. Gets i Sets</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Revisa les classes que has definit al teu Projecte Agenda i per a aquells atributs que ho consideres, afegeix els gets i sets corresponents.</p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act605.zip">Descarrega el Projecte Agenda amb modificadors de visibilitat</a></p>
-</div>
 </div>
 </div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega el Projecte Agenda amb modificadors de visibilitat](assets/Tema6/act605.zip)
+-->
 <h3 id="constructors">Constructors</h3>
 <p>Un constructor és un mètode membre d’una classe que s’executa de forma automàtica quan es crea un instancia d’aquesta. El constructor d’una classe es diferencia de la resta perquè s’ha d’anomenar igual que la classe (respectant majúscules i minúscules) i mai s’especifica a la seua definició un tipus de dades a retornar encara que siga void.</p>
 <p>El constructor admet paràmetres <strong>(constructor parametritzat)</strong>, sent un mètode que es pot sobrecarregar, és a dir, podem tindre diversos constructors amb un nombre diferent de paràmetres o diferents tipus de dades. Els constructors tenen com a finalitat principal la inicialització de les variables o atributs de la classe.</p>
@@ -1249,17 +1256,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </div>
 <details class="question">
 <summary>Activitat 606. Constructors de classe</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Defineix un constructor per defecte per a la classe Agenda i un constructor per defecte i parametritzat per a la classe Contacte.</p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act606.zip">Descarrega el Projecte Agenda amb modificadors de visibilitat</a></p>
-</div>
 </div>
 </div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega el Projecte Agenda amb modificadors de visibilitat](assets/Tema6/act606.zip)
+-->
 <h3 id="instancies">Instàncies</h3>
 <p>La <strong>declaració d’una classe</strong> no és més que la definició d’una realitat utilitzant un llenguatge de programació orientada a objectes. El següent pas seria fer ús d’aquesta definició o classe, és a dir, <strong>instanciar</strong> o crear un objecte a partir d’aquesta classe.</p>
 <p>Per tal d’instanciar una classe s’utilitza la següent sentència:</p>
@@ -1464,17 +1472,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </div>
 <details class="question">
 <summary>Activitat 607. Instàncies</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Comencem a crear instàncies de les nostres classes. Seguint els exemples anteriors crea una instància d'Agenda al programa principal i al mateix temps dins del constructor de la classe Agenda, instancia 5 objectes Contacte i afegeix-los a l'arrayList de contactes de l'agenda. En altres paraules, des de l'aplicació principal instanciarem un objecte agenda i al mateix temps quan instanciem Agenda haurem de cridar al constructor de la classe Contacte per tal que instancie 5 contactes.</p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act607.zip">Descarrega el Projecte Agenda amb modificadors de visibilitat</a></p>
-</div>
 </div>
 </div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega el Projecte Agenda amb modificadors de visibilitat](assets/Tema6/act607.zip)
+-->
 <h3 id="acces-als-membres-de-la-classe">Accés als membres de la classe</h3>
 <p>Si executeu el projecte Volcano amb Processing IDE, el resultat serà prou decebedor ja que només es dibuixarà un triangle al mig de la pantalla i no farà res més, però no patisques, ja estem quasi. Tin en compte que per tal el nostre volcà comence a expulsar piroclasts haurem de cridar en algun moment al mètode <strong>expulsar</strong> de la classe <strong>Con</strong> i per això és necessari que des del nostre programa principal puguem accedir al mètode de la classe i que s'execute el codi que hi ha a l'interior.</p>
 <p>Podrem accedir als membres d’una classe en funció de la seua visibilitat i el lloc on es desitge accedir. Els modificadors de visibilitat com ja hem dit, són: public, private, protected i package.</p>
@@ -1682,17 +1691,18 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 </center></p>
 <details class="question">
 <summary>Activitat 608. Utilitza les classes</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Implementa el mètode llistar Contactes de la classe Objecte i fes que el draw els mostre de forma amigable per pantalla.</p>
 </div>
-<div class="tabbed-block">
-<p><a href="../assets/Tema6/act608.zip">Descarrega el Projecte Agenda amb modificadors de visibilitat</a></p>
-</div>
 </div>
 </div>
 </details>
+<!--
+    === "Solució"
+        [Descarrega el Projecte Agenda amb modificadors de visibilitat](assets/Tema6/act608.zip)
+-->
 <h2 id="metodes-variables-i-blocs-statics">Mètodes, variables i blocs statics</h2>
 <p>La paraula reservada «static» en Java és un modificador que en Java es pot aplicar a variables, mètodes, classes i blocs de codi</p>
 <h3 id="variables-estatiques">Variables estàtiques</h3>

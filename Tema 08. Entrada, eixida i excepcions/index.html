@@ -493,8 +493,8 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <li>Ruta absoluta del fitxer</li>
 <li>Data de l'última vegada que s'ha modificat</li>
 </ul>
-<p><a href="../assets/Tema8/act801.zip">Descarrega la solució ací</a></p>
 </details>
+<!--      [Descarrega la solució ací](assets/Tema8/act801.zip) -->
 <p>Com hauràs pogut comprovar amb <strong>la classe File</strong> t'ha resultat impossible escriure o llegir d'ell.  A continuació estudiarem amb més detall les diferents classes que disposa Java pel tractament de l'entrada i eixida d'informació (Streams). Per tal entendre-ho millor, dividirem aquesta secció en dos blocs: <strong>Tractament a nivell de byte</strong> amb les classes abstractes <strong>InputStream i OutputStream</strong> i les seues classes derivades i <strong>tractament a nivell de caracter</strong> amb les classes abstractes <strong>Writer i Reader</strong> i les seues subclasses.</p>
 <h2 id="flux-de-dades-a-nivell-de-byte">Flux de dades a nivell de byte</h2>
 <p>Com ja hem explicat abans, el tractament de l'entrada eixida en java a nivell de bytes es fa amb les classes abstractes <strong>InputStream i OutputStream</strong> de les quals deriven les classes: </p>
@@ -612,8 +612,8 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <p>Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie el que apareix a «prova.txt», el d’entrada però a l’inrevés. Per exemple:</p>
 <p>Un possible resultat de l'activitat anterior podria ser el que es pot observar a la imatge següent:      </p>
 <p><img alt="Fitxers Invertits" src="../assets/Tema8/FitxersInvertits.png"/></p>
-<p><a href="../assets/Tema8/act802.zip">Descarrega la solució ací</a></p>
 </details>
+<!--      [Descarrega la solució ací](assets/Tema8/act802.zip)-->
 <h3 id="datainputstream-i-dataoutputstream">DataInputStream i DataOutputStream</h3>
 <p>La veritat és que treballar amb bytes quan estem parlant de fitxers o arxius que contenen informació o dades de més nivell pot resultar incomode, ja que entre altres hauríem de saber quants bytes té un caràcter, un enter o un doble. </p>
 <p>En Java tenim les classes <strong>DataInputStream</strong> i <strong>DataOutputStream</strong> que són subclasses de les classes <strong>FilterInputStream</strong> i <strong>FilterOutputStream</strong>. </p>
@@ -864,8 +864,8 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <details class="question">
 <summary>Activitat 803. Data Input i Data Output</summary>
 <p>Crea un projecte en Processing copia el codi anterior i una vegada acabada l'execució del programa, obre el fitxer "pluges.dat" i compara el que s'ha mostrat a consola amb el que s'ha gravat al fitxer. Posa el mateix? Per què?</p>
-<p><a href="../assets/Tema8/act803.zip">Descarrega la solució ací</a></p>
 </details>
+<!--[Descarrega la solució ací](assets/Tema8/act803.zip)-->
 <h3 id="printstream">PrintStream</h3>
 <p>La classe <strong>PrintStream</strong> deriva de <strong>FilterOutputStream</strong> i el valor afegit d’aquesta classe derivada és que permet afegir el caràcter final de línia als fitxers. Aquests tipus de fluxos són sempre d’eixida i s’associen a un altre flux de bytes de més baix nivell. <strong>System.out</strong> és un objecte de tipus PrintStream. Per tant quan executem la sentència System.out.println(""); el que estem fent realment és cridar al mètode println de la classe PrintStream.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -954,8 +954,8 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <p>Utilitzant el mètode mouseClicked fes una aplicació de tal forma que tot allò que es teclege es guarde en un fitxer de text juntament amb l'hora a la qual s'ha escrit. Per exemple, si l'usuari escriu per pantalla el seu nom, "Manolo" i prem Intro, al fitxer d'eixida s'hauria de gravar: </p>
 <p>[09:05:25] - Manolo</p>
 <p>Has d'utilitzar la classe <strong>PrintStream</strong> per fer aquesta activitat.</p>
-<p><a href="../assets/Tema8/act804.zip">Descarrega la solució ací</a></p>
 </details>
+<!--      [Descarrega la solució ací](assets/Tema8/act804.zip)-->
 <h2 id="flux-de-dades-a-nivell-de-caracter">Flux de dades a nivell de caracter</h2>
 <p>Una altra forma de poder treballar amb fitxers en lloc de a nivell de byte com estavem fent als apartats anteriors, és fer-ho a nivell de caracter. Al cap i a la fi els arxius, en una gran majoria, solen ser seqüències de caracters i des del punt de vista lògic ens resulta més natural treballar amb ells a aquest nivell.</p>
 <h3 id="reader-i-writer">Reader i writer</h3>
@@ -1064,8 +1064,8 @@ Els mètodes de la classe <strong>InputStreamReader</strong> són:</p>
 <details class="question">
 <summary>Activitat 805. InputStreamReader i OutputStreamReader</summary>
 <p>Repeteix l'activitat anterior, la 804, però utilitzant InputStreamReader i OutputStreamReader</p>
-<p><a href="../assets/Tema8/act805.zip">Descarrega la solució ací</a></p>
 </details>
+<!--      [Descarrega la solució ací](assets/Tema8/act805.zip)-->
 <p>Però allò normal és que no s'utilitzen directament aquestes classes sino que es faja ús de <strong>FileReader i FileWriter</strong>.</p>
 <h3 id="filereader-i-filewriter">FileReader i FileWriter</h3>
 <p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus <strong>FileReader</strong>, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
@@ -1401,8 +1401,8 @@ Els constructors de la classe <strong>FileWriter</strong> són:</p>
 <summary>Activitat 806. FileWriter, FileReader, BufferedReader i PrintWriter</summary>
 <p>Utilitzant les classes anteriors, obre un fitxer que continga text, llig tot el seu contingut i enregistra'l a un fitxer d'eixida amb la condició que has de canviar majúscules per minúscules i a l'inrevés des del fitxer d'origen.  </p>
 <p>Has de tindre en compte que Processing IDE incorpora les seues pròpies classes BufferedReader i PrintWriter que podràs utilitzar en combinació amb FileWriter i FileReader per poder fer aquesta activitat.</p>
-<p><a href="../assets/Tema8/act806.zip">Descarrega la solució ací</a></p>
 </details>
+<!--      [Descarrega la solució ací](assets/Tema8/act806.zip)-->
 <h2 id="arxius-dobjectes">Arxius d'objectes</h2>
 <p>Fins ara hem tractat el tema d'entrada - eixida d'informació utilitzant els tipus primitius o bàsics que ens proporciona el llenguatge de programació: int, char, float, String... però que passa si el que volem desar o llegir des d'un dispositiu extern és un o diversos objectes? Com es guarden i com es recuperen aquestos objectes?</p>
 <p>Java proporciona una mecanisme que s'anomena <strong>serialització</strong> que consisteix en convertir un objecte en una seqüència de bytes de tal forma que, ara sí, es podrà desar a un fitxer o un dispositiu extern. El procés de lectura d'un objecte serialitzat a un fitxer, per contra, s'anomena <strong>desserialització</strong>.</p>

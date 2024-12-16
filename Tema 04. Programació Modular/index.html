@@ -605,7 +605,7 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 403. Pas per valor i pas per referència I</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Copia el codi anterior en Processing IDE i respon a les següents qüestions:</p>
@@ -617,17 +617,18 @@ On: </p>
 <li>Estan passant-se els arguments per valor o per referència?</li>
 </ol>
 </div>
+<div class="tabbed-block">
+<ol>
+<li>Els paràmetres són x i y i el seu tipus és int</li>
+<li>Es crida una sola vegada al draw</li>
+<li>A la crida es passen els arguments a i b que són variables locals al mètode draw.</li>
+<li>Passa que els valors originals d'a i b no es modifiquen ja que són tipus bàsics.</li>
+<li>Per valor, si es passaren per referència es mantindrien els canvis.</li>
+</ol>
 </div>
-</input></div>
+</div>
+</input></input></div>
 </details>
-<!--
-    === "Solució"
-        1. Els paràmetres són x i y i el seu tipus és int
-        2. Es crida una sola vegada al draw
-        3. A la crida es passen els arguments a i b que són variables locals al mètode draw.
-        4. Passa que els valors originals d'a i b no es modifiquen ja que són tipus bàsics.
-        5. Per valor, si es passaren per referència es mantindrien els canvis.
--->
 <p>Ara mira el següent codi:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -683,7 +684,7 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 404. Pas per valor i pas per referència II</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Copia el codi anterior i respon a les següents qüestions:</p>
@@ -695,17 +696,18 @@ On: </p>
 <li>Estan passant-se els arguments per valor o per referència?</li>
 </ol>
 </div>
+<div class="tabbed-block">
+<ol>
+<li>Es passa un paràmetre amb identificador p de tipus Persona.</li>
+<li>Una vegada al draw</li>
+<li>En la crida al mètode es passa l'argument juan</li>
+<li>Al tractar-se d'un objecte el paràmetre de la funció, els canvis que es produeixen dins del mètode es mantenen.</li>
+<li>Per referència ja que les modificacions dins del codi del mètode es mantenen després de l'execució d'aquest.</li>
+</ol>
+</div>
 </div>
 </input></div>
 </details>
-<!--
-    === "Solució"
-        1. Es passa un paràmetre amb identificador p de tipus Persona.
-        2. Una vegada al draw
-        3. En la crida al mètode es passa l'argument juan
-        4. Al tractar-se d'un objecte el paràmetre de la funció, els canvis que es produeixen dins del mètode es mantenen.
-        5. Per referència ja que les modificacions dins del codi del mètode es mantenen després de l'execució d'aquest.
--->
 <h3 id="sobre-el-return">Sobre el return</h3>
 <p>Com ja hauràs vist, hi ha algunes funcions que comencen per <strong>void</strong> i altres que tenen altres tipus... açò <strong>el que torna</strong> la funció. Bàsicament la diferència entre una <strong>funció i un procediment</strong> des del punt de vista conceptual és si el mètode torna o no algun valor. Si torna és un procediment sino és una funció, però aquesta és només un qüestió conceptual ja que des del punt de vista tècnic (del codi) no hi practicament cap diferència entre funció i procediment a banda del fet que retornen un valor en Java.</p>
 <p>Has de tenir en compte dues coses importants amb la sentència return:</p>
@@ -764,7 +766,7 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 405. Revisa conceptes</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>És el moment de revisar tots els conceptes vistos fins ara que no són pocs. Revisa el codi anterior i respon a les següents qüestions:</p>
@@ -776,17 +778,18 @@ On: </p>
 <li>Quins dels mètodes que has trobat són funcions i quins procediments? Raona la resposta.</li>
 </ol>
 </div>
+<div class="tabbed-block">
+<ol>
+<li>Dos.</li>
+<li>dibuixaSol i calculaAbsolut</li>
+<li>void dibuixaSol() i int calculaAbsolut(int a).</li>
+<li>Mètode dibuixaSol té zero paràmetres mentre que calculaAbsolut té un paràmetre amb identificador a de tipus int</li>
+<li>dibuixaSol és un procediment (no retorna res) mentre que calculaAbsolut és una funció que retorna un enter.</li>
+</ol>
 </div>
-</input></div>
+</div>
+</div>
 </details>
-<!--
-    === "Solució"
-        1. Dos.
-        2. dibuixaSol i calculaAbsolut
-        3. void dibuixaSol() i int calculaAbsolut(int a).
-        4. Mètode dibuixaSol té zero paràmetres mentre que calculaAbsolut té un paràmetre amb identificador a de tipus int
-        5. dibuixaSol és un procediment (no retorna res) mentre que calculaAbsolut és una funció que retorna un enter.
--->
 <h3 id="funcions-declaracio-i-crida">Funcions: declaració i crida</h3>
 <p>Hem vist ja la gran part tècnica de com funcionen els mètodes en Java pel que fa a la part de sintaxis i les diferents paraules claus que s'utilitzen. En altres paraules, ja sabem construir funcions i procediments tant des del <strong>punt de vista tècnic</strong> (com és construeixen), com des del <strong>punt de vista semàntic</strong> (què signifiquen) però, com fem ús d'aquestes funcions o procediments?</p>
 <p>Primer cal que distingim entre la declaració d'un mètode i la crida a aquest.</p>
@@ -864,21 +867,20 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 406. Copia i raona el codi anterior</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act406.pde">Descarrega la solució al problema de la crida a funcions</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema de la crida a funcions](assets/Tema4/act406.pde)
--->
 <details class="question">
 <summary>Activitat 407. Crida als mètodes de forma correcta</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>A continuació vos he deixat un codi amb 4 funcions. Observeu-les i després feu ús de totes elles des de la funció draw.</p>
@@ -951,13 +953,12 @@ On: </p>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act407.pde">Descarrega la solució al problema de la crida a funcions part 2</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema de la crida a funcions part 2](assets/Tema4/act407.pde)
--->
 <h3 id="detalls-per-cridar-funcions">Detalls per cridar funcions</h3>
 <ul>
 <li>El <strong>nom ha de coincidir</strong> exactament al moment de cridar, és l’única forma d’identificar-lo.</li>
@@ -972,7 +973,7 @@ On: </p>
 </ul>
 <details class="question">
 <summary>Activitat 408. Copia i raona el següent codi</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Passa el següent codi a processing, executa'l i raona el que està passant. Quin altre nom alternatiu li podriem posar a la funció per tal que aquest siga més significatiu?</p>
@@ -1025,13 +1026,12 @@ On: </p>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act408.pde">Descarrega la solució al problema de la crida a funcions part 2</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema de la crida a funcions part 2](assets/Tema4/act408.pde)
--->
 <details class="question">
 <summary>Activitat 409. Executa el codi en Processing IDE</summary>
 <p>Escriu el següent codi en Processing i executa'l. </p>
@@ -1100,7 +1100,7 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 410. Divideix-lo en funcions</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Separa el codi en funcions, has d'afegir les funcions dibuixaCara, dibuixaUlls i dibuixaBoca seguint els prototips que et mostre a continuació.</p>
@@ -1113,18 +1113,15 @@ Aquest codi mostra el següent dibuix</p>
 <span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoca</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act410.pde">Descarrega la solució al problema del smiley</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema del smiley](assets/Tema4/act410.pde)
--->
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <details class="question">
 <summary>Activitat 411. Paràmetres coordenades</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Modifica el codi anterior per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dues funcions: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenades x i y i a partir d'aquestes ha de dibuixar els ulls i la boca on corresponga.</p>
@@ -1137,16 +1134,15 @@ Aquest codi mostra el següent dibuix</p>
 <span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoca</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>[Descarrega la solució al problema del smiley] parametritzat(assets/Tema4/act411.pde)</p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema del smiley] parametritzat(assets/Tema4/act411.pde)
--->
 <details class="question">
 <summary>Activitat 412. Dibuixar cares - Ampliació</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de quedar el codi de la funció draw</p>
@@ -1224,16 +1220,15 @@ Aquest codi mostra el següent dibuix</p>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act412.pde">Descarrega la solució al problema del tres smileys</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--        
-    === "Solució"
-        [Descarrega la solució al problema del tres smileys](assets/Tema4/act412.pde)
--->
 <details class="question">
 <summary>Activitat 413. Dibuixar peça domino</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
@@ -1259,29 +1254,27 @@ Aquest codi mostra el següent dibuix</p>
 </code></pre></div></td></tr></table></div>
 <p><center><img alt="Activitat 8" src="../assets/Tema4/Activitat8.png"/></center></p>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act413.pde">Descarrega la solució al problema de la fitxa de dominó</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema de la fitxa de dominó](assets/Tema4/act413.pde)
--->
 <details class="question">
 <summary>Activitat 414. Dibuixar peça dominó parametritzada</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Què passa si en lloc de 5 i 4 passarem 6 i 6 per paràmetre? Dibuixa el que esperes que dibuixe? </p>
 <p>Fes les modificacions necessàries al codi per tal que funcione com s'espera. </p>
 <p><strong>Ampliació:</strong> fes que el teu algorisme mostre totes les peces del dominó ordenades en files i columnes.</p>
 </div>
+<div class="tabbed-block">
+<p><a href="../assets/Tema4/act414.pde">Descarrega la solució al problema del joc del dominó</a></p>
+</div>
 </div>
 </div>
 </details>
-<!--
-    === "Solució"
-        [Descarrega la solució al problema del joc del dominó](assets/Tema4/act414.pde)
--->
 <h2 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h2>
 <p>Quan passem un <strong>tipus primitiu</strong> a una funció, es passa <strong>per valor</strong>. Però quan vam passar <strong>un objecte</strong> a una funció, la situació canvia dràsticament, perquè els objectes es passen <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència.</p>
 <p>A l'crear una variable d'un tipus de classe <strong>(un objecte)</strong>, només varem crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>

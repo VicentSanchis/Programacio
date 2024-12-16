@@ -197,18 +197,28 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#colleccions">
+    Col·leccions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iteradors">
+    Iteradors
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#string-cadenes-de-caracters">
-    string: Cadenes de caracters
+    String: Cadenes de caracters
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fitxers-xml">
+    Fitxers XML
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#enumeracions">
     Enumeracions
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#colleccions">
-    Col·leccions
   </a>
 </li>
 </ul>
@@ -1534,7 +1544,295 @@ Eixir tancaria l'apliació.</p>
     === "Solució"
         [Descarrega la solució a l'activitat 521](assets/Tema5/act521.zip)
 -->
-<h2 id="string-cadenes-de-caracters">string: Cadenes de caracters</h2>
+<h2 id="colleccions">Col·leccions</h2>
+<p>Les col·leccions en Java són un marc que proporciona una arquitectura per emmagatzemar i manipular el grup d'objectes Poden realitzar totes les operacions que realitzeu sobre les dades, com ara la cerca, l'ordenació, la inserció, la manipulació i la supressió.</p>
+<p>Java ofereix interfícies (Set, List, Queue, Deque) i classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).</p>
+<h3 id="jerarquia-de-classes">Jerarquia de classes</h3>
+<p>A continuació pots observar la jerarquia de classes que ens ofereix l'API de Java respecte de les col·leccions.</p>
+<div class="mermaid">classDiagram
+	Iterable &lt;|-- Collection
+	Collection &lt;|-- List
+	Collection &lt;|-- Queue
+	Collection &lt;|-- Set
+	List &lt;|.. ArrayList
+	List &lt;|.. LinkedList
+	List &lt;|.. Vector
+	List &lt;|.. Stack
+	Queue &lt;|--Deque
+	Queue &lt;|..PriorityQueue
+	Set &lt;|-- SortedSet
+	Set &lt;|.. HashSet
+    Set &lt;|.. LinkedHashSet
+	SortedSet &lt;|.. TreeSet
+	Deque &lt;|.. ArrayDeque
+</div>
+<h3 id="arraylist">ArrayList</h3>
+<p>La classe ArrayList implementa la interfície List. Utilitza una matriu dinàmica per emmagatzemar l'element duplicat de diferents tipus de dades. La classe ArrayList manté l'ordre d'inserció i no està sincronitzada. Es pot accedir aleatòriament als elements emmagatzemats a la classe ArrayList. Considereu l'exemple següent.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// Després afegim elements a la llista</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Vijay"</span><span class="p">);</span><span class="w">  </span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ajay"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+<h3 id="hashset">HashSet</h3>
+<p>Aquesta classe implementa la interfície Set, recolzada per una taula hash (en realitat una instància HashMap). No ofereix cap garantia quant a l'ordre d'iteració del conjunt; en particular, no garanteix que l'ordre es mantingui constant al llarg del temps. Aquesta classe permet l'element nul.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span>
+<span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// Després afegim elements a la llista</span>
+<span class="n">hSet</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span>
+<span class="n">hSet</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Vijay"</span><span class="p">);</span><span class="w">  </span>
+<span class="n">hSet</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="n">hSet</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ajay"</span><span class="w"> </span><span class="p">);</span>
+
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isAdded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">participants</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Anna"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Aquest no s'afegirà perquè ja existeix</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isAdded</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">println</span><span class="p">(</span><span class="s">"Anna ja és a la llista de participants!"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Recorrem la llista i mostrem per pantalla</span>
+<span class="n">Iterator</span><span class="w"> </span><span class="n">itr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span><span class="w">  </span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="w"> </span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">	</span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="p">());</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 522. Crea una llista amb els dies de la setmana utilitzan un ArrayList</summary>
+<p>Utilitza una col·lecció Arraylist per crear un conjunt amb els dies de la setmana</p>
+</details>
+<h3 id="treeset">TreeSet</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span>
+<span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// Després afegim elements a la llista</span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Vijay"</span><span class="p">);</span><span class="w">  </span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ajay"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+
+<span class="c1">// Mostrar la llista de paraules ordenades</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Llista de paraules ordenades:"</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">println</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Comprovar la primera i l'última paraula</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Primera paraula: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="na">first</span><span class="p">());</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Última paraula: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="na">last</span><span class="p">());</span>
+
+<span class="c1">// Afegir més paraules i comprovar l'ordre</span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"alfabet"</span><span class="p">);</span>
+<span class="n">words</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"zebra"</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Després d'afegir més paraules:"</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">println</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Eliminar una paraula</span>
+<span class="n">words</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">"java"</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Després d'eliminar 'java': "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">words</span><span class="p">);</span>
+
+<span class="c1">// Comprovar si una paraula existeix</span>
+<span class="n">String</span><span class="w"> </span><span class="n">checkWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"estructures"</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">words</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">checkWord</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">println</span><span class="p">(</span><span class="s">"'"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">checkWord</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"' està a la llista."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">println</span><span class="p">(</span><span class="s">"'"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">checkWord</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"' no està a la llista."</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 523. Crea un conjunt amb els balos d'or usant un HashSet</summary>
+<p>Utilitza una col·lecció HashSet per crear un conjunt amb els guanyadors del baló d'or</p>
+</details>
+<h3 id="linkedlist">LinkedList</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un LinkedList per gestionar la cua</span>
+<span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">customerQueue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="c1">// Afegir clients a la cua</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Anna"</span><span class="p">);</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Joan"</span><span class="p">);</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Maria"</span><span class="p">);</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Pere"</span><span class="p">);</span>
+
+<span class="c1">// Mostrar la cua inicial</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Cua inicial de clients: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">);</span>
+
+<span class="c1">// Atendre el primer client (eliminar-lo de la cua)</span>
+<span class="n">String</span><span class="w"> </span><span class="n">servedCustomer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">.</span><span class="na">poll</span><span class="p">();</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Client atès: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">servedCustomer</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Cua després d'atendre un client: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">);</span>
+
+<span class="c1">// Afegir un nou client al final de la cua</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Carla"</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Cua després d'afegir Carla: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">);</span>
+
+<span class="c1">// Consultar el primer client sense eliminar-lo</span>
+<span class="n">String</span><span class="w"> </span><span class="n">nextCustomer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">.</span><span class="na">peek</span><span class="p">();</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"El següent client a atendre és: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nextCustomer</span><span class="p">);</span>
+
+<span class="c1">// Inserir un client d'urgència al principi de la cua</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">addFirst</span><span class="p">(</span><span class="s">"Urgent - Miquel"</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Cua després d'afegir un client urgent: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">);</span>
+
+<span class="c1">// Eliminar l'últim client</span>
+<span class="n">customerQueue</span><span class="p">.</span><span class="na">removeLast</span><span class="p">();</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Cua després d'eliminar l'últim client: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">customerQueue</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 524. Crea una llista amb els companys de classe utilitzant una LinkedList</summary>
+<p>Utilitza una col·lecció LinkedList per crear un conjunt amb els noms dels teus companys de classe</p>
+</details>
+<h2 id="iteradors">Iteradors</h2>
+<p>Fins ara hem vist com crear algunes de les col·leccions que java posa a disposició dels programadors, però hi han molte més. Segurament també, t'has estat preguntant com es poden recórres aquestes noves llistes element a element. Per tal de fer-ho de la forma més eficient, ho fariem amb <strong>iteradors.</strong> Mira el següent exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="c1">// Crear una col·lecció (ArrayList en aquest cas)</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Anna"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Joan"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Maria"</span><span class="p">);</span>
+
+<span class="c1">// Obtenir un iterador de la col·lecció</span>
+<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+
+<span class="c1">// Recórrer els elements amb l'iterador</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Recorregut dels elements:"</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 525. Llista d'espera de pacients</summary>
+<p>Crea una llista d'espera de pacients amb la col·lecció que trobes més adequada i crida als pacients un a un. Justifica la teua decisió al comentari de codi de l'aplicació.</p>
+</details>
+<details class="question">
+<summary>Activitat 526.Recorre els balons d'or amb un iterador</summary>
+<p>Recorre el conjunt de guanyadors del baló d'or de l'activitat 523 i mostra'ls de forma amigable per pantalla. Canviaries el tipus de col·ecció en aquesta activitat per emmagatzemar els premiats? Quina escolliries? Per què? Quins avantatges i inconvenients tenen les altres col·eccions de java front a l'escollida per tu? Escriu totes les respostes al comentaris de documentació.</p>
+</details>
+<details class="question">
+<summary>Activitat 527. Recorre la llista d'espera amb un iterador</summary>
+<p>Recorre la llista d'espera de clients de l'activitat 525 utilitzant un iterador. Canviaries la col·lecció? Per què?</p>
+</details>
+<details class="question">
+<summary>Activitat 528. Crea un conjunt ordenat amb TreeSet per crear una llista ordenada de noms.</summary>
+<p>Crea una llista ordenada de noms.</p>
+</details>
+<details class="question">
+<summary>Activitat 529. Converteix el Projecte Alumnes i assignatures</summary>
+<p>Basant-nos en l'activitat 520 "Alumnes i Assignatures" utilitza el que hem vist de les distintes col·leccions que ens proporciona java per millorar el nostre codi.</p>
+</details>
+<h2 id="string-cadenes-de-caracters">String: Cadenes de caracters</h2>
 <p>En Java hem vist que quan volem emmagatzemar un valor enter, definim una variable de tipus int, si pel contrari, el que volem és emmagatzemar un valor amb decimals, definim una variable de tipus double o float. Ara bé, si el que volem és emmagatzemar una cadena de caracters, per exemple el nom d’una persona, hem de definir un objecte de tipus String</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Crear un objecte string</span>
@@ -1576,6 +1874,96 @@ Eixir tancaria l'apliació.</p>
 <li><strong>String trim():</strong> suprimeix els espais en blanc que puguen haver als extrems de la cadena</li>
 <li><strong>String replace (char oldChar, char newChar):</strong> substitueix totes les ocurrències de oldChar que hi ha a la cadena per newChar</li>
 </ul>
+<h3 id="expressions-regulars-en-java">Expressions regulars en Java</h3>
+<p>Les expressions regulars són una forma de crear un plantilla que pot servir per:</p>
+<ul>
+<li>Comprovar si un text compleix un format determinat:
+    El NIF ha de tenir 8 dígits i una lletra.
+    Una matrícula de cotxe ha de tenir 4 dígits i 3 lletres.
+    Un número de telèfon ha de tenir 3 dígits, un punt, 3 dígits, un punt i 3 dígits.</li>
+<li>Buscar si existeix una subcadena (amb un format determinat) dins d'un text.</li>
+<li>Buscar i canviar una subcadena per una altra dins d'un text, només una vegada o totes les que aparega.</li>
+</ul>
+<h4 id="caracters-especials">Caracters especials</h4>
+<div class="highlight"><pre><span></span><code>[ ]: per especificar un conjunt de caràcters.
+( ): per agrupar.
+{ }: per indicar un nombre de repeticions.
+\: per poder utilitzar caràcters especials, per representar caràcters especials o per conjunts de caràcters.
+^: té dos possibles significats:
+    indicar que la coincidència ha d'estar al principi de la línia.
+    si es posa com a primer caràcter dins de [ ], implica negació ([^AEIOUaeiou] detectarà qualsevol caràcter que no sigui una vocal).
+$: indica que la coincidència ha d'estar al final de la línia.
+|: per triar entre diferents possibilitats.
+?: indica que el caràcter o grup anterior pot aparèixer una o cap vegada.
++: indica que el caràcter o grup anterior ha d'aparèixer una o més vegades.
+*: indica que el caràcter o grup anterior pot aparèixer zero, una o més vegades.
+.: equival a qualsevol caràcter.
+
+\t: representa un tabulador.
+\n: representa un salt de línia.
+\s: representa qualsevol caràcter que sigui un separador. És equivalent a [ \t\n\x0B\f\r].
+\S: representa qualsevol caràcter que no sigui un separador. És equivalent a [^\s].
+\d: representa qualsevol caràcter que sigui un dígit. És equivalent a [0-9].
+\D: representa qualsevol caràcter que no sigui un dígit. És equivalent a [^0-9].
+\w: representa qualsevol caràcter que pot formar una paraula. És equivalent a [a-zA-Z_0-9].
+\W: representa qualsevol caràcter que no formi part d'una paraula. És equivalent a [^\w].
+</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="c1">// Codi java que serveix per validar un correu electrònic</span>
+<span class="w">	</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.regex.Pattern</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">emailRegex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Pattern</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="n">emailRegex</span><span class="p">);</span>
+
+<span class="w">	</span><span class="c1">// Correus a validar</span>
+<span class="w">	</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">emails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="s">"exemple@domini.com"</span><span class="p">,</span>
+<span class="w">		</span><span class="s">"correu.incorrecte"</span><span class="p">,</span>
+<span class="w">		</span><span class="s">"test123@gmail.net"</span><span class="p">,</span>
+<span class="w">		</span><span class="s">"a@b.c"</span><span class="p">,</span>
+<span class="w">		</span><span class="s">"incorrect@domini"</span>
+<span class="w">	</span><span class="p">};</span>
+
+<span class="w">	</span><span class="c1">// Validació dels correus</span>
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">emails</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="n">email</span><span class="p">).</span><span class="na">matches</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">println</span><span class="p">(</span><span class="n">email</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" és vàlid."</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span><span class="w"> </span>
+<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="n">println</span><span class="p">(</span><span class="n">email</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" no és vàlid."</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 530. Expressions regulars en java</summary>
+</details>
+<h2 id="fitxers-xml">Fitxers XML</h2>
+<details class="question">
+<summary>Activitat 531. Processa un document XML en Java</summary>
+</details>
+<details class="question">
+<summary>Activitat 532. Aplicació traductora amb XML</summary>
+</details>
 <h2 id="enumeracions">Enumeracions</h2>
 <p>Una enumeració és un tipus especial de ‘classe’ que representa un grup de constants. Cada element d’aquesta estructura està associada a un valor de un tipus de dades concret (normalment enter) on el primer element de l’enumeració sol agafar el valor 0</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1673,58 +2061,6 @@ Eixir tancaria l'apliació.</p>
 <span class="w">	</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<h2 id="colleccions">Col·leccions</h2>
-<p>Les col·leccions en Java són un marc que proporciona una arquitectura per emmagatzemar i manipular el grup d'objectes Poden realitzar totes les operacions que realitzeu sobre les dades, com ara la cerca, l'ordenació, la inserció, la manipulació i la supressió.</p>
-<p>Java ofereix interfícies (Set, List, Queue, Deque) i classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).</p>
-<h3 id="jerarquia-de-classes">Jerarquia de classes</h3>
-<p>A continuació pots observar la jerarquia de classes que ens ofereix l'API de Java respecte de les col·leccions.</p>
-<div class="mermaid">classDiagram
-	Iterable &lt;|-- Collection
-	Collection &lt;|-- List
-	Collection &lt;|-- Queue
-	Collection &lt;|-- Set
-	List &lt;|.. ArrayList
-	List &lt;|.. LinkedList
-	List &lt;|.. Vector
-	List &lt;|.. Stack
-	Queue &lt;|--Deque
-	Queue &lt;|..PriorityQueue
-	Set &lt;|-- SortedSet
-	Set &lt;|.. HashSet
-    Set &lt;|.. LinkedHashSet
-	SortedSet &lt;|.. TreeSet
-	Deque &lt;|.. ArrayDeque
-</div>
-<h3 id="arraylist">ArrayList</h3>
-<p>La classe ArrayList implementa la interfície List. Utilitza una matriu dinàmica per emmagatzemar l'element duplicat de diferents tipus de dades. La classe ArrayList manté l'ordre d'inserció i no està sincronitzada. Es pot accedir aleatòriament als elements emmagatzemats a la classe ArrayList. Considereu l'exemple següent.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Primer creem l'arrayList</span>
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-
-<span class="c1">// Després afegim elements a la llista</span>
-<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span>
-<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Vijay"</span><span class="p">);</span><span class="w">  </span>
-<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ravi"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="w"> </span><span class="p">(</span><span class="s">"Ajay"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-
-<span class="c1">// Recorrem la llista i mostrem per pantalla</span>
-<span class="n">Iterator</span><span class="w"> </span><span class="n">itr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span><span class="w">  </span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="w"> </span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">	</span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="p">());</span><span class="w">  </span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
 </article>
 </div>
 </div>

@@ -1737,8 +1737,78 @@ Guarda el fitxer com a <strong>ProjecteAgenda.pde</strong></p>
 <p>En Java es possible sobrecarregar mètodes, és dir, definir dos o més dins de la mateixa classe, que comparteixen nombre i que les declaracions dels seus paràmetres són diferents; la sobrecàrrega és una forma de polimorfisme.</p>
 <p>La classe descriu un conjunt d'objectes amb les mateixes propietats i comportament; quan l’objecte es crea, es inicialitza amb valors predeterminats o amb els que es transmeten en el moment de la instància; el mètode que realitza la inicialització de l’objecte és el constructor, aquest té el mateix nombre que la classe i no té tipus de retorn.</p>
 <p>A més de la sobrecàrrega de mètodes normals, es poden sobrecarregar els constructors; estos últims normalment es sobrecarregaran a la majoria de les classes creades, encara que no es regla; fins i tot una classe pot definir-se sense constructor i, per extensió, sense arguments.</p>
+<h3 id="classes-estatiques">Classes estàtiques</h3>
+<p>Una classe estàtica en Java és una classe de la que no es poden crear instàncies. És a dir, no podem crear objectes d'una classe estàtica. Només podem accedir als seus membres utilitzant el propi nom de la classe. En altres paraules, una classe estàtica és una classe que només conté membres estàtics.</p>
+<p>En altres paraules, en Java, una classe estàtica és una classe que no necessita una instància per ser utilitzada. És útil quan es vol agrupar mètodes o atributs que no depenen d'una instància específica de la classe.</p>
+<p>Ací tens un exemple d'una classe estàtica en Java:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">		</span><span class="c1">// Mètode estàtic per sumar dos números</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">suma</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="c1">// Mètode estàtic per restar dos números</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">resta</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="c1">// Mètode principal que utilitza els mètodes estàtics de la classe Calculadora</span>
+<span class="w">		</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="kt">int</span><span class="w"> </span><span class="n">resultatSuma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">suma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">			</span><span class="kt">int</span><span class="w"> </span><span class="n">resultatResta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">resta</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Suma: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultatSuma</span><span class="p">);</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resta: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultatResta</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="explicacio">Explicació</h4>
+<ol>
+<li>Classe Calculadora:<ul>
+<li>Té dos mètodes estàtics, suma i resta, que realitzen operacions matemàtiques.</li>
+<li>Aquests mètodes són <strong>static</strong>, el que vol dir que no cal crear una instància de la classe per utilitzar-los. Es poden cridar directament amb el nom de la classe.</li>
+</ul>
+</li>
+<li>Mètodes estàtics<ul>
+<li>public static int suma(int a, int b) i public static int resta(int a, int b) són mètodes que operen sobre els paràmetres passats i retornen els resultats. No depenen d'instàncies d'objectes, per tant, es poden cridar directament com Calculadora.suma(5, 3).</li>
+</ul>
+</li>
+</ol>
+<h4 id="us">Ús</h4>
+<p>Aquest tipus de classe estàtica és útil quan tens funcions que no necessiten informació específica d'instàncies de la classe. Un exemple comú són les funcions utilitàries (com en el cas de la calculadora), les quals s'utilitzen de manera global i no depenen d'objectes particulars.</p>
+<p>Aquesta estructura també s'utilitza per a altres casos com:</p>
+<div class="highlight"><pre><span></span><code>- **Classes amb constants** (per exemple, una classe amb constants com PI o altres valors fixos).
+- **Patrons de disseny com el Singleton**, on una classe té només una instància.
+- Accions globals, com el registre de logs, que es volin mantenir a tot el sistema sense crear múltiples instàncies.
+</code></pre></div>
+<p>En el cas anterior, l'ús d'una classe estàtica fa que la calculadora sigui de fàcil accés a tot arreu del codi, sense haver de crear un objecte de la classe Calculadora.</p>
 <details class="question">
-<summary>Activitat 609. Projecte Final Agenda</summary>
+<summary>Activitat 609. Classe Utils</summary>
+<p>Aplica els coneixements dels apartats anteriors per afegir una classe Utils al teu projecte, de tal forma que siga aquesta la que s'encarregue de fer alguna funció que no haja de dependre de cap instància de classe.</p>
+</details>
+<details class="question">
+<summary>Activitat 610. Projecte Final Agenda</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">Problema</label><label for="__tabbed_15_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

@@ -1811,7 +1811,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Comandament</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Comandament</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">engegar</span><span class="w"> </span><span class="p">();</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">apagar</span><span class="w"> </span><span class="p">();</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pujarVolum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">increment</span><span class="p">);</span>
@@ -1867,11 +1867,13 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">interficie</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">interficie2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">interficie3</span><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="herencia-de-classes-i-implementacio-dinterficies">Herència de classes i implementació d'interfícies</h3>
-<p>es interfícies no són classes ja que especifiquen un comportament mitjançant mètodes per la classe que els implemente; per això, una classe pot heretar de la seua classe base i al mateix temps implementar una interfície. Per exemple si tenim una classe base anomenada Electrodomèstic de la qual hereten una sèrie de classes com podrien ser: Televisió, DVD, Microones, Forn, Nevera etc..i a més a més també disposem d’una interfície Comandament,  podríem crear una aplicació en la que la televisió herete de la classe general electrodomèstic i a banda implemente la interfície comandament com hem vist abans.</p>
+<p>Les interfícies no són classes ja que especifiquen un comportament mitjançant mètodes per la classe que els implemente; per això, una classe pot heretar de la seua classe base i al mateix temps implementar una interfície. Per exemple si tenim una classe base anomenada Electrodomèstic de la qual hereten una sèrie de classes com podrien ser: Televisió, DVD, Microones, Forn, Nevera etc..i a més a més també disposem d’una interfície Comandament,  podríem crear una aplicació en la que la televisió herete de la classe general electrodomèstic i a banda implemente la interfície comandament com hem vist abans.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Televisio</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Electrodomestic</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">comandament</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="classes-internes">Classes internes</h3>
-<p>Una classe interna és una classe que es declara dintre d’una altra classe.</p>
+<details class="question">
+<summary>Activitat 706. Interficies</summary>
+<p>Crea una interficie que siga implementada per cadascun dels piroclasts.</p>
+</details>
 </article>
 </div>
 </div>

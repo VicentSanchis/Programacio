@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"Llibreria Dibuixem","h":"package Dibuixem","d":"Section","u":"Dibuixem/package-summary.html#llibreria-dibuixem-heading"}];updateSearchResults();

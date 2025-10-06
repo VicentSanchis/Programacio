@@ -172,6 +172,83 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#caracteristiques">
+<span class="md-ellipsis">
+      Característiques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radiografia-duna-classe-java">
+<span class="md-ellipsis">
+      Radiografia d'una classe Java
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-definit-classes">
+<span class="md-ellipsis">
+      S'han definit classes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-definit-propietats-i-metodes">
+<span class="md-ellipsis">
+      S'han definit propietats i mètodes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-creat-constructors">
+<span class="md-ellipsis">
+      S'han creat constructors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-desenvolupat-programes-que-instancien-i-utilitzin-objectes-de-les-classes-creades-anteriorment">
+<span class="md-ellipsis">
+      S'han desenvolupat programes que instancien i utilitzin objectes de les classes creades anteriorment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-utilitzat-mecanismes-per-controlar-la-visibilitat-de-les-classes-i-dels-seus-membres">
+<span class="md-ellipsis">
+      S'han utilitzat mecanismes per controlar la visibilitat de les classes i dels seus membres
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-definit-i-utilitzat-classes-heretades">
+<span class="md-ellipsis">
+      S'han definit i utilitzat classes heretades
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-creat-i-utilitzat-metodes-estatics">
+<span class="md-ellipsis">
+      S'han creat i utilitzat mètodes estàtics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-definit-i-utilitzat-interficies">
+<span class="md-ellipsis">
+      S'han definit i utilitzat interfícies
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shan-creat-i-utilitzat-conjunts-i-llibreries-de-classes">
+<span class="md-ellipsis">
+      S'han creat i utilitzat conjunts i llibreries de classes
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -212,6 +289,124 @@
 <article class="md-content__inner md-typeset">
 <h1 id="tema-5-desenvolupament-de-classes">Tema 5. Desenvolupament de classes</h1>
 <h2 id="introduccio">Introducció</h2>
+<p>Abans de començar a parlar de classes i de com les podem desenvolupar en un llenguatge de programació com és Java, caldria primer explicar un dels orígens del paradigma de programació orientada a objectes: <strong>la programació modular</strong>.</p>
+<p>Anem a entrar en un món que es basa en la màxima: <strong>"Divideix i venceràs"</strong>. Si fem una analogia amb l'estratègia bèl·lica, podriem dir que en aquells casos que l'enemic és molt gran per a les nostres possibilitats, seria interessant poder, d'alguna forma, dividir-lo en trossos més xicotets de tal forma que el podem afrontar.</p>
+<div class="admonition info">
+<p class="admonition-title">Què és?</p>
+<p>La <strong>programació modular</strong> és un paradigma de programació que consisteix a dividir un programa en <strong>mòduls o subprogrames</strong> per tal de fer-lo més llegible i manejable</p>
+<p>També podriem dir que és una evolució de la <strong>programació estructurada</strong> per solucionar problemes de programació més grans i complexos del que aquesta pot resoldre.</p>
+</div>
+<p>En l'aplicar la programació modular, un <strong>problema complex</strong> ha de ser dividit en <strong>diversos subproblemes més simples</strong>, i aquests al seu torn en altres subproblemes més simples encara. Això s'ha de fer fins a obtenir subproblemes prou simples com per poder ser resolts fàcilment amb algun llenguatge de programació. Aquesta tècnica es diu <strong>refinament successiu, divideix i venceràs o anàlisi descendent (Top-Down).</strong></p>
+<p>Un <strong>mòdul</strong> és cadascuna de les parts d'un programa que resol un dels <strong>subproblemes</strong> en què es divideix el problema complex original. Cadascun d'aquests mòduls té <strong>una tasca ben definida</strong> i alguns necessiten d'altres per poder operar. En cas que un mòdul necessiti d'un altre, pot comunicar-se amb aquest mitjançant una interfície de comunicació que també ha d'estar ben definida.</p>
+<p>Si bé un mòdul es pot entendre com una part d'un programa en qualsevol de les seves formes i variats contextos, en la pràctica se'ls sol prendre com a sinònims <strong>de procediments i funcions</strong>. Però no necessària ni estrictament un mòdul és una funció o un procediment, ja que el mateix pot contenir molts d'ells. No s'ha de confondre el terme "mòdul" (en el sentit de programació modular) amb termes com "funció" o "procediment", propis de l'llenguatge que ho suporte.</p>
+<details class="danger">
+<summary>White Stripes - Little Acorn (lletra) - Intro</summary>
+<p>When problems overwhelm us<br/>
+And sadness smothers us<br/>
+Where do we find the will and the courage to continue?<br/>
+Well, the answer may come in the carrying voice of a friend<br/>
+A chance encounter with a book<br/>
+Or from a personal faith<br/>
+For janette help came from her faith<br/>
+But it also came from a squirrel<br/><br/>
+Shortly after her divorce<br/>
+Janette lost her father<br/>
+Then she lost her job<br/>
+She had mounthing money problems<br/>
+But Janette not only survived<br/>
+She worked her way out of despondency and now she says<br/><br/>
+"Life is good again"<br/>
+How could this happen?<br/>
+She told me that late one autumn day when she was at her lowest<br/>
+She watched a squirrel storing up nuts for the winter<br/>
+One at a time he would take them to the nest<br/>
+And she thought, "If that squirrel can take care<br/>
+of himself with the harsh winter coming on<br/>
+So can I<br/>
+Once I broke my problems into small pieces<br/>
+I was able to carry them<br/>
+Just like those acorns<br/>
+One at a time</p>
+</details>
+<h2 id="caracteristiques">Característiques</h2>
+<p>La <strong>modularitat</strong> en programació es considera la capacitat que té un llenguatge concret en dividir-se en parts o subprogrames (mòduls). Cadascun dels mòduls o parts que formaran part d'aquest programa, tenen una funció particular, són semi-independents i inclús es poden trobar en fitxers físics distints.</p>
+<p>No hem de pensar mai en un programa com un tot sino com un <strong>conjunt de mòduls</strong> relacionats entre si on cada mòdul desenvolupa una tasca molt concreta independentment de la resta i que tots junts formen el programa o aplicació.</p>
+<h4 id="avantatges">Avantatges</h4>
+<ul>
+<li>El codi resultant és més net i fàcil d'entendre.</li>
+<li>Permet la divisió del treball.</li>
+<li>Es pot provar de forma independent, millorant així la recerca i correcció d'errades.</li>
+<li>Facilita la definició de variables al crear diversos àmbits.</li>
+</ul>
+<h4 id="tipus-de-modularitat">Tipus de modularitat</h4>
+<p>Depenent del nivell de detall amb el que es tracten els mòduls, podem distingir tres tipus:</p>
+<ul>
+<li><strong>Llibreries:</strong> conjunt de funcions o de mòduls que comparteixen una finalitat.</li>
+<li><strong>Classes:</strong> les classes són definicions de possibles objectes. Ja ho veurem amb més detall al tema de programació orientada a objectes.</li>
+<li><strong>Funcions o mètodes:</strong> codi que realitza un funció concreta. Una funció o mètode pot estar associat tant a una llibreria com a un classe.</li>
+</ul>
+<h2 id="radiografia-duna-classe-java">Radiografia d'una classe Java</h2>
+<ul>
+<li>(RA4.1: S'ha reconegut la sintaxi, estructura i components típics d'una classe)</li>
+</ul>
+<p>Una <strong>classe és la definició d’un objecte</strong>, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe. Dit d'una altra forma, una classe és el model o plantilla que defineix com seran els objectes que en derivem. És a dir, estableix què saben (atributs) i què poden fer (mètodes). Els objectes són, doncs, instàncies concretes d’una classe.</p>
+<p>Per entendre la sintaxi i estructura d’una classe en Java (i també a Processing), convé distingir les seues parts principals:</p>
+<ul>
+<li><strong>Nom de la classe:</strong> s'escriu amb majúscula inicial per convenció.</li>
+<li><strong>Atributs:</strong> variables que defineixen l'estat de la classe.</li>
+<li><strong>Constructor (s):</strong> mètode especial que permet crear (instanciar) objectes inicialitzant atributs.</li>
+<li><strong>Mètodes:</strong> accions que poden fer els objectes de la classe.</li>
+<li><strong>Comentaris i documentació:</strong> és bona pràctica descriure què fa cada part de la classe.</li>
+</ul>
+<p>Veien un exemple genèric de com seria una classe en notació <strong>UML</strong></p>
+<p><center>
+<div class="mermaid">    classDiagram
+    direction TB
+
+    class ClassGen {
+        tipus atribut1
+        tipus atribut2
+        tipus atribut3
+        ClassGen()
+        mètode1()
+        mètode2()
+    }
+        
+</div>
+</center></p>
+<p>A l'esquema anterior hem definit una classe amb nom <strong>ClassGen</strong> (de classe genèrica) que té tres <strong>atributs</strong>: atribut1, atribut2, atribut3; un <strong>constructor</strong>: ClassGen i dos <strong>mètodes</strong>: mètode1 i mètode2.</p>
+<p>Però vegem un exemple més concret. Per tal de veure com és el desenvolupament de classes en programació orientada a objectes, quina és la seua sintaxi, estructura i components típics, el que farem serà un xicotet projecte amb un <strong>sistema de partícules</strong> en forma de volcà com mostra la imatge:</p>
+<p><center>
+<img alt="Sistema de partícules" src="/assets/Tema6/Volcano1.gif" width="50%"/>
+</center></p>
+<p>Un <strong>sistema de partícules</strong> és una tècnica de programació gràfica utilitzada per simular fenòmens formats per molts  elements petits i independents (anomenats partícules) que, en conjunt, generen un efecte visual complex.</p>
+<p>Cada <strong>partícula</strong> és un objecte amb propietats pròpies (posició, velocitat, color, vida, etc.) i regles de comportament (com es mou, com es dissipa, com canvia al llarg del temps).</p>
+<p>Un <strong>sistema de partícules</strong> gestiona un conjunt d’aquestes partícules:</p>
+<ul>
+<li><strong>Creació:</strong> genera noves partícules segons unes condicions (per exemple, cada frame).</li>
+<li><strong>Actualització:</strong> calcula l’estat de cada partícula (moure’s, canviar d’opacitat, reduir vida...).</li>
+<li><strong>Dibuix:</strong> mostra totes les partícules a la pantalla.</li>
+<li><strong>Eliminació:</strong> descarta les partícules que ja han “mort” o superat la seua vida útil.</li>
+</ul>
+<p>Però abans unes quantes pinzellades breus de com es desenvolupa un projecte de programació orientada a objectes.</p>
+<h3 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h3>
+<p>A partir d’ara, quan hajam de resoldre un problema hem de començar a <strong>pensar d’una forma diferent</strong> a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema on les dades presenten una major importància.</p>
+<p><strong>L’objectiu de l’orientació a objectes</strong> és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
+<ul>
+<li>Ens preguntarem sobre aquells elements dels que realment es interessant emmagatzemar informació, és a dir, <strong>localitzarem els possibles objectes</strong> del nostre programa.</li>
+<li>De cada element hem de conèixer quines són les seues <strong>característiques</strong> o quines són les característiques que el representen.</li>
+<li>De cada element hem de conèixer les <strong>operacions a realitzar</strong>, accions que hi poden fer,  ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
+<li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
+</ul>
+<h2 id="shan-definit-classes">S'han definit classes</h2>
+<h2 id="shan-definit-propietats-i-metodes">S'han definit propietats i mètodes</h2>
+<h2 id="shan-creat-constructors">S'han creat constructors</h2>
+<h2 id="shan-desenvolupat-programes-que-instancien-i-utilitzin-objectes-de-les-classes-creades-anteriorment">S'han desenvolupat programes que instancien i utilitzin objectes de les classes creades anteriorment</h2>
+<h2 id="shan-utilitzat-mecanismes-per-controlar-la-visibilitat-de-les-classes-i-dels-seus-membres">S'han utilitzat mecanismes per controlar la visibilitat de les classes i dels seus membres</h2>
+<h2 id="shan-definit-i-utilitzat-classes-heretades">S'han definit i utilitzat classes heretades</h2>
+<h2 id="shan-creat-i-utilitzat-metodes-estatics">S'han creat i utilitzat mètodes estàtics</h2>
+<h2 id="shan-definit-i-utilitzat-interficies">S'han definit i utilitzat interfícies</h2>
+<h2 id="shan-creat-i-utilitzat-conjunts-i-llibreries-de-classes">S'han creat i utilitzat conjunts i llibreries de classes</h2>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -237,5 +432,9 @@
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
-</body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "forest",
+    darkmode: true
+});</script></body>
 </html>

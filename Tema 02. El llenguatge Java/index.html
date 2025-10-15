@@ -1839,7 +1839,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p>La diferència essencial entre el <strong>postincrement</strong> i el <strong>preincrement</strong> és que el contingut de la variable, el que tenim dins la caixeta, s'avalua abans (postincrement) o després (preincrement) de sumar-li un al seu valor.</p>
 <details class="question">
 <summary>Activitat 212. Operadors postincrement i preincrement</summary>
-<p>Prova el codi següent i digues-me el que passa.</p>
+<p>Prova el codi següent i digues-me el que passa. En acabar fes algunes modificacions al codi i escriu un comentari al codi.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -1876,6 +1876,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Valor de !condition = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">!</span><span class="n">condition</span><span class="p">);</span>
 <a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p><strong>Entrega:</strong> Fitxer .pde amb el codi modificat i un comentari per tal d'explicar-ho.</p>
 </details>
 <h3 id="operadors-relacionals">Operadors relacionals</h3>
 <p>Com hem explicat en l'apartat sobre <a href="#tipus-de-dades"><strong>Tipus de dades</strong></a>, existeix en Java el tipus <strong>boolean</strong> que només pot tenir valors <strong>true o false.</strong> Aquest tipus de dades està relacionat amb els operadors relacionals, ja que tota expressió relacional ha de donar com a resultat bé <strong>true o false.</strong></p>
@@ -1948,7 +1949,7 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <p>Així tenim que una <strong>expressió relacional</strong>, que com hem explicat ha de donar un resultat booleà, es podrà utilitzar bé en altres expressions relacionals o en avaluacions de condicions per a les estructures de control que veurem en pròxims apartats.</p>
 <details class="question">
 <summary>Activitat 213. Expressions relacionals</summary>
-<p>Còpia i executa el codi anterior en Processing i observa el que passa.</p>
+<p>Còpia i executa el codi anterior en Processing i observa el que passa. Després fes algunes modificacions al codi i escriu un comentari al codi.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1988,11 +1989,12 @@ Per exemple, el llenguatge C té com a paraules reservades if o while. Ambdues n
 <a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"a != b :"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17"></a>
 <a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">    </span><span class="c1">// Els arrays no es poden comparar cma operadors relacionals perquè els objectes emmagatzemen referències i no el valor</span>
-<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"x == y : "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">ar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">br</span><span class="p">));</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"x == y : "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span><span class="w"> </span><span class="n">br</span><span class="p">));</span>
 <a id="__codelineno-14-20" name="__codelineno-14-20"></a>
 <a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"condicion==true :"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">condicion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">));</span>
 <a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p><strong>Entrega:</strong> Fitxer .pde amb el codi modificat i un comentari per tal d'explicar-ho.</p>
 </details>
 <h3 id="operadors-logics">Operadors lògics</h3>
 <p>Aquests operadors s'utilitzen per realitzar operacions <strong>lògiques AND</strong> i <strong>lògiques OR</strong>, és a dir, la funció semblant a la port <strong>AND</strong> i la porta <strong>OR</strong> e l'electrònica digital. Una cosa a tindre en compte és que la segona condició no s'avalua si la primera és falsa, és a dir, té un efecte de curtcircuit. S'utilitza molt per provar varies condicions per prendre una decisió.</p>

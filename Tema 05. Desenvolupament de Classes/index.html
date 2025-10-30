@@ -8,9 +8,9 @@
 <link href="../Tema%2004.%20Estructures%20de%20Control/" rel="prev"/>
 <link href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
 <title>5.- Desenvolupament de classes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -115,6 +115,7 @@
 <a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     Índex
+    
   </span>
 </a>
 </li>
@@ -122,6 +123,7 @@
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
     1.- Introducció a la programació
+    
   </span>
 </a>
 </li>
@@ -129,6 +131,7 @@
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
     2.- El llenguatge Java
+    
   </span>
 </a>
 </li>
@@ -136,6 +139,7 @@
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
     3.- Prog. Orientada a Objectes
+    
   </span>
 </a>
 </li>
@@ -143,6 +147,7 @@
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
     4.- Estructures de Control
+    
   </span>
 </a>
 </li>
@@ -151,12 +156,14 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     5.- Desenvolupament de classes
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     5.- Desenvolupament de classes
+    
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -187,9 +194,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#shan-definit-classes">
+<a class="md-nav__link" href="#definicio-de-classes-en-java">
 <span class="md-ellipsis">
-      S'han definit classes
+      Definició de classes en Java
     </span>
 </a>
 </li>
@@ -256,6 +263,7 @@
 <a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
 <span class="md-ellipsis">
     6.- Entrada, eixida i gràfics
+    
   </span>
 </a>
 </li>
@@ -263,6 +271,7 @@
 <a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
 <span class="md-ellipsis">
     7.- Col·leccions
+    
   </span>
 </a>
 </li>
@@ -270,6 +279,7 @@
 <a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
 <span class="md-ellipsis">
     8.- Herència, polimorfisme i interfícies
+    
   </span>
 </a>
 </li>
@@ -277,6 +287,7 @@
 <a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
     9.- Bases de dades relacionals
+    
   </span>
 </a>
 </li>
@@ -288,6 +299,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="tema-5-desenvolupament-de-classes">Tema 5. Desenvolupament de classes</h1>
+<div class="admonition success">
+<p class="admonition-title">Resultat d'aprenentatge associat</p>
+<p>Desenvolupa programes organitzats a classes analitzant i aplicant els principis de la programació orientada a objectes.</p>
+</div>
 <h2 id="introduccio">Introducció</h2>
 <p>Abans de començar a parlar de classes i de com les podem desenvolupar en un llenguatge de programació com és Java, caldria primer explicar un dels orígens del paradigma de programació orientada a objectes: <strong>la programació modular</strong>.</p>
 <p>Anem a entrar en un món que es basa en la màxima: <strong>"Divideix i venceràs"</strong>. Si fem una analogia amb l'estratègia bèl·lica, podriem dir que en aquells casos que l'enemic és molt gran per a les nostres possibilitats, seria interessant poder, d'alguna forma, dividir-lo en trossos més xicotets de tal forma que el podem afrontar.</p>
@@ -359,7 +374,7 @@ One at a time</p>
 <li><strong>Comentaris i documentació:</strong> és bona pràctica descriure què fa cada part de la classe.</li>
 </ul>
 <p>Veien un exemple genèric de com seria una classe en notació <strong>UML</strong></p>
-<p><center>
+<center>
 <div class="mermaid">    classDiagram
     direction TB
 
@@ -373,12 +388,12 @@ One at a time</p>
     }
         
 </div>
-</center></p>
+</center>
 <p>A l'esquema anterior hem definit una classe amb nom <strong>ClassGen</strong> (de classe genèrica) que té tres <strong>atributs</strong>: atribut1, atribut2, atribut3; un <strong>constructor</strong>: ClassGen i dos <strong>mètodes</strong>: mètode1 i mètode2.</p>
 <p>Però vegem un exemple més concret. Per tal de veure com és el desenvolupament de classes en programació orientada a objectes, quina és la seua sintaxi, estructura i components típics, el que farem serà un xicotet projecte amb un <strong>sistema de partícules</strong> en forma de volcà com mostra la imatge:</p>
-<p><center>
+<center>
 <img alt="Sistema de partícules" src="/assets/Tema6/Volcano1.gif" width="50%"/>
-</center></p>
+</center>
 <p>Un <strong>sistema de partícules</strong> és una tècnica de programació gràfica utilitzada per simular fenòmens formats per molts  elements petits i independents (anomenats partícules) que, en conjunt, generen un efecte visual complex.</p>
 <p>Cada <strong>partícula</strong> és un objecte amb propietats pròpies (posició, velocitat, color, vida, etc.) i regles de comportament (com es mou, com es dissipa, com canvia al llarg del temps).</p>
 <p>Un <strong>sistema de partícules</strong> gestiona un conjunt d’aquestes partícules:</p>
@@ -398,7 +413,100 @@ One at a time</p>
 <li>De cada element hem de conèixer les <strong>operacions a realitzar</strong>, accions que hi poden fer,  ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
 <li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
 </ul>
-<h2 id="shan-definit-classes">S'han definit classes</h2>
+<p>Anem per feina...</p>
+<h2 id="definicio-de-classes-en-java">Definició de classes en Java</h2>
+<ul>
+<li>(RA4.2: S'han definit classes)</li>
+</ul>
+<p>Per poder definir una classe ens hem de basar en l'esquema general de classe vist a l'apartat <strong>Radiografia d'una classe en Java</strong> per poder construir-la i d'una altra banda, ens hem de fixar també en l'apartat de <strong>Realització de programes orientats a objectes</strong>. Com haviem dit, hem de localitzar primer quines són les característiques que representen l'objecte que es vol implementar així com les operacions o accions que hi pot realitzar.</p>
+<p>Al sistema de particules la classe que pretenem modelar inicialment és la classe <strong>particula</strong>. Per tal de modelar des del punt de vista de la programació orientada a objectes i com varem a veure en apartats anteriors, consistiria en quedar-nos amb aquells detalls que siguen rellevants i desestimar els que no tenen importància. Des del meu punt de vista una particula tindria les següents característiques:</p>
+<ul>
+<li>Té dimensions.</li>
+<li>Té una velocitat inicial.</li>
+<li>Té color.</li>
+<li>Està en una posició.</li>
+<li>Va en una direcció.</li>
+</ul>
+<p>Respecte de les accions que una particula pot realitzar són:</p>
+<ul>
+<li>S'ha de mostrar per pantalla</li>
+<li>Actualitza la seua posició en el temps, en altres paraules, es mou.</li>
+<li>Li afecta la gravetat</li>
+</ul>
+<p>Una vegada hem fet aquest procés d'abstracció i hem decidit què es representarà al nostre sistema i què no, hem de dissenyar la nostra classe usant UML, concretament diagrama de classes:</p>
+<center>
+<div class="mermaid">    classDiagram
+    direction TB
+
+    class Particula {
+        Pvector posicio;
+        PVector direccio;
+        float velocitat;
+        color pinta;
+        int grandaria;
+        
+        mostrar()
+        actualitzar()
+    }
+        
+</div>
+</center>
+<p>D'aquest disseny de la classe particula ja podem començar a picar el codi del nostre projecte, però abans algunes consideracions prèvies associades a l'entorn integrat de desenvolupament escollit (Processing IDE) i les seues particularitats.</p>
+<p>Tot projecte desenvolupat amb Processing IDE (igual que altres IDEs) necessita d'un punt d'entrada, fitxer principal o <strong>main</strong>. Aquest fitxer principal o main és el que conté els mètodes setup, draw, i tots els controladors d'esdeveniments i també serà el lloc des del qual es farà ús de les classes i objectes que formaran part del projecte. En altres paraules, el que hem estat fent fins ara amb les activitats realitzades en Processing IDE.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="c1">// Variables globals</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="c1">// Configuració inicial de l'aplicació</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Bucle de joc o mètode draw</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="c1">// Control d'esdeveniments</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mouseClicked</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span>
+</code></pre></div></td></tr></table></div>
+<p>Aquest codi és el que conté el punt d'entrada principal a l'aplicació és el que donarà nom al projecte, per tant tindrà el mateix nom que la carpeta que el conté. Crea el teu projecte de particules i guarda'l amb el nom <strong>SistemaParticules</strong>.</p>
+<p>Una vegada ja tenim el nostre projecte creat s'afegirien les classes necessàries. En el nostre cas tindrem una unica classe que es diu <strong>Particula</strong>. Aquesta acció resultarà en un nou fitxer dins del projecte que s'acaba de crear. Per tal de crear aquesta classe realitza les següents accions:</p>
+<center>
+<img src="./assets/Tema5/CrearClasse1.png"/>
+</center>
+<p>Si es fa clic amb el ratolí el que es marca a la imatge anterior ens apareixeran les següents opcions: "Nova pestanya", "Reanomena", "Elimina", "Pestanya Anterior", "Pestanya següent" ... Hem d'escollir l'opció <strong>Nova Pestanya</strong> i al diàleg que apareixerà li posarem <strong>Particula</strong>, el nom de la classe que volem crear. El resultat final serà que el nostre editor del Processing IDE tindrà dues pestanyes: el main que hem anomenat SistemaParticules i la classe Particula.</p>
+<center>
+<img src="./assets/Tema5/CrearClasse2.png"/>
+</center>
+<p>A partir d'ara ja podem començar a escriure el codi de la nostra classe Particula basant-nos en les fases d'anàlisi i disseny anteriors. Però primer vegem quina és la sintaxi del llenguatge Java per a implementar classes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">    </span><span class="o">[</span><span class="n">modificador</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">visibilitat</span><span class="o">]</span><span class="w"> </span><span class="kd">class</span> <span class="nc">nomClasse</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">        </span><span class="c1">//Atributs de la classe</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="c1">// Mètodes de la classe</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="shan-definit-propietats-i-metodes">S'han definit propietats i mètodes</h2>
 <h2 id="shan-creat-constructors">S'han creat constructors</h2>
 <h2 id="shan-desenvolupat-programes-que-instancien-i-utilitzin-objectes-de-les-classes-creades-anteriorment">S'han desenvolupat programes que instancien i utilitzin objectes de les classes creades anteriorment</h2>
@@ -430,8 +538,8 @@ One at a time</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

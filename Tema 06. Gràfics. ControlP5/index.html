@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
 <title>Tema 9. Gràfics. La llibreria ControlP5 - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -113,6 +113,7 @@
 <a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     Índex
+    
   </span>
 </a>
 </li>
@@ -120,6 +121,7 @@
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
     1.- Introducció a la programació
+    
   </span>
 </a>
 </li>
@@ -127,6 +129,7 @@
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
     2.- El llenguatge Java
+    
   </span>
 </a>
 </li>
@@ -134,6 +137,7 @@
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
     3.- Prog. Orientada a Objectes
+    
   </span>
 </a>
 </li>
@@ -141,6 +145,7 @@
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
     4.- Estructures de Control
+    
   </span>
 </a>
 </li>
@@ -148,6 +153,7 @@
 <a class="md-nav__link" href="../Tema%2005.%20Desenvolupament%20de%20Classes/">
 <span class="md-ellipsis">
     5.- Desenvolupament de classes
+    
   </span>
 </a>
 </li>
@@ -155,6 +161,7 @@
 <a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
 <span class="md-ellipsis">
     6.- Entrada, eixida i gràfics
+    
   </span>
 </a>
 </li>
@@ -162,6 +169,7 @@
 <a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
 <span class="md-ellipsis">
     7.- Col·leccions
+    
   </span>
 </a>
 </li>
@@ -169,6 +177,7 @@
 <a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
 <span class="md-ellipsis">
     8.- Herència, polimorfisme i interfícies
+    
   </span>
 </a>
 </li>
@@ -176,6 +185,7 @@
 <a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
     9.- Bases de dades relacionals
+    
   </span>
 </a>
 </li>
@@ -1693,9 +1703,9 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 <li>Desplegables</li>
 <li>Entre molts altres..</li>
 </ul>
-<p><center>
-<kbd style="border:1px solid #888;width:80%;"><img alt="ControlP5 Library" src="../assets/Tema9/controlp5-controllers-range.png"/></kbd>
-</center></p>
+<center>
+<kbd style="border:1px solid #888;width:80%;">![ControlP5 Library](assets/Tema9/controlp5-controllers-range.png)</kbd>
+</center>
 <p>Per tal de poder utilitzar les llibreries ControlP5 de Processing només hauriem d'instal·lar la llibreria com s'instal·len les llibreries a Processing IDE.</p>
 <div class="admonition danger">
 <p class="admonition-title">Particularitats Processing IDE i ControlP5</p>
@@ -1787,9 +1797,9 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 </input></input></div>
 <p>Al codi anterior s'ha creat la <strong>classe Menú</strong> que és la que contindrà els controls de <strong>controlP5</strong>. Al nostre cas es tractarà inicialment d'un sol botó amb text <strong>BOTO1</strong> a la posició (250,150) amb una grandària de 150 per 150 píxels de color blau. Com pots observar també he implementat el mètode (buit de moment) <strong>controlEvent</strong> ja que es tracta d'una classe que implementa la interfície <strong>ControlListener</strong>. Finalment hem posat un mètode <strong>display</strong> public en el que bàsicament el que es fa és cridar al mètode <strong>show()</strong> de la classe Button de la llibreria ControlP5.</p>
 <p>Al executar eixe codi es mostra el següent:</p>
-<p><center>
-<img alt="ControlP5 Library" src="../assets/Tema9/ProvaBoto1.png"/>
-</center></p>
+<center>
+    ![ControlP5 Library](assets/Tema9/ProvaBoto1.png)
+</center>
 <p>Ara ens quedaria com aconseguir que es puga interactuar amb l'usuari, en altres paraules, que quan l'usuari prema el botó l'aplicació faja alguna cosa. Per aconseguir-ho cal fer dues coses: la primera és afegir-li a l'objecte controlP5 qui serà el que està escoltant les accions que es poden realitzar amb els controls que conté, bàsicament fer clic sobre el botó en el nostre cas. Això es fa afegint-li al controlP5 un <strong>listener</strong> just després de la instanciació d'aquest.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
 <span class="normal"><a href="#__codelineno-32-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="w">    </span><span class="n">cp5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
@@ -3283,7 +3293,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
 </body>
 </html>

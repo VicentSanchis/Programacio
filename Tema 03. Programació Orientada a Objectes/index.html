@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2002.%20El%20llenguatge%20Java/" rel="prev"/>
+<link href="../Tema%2004.%20Estructures%20de%20Control/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>3.- Prog. Orientada a Objectes - PROGRAMACIÓ 1DAW</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheet/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tema-3-programacio-orientada-a-objectes">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              3.- Prog. Orientada a Objectes
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+<input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    PROGRAMACIÓ 1DAW
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Índex
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
+<span class="md-ellipsis">
+    1.- Introducció a la programació
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
+<span class="md-ellipsis">
+    2.- El llenguatge Java
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    3.- Prog. Orientada a Objectes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    3.- Prog. Orientada a Objectes
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#caracteristiques-principals">
+<span class="md-ellipsis">
+      Característiques principals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classes-i-objectes">
+<span class="md-ellipsis">
+      Classes i Objectes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projecte-figures-geometriques">
+<span class="md-ellipsis">
+      Projecte figures geomètriques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#propietats-i-metodes-estatics">
+<span class="md-ellipsis">
+      Propietats i mètodes estàtics
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
+<span class="md-ellipsis">
+    4.- Estructures de Control
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2005.%20Desenvolupament%20de%20Classes/">
+<span class="md-ellipsis">
+    5.- Desenvolupament de classes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
+<span class="md-ellipsis">
+    6.- Entrada, eixida i gràfics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
+<span class="md-ellipsis">
+    7.- Col·leccions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<span class="md-ellipsis">
+    8.- Herència, polimorfisme i interfícies
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
+<span class="md-ellipsis">
+    9.- Bases de dades relacionals
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="tema-3-programacio-orientada-a-objectes">Tema 3. Programació Orientada a Objectes.</h1>
+<div class="admonition danger">
+<p class="admonition-title">Resultat d'aprenentatge associat</p>
+<p><strong style="color:#444;">RA2. Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.</strong></p>
+<h3 id="criteris-davaluacio">Criteris d'avaluació</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.1. S'han identificat els fonaments de la programació orientada a objectes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.2. S'han escrit programes simples.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.3. S'han instanciat objectes a partir de classes predefinides.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.4. S'han utilitzat mètodes i propietats dels objectes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.5. S'han escrit trucades a mètodes estàtics.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.6. S'han utilitzat paràmetres en la crida a mètodes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.7. S'han incorporat i utilitzat llibreries d'objectes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.8. S'han utilitzat constructors.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.9. S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples.</li>
+</ul>
+</div>
+<h2 id="introduccio">Introducció</h2>
+<p>La <strong>programació orientada a objectes</strong> també coneguda com <strong>POO</strong> és el paradigma de programació que més s’utilitza hui en dia i que permet <strong>modelar</strong> de manera més eficient la realitat des del punt de vista del programari.</p>
+<p>La programació orientada a objectes intenta proporcionar un <strong>model de programació basat en objectes que contenen dades i procediments associats</strong> coneguts com a mètodes a diferència del disseny procedimental que s'utilitzava en la programació estructurada. Aquests <strong>objectes</strong>, que són instàncies de les <strong>classes</strong>, són tipus abstractes de dades que encapsulen (amaguen) tant les dades com les funcions per accedir-hi.</p>
+<p>Un dels <strong>objectius</strong> de la programació orientada a objectes és reflectir la realitat, de forma que els elements d’un programa s’ajusten a elements de la vida quotidiana. </p>
+<p>Al contrari de la programació estructurada procedimental clàssica, en <strong>POO</strong> es dona prioritat a la <strong>modelació de les dades</strong> i no als procediments. En un escenari de programació orientada a objectes, a la fase d'anàlisi es determinen els diferents actors del programa (objectes) i a partir d'ací se li assignen els diferents atributs i accions que pot realitzar.</p>
+<p>Doncs bé, a diferència del paradigma de programació estructurada, ací <strong>primer programem els objectes</strong> (definirem les classes) amb totes les seues característiques derivades de la fase d'anàlisi <strong>atributs</strong> i també el seu <strong>comportament</strong> (mètodes) i finalment utilitzariem aquestes classes en forma d'objectes al programa principal.</p>
+<center>
+<img alt="Abstracció" src="/assets/Tema6/Abstraccio.jpg"/>
+</center>
+<p>En conclusió, en <strong>programació orientada a objectes</strong> el que veurem serà com crear classes d'objectes diversos per després poder utilitzar-los en altres programes però... pas a pas.</p>
+<p>Veiem primer un poc de teoria...</p>
+<h2 id="caracteristiques-principals">Característiques principals</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.1. S'han identificat els fonaments de la programació orientada a objectes.</strong></li>
+</ul>
+</div>
+<p>La programació orientada a objectes permet la creació de programari cada vegada més complexe a partir d’unitats o blocs de codi reutilitzables. Les propietats principals o característiques fonamentals del paradigma de programació orientada a objectes són:</p>
+<h3 id="abstraccio">Abstracció</h3>
+<p>Abstraure's és <strong>aïllar mentalment</strong>, considerar separadament (un o diversos atributs o qualitats) d'una cosa. Per exemple abstraure els conceptes més importants d'un discurs, és a dir, <strong>quedar-se amb allò important.</strong></p>
+<p>En programació orientada a objectes abstraure’s, l’abstracció, seria mostrar únicament les característiques essencials, que fa l’objecte i per a que es crea, deixant de banda elements com la implementació.</p>
+<p>L’abstracció permet representar les característiques essencials d’un objecte, deixant enrere aquelles que no tenen tanta importància. A més a més, es centra en l’objecte tal i com el coneixem en la vida real, de forma que ens centrem en allò que es capaç de fer però no en com ho fa. Bàsicament, definiríem l’abstracció com la forma de descriure una entitat del món real sense importar la complexitat que està present i el poder utilitzar aquesta en qualsevol aplicació.</p>
+<center>
+<img alt="Abstracció" src="/assets/Tema6/Abstraccio2.jpg"/>
+</center>
+<h3 id="encapsulament">Encapsulament</h3>
+<p>L’encapsulament és, en altres paraules, <strong>l’ocultació d’informació</strong>, de forma que les dades internes d’un objecte estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
+<p>Per exemple, amb freqüència es desenvolupa codi font o projectes en els que utilitzem la classe out, més concretament el mètode println. Out es troba dins de l’espai de noms (namespace) System i no és més que una classe d’aquest paquet. Dit en altres paraules. Out és una classe i println() és un mètode de la classe Out.</p>
+<center>
+<img alt="Encapsulament" src="/assets/Tema6/Encapsulament.jpg"/>
+</center>
+<h3 id="modularitat">Modularitat</h3>
+<p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben <strong>organitzats en mòduls</strong>, facilitant així l’encapsulament i abstracció de la informació.</p>
+<p>La modularitat permet <strong>dividir una aplicació en parts.</strong> Aquestes parts han de ser tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
+<p>Tots i cadascun d'aquestos elements seran definits en fitxers diferents.</p>
+<h3 id="jerarquia-i-herencia">Jerarquia i herència</h3>
+<p>La <strong>jerarquia</strong> és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
+<center>
+<img alt="Herència" src="/assets/Tema6/Herencia.jpg"/>
+</center>
+<h3 id="polimorfisme">Polimorfisme</h3>
+<p>Polimorfisme és una paraula grega que significa <strong>«moltes formes»</strong>. Aquesta paraula és ideal per definir aquesta característica de la programació o<a href="../../../Processing/sketchbook/libraries/Dibuixem/library/controlP5.jar">text</a> <a href="../../../Processing/sketchbook/libraries/Dibuixem/library/Dibuixem.jar">text</a>rientada a objectes ja que en POO podem tindre objectes amb el <strong>mateix nom</strong> que realitzen <strong>funcions distintes</strong> o implementen codi diferent.</p>
+<p>El polimorfisme és un mecanisme que s’utilitza molt en POO juntament amb l’herència tal que quan una classe deriva d’una altra hereta les seues característiques i operacions. A la classe que hereta es pot redefinir qualsevol mètode heretat, de forma que en funció de la referència a objectes que usem a cada moment s’estarà executant un mètode o un altre.
+text
+text
+Un mateix missatge enviat a objectes diferents donarà com a resposta eixides diferents, és a dir, si tenim diversos objectes amb mètodes similars, segons es referencie l’un o l’altre objecte el resultat final serà diferent. </p>
+<h2 id="classes-i-objectes">Classes i Objectes</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.1. S'han identificat els fonaments de la programació orientada a objectes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.2. S'han escrit programes simples.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.3. S'han instanciat objectes a partir de classes predefinides.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.4. S'han utilitzat mètodes i propietats dels objectes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.6. S'han utilitzat paràmetres en la crida a mètodes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.9. S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples.</strong></li>
+</ul>
+</div>
+<p>Una <strong>classe és la definició d’un objecte</strong>, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe.  Per fer una analogia més "biologia", una classe és l'ADN d'una espècie concreta d'objectes, és a dir, si creem diversos objectes d'una mateixa classe podriem dir que eixos objectes comparteixen el mateix ADN.</p>
+<p>Per exemple, a Processing IDE existeix la classe <a href="https://processing.org/reference/PVector.html"><strong>PVector</strong></a> que és una classe per descriure vectors de 2 o 3 dimensions. Un vector és una entitat que té magnitud i direcció. mentre que la posició es guarda en forma d'atributs x, y en dues dimensions i x,y i z per als vectors tridimensionals.</p>
+<p>Aquesta classe és molt útil a Processing IDe per representar posició, velocitat, direcció o acceleració entre d'altres.</p>
+<p>En definitiva, un PVector es caracteritza per:</p>
+<ul>
+<li><strong>Tindre una x:</strong> Coordenada x de la posició de l'objecte PVector.</li>
+<li><strong>Tindre una y:</strong> Coordenada y de la posició de l'objecte PVector.</li>
+<li><strong>Tindre una z (3D):</strong> Coordenada z de la posició de l'objecte PVector.</li>
+</ul>
+<p>Ara bé, si al nostre programa mostrem informació d'un objecte PVector concret, les característiques abans esmentades adopten certs valors. </p>
+<p>Per exemple: <strong>v1</strong> (
+- <strong>x:</strong> 320
+- <strong>y:</strong> 240
+- <strong>z:</strong> 0 )</p>
+<p>Un altre PVector podria ser el seguent: <strong>v2</strong> (
+- <strong>x:</strong> 50
+- <strong>y:</strong> 50
+- <strong>z:</strong> 10 )</p>
+<p>Així per un costat tenim la <strong>classe</strong> PVector i per l'altre els dos objectes <strong>v1 i v2</strong>.</p>
+<h3 id="els-constructors-creacio-dobjectes">Els constructors: creació d'objectes</h3>
+<p>Arribats a aquest punt ja sabem qué és una classe i les seues característiques principals i també sabem que d'una mateixa classe es poden crear tants objectes com necessitem, però com es creen els objectes en POO?. Per tal de crear objectes o <strong>instanciar objectes</strong>, utilitzem un mètode especial que tenen les classes ne POO que es diu <strong>constructor</strong>.</p>
+<p>Un <strong>constructor</strong> és un mètode especial d'una classe que s'executa automaticament quan es  crea un objecte. S'utilitza per inicialitzar les propietats de l'objecte i establir el seu estat inicial.  Les seues <strong>característiques principals</strong> són:</p>
+<ul>
+<li>Té el mateix nom que la classe.</li>
+<li>No retorna cap valor, ni tan sols un void.</li>
+<li>Pot tenir paràmetres per proporcionar valors inicials a les propietats.</li>
+<li>Pot haver-hi més d'un constructor per classe (constructors sobrecarregats)</li>
+<li>Si no es defineix cap constructor, el compilador pot generar-ne un per defecte.</li>
+</ul>
+<p>Però vejam un exemple amb els nostres PVectors</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Instanciació d'un objecte de la classe PVector</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// PVector idPVector = new PVector();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">();</span><span class="w">         </span><span class="c1">// Creem un objecte PVector v1 amb coordenades (0, 0)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w">  </span><span class="c1">// Creem un objecte PVector v2 amb coordenades (100, 20)</span>
+</code></pre></div></td></tr></table></div>
+<p>Al crear un objecte d'una classe qualsevol tindrem accés al que denominem <strong>propietats o atributs i mètodes</strong> de classe.</p>
+<h3 id="atributs">Atributs</h3>
+<p>Els atributs són les característiques individuals que diferencien un objecte d’un altre i determinen la seua aparença, estat o altres qualitats. Els atributs es desen en variables anomenades <strong>variables d’instància</strong> (un objecte és l'instància d'una classe) i cada objecte particular pot tindre valors distints per a aquestes variables.  </p>
+<p>En definitiva, un atribut és una característica concreta d’un objecte de la vida quotidiana. Quan s’estableix un atribut a una classe, es defineix com quan creàvem variables als nostres programes estructurats, indicant tipus de dades i nom amb el que el reconeixem. </p>
+<p>Les <strong>variables d’instància o atributs</strong> també anomenades membres són declarades a la classe però els seus valors son canviats i fixats a l’objectes ja que una classe no és més que un esquema que defineix com seran les persones al nostre programa.</p>
+<p>A més de les variables d’instància hi ha <strong>variables de classe</strong>, les quals s’apliquen a la classe i a totes les instàncies. </p>
+<p>En resum, un atribut en programació orientada a objectes ve a ser el mateix que una variable en programació estructurada. Per tal de poder accedir a una propietat d'un objecte concret d'una classe, primer hem d'assegurar-nos que la propietat és pública (ho deuria posar a la documentació de la classe) i després només hem de escriure l'identificador de l'objecte seguit d'un punt i finalment l'identificador de l'atribut.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Accés a un atribut d'un objecte</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// idObjecte.idAtribut [= valor];</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">   </span><span class="c1">// Canviem el valor de la coordenada x de l'objecte v2</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">   </span><span class="c1">// Canviem el valor de la coordenada y de l'objecte v1</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">println</span><span class="p">(</span><span class="s">"V2.X: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Mostre el valor de la coordenada x de l'objecte v2</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="metodes">Mètodes</h3>
+<p>Els mètode són aquelles <strong>accions que pot realitzar la classe</strong> que estem definint. Bàsicament el que fa un mètode és modificar l’estat de l’objecte mitjançant el canvi del valor dels seus atributs. De fet la definició dels mètodes dins d'una classe és identica a la creació de funcions en programació estructurada.  </p>
+<p>En gran part del bibliografia al respecte de la crida a mètodes d'objectes de qualsevol classe també se li diu <strong>enviament de missatges</strong>, és a dir, quan cridem a un mètode associat a un objecte concret, el que s'està fent realment és enviar un missatge a l'objecte en qüestió.</p>
+<p>Els <strong>Mètodes de la classe</strong> donen funcionalitat a la classe, és a dir, reflecteixen les <strong>operacions</strong> que aquesta pot fer sobre els atributs. Els mètodes són similars a les <strong>funcions</strong> o procediments de la programació estructurada però orientats a modificar i actuar sobre les propietats d’una classe o millor dit, sobre l'estat d'un objecte concret. </p>
+<p>Un objecte dona valors concrets als atributs que defineix la classe i utilitza els seus mètodes. Quan un objecte utilitza un mètode concret es diu que està <strong>enviant un missatge</strong> a l'objecte. D’alguna manera açò té lògica ja que estem donant una ordre a un component que reflecteix la realitat. </p>
+<p>La classe <strong>PVector</strong> té mètodes com: </p>
+<ul>
+<li><strong>mag():</strong> que calcula la magnitud del vector. </li>
+<li><strong>add(PVector):</strong> que ens permet sumar objectes de la classe PVector. </li>
+<li><strong>dist(PVector):</strong> que ens dona la distància entre dos vectors</li>
+<li><strong>rotate(int):</strong> que gira el vector l'angle que es passa per paràmetre.</li>
+<li><strong>etc..</strong></li>
+</ul>
+<p>Igual que passava amb els atributs, per tal de cridar a un mètode d'un objecte (enviar-li un missatge), primer ens hem d'assegurar que el mètode és públic </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Accés a un mètode. Enviament de missatges</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// idObjecte.metode([parametres]);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">float</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">dist</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span><span class="w">     </span><span class="c1">// Calcula la distància entre v2 i v1</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span><span class="w">                </span><span class="c1">// Suma al vector v1 el vector v2</span>
+</code></pre></div></td></tr></table></div>
+<p>Però millor vegem tot açò amb un exemple concret i repassem tots els conceptes.</p>
+<p>Primer agafem l'estructura d'un projecte de Processing IDE vist al <a href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/#estructura-en-processing-ide">Tema 01. Introducció a la programació</a> i deixem només el codi que necessitarem.</p>
+<p>El següent pas ja seria començar a utilitzar objectes de la classe PVector al nostre projecte:</p>
+<ol>
+<li>Declarem dos objectes de tipus PVector al bloc de variables globals.</li>
+<li>Instanciem els dos objectes de la classe PVector al mètode setup()</li>
+<li>Utilitzem els objectes al mètode draw</li>
+</ol>
+<p>Observa el codi a continuació:</p>
+<details class="example">
+<summary>Ús d'objectes de la classe PVector</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Variables globals</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span><span class="w">       </span><span class="c1">// Declaració de dos objectes (v1, v2) de la classe PVector</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// Funció setup: només s'executa una vegada a l'inici de l'execució.</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">	</span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span><span class="w">       </span><span class="c1">// Configura les dimensions de l'aplicació</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">	</span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">();</span><span class="w">  </span><span class="c1">// Instanciació de l'objecte v1</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">	</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span><span class="w">          </span><span class="c1">// Accés a l'atribut x de l'objecte v1</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">	</span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">240</span><span class="p">;</span><span class="w">          </span><span class="c1">// Accés a l'atribut y de l'objectes v2</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">	</span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">140</span><span class="p">);</span><span class="w"> </span><span class="c1">// Instanciació de l'objecte v2</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="c1">// Funció draw: s'executa 60 vegades per segon (60Hz freqüència del monitor)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">	</span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// Pinta el fons de blanc</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">	</span><span class="c1">// Per mostrar el que passa amb els PVectors dibuixarem un punt a cada vector</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">	</span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">	</span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">	</span><span class="c1">// Dibuixem els punts al seu lloc</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">	</span><span class="n">point</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">	</span><span class="n">point</span><span class="p">(</span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">	</span><span class="c1">// Dibuixem una línia que els uneixca</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">	</span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">	</span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">	</span><span class="n">line</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="p">}</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1">// Declaració d'altres funcions. Opcional</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="c1">// Esedeveniments</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mousePressed</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseDragged</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseMoved</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Activitat 301. La classe PVector</summary>
+<p>Copia el codi anterior a un projecte nou de Processing (act301) i executa'l.
+Modifica els valors x i y dels objectes PVector per tal que es dibuixen un al mig de la meitat esquerra de la pantalla i l'altre al mig de la meitat dreta. Els dos han d'estar a la mateixa altura. Fixa't que les dimensions de l'esbós són 640 per 480.
+Crea una variable <strong>distancia</strong> i utilitza la funció dist de la classe PVector per saber quina distància hi ha entre els dos punts.
+Afegeix el codi següent al teu esbós:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">textWidth</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">text</span><span class="p">(</span><span class="n">distancia</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>Investiga el manual de referència de Processing IDE i posa la informació de la distància que has afegit abans, al mig de la línia i dins d'un requadre amb la vora de color negra.</p>
+</details>
+<p>Com pots observar el que passa quan executem el codi és que al nostre esbós es dibuixen dos punts de color roig i una línia que els uneix i el codi que has afegit mostra la distància en píxels entre els dos punts.</p>
+<details class="question">
+<summary>Activitat 302. Afegeix més vectors</summary>
+<p>Modifica els valors dels vectors com has fet a l'activitat anterior i canvia les posicions.
+Fes que la línia només es vega quan fem clic al ratoli escrivint el codi necessari al mètode mouseClicked.
+Afegeix un tercer PVector amb identificador v3 i dibuixa les línies entre tots els punts.
+Ara posa un quart PVector i uneix també les línies.</p>
+<p>Mostra per a cada línia entre els punts mostra la informació relativa a la distància que existeix entre ells.</p>
+<p>També es valoraran qüestions estètiques del resultat final així com també l'ús d'altres funcions o objectes que estiguen disponibles en Processing IDE.</p>
+</details>
+<h2 id="projecte-figures-geometriques">Projecte figures geomètriques</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.2. S'han escrit programes simples.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.3. S'han instanciat objectes a partir de classes predefinides.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.4. S'han utilitzat mètodes i propietats dels objectes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.7. S'han incorporat i utilitzat llibreries d'objectes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.8. S'han utilitzat constructors.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.9. S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples.</strong></li>
+</ul>
+</div>
+<p>Per tal de veure les aplicacions pràctiques del que hem explicat en els punts anteriors, desenvoluparem un xicotet projecte en Processing IDE basant-nos en el paradigma de la programació orientada a objectes. El nostre projecte va a tindre  només tres figures geomètriques: el cercle, el triangle i el quadrat, que podrem dibuixar en qualsevol lloc de l'aplicació que desenvoluparem. Al crear els objectes els indicarem la posició i grandaria entre altres i mentre l'aplicació estiga executant-se, podrem moure-los per la pantalla, canviar el color i convertir en 3D.</p>
+<p><strong>1. <ins>Quins elements de la nostra aplicació han de ser desats o s'han de tenir en compte?</ins></strong></p>
+<ul>
+<li>El cercle</li>
+<li>El quadrat</li>
+<li>El triangle</li>
+</ul>
+<p><strong>2. <ins>De cada element, quines dades ens interessen?</ins></strong></p>
+<ul>
+<li><strong>Cercle:</strong> color, posició (x,y), diametre, vora, color de la vora.</li>
+<li><strong>Quadrat:</strong> color, posició (x,y), ample i alt, vora, color de la vora.</li>
+<li><strong>Triangle:</strong> color, posició (x,y), costat, vora, color de la vora.</li>
+</ul>
+<p><strong>3. <ins>A cada element, quines operacions associarem?</ins></strong></p>
+<ul>
+<li><strong>Cercle:</strong> canviar de color, convertir en esfera i moure de lloc, mostar opcions</li>
+<li><strong>Quadrat:</strong> canviar de color, convertir en cub i moure de lloc, mostrar opcions</li>
+<li><strong>Triangle:</strong> canviar de color, convertir en piràmide i moure de lloc, mostrar opcions</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Diagrama de classes</p>
+<p>En el món de l'enginyeria de programari un <strong>diagrama de classes</strong> en UML (Unified Modeling Language) és un tipus de diagrama estàtic que descriu l'estructura d'un sistema mostrant les seves classes, atributs i les relacions entre ells.</p>
+<p>El <strong>diagrama de classes</strong> que deduiríem de les especificacions anteriors podria ser el següent:</p>
+</div>
+<div style="margin:0px auto;">
+<center>
+<pre class="forest">
+            <div class="mermaid">	classDiagram
+	direction TB
+	Figura &lt;|-- Triangle
+	Figura &lt;|-- Quadrat
+	Figura &lt;|-- Cercle
+	Figura: PApplet parent
+	Figura: float x
+	Figura: float y
+	Figura: int ample
+	Figura: int color
+	Figura: vora
+	Figura: colorVora
+	Figura: triDim
+	Figura: opcions
+	Figura: mostraOp
+	Figura: nom
+	Figura: Figura(PApplet, float, float, String)
+	Figura: display ()
+	Figura: canviaColor ()
+	Figura: setPosicio (float, float)
+	Figura: getX ()
+	Figura: getY ()
+	Figura: getAmpleVora ()
+	Figura: canvia2D ()
+	Figura: canvia3D ()
+	Figura: mostraOpcions ()
+	Figura: ocultaOpcions ()
+	Figura: activaOpcions () 
+	Figura: getWidth ()
+	Figura: setColor (int)
+	Figura: setAmpleVora (int)
+	Figura: setWidth (float)
+	Cercle: Cercle (PApplet, float, float, float)
+	Cercle: clicSobre (float, float)
+	Quadrat: front
+	Quadrat: back
+	Quadrat: right
+	Quadrat: left
+	Quadrat: top
+	Quadrat: bottom
+	Quadrat: Quadrat (PApplet, float, float, float)
+	Quadrat: clicSobre (float, float)
+	Quadrat: setPosicio()
+	Quadrat: setAmpleVora()
+	Quadrat: canvia2D()
+	Quadrat: canvia3D()
+	Quadrat: activaOpcions()
+	Quadrat: clicSobre()
+	Quadrat: incialitzaColors()
+	Quadrat: dibuixaCub3D ()
+	Triangle: left
+	Triangle: right
+	Triangle: Triangle (PApplet, float, float, float)
+	Triangle: drawTriangle (PVector, PVector, PVector)
+	Triangle: clicSobre ()
+	Triangle: puntsDinsTriangle(PVector, PVector, PVector, PVector)
+	
+</div>
+        </pre>
+</center>
+</div>
+<p>Primer hem de preparar el nostre Processing per tal que es puga u sar aquesta llibreria. Obre Processing IDE i ves a <strong>File --&gt; Preferences</strong></p>
+<center>
+<img alt="Processing IDE Preferences" src="/assets/Tema3/ProcessingPreferences.png" width="330px"/>
+</center>
+<p>Com pots observar al diàleg que s'obre, a la seua part superior es pot saber quina és la carpeta dels sketch. Normalment <strong>/home/usuari/sketchbook</strong>. Seguidament has d'anar a aquesta carpeta i obrir la carpeta <strong>libraries</strong> que hi trobaràs com mostra la següent imatge:</p>
+<center>
+<img alt="Carpeta d'esbossos de Processing IDE" src="/assets/Tema3/carpetaSketchbook.png" width="70%"/>
+</center>
+<p>Finalment descarrega la <a href="../assets/Tema3/Dibuixem.zip">llibreria Dibuixem</a> i desempaqueta-la a la carpeta abans indicada. Si tot ha anat bé a la carpeta libraries trobaràs una estructura molt semblant a la següent. Les carpetes controlP5, sound i mínim són llibreries i utilitats instal·lades des del Processing IDE. No et preocupes si no t'apareixen.</p>
+<center>
+<div class="mermaid">	graph TD
+		A[📁libraries] --&gt; B[📁Dibuixem]
+		B --&gt; C[📁library]
+		C --&gt; D[📦controlP5.jar]
+		C --&gt; E[📦Dibuixem.jar]
+		A --&gt; F[📁minim]
+		F --&gt; G[...]
+		A --&gt; I[📁controlP5]
+		I --&gt; J[...]
+		A --&gt; K[📁sound]
+		K --&gt; L[...]
+</div>
+</center>
+<div class="admonition danger">
+<p class="admonition-title">Manual de referència package Dibuixem</p>
+<p>Abans de començar amb les activitats associades al <strong>Projecte Figures Geomètriques</strong>, revisa la documentació de la llibreria:</p>
+<p><center><a href="../assets/dibuixem/" rel="noopener" target="_blank">&gt;&gt;&gt; Manual de Referència Dibuixem &lt;&lt;&lt;</a></center></p>
+</div>
+<details class="question">
+<summary>Activitat 303. Crea el projecte Figures Geometriques</summary>
+<p>Copia el codi base d'un projecte en Processing IDE i desa'l com a act303.pde.
+Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la línia de codi: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">Dibuixem.*</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>A la secció de variables globals declara un objecte amb identificador c1 de la classe Cercle. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Al mètode setup() has de crear l'objecte c1 de la classe Cercle utilitzant el seu constructor.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creem un cercle a la posició 320, 240,</span>
+</code></pre></div></td></tr></table></div>
+<p>Al mètode draw() fes que es mostre el cercle.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>Utilitza el mètode setPosicio de l'objecte de la classe Cercle per tal que el cercle es puga moure per la pantalla</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Com pots observar la part més complicada de l'activitat anterior has sigut configurar el sistema per poder utilitzar la llibreria Dibuixem. Una vegada tens aquesta llibreria instal·lada ja és relativament senzill la seua utilització. I el resultat final és prou tangible.</p>
+<details class="question">
+<summary>Activitat 304. Afegeix la resta de figures</summary>
+<p>Crea un projecte que utilitze les tres figures de les quals disposa la nostra llibreria dibuixem.</p>
+</details>
+<center>
+<img alt="Tres figures en blanc" src="/assets/Tema3/LesTresFigures.png" width="400"/>
+</center>
+<p>Revisa la documentació de referència de la llibreria <strong>Dibuixem</strong> i escriu el codi necessari al lloc adequat per tal que les figures tinguen inicialment els colors: roig, groc i verd respectivament.  Has de tindre en compte la funció color() de Processing IDE per cridar al mètode que canvia el color de la figura.</p>
+<center>
+<img alt="Tres figures en colors diferents" src="/assets/Tema3/LesTresFiguresColorides.png" width="400"/>
+</center>
+<p>Ara ha arribat el moment de combinar diferents classes d'objectes en un mateix projecte i comprovar tot el que hem aprés fins ara. Preparats?</p>
+<details class="question">
+<summary>Activitat 305. Combina Dibuixem amb PVectors</summary>
+<p>Com has pogut observar a l'activitat anterior, quan cridavem al constructor de les figures geomètriques els passavem dos valors numèrics. Com que ja saps utilitzar la classe PVector. Crea un objecte PVector per a cada figura geomètrica i utilitza'ls com a paràmetres per establir la posició de les figures al seus constructors.</p>
+</details>
+<p>Si has realitzat de forma correcta les activitats anteriors i has interactuat amb el resultat, hauràs pogut observar com al fer clic sobre una de les figures apareix un xicotet control en el que es pot canviar el color, la grandària i el format (3D o 2D) de la figura etc... Revisa la documentació de la llibreria Dibuixem i fes la següent activitat.</p>
+<details class="question">
+<summary>Activitat 306. Maximitza la llibreria Dibuixem</summary>
+<p>En aquesta activitat hauràs de fer ús de les tres figures que proporciona la llibreria <strong>Dibuixem</strong> (Cercle, Quadrat i Triangle) i fer que mostren tot el seu potencial.</p>
+<p>Has d'utilitzar **com a mínim dues instàncies de cada tipus de figura, i has de fer-les diferents entre elles. Pots variar:</p>
+<ul>
+<li>"La seua posició en pantalla"</li>
+<li>"El seu tamany (mitjançant el constructor o el tauler de controls)"</li>
+<li>"El color"</li>
+<li>"Si es mostren en 2D o en 3D"</li>
+<li>Si tenen o no el tauler de control activat"</li>
+</ul>
+<p>Pots inspirar-te en aquest esquema:
+Pots crear la composició que més t'agrade, sempre que:</p>
+<ul>
+<li>Tinga almenys 6 figures.</li>
+<li>Totes siguen objectes diferents entre si.</li>
+<li>Mostres l'ús de constructors, mètodes i atributs públics</li>
+<li>No cal modificar cap classe de la llibreria.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Activitat 307. Reseteja les figures</summary>
+<p>Si has copiat bé el codi base en Processing IDE per als teus projectes, hauràs observat que existeix un mètode que es diu <strong>KeyPressed</strong> i si has revisat la documentació de la <strong>llibreria Dibuixem</strong> hauràs vist que hi ha un mètode per restablir l'estat inicial de les figures. </p>
+<p>Has de vincular al mètode keyPressed que quan es premi la tecla 'R' les figures (totes) tornen a l'estat inicial.</p>
+</details>
+<h2 id="propietats-i-metodes-estatics">Propietats i mètodes estàtics</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA2.5. S'han escrit trucades a mètodes estàtics.</strong></li>
+</ul>
+</div>
+<p>La paraula reservada «static» en Java és un modificador que en Java es pot aplicar a variables, mètodes, classes i blocs de codi</p>
+<h3 id="variables-estatiques">Variables estàtiques</h3>
+<p>Una variable estàtica (static) és una variable que pertany a la classe en la que va ser declarada i s’inicialitza només una vegada a l’inici de l’execució del programa, la característica principal d’aquest tipus de variables és que es pot accedir directament amb el nom de la classe sense necessitat d’instanciar un objecte. A banda també:</p>
+<ul>
+<li>És una variable que pertany a la classe (variable de classe) i no a l’objecte.</li>
+<li>Les variables static s’inicialitzen només una vegada, a l’inici de l’execució. Aquestes variables s’inicialitzaran primer abans de la inicialització de qualsevol variable d’instància.</li>
+</ul>
+<h3 id="metodes-estatics">Mètodes estàtics</h3>
+<p>Un mètode estàtic només pot accedir a les variables o tipus de dades estàtiques i no pot accedir a les dades no estàtiques.</p>
+<ul>
+<li>Un mètode estàtic només pot accedir a dades estàtiques. No pot accedir a dades no estàtiques (variables d’instància)</li>
+<li>Un mètode estàtic pot cridar només a mètodes estàtics i no pot invocar un mètode no estàtic a partir d’ell.</li>
+<li>Un mètode estàtic es pot accedir directament pel nom de la classe i no es necessita crear un objecte per accedir al mètode.</li>
+<li>Un mètode estàtic no pot fer referència a «this» o «super»</li>
+</ul>
+<h3 id="blocs-estatics">Blocs estàtics</h3>
+<p>El bloc estàtic és un bloc d’instruccions dins de la classe (static { ... }) que s’executa quan una classe es carrega per primera vegada en la màquina virtual de Java (JVM). Bàsicament un bloc estàtic inicialitza variables de tipus estàtic dins d’una classe, de la mateixa forma que un constructor de classe ajuden a inicialitzar les variables d’instància, un bloc estàtic inicialitza les variables tipus static de la classe.</p>
+<h3 id="us">Ús</h3>
+<p>Aquest tipus de classe estàtica és útil quan tens funcions que no necessiten informació específica d'instàncies de la classe. Un exemple comú són les funcions utilitàries (com en el cas de la calculadora), les quals s'utilitzen de manera global i no depenen d'objectes particulars.</p>
+<p>Aquesta estructura també s'utilitza per a altres casos com:</p>
+<ul>
+<li><strong>Classes amb constants</strong> (per exemple, una classe amb constants com PI o altres valors fixos).</li>
+<li><strong>Patrons de disseny com el Singleton</strong>, on una classe té només una instància.</li>
+<li>Accions globals, com el registre de logs, que es volin mantenir a tot el sistema sense crear múltiples instàncies.</li>
+</ul>
+<details class="question">
+<summary>Activitat 308. Ús de mètodes i atributs estàtics</summary>
+<p>La classe Figura de la llibreria Dibuixem disposa d'una sèrie de mètodes estàtics: un que ens diu el total de figures creades i un altre que crea una figura de forma aleatòria. </p>
+<p>En aquesta activitat has d'aconseguir que es creen 10 figures aleatòries i que aquestes figures fagen ús de tote les seues funcionalitats igual que a les activitats anteriors, en altres paraules, que quan es faja clic sobre alguna de les figures creades aleatòriament, aparega el tauler d'opcions i siguen  manipulables.</p>
+<p>D'una altra banda cada vegada que es cree una figura aleatòria, s'ha de mostrar per terminal que s'ha creat una figura, quin tipus de figura és i el nombre total de figures creades de moment.</p>
+</details>
+<details class="question">
+<summary>Activitat 309. Combinació amb altres llibreries</summary>
+<p>Instal·la la llibreria <strong>Ani</strong> que té disponible Processing IDE i combina-la amb la llibreria Dibuixem.</p>
+<p>Per exemple pots fer que un cercle de la llibreria dibuixem, canvie gradualment el seu ample durant l'execució de l'aplicació.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">de.looksgood.ani.*</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">	</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">to</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"ample"</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">	</span><span class="c1">// On c és el cercle, </span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">	</span><span class="c1">// 1 és el temps que ha de tardar en fer la transició, </span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">	</span><span class="c1">// ample és l'atribut a modificar </span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">	</span><span class="c1">// 220 l'ample final de la figura en acabar la transició</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="p">}</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">	</span><span class="n">c</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>També pots combinar el mètode keyPressed amb la llibreria per tal que a diferents tecles diferents accions.</p>
+</details>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "forest",
+    darkmode: true
+});</script></body>
+</html>

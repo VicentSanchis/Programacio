@@ -1,0 +1,1886 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" rel="prev"/>
+<link href="../Tema%2005.%20Desenvolupament%20de%20Classes/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>4.- Estructures de Control - PROGRAMACIÓ 1DAW</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheet/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tema-4-estructures-de-control">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              4.- Estructures de Control
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+<input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    PROGRAMACIÓ 1DAW
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Índex
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
+<span class="md-ellipsis">
+    1.- Introducció a la programació
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
+<span class="md-ellipsis">
+    2.- El llenguatge Java
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
+<span class="md-ellipsis">
+    3.- Prog. Orientada a Objectes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    4.- Estructures de Control
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    4.- Estructures de Control
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructura-sequencial">
+<span class="md-ellipsis">
+      Estructura Seqüencial
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructures-de-seleccio">
+<span class="md-ellipsis">
+      Estructures de selecció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructures-de-repeticio">
+<span class="md-ellipsis">
+      Estructures de repetició
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructures-de-salt">
+<span class="md-ellipsis">
+      Estructures de salt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control-dexcepcions">
+<span class="md-ellipsis">
+      Control d'excepcions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proces-de-compilacio">
+<span class="md-ellipsis">
+      Procés de compilació
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2005.%20Desenvolupament%20de%20Classes/">
+<span class="md-ellipsis">
+    5.- Desenvolupament de classes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
+<span class="md-ellipsis">
+    6.- Entrada, eixida i gràfics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
+<span class="md-ellipsis">
+    7.- Col·leccions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<span class="md-ellipsis">
+    8.- Herència, polimorfisme i interfícies
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
+<span class="md-ellipsis">
+    9.- Bases de dades relacionals
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="tema-4-estructures-de-control">Tema 4. Estructures de control</h1>
+<div class="admonition danger">
+<p class="admonition-title">Resultat d'aprenentatge associat</p>
+<p><strong style="color:#444;">RA3. Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.</strong></p>
+<h3 id="criteris-davaluacio">Criteris d'avaluació</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.0. S'ha escrit i provat codi que faci ús d'estructures seqüencials.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.1. S'ha escrit i provat codi que faci ús d'estructures de selecció.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.2. S'han utilitzat estructures de repetició.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.3. S'han reconegut les possibilitats de les sentències de salt.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.4. S'ha escrit codi utilitzant control d'excepcions.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA3.5. S'han creat programes executables utilitzant diferents estructures de control.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA3.6. S'han provat i depurat els programes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA3.7. S'ha comentat i documentat el codi.</li>
+</ul>
+</div>
+<h2 id="introduccio">Introducció</h2>
+<p>Com ja es va explicar al tema 1, a la decada dels anys 60, <strong>Böhm i Jacopini</strong> escriuen el teorema de la programació estructurada, basant-se per suposat en part en aquells llenguatges de programació que ja existien, i arriben a la conclusió què: la sentència <strong>GOTO</strong> era una sentència considerada perjudicial per a la programació i per entendre els programes escrits en qualsevol llenguatge i també que amb només les estructures seqüencial, iterativa i condicional era suficient per escriure qualsevol programa.</p>
+<h3 id="estructures">Estructures</h3>
+<p>El teorema de el programa estructurat és un resultat en la teoria de llenguatges de programació. Estableix que tota funció computable pot ser implementada en un llenguatge de programació que combine només tres estructures lògiques. Aquestes tres formes també anomenades <strong>estructures de control</strong> específicament són:</p>
+<ul>
+<li><strong>SeqüènciaL:</strong> execució d'una instrucció després d'una altra.</li>
+<li><strong>Selecció o condicional:</strong> execució d'una de dues instruccions (o conjunts), segons el valor d'una variable booleana.</li>
+<li><strong>Iterativa, repetitiva o bucles:</strong> execució d'una instrucció (o conjunt) mentre una variable booleana siga 'veritable'. Aquesta estructura lògica també es coneix com a cicle o bucle.</li>
+</ul>
+<p>Aquest teorema demostra que la instrucció <strong>GOTO</strong> no és estrictament necessària i que per a tot programa que l'utilitze existeix un altre equivalent que no fa ús d'aquesta instrucció.</p>
+<div class="mermaid">graph TD
+    A(Estructures de Control)--&gt;B(Seqüencial)
+    A(Estructures de Control)--&gt;C(condicional)
+    A(Estructures de Control)--&gt;D(Repetitiva)
+    A(Estructures de Control)--&gt;E(Salt)
+    C--&gt;F(if)
+    C--&gt;G(if else)
+    C--&gt;H(if niat)
+    C--&gt;I(switch)
+    D--&gt;J(while)
+    D--&gt;K(do while)
+    D--&gt;L(for)
+    E--&gt;M(break)
+    E--&gt;N(continue)
+</div>
+<h2 id="estructura-sequencial">Estructura Seqüencial</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.0. S'ha escrit i provat codi que faci ús d'estructures seqüencials. </strong></li>
+</ul>
+</div>
+<p>Les ordres d'un programa s'executen per defecte en ordre seqüencial. El que significa que les instruccions s'executen, com hem comentat abans, una darrere de l'altra en el mateix ordre que apareixen escrites al programa.</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0
+    Instrucció1--&gt;Instrucció2;
+    Instrucció2--&gt;Instrucció3;
+    Instrucció3--&gt;id2([Fi]);
+    style id2 fill:#F00 
+</div>
+<p>L'estructura seqüencial és l'ordre natura d'execució. Les instruccions que formen part d'aquesta estructura s'executen en ordre una a continuació de l'altra. Al final de cada instrucció hi ha un punt i coma per indicar-li al compilador el final de la sentència individual.</p>
+<p>Les instruccions dintre d'una estructura seqüencial es solen agrupar en blocs ( {...} ) i es codifica de la següent manera:</p>
+<div class="admonition example">
+<p class="admonition-title">Estructura seqüencial</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Exemple de bloc - estructura seqüencial</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">Instrucció1</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">Instrucció2</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">InstruccióN</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Abans de passar a l'activitat 401 en la que treballarem l'estructura seqüencial, caldria recordar que <strong>Processing IDE</strong>, l'entorn de desenvolupament que estem utilitzant, és un entorn de programació orientat a la programació d'imatges, animacions, sò i dibuix des d'un punt de vista experimental. Per tant les llibreries de les que disposa aquesta eina, tenen un munt de funcions relacionades amb el camp artístic i matemàtic. Veiem-ne un breu resum de les més utilitzades:</p>
+<details class="info">
+<summary>Funcions de dibuix de Processing IDE</summary>
+<table>
+<thead>
+<tr>
+<th>Prototip</th>
+<th>Descripció</th>
+<th>Exemple d'ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>point(x, y)</code></td>
+<td>Dibuixa un punt en la posició <code>(x, y)</code></td>
+<td><code>point(100, 100);</code></td>
+</tr>
+<tr>
+<td><code>line(x1, y1, x2, y2)</code></td>
+<td>Dibuixa una línia des de <code>(x1, y1)</code> fins a <code>(x2, y2)</code></td>
+<td><code>line(50, 50, 150, 150);</code></td>
+</tr>
+<tr>
+<td><code>rect(x, y, w, h)</code></td>
+<td>Dibuixa un rectangle amb cantonada superior esquerra <code>(x, y)</code></td>
+<td><code>rect(100, 100, 80, 60);</code></td>
+</tr>
+<tr>
+<td><code>square(x, y, s)</code></td>
+<td>Dibuixa un quadrat de costat <code>s</code> en la posició <code>(x, y)</code></td>
+<td><code>square(50, 50, 40);</code></td>
+</tr>
+<tr>
+<td><code>ellipse(x, y, w, h)</code></td>
+<td>Dibuixa una el·lipse centrada en <code>(x, y)</code></td>
+<td><code>ellipse(120, 120, 60, 80);</code></td>
+</tr>
+<tr>
+<td><code>circle(x, y, d)</code></td>
+<td>Dibuixa un cercle centrat en <code>(x, y)</code> amb diàmetre <code>d</code></td>
+<td><code>circle(200, 200, 50);</code></td>
+</tr>
+<tr>
+<td><code>arc(x, y, w, h, start, stop)</code></td>
+<td>Dibuixa un arc dins d’una el·lipse</td>
+<td><code>arc(100, 100, 80, 80, 0, PI);</code></td>
+</tr>
+<tr>
+<td><code>triangle(x1, y1, x2, y2, x3, y3)</code></td>
+<td>Dibuixa un triangle amb els tres punts especificats</td>
+<td><code>triangle(30, 75, 58, 20, 86, 75);</code></td>
+</tr>
+<tr>
+<td><code>quad(x1, y1, x2, y2, x3, y3, x4, y4)</code></td>
+<td>Dibuixa un quadrilàter amb quatre punts</td>
+<td><code>quad(38, 31, 86, 20, 69, 63, 30, 76);</code></td>
+</tr>
+<tr>
+<td><code>beginShape()</code> / <code>endShape()</code></td>
+<td>Defineix una forma complexa personalitzada amb vèrtexs</td>
+<td><code>beginShape(); vertex(30, 20); ... endShape();</code></td>
+</tr>
+<tr>
+<td><code>vertex(x, y)</code></td>
+<td>Defineix un punt en una forma personalitzada</td>
+<td><code>vertex(60, 40);</code> (dins de <code>beginShape</code>)</td>
+</tr>
+<tr>
+<td><code>fill(r, g, b)</code></td>
+<td>Defineix el color de farciment per a les formes</td>
+<td><code>fill(255, 0, 0);</code></td>
+</tr>
+<tr>
+<td><code>stroke(r, g, b)</code></td>
+<td>Defineix el color del contorn de les formes</td>
+<td><code>stroke(0, 0, 255);</code></td>
+</tr>
+<tr>
+<td><code>noFill()</code></td>
+<td>Elimina el color de farciment</td>
+<td><code>noFill();</code></td>
+</tr>
+<tr>
+<td><code>noStroke()</code></td>
+<td>Elimina el contorn de les figures</td>
+<td><code>noStroke();</code></td>
+</tr>
+<tr>
+<td><code>background(r, g, b)</code></td>
+<td>Estableix el color de fons del canvas</td>
+<td><code>background(240, 240, 240);</code></td>
+</tr>
+<tr>
+<td><code>text(str, x, y)</code></td>
+<td>Mostra text en la posició especificada</td>
+<td><code>text("Hola món", 100, 200);</code></td>
+</tr>
+<tr>
+<td><code>textSize(size)</code></td>
+<td>Defineix la mida del text</td>
+<td><code>textSize(32);</code></td>
+</tr>
+<tr>
+<td><code>textAlign(alignX, alignY)</code></td>
+<td>Alineació horitzontal i vertical del text</td>
+<td><code>textAlign(CENTER, CENTER);</code></td>
+</tr>
+<tr>
+<td><code>image(img, x, y)</code></td>
+<td>Mostra una imatge a la posició <code>(x, y)</code></td>
+<td><code>image(myImage, 0, 0);</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>Veiem a continuació un exemple codificat en Java amb l'IDE de Processing en el que s'usen algunes de les funcions vistes a la taula anterior.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">320</span><span class="p">);</span><span class="w">   </span><span class="c1">// Estableix les dimensions de la nostra pantalla principal</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w"> </span><span class="c1">// Estableix el fons de la pantalla</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">         </span><span class="c1">// Color amb el que es dibuixaran les figures.</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="n">point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w">            </span><span class="c1">// Dibuixa un punt</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="n">line</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span><span class="w">       </span><span class="c1">// Dibuixa una línia</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="n">ellipse</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span><span class="w">  </span><span class="c1">// Dibuixa una el·lipse</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="n">square</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span><span class="w">      </span><span class="c1">// Dibuixa un quadrat</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Per finalitzar veure'm també un exemple de l'ús de beginShape, endShape i vertex</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 401. Dibuixa amb Processing IDE</summary>
+<p>Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat copiant el codi que pots veure a continuació. Després modifica alguns dels paràmetres de les funcions point, line, ellipse i square i observa el que passa.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">320</span><span class="p">);</span><span class="w">   </span><span class="c1">// Estableix les dimensions de la nostra pantalla principal</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w"> </span><span class="c1">// Estableix el fons de la pantalla</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">         </span><span class="c1">// Color amb el que es dibuixaran les figures.</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w">            </span><span class="c1">// Dibuixa un punt</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="n">line</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span><span class="w">       </span><span class="c1">// Dibuixa una línia</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">ellipse</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span><span class="w">  </span><span class="c1">// Dibuixa una el·lipse</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="n">square</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span><span class="w">      </span><span class="c1">// Dibuixa un quadrat</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Ara que ja has vist algunes de les funcions que ens ofereix l'<strong>API de Processing</strong> per tal de dibuixar, investiga quines altres funcions permet i aplica-les a la següent activitat.</p>
+<details class="question">
+<summary>Activitat 402. Dibuix lliure amb Processing IDE.</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Utilitzant altres primitives de dibuix que ens proporciona l'API de Processing IDE, dibuixa alguna cosa concreta. Has de tindre en compte que la majoria de primitives (funcions) són geomètriques, per tant, et podries inspirar en algun dibuix geomètric. Pots buscar per Internet.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució per al Dibuix lliure amb Processing](assets/Tema3/act317.pde)-->
+<h2 id="estructures-de-seleccio">Estructures de selecció</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.1. S'ha escrit i provat codi que faci ús d'estructures de selecció. </strong></li>
+</ul>
+</div>
+<p>És una de les estructures que permeten modificar l'ordre d'execució de les instruccions del programa. Una estructura condicional determina si s'executen unes accions o altres segons es compleixi o no una determinada condició. La condició que es comprova per decidir si unes instruccions s'executen o no deu ser una expressió booleana, és a dir, ha de donar com a resultat un valor booleà true o false. </p>
+<p>Com varem explicar al tema anterior, ens podem trobar les següents variants d'estructura de selecció:</p>
+<ul>
+<li>Selecció simple</li>
+<li>Selecció doble</li>
+<li>Selecció multiple</li>
+<li>Operador condicional ?</li>
+</ul>
+<h3 id="seleccio-simple-if">Selecció Simple - if</h3>
+<p>És l'estructura condicional més simple en programació estructurada. S'utilitza per determinar si una instrucció o bloc d'instruccions s'executa basat en una condició. S'avalua la condició i si es true, s'executa la instrucció o bloc d'instruccions associat a la condició.</p>
+<div class="mermaid">    graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0
+    Instrucció1--&gt;Instrucció2;
+    Instrucció2--&gt;Cond1{Condició};
+    Cond1--&gt;|SI|Instrucció3;
+    Instrucció3--&gt;Instrucció4;
+    Instrucció4--&gt;Instrucció5;
+    Cond1--&gt;|NO|Instrucció5;
+    Instrucció5--&gt;id2([Fi]);
+    style id2 fill:#F00
+</div>
+<p>El seu codi en Java seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Instrucció1</span><span class="p">();</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">Instrucció2</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="n">instrucció3</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">Instrucció4</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">Instrucció5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Al codi anterior s'executarien sempre les instruccions 1 i 2 abans d'avaluar-se la condició, en cas que la condició fora avaluada com a <strong>true</strong>, s'executaria l'estructura seqüencial que conté les instruccions 3 i 4 i finalment s'executaria la instrucció 5 en tot cas. </p>
+<p>Pel contrari si la condició s'avalua a <strong>false</strong> no s'executarien les instruccions que conté, és a dir, 3 i 4 i passaria directament a l'instrucció 5.</p>
+<div class="admonition example">
+<p class="admonition-title">Aplicació que detecte números senars</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" és parell"</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">println</span><span class="p">(</span><span class="s">"S'ha acabat l'aplicació"</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="seleccio-doble-if-else">Selecció doble - if .. else</h3>
+<p>Amb aquesta estructura condicional de la programació estructurada es poden seguir <strong>camins distints</strong> depenent de si l'avaluació de la condició és <strong>true o false</strong>. En altres paraules, si la condició és true, executaria una instrucció o bloc d'instruccions mentre que si s'avalua a false executaria una altra instrucció o bloc d'instruccions.</p>
+<p>Observa el diagrama de flux següent:</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0;
+    Instrucció1--&gt;Instrucció2
+    Instrucció2--&gt;C1{Condició}
+    C1--&gt;|SI|Instrucció3;
+    Instrucció3--&gt;Instrucció4;
+    C1--&gt;|NO|Instrucció5;
+    Instrucció5--&gt;Instrucció6;
+    Instrucció4--&gt;Instrucció7;
+    Instrucció6--&gt;Instrucció7;
+    Instrucció7--&gt;Instrucció8;
+    Instrucció8--&gt;id2((FI));
+    style id2 fill:#F00
+</div>
+<p>El seu codi en Java seria</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">instruccio1</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">instruccio2</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">instruccio3</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">instruccio4</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">instruccio5</span><span class="p">;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="n">instruccio6</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="n">instruccio7</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="n">instruccio8</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Si ens fixem en el codi anterior, podem trobar dues seqüències d'execucio d'instruccions depenent si la condició del <strong>'if'</strong> s'avalua <strong>'true'</strong> o <strong>'false'</strong>. En el primer cas, amb la condició a <strong>'true'</strong>, s'executarien: instrucció1, instrucció2, instrucció3, instrucció4, instrucció7 i instrucció8. Mentre que si la condició del 'if' s'avaluara a <strong>'false'</strong>, les instruccions a executar serien: instrucció1, instrucció2, instrucció5, instrucció6, instrucció7 i instrucció8.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hora</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="n">hora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">);</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"Encara és de matí"</span><span class="p">);</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">        </span><span class="k">else</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"Ja és de vesprada"</span><span class="p">);</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 403. Nombres parells i senars amb la funció random()</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Seguint l'exemple de l'aplicació que detecta números senars, fes que també ens indique en cas contrari, si no és parell, que es tracta d'un número senar.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; és un número parell&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; és un número senar&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ja s&#39;ha acabat l&#39;aplicació&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+-->
+<h3 id="seleccio-niada-if-else-if-else">Selecció niada - if else if else</h3>
+<p>Si volem avaluar <strong>més d'una condició</strong> al nostre codi, estariem parlant d'una estructura condicional múltiple que bàsicament consisteix en encadenar diversos if..else. A continuació es pot veure com seria un exemple de condicional múltiple en diagrama de flux.</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#0F0;
+    Instrucció1--&gt;|NO|C1{Condició 1};
+    C1--&gt;|NO|C2{Condició 2};
+    C2--&gt;|NO|C3{Condició 3};
+    C1--&gt;|SI|Instrucció2;
+    Instrucció2--&gt;Instrucció3;
+    C2--&gt;|SI|Instrucció4;
+    C3--&gt;|SI|Instrucció5;
+    Instrucció5--&gt;Instrucció6;
+    Instrucció6--&gt;Instrucció7;
+    Instrucció3--&gt;Instrucció10;
+    Instrucció4--&gt;Instrucció10;
+    Instrucció7--&gt;Instrucció10;
+    Instrucció10--&gt;Id2((FI));
+    style Id2 fill:#F00;
+</div>
+<p>El mateix exemple en Java que teniu a la imatge anterior seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">instruccio1</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="n">instruccio2</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">instruccio3</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="n">instruccio4</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="n">instruccio5</span><span class="p">;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="n">instruccio6</span><span class="p">;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="n">instruccio7</span><span class="p">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">    </span><span class="n">instruccio8</span><span class="p">;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="n">instruccio9</span><span class="p">;</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="p">}</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="n">instruccio10</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Al codi anterior l'únic que sí sabem cert és que s'executaran les instruccions 1 i 2 i depenent de quina condició s'avalua a true s'executarà algun bloc d'instruccions que estan dins de l'estructura condicional. Seguint amb l'exemple de l'hora que hem utilitzat als apartats anteriors veiem com es podria usar una condició múltiple amb if else:</p>
+<details class="question">
+<summary>Activitat 404. Condicional niada. Copia i executa a Processing IDE.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">);</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres matiner"</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Deuries haver esmorzat ja"</span><span class="p">);</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Es hora de dinar si no has dinat"</span><span class="p">);</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Si no has fet una migdiada oblidat"</span><span class="p">);</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Hora de la cervesa"</span><span class="p">);</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Copia i executa el codi a Processing IDE. Al final de cada cicle de la funció <strong>draw</strong> posa un delay de 1 segon per tal que ens done temps a veure el resultat. Recorda també de fer un <strong>clear()</strong> al principi de cada cicle de draw.</p>
+<p>Modifica el codi per tal d'afegir-li més opcions. Per exemple podries afegir-li que passa entre les 18:00 i les 20:00 o també entre les 20:00 i les 22:00...</p>
+<p><center> <br/>
+<kbd style="border:1px solid black;"><img alt="Activitat 324" src="../assets/Tema3/Activitat14.png"/></kbd>
+</center></p>
+</details>
+<h3 id="activitats-sobre-estructures-de-seleccio">Activitats sobre estructures de selecció</h3>
+<p>Mira i fes les següents activitats per tal de reforçar els conceptes vistos sobre les diferents estructures de selecció de la programació estructurada.</p>
+<details class="question">
+<summary>Activitat 405. Divisió</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa en Processing IDE que genere aleatòriament dos nombres enters i que calcule la seua divisió. El programa ens haurà d'indicar si la divisió és exacta qui és el resultat i si no és exacta quin és el resultat i el residu.</p>
+<p>Fes que el resultat es mostre el més amigable possible. És a dir, intenta no utilitzar el println i utilitza la funció <strong>text</strong> de l'API de Processing per mostrar el resultat per pantalla enlloc de pel terminal.</p>
+<p><img alt="Activitat 326" src="../assets/Tema3/Activitat15.png"/></p>
+<p>Com a apartat d'ampliació, podries fer que el grandaria de la font fos un poc més gran. A banda si veus algun detall que no t'agrada com funciona, ho pots modificar.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de la divisió](assets/Tema3/act320.pde)-->
+<details class="question">
+<summary>Activitat 406. Divisió per zero i altres problemes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>L'activitat anterior si t'has fixat, si el divisor és menor que el dividend el resultat sempre és zero. Seria interessant que es controlara que sempre es dividira el número major pel menor.</p>
+<p>També si s'ha dona el cas, hauràs pogut comprovar que si el divisor és 0 el programa dona error.</p>
+<p>Millora el programa anterior controlant el que passa quan es vol dividir per zero, mostrant un missatge en el cas que el número pel qual s'intenta dividir siga zero. I assegurat també que el divisor és sempre el número major.</p>
+<p>Compte perquè segurament hauràs d'usar estructures de selecció niades.</p>
+<p><img alt="Activitat 16" src="../assets/Tema3/Activitat16.png"/></p>
+<p><img alt="Activitat 16b" src="../assets/Tema3/Activitat16b.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de la divisió per zero](assets/Tema3/act321.pde)-->
+<details class="question">
+<summary>Activitat 407. Major, menor o igual</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.
+És a dir, l'aplicació ha de generar dos números aleatoris, des del 0 fins al 100 per exemple i comprovar la següent casuística:</p>
+<div class="highlight"><pre><span></span><code>- Són els dos números iguals?
+- És el primer número major que el segon?
+- És el segon número major que el segon?
+</code></pre></div>
+<p><img alt="Activitat 17" src="../assets/Tema3/Activitat17.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels números majors iguals o menors](assets/Tema3/act322.pde)-->
+<details class="question">
+<summary>Activitat 408. Diferència d'anys</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa en Processing que donat l'any actual(2023) i un any qualsevol que es genere de forma aleatòria amb la funció random entre l'any 0 i l'any 2500 i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any. Per exemple, imagina que l'any aleatori que genera la teua aplicació és l'any 2123, en aquest cas hauria de mostrar el següent missatge: "Falten 100 anys per arribar a l'any 2123", si per exemple l'any aleatori fos 2001, el missatge que hauria de mostrar és: "Han passat 22 anys des de l'any 2001". Si finalment l'any aleatori és igual a l'any actual, el missatge podria ser: "L'any aleatori i l'actual són el mateix any".</p>
+<p>Es podrien utilitzar constants en aquesta activitat. Quina?</p>
+<p><img alt="Activitat 18" src="../assets/Tema3/Activitat18.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de la diferència d'anys](assets/Tema3/act323.pde) -->
+<details class="question">
+<summary>Activitat 409. Millora la diferència d'anys</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Igual en les proves que has fet no t'ha passat però, t'has preguntat que passa si l'any aleatori és exactament un any menys o un any més que l'actual?
+Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, el teu programa deuria mostrar: "Han passat un anys des del 2022", que és incorrecte ja que deuria posar: "Ha passat un any des del 2022".</p>
+<p>Millora el programa anterior fent que quan la diferència siga exactament un any, mostre una frase concreta: "Només queda un any per al 2023" o "Ha passat un any des del 2002". En la resta de casos ha de funcionar igual que abans.</p>
+<p><img alt="Activitat 19" src="../assets/Tema3/Activitat19.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de la millora de la diferència d'anys](assets/Tema3/act324.pde)        -->
+<details class="question">
+<summary>Activitat 410. Nombres múltiples</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. Per exemple, imagina que el nostre genera els números 6 i 60. Com que 60 és major que 6, hem de comprovar si hi ha algun número que al multiplicar-lo per 6 done 60. Dit d'una altra manera, si dividim 60 entre 6 el residu és zero? En tal cas, si existeix un número natural que al multiplicar-lo per 6 dona 60, aleshores podem dir que 60 és múltiple de 6.</p>
+<p><img alt="Activitat 20" src="../assets/Tema3/Activitat20.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels nombres múltiples](assets/Tema3/act325.pde)-->
+<details class="question">
+<summary>Activitat 411. Nombre múltiples amb negatius i zeros</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A l'activitat anterior, quan generem els nombres de forma aleatòria, els resultats podien estar entre 0 i 100, però que passaria si quan generem nombres de forma aleatòria el resultat pogués ser negatiu? Com funcionen els múltiples tenint en compte els números negatius?  </p>
+<p>Veiem un exemple: numero1 (-30), num2 (-6). És -30 múltiple de -6? Què dona el residu de l'operació de dividir -30 entre -6? -30 % -6 = 0. Per tant podem concloure que -6 i -30 són múltiples.</p>
+<p>Millora el programa anterior fent que el programa avise quan s'escriguen valors negatius encara que realitze el càlcul de la mateixa forma que ho feia abans.</p>
+<p>Què passa si algun dels números generats aleatòriament són zero? I si els dos números aleatoris són zero?</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels nombres múltiples amb negatius i zeros](assets/Tema3/act326.pde) -->
+<details class="question">
+<summary>Activitat 412. Comparador de tres números</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual. Analitzem amb més profunditat el problema. Quants són els escenaris que ens podem trobar amb tres números aleatoris?</p>
+<div class="highlight"><pre><span></span><code>- Els tres números són iguals.
+- El primer número i el segon són iguals.
+- El primer número i el tercer són iguals.
+- El segon número i el tercer són iguals.
+- Cap nombre és igual.
+</code></pre></div>
+<p><img alt="Activitat 22" src="../assets/Tema3/Activitat22.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema del comparador](assets/Tema3/act327.pde) -->
+<details class="question">
+<summary>Activitat 413. Any bixest</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
+<p><img alt="Codi Example" src="../assets/Tema3/anoBisiestoPseint.jpg"/> </p>
+<p><img alt="Activitat 23" src="../assets/Tema3/Activitat23.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de l'any bixest](assets/Tema3/act328.pde) -->
+<!--??? question "Activitat 331. Càlcul d'arees"
+    Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.
+
+    ![Activitat 24](assets/Tema3/Activitat24.png)
+
+??? question "Activitat 332. Canvi d'unitats"
+    Escriu un programa que demane una distància en centímetres i que escriga la mateixa distància en quilometres, metres i centimetres.-->
+<h3 id="seleccio-multiple-switch-case">Selecció múltiple - switch case</h3>
+<p>La sentència de control 'switch' és una altra forma de codificar la condició múltiple que hem vist a l'apartat anterior però més senzilla de visualitzar a primer cop d'ull. Fixa't en la imatge següent:</p>
+<div class="mermaid">graph LR
+    id1((Inici))--&gt;Instrucció1;
+    style id1 fill:#F00;
+    Instrucció1--&gt;C1{Condició 1};
+    C1--&gt;|A|Instrucció2;
+    C1--&gt;|B|Instrucció3;
+    C1--&gt;|C|Instrucció4;
+    Instrucció2--&gt;D(fa:fa-spinner);
+    Instrucció3--&gt;D;
+    Instrucció4--&gt;D;
+    D--&gt;Instrucció5;
+    Instrucció5--&gt;id3((FI)); 
+    style id3 fill:#0F0;
+    
+</div>
+<p>I el codi en Java seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="c1">// Instruccions</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="c1">// INstruccions 2</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">    </span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="c1">// Instruccions per defecte</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Un altre exemple més clar que diu el nom del mes a partir d'un número entre 1 i 12</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w">    </span><span class="c1">//Programa que demana un numero i diu quin mes és</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mes</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="n">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//inicio del switch</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"GENER"</span><span class="w">    </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"FEBRER"</span><span class="w">   </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"MARÇ"</span><span class="w">     </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"ABRIL"</span><span class="w">    </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"MAIG"</span><span class="w">     </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"JUNY"</span><span class="w">     </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"JULIOL"</span><span class="w">   </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"AGOST"</span><span class="w">    </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"SETEMBRE"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="w"> </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"OCTUBRE"</span><span class="w">  </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="w"> </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"NOVEMBRE"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"DESEMBRE"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">            </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="s">"No vàlid"</span><span class="w"> </span><span class="p">);</span><span class="w">                      </span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 414. Copia i adapta el codi anterior</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu el programa anterior per a Processing i comprova que funciona. Afegeix el codi necessari per tal que a banda de dir-te quin mes és, et diga també a quina estació de l'any estem.</p>
+<p><img alt="Activitat 26" src="../assets/Tema3/Activitat26.png"/></p>
+<p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 1 i 12 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels mesos i les estacions](assets/Tema3/act329.pde)-->
+<details class="question">
+<summary>Activitat 415. Dies de la setmana</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa que donat un número entre 1 i 7 generat de forma aleatòria, et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
+<p><img alt="Activitat 27" src="../assets/Tema3/Activitat27.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels dies de la setmana](assets/Tema3/act330.pde)-->
+<details class="question">
+<summary>Activitat 416. Passar d'if a switch</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Observa el codi a continuació que explica com es passa de if - else a switch - case i passa l'activitat 323 de l'apartat if..else a switch..case</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// Exemple de switch convertit a if</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">switch</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">valor1</span><span class="p">:</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="c1">// Accions 1</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">valor2</span><span class="p">:</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="c1">// Accions 2</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">valor3</span><span class="p">:</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// Accions 3</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="c1">// Accions default</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="c1">// El codi anterior utilitzant if</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">variable</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">    </span><span class="c1">// Accions 1</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">variable</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valor2</span><span class="p">)</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="c1">// Accions 2</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">variable</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valor3</span><span class="p">)</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">    </span><span class="c1">// Accions 3</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="k">else</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">    </span><span class="c1">//Accions default</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de passar d'if a switch .. else](assets/Tema3/act331.pde)-->
+<details class="question">
+<summary>Activitat 417. Quants dies té el mes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">Problema</label><label for="__tabbed_15_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriu un programa que genere de forma aleatòria el mes i ens mostre per pantalla el total de dies que té eixe mes.</p>
+<p><img alt="Activitat 29" src="../assets/Tema3/Activitat29.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema dels dies del mes](assets/Tema3/act332.pde)-->
+<details class="question">
+<summary>Activitat 418. Figures geomètriques</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent. Totes aquelles dades necessàries per poder realitzar els diferents càlculs es generaran de forma aleatòria quan s'haja escollit de quina figura es vol calcular el perimetre. </p>
+<p>Per exemple, imagina que l'usuari tria el triangle, per saber el perimetre del triangle necessitem saber quant mesura el seu costat i multiplicar-lo per 3, per tant, serà la mesura del costat el que es generarà de forma aleatòria.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de les figures geomètriques](assets/Tema3/act333.pde)-->
+<h2 id="estructures-de-repeticio">Estructures de repetició</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.2. S'han utilitzat estructures de repetició.</strong></li>
+</ul>
+</div>
+<p>Imaginem que tenim un vector d'enters de 100 elements i volem trobar un nombre concret. Usant les estructures condicionals ho podríem fer.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">;</span><span class="w">               </span><span class="c1">// Declarem un array d'enters</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">arrayNumeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span><span class="w">      </span><span class="c1">// Reservem espai en memòria per 100 elements</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">inicialitzaNumeros</span><span class="p">(</span><span class="n">arrayNumeros</span><span class="p">);</span><span class="w">  </span><span class="c1">// Emplenem de forma aleatòria l'array</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="c1">// Comencem la recerca del número 10 per exemple</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 0"</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 1"</span><span class="p">);</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 2"</span><span class="p">);</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 3"</span><span class="p">);</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 4"</span><span class="p">);</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició 5"</span><span class="p">);</span><span class="w">    </span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="c1">// I així fins 100 ... </span>
+</code></pre></div></td></tr></table></div>
+<p>Com podeu observar, només he necessitat escriure codi per als 5 primers elements del nostre array per adondar-me que aquest codi és totalment ineficient i té un manteniment molt complicat. Imagineu un array amb 1000 elements i que ho haurem de codificar com hem fet abans.</p>
+<p>Les estructures repetitives permetrien recórrer l'array de principi a final sense necessitat d'escriure tant de codi.</p>
+<p>Veiem els següents exemples.</p>
+<h3 id="while">while</h3>
+<p>Mentre la <strong>condició</strong> (també anomenada condició d'eixida) siga avaluada com a true, s'executarien les instruccions que hi ha dins del bucle while. </p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#0F0;
+    Instrucció1--&gt;D(fa:fa-spinner); 
+    D--&gt;C1{Condició};
+    C1--&gt;|V|Instrucció2;
+    Instrucció2--&gt;P2((Fi));
+    style P2 fill:#F00;
+    C1--&gt;|F|D;
+</div>
+<p>En aquest tipus de bucle, el bloc d'instruccions del bucle while, es poden executar zero o més vegades.</p>
+<p>Els passos que representen el diagrama anterior són:
+1. S'executa la instrucció 1
+2. S'avalua la condició 
+3. Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.
+4. En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</p>
+<p>Com faríem el codi necessari per recórrer el nostre array de 100 elements fins trobar el número que busquem?. Mira el codi següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// Inicialitzem una variable que ens servirà de comptador.</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Important incrementar el comptador o entraríem en un bucle infinit.</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="do-while">do .. while</h4>
+<p>Molt semblant al bucle while però amb la diferència que el bloc s'instruccions que conté l'estructura s'executaria almenys una vegada ja que la condició d'eixida s'avalua després d'executar les instruccions.</p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#F00;
+    Instrucció1--&gt;P1(fa:fa-spinner);
+    P1--&gt;Instrucció2;
+    Instrucció2--&gt;C1{Condició};
+    C1--&gt;|V|Instrucció3;
+    C1--&gt;|F|P1;
+    Instrucció3--&gt;Id2((Fi));
+    style Id2 fill:#0F0;
+    
+</div>
+<p>Els passos que representen el diagrama anterior són:</p>
+<ol>
+<li>S'executa la instrucció 1</li>
+<li>S'executen les instruccions que conté el bloc </li>
+<li>S'avalua la condició </li>
+<li>Si la condició és true, s'executa el bloc d'instruccions del bucle i es torna a avaluar la condició.</li>
+<li>En cas que la condició s'avalue com a false, passaríem a executar la instrucció 2.</li>
+</ol>
+<p>A l'exemple següent podem veure el codi necessari per buscar un número dins d'un array d'enters (Ja veurem més endavant que és un array).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span>
+<span class="normal"><a href="#__codelineno-16-6">6</a></span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// Inicialitzem una variable que ens servirà de comptador.</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Important incrementar el comptador o entraríem en un bucle infinit.</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="p">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="bucle-for">bucle for</h3>
+<p>La més complicada de comprendre però també possiblement la més utilitzada. Mirem un exemple.</p>
+<div class="mermaid">graph LR
+    Id1((Inici))--&gt;Instrucció1;
+    style Id1 fill:#0F0;
+    Instrucció1--&gt;Inicialització;
+    Inicialització--&gt;D(fa:fa-spinner); 
+    D--&gt;C1{Condició}
+    C1--&gt;|NO|Instrucció2;
+    C1--&gt;|SI|Instruccions;
+    Instruccions--&gt;Actualització;
+    Actualització--&gt;D;
+    Instrucció2--&gt;Id3([Fi])
+    style Id3 fill:#F00;
+</div>
+<p>I els passos serien:</p>
+<ol>
+<li>Executem instrucció 1 (aliena al bucle for)</li>
+<li>Inicialització</li>
+<li>Avaluació de la condició</li>
+<li>Si la condició és true</li>
+<li>Executem les instruccions del bucle for</li>
+<li>Actualitzem índex</li>
+<li>Si la condició es false eixim del bucle i executem instrucció 2</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Número trobat a la posició "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Al codi anterior:</p>
+<ol>
+<li>Inicialització: int i = 0;</li>
+<li>Avaluació de la condició: és i &lt; 100 ?</li>
+<li>Actualització: i ++</li>
+</ol>
+<details class="example">
+<summary>Dibuixar amb bucles</summary>
+<p>Observa el següent codi i raona'l</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">);</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">}</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">            </span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>El resultat d'aquest codi seria:
+<img alt="Activitat 31" src="../assets/Tema3/Activitat31.png"/></p>
+</details>
+<details class="question">
+<summary>Activitat 419. Dibuixa la piràmide i la piràmide invertida</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solucio</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
+<p><img alt="Activitat 33" src="../assets/Tema3/Activitat332.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de dibuixar la piràmide invertida](assets/Tema3/act334.pde)-->
+<details class="question">
+<summary>Activitat 420. Dibuixa les dues diagonals (500x500)</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio"/><input id="__tabbed_18_2" name="__tabbed_18" type="radio"/><div class="tabbed-labels"><label for="__tabbed_18_1">Problema</label><label for="__tabbed_18_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Fes un programa en Processing IDE que dibuixe les dues diagonals sobre una pantalla de 500 pixels per 500 pixels. Des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
+<p><img alt="Activitat 34" src="../assets/Tema3/Activitat34.png"/></p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de les dues diagonals](assets/Tema3/act335.pde)-->
+<details class="question">
+<summary>Activitat 421. Dues diagonals 640x480</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio"/><input id="__tabbed_19_2" name="__tabbed_19" type="radio"/><div class="tabbed-labels"><label for="__tabbed_19_1">Problema</label><label for="__tabbed_19_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema de les dues diagonals 640x480](assets/Tema3/act336.pde)-->
+<details class="question">
+<summary>Activitat 422. whiles i for</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><input id="__tabbed_20_2" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">Problema</label><label for="__tabbed_20_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Fes l'activitat anterior canviant els bucles while per for i a l'inrevés.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
+</details>
+<!--[Descarrega la solució al problema del canvi de while per for](assets/Tema3/act337.pde)-->
+<details class="question">
+<summary>Activitat 423. Optimització del codi</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Seria possible fer l'activitat 336 però només utilitzant un bucle?</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible.</p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="estructures-de-salt">Estructures de salt</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.3. S'han reconegut les possibilitats de les sentències de salt.</strong></li>
+</ul>
+</div>
+<p>En java finalment ens podem trobar amb les instruccions <strong>break i continue</strong> que són sentències que modifiquen el flux normal d'execució en bucles i estructures de control. Poden ser útils per a eixir d'un bucle prematurament en casos particulars o per ometre una iteració en particular.</p>
+<h3 id="break">break</h3>
+<p>La sentència <strong>break</strong> s'utilitza per sortir immediatament d'un bucle (for, while o do-while). Quan s'executa una sentència break, el control del programa surt del bucle i continua amb l'execució del codi que hi ha després del bucle.</p>
+<p>Quan utilitzar break:
+- Quan es compleix una condició específica i ja no és necessari seguir iterant.
+- Per evitar iteracions innecessàries quan ja s'ha trobat el que es busca.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span>
+<span class="normal"><a href="#__codelineno-19-8">8</a></span>
+<span class="normal"><a href="#__codelineno-19-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="s">"S'ha trobat el número 7!"</span><span class="p">)</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="k">break</span><span class="w">  </span><span class="c1">// Eixim del bucle perquè ja hem trobat el número 7</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En aquest exemple, el bucle s'atura quan es troba el número 7, evitant iteracions innecessàries sobre la resta dels números.</p>
+<h3 id="continue">continue</h3>
+<p>La sentència continue s'utilitza per saltar l'iteració actual d'un bucle i continuar amb la següent iteració. Quan s'executa una sentència continue, el control del programa torna al començament del bucle per a la següent iteració, sense executar les línies de codi restants de l'iteració actual.</p>
+<p>Quan utilitzar continue:
+- Quan es compleix una condició específica i es vol saltar a la següent iteració del bucle.
+- Per ometre certes iteracions basades en una condició.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span>
+<span class="normal"><a href="#__codelineno-20-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">// Suposem que tenim una llista de números i volem imprimir tots els números excepte el 7</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">        </span><span class="k">continue</span><span class="p">;</span><span class="w">  </span><span class="c1">// Saltem aquesta iteració perquè no volem imprimir el número 7</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+En aquest exemple, quan el número és 7, la sentència continue fa que el bucle salti directament a la següent iteració, evitant que es mostre el número 7.
+Conclusió</p>
+<div class="admonition tip">
+<p class="admonition-title">En resum</p>
+<ul>
+<li><strong><code>break</code></strong> s'utilitza per sortir completament d'un bucle quan es compleix una condició específica.</li>
+<li><strong><code>continue</code></strong> s'utilitza per saltar l'iteració actual i passar a la següent quan es compleix una condició específica.</li>
+</ul>
+</div>
+<details class="question">
+<summary>Activitat 424. Analitzar una llista de nombres</summary>
+<p>Crear un programa en Java que itere sobre una llista de nombres sencers i faça diferents operacions utilitzant les sentències break i continue.  </p>
+<p>Al codi següent tens un programa en Processing IDE que conté una llista de 20 nombres que s'han generat de forma aleatòria. 
+- Part 1 (break): Escriu el codi que busque el número 15 a la llista, si el troba mostra per pantalla un missatge i ix del bucle.
+- Part 2 (continue): Escriu el codi necessari per tal que es mostren tots els números menys els parells.
+- Part 3. Escriure un codi que busqui el primer nombre parell major que 10. Utilitzar continue per saltar els números senars. Utilitzar break per sortir del bucle quan es trobi el primer nombre parell major que 10 i imprimir-lo.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNumeros</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">        </span><span class="n">arrayNumeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">20</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">            </span><span class="n">arrayNumeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">    </span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Activitat 425. Combinació d'estructures</summary>
+<p>Crear un programa en Processing que dibuixi un patró de cercles en una graella, però que ometi certs cercles segons unes condicions específiques utilitzant les sentències break i continue.</p>
+<p>Configuració Inicial:
+    - Configurar la mida de la finestra.
+    - Definir el diàmetre dels cercles i la separació entre ells.</p>
+<p>Dibuix de la Graella de Cercles:
+    - Utilitzar dos bucles for imbricats per dibuixar una graella de cercles.
+    - Utilitzar una estructura de selecció per decidir si es dibuixa o no un cercle segons la seva posició.</p>
+<p>Condicions per Ometre Cercles:
+    - Si la suma dels índexs dels bucles (x, y) és un múltiple de 5, ometre el cercle (utilitzar continue).
+    - Si s'arriba al cercle de la posició (7, 7), aturar el dibuix completament (utilitzar break).</p>
+</details>
+<h2 id="control-dexcepcions">Control d'excepcions</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació asssociats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.4. S'ha escrit codi utilitzant control d'excepcions.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.5. S'han creat programes executables utilitzant diferents estructures de control.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.6. S'han provat i depurat programes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.7. S'ha comentat i documentat el codi.</strong></li>
+</ul>
+</div>
+<p>Un dels grans reptes en el desenvolupament del programari és la gestió de les errades. No importa com de ben planificat estiga un projecte ni com d’eficient siga l’equip de desenvolupament: sempre poden apareixer errors, especialment en <strong>temps d’execució</strong>. Alguns exemples típics són:</p>
+<ul>
+<li>Divisions per zero</li>
+<li>Accés fora dels límits d'un array</li>
+<li>Fitxers inexistents o bloquejats</li>
+<li>Esgotament de memòria</li>
+<li>Errors lògics en condicions o bucles</li>
+</ul>
+<p>Java proporciona un mecanisme robust anomenat <strong>gestió d’excepcions</strong>, que permet capturar i controlar aquests errors de forma segura i estructurada, evitant que el programa es tanque sobtadament.</p>
+<h3 id="que-son-les-excepcions">Què són les excepcions?</h3>
+<p>En Java, les <strong>excepcions</strong> són errors que poden apareixer durant l'execució del programa. Quan ocorre una situació inesperada (com dividir per zero, accedir a una posició inexistent d'un array, o llegir un fitxer que no existeix), Java genera una <strong>excepció</strong>.</p>
+<p>Una <strong>excepció</strong> és un objecte que representa una situació anòmala que ocorre durant l’execució d’un programa. Quan es produeix un error, Java pot <strong>llençar (throw)</strong> una excepció i, si està previst, el codi pot <strong>capturar-la (catch)</strong> i actuar en conseqüència.</p>
+<p>Aquest mecanisme ens permet:</p>
+<ul>
+<li>Interrompre l'execució normal</li>
+<li>Tractar l’error amb codi específic</li>
+<li>Recuperar-se del problema sense que el programa falle completament</li>
+</ul>
+<p>Per evitar que el programa es tanque sobtadament, podem capturar i gestionar aquests errors amb les estructures <code>try</code>, <code>catch</code> i opcionalment <code>finally</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Sintaxi bàsica</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="c1">// Codi que pot provocar un error</span>
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="p">}</span><span class="w"> </span>
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="c1">// Codi per gestionar l'error</span>
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="p">}</span><span class="w"> </span>
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="c1">// (Opcional) Codi que sempre s'executa</span>
+<a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Resum</p>
+<ul>
+<li><strong><code>try</code></strong>: conté el codi que es susceptible de provocar una excepció.</li>
+<li><strong><code>catch</code></strong>: captura i gestiona l'excepció en cas que es produisca.</li>
+<li><strong><code>finally</code></strong>: s'executa sempre, hi haja o no excepció (tancar fitxers, alliberar memòria)</li>
+<li><strong><code>throw</code></strong>: llença una excepció de forma manual</li>
+<li><strong><code>throws</code></strong>: declara que un mètode pot llençar una excepció.</li>
+<li>Les excepcions permeten capturar i gestiona errors de forma controlada.</li>
+<li>Utilitzem <strong>try-catch-finally</strong> per evitar que un programa falle sobtadament.</li>
+<li>Podem crear excepcions pròpies per controlar situacions específiques.</li>
+<li>És fonamental en programes robustos i fiables.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span>
+<span class="normal"><a href="#__codelineno-23-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// Accés incorrecte: índex fora de límits</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="p">}</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArrayIndexOutOfException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error: has intentat accedir a una posició inexistent de l'array"</span><span class="p">);</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="cicle-de-funcionament-duna-excepcio">Cicle de funcionament d'una excepció</h3>
+<ol>
+<li>El bloc <code>try</code>s'executa</li>
+<li>Si hi ha un error, es genera (throw) una excepció.</li>
+<li>El control passa al bloc <code>catch</code>que la pot capturar</li>
+<li>Finalment, si existeix, s'executa el bloc <code>finally</code></li>
+</ol>
+<p>!!!example "Exemple avançat amb <code>throws</code> i <code>throw</code>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">escolta</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span><span class="c1">// Simula una situació que genera una excepció</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="p">(</span><span class="s">"Error detectat en escolta()"</span><span class="p">);</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="p">}</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">        </span><span class="n">escolta</span><span class="p">();</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Excepció capturada: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="excepcions-niades">Excepcions niades</h3>
+<p>És possible tindre blocs <code>try</code>dins d'altres blocs <code>try</code>, útil per a controlar errors en diferents nivells.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">        </span><span class="n">escolta</span><span class="p">();</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">            </span><span class="n">tornaAEscoltar</span><span class="p">();</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"Excepció interna"</span><span class="p">);</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Excepció externa"</span><span class="p">);</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="classes-dexcepcions-en-java">Classes d'excepcions en Java</h3>
+<p>Totes les excepcions hereten de la classe Throwable. Les que són derivades de Exception poden ser gestionades; les de Error (com OutOfMemoryError) no solen ser tractades pel programador.</p>
+<p><img src="../assets/Tema8/Excepcions.png"/></p>
+<h3 id="creacio-dexcepcions">Creació d'excepcions</h3>
+<p>Java permet la creació d’excepcions noves que deriven de la classe base Exception per controlar errors específics:</p>
+<div class="admonition example">
+<p class="admonition-title">Excepció personalitzada</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span>
+<span class="normal"><a href="#__codelineno-26-15">15</a></span>
+<span class="normal"><a href="#__codelineno-26-16">16</a></span>
+<span class="normal"><a href="#__codelineno-26-17">17</a></span>
+<span class="normal"><a href="#__codelineno-26-18">18</a></span>
+<span class="normal"><a href="#__codelineno-26-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">class</span> <span class="nc">NumeroNegatiuException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">NumeroNegatiuException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">missatge</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">missatge</span><span class="p">);</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="p">}</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">verificarNumero</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NumeroNegatiuException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NumeroNegatiuException</span><span class="p">(</span><span class="s">"No s'admeten nombres negatius."</span><span class="p">);</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="p">}</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="c1">// Ús de l'excepció</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="w">    </span><span class="n">verificarNumero</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumeroNegatiuException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error personalitzat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<details class="question">
+<summary>Activitat 426. Ús d'excepcions a Java</summary>
+<p>Tens la següent excepció personalitzada ja creada:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="c1">// Excepció personalitzada</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kd">class</span> <span class="nc">NumeroNegatiuException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="n">NumeroNegatiuException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">missatge</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">missatge</span><span class="p">);</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="p">}</span><span class="w">   </span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>El que has de fer és copiar el codi de l'excepció a un programa per a Processing IDE (al final després del keyPressed) i programar les següents accions:</p>
+<ul>
+<li>Declara una variable int valor = -5;</li>
+<li>Intenta mostrar el seu quadrat arrel (Math.sqrt(valor)), però:</li>
+<li>Si valor és negatiu, llança un throw new NumeroNegatiuException("Missatge d'error...").</li>
+<li>Captura l’error amb try–catch i mostra el missatge amb println() i text().</li>
+</ul>
+</details>
+<h2 id="proces-de-compilacio">Procés de compilació</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.6. S'han provat i depurat els programes.</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <strong style="color:#444;">RA3.7. S'ha comentat i documentat el codi.</strong></li>
+</ul>
+</div>
+<p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
+<p>Normalment la creació d'un programa executable (un típic.exe per a Microsoft Windows o DOS) comporta dos passos. El primer pas es diu <strong>compilació</strong> ( pròpiament dit) i tradueix el codi font escrit en un llenguatge de programació emmagatzemat en un arxiu a codi de baix nivell (normalment en codi objecte, no directament a llenguatge màquina). El segon pas es diu <strong>enllaçat</strong> en el qual s'enllaça el codi de baix nivell generat de tots els fitxers i subprogrames que s'han enviat compilar i s'afegeix el codi de les funcions que hi ha a les biblioteques del compilador perquè l'executable pugui comunicar-se directament amb el sistema operatiu, traduint així finalment el codi objecte a codi màquina, i generant un mòdul executable.</p>
+<p>Aquests dos passos es poden fer per separat, emmagatzemant el resultat de la fase de compilació en arxius objectes (un típic .obj per a Microsoft Windows, DOS o per a Unix ), per a enllaçar-los en fases posteriors, o crear directament l'executable, amb la qual cosa la fase de compilació s'emmagatzema només temporalment. Un programa podria tenir parts escrites en diversos llenguatges (per exemple C, C + + i Asm), que es podrien compilar de forma independent i després enllaçar juntes per formar un únic mòdul executable. </p>
+<center>
+<img src="../assets/Tema1/ProcesCompilacio.png"/>
+</center>
+<h3 id="el-depurador-de-processing-ide">El depurador de Processing IDE</h3>
+<p>Ha arribat el moment que aprengues com funciona el depurador que és una eina molt important per a desenvolupar codi. El depurador o <strong>debugger</strong> és una eina molt important i necessària que porten tots els entorns de desenvolupament integrat com Processing. Aquesta eina ens permet executar el codi pas a pas al mateix temps que podem monitoritzar el valor de les variables, l'estat dels diferent objectes que formen part de la nostra aplicació. </p>
+<center>
+<img src="../assets/Tema3/Debugger.png"/>
+</center>
+<p>Per poder activar el depurador hem de fer clic al botó redó que es troba dalt a la dreta de l'editor com es mostra a la imatge anterior. Una vegada tenim el depurador activat, se'ns obre el <strong>monitor de variables</strong> que ens permetrà controlar com canvien les variables de valor. </p>
+<p>A la part esquerra ens apareixeran els controls que ens habilitaran per poder navegar pas a pas o entrar en funcions i mètodes del codi.</p>
+<p>Finalment és molt important també per a la depuració de codi el terme <strong>breakpoint</strong> per fer que el depurador pare en un lloc específic del nostre codi, li ho hem d'indicar amb punts de ruptura o breakpoints. Per poder posar un breakpoint només hem de fer clic sobre el número de la línia sobre la que volem que s'apare l'execució del programa.  Per tal de llevar-lo tornem a punxar sobre la mateixa línia.</p>
+<p>Una vegada hages provat el depurador de Processing IDE i tingues més o menys clar com funciona, fes l'activitat següent.</p>
+<details class="question">
+<summary>Activitat 427. Depurar el codi</summary>
+<p>L'objectiu d'aquesta activitat és que utilitzeu el depurador (<strong>debugger</strong>) de Processing IDE.</p>
+<p>Copia el següent codi a un projecte nou de Processing IDE i segueix les isntruccions.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span>
+<span class="normal"><a href="#__codelineno-28-17">17</a></span>
+<span class="normal"><a href="#__codelineno-28-18">18</a></span>
+<span class="normal"><a href="#__codelineno-28-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">       </span><span class="n">size</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">       </span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">       </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">"C després de sumar: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">       </span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="w">       </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">"A després de multiplicar: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">       </span>
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a><span class="w">       </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">"B després de restar: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="w">       </span>
+<a id="__codelineno-28-17" name="__codelineno-28-17"></a><span class="w">       </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-28-18" name="__codelineno-28-18"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">"C després de sumar de nou: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Posar un breakpoint a la línia c = a + b; (la primera vegada que es fa la suma).</li>
+<li>Executar el programa en mode depuració. Quan s’aturi:<ul>
+<li>Mirar els valors de a, b i c.</li>
+<li>Provar a avançar pas a pas (step over) i veure com canvien els valors.</li>
+</ul>
+</li>
+<li>Posar un breakpoint a b = b - 3; i observar novament les variables.</li>
+<li>Provar a modificar el valor de a o b mentre el programa està aturat i continuar l’execució. Com canvia la suma final?</li>
+</ol>
+<p>Preguntes per a la reflexió:</p>
+<ol>
+<li>Quin valor tenen les variables en cada breakpoint?</li>
+<li>Què passa quan canvies el valor d’una variable des del depurador?</li>
+<li>Quin avantatge té usar el depurador en lloc de només println()?</li>
+</ol>
+</details>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "forest",
+    darkmode: true
+});</script></body>
+</html>

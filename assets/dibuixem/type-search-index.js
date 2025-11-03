@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Dibuixem","l":"Cercle"},{"p":"Dibuixem","l":"Controls"},{"p":"Dibuixem","l":"Figura"},{"p":"Dibuixem","l":"Quadrat"},{"p":"Dibuixem","l":"Triangle"}];updateSearchResults();

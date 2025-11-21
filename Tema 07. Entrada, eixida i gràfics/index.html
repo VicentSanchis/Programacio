@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2006.%20Desenvolupament%20de%20Classes/" rel="prev"/>
+<link href="../Tema%2008.%20Col%C2%B7leccions/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
-<title>Tema 9. Gràfics. La llibreria ControlP5 - PROGRAMACIÓ 1DAW</title>
+<title>07.- Entrada, eixida i gràfics - PROGRAMACIÓ 1DAW</title>
 <link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tema-9-grafics-la-llibreria-controlp5">
+<a class="md-skip" href="#tema-7-entrada-eixida-i-grafics">
           Skip to content
         </a>
 </div>
@@ -46,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Tema 9. Gràfics. La llibreria ControlP5
+              07.- Entrada, eixida i gràfics
             
           </span>
 </div>
@@ -120,7 +122,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
-    1.- Introducció a la programació
+    01.- Introducció a la programació
     
   </span>
 </a>
@@ -128,7 +130,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
-    2.- El llenguatge Java
+    02.- El llenguatge Java
     
   </span>
 </a>
@@ -136,7 +138,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
-    3.- Prog. Orientada a Objectes
+    03.- Prog. Orientada a Objectes
     
   </span>
 </a>
@@ -144,47 +146,176 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
-    4.- Estructures de Control
+    04.- Estructures de Control
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2005.%20Desenvolupament%20de%20Classes/">
+<a class="md-nav__link" href="../Tema%2005.%20Programaci%C3%B3%20Modular/">
 <span class="md-ellipsis">
-    5.- Desenvolupament de classes
+    05.- Programació modular
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
+<a class="md-nav__link" href="../Tema%2006.%20Desenvolupament%20de%20Classes/">
 <span class="md-ellipsis">
-    6.- Entrada, eixida i gràfics
+    06.- Desenvolupament de classes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    07.- Entrada, eixida i gràfics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    07.- Entrada, eixida i gràfics
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entrada-i-eixida-basiques">
+<span class="md-ellipsis">
+      Entrada i eixida bàsiques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flux-de-dades-a-nivell-de-byte">
+<span class="md-ellipsis">
+      Flux de dades a nivell de byte
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flux-de-dades-a-nivell-de-caracter">
+<span class="md-ellipsis">
+      Flux de dades a nivell de caracter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arxius-dobjectes">
+<span class="md-ellipsis">
+      Arxius d'objectes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fitxers-xml">
+<span class="md-ellipsis">
+      Fitxers XML
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excepcions">
+<span class="md-ellipsis">
+      Excepcions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio_1">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#la-llibreria-controlp5">
+<span class="md-ellipsis">
+      La llibreria ControlP5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#botons">
+<span class="md-ellipsis">
+      Botons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checkbox">
+<span class="md-ellipsis">
+      CheckBox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llistes-desplegables">
+<span class="md-ellipsis">
+      Llistes desplegables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radiobutton">
+<span class="md-ellipsis">
+      RadioButton
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#textfield">
+<span class="md-ellipsis">
+      TextField
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slide">
+<span class="md-ellipsis">
+      Slide
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Col%C2%B7leccions/">
+<span class="md-ellipsis">
+    08.- Col·leccions
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
+<a class="md-nav__link" href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
 <span class="md-ellipsis">
-    7.- Col·leccions
+    09.- Herència, polimorfisme i interfícies
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<a class="md-nav__link" href="../Tema%2010.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
-    8.- Herència, polimorfisme i interfícies
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
-<span class="md-ellipsis">
-    9.- Bases de dades relacionals
+    10.- Bases de dades relacionals
     
   </span>
 </a>
@@ -196,7 +327,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tema-9-grafics-la-llibreria-controlp5">Tema 9. Gràfics. La llibreria ControlP5</h1>
+<h1 id="tema-7-entrada-eixida-i-grafics">Tema 7. Entrada, eixida i gràfics</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Una part important de tot llenguatge de programació és com s’establirà el contacte amb l’exterior, bé siga mitjançant la <strong>consola</strong> o a través del <strong>sistema de fitxers</strong>, per finalment poder actuar amb l’usuari d’una aplicació en execució. Ambdós, consola i sistema de fitxers, poden funcionar tant d’entrada als nostres programes com d’eixida.</p>
 <p>Java defineix una abstracció, els <strong>streams o fluxos</strong> per tractar la comunicació d’informació amb l’exterior. Per entendre-ho millor, un stream o flux és com un canal de comunicació entre un origen i un destí. Per exemple suposem el cas d’un programa que quan arranque haja de llegir una llista de clients d’un fitxer de text per crear una agenda. En aquest cas <strong>l’origen</strong> seria el fitxer de text i el <strong>destí</strong> el programa o aplicació que s’encarrega d’emplenar l’agenda amb el llistat de clients, doncs bé, l’stream en aquest escenari seria el <strong>canal de comunicació</strong> que s’establiria entre el fitxer de text i el programa per tal que aquest puga llegir la informació.</p>
@@ -1812,7 +1943,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 <div class="highlight"><pre><span></span><code>Heu de tenir en compte que el mètode **controlEvent** és un mètode que pot respondre a accions de l'usuari en diferents controls de la mateixa classe. És a dir, que la nostra classe menú pot tindre més d'un botó i tots els esdeveniments executaran el mètode en qüestió.
 </code></pre></div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Main</label><label for="__tabbed_3_2">Menu</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Main</label><label for="__tabbed_3_2">Menu</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
@@ -1897,7 +2028,7 @@ Normalment es solen posar sentències per tal d’alliberar tot allò que podem 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></div>
+</input></input></div>
 <p>Per acabar, què passa si el que volem quan es premi un botó modifique l'estat del programa principal? Hem d'aprofitar que al constructor de la classe menú se li passa el <strong>pare</strong> (programa principal en el nostre cas) i per tant des dels esdeveniments de la classe <strong>Menú</strong> podriem cridar a mètodes de la classe pare. Per tant tot allò que volem que siga susceptible de modificar-se des de classes externes com el menú, haurem de crear mètodes als quals podem cridar des del menú.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Main</label><label for="__tabbed_4_2">Menu</label></div>
 <div class="tabbed-content">

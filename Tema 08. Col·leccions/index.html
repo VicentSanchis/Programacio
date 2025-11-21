@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="prev"/>
+<link href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
-<title>Tema 5. Tipus Compostos de Dades - PROGRAMACIÓ 1DAW</title>
+<title>08.- Col·leccions - PROGRAMACIÓ 1DAW</title>
 <link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tema-5-tipus-compostos-de-dades">
+<a class="md-skip" href="#tema-8-colleccions">
           Skip to content
         </a>
 </div>
@@ -46,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Tema 5. Tipus Compostos de Dades
+              08.- Col·leccions
             
           </span>
 </div>
@@ -120,7 +122,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
-    1.- Introducció a la programació
+    01.- Introducció a la programació
     
   </span>
 </a>
@@ -128,7 +130,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
-    2.- El llenguatge Java
+    02.- El llenguatge Java
     
   </span>
 </a>
@@ -136,7 +138,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
-    3.- Prog. Orientada a Objectes
+    03.- Prog. Orientada a Objectes
     
   </span>
 </a>
@@ -144,47 +146,162 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
-    4.- Estructures de Control
+    04.- Estructures de Control
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2005.%20Desenvolupament%20de%20Classes/">
+<a class="md-nav__link" href="../Tema%2005.%20Programaci%C3%B3%20Modular/">
 <span class="md-ellipsis">
-    5.- Desenvolupament de classes
+    05.- Programació modular
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2006.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
+<a class="md-nav__link" href="../Tema%2006.%20Desenvolupament%20de%20Classes/">
 <span class="md-ellipsis">
-    6.- Entrada, eixida i gràfics
+    06.- Desenvolupament de classes
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2007.%20Col%C2%B7leccions/">
+<a class="md-nav__link" href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
 <span class="md-ellipsis">
-    7.- Col·leccions
+    07.- Entrada, eixida i gràfics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    08.- Col·leccions
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    08.- Col·leccions
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrays">
+<span class="md-ellipsis">
+      Arrays
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#algorismes-de-recerca">
+<span class="md-ellipsis">
+      Algorismes de recerca
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#algorismes-dordenacio">
+<span class="md-ellipsis">
+      Algorismes d'ordenació
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insercio">
+<span class="md-ellipsis">
+      Inserció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bombolla">
+<span class="md-ellipsis">
+      Bombolla
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shell">
+<span class="md-ellipsis">
+      Shell
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quicksort">
+<span class="md-ellipsis">
+      Quicksort
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrays-multidimensionals">
+<span class="md-ellipsis">
+      Arrays multidimensionals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#colleccions">
+<span class="md-ellipsis">
+      Col·leccions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iteradors">
+<span class="md-ellipsis">
+      Iteradors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#string-cadenes-de-caracters">
+<span class="md-ellipsis">
+      String: Cadenes de caracters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enumeracions">
+<span class="md-ellipsis">
+      Enumeracions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<span class="md-ellipsis">
+    09.- Herència, polimorfisme i interfícies
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2008.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<a class="md-nav__link" href="../Tema%2010.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
-    8.- Herència, polimorfisme i interfícies
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Tema%2009.%20Bases%20de%20dades%20relacionals/">
-<span class="md-ellipsis">
-    9.- Bases de dades relacionals
+    10.- Bases de dades relacionals
     
   </span>
 </a>
@@ -196,7 +313,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tema-5-tipus-compostos-de-dades">Tema 5. Tipus Compostos de Dades</h1>
+<h1 id="tema-8-colleccions">Tema 8. Col·leccions</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Fins ara havíem treballat amb tipus de <strong>dades simples:</strong> int, char, double, float, bool...  però que passa si necessitarem guardar un <strong>conjunt de dades</strong> o informació relativa a una persona? Nom, cognoms, DNI, adreça postal, data de naixement etc? Amb els tipus de dades simples ens seria impossible representar aquesta informació. Es per això que s’utilitzen els <strong>tipus de dades compostos</strong> que ens permetran agrupar de diverses maneres aquesta informació.</p>
 <p>Ens podem trobar diversos tipus de dades compostos i en aquest tema veurem: </p>
@@ -291,11 +408,12 @@
 <p>Has de tindre en compte que la inicialització de l'array s'ha de fer al mètode <strong>setup</strong> per tal que no es torne a modificar a cada cicle del <strong>draw</strong></p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act501.pde">Descarrega la solució al problema de la inicialització d'arrays</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </input></input></div>
 </details>
+<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema5/act501.pde)-->
 <h3 id="arrays-de-caracters">Arrays de caracters</h3>
 <p>Un array que conté caràcters en lloc de números funciona d’una forma molt semblant al que s’ha explicat en els apartats anteriors. Es pot veure de forma senzilla a l’exemple que vos mostrem a continuació.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -326,17 +444,18 @@
 <p>Igual que a l'activitat anterior, hauràs de cridar a aquest mètode des del <strong>setup</strong> i no des del <strong>draw</strong></p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act502.pde">Descarrega la solució al problema de la inicialització d'arrays</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </input></input></div>
 </details>
+<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema5/act502.pde)-->
 <h3 id="arrays-com-a-parametres">Arrays com a paràmetres</h3>
 <p>Com qualsevol altre tipus de dades, un array també es pot passar com a <strong>paràmetre a un mètode.</strong> Els arrays sempre es passen <strong>per referència</strong>, és a dir, quan passem un array per paràmetre a un mètode, el que en realitat estem passant és un adreça de memòria que és la que ens indicaria on està l’inici del contingut d’aquest. Passar per referència qualsevol paràmetre significa que qualsevol modificació que es faja dins del mètode afectarà també a l’array fora d’aquest.</p>
 <p>No passa el mateix si passem un element concret de l’array, en aquest cas a l’igual que amb els altres paràmetres, aquests es passen per valor, per tant les  modificacions o canvis que es produeixen dins del mètode no afectaran fora d’aquest.</p>
 <details class="question">
 <summary>Activitat 503. Mostra array amigablement</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Seguint amb el codi anterior, fes dos mètodes per la nostra aplicació que mostre, de forma amigable, l’array de números i l’array de caràcters. Els mètodes es podrien dir mostraEnters i mostraCaracters. Utilitza totes les funcions que conegues de Processing IDE per tal que mostre els arrays de la forma més estètica possible.</p>
@@ -357,11 +476,12 @@
 <p>Igual podria ser útil que li afegires coordenades (x,y) com a paràmetres a la funció de mostrar arrays per tal de poder indicar-li on vols que es mostren.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act503.pde">Descarrega la solució al problema de mostrar arrays amigablement</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
-</input></div>
+</input></input></div>
 </details>
+<!--[Descarrega la solució al problema de mostrar arrays amigablement](assets/Tema5/act503.pde)-->
 <h3 id="bucle-for-en-java">Bucle for en Java</h3>
 <p>A les activitats anteriors t'hauràs trobat amb el dilema de com recórrer tant l'array d'enters com el de caracters per tal d'inicialitzar-lo. Si vares entendre bé el <strong>teorema d'estructura i les estructures iteratives</strong>, segurament hauràs utilitzat un bucle while, un do while o un for. Però aquests bucles a l'hora de recórrer arrays tenen un inconvenient: el <strong>grandària de l'array</strong>. El programador ha de controlar quan s'arriba al final de l'array per tal que l'aplicació no done una errada inesperada i això de vegades no és senzill. Mira els següents exemples de bucles:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
@@ -414,11 +534,12 @@
 <p>Fes una traça al codi anterior i observa com els diferents bucles recorren l'array. Escriu la teua conclusió a un comentari de documentació al codi.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act504.pde">Descarrega la solució al problema dels diferents tipus de bucle</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució al problema dels diferents tipus de bucle](assets/Tema5/act504.pde)-->
 <p>La millor forma de recórrer un array sense haver de controlar quan s’arriba al final és la sentència for usada d’una manera alternativa. Si per exemple tenim un array d’enters que s’anomena «vector» i volem llistar tots els seus elements, podríem fer el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
@@ -437,11 +558,12 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 <p>Podriem fer el mateix als mètodes d'inicialització dels arrays? Per què? Escriu la resposta en a un comentari de documentació.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act505.pde">Descarrega la solució al problema del bucle for "especial"</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució al problema del bucle for "especial"](assets/Tema5/act505.pde)-->
 <h2 id="algorismes-de-recerca">Algorismes de recerca</h2>
 <p>Implicitament amb l'aparició de les estructures de dades complexes en programació que, en certa manera, es podrien entendre com a <strong>conjunts</strong>, apareix la necessitat de poder <strong>fer recerques</strong> elements dintre d'aquestos conjunts. Existeixen dos <strong>algorismes de recerca</strong> que veurem en aquest apartat: la recerca <strong>seqüencial</strong> i la recerca <strong>binaria</strong>. A l’element que estem buscant li direm <strong>clau</strong>.</p>
 <p>Però abans d'anar per feina, canviarem temporalment l'entorn de programació de Processing IDE a <strong>Eclipse IDE</strong> i veurem un poc més que són les classes i els objectes i com funcionen en Java abans de veure-ho amb més detall al tema següent. Realitza les activitats següents abans de continuar.</p>
@@ -562,11 +684,12 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act506.pde">Descarrega el projecte inicial</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega el projecte inicial](assets/Tema5/act506.pde)-->
 <details class="question">
 <summary>Activitat 507. Inicialització d'arrays</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
@@ -587,11 +710,12 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act507.pde">Descarrega la solució a l'activitat 507</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 507](assets/Tema5/act507.pde)-->
 <details class="question">
 <summary>Activitat 508. Ampliació de funcions</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
@@ -614,11 +738,12 @@ X. Eixir</li>
 <p>En aquesta activitat només has de crear l'estructura per poder emmagatzemar el menú i emplenar-la.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act508.pde">Descarrega la solució a l'activitat 508</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 508](assets/Tema5/act508.pde)-->
 <details class="question">
 <summary>Activitat 509. Mostrar menú</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
@@ -630,11 +755,12 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <p>Per facilitar saber quin número correspon a quina opció, utilitza constants: ENTERS = 1, CARACTERS = 2...</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act509.pde">Descarrega la solució a l'activitat 509</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 509](assets/Tema5/act509.pde)-->
 <h3 id="sequencial">Seqüencial</h3>
 <p>També anomenada <strong>recerca lineal</strong>, es recorren tots els elements de l’array des del principi fins que es troba la clau (element que estem buscant) o fins que s’arriba a l’últim element de l’array.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
@@ -703,11 +829,12 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <p>De moment només farem les recerques sobre l'array d'enters per no complicar més l'aplicació.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act510.pde">Descarrega la solució a l'activitat 510</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 510](assets/Tema5/act510.pde)-->
 <details class="question">
 <summary>Activitat 511. Compara eficiències</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
@@ -718,11 +845,12 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <p>Recorda que per poder realitzar la recerca binària l'array ha d'estar ordenat.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act511.pde">Descarrega la solució a l'activitat 511</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 511](assets/Tema5/act511.pde)-->
 <h2 id="algorismes-dordenacio">Algorismes d'ordenació</h2>
 <p>Els algorismes d’ordenació permeten ordenar un array en funció d’un criteri establert al propi algorisme. Hi han diferents tipus d’algorismes d’ordenació: selecció, inserció, bombolla, Shell i Quicksort.</p>
 <h3 id="seleccio">Selecció</h3>
@@ -763,11 +891,12 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 <p>Implementa l’algorisme d’ordenació per selecció al projecte i vicula-la a l’opció del menú corresponent. Has de comprovar que funciona. De moment serà millor que només et centres en ordenar l'array d'enters i deixar el de caracters.    </p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act512.pde">Descarrega la solució a l'activitat 512</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 512](assets/Tema5/act512.pde)-->
 <h2 id="insercio">Inserció</h2>
 <p>Aquest algorisme consisteix en generar un nou array a partir del que ja es té, tal que cada nou element inserit es posa a la seua posició correcta.
 Imaginem que tenim el següent array d’enters per ordenar: </p>
@@ -818,11 +947,12 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Implementa l’algorisme d’ordenació per inserció al projecte i vincula-la a l’opció del menú corresponent. Igual que a l'activitat anterior, centrat en l'array d'enters només.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act513.pde">Descarrega la solució a l'activitat 513</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 513](assets/Tema5/act513.pde)-->
 <h2 id="bombolla">Bombolla</h2>
 <p>L’algorisme d’ordenació per bombolla és el més conegut i també el menys eficient, ja que a cada passada per ordenar un element compara cadascun d’ells amb el seu adjacent de forma que si les seues posicions són incorrectes, s’intercanvien. Al finalitzar cada passada l’element més gran es va posant al final de la llista</p>
 <p>Donat el següent array: </p>
@@ -873,11 +1003,12 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Implementa l’algorisme d’ordenació per bombolla al projecte i vincula-la a l’opció del menú corresponent igual que has fet a les dues activitats anteriors.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act514.pde">Descarrega la solució a l'activitat 514</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 514](assets/Tema5/act514.pde)-->
 <h2 id="shell">Shell</h2>
 <p>L’algorisme Shell és una millora de l’algorisme d’inserció directa. Compara elements separats per un espai de vàries posicions el que permet que un element faja passos més grans fins trobar la seua posició esperada. </p>
 <p>Els passos múltiples sobre els elements de l’array es fan amb espais de posicions cada vegada més menuts. L’últim pas de l’algorisme Shell és una simple ordenació per inserció però arribats a aquest punt es pot garantir que l’array esta ja quasi ordenat, el que fa que l’ordenació per inserció siga molt eficient.</p>
@@ -944,11 +1075,12 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Implementa l’algorisme d’ordenació shell al projecte i vincula-la a l’opció del menú corresponent. </p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act515.pde">Descarrega la solució a l'activitat 515</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 515](assets/Tema5/act515.pde)-->
 <h2 id="quicksort">Quicksort</h2>
 <p>Aquest és un dels algorismes d’ordenació més ràpids i eficients. Utilitza la tècnica «divideix i venceràs» de tal forma que divideix l’array a ordenar en parts que ordenarà al mateix temps. Bàsicament es tria l’element de l’array com a pivot tal que es forme dos subArrays, en un d’ells s’emmagatzemen els elements menors que l’element que hem triat com a pivot i a l’altre array es guarden els element majors que el pivot. Una vegada fet, s’aplica el mateix procediment als subarrays obtinguts.</p>
 <p>Seguint amb el mateix array dels exemples anteriors, aplicarem l’algorisme d’ordenació quicksort.</p>
@@ -1027,11 +1159,12 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Implementa l’algorisme d’ordenació quicksort al projecte i vincula-la a l’opció del menú corresponent. Comprova que funciona.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act516.pde">Descarrega la solució a l'activitat 516</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 516](assets/Tema5/act516.pde)-->
 <details class="question">
 <summary>Activitat 517. Ampliació. Mostrar traça algorismes ordenació</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solució</label></div>
@@ -1053,11 +1186,12 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <p>Entrega mitjançant la plataforma aules el projecte final que inclou de les activitats 506 a 518 amb totes les funcions tant de recerca com d’ordenació sobre arrays unidimensionals.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act518.pde">Descarrega la solució a l'activitat 518</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 518](assets/Tema5/act518.pde)-->
 <h2 id="arrays-multidimensionals">Arrays multidimensionals</h2>
 <p>Fins ara hem estan utilitzant arrays d’una sola dimensió, coneguts també com vectors, taules o llistes. Aquests arrays es recorren amb ajuda d’un sol índex (tenen una sola dimensió). En aquest apartat estudiarem arrays de més d’una dimensió per als que necessitarem més d’un índex a l’hora de ser recorreguts. 
 Els arrays multidimensionals més comuns són els de dues dimensions o bidimensionals, també coneguts com matrius. És comú representar aquest tipus de dades com una taula composta per una sèrie de files i columnes:</p>
@@ -1131,7 +1265,7 @@ Ara que volem crear una matriu (array de dues dimensions) utilitzarem dos parell
 </code></pre></div></td></tr></table></div>
 <p>On n i m són valors enters que ens indiquen la grandària de cada dimensió. 
 Per exemple, per declarar i crear una matriu d’enters de 5 files i 10 columnes fariem el següent:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
 <span class="normal"><a href="#__codelineno-22-3">3</a></span>
 <span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="w"> </span><span class="o">[][]</span><span class="p">;</span>
@@ -1139,7 +1273,6 @@ Per exemple, per declarar i crear una matriu d’enters de 5 files i 10 columnes
 <a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="c1">// També ho podriem fer en una sola instrucció</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">matriuEnters</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-Encara no disponible</p>
 <h3 id="inicialitzacio-i-acces">Inicialització i accés</h3>
 <p>El procés d’inicialització d’un vector, dona igual les dimensions que tinga, consisteix en donar-li valor a les cel·les que inicialment estan buides. Aquesta inicialització es pot fer de tres formes diferents:</p>
 <ul>
@@ -1230,11 +1363,12 @@ Mireu el següent exemple:</p>
 <p><img alt="Activitat 15. Matrius" src="../assets/Tema5/Matrius1.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act519.pde">Descarrega la solució a l'activitat 519</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 519](assets/Tema5/act519.pde)-->
 <h3 id="arrays-irregulars">Arrays irregulars</h3>
 <p>Una matriu irregular o escalonada no és més que un array de taules, on cadascuna de les taules que formen l’array no necessàriament han de tenir la mateixa grandària.</p>
 <p><img alt="Arrays Irregulars" src="../assets/Tema5/Irregulars.png"/></p>
@@ -1320,11 +1454,12 @@ L’opció estadística mostra la quantitat de notes entre 0 i 4, entre 4 i 5, e
 Eixir tancaria l'apliació.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act520.pde">Descarrega la solució a l'activitat 520</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 520](assets/Tema5/act520.pde)-->
 <h3 id="un-sudoku-simple">Un sudoku simple</h3>
 <p>Llig l'enunciat de la següent activitat i fes un <strong>sudoku</strong> simple.</p>
 <details class="question">
@@ -1458,11 +1593,12 @@ Eixir tancaria l'apliació.</p>
 <p>Escriu un programa utilitzant Processing IDE que et mostre un Sudoku per pantalla, que permeta al jugador emplenar les cel·les buides i que comprove si el número escollit es vàlid o no.</p>
 </div>
 <div class="tabbed-block">
-<p><a href="../assets/Tema5/act521.zip">Descarrega la solució a l'activitat 521</a></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
 </details>
+<!--[Descarrega la solució a l'activitat 521](assets/Tema5/act521.zip)-->
 <h2 id="colleccions">Col·leccions</h2>
 <p>Les col·leccions en Java són un marc que proporciona una arquitectura per emmagatzemar i manipular el grup d'objectes Poden realitzar totes les operacions que realitzeu sobre les dades, com ara la cerca, l'ordenació, la inserció, la manipulació i la supressió.</p>
 <p>Java ofereix interfícies (Set, List, Queue, Deque) i classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).</p>

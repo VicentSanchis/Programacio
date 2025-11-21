@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2005.%20Programaci%C3%B3%20Modular/" rel="prev"/>
+<link href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>06.- Desenvolupament de classes - PROGRAMACIÓ 1DAW</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheet/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tema-5-desenvolupament-de-classes">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            PROGRAMACIÓ 1DAW
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              06.- Desenvolupament de classes
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+<input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    PROGRAMACIÓ 1DAW
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Índex
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
+<span class="md-ellipsis">
+    01.- Introducció a la programació
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
+<span class="md-ellipsis">
+    02.- El llenguatge Java
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
+<span class="md-ellipsis">
+    03.- Prog. Orientada a Objectes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
+<span class="md-ellipsis">
+    04.- Estructures de Control
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2005.%20Programaci%C3%B3%20Modular/">
+<span class="md-ellipsis">
+    05.- Programació modular
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    06.- Desenvolupament de classes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    06.- Desenvolupament de classes
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio">
+<span class="md-ellipsis">
+      Introducció
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radiografia-duna-classe-java">
+<span class="md-ellipsis">
+      Radiografia d'una classe Java
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definicio-de-classes-en-java">
+<span class="md-ellipsis">
+      Definició de classes en Java
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#propietats-i-metodes-de-les-classes">
+<span class="md-ellipsis">
+      Propietats i mètodes de les classes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
+<span class="md-ellipsis">
+    07.- Entrada, eixida i gràfics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2008.%20Col%C2%B7leccions/">
+<span class="md-ellipsis">
+    08.- Col·leccions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
+<span class="md-ellipsis">
+    09.- Herència, polimorfisme i interfícies
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tema%2010.%20Bases%20de%20dades%20relacionals/">
+<span class="md-ellipsis">
+    10.- Bases de dades relacionals
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="tema-5-desenvolupament-de-classes">Tema 5. Desenvolupament de classes</h1>
+<div class="admonition danger">
+<p class="admonition-title">Resultat d'aprenentatge associat</p>
+<p><strong>RA4. Desenvolupa programes organitzats a classes analitzant i aplicant els principis de la programació orientada a objectes.</strong></p>
+<h3 id="criteris-davaluacio">Criteris d'avaluació</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.1. S'ha reconegut la sintaxi, estructura i components típics d'una classe.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.2. S'han definit classes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.3. S'han definit propietats i mètodes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.4. S'han creat constructors.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.5. S'han desenvolupat programes que instancien i utilitzin objectes de les classes creades anteriorment.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA4.6. S'han utilitzat mecanismes per controlar la visibilitat de les classes i dels seus membres.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.7. S'han definit i utilitzat classes heretades.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.8. S'han creat i utilitzat mètodes estàtics.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.9. S'han definit i utilitzat interfícies.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.10. S'han creat i utilitzat conjunts i llibreries de classes.</li>
+</ul>
+</div>
+<h2 id="introduccio">Introducció</h2>
+<p>Una vegada hem vist com funcionen els mètodes, funcions, procediments, crides etc.. ja tenim tot el necessari per poder començar a desenvolupar les nostres pròpies classes a Java.</p>
+<h2 id="radiografia-duna-classe-java">Radiografia d'una classe Java</h2>
+<p>Una <strong>classe és la definició d’un objecte</strong>, és l’element que descriu els components d’un objecte de forma general. Diem que hem creat un objecte quan donem valors i utilitzem els components definits a la classe. Dit d'una altra forma, una classe és el model o plantilla que defineix com seran els objectes que en derivem. És a dir, estableix què saben (atributs) i què poden fer (mètodes). Els objectes són, doncs, instàncies concretes d’una classe.</p>
+<p>Per entendre la sintaxi i estructura d’una classe en Java (i també a Processing), convé distingir les seues parts principals:</p>
+<ul>
+<li><strong>Nom de la classe:</strong> s'escriu amb majúscula inicial per convenció.</li>
+<li><strong>Atributs:</strong> variables que defineixen l'estat de la classe.</li>
+<li><strong>Constructor (s):</strong> mètode especial que permet crear (instanciar) objectes inicialitzant atributs.</li>
+<li><strong>Mètodes:</strong> accions que poden fer els objectes de la classe.</li>
+<li><strong>Comentaris i documentació:</strong> és bona pràctica descriure què fa cada part de la classe.</li>
+</ul>
+<p>Veien un exemple genèric de com seria una classe en notació <strong>UML</strong></p>
+<center>
+<div class="mermaid">    classDiagram
+    direction TB
+
+    class Cotxe {
+        - String color atribut1
+        - int velocitat
+        + Cotxe(String c, int v)
+        + void arranca()
+        + void accelera()
+        + void frena()
+    }
+        
+</div>
+</center>
+<p>A l'esquema anterior hem definit una classe amb nom <strong>Cotxe</strong> que té dos <strong>atributs</strong>: color i velocitat; un <strong>constructor</strong>: Cotxe i tres <strong>mètodes</strong>: arranca, accelera i frena.</p>
+<p>Però estudiem un exemple més concret. Per tal de veure com és el desenvolupament de classes en programació orientada a objectes, quina és la seua sintaxi, estructura i components típics, el que farem serà un xicotet projecte amb un <strong>sistema de partícules</strong> en forma de volcà com mostra la imatge:</p>
+<center>
+<img alt="Sistema de partícules" src="/assets/Tema6/Volcano1.gif" style="border:1px solid #EEE;" width="50%"/>
+</center>
+<p>Un <strong>sistema de partícules</strong> és una tècnica de programació gràfica utilitzada per simular fenòmens formats per molts  elements petits i independents (anomenats partícules) que, en conjunt, generen un efecte visual complex.</p>
+<p>Cada <strong>partícula</strong> és un objecte amb propietats pròpies (posició, velocitat, color, vida, etc.) i regles de comportament (com es mou, com es dissipa, com canvia al llarg del temps).</p>
+<p>Un <strong>sistema de partícules</strong> gestiona un conjunt d’aquestes partícules:</p>
+<ul>
+<li><strong>Creació:</strong> genera noves partícules segons unes condicions (per exemple, cada frame).</li>
+<li><strong>Actualització:</strong> calcula l’estat de cada partícula (moure’s, canviar d’opacitat, reduir vida...).</li>
+<li><strong>Dibuix:</strong> mostra totes les partícules a la pantalla.</li>
+<li><strong>Eliminació:</strong> descarta les partícules que ja han “mort” o superat la seua vida útil.</li>
+</ul>
+<p>Els exemples més típics de sistemes de partícules són: foc, fum, nuvols, pluja, neu, focs d'artifici...</p>
+<p>En definitiva un <strong>sistema de partícules</strong> és, doncs, un algorisme orientat a objectes que permet simular fenòmens complexos mitjançant la suma de molts elements simples, gestionats de manera conjunta però amb comportament individual.</p>
+<p>Però abans de passar a la implementació del nostre sistema de partícules, unes quantes pinzellades breus de com es desenvolupa un projecte de programació orientada a objectes.</p>
+<h3 id="realitzacio-de-programes-orientats-a-objectes">Realització de programes orientats a objectes</h3>
+<p>A partir d’ara, quan hajam de resoldre un problema hem de començar a <strong>pensar d’una forma diferent</strong> a la que estàvem fent fins ara. En programació orientada a objectes seguirem usant els mecanismes de programació estructurada com ara sentències repetitives, alternatives, etc.. tanmateix hem de plantejar un sistema on les dades presenten una major importància.</p>
+<p><strong>L’objectiu de l’orientació a objectes</strong> és plasmar la realitat de manera que programem els elements el més pròxim possible a com els veiem al seu entorn natural. Així, quan hajam d’encarar un problema d’aquest tipus:</p>
+<ul>
+<li>Ens preguntarem sobre aquells elements dels que realment es interessant emmagatzemar informació, és a dir, <strong>localitzarem els possibles objectes</strong> del nostre programa.</li>
+<li>De cada element hem de conèixer quines són les seues <strong>característiques</strong> o quines són les característiques que el representen.</li>
+<li>De cada element hem de conèixer les <strong>operacions a realitzar</strong>, accions que hi poden fer,  ja que cada conjunt de dades permetrà la realització d’un conjunt d’operacions.</li>
+<li>Finalment, desenvoluparem un entorn on utilitzarem els elements configurats.</li>
+</ul>
+<p>Anem per feina...</p>
+<h2 id="definicio-de-classes-en-java">Definició de classes en Java</h2>
+<p>Per poder definir una classe ens hem de basar en l'esquema general de classe vist a l'apartat <strong>Radiografia d'una classe en Java</strong> per poder construir-la i d'una altra banda, ens hem de fixar també en l'apartat de <strong>Realització de programes orientats a objectes</strong>. Com haviem dit, hem de localitzar primer quines són les característiques que representen l'objecte que es vol implementar així com les operacions o accions que hi pot realitzar.</p>
+<p>Al sistema de particules la classe que pretenem modelar inicialment és la classe <strong>particula</strong>. Per tal de modelar des del punt de vista de la programació orientada a objectes i com varem a veure en apartats anteriors, consistiria en quedar-nos amb aquells detalls que siguen rellevants i desestimar els que no tenen importància. Des del meu punt de vista una particula tindria les següents característiques:</p>
+<ul>
+<li>Té dimensions.</li>
+<li>Té una velocitat inicial.</li>
+<li>Té color.</li>
+<li>Està en una posició.</li>
+<li>Va en una direcció.</li>
+</ul>
+<p>Respecte de les accions que una particula pot realitzar són:</p>
+<ul>
+<li>S'ha de mostrar per pantalla</li>
+<li>Actualitza la seua posició en el temps, en altres paraules, es mou.</li>
+<li>Li afecta la gravetat</li>
+</ul>
+<p>Una vegada hem fet aquest procés d'abstracció i hem decidit què es representarà al nostre sistema i què no, hem de dissenyar la nostra classe usant UML, concretament diagrama de classes:</p>
+<center>
+<div class="mermaid">    classDiagram
+    direction TB
+
+    class Particula {
+        posicio;
+        direccio;
+        velocitat;
+        pinta;
+        grandaria;
+        
+        mostrar()
+        actualitzar()
+    }
+        
+</div>
+</center>
+<p>D'aquest disseny de la classe <strong>particula</strong> ja podem començar a picar el codi del nostre projecte, però abans algunes consideracions prèvies associades a l'entorn integrat de desenvolupament escollit (Processing IDE) i les seues particularitats.</p>
+<p>L'anàlisi i el disseny formen part del procés de desenvolupament abans de començar a codificar. Una vegada tenim l'abstracció feta i el diagrama UML, passem a la fase d'implementació.</p>
+<p>Tot projecte desenvolupat amb Processing IDE (igual que altres IDEs) necessita d'un punt d'entrada, fitxer principal o <strong>main</strong>. Aquest fitxer principal o main és el que conté els mètodes setup, draw, i tots els controladors d'esdeveniments i també serà el lloc des del qual es farà ús de les classes i objectes que formaran part del projecte. En altres paraules, el que hem estat fent fins ara amb les activitats realitzades en Processing IDE.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="c1">// Variables globals</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="c1">// Configuració inicial de l'aplicació</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Bucle de joc o mètode draw</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="c1">// Control d'esdeveniments</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mouseClicked</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span>
+</code></pre></div></td></tr></table></div>
+<p>Aquest codi és el que conté el punt d'entrada principal a l'aplicació és el que donarà nom al projecte, per tant tindrà el mateix nom que la carpeta que el conté. Crea el teu projecte de particules i guarda'l amb el nom <strong>SistemaParticules</strong>.</p>
+<p>Una vegada ja tenim el nostre projecte creat s'afegirien les classes necessàries. En el nostre cas tindrem una unica classe que es diu <strong>Particula</strong>. Aquesta acció resultarà en un nou fitxer dins del projecte que s'acaba de crear. Per tal de crear aquesta classe realitza les següents accions:</p>
+<center>
+<img src="/assets/Tema5/CrearClasse1.png" width="60%"/>
+</center>
+<p>Si es fa clic amb el ratolí el que es marca a la imatge anterior ens apareixeran les següents opcions: "Nova pestanya", "Reanomena", "Elimina", "Pestanya Anterior", "Pestanya següent" ... Hem d'escollir l'opció <strong>Nova Pestanya</strong> i al diàleg que apareixerà li posarem <strong>Particula</strong>, el nom de la classe que volem crear. El resultat final serà que el nostre editor del Processing IDE tindrà dues pestanyes: el main que hem anomenat SistemaParticules i la classe Particula.</p>
+<center>
+<img src="/assets/Tema5/CrearClasse2.png" width="60%"/>
+</center>
+<p>A partir d'ara ja podem començar a escriure el codi de la nostra classe Particula basant-nos en les fases d'anàlisi i disseny anteriors. Però primer vegem quina és la sintaxi del llenguatge Java per a implementar classes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">     </span><span class="kd">class</span> <span class="nc">NomClasse</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">        </span><span class="c1">// Atributs: característiques que defineixen l’estat de la classe</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="c1">// Constructor: mètode que s'executa quan es crea un nou objecte de la classe</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="c1">// Mètodes: accions que defineixen el comportament de la classe</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Al nostre cas la nostra classe inicial en Java podria ser la següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w">    </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">        </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 501. Crea un projecte en Processing IDE</summary>
+<p>Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula"</strong>. </p>
+<p>Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys.</p>
+</details>
+<h2 id="propietats-i-metodes-de-les-classes">Propietats i mètodes de les classes</h2>
+<p>Però com pot veure aquesta definició de classe és un poc pobra i falten encara moltes coses, concretament falten <strong>atributs</strong> i <strong>mètodes</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Recordatori</p>
+<p>Un <strong>atribut</strong> és una característica de l'entitat que es vol representar i determinen l'estat dels objectes de la classe.</p>
+<p>Els <strong>metodes</strong> són els procediments o funcions que condicionen el comportament dels objectes de la classe.</p>
+</div>
+<h3 id="atributs">Atributs</h3>
+<p>Els atributs en <strong>Programació Orientada a Objectes</strong> l'atribut d'una classe és (salvant les distàncies) en programació orientada a objectes com una variable en programació procedimental.  Per tant ja podem intuir que definir atributs a una classe en java és com declarar, en certa manera, una variable en programació estructurada clàssica. Recordeu que una varible en java es fa de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">    </span><span class="c1">// Declaració d'una variable en Java</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="c1">// tipusBase identificador [= valorInicial];</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0f</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Tornem al nostre sistema de particules. Segons el diagrama de classes de l'apartat anterior, la nostra particula tenia les següents característiques: posicio, direccio, velocitat, pinta, grandaria. Ara es tracta de convertir aquestes característiques en atributs de la classe <strong>Particula</strong> i com que hem dit que un atribut és molt semblant a la declaració d'una variable en programació procedimental, el que hem de fer primer és trobar-los un tipus de dades adequat a cada identificador. </p>
+<p>Sembla prou evident que posició serà un PVector, direcció també (encara que aquest no siga tan evident), velocitat podria ser un float, pinta pot ser de tipus <strong>color</strong>, un tipus que ens proporciona l'API de Processing IDE i finalment grandaria pot ser un enter.</p>
+<p>Una vegada decidits els tipus de dades que s'associaran a les propietats de la nostra classe ja podem començar a escriure el codi dels atributs de la classe <strong>Particula</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">    </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="kt">float</span><span class="w">   </span><span class="n">velocitat</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">color</span><span class="w">   </span><span class="n">pinta</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Full d'estils</p>
+<p>Fixa't que en la declaració dels atributs i referent a l'estil en el que s'intentarà escriure codi en aquest curs, no hi ha sempre un sol espai entre tipus de dades i identificador sino que s'escriuen en dos columnes diferent.</p>
+<p>Recorda que també encara que no estiguen, s'han de posar comentaris de documentació als atributs per tal que en cas de ésser necessari poder generar el manual de referència de la classe amb javadoc.</p>
+</div>
+<details class="question">
+<summary>Activitat 502. Atributs de les partícules</summary>
+<p>Igual que hem fet amb la partícula del nostre sistema (volcà). Has de definir els atributs o propietats de la classe partícula del teu sistema (pluja). Analitza detingudament que és el que esperes que passe amb el teu sistema pluja i quines han de ser les característiques que haurien de tindre les gotes (particules) de la pluja (sistema de partícules).</p>
+<p>Recorda que has de posar comentaris de documentació als atributs. Pots aprofitar per explicar la justificació del perquè consideres importants els atributs o propietats que has escollit.</p>
+</details>
+<h3 id="els-constructors-de-classe">Els Constructors de classe</h3>
+<p>Una vegada ja tenim definida a la nostra classe <strong>Particula</strong>, almenys els seus atributs o propietats, el que hem de fer és definir un dels mètodes principals de tota classe: <strong>el constructor de classe</strong>.</p>
+<p>Un <strong>Constructor</strong> és un mètode o funció però amb una sèrie de característiques especials.</p>
+<ol>
+<li>No retorna res</li>
+<li>Té exactament el mateix identificador que l'identificador de la classe</li>
+<li>S'executa de forma automàtica en crear un nou objecte amb la paraula reservada <strong>new</strong></li>
+</ol>
+<p>Hi han dos tipus de constructors: el constructor per defecte i els constructors parametritzats. </p>
+<p>Es poden escriure tants constructors com siga necessari però lo normal és crear un constructor per defecte sense paràmetres i un parametritzat.</p>
+<p>En cas que el programador no definisca cap constructor al codi de la seua classe, és el compilador de java el que el genera automàticament.</p>
+<p>A la nostra classe <strong>Particula</strong> el constructor quedaria de la següent manera:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">    </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="kt">float</span><span class="w">   </span><span class="n">velocitat</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="n">color</span><span class="w">   </span><span class="n">pinta</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="c1">// Constructor de la classe Particula (per defecte)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="n">Particula</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Cap amunt. </span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">pinta</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="c1">// Constructor parametritzat</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="n">Particula</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">vel</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">gran</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">pinta</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gran</span><span class="p">;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 503. Constructor del sistema de partícules</summary>
+<p>Igual que a l'exemple del sistema de partícules, crea dos constructors de la classe partícula del teu sistema de partícules pluja. Un serà el constructor per defecte (sense paràmetres) i l'altre seria el constructor parametritzat que inicialitza els valors del nostre objecte particula (de pluja).</p>
+<p>Després declara dos objectes de la classe Particula al main del teu projecte, concretament a la secció de variables globals i al mètode setup fer que es cride als dos constructors que acabes d'implementar.</p>
+</details>
+<h3 id="els-metodes">Els mètodes</h3>
+<p>Abans d’implementar el comportament de les nostres partícules (com es mouen, com canvien de color o com desapareixen), hem d’aprendre com expressar aquestes accions mitjançant funcions i mètodes. Aquest apartat servirà per entendre la base sobre la qual construirem els comportaments del sistema de partícules.</p>
+<p>Un <strong>mètode</strong> és una <strong>funció definida dins d'una classe</strong> que descriu una <strong>acció o comportament</strong> que poden realitzar els objectes d'aquella classe.</p>
+<p>Els mètodes són els que determinen com interactua un objecte amb si mateix o amb altres objectes, i permeten modificar o consultar el seu estat (els seus atributs)</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// Funció simple </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mostraEstat</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Soc una particula i estic viva"</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="c1">// Funció amb paràmetres</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">sayMyName</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Hola Món, soc la partícula "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strNom</span><span class="p">);</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="c1">// Funció que torna algun valor</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="n">String</span><span class="w"> </span><span class="nf">canviaNom</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">strNom</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 504. Mètodes a les classes</summary>
+<p>Escriu un mètode que retorne l'identificador dels objectes. De la mateixa forma que als mètodes anteriors, afegirem un mètode a la classe Particula que salude i ens diga el nom de la següent forma: "Hola soc pluja$Particula@13e68b75"</p>
+<p>El nom d'un objecte (o identificador) es pot obtindre cridant a:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Per comprovar si tot funciona correctament has de cridar al mètode diguesHola just després de crear els objectes al mètode setup del main.</p>
+</details>
+<p>Continuant amb el nostre sistema de partícules del volcà podriem fer un mètode que s'encarregue de mostrar els objectes particula del sistema.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">    </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="n">PVector</span><span class="w"> </span><span class="n">direccio</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="kt">float</span><span class="w">   </span><span class="n">velocitat</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="n">color</span><span class="w">   </span><span class="n">pinta</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="kt">int</span><span class="w">     </span><span class="n">grandaria</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="c1">// Constructor de la classe Particula (per defecte)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="n">Particula</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Cap amunt. </span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">pinta</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="c1">// Constructor parametritzat</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="n">Particula</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">vel</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">gran</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">direccio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">dir</span><span class="p">;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">pinta</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gran</span><span class="p">;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">            </span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">            </span><span class="n">circle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">grandaria</span><span class="p">);</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>La forma d'usar aquest mètode de la classe partícula des del main i seguint amb el que hem estat fins ara al projecte del volcà, seria la següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// Variables globals</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1">// Mètode setup</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="n">p1</span><span class="p">.</span><span class="na">mostrar</span><span class="p">();</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 505. Mètode mostrar (Sistema de partícules)</summary>
+<p>A la classe partícula crear un mètode mostrar que dibuixe segons les seues propietats: posicio, grandaria i color. Compte amb reutilitzar el codi de l'anterior sistema de partícules perquè mentre les particules del sistema volcà són cercles de color roig, les gotes de pluja quan cauen es podrien representar (dibuixar) d'una altra manera.</p>
+<p>Utilitza aquest mètode des del draw per tal que dibuixe unes tres partícules amb característiques i posicions diferents.</p>
+</details>
+<!--
+## S'han desenvolupat programes que instancien i utilitzin objectes de les classes creades anteriorment
+## S'han utilitzat mecanismes per controlar la visibilitat de les classes i dels seus membres
+## S'han definit i utilitzat classes heretades
+## S'han creat i utilitzat mètodes estàtics
+## S'han definit i utilitzat interfícies
+## S'han creat i utilitzat conjunts i llibreries de classes
+ -->
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "forest",
+    darkmode: true
+});</script></body>
+</html>

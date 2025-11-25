@@ -8,9 +8,9 @@
 <link href="../Tema%2008.%20Col%C2%B7leccions/" rel="prev"/>
 <link href="../Tema%2010.%20Bases%20de%20dades%20relacionals/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
 <title>09.- Herència, polimorfisme i interfícies - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -115,7 +115,6 @@
 <a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     Índex
-    
   </span>
 </a>
 </li>
@@ -123,7 +122,6 @@
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
     01.- Introducció a la programació
-    
   </span>
 </a>
 </li>
@@ -131,7 +129,6 @@
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
     02.- El llenguatge Java
-    
   </span>
 </a>
 </li>
@@ -139,7 +136,6 @@
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
     03.- Prog. Orientada a Objectes
-    
   </span>
 </a>
 </li>
@@ -147,7 +143,6 @@
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
     04.- Estructures de Control
-    
   </span>
 </a>
 </li>
@@ -155,7 +150,6 @@
 <a class="md-nav__link" href="../Tema%2005.%20Programaci%C3%B3%20Modular/">
 <span class="md-ellipsis">
     05.- Programació modular
-    
   </span>
 </a>
 </li>
@@ -163,7 +157,6 @@
 <a class="md-nav__link" href="../Tema%2006.%20Desenvolupament%20de%20Classes/">
 <span class="md-ellipsis">
     06.- Desenvolupament de classes
-    
   </span>
 </a>
 </li>
@@ -171,7 +164,6 @@
 <a class="md-nav__link" href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
 <span class="md-ellipsis">
     07.- Entrada, eixida i gràfics
-    
   </span>
 </a>
 </li>
@@ -179,7 +171,6 @@
 <a class="md-nav__link" href="../Tema%2008.%20Col%C2%B7leccions/">
 <span class="md-ellipsis">
     08.- Col·leccions
-    
   </span>
 </a>
 </li>
@@ -188,14 +179,12 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     09.- Herència, polimorfisme i interfícies
-    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     09.- Herència, polimorfisme i interfícies
-    
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -239,7 +228,6 @@
 <a class="md-nav__link" href="../Tema%2010.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
     10.- Bases de dades relacionals
-    
   </span>
 </a>
 </li>
@@ -266,7 +254,7 @@
 <p>La classe <strong>Con</strong> es converteix en la classe <strong>Crater</strong>
 La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </div>
-<center>
+<p><center>
 <div class="mermaid">	classDiagram 
         Crater "1" --&gt; "*" Piroclast
 
@@ -274,7 +262,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 		Piroclast &lt;|-- Lava
 		Piroclast &lt;|-- Roca
 </div>
-</center>
+</center></p>
 <p>Ara tenim una superclasse <strong>Piroclast</strong> amb les subclasses associades <strong>Fum</strong>, <strong>Lava</strong> i <strong>Roca</strong>. Tots tres són <strong>Piroclasts</strong>, és a dir, tots tenen: posició, direcció, velocitat, color inicial, color final, temps de vida i grandaria a banda d'altres atributs que anirem veient i, a més a més, a tots els afecten les lleis de la física, però cadascuna de les subclasses tenen certes <strong>peculiaritats:</strong></p>
 <ul>
 <li>El <strong>fum</strong> sol anar sempre cap amunt es dissipa amb facilitat i es sol veure afectat per la direcció en la que va el vent.</li>
@@ -324,7 +312,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </div>
 <p>Al utilitzar el mecanisme de l’herència en programació orientada a objectes hem d’intentar sempre tindre un màxim de membres a la superclasse i després a les diferents subclasses només aquells membres o atributs que fan de discriminador, és a dir, que diferencien la classe especialitzada (o subclasse) de la classe superior.</p>
 <p>A la nostra classe Piroclast ens interessa saber com ja haviem fet al tema anterior: la posició, la direcció, velocitat, color inicial, color final i grandària. Mentre que de les subclasses seria interessant saber del fum la seua densitat i com li afecta el vent, de la lava volem saber un color inicial i final que ens simule com va canviant de temperatura, mentre que de la roca ens interessa la forma que té i que pot rebotar.</p>
-<center>
+<p><center>
 <div class="mermaid">	classDiagram 
 		direction LR
         Crater: #ample
@@ -382,7 +370,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 		Piroclast &lt;|-- Lava
 		Piroclast &lt;|-- Roca
 </div>
-</center>
+</center></p>
 <details class="question">
 <summary>Activitat 701. El joc dels escacs</summary>
 <p>Fes un diagrama de classes per al joc dels escacs utilitzant els mecanismes d'herència com hem vist amb l'exemple del Volcano.</p>
@@ -519,9 +507,9 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 </code></pre></div></td></tr></table></div>
 <p>El que fem amb el codi anterior i la crida a <strong>super</strong> és cridar al constructor de la classe pare passant-li els paràmetres que demana per tal d'inicialitzar els diferents piroclasts de forma correcta.</p>
 <p>Per tal de distingir les diferents subclasses, els assignarem diferents colors a les diferents subclasses.</p>
-<center>
-<kbd style="border:1px solid #888;width:50%;">![Volcano](assets/Tema7/VolcanoT7.gif)</kbd>
-</center>
+<p><center>
+<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="../assets/Tema7/VolcanoT7.gif"/></kbd>
+</center></p>
 <p>A més a més, super() també ens permet cridar a mètodes de la classe pare de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">super</span><span class="p">.</span><span class="na">metode</span><span class="p">(</span><span class="n">arguments</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
@@ -1940,8 +1928,8 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

@@ -475,8 +475,50 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="n">square</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span><span class="w">      </span><span class="c1">// Dibuixa un quadrat</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Per finalitzar veure'm també un exemple de l'ús de beginShape, endShape i vertex</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>
+<p>Per finalitzar veure'm també un exemple de l'ús de les funcios de Processing IDE beginShape, endShape i vertex. Quan alguna de les figures que volem dibuixar no són una figura bàsica (cercle, triangle, rectangle, etc..) sino una figura lliure podem utilitzar les funcions abans esmentades. Però veja'm un exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="n">background</span><span class="p">(</span><span class="mi">51</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="n">translate</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="n">beginShape</span><span class="p">();</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="p">);</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="o">-</span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="o">-</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="o">-</span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">  </span><span class="n">vertex</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">  </span><span class="n">endShape</span><span class="p">(</span><span class="n">CLOSE</span><span class="p">);</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 401. Dibuixa amb Processing IDE</summary>
@@ -1479,7 +1521,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 <div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Seria possible fer l'activitat 336 però només utilitzant un bucle?</p>
+<p>Seria possible fer l'activitat 420 però només utilitzant un bucle?</p>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible.</p>
@@ -1552,10 +1594,12 @@ Conclusió</p>
 <details class="question">
 <summary>Activitat 424. Analitzar una llista de nombres</summary>
 <p>Crear un programa en Java que itere sobre una llista de nombres sencers i faça diferents operacions utilitzant les sentències break i continue.  </p>
-<p>Al codi següent tens un programa en Processing IDE que conté una llista de 20 nombres que s'han generat de forma aleatòria. 
-- Part 1 (break): Escriu el codi que busque el número 15 a la llista, si el troba mostra per pantalla un missatge i ix del bucle.
-- Part 2 (continue): Escriu el codi necessari per tal que es mostren tots els números menys els parells.
-- Part 3. Escriure un codi que busqui el primer nombre parell major que 10. Utilitzar continue per saltar els números senars. Utilitzar break per sortir del bucle quan es trobi el primer nombre parell major que 10 i imprimir-lo.</p>
+<p>Al codi següent tens un programa en Processing IDE que conté una llista de 20 nombres que s'han generat de forma aleatòria. </p>
+<ul>
+<li><strong>Part 1 (break):</strong> Escriu el codi que busque el número 15 a la llista, si el troba mostra per pantalla un missatge i ix del bucle.</li>
+<li><strong>Part 2 (continue):</strong> Escriu el codi necessari per tal que es mostren tots els números menys els parells.</li>
+<li><strong>Part 3.</strong> Escriure un codi que busqui el primer nombre parell major que 10. Utilitzar continue per saltar els números senars. Utilitzar break per sortir del bucle quan es trobi el primer nombre parell major que 10 i imprimir-lo.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
@@ -1582,18 +1626,21 @@ Conclusió</p>
 <details class="question">
 <summary>Activitat 425. Combinació d'estructures</summary>
 <p>Crear un programa en Processing que dibuixi un patró de cercles en una graella, però que ometi certs cercles segons unes condicions específiques utilitzant les sentències break i continue.</p>
-<p>Configuració Inicial:</p>
-<div class="highlight"><pre><span></span><code>- Configurar la mida de la finestra.
-- Definir el diàmetre dels cercles i la separació entre ells.
-</code></pre></div>
-<p>Dibuix de la Graella de Cercles:</p>
-<div class="highlight"><pre><span></span><code>- Utilitzar dos bucles for imbricats per dibuixar una graella de cercles.
-- Utilitzar una estructura de selecció per decidir si es dibuixa o no un cercle segons la seva posició.
-</code></pre></div>
-<p>Condicions per Ometre Cercles:</p>
-<div class="highlight"><pre><span></span><code>- Si la suma dels índexs dels bucles (x, y) és un múltiple de 5, ometre el cercle (utilitzar continue).
-- Si s'arriba al cercle de la posició (7, 7), aturar el dibuix completament (utilitzar break).
-</code></pre></div>
+<p><strong>Configuració Inicial:</strong></p>
+<ul>
+<li>Configurar la mida de la finestra.</li>
+<li>Definir el diàmetre dels cercles i la separació entre ells.</li>
+</ul>
+<p><strong>Dibuix de la Graella de Cercles:</strong></p>
+<ul>
+<li>Utilitzar dos bucles for imbricats per dibuixar una graella de cercles.</li>
+<li>Utilitzar una estructura de selecció per decidir si es dibuixa o no un cercle segons la seva posició.</li>
+</ul>
+<p><strong>Condicions per Ometre Cercles:</strong></p>
+<ul>
+<li>Si la suma dels índexs dels bucles (x, y) és un múltiple de 5, ometre el cercle (utilitzar continue).</li>
+<li>Si s'arriba al cercle de la posició (7, 7), aturar el dibuix completament (utilitzar break).</li>
+</ul>
 </details>
 <h2 id="control-dexcepcions">Control d'excepcions</h2>
 <div class="admonition success">

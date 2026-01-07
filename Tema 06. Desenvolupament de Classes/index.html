@@ -650,7 +650,7 @@
 <a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 604. Constructor del sistema de partícules</summary>
+<summary>Activitat 604. Constructor de partícules</summary>
 <p>Igual que a l'exemple del sistema de partícules, crea dos constructors de la classe partícula del teu sistema de partícules pluja. Un serà el constructor per defecte (sense paràmetres) i l'altre seria el constructor parametritzat que inicialitza els valors del nostre objecte particula (de pluja).</p>
 <p>Després declara dos objectes de la classe Particula al main del teu projecte, concretament a la secció de variables globals i al mètode setup fer que es cride als dos constructors que acabes d'implementar.</p>
 </details>
@@ -740,7 +740,7 @@
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 606. Mètodes a les classes</summary>
+<summary>Activitat 605. Mètodes a les classes</summary>
 <p>Escriu un mètode que retorne l'identificador dels objectes. De la mateixa forma que als mètodes anteriors, afegirem un mètode a la classe Particula que salude i ens diga el nom de la següent forma: "Hola soc pluja$Particula@13e68b75"</p>
 <p>El nom d'un objecte (o identificador) es pot obtindre cridant a:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
@@ -859,7 +859,7 @@
 <a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 607. Mètode mostrar (Sistema de partícules)</summary>
+<summary>Activitat 606. Mètode mostrar de la classe partícula</summary>
 <p>A la classe partícula crear un mètode mostrar que dibuixe segons les seues propietats: posicio, grandaria i color. Compte amb reutilitzar el codi de l'anterior sistema de partícules perquè mentre les particules del sistema volcà són cercles de color roig, les gotes de pluja quan cauen es podrien representar (dibuixar) d'una altra manera.</p>
 <p>Utilitza aquest mètode mostrar fes que les cinc particules que has creat a l'activitat anterior es mostren per pantalla.</p>
 </details>
@@ -893,9 +893,9 @@
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 608. Mètode actualitzar (Sistema de partícules)</summary>
+<summary>Activitat 607. Mètode actualitzar de la classe partícula</summary>
 <p>Al teu sistema de partícules de la pluja, implementa el mètode actualitzar en base a les lleis de la física com em fet a l'exemple anterior.</p>
-<p>Algunes idees: si imagines que l'aplicació que estàs creant és una finestra per la que veus la pluja caure has de tindre en compte el factor profunditat. No és igual una gota de pluja que cau prop de la finestra que la que cau lluny. </p>
+<p><strong>Algunes idees:</strong> si imagines que l'aplicació que estàs creant és una finestra per la que veus la pluja caure has de tindre en compte el factor profunditat. No és igual una gota de pluja que cau prop de la finestra que la que cau lluny. </p>
 <p>Qualsevol altra cosa que aportes a l'activitat i estiga degudament justificada també puntuarà.</p>
 </details>
 <h2 id="modificadors-de-visibilitat">Modificadors de visibilitat</h2>
@@ -1049,7 +1049,7 @@
 <p>Per norma els atributs solen tindre un modificador de visibilitat <strong>privat</strong> i tant els mètodes com les classes solen ser <strong>public</strong></p>
 </div>
 <details class="question">
-<summary>Activitat 609. Modificadors de visibilitat</summary>
+<summary>Activitat 608. Modificadors de visibilitat</summary>
 <p>Aplica la norma dels modificadors de visibilitat al teu projecte pluja i adapta les classes que ja tens implementades.</p>
 </details>
 <h3 id="get-i-sets">Get i Sets</h3>
@@ -1061,46 +1061,12 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="n">f</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>La qual cosa aparentment no estaria mal i funcionaria de forma correcta, però que passaria si l'ususari/programador del nostre sistema de partícules escrivira un codi com el següent:</p>
-<p>```java lineums="1"
-    Particula p = new Particula();
-    p.vel = 10000f;
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>El codi continuaria siguen correcte i no donaria errades de compilació però faria el nostre sistema de partícules insostenible i molt inestable. Per aquest tipus de casos serveixen per una banda els modificadors de visibilitat i els get i sets dels atributs.
-<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>Mira el següent codi:
-<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>
-<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>```java lineums="1"
-<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>public class Particula {
-<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a>    private float vel;
-<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a>
-<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a>    public Particula () {
-<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a>        this.vel = 0f;
-<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a>    }
-<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a>
-<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a>    public setVelocitat (float v) {
-<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a>        if (v &lt; 0 || v &gt; 15) {
-<a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a>            println("Error de configuració. Velocitat massa alta o negativa");
-<a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>            return;
-<a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a>        }
-<a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a>        this.vel = v;
-<a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a>    }
-<a href="#__codelineno-15-20" id="__codelineno-15-20" name="__codelineno-15-20"></a>}
-</code></pre></div></p>
-<p>D'aquesta forma ens assegurem que tot ususari de la nostra particula del sistema de particules no podrà assignar mai una velocitat superior a 15 ni inferior a 0 a els elements del sistema.</p>
-<p>Els sets per contra, serveixen per tal que només aquells valors dels atributs que el programador desitje siguen accessibles des de fora de la classe.</p>
-<details class="question">
-<summary>Activitat 610. Gets i sets</summary>
-<p>Per aquells atributs susceptibles de ser modificats per l'usuari de la classe, fer els gets i sets pertinents. Mínim hauràs d'afegir el mètode <strong>setColor</strong> que tindrà paràmetres: r, g i b de tipus enters i amb rang de valors entre 0 i 255. El mètode setColor s'haurà d'encarregar de traduir els tres números enters a un número hexadecimal amb format ARGB. Exemple: 0xFF33BBAA on les primeres dues F són les que indiquen opacitat total.</p>
-</details>
-<h2 id="metodes-i-atributs-estatics">Mètodes i atributs estàtics</h2>
-<div class="admonition success">
-<p class="admonition-title">Criteris d'avaluació associats</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.8. S'han creat i utilitzat mètodes estàtics</li>
-</ul>
-</div>
-<p>En el desenvolupament d’aplicacions orientades a objectes hi ha situacions en què determinades dades o comportaments no pertanyen a cap objecte concret, sinó que són comuns a tot el sistema. En aquests casos, Java permet definir atributs i mètodes estàtics, associats a la classe i no a les seues instàncies. Veurem tres exemples d'ús d'atributs i mètodes estàtics: un comptador global, un mètode factory i una classe estàtica.</p>
-<h3 id="comptador-global-de-particules">Comptador global de partícules</h3>
-<p>Un ús molt comú que se li sol donar als atributs estàtics són els <strong>comptadors globals</strong> o les <strong>Factory o granges</strong>. Si per exemple al nostre sistema de partícules vullgurem portar un comptador amb totes les partícules que ha expulsat el volcà, podriem usar un atribut estàtic. Esta vegada sí a la mateixa classe partícula. I hauriem de modificar els constructors per tal que incrementen aquesta mena de variable estàtica global cada vegada que es crea una partícula.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="w">    </span><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">();</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span><span class="n">f</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>El codi continuaria siguen correcte i no donaria errades de compilació però faria el nostre sistema de partícules insostenible i molt inestable. Per aquest tipus de casos serveixen per una banda els modificadors de visibilitat i els get i sets dels atributs.</p>
+<p>Mira el següent codi:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1116,24 +1082,70 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <span class="normal"><a href="#__codelineno-16-13">13</a></span>
 <span class="normal"><a href="#__codelineno-16-14">14</a></span>
 <span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">totalParticules</span><span class="p">;</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="c1">// Constructor de la classe Particula (per defecte)</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Particula</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="n">totalParticules</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalParticules</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalParticules</span><span class="p">;</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="p">}</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="c1">// Al fitxer main del projecte</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="n">println</span><span class="p">(</span><span class="n">Particula</span><span class="p">.</span><span class="na">getTotalParticules</span><span class="p">());</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Particula</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0f</span><span class="p">;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">setVelocitat</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">"Error de configuració. Velocitat massa alta o negativa"</span><span class="p">);</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>D'aquesta forma ens assegurem que tot ususari de la nostra particula del sistema de particules no podrà assignar mai una velocitat superior a 15 ni inferior a 0 a els elements del sistema.</p>
+<p>Els sets per contra, serveixen per tal que només aquells valors dels atributs que el programador desitje siguen accessibles des de fora de la classe.</p>
+<details class="question">
+<summary>Activitat 609. Gets i sets</summary>
+<p>Per aquells atributs susceptibles de ser modificats per l'usuari de la classe, fer els gets i sets pertinents. Mínim hauràs d'afegir el mètode <strong>setColor</strong> que tindrà paràmetres: r, g i b de tipus enters i amb rang de valors entre 0 i 255. El mètode setColor s'haurà d'encarregar de traduir els tres números enters a un número hexadecimal amb format ARGB. Exemple: 0xFF33BBAA on les primeres dues F són les que indiquen opacitat total.</p>
+</details>
+<h2 id="metodes-i-atributs-estatics">Mètodes i atributs estàtics</h2>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA4.8. S'han creat i utilitzat mètodes estàtics</li>
+</ul>
+</div>
+<p>En el desenvolupament d’aplicacions orientades a objectes hi ha situacions en què determinades dades o comportaments no pertanyen a cap objecte concret, sinó que són comuns a tot el sistema. En aquests casos, Java permet definir atributs i mètodes estàtics, associats a la classe i no a les seues instàncies. Veurem tres exemples d'ús d'atributs i mètodes estàtics: un comptador global, un mètode factory i una classe estàtica.</p>
+<h3 id="comptador-global-de-particules">Comptador global de partícules</h3>
+<p>Un ús molt comú que se li sol donar als atributs estàtics són els <strong>comptadors globals</strong> o les <strong>Factory o granges</strong>. Si per exemple al nostre sistema de partícules vullgurem portar un comptador amb totes les partícules que ha expulsat el volcà, podriem usar un atribut estàtic. Esta vegada sí a la mateixa classe partícula. I hauriem de modificar els constructors per tal que incrementen aquesta mena de variable estàtica global cada vegada que es crea una partícula.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">totalParticules</span><span class="p">;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="c1">// Constructor de la classe Particula (per defecte)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Particula</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">        </span><span class="n">totalParticules</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalParticules</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalParticules</span><span class="p">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="p">}</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="c1">// Al fitxer main del projecte</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="n">println</span><span class="p">(</span><span class="n">Particula</span><span class="p">.</span><span class="na">getTotalParticules</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <p>En el sistema de partícules desenvolupat en aquest tema, les lleis de la física que governen el moviment de les partícules (com la gravetat o la fricció de l’aire) no són una propietat individual de cada partícula, sinó que són compartides per totes elles. Per aquest motiu, aquestes lleis s’han encapsulat en una classe auxiliar anomenada Fisica2D, que fa ús exclusiu d’atributs i mètodes estàtics.</p>
 <details class="question">
-<summary>Activitat 612. Crea un atribut estàtic al sistema de partícules</summary>
+<summary>Activitat 610. Crea un atribut estàtic al sistema de partícules</summary>
 <p>Crea un comptador de gotes de pluja al teu sistema de partícules de la mateixa forma que hem vist a l'apartat anterior.</p>
 </details>
 <h3 id="metodes-estatics">Mètodes estàtics</h3>
@@ -1141,34 +1153,34 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>En el nostre cas del sistema de partícules, aquest patró s’implementa mitjançant mètodes estàtics dins de la pròpia classe Particula, que actuen com una <strong>fàbrica de partícules.</strong></p>
 <p><strong>Per què utilitzar una fàbrica?</strong>
 Fins ara, la creació d’una partícula podria fer-se així:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">p</span><span class="p">.</span><span class="na">setColorRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">p</span><span class="p">.</span><span class="na">setVelocitat</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">p</span><span class="p">.</span><span class="na">setColorRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">p</span><span class="p">.</span><span class="na">setVelocitat</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 Aquest enfocament presenta alguns inconvenients: la lògica de construcció queda repartida pel codi, qualsevol canvi obliga a modificar molts llocs, i el codi principal es torna menys llegible.</p>
 <p>Amb una fàbrica, tota aquesta lògica queda centralitzada en un únic lloc.</p>
 <p>Factory method a la classe Partícula</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span>
-<span class="normal"><a href="#__codelineno-18-3">3</a></span>
-<span class="normal"><a href="#__codelineno-18-4">4</a></span>
-<span class="normal"><a href="#__codelineno-18-5">5</a></span>
-<span class="normal"><a href="#__codelineno-18-6">6</a></span>
-<span class="normal"><a href="#__codelineno-18-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Particula</span><span class="w"> </span><span class="nf">crearParticula</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">origen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">(</span><span class="n">origen</span><span class="p">.</span><span class="na">copy</span><span class="p">());</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">setColorRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PVector</span><span class="p">.</span><span class="na">random2D</span><span class="p">();</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">Random</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">));</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Particula</span><span class="w"> </span><span class="nf">crearParticula</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">origen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">(</span><span class="n">origen</span><span class="p">.</span><span class="na">copy</span><span class="p">());</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">setColorRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PVector</span><span class="p">.</span><span class="na">random2D</span><span class="p">();</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="na">vel</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">Random</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">));</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Des del programa principal, ja no és necessari usar new, sinó que simplement es demana a la fàbrica que cree la partícula:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Particula</span><span class="p">.</span><span class="na">crearParticula</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">origen</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Particula</span><span class="p">.</span><span class="na">crearParticula</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">origen</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 613. Crear una fàbrica al teu sistema de partícules</summary>
+<summary>Activitat 611. Crear una fàbrica al teu sistema de partícules</summary>
 <p>En el projecte del tema 6 hem desenvolupat un sistema de partícules que simula un volcà.</p>
 <p>A partir d’aquest exemple, cada alumne haurà de desenvolupar un sistema de partícules propi que simule la pluja, reutilitzant la classe Particula i els coneixements sobre mètodes i atributs estàtics.</p>
 <p>Per a facilitar la creació de partícules i centralitzar la seua configuració, utilitzarem el patró de disseny Factory Method.</p>
@@ -1182,49 +1194,49 @@ Aquest enfocament presenta alguns inconvenients: la lògica de construcció qued
 <li><strong>Mètodes</strong> estàtics que calculen forces físiques a partir de l’estat d’una partícula, com la força de fricció en funció de la seua velocitat.</li>
 </ul>
 <p>Aquests mètodes poden ser utilitzats directament des d’altres classes sense necessitat de crear cap objecte Fisica2D.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-20-10">10</a></span>
-<span class="normal"><a href="#__codelineno-20-11">11</a></span>
-<span class="normal"><a href="#__codelineno-20-12">12</a></span>
-<span class="normal"><a href="#__codelineno-20-13">13</a></span>
-<span class="normal"><a href="#__codelineno-20-14">14</a></span>
-<span class="normal"><a href="#__codelineno-20-15">15</a></span>
-<span class="normal"><a href="#__codelineno-20-16">16</a></span>
-<span class="normal"><a href="#__codelineno-20-17">17</a></span>
-<span class="normal"><a href="#__codelineno-20-18">18</a></span>
-<span class="normal"><a href="#__codelineno-20-19">19</a></span>
-<span class="normal"><a href="#__codelineno-20-20">20</a></span>
-<span class="normal"><a href="#__codelineno-20-21">21</a></span>
-<span class="normal"><a href="#__codelineno-20-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">processing.core.PVector</span><span class="p">;</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fisica2D</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">  </span><span class="c1">// Constants físiques globals</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">GRAVETAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.3f</span><span class="p">;</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FRICCIO_AIRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.02f</span><span class="p">;</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">  </span><span class="c1">// Aplica la gravetat</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="nf">gravetat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">GRAVETAT</span><span class="p">);</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13"></a>
-<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">  </span><span class="c1">// Calcula força de fricció</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="nf">friccio</span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">velocitat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="w">    </span><span class="n">PVector</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocitat</span><span class="p">.</span><span class="na">copy</span><span class="p">();</span>
-<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">normalize</span><span class="p">();</span>
-<a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="n">FRICCIO_AIRE</span><span class="p">);</span>
-<a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
-<a id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-20-22" name="__codelineno-20-22"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">processing.core.PVector</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fisica2D</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">  </span><span class="c1">// Constants físiques globals</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">GRAVETAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.3f</span><span class="p">;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FRICCIO_AIRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.02f</span><span class="p">;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">  </span><span class="c1">// Aplica la gravetat</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="nf">gravetat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">GRAVETAT</span><span class="p">);</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="w">  </span><span class="c1">// Calcula força de fricció</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="nf">friccio</span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">velocitat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="w">    </span><span class="n">PVector</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocitat</span><span class="p">.</span><span class="na">copy</span><span class="p">();</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">normalize</span><span class="p">();</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="na">mult</span><span class="p">(</span><span class="n">FRICCIO_AIRE</span><span class="p">);</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Classes estàtiques a Processing IDE</p>
@@ -1239,23 +1251,23 @@ Aquest enfocament presenta alguns inconvenients: la lògica de construcció qued
 <li><strong>Centralitzar</strong> les constants i càlculs físics en una única classe.</li>
 </ul>
 <p>Amb aquesta nova classe Fisica2D, la classe partícula també es veuria afectada al seu mètode <strong>actualitzar</strong> com es pot veure a continuació.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
-<span class="normal"><a href="#__codelineno-21-2">2</a></span>
-<span class="normal"><a href="#__codelineno-21-3">3</a></span>
-<span class="normal"><a href="#__codelineno-21-4">4</a></span>
-<span class="normal"><a href="#__codelineno-21-5">5</a></span>
-<span class="normal"><a href="#__codelineno-21-6">6</a></span>
-<span class="normal"><a href="#__codelineno-21-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="n">PVector</span><span class="w"> </span><span class="n">acceleracio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="n">acceleracio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Fisica2D</span><span class="p">.</span><span class="na">gravetat</span><span class="p">());</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="n">acceleracio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Fisica2D</span><span class="p">.</span><span class="na">friccio</span><span class="p">(</span><span class="n">vel</span><span class="p">));</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">    </span><span class="n">vel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">acceleracio</span><span class="p">);</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="n">posicio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="n">PVector</span><span class="w"> </span><span class="n">acceleracio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="n">acceleracio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Fisica2D</span><span class="p">.</span><span class="na">gravetat</span><span class="p">());</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="n">acceleracio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Fisica2D</span><span class="p">.</span><span class="na">friccio</span><span class="p">(</span><span class="n">vel</span><span class="p">));</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="n">vel</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">acceleracio</span><span class="p">);</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="n">posicio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Com es pot obaservar si compareu el mètode actualitzar modificat amb el mètode anterior, ara és molt més simple i fàcil de llegir a primera vista. En aquest cas la classe estàtica ens serveix per ocultar <strong>(Principi d'ocultació - POO)</strong> el funcionament intern de diversos càlculs físics que no necessàriament tenen a veure amb la classe Partícula. És a dir, a l'usuari de les classes els importa com fan els mètodes sino què fan els mètodes.</p>
 <details class="question">
-<summary>Activitat 614. Adapta la classe Fisica2D</summary>
+<summary>Activitat 612. Adapta la classe Fisica2D</summary>
 <p>Per tal d’adaptar el sistema de partícules al fenomen de la pluja, caldrà modificar o ampliar la classe Fisica2D, fent ús d’atributs i mètodes estàtics.</p>
 <ol>
 <li>Analitza el funcionament de la classe Fisica2D utilitzada en el sistema de partícules del volcà.</li>
@@ -1282,11 +1294,11 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 - Els mateixos mètodes</p>
 <p>En lloc de repetir codi, podem crear una classe base i una classe heretada que reutilitze aquest comportament</p>
 <p>Des d'un punt de vista general, una classe B que herete d'una classe A en java es definiria usant la paraula reservada de java <strong>extends</strong> de la segÜeng manera:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
-<span class="normal"><a href="#__codelineno-22-2">2</a></span>
-<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="c1">// Codi de la classe</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="c1">// Codi de la classe</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="herencia-al-sistema-de-particules">Herència al sistema de partícules</h4>
 <p>En el nostre projecte, totes les partícules:
@@ -1297,32 +1309,32 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 - Es dibuixen per pantalla (comportament)</p>
 <p>Per això hem creat una classe general anomenada <strong>Partícula</strong>, que conté els atributs i mètodes (comportament) comuns a totes les partícules.  A partir d'aquesta classe, podem crear partícules més específiques, com ara partícules de lava, gotes de pluja, paperets de confeti, etc.</p>
 <p>Com que el nostre projecte de sistema de partícules intenta simular les partícules de lava expulsades per un volcà, a partir de la classe Partícula que ja tenim creada i que contenirà els atributs i comportaments comuns a totes les particules, crearem una particula de lava que herete de la partícula general</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
-<span class="normal"><a href="#__codelineno-23-2">2</a></span>
-<span class="normal"><a href="#__codelineno-23-3">3</a></span>
-<span class="normal"><a href="#__codelineno-23-4">4</a></span>
-<span class="normal"><a href="#__codelineno-23-5">5</a></span>
-<span class="normal"><a href="#__codelineno-23-6">6</a></span>
-<span class="normal"><a href="#__codelineno-23-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Lava</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Particula</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Lava</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">posInicial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">        </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posInicial</span><span class="p">.</span><span class="na">copy</span><span class="p">();</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">        </span><span class="n">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">        </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xFFFF5500</span><span class="p">;</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Com pots observar la classe Lava no redefineix cpa mètode, reutilitza actualitzar() i mostrar() i només inicialitza els seus valors. Però com usariem ara la nova classe creada al nostre sistema de partícules? </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span>
 <span class="normal"><a href="#__codelineno-24-3">3</a></span>
 <span class="normal"><a href="#__codelineno-24-4">4</a></span>
 <span class="normal"><a href="#__codelineno-24-5">5</a></span>
-<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="c1">// Des del main del nostre projecte</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="w"> </span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3"></a>
-<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="c1">// Després podem fer</span>
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="n">p</span><span class="p">.</span><span class="na">actualitzar</span><span class="p">();</span>
-<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="n">p</span><span class="p">.</span><span class="na">mostrar</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span>
+<span class="normal"><a href="#__codelineno-24-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Lava</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Particula</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Lava</span><span class="w"> </span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">posInicial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">        </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posInicial</span><span class="p">.</span><span class="na">copy</span><span class="p">();</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">        </span><span class="n">velocitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">        </span><span class="n">pinta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xFFFF5500</span><span class="p">;</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Com pots observar la classe Lava no redefineix cpa mètode, reutilitza actualitzar() i mostrar() i només inicialitza els seus valors. Però com usariem ara la nova classe creada al nostre sistema de partícules? </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span>
+<span class="normal"><a href="#__codelineno-25-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="c1">// Des del main del nostre projecte</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="w"> </span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="c1">// Després podem fer</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="n">p</span><span class="p">.</span><span class="na">actualitzar</span><span class="p">();</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="n">p</span><span class="p">.</span><span class="na">mostrar</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Tot i que la classe <strong>Lava</strong> és una classe diferent, es pot utlitzar com una Particula dins del sistema, això és possible perquè:
 - Una instància de Lava és també una instància de Partícula
@@ -1335,7 +1347,7 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 - No és necessari redefinir mètodes per poder usar herència.
 - L’objectiu principal en aquest punt és reutilitzar codi, no modificar-lo.</p>
 <details class="question">
-<summary>Activitat 615. Adapta la classe Fisica2D</summary>
+<summary>Activitat 613. Herència de partícules</summary>
 <p>A partir de la classe Particula, crea una classe heretada <strong>Gota</strong> que represente una gota de pluja. La nova classe haurà de:
 - Heretar de partícula.
 - Inicialitzar la posició i la velocitat inicials cap avall (les gotes cauen).
@@ -1380,13 +1392,13 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 - Qualsevol altre tipus de partícula</p>
 <p>Podem representar aquest comportament mitjançant una interfície.</p>
 <h3 id="defniicio-de-la-interficie-actualitzable">Defniició de la interfície Actualitzable</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
-<span class="normal"><a href="#__codelineno-25-2">2</a></span>
-<span class="normal"><a href="#__codelineno-25-3">3</a></span>
-<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Actualitzable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="p">();</span>
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrar</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">app</span><span class="p">);</span>
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Actualitzable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="p">();</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrar</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">app</span><span class="p">);</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Aquesta intefície indica que qualsevol classe que la implemente:
 - Ha de tindre un mètode actualitzar()
@@ -1394,44 +1406,45 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 <p>No diu com s'ha d'implementar.</p>
 <h3 id="implementacio-de-la-interficie-de-la-classe-particula">Implementació de la interfície de la classe Partícula</h3>
 <p>La classe Partícula ja disposa d'aquestos mètodes, per tant po implementar la interfície:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-26-10">10</a></span>
-<span class="normal"><a href="#__codelineno-26-11">11</a></span>
-<span class="normal"><a href="#__codelineno-26-12">12</a></span>
-<span class="normal"><a href="#__codelineno-26-13">13</a></span>
-<span class="normal"><a href="#__codelineno-26-14">14</a></span>
-<span class="normal"><a href="#__codelineno-26-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Actualitzable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">velocitat</span><span class="p">;</span>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinta</span><span class="p">;</span>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">        </span><span class="n">posicio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">velocitat</span><span class="p">);</span>
-<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-26-10" name="__codelineno-26-10"></a>
-<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrar</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">app</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="w">        </span><span class="n">app</span><span class="p">.</span><span class="na">fill</span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span>
-<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="w">        </span><span class="n">app</span><span class="p">.</span><span class="na">ellipse</span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-27-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-27-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-27-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-27-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-27-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-27-10">10</a></span>
+<span class="normal"><a href="#__codelineno-27-11">11</a></span>
+<span class="normal"><a href="#__codelineno-27-12">12</a></span>
+<span class="normal"><a href="#__codelineno-27-13">13</a></span>
+<span class="normal"><a href="#__codelineno-27-14">14</a></span>
+<span class="normal"><a href="#__codelineno-27-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Particula</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Actualitzable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">posicio</span><span class="p">;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="n">velocitat</span><span class="p">;</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pinta</span><span class="p">;</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">actualitzar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="w">        </span><span class="n">posicio</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">velocitat</span><span class="p">);</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrar</span><span class="p">(</span><span class="n">PApplet</span><span class="w"> </span><span class="n">app</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a><span class="w">        </span><span class="n">app</span><span class="p">.</span><span class="na">fill</span><span class="p">(</span><span class="n">pinta</span><span class="p">);</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a><span class="w">        </span><span class="n">app</span><span class="p">.</span><span class="na">ellipse</span><span class="p">(</span><span class="n">posicio</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">posicio</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Observa que:
 - No cal afegir mètodes nous
 - Només indicar que la classe <strong>implementa la interfície</strong></p>
 <h3 id="per-que-es-util-aco">Per què és útil açò?</h3>
 <p>Gràcies a la interfície, ara podem treballar amb qualsevol objecte que siga Actualitzable, siga o no una Particula.</p>
-<p>Per exemple:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">Canviar</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exemple</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">tal</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">arraylists</span>
-</code></pre></div></td></tr></table></div></p>
+<!--Per exemple:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Canviar</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">exemple</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">tal</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">arraylists</span>
+</code></pre></div></td></tr></table></div>
+-->
 <div class="admonition info">
 <p class="admonition-title">Idees clau a recordar</p>
 <ul class="task-list">
@@ -1442,7 +1455,7 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 </ul>
 </div>
 <details class="question">
-<summary>Activitat 616. Interfície de comportament</summary>
+<summary>Activitat 614. Interfície de comportament</summary>
 <p>Crea una interfície anomenada Actualitzable que definisca els mètodes necessaris per actualitzar i mostrar un objecte del sistema.    </p>
 <p>A continuació:
 - Fes que la classe <code>Particula</code> implemente aquesta interfície.
@@ -1467,9 +1480,9 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 <p>Tot això ho farem dins del projecte del <strong>sistema de partícules.</strong></p>
 <h3 id="conjunts-dobjectes-al-sistema-de-particules">Conjunts d'objectes al sistema de partícules</h3>
 <p>Fins ara hem treballat només amb una partícula o diverses partícules però declarades a nivell individual i sense cap tipus de relació entre elles.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
-<span class="normal"><a href="#__codelineno-28-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <p>Però un <strong>sistema de partícules</strong> no és més que un conjunt (relativament gran) de partícules que es mostren i mouen al mateix temps. Per exemple, el comportament del nostre volcà és que cada <strong>n</strong> frames expulse (<strong>crear</strong>) una particula de lava de forma continuada. En aquest escenari seria impossible declarar utilitzant el sistema anterior totes les partícules de lava que es crearan durant l'execució del nostre sistema de partícules. Per això necessitem una manera d'agrupar-les, recórrer-les, actualitzar-les i dibuixar-les de forma conjunta. A aquest agrupament d'objectes l'anomenem <strong>conjunt</strong>.</p>
 <h4 id="que-es-un-conjunt-dobjectes">Què és un conjunt d'objectes?</h4>
@@ -1479,45 +1492,51 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 <p>En el nostre cas:
 - Un conjunt de Particula
 - Que pot contindre Lava, Gota, etc.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
-<span class="normal"><a href="#__codelineno-29-2">2</a></span>
-<span class="normal"><a href="#__codelineno-29-3">3</a></span>
-<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="c1">// Al exemple següent es crea un conjunt de particules amb identificador partícules que conté objectes de la classe Particula (entre &lt;&gt;)</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Particula</span><span class="o">&gt;</span><span class="w"> </span><span class="n">particules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="n">particules</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)));</span>
-<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="n">particules</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)));</span>
-</code></pre></div></td></tr></table></div>
-<p>Ara amb aquest <strong>ArrayList</strong> ja podem: agrupar i treballar amb totes les particules recorrent l'arrai d'objectes de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
 <span class="normal"><a href="#__codelineno-30-3">3</a></span>
-<span class="normal"><a href="#__codelineno-30-4">4</a></span>
-<span class="normal"><a href="#__codelineno-30-5">5</a></span>
-<span class="normal"><a href="#__codelineno-30-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">particules</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">actualitzar</span><span class="p">();</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">mostrar</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="c1">// Al exemple següent es crea un conjunt de particules amb identificador partícules que conté objectes de la classe Particula (entre &lt;&gt;)</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Particula</span><span class="o">&gt;</span><span class="w"> </span><span class="n">particules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="n">particules</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)));</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="n">particules</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Lava</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)));</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Avantatges d'usar conjunts</strong>
-- [x] Permeten gestionar molts objectes al mateix temps.
-- [x] Faciliten la reutilització del codi
-- [x] Fan el programa més flexible
-- [x] Permeten ampliar el sistema fàcilment</p>
+<p>Ara amb aquest <strong>ArrayList</strong> ja podem: agrupar i treballar amb totes les particules recorrent l'arrai d'objectes de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span>
+<span class="normal"><a href="#__codelineno-31-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">particules</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">actualitzar</span><span class="p">();</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">mostrar</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Avantatges d'usar conjunts</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Permeten gestionar molts objectes al mateix temps.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Faciliten la reutilització del codi</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Fan el programa més flexible</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Permeten ampliar el sistema fàcilment</li>
+</ul>
 <p>Observa que no ens importa quin tipus de particula és, totes es tracten com a partícula i el programa queda més net i escalable.</p>
 <details class="question">
-<summary>Activitat 618. Sistema de partícules múltiples</summary>
+<summary>Activitat 615. Sistema de partícules múltiples</summary>
+<p>Modifica el teu projecte del volcà perquè:</p>
 </details>
-<p>Modifica el teu projecte del volcà perquè:
-- Es cree un conjunt de partícules.
-- Cada iteració (pot ser cada cert número de frames) del programa afegisca una nova partícula de lava.
-- Totes les partícules s’actualitzen i es mostren utilitzant el conjunt.</p>
+<ul>
+<li>Es cree un conjunt de partícules.</li>
+<li>Cada iteració (pot ser cada cert número de frames) del programa afegisca una nova partícula de lava.</li>
+<li>Totes les partícules s’actualitzen i es mostren utilitzant el conjunt.</li>
+</ul>
 <h3 id="llibreria-de-classes-del-sistema-de-particules">Llibreria de classes del sistema de partícules</h3>
-<p>A mesura que un projecte creix, també creix el nombre de classes. Si totes estigueren dins del mateix fitxer, el codi seria difícil de:
-- Llegir
-- Mantindre
-- Reutilitzar</p>
+<p>A mesura que un projecte creix, també creix el nombre de classes. Si totes estigueren dins del mateix fitxer, el codi seria difícil de:</p>
+<ul>
+<li>Llegir</li>
+<li>Mantindre</li>
+<li>Reutilitzar</li>
+</ul>
 <p>Per això organitzem el nostre codi en llibreries de classes.</p>
 <h4 id="que-es-una-llibreria-de-classes">Què és una llibreria de classes</h4>
 <p>Una llibreria de classes és un conjunt de classes relacionades entre si que resolen un problema concret i poden ser reutilitzades en altres projectes.
@@ -1550,16 +1569,13 @@ A continuació pots observar un exemple d'organització d'un projecte amb una ll
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Fa el projecte més professional</li>
 </ul>
 <details class="question">
-<summary>Activitat 619. Organitzem la llibreria</summary>
+<summary>Activitat 616. Organitzem la llibreria</summary>
 <p>Reorganitza el teu projecte perquè:
 - Les classes del sistema de partícules estiguen <strong>separades</strong> del sketch SistemaParticules.pde.
 - El sketch només s’encarregue de crear i utilitzar les partícules.
 - El sistema de partícules puga ser reutilitzat en un altre projecte.
 - Mescla el sistema de partícules volcà amb el de la pluja en un mateix sketch.</p>
 </details>
-<p><center>
-<strong>THE END</strong>
-</center></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

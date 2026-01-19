@@ -8,23 +8,23 @@
 <link href="../Tema%2005.%20Programaci%C3%B3%20Modular/" rel="prev"/>
 <link href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.12" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
 <title>06.- Desenvolupament de classes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tema-5-desenvolupament-de-classes">
+<a class="md-skip" href="#tema-6-desenvolupament-de-classes">
           Skip to content
         </a>
 </div>
@@ -33,10 +33,10 @@
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -57,16 +57,16 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 <input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 </form>
-<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -74,17 +74,17 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
 <nav aria-label="Search" class="md-search__options">
 <button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -106,7 +106,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
@@ -115,6 +115,7 @@
 <a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     Índex
+    
   </span>
 </a>
 </li>
@@ -122,6 +123,7 @@
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
 <span class="md-ellipsis">
     01.- Introducció a la programació
+    
   </span>
 </a>
 </li>
@@ -129,6 +131,7 @@
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
 <span class="md-ellipsis">
     02.- El llenguatge Java
+    
   </span>
 </a>
 </li>
@@ -136,6 +139,7 @@
 <a class="md-nav__link" href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/">
 <span class="md-ellipsis">
     03.- Prog. Orientada a Objectes
+    
   </span>
 </a>
 </li>
@@ -143,6 +147,7 @@
 <a class="md-nav__link" href="../Tema%2004.%20Estructures%20de%20Control/">
 <span class="md-ellipsis">
     04.- Estructures de Control
+    
   </span>
 </a>
 </li>
@@ -150,6 +155,7 @@
 <a class="md-nav__link" href="../Tema%2005.%20Programaci%C3%B3%20Modular/">
 <span class="md-ellipsis">
     05.- Programació modular
+    
   </span>
 </a>
 </li>
@@ -158,12 +164,14 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     06.- Desenvolupament de classes
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     06.- Desenvolupament de classes
+    
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -249,6 +257,7 @@
 <a class="md-nav__link" href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/">
 <span class="md-ellipsis">
     07.- Entrada, eixida i gràfics
+    
   </span>
 </a>
 </li>
@@ -256,6 +265,7 @@
 <a class="md-nav__link" href="../Tema%2008.%20Col%C2%B7leccions/">
 <span class="md-ellipsis">
     08.- Col·leccions
+    
   </span>
 </a>
 </li>
@@ -263,6 +273,7 @@
 <a class="md-nav__link" href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
 <span class="md-ellipsis">
     09.- Herència, polimorfisme i interfícies
+    
   </span>
 </a>
 </li>
@@ -270,6 +281,7 @@
 <a class="md-nav__link" href="../Tema%2010.%20Bases%20de%20dades%20relacionals/">
 <span class="md-ellipsis">
     10.- Bases de dades relacionals
+    
   </span>
 </a>
 </li>
@@ -280,7 +292,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="tema-5-desenvolupament-de-classes">Tema 5. Desenvolupament de classes</h1>
+<h1 id="tema-6-desenvolupament-de-classes">Tema 6. Desenvolupament de classes</h1>
 <div class="admonition danger">
 <p class="admonition-title">Resultat d'aprenentatge associat</p>
 <p><strong>RA4. Desenvolupa programes organitzats a classes analitzant i aplicant els principis de la programació orientada a objectes.</strong></p>
@@ -317,7 +329,7 @@
 <li><strong>Comentaris i documentació:</strong> és bona pràctica descriure què fa cada part de la classe.</li>
 </ul>
 <p>Veien un exemple genèric de com seria una classe en notació <strong>UML</strong></p>
-<p><center>
+<center>
 <div class="mermaid">    classDiagram
     direction TB
 
@@ -331,12 +343,12 @@
     }
         
 </div>
-</center></p>
+</center>
 <p>A l'esquema anterior hem definit una classe amb nom <strong>Cotxe</strong> que té dos <strong>atributs</strong>: color i velocitat; un <strong>constructor</strong>: Cotxe i tres <strong>mètodes</strong>: arrancar, accelerar i frenar.</p>
 <p>Però estudiem un exemple més concret. Per tal de veure com és el desenvolupament de classes en programació orientada a objectes, quina és la seua sintaxi, estructura i components típics, el que farem serà un xicotet projecte amb un <strong>sistema de partícules</strong> en forma de volcà com mostra la imatge:</p>
-<p><center>
+<center>
 <img alt="Sistema de partícules" src="../assets/Tema6/Volcano1.gif" style="border:1px solid #EEE;" width="50%"/>
-</center></p>
+</center>
 <p>Un <strong>sistema de partícules</strong> és una tècnica de programació gràfica utilitzada per simular fenòmens formats per molts  elements petits i independents (anomenats partícules) que, en conjunt, generen un efecte visual complex.</p>
 <p>Cada <strong>partícula</strong> és un objecte amb propietats pròpies (posició, velocitat, color, vida, etc.) que determinen <strong>l'estat</strong> de l'objecte i regles de funcionament general (com es mou, com es dissipa, com canvia al llarg del temps) que determinen el <strong>comportament</strong> de la classe.</p>
 <p>Un <strong>sistema de partícules</strong> gestiona un conjunt d’aquestes partícules:</p>
@@ -360,7 +372,17 @@
 </ul>
 <details class="question">
 <summary>Activitat 601. Dissenya la teua partícula</summary>
-<p>Dissenya una classe partícula </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Dissenya una classe partícula seguint les indicacions dels apunts i l'exemple anterior. </p>
+<p><strong>Entregar:</strong> Document pdf que continga el disseny UML de la classe i una breu reflexió de les motivacions.</p>
+</div>
+<div class="tabbed-block">
+<p>Encara no disponible</p>
+</div>
+</div>
+</div>
 </details>
 <h2 id="definicio-de-classes-en-java">Definició de classes en Java</h2>
 <div class="admonition success">
@@ -385,7 +407,7 @@
 <li>Li afecta la gravetat i les lleis de la física general.</li>
 </ul>
 <p>Una vegada hem fet aquest procés d'abstracció i hem decidit què es representarà al nostre sistema i què no, hem de dissenyar la nostra classe usant UML, concretament diagrama de classes:</p>
-<p><center>
+<center>
 <div class="mermaid">    classDiagram
     direction TB
 
@@ -401,7 +423,7 @@
     }
         
 </div>
-</center></p>
+</center>
 <p>D'aquest disseny de la classe <strong>particula</strong> ja podem començar a picar el codi del nostre projecte, però abans algunes consideracions prèvies associades a l'entorn integrat de desenvolupament escollit (Processing IDE) i les seues particularitats.</p>
 <p>L'anàlisi i el disseny formen part del procés de desenvolupament abans de començar a codificar. Una vegada tenim l'abstracció feta i el diagrama UML, passem a la fase d'implementació.</p>
 <p>Tot projecte desenvolupat amb Processing IDE (igual que altres IDEs) necessita d'un punt d'entrada, fitxer principal o <strong>main</strong>. Aquest fitxer principal o main és el que conté els mètodes setup, draw, i tots els controladors d'esdeveniments i també serà el lloc des del qual es farà ús de les classes i objectes que formaran part del projecte. En altres paraules, el que hem estat fent fins ara amb les activitats realitzades en Processing IDE. Per últim i no menys important, és en aquest fitxer en el que s'executen totes les ordres de dibuix a l'sketch.</p>
@@ -443,13 +465,13 @@
 </code></pre></div></td></tr></table></div>
 <p>Aquest codi és el que conté el punt d'entrada principal a l'aplicació és el que donarà nom al projecte, per tant tindrà el mateix nom que la carpeta que el conté. Crea el teu projecte de particules i guarda'l amb el nom <strong>SistemaParticules</strong>.</p>
 <p>Una vegada ja tenim el nostre projecte creat s'afegirien les classes necessàries. En el nostre cas tindrem una unica classe que es diu <strong>Particula</strong>. Aquesta acció resultarà en un nou fitxer dins del projecte que s'acaba de crear. Per tal de crear aquesta classe realitza les següents accions:</p>
-<p><center>
+<center>
 <img src="../assets/Tema5/CrearClasse1.png" width="60%"/>
-</center></p>
+</center>
 <p>Si es fa clic amb el ratolí el que es marca a la imatge anterior ens apareixeran les següents opcions: "Nova pestanya", "Reanomena", "Elimina", "Pestanya Anterior", "Pestanya següent" ... Hem d'escollir l'opció <strong>Nova Pestanya</strong> i al diàleg que apareixerà li posarem <strong>Particula.java</strong>, el nom de la classe que volem crear. El resultat final serà que el nostre editor del Processing IDE tindrà dues pestanyes: el main que hem anomenat SistemaParticules i la classe Particula.java. </p>
-<p><center>
+<center>
 <img src="../assets/Tema5/CrearClasse2.png" width="60%"/>
-</center></p>
+</center>
 <div class="admonition danger">
 <p class="admonition-title">Compte amb l'extensió de la classe Partícula</p>
 <p>Fixa't que el nom de la classe partícula té extensió java i no pde. Això és molt important.</p>
@@ -700,10 +722,10 @@
 <p class="admonition-title">Identficadors significatius</p>
 <p>Recorda que és molt important que tries bé els identificadors dels elements que formen part dels teus projectes, ja que ajuden a poder seguir i llegir millor el codi desenvolupat.</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">Activitat 605. Les gotes de pluja</p>
+<details class="question">
+<summary>Activitat 605. Les gotes de pluja</summary>
 <p>Al final al teu sistema de partícules de la pluja el que acabaràs instanciant són gotes de pluja. Crea almenys cinc gotes de pluja diferents entre elles utilitzant els constructors de la classe Particula. Encara que no es mostren de moment les parícules per pantalla, hauries d'aconseguir que foren diferents entre elles. Quan més automatizada tinques la diferència entre gotes millor.</p>
-</div>
+</details>
 <h3 id="els-metodes">Els mètodes</h3>
 <p>Abans d’implementar el comportament de les nostres partícules (com es mouen, com canvien de color o com desapareixen), hem d’aprendre com expressar aquestes accions mitjançant funcions i mètodes. Aquest apartat servirà per entendre la base sobre la qual construirem els comportaments del sistema de partícules.</p>
 <p>Continuant amb les classes anteriors, caldria que ens férem les següents qüestions: 
@@ -740,7 +762,7 @@
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 605. Mètodes a les classes</summary>
+<summary>Activitat 606. Mètodes a les classes</summary>
 <p>Escriu un mètode que retorne l'identificador dels objectes. De la mateixa forma que als mètodes anteriors, afegirem un mètode a la classe Particula que salude i ens diga el nom de la següent forma: "Hola soc pluja$Particula@13e68b75"</p>
 <p>El nom d'un objecte (o identificador) es pot obtindre cridant a:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
@@ -859,7 +881,7 @@
 <a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 606. Mètode mostrar de la classe partícula</summary>
+<summary>Activitat 607 Mètode mostrar de la classe partícula</summary>
 <p>A la classe partícula crear un mètode mostrar que dibuixe segons les seues propietats: posicio, grandaria i color. Compte amb reutilitzar el codi de l'anterior sistema de partícules perquè mentre les particules del sistema volcà són cercles de color roig, les gotes de pluja quan cauen es podrien representar (dibuixar) d'una altra manera.</p>
 <p>Utilitza aquest mètode mostrar fes que les cinc particules que has creat a l'activitat anterior es mostren per pantalla.</p>
 </details>
@@ -893,7 +915,7 @@
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 607. Mètode actualitzar de la classe partícula</summary>
+<summary>Activitat 608. Mètode actualitzar de la classe partícula</summary>
 <p>Al teu sistema de partícules de la pluja, implementa el mètode actualitzar en base a les lleis de la física com em fet a l'exemple anterior.</p>
 <p><strong>Algunes idees:</strong> si imagines que l'aplicació que estàs creant és una finestra per la que veus la pluja caure has de tindre en compte el factor profunditat. No és igual una gota de pluja que cau prop de la finestra que la que cau lluny. </p>
 <p>Qualsevol altra cosa que aportes a l'activitat i estiga degudament justificada també puntuarà.</p>
@@ -913,7 +935,7 @@
 <li><strong>Protected (#):</strong> només des del propi codi de la classe o de les seues subclasses es pot accedir.</li>
 <li><strong>Package (~):</strong> només accessible per membres del paquet.</li>
 </ul>
-<p><center>
+<center>
 <div class="mermaid">    classDiagram
     direction TB
 
@@ -932,7 +954,7 @@
     }
         
 </div>
-</center></p>
+</center>
 <p>Aquest diagrama de classes UML s'implementaria de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
@@ -1049,7 +1071,7 @@
 <p>Per norma els atributs solen tindre un modificador de visibilitat <strong>privat</strong> i tant els mètodes com les classes solen ser <strong>public</strong></p>
 </div>
 <details class="question">
-<summary>Activitat 608. Modificadors de visibilitat</summary>
+<summary>Activitat 609. Modificadors de visibilitat</summary>
 <p>Aplica la norma dels modificadors de visibilitat al teu projecte pluja i adapta les classes que ja tens implementades.</p>
 </details>
 <h3 id="get-i-sets">Get i Sets</h3>
@@ -1100,7 +1122,7 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>D'aquesta forma ens assegurem que tot ususari de la nostra particula del sistema de particules no podrà assignar mai una velocitat superior a 15 ni inferior a 0 a els elements del sistema.</p>
 <p>Els sets per contra, serveixen per tal que només aquells valors dels atributs que el programador desitje siguen accessibles des de fora de la classe.</p>
 <details class="question">
-<summary>Activitat 609. Gets i sets</summary>
+<summary>Activitat 610. Gets i sets</summary>
 <p>Per aquells atributs susceptibles de ser modificats per l'usuari de la classe, fer els gets i sets pertinents. Mínim hauràs d'afegir el mètode <strong>setColor</strong> que tindrà paràmetres: r, g i b de tipus enters i amb rang de valors entre 0 i 255. El mètode setColor s'haurà d'encarregar de traduir els tres números enters a un número hexadecimal amb format ARGB. Exemple: 0xFF33BBAA on les primeres dues F són les que indiquen opacitat total.</p>
 </details>
 <h2 id="metodes-i-atributs-estatics">Mètodes i atributs estàtics</h2>
@@ -1145,7 +1167,7 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 </code></pre></div></td></tr></table></div>
 <p>En el sistema de partícules desenvolupat en aquest tema, les lleis de la física que governen el moviment de les partícules (com la gravetat o la fricció de l’aire) no són una propietat individual de cada partícula, sinó que són compartides per totes elles. Per aquest motiu, aquestes lleis s’han encapsulat en una classe auxiliar anomenada Fisica2D, que fa ús exclusiu d’atributs i mètodes estàtics.</p>
 <details class="question">
-<summary>Activitat 610. Crea un atribut estàtic al sistema de partícules</summary>
+<summary>Activitat 611. Crea un atribut estàtic al sistema de partícules</summary>
 <p>Crea un comptador de gotes de pluja al teu sistema de partícules de la mateixa forma que hem vist a l'apartat anterior.</p>
 </details>
 <h3 id="metodes-estatics">Mètodes estàtics</h3>
@@ -1180,7 +1202,7 @@ Aquest enfocament presenta alguns inconvenients: la lògica de construcció qued
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Particula</span><span class="p">.</span><span class="na">crearParticula</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">origen</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
-<summary>Activitat 611. Crear una fàbrica al teu sistema de partícules</summary>
+<summary>Activitat 612. Crear una fàbrica al teu sistema de partícules</summary>
 <p>En el projecte del tema 6 hem desenvolupat un sistema de partícules que simula un volcà.</p>
 <p>A partir d’aquest exemple, cada alumne haurà de desenvolupar un sistema de partícules propi que simule la pluja, reutilitzant la classe Particula i els coneixements sobre mètodes i atributs estàtics.</p>
 <p>Per a facilitar la creació de partícules i centralitzar la seua configuració, utilitzarem el patró de disseny Factory Method.</p>
@@ -1267,7 +1289,7 @@ Aquest enfocament presenta alguns inconvenients: la lògica de construcció qued
 </code></pre></div></td></tr></table></div>
 <p>Com es pot obaservar si compareu el mètode actualitzar modificat amb el mètode anterior, ara és molt més simple i fàcil de llegir a primera vista. En aquest cas la classe estàtica ens serveix per ocultar <strong>(Principi d'ocultació - POO)</strong> el funcionament intern de diversos càlculs físics que no necessàriament tenen a veure amb la classe Partícula. És a dir, a l'usuari de les classes els importa com fan els mètodes sino què fan els mètodes.</p>
 <details class="question">
-<summary>Activitat 612. Adapta la classe Fisica2D</summary>
+<summary>Activitat 613. Adapta la classe Fisica2D</summary>
 <p>Per tal d’adaptar el sistema de partícules al fenomen de la pluja, caldrà modificar o ampliar la classe Fisica2D, fent ús d’atributs i mètodes estàtics.</p>
 <ol>
 <li>Analitza el funcionament de la classe Fisica2D utilitzada en el sistema de partícules del volcà.</li>
@@ -1347,7 +1369,7 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 - No és necessari redefinir mètodes per poder usar herència.
 - L’objectiu principal en aquest punt és reutilitzar codi, no modificar-lo.</p>
 <details class="question">
-<summary>Activitat 613. Herència de partícules</summary>
+<summary>Activitat 614. Herència de partícules</summary>
 <p>A partir de la classe Particula, crea una classe heretada <strong>Gota</strong> que represente una gota de pluja. La nova classe haurà de:
 - Heretar de partícula.
 - Inicialitzar la posició i la velocitat inicials cap avall (les gotes cauen).
@@ -1455,7 +1477,7 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 </ul>
 </div>
 <details class="question">
-<summary>Activitat 614. Interfície de comportament</summary>
+<summary>Activitat 615. Interfície de comportament</summary>
 <p>Crea una interfície anomenada Actualitzable que definisca els mètodes necessaris per actualitzar i mostrar un objecte del sistema.    </p>
 <p>A continuació:
 - Fes que la classe <code>Particula</code> implemente aquesta interfície.
@@ -1522,7 +1544,7 @@ En programació orientada a objectes, una classe heretada és una classe que reu
 </ul>
 <p>Observa que no ens importa quin tipus de particula és, totes es tracten com a partícula i el programa queda més net i escalable.</p>
 <details class="question">
-<summary>Activitat 615. Sistema de partícules múltiples</summary>
+<summary>Activitat 616. Sistema de partícules múltiples</summary>
 <p>Modifica el teu projecte del volcà perquè:</p>
 </details>
 <ul>
@@ -1550,7 +1572,7 @@ El nostre projecte ja conté diverses classes amb responsabilitats clares:
 - <strong>Actualizable:</strong> comportament comú.</p>
 <p><strong>Organització del projecte</strong>
 A continuació pots observar un exemple d'organització d'un projecte amb una llibreria de classes.</p>
-<p><center>
+<center>
 <div class="mermaid">	graph TD
 		A[📁SistemaParticules] --&gt; B[🧩SistemaParticules.pde]
 		A --&gt; C[☕Particula.java]
@@ -1559,7 +1581,7 @@ A continuació pots observar un exemple d'organització d'un projecte amb una ll
 		A --&gt; F[☕Fisica2D.java]     
         A --&gt; G[🔌 Actualitzablle.java]
 </div>
-</center></p>
+</center>
 <p><strong>Avantatges de crear una llibreria pròpia</strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Millora l’organització del codi</li>
@@ -1569,7 +1591,7 @@ A continuació pots observar un exemple d'organització d'un projecte amb una ll
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Fa el projecte més professional</li>
 </ul>
 <details class="question">
-<summary>Activitat 616. Organitzem la llibreria</summary>
+<summary>Activitat 617. Organitzem la llibreria</summary>
 <p>Reorganitza el teu projecte perquè:
 - Les classes del sistema de partícules estiguen <strong>separades</strong> del sketch SistemaParticules.pde.
 - El sketch només s’encarregue de crear i utilitzar les partícules.
@@ -1599,8 +1621,8 @@ A continuació pots observar un exemple d'organització d'un projecte amb una ll
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

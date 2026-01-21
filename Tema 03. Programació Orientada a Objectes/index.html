@@ -451,7 +451,9 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <span class="normal"><a href="#__codelineno-3-34">34</a></span>
 <span class="normal"><a href="#__codelineno-3-35">35</a></span>
 <span class="normal"><a href="#__codelineno-3-36">36</a></span>
-<span class="normal"><a href="#__codelineno-3-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Variables globals</span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Variables globals</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span><span class="w">       </span><span class="c1">// Declaració de dos objectes (v1, v2) de la classe PVector</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// Funció setup: només s'executa una vegada a l'inici de l'execució.</span>
@@ -477,17 +479,19 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">	</span><span class="c1">// Dibuixem una línia que els uneixca</span>
 <a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">	</span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">	</span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">	</span><span class="n">line</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">	</span><span class="n">line</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
 <a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="p">}</span>
 <a id="__codelineno-3-29" name="__codelineno-3-29"></a>
 <a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1">// Declaració d'altres funcions. Opcional</span>
 <a id="__codelineno-3-31" name="__codelineno-3-31"></a>
 <a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="c1">// Esedeveniments</span>
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mousePressed</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseDragged</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseMoved</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseClicked</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseReleased</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mousePressed</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseDragged</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseMoved</span><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="question">
@@ -500,13 +504,16 @@ Modifica els valors x i y dels objectes PVector per tal que es dibuixen un al mi
 Crea una variable <strong>distancia</strong> i utilitza la funció dist de la classe PVector per saber quina distància hi ha entre els dos punts.
 Afegeix el codi següent al teu esbós:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">textWidth</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">text</span><span class="p">(</span><span class="n">distancia</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">textSize</span><span class="w"> </span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">text</span><span class="w"> </span><span class="p">(</span><span class="n">distancia</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Investiga el manual de referència de Processing IDE i posa la informació de la distància que has afegit abans, al mig de la línia i dins d'un requadre amb la vora de color negra.</p>
 </div>
 <div class="tabbed-block">
-<p>No disponible</p>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act301.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -525,8 +532,8 @@ Ara posa un quart PVector i uneix també les línies.</p>
 <p>També es valoraran qüestions estètiques del resultat final així com també l'ús d'altres funcions o objectes que estiguen disponibles en Processing IDE.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act302.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -639,7 +646,7 @@ Ara posa un quart PVector i uneix també les línies.</p>
 <p><center>
 <img alt="Carpeta d'esbossos de Processing IDE" src="../assets/Tema3/carpetaSketchbook.png" width="70%"/>
 </center></p>
-<p>Finalment descarrega la <a href="../assets/Tema3/Dibuixem.jar">llibreria Dibuixem</a> i copia-la a la carpeta abans indicada. Si tot ha anat bé a la carpeta libraries trobaràs una estructura molt semblant a la següent. Les carpetes controlP5, sound i mínim són llibreries i utilitats instal·lades des del Processing IDE. No et preocupes si no t'apareixen.</p>
+<p>Finalment descarrega la <a href="../assets/Tema3/Dibuixem/library/Dibuixem.jar">llibreria Dibuixem</a> i copia-la a la carpeta abans indicada. Si tot ha anat bé a la carpeta libraries trobaràs una estructura molt semblant a la següent. Les carpetes controlP5, sound i mínim són llibreries i utilitats instal·lades des del Processing IDE. No et preocupes si no t'apareixen.</p>
 <p><center>
 <div class="mermaid">	graph TD
 		A[📁libraries] --&gt; B[📁Dibuixem]
@@ -656,8 +663,10 @@ Ara posa un quart PVector i uneix també les línies.</p>
 </center></p>
 <div class="admonition danger">
 <p class="admonition-title">Manual de referència package Dibuixem</p>
-<p>Abans de començar amb les activitats associades al <strong>Projecte Figures Geomètriques</strong>, revisa la documentació de la llibreria:</p>
-<p><center><a href="../assets/dibuixem/" rel="noopener" target="_blank">&gt;&gt;&gt; Manual de Referència Dibuixem &lt;&lt;&lt;</a></center></p>
+<p>Abans de començar amb les activitats associades al <strong>Projecte Figures Geomètriques</strong>, revisa la documentació de la llibreria:
+<center><a class="md-button md-button--secondary" href="../assets/dibuixem/" rel="noopener" target="_blank">📚 Manual de Referència Dibuixem</a></center></p>
+<p><center>📦 <strong>Fitxer ZIP amb la llibreria Dibuixem</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/Dibuixem.zip">📥   Descarrega la llibreria</a></center></p>
 </div>
 <details class="question">
 <summary>Activitat 303. Crea el projecte Figures Geometriques</summary>
@@ -671,19 +680,22 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <p>A la secció de variables globals declara un objecte amb identificador c1 de la classe Cercle. </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p>Al mètode setup() has de crear l'objecte c1 de la classe Cercle utilitzant el seu constructor.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creem un cercle a la posició 320, 240,</span>
+<p>Al mètode setup() has de crear l'objecte c1 de la classe Cercle utilitzant el seu constructor. I no oblides de donar-li dimensions a l'aplicació amb size.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creem un cercle a la posició 320, 240,</span>
 </code></pre></div></td></tr></table></div>
 <p>Al mètode draw() fes que es mostre el cercle.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
-<p>Utilitza el mètode setPosicio de l'objecte de la classe Cercle per tal que el cercle es puga moure per la pantalla</p>
+<p>Utilitza el mètode setPosicio de l'objecte de la classe Cercle per tal que el cercle es puga moure per la pantalla. Pots utilitzar algun esdeveniment de ratolí.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+<p>Ampliació: Per què quan mous el cercle no s'esborra l'anterior? Com es pot arreglar?</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act303.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -704,8 +716,8 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 </center></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act304.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -719,8 +731,8 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <p>Com has pogut observar a l'activitat anterior, quan cridavem al constructor de les figures geomètriques els passavem dos valors numèrics. Com que ja saps utilitzar la classe PVector. Crea un objecte PVector per a cada figura geomètrica i utilitza'ls com a paràmetres per establir la posició de les figures al seus constructors.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act305.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -732,7 +744,7 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En aquesta activitat hauràs de fer ús de les tres figures que proporciona la llibreria <strong>Dibuixem</strong> (Cercle, Quadrat i Triangle) i fer que mostren tot el seu potencial.</p>
-<p>Has d'utilitzar **com a mínim dues instàncies de cada tipus de figura, i has de fer-les diferents entre elles. Pots variar:</p>
+<p>Has d'utilitzar <strong>com a mínim dues instàncies</strong> de cada tipus de figura, i has de fer-les diferents entre elles. Pots variar:</p>
 <ul>
 <li>"La seua posició en pantalla"</li>
 <li>"El seu tamany (mitjançant el constructor o el tauler de controls)"</li>
@@ -740,18 +752,22 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <li>"Si es mostren en 2D o en 3D"</li>
 <li>Si tenen o no el tauler de control activat"</li>
 </ul>
-<p>Pots inspirar-te en aquest esquema:
-Pots crear la composició que més t'agrade, sempre que:</p>
+<p>Pots crear la composició que més t'agrade, sempre que:</p>
 <ul>
 <li>Tinga almenys 6 figures.</li>
 <li>Totes siguen objectes diferents entre si.</li>
 <li>Mostres l'ús de constructors, mètodes i atributs públics</li>
 <li>No cal modificar cap classe de la llibreria.</li>
 </ul>
+<p><strong>IMPORTANT:</strong> Modifica l'inici del mètode setup (). Si no la llibreria Dibuixem no es veurà bé. Has de substituir el size per el següent codi:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="n">P3D</span><span class="p">);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">ortho</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act306.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -765,8 +781,8 @@ Pots crear la composició que més t'agrade, sempre que:</p>
 <p>Has de vincular al mètode keyPressed que quan es premi la tecla 'R' les figures (totes) tornen a l'estat inicial.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act307.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -810,11 +826,13 @@ Pots crear la composició que més t'agrade, sempre que:</p>
 <div class="tabbed-block">
 <p>La classe Figura de la llibreria Dibuixem disposa d'una sèrie de mètodes estàtics: un que ens diu el total de figures creades i un altre que crea una figura de forma aleatòria. </p>
 <p>En aquesta activitat has d'aconseguir que es creen 10 figures aleatòries i que aquestes figures fagen ús de tote les seues funcionalitats igual que a les activitats anteriors, en altres paraules, que quan es faja clic sobre alguna de les figures creades aleatòriament, aparega el tauler d'opcions i siguen  manipulables.</p>
+<p>Per exemple pots fer que a l'inici de l'aplicació la pantalla aparega buida i cada vegada que premes la tecla barra d'espai, aparega una figura nova i així fins a que estiguen les 10 figures sobre la pantalla.</p>
 <p>D'una altra banda cada vegada que es cree una figura aleatòria, s'ha de mostrar per terminal que s'ha creat una figura, quin tipus de figura és i el nombre total de figures creades de moment.</p>
+<p>Finalment tin en compte que el nombre total de figures fa que necessites una aplicació de dimensions més grans.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act308.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -826,43 +844,53 @@ Pots crear la composició que més t'agrade, sempre que:</p>
 <div class="tabbed-block">
 <p>Instal·la la llibreria <strong>Ani</strong> que té disponible Processing IDE i combina-la amb la llibreria Dibuixem.</p>
 <p>Per exemple pots fer que un cercle de la llibreria dibuixem, canvie gradualment el seu ample durant l'execució de l'aplicació.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span>
-<span class="normal"><a href="#__codelineno-10-11">11</a></span>
-<span class="normal"><a href="#__codelineno-10-12">12</a></span>
-<span class="normal"><a href="#__codelineno-10-13">13</a></span>
-<span class="normal"><a href="#__codelineno-10-14">14</a></span>
-<span class="normal"><a href="#__codelineno-10-15">15</a></span>
-<span class="normal"><a href="#__codelineno-10-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">de.looksgood.ani.*</span><span class="p">;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">	</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">to</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"ample"</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">	</span><span class="c1">// On c és el cercle, </span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">	</span><span class="c1">// 1 és el temps que ha de tardar en fer la transició, </span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">	</span><span class="c1">// ample és l'atribut a modificar </span>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">	</span><span class="c1">// 220 l'ample final de la figura en acabar la transició</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="p">}</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">	</span><span class="n">c</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">de.looksgood.ani.*</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">Dibuixem.*</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">	</span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="n">P3D</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">	</span><span class="n">ortho</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">init</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">	</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">to</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">"ample"</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">	</span><span class="c1">// On c és el cercle, </span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">	</span><span class="c1">// 5 és el temps que ha de tardar en fer la transició, </span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">	</span><span class="c1">// ample és l'atribut a modificar </span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">	</span><span class="c1">// 220 l'ample final de la figura en acabar la transició</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="p">}</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">	</span><span class="n">background</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">	</span><span class="n">c</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>També pots combinar el mètode keyPressed amb la llibreria per tal que a diferents tecles diferents accions.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>No disponbile
-</code></pre></div>
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema3/act309.zip">📥   Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>

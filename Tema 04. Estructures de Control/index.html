@@ -8,16 +8,16 @@
 <link href="../Tema%2003.%20Programaci%C3%B3%20Orientada%20a%20Objectes/" rel="prev"/>
 <link href="../Tema%2005.%20Programaci%C3%B3%20Modular/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.12" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
 <title>04.- Estructures de Control - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -33,10 +33,10 @@
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -57,16 +57,16 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 <input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 </form>
-<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -74,17 +74,17 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
 <nav aria-label="Search" class="md-search__options">
 <button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -106,7 +106,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
@@ -522,6 +522,9 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 401. Dibuixa amb Processing IDE</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Dibuixa amb processing IDE un punt, una línia, un cercle i un quadrat copiant el codi que pots veure a continuació. Després modifica alguns dels paràmetres de les funcions point, line, ellipse i square i observa el que passa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -535,30 +538,33 @@
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
 <span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="mi">320</span><span class="p">);</span><span class="w">   </span><span class="c1">// Estableix les dimensions de la nostra pantalla principal</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w"> </span><span class="c1">// Estableix el fons de la pantalla</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">         </span><span class="c1">// Color amb el que es dibuixaran les figures.</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">);</span><span class="w">   </span><span class="c1">// Estableix les dimensions de la nostra pantalla principal</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">background</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// Estableix el fons de la pantalla</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">          </span><span class="c1">// Color amb el que es dibuixaran les figures.</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w">            </span><span class="c1">// Dibuixa un punt</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="n">line</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span><span class="w">       </span><span class="c1">// Dibuixa una línia</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">ellipse</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span><span class="w">  </span><span class="c1">// Dibuixa una el·lipse</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="n">square</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span><span class="w">      </span><span class="c1">// Dibuixa un quadrat</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">point</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">              </span><span class="c1">// Dibuixa un punt</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w">       </span><span class="c1">// Dibuixa una línia</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">ellipse</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span><span class="w">  </span><span class="c1">// Dibuixa una el·lipse</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="n">square</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span><span class="w">       </span><span class="c1">// Dibuixa un quadrat</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Explica què són els números que hi ha entre parentesi a les sentències: point, line, ellipse i square.</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 </details>
 <p>Ara que ja has vist algunes de les funcions que ens ofereix l'<strong>API de Processing</strong> per tal de dibuixar, investiga quines altres funcions permet i aplica-les a la següent activitat.</p>
 <details class="question">
 <summary>Activitat 402. Dibuix lliure amb Processing IDE.</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Utilitzant altres primitives de dibuix que ens proporciona l'API de Processing IDE, dibuixa alguna cosa concreta. Has de tindre en compte que la majoria de primitives (funcions) són geomètriques, per tant, et podries inspirar en algun dibuix geomètric. Pots buscar per Internet.</p>
 </div>
-<div class="tabbed-block">
-<p>Encara no disponible</p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </details>
@@ -702,7 +708,7 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 403. Nombres parells i senars amb la funció random()</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Seguint l'exemple de l'aplicació que detecta números senars, fes que també ens indique en cas contrari, si no és parell, que es tracta d'un número senar.</p>
@@ -849,7 +855,7 @@
 <p>Mira i fes les següents activitats per tal de reforçar els conceptes vistos sobre les diferents estructures de selecció de la programació estructurada.</p>
 <details class="question">
 <summary>Activitat 405. Divisió</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa en Processing IDE que genere aleatòriament dos nombres enters i que calcule la seua divisió. El programa ens haurà d'indicar si la divisió és exacta qui és el resultat i si no és exacta quin és el resultat i el residu.</p>
@@ -859,16 +865,14 @@
 </center></p>
 <p>Com a apartat d'ampliació, podries fer que el grandaria de la font fos un poc més gran. A banda si veus algun detall que no t'agrada com funciona, ho pots modificar.</p>
 </div>
-<div class="tabbed-block">
-<p>Encara no disponible</p>
+<div class="tabbed-block"></div>
 </div>
 </div>
-</div>
+<p><a href="../assets/Tema4/act320.pde">Descarrega la solució al problema de la divisió</a></p>
 </details>
-<!--[Descarrega la solució al problema de la divisió](assets/Tema4/act320.pde)-->
 <details class="question">
 <summary>Activitat 406. Divisió per zero i altres problemes</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>L'activitat anterior si t'has fixat, si el divisor és menor que el dividend el resultat sempre és zero. Seria interessant que es controlara que sempre es dividira el número major pel menor.</p>
@@ -883,15 +887,14 @@
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act321.pde">Descarrega la solució al problema de la divisió per zero</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de la divisió per zero](assets/Tema4/act321.pde)-->
 <details class="question">
 <summary>Activitat 407. Major, menor o igual</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa en Processing que genere aleatòriament dos números i que diga quin és el major, quin és el menor o si són iguals.
@@ -905,15 +908,14 @@
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act322.pde">Descarrega la solució al problema dels números majors iguals o menors</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels números majors iguals o menors](assets/Tema4/act322.pde)-->
 <details class="question">
 <summary>Activitat 408. Diferència d'anys</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa en Processing que donat l'any actual(2023) i un any qualsevol que es genere de forma aleatòria amb la funció random entre l'any 0 i l'any 2500 i escriga quants anys han passat des d'eixe any o quants anys falten per arribar a eixe any. Per exemple, imagina que l'any aleatori que genera la teua aplicació és l'any 2123, en aquest cas hauria de mostrar el següent missatge: "Falten 100 anys per arribar a l'any 2123", si per exemple l'any aleatori fos 2001, el missatge que hauria de mostrar és: "Han passat 22 anys des de l'any 2001". Si finalment l'any aleatori és igual a l'any actual, el missatge podria ser: "L'any aleatori i l'actual són el mateix any".</p>
@@ -923,15 +925,14 @@
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<!--<a href="assets/Tema/act323.pde">Descarrega la solució al problema de la diferència d'anys</a>-->
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de la diferència d'anys](assets/Tema/act323.pde) -->
 <details class="question">
 <summary>Activitat 409. Millora la diferència d'anys</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Igual en les proves que has fet no t'ha passat però, t'has preguntat que passa si l'any aleatori és exactament un any menys o un any més que l'actual?
@@ -942,15 +943,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act324.pde">Descarrega la solució al problema de la millora de la diferència d'anys</a> </p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de la millora de la diferència d'anys](assets/Tema4/act324.pde)        -->
 <details class="question">
 <summary>Activitat 410. Nombres múltiples</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa que genere dos números aleatoris entre el 0 i el 100 i escriga si el número major és multiple del menor. Per exemple, imagina que el nostre genera els números 6 i 60. Com que 60 és major que 6, hem de comprovar si hi ha algun número que al multiplicar-lo per 6 done 60. Dit d'una altra manera, si dividim 60 entre 6 el residu és zero? En tal cas, si existeix un número natural que al multiplicar-lo per 6 dona 60, aleshores podem dir que 60 és múltiple de 6.</p>
@@ -959,15 +959,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act325.pde">Descarrega la solució al problema dels nombres múltiples</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels nombres múltiples](assets/Tema4/act325.pde)-->
 <details class="question">
 <summary>Activitat 411. Nombre múltiples amb negatius i zeros</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>A l'activitat anterior, quan generem els nombres de forma aleatòria, els resultats podien estar entre 0 i 100, però que passaria si quan generem nombres de forma aleatòria el resultat pogués ser negatiu? Com funcionen els múltiples tenint en compte els números negatius?  </p>
@@ -976,15 +975,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 <p>Què passa si algun dels números generats aleatòriament són zero? I si els dos números aleatoris són zero?</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act326.pde">Descarrega la solució al problema dels nombres múltiples amb negatius i zeros</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels nombres múltiples amb negatius i zeros](assets/Tema4/act326.pde) -->
 <details class="question">
 <summary>Activitat 412. Comparador de tres números</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa que donats 3 números (creats aleatòriament) ens diga si són els tres iguals, dos són iguals o cap és igual. Analitzem amb més profunditat el problema. Quants són els escenaris que ens podem trobar amb tres números aleatoris?</p>
@@ -999,15 +997,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act327.pde">Descarrega la solució al problema del comparador</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema del comparador](assets/Tema4/act327.pde) -->
 <details class="question">
 <summary>Activitat 413. Any bixest</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa que genere un any aleatori de 0 a 2021 i ens diga si aquest és bixest o no. Cal recordar que els anys bixests són múltiples de 4, però no són múltiples de 100 i sí són múltiples de 400. Per exemple: 2012 és bixest, 2010 no ho és, 2000 sí que ho es però 1900 no ho és. Pots basar-te en el següent codi.</p>
@@ -1019,12 +1016,11 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act328.pde">Descarrega la solució al problema de l'any bixest</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de l'any bixest](assets/Tema4/act328.pde) -->
 <!--??? question "Activitat 331. Càlcul d'arees"
     Escriu un programa que primer demane si es vol calcular l'area d'un cercle (escrivint c o C) o d'un triangle (t o T). Si es tria el triangle s'haurà de demanar la base i l'altura mentre que si es tria el cercle s'haurà de demanar el radi. Aquest programa és recomanable que es faja amb Eclipse IDE.
 
@@ -1133,7 +1129,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 414. Copia i adapta el codi anterior</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu el programa anterior per a Processing i comprova que funciona. Afegeix el codi necessari per tal que a banda de dir-te quin mes és, et diga també a quina estació de l'any estem.</p>
@@ -1143,15 +1139,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 <p>En l'exemple anterior el que s'ha fet ha sigut generar aleatòriament un número enter entre 1 i 12 i després mostrar per pantalla: primer el número del mes i després el nom.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act329.pde">Descarrega la solució al problema dels mesos i les estacions</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels mesos i les estacions](assets/Tema4/act329.pde)-->
 <details class="question">
 <summary>Activitat 415. Dies de la setmana</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa que donat un número entre 1 i 7 generat de forma aleatòria, et diga quin dia de la setmana és. 1 Dilluns, 2 Dimarts etc..</p>
@@ -1160,15 +1155,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act330.pde">Descarrega la solució al problema dels dies de la setmana</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels dies de la setmana](assets/Tema4/act330.pde)-->
 <details class="question">
 <summary>Activitat 416. Passar d'if a switch</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">Problema</label><label for="__tabbed_15_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Observa el codi a continuació que explica com es passa de if - else a switch - case i passa l'activitat 323 de l'apartat if..else a switch..case</p>
@@ -1222,15 +1216,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act331.pde">Descarrega la solució al problema de passar d'if a switch .. else</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de passar d'if a switch .. else](assets/Tema4/act331.pde)-->
 <details class="question">
 <summary>Activitat 417. Quants dies té el mes</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">Problema</label><label for="__tabbed_15_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu un programa que genere de forma aleatòria el mes i ens mostre per pantalla el total de dies que té eixe mes.</p>
@@ -1239,27 +1232,25 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act332.pde">Descarrega la solució al problema dels dies del mes</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels dies del mes](assets/Tema4/act332.pde)-->
 <details class="question">
 <summary>Activitat 418. Figures geomètriques</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">Problema</label><label for="__tabbed_16_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriure un programa que demane primer de quina figura geomètrica es vol calcular el perimetre. Triangle (t), Quadrat (q), Cercle (c) o rectangle (r) i després mostre el càlcul corresponent. Totes aquelles dades necessàries per poder realitzar els diferents càlculs es generaran de forma aleatòria quan s'haja escollit de quina figura es vol calcular el perimetre. </p>
 <p>Per exemple, imagina que l'usuari tria el triangle, per saber el perimetre del triangle necessitem saber quant mesura el seu costat i multiplicar-lo per 3, per tant, serà la mesura del costat el que es generarà de forma aleatòria.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act333.pde">Descarrega la solució al problema de les figures geomètriques</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de les figures geomètriques](assets/Tema4/act333.pde)-->
 <h2 id="estructures-de-repeticio">Estructures de repetició</h2>
 <div class="admonition success">
 <p class="admonition-title">Criteris d'avaluació associats</p>
@@ -1456,7 +1447,7 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </details>
 <details class="question">
 <summary>Activitat 419. Dibuixa la piràmide i la piràmide invertida</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><input id="__tabbed_17_2" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">Problema</label><label for="__tabbed_17_2">Solucio</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio"/><input id="__tabbed_18_2" name="__tabbed_18" type="radio"/><div class="tabbed-labels"><label for="__tabbed_18_1">Problema</label><label for="__tabbed_18_2">Solucio</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Fes un programa semblant al de l'activitat anterior però a la inversa, és a dir, cinc cercles a la primera línia, quatre a la segona, tres a la tercera, dos a la quarta i, finalment, un a la cinquena línia.</p>
@@ -1465,15 +1456,14 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act334.pde">Descarrega la solució al problema de dibuixar la piràmide invertida</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de dibuixar la piràmide invertida](assets/Tema4/act334.pde)-->
 <details class="question">
 <summary>Activitat 420. Dibuixa les dues diagonals (500x500)</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio"/><input id="__tabbed_18_2" name="__tabbed_18" type="radio"/><div class="tabbed-labels"><label for="__tabbed_18_1">Problema</label><label for="__tabbed_18_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio"/><input id="__tabbed_19_2" name="__tabbed_19" type="radio"/><div class="tabbed-labels"><label for="__tabbed_19_1">Problema</label><label for="__tabbed_19_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Fes un programa en Processing IDE que dibuixe les dues diagonals sobre una pantalla de 500 pixels per 500 pixels. Des del punt (0,0) fins al (500,500) i l'altra que va des del punt (500,0) fins al (0,500). Si a una diagonal li dibuixes quadrats, a l'altra dibuixa-li cercles.</p>
@@ -1482,43 +1472,40 @@ Si has fet bé l'activitat anterior i si l'any aleatori fora per exemple 2022, e
 </center></p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act335.pde">Descarrega la solució al problema de les dues diagonals</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de les dues diagonals](assets/Tema4/act335.pde)-->
 <details class="question">
 <summary>Activitat 421. Dues diagonals 640x480</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio"/><input id="__tabbed_19_2" name="__tabbed_19" type="radio"/><div class="tabbed-labels"><label for="__tabbed_19_1">Problema</label><label for="__tabbed_19_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><input id="__tabbed_20_2" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">Problema</label><label for="__tabbed_20_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Millora l'activitat anterior i dibuixa les dues diagonals però a una pantalla de 640 pixels per 480 pixels.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act336.pde">Descarrega la solució al problema de les dues diagonals 640x480</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema de les dues diagonals 640x480](assets/Tema4/act336.pde)-->
 <details class="question">
 <summary>Activitat 422. whiles i for</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><input id="__tabbed_20_2" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">Problema</label><label for="__tabbed_20_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Fes l'activitat anterior canviant els bucles while per for i a l'inrevés.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<p><a href="../assets/Tema4/act337.pde">Descarrega la solució al problema del canvi de while per for</a></p>
 </div>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema del canvi de while per for](assets/Tema4/act337.pde)-->
 <details class="question">
 <summary>Activitat 423. Optimització del codi</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><input id="__tabbed_21_2" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">Problema</label><label for="__tabbed_21_2">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio"/><input id="__tabbed_22_2" name="__tabbed_22" type="radio"/><div class="tabbed-labels"><label for="__tabbed_22_1">Problema</label><label for="__tabbed_22_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Seria possible fer l'activitat 420 però només utilitzant un bucle?</p>
@@ -1860,9 +1847,11 @@ Conclusió</p>
 <p>És el procés pel qual es tradueixen les instruccions escrites en un determinat llenguatge de programació a llenguatge màquina. A més d'un  traductor, es poden necessitar altres programes per crear un programa  objecte executable. Un programa font es pot dividir en mòduls emmagatzemats en arxius diferents. La tasca de reunir el programa font sovint es confia a un programa diferent, anomenat preprocessador. El preprocessador també pot expandir abreviatures, crides a macros, a proposicions del llenguatge font.</p>
 <p>Normalment la creació d'un programa executable (un típic.exe per a Microsoft Windows o DOS) comporta dos passos. El primer pas es diu <strong>compilació</strong> ( pròpiament dit) i tradueix el codi font escrit en un llenguatge de programació emmagatzemat en un arxiu a codi de baix nivell (normalment en codi objecte, no directament a llenguatge màquina). El segon pas es diu <strong>enllaçat</strong> en el qual s'enllaça el codi de baix nivell generat de tots els fitxers i subprogrames que s'han enviat compilar i s'afegeix el codi de les funcions que hi ha a les biblioteques del compilador perquè l'executable pugui comunicar-se directament amb el sistema operatiu, traduint així finalment el codi objecte a codi màquina, i generant un mòdul executable.</p>
 <p>Aquests dos passos es poden fer per separat, emmagatzemant el resultat de la fase de compilació en arxius objectes (un típic .obj per a Microsoft Windows, DOS o per a Unix ), per a enllaçar-los en fases posteriors, o crear directament l'executable, amb la qual cosa la fase de compilació s'emmagatzema només temporalment. Un programa podria tenir parts escrites en diversos llenguatges (per exemple C, C + + i Asm), que es podrien compilar de forma independent i després enllaçar juntes per formar un únic mòdul executable. </p>
-<p><center>
-<img src="../assets/Tema1/ProcesCompilacio.png"/>
-</center></p>
+<!--
+<center>
+    <img src="../assets/Tema1/ProcesCompilacio.png" />
+</center>
+-->
 <h3 id="el-depurador-de-processing-ide">El depurador de Processing IDE</h3>
 <p>Ha arribat el moment que aprengues com funciona el depurador que és una eina molt important per a desenvolupar codi. El depurador o <strong>debugger</strong> és una eina molt important i necessària que porten tots els entorns de desenvolupament integrat com Processing. Aquesta eina ens permet executar el codi pas a pas al mateix temps que podem monitoritzar el valor de les variables, l'estat dels diferent objectes que formen part de la nostra aplicació. </p>
 <p><center>
@@ -1954,8 +1943,8 @@ Conclusió</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

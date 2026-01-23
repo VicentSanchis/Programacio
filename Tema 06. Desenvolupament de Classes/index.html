@@ -8,16 +8,16 @@
 <link href="../Tema%2005.%20Programaci%C3%B3%20Modular/" rel="prev"/>
 <link href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.12" name="generator"/>
 <title>06.- Desenvolupament de classes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -33,10 +33,10 @@
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -57,16 +57,16 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 <input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
 </label>
 </form>
-<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -74,17 +74,17 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </label>
 <nav aria-label="Search" class="md-search__options">
 <button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
 </button>
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -106,7 +106,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
@@ -360,11 +360,15 @@
 </ul>
 <details class="question">
 <summary>Activitat 601. Dissenya la teua partícula</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label><label for="__tabbed_1_2">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Dissenya una classe partícula seguint les indicacions dels apunts i l'exemple anterior. </p>
 <p><strong>Entregar:</strong> Document pdf que continga el disseny UML de la classe i una breu reflexió de les motivacions.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act601.zip">📥 Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -412,7 +416,7 @@
 <p>D'aquest disseny de la classe <strong>particula</strong> ja podem començar a picar el codi del nostre projecte, però abans algunes consideracions prèvies associades a l'entorn integrat de desenvolupament escollit (Processing IDE) i les seues particularitats.</p>
 <p>L'anàlisi i el disseny formen part del procés de desenvolupament abans de començar a codificar. Una vegada tenim l'abstracció feta i el diagrama UML, passem a la fase d'implementació.</p>
 <p>Tot projecte desenvolupat amb Processing IDE (igual que altres IDEs) necessita d'un punt d'entrada, fitxer principal o <strong>main</strong>. Aquest fitxer principal o main és el que conté els mètodes setup, draw, i tots els controladors d'esdeveniments i també serà el lloc des del qual es farà ús de les classes i objectes que formaran part del projecte. En altres paraules, el que hem estat fent fins ara amb les activitats realitzades en Processing IDE. Per últim i no menys important, és en aquest fitxer en el que s'executen totes les ordres de dibuix a l'sketch.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -448,6 +452,9 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="c1">// Altres esdeveniments</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span>
 </code></pre></div></td></tr></table></div>
+    Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula.java"</strong>  que havies dissenyat a l'activitat anterior. </p>
+<div class="highlight"><pre><span></span><code>    Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys.
+</code></pre></div>
 <p>Aquest codi és el que conté el punt d'entrada principal a l'aplicació és el que donarà nom al projecte, per tant tindrà el mateix nom que la carpeta que el conté. Crea el teu projecte de particules i guarda'l amb el nom <strong>SistemaParticules</strong>.</p>
 <p>Una vegada ja tenim el nostre projecte creat s'afegirien les classes necessàries. En el nostre cas tindrem una unica classe que es diu <strong>Particula</strong>. Aquesta acció resultarà en un nou fitxer dins del projecte que s'acaba de crear. Per tal de crear aquesta classe realitza les següents accions:</p>
 <p><center>
@@ -460,7 +467,9 @@
 <div class="admonition danger">
 <p class="admonition-title">Compte amb l'extensió de la classe Partícula</p>
 <p>Fixa't que el nom de la classe partícula té extensió java i no pde. Això és molt important.</p>
-<p>Veiem-ho amb més detall. Processing IDE usa un tipus de classe que fa ús dels PApplets (o Applets de Processing IDE) per poder dibuixar per exemple amb les funcions de dibuix que ens ofereix l'API de Processing IDE. Per tant té un funcionament un poc peculiar i és per aquest motiu que no podrem posar atributs estàtics dins d'una classe com si podriem fer en altres entorns de desenvolupament. </p>
+<p>Veiem-ho amb més detall. Processing IDE usa un tipus de classe que fa ús dels PApplets (o Applets de Processing IDE) per poder dibuixar per exemple amb les funcions de dibuix que ens ofereix l'API de Processing IDE. Per tant té    Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula.java"</strong>  que havies dissenyat a l'activitat anterior. </p>
+<div class="highlight"><pre><span></span><code>Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys. un funcionament un poc peculiar i és per aquest motiu que no podrem posar atributs estàtics dins d'una classe com si podriem fer en altres entorns de desenvolupament.
+</code></pre></div>
 <p>El problema que tenim és que si la nostra classe Particula és .pde no podrem treballar amb mètodes i atributs estàtics sense convertir tota la classe en estàtica cosa no que no seria viable. Però si l'opció que escollim finalment és guardar la nostra particual com a "Particula.java" ens trobarem en que ja no podem usar mètodes de dibuix de Processing IDE. </p>
 <p>Convertir la classe Particula.pde a Particula.java. Sí que podem posar atributs i mètodes estàtics però no poden fer ús de les funcionalitat de la llibreria de Processing IDE com les de dibuix, per tant el mètode mostrar ja no funcionaria.</p>
 <p>Pareix ser que hem arribat a un carreró sense eixida, però encara ens queda una última opció que és passar-li l'sketch (PApplet) a la classe partícula quan ho necessitem.</p>
@@ -497,8 +506,18 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 602. Crea un projecte en Processing IDE</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula.java"</strong>  que havies dissenyat a l'activitat anterior. </p>
 <p>Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act602.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h2 id="propietats-i-metodes-de-les-classes">Propietats i mètodes de les classes</h2>
 <div class="admonition success">
@@ -559,8 +578,18 @@
 </div>
 <details class="question">
 <summary>Activitat 603. Atributs de les partícules</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Igual que hem fet amb la partícula del nostre sistema (volcà). Has de definir els atributs o propietats de la classe partícula del teu sistema (pluja). Analitza detingudament que és el que esperes que passe amb el teu sistema pluja i quines han de ser les característiques que haurien de tindre les gotes (particules) de la pluja (sistema de partícules).</p>
 <p>Recorda que has de posar comentaris de documentació als atributs. Pots aprofitar per explicar la justificació del perquè consideres importants els atributs o propietats que has escollit.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act603.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h3 id="els-constructors-de-classe">Els Constructors de classe</h3>
 <div class="admonition success">
@@ -658,8 +687,18 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 604. Constructor de partícules</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Igual que a l'exemple del sistema de partícules, crea dos constructors de la classe partícula del teu sistema de partícules pluja. Un serà el constructor per defecte (sense paràmetres) i l'altre seria el constructor parametritzat que inicialitza els valors del nostre objecte particula (de pluja).</p>
 <p>Després declara dos objectes de la classe Particula al main del teu projecte, concretament a la secció de variables globals i al mètode setup fer que es cride als dos constructors que acabes d'implementar.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act604.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <p>Una vegada tenim creats els constructors de la classe, cal recordar que un constructor de classe serveix per a crear <strong>instàncies</strong> d'eixa classe. Recordeu que un objecte al final és una instància d'una classe.</p>
 <h2 id="instancies">Instàncies</h2>
@@ -709,7 +748,17 @@
 </div>
 <details class="question">
 <summary>Activitat 605. Les gotes de pluja</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Problema</label><label for="__tabbed_5_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Al final al teu sistema de partícules de la pluja el que acabaràs instanciant són gotes de pluja. Crea almenys cinc gotes de pluja diferents entre elles utilitzant els constructors de la classe Particula. Encara que no es mostren de moment les parícules per pantalla, hauries d'aconseguir que foren diferents entre elles. Quan més automatizada tinques la diferència entre gotes millor.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act605.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h3 id="els-metodes">Els mètodes</h3>
 <p>Abans d’implementar el comportament de les nostres partícules (com es mouen, com canvien de color o com desapareixen), hem d’aprendre com expressar aquestes accions mitjançant funcions i mètodes. Aquest apartat servirà per entendre la base sobre la qual construirem els comportaments del sistema de partícules.</p>
@@ -748,12 +797,22 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 606. Mètodes a les classes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Solucio</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Escriu un mètode que retorne l'identificador dels objectes. De la mateixa forma que als mètodes anteriors, afegirem un mètode a la classe Particula que salude i ens diga el nom de la següent forma: "Hola soc pluja$Particula@13e68b75"</p>
 <p>El nom d'un objecte (o identificador) es pot obtindre cridant a:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div></p>
 <p>Per comprovar si tot funciona correctament has de cridar al mètode diguesHola just després de crear els objectes al mètode setup del main.</p>
 <p><strong>Reflexiona:</strong> Què ha de tornar aquest mètode? Quí s'ha d'encarregar de fer el println?</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act606.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <p>Continuant amb el nostre sistema de partícules del volcà podriem fer un mètode que s'encarregue de mostrar els objectes particula del sistema. Però al tractar-se d'un fitxer .java i no un .pde no podem fer ús d'algunes de les funcionalitats de l'API de Processing IDE com: fill, stroke, ellipse, circle etc.. és per tant necessari que la interfícies del nostre mètode mostrar tina un paràmetre de la classe PApplet.  Ja veurem després quin argument usarem quan cridem al mètode mostrar.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -867,8 +926,18 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 607 Mètode mostrar de la classe partícula</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solucio</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>A la classe partícula crear un mètode mostrar que dibuixe segons les seues propietats: posicio, grandaria i color. Compte amb reutilitzar el codi de l'anterior sistema de partícules perquè mentre les particules del sistema volcà són cercles de color roig, les gotes de pluja quan cauen es podrien representar (dibuixar) d'una altra manera.</p>
 <p>Utilitza aquest mètode mostrar fes que les cinc particules que has creat a l'activitat anterior es mostren per pantalla.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act607.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <p>Com has pogut observar, les partícules que has creat no es mouen, estan estàtiques. Això és perquè no tenen implementat el <strong>mètode actualitzar</strong>. El nostre sistema de partícules està influenciat bàsicament per les lleis de la física, és a dir, bàsicament a les partícules del nostres sistema les afecta: la gravetat, la fricció amb l'aire, la direcció i la velocitat inicial i a cada frame haurà d'actualitzar la seua posició, però no patisques, et deixe ací la fórmula física necessària per actualitzar la posició de la partícula agafant els frames com a unitat de temps.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
@@ -901,9 +970,19 @@
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 608. Mètode actualitzar de la classe partícula</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Al teu sistema de partícules de la pluja, implementa el mètode actualitzar en base a les lleis de la física com em fet a l'exemple anterior.</p>
 <p><strong>Algunes idees:</strong> si imagines que l'aplicació que estàs creant és una finestra per la que veus la pluja caure has de tindre en compte el factor profunditat. No és igual una gota de pluja que cau prop de la finestra que la que cau lluny. </p>
 <p>Qualsevol altra cosa que aportes a l'activitat i estiga degudament justificada també puntuarà.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act608.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h2 id="modificadors-de-visibilitat">Modificadors de visibilitat</h2>
 <div class="admonition success">
@@ -1057,7 +1136,17 @@
 </div>
 <details class="question">
 <summary>Activitat 609. Modificadors de visibilitat</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Aplica la norma dels modificadors de visibilitat al teu projecte pluja i adapta les classes que ja tens implementades.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act609.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h3 id="get-i-sets">Get i Sets</h3>
 <p>Com ja hauràs pogut advertir ara els atributs al ser privats no són accessibles des de fora. Per això estan els <strong>gets</strong> i <strong>sets</strong>
@@ -1108,7 +1197,17 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>Els sets per contra, serveixen per tal que només aquells valors dels atributs que el programador desitje siguen accessibles des de fora de la classe.</p>
 <details class="question">
 <summary>Activitat 610. Gets i sets</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Solucio</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Per aquells atributs susceptibles de ser modificats per l'usuari de la classe, fer els gets i sets pertinents. Mínim hauràs d'afegir el mètode <strong>setColor</strong> que tindrà paràmetres: r, g i b de tipus enters i amb rang de valors entre 0 i 255. El mètode setColor s'haurà d'encarregar de traduir els tres números enters a un número hexadecimal amb format ARGB. Exemple: 0xFF33BBAA on les primeres dues F són les que indiquen opacitat total.</p>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act610.zip">📥 Descarrega la solució</a></center></p>
+</div>
+</div>
+</div>
 </details>
 <h2 id="metodes-i-atributs-estatics">Mètodes i atributs estàtics</h2>
 <div class="admonition success">
@@ -1153,7 +1252,7 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>En el sistema de partícules desenvolupat en aquest tema, les lleis de la física que governen el moviment de les partícules (com la gravetat o la fricció de l’aire) no són una propietat individual de cada partícula, sinó que són compartides per totes elles. Per aquest motiu, aquestes lleis s’han encapsulat en una classe auxiliar anomenada Fisica2D, que fa ús exclusiu d’atributs i mètodes estàtics.</p>
 <details class="question">
 <summary>Activitat 611. Crea un atribut estàtic al sistema de partícules</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Enunciat</label><label for="__tabbed_2_2">Rúbrica</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><input id="__tabbed_11_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Enunciat</label><label for="__tabbed_11_2">Rúbrica</label><label for="__tabbed_11_3">Solucio</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En aquesta activitat es tracta de crear un comptador global estàtic per a les gotes de pluja que es generen al nostre sistema de partícules. Però abans necessitarem fer algunes cosetes. 
@@ -1239,6 +1338,10 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 </tbody>
 </table>
 </div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act611.zip">📥 Descarrega la solució</a></center></p>
+</div>
 </div>
 </div>
 </details>
@@ -1275,7 +1378,7 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 612. Crear una fàbrica al teu sistema de partícules</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Rúbrica</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><input id="__tabbed_12_3" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Rúbrica</label><label for="__tabbed_12_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En el projecte del tema 6 hem desenvolupat un sistema de partícules que simula un volcà.</p>
@@ -1353,6 +1456,10 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act612.zip">📥 Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -1439,7 +1546,7 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 <p>Com es pot obaservar si compareu el mètode actualitzar modificat amb el mètode anterior, ara és molt més simple i fàcil de llegir a primera vista. En aquest cas la classe estàtica ens serveix per ocultar <strong>(Principi d'ocultació - POO)</strong> el funcionament intern de diversos càlculs físics que no necessàriament tenen a veure amb la classe Partícula. És a dir, a l'usuari de les classes els importa com fan els mètodes sino què fan els mètodes.</p>
 <details class="question">
 <summary>Activitat 613. Adapta la classe Fisica2D</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Rúbrica</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><input id="__tabbed_13_3" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Rúbrica</label><label for="__tabbed_13_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Per tal d’adaptar el sistema de partícules al fenomen de la pluja, caldrà modificar o ampliar la classe Fisica2D, fent ús d’atributs i mètodes estàtics.</p>
@@ -1524,6 +1631,10 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
+<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act613.zip">📥 Descarrega la solució</a></center></p>
 </div>
 </div>
 </div>
@@ -1847,8 +1958,8 @@ A continuació pots observar un exemple d'organització d'un projecte amb una ll
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

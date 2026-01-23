@@ -367,8 +367,7 @@
 <p><strong>Entregar:</strong> Document pdf que continga el disseny UML de la classe i una breu reflexió de les motivacions.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act601.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -416,7 +415,7 @@
 <p>D'aquest disseny de la classe <strong>particula</strong> ja podem començar a picar el codi del nostre projecte, però abans algunes consideracions prèvies associades a l'entorn integrat de desenvolupament escollit (Processing IDE) i les seues particularitats.</p>
 <p>L'anàlisi i el disseny formen part del procés de desenvolupament abans de començar a codificar. Una vegada tenim l'abstracció feta i el diagrama UML, passem a la fase d'implementació.</p>
 <p>Tot projecte desenvolupat amb Processing IDE (igual que altres IDEs) necessita d'un punt d'entrada, fitxer principal o <strong>main</strong>. Aquest fitxer principal o main és el que conté els mètodes setup, draw, i tots els controladors d'esdeveniments i també serà el lloc des del qual es farà ús de les classes i objectes que formaran part del projecte. En altres paraules, el que hem estat fent fins ara amb les activitats realitzades en Processing IDE. Per últim i no menys important, és en aquest fitxer en el que s'executen totes les ordres de dibuix a l'sketch.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -452,24 +451,19 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="c1">// Altres esdeveniments</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span>
 </code></pre></div></td></tr></table></div>
-    Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula.java"</strong>  que havies dissenyat a l'activitat anterior. </p>
-<div class="highlight"><pre><span></span><code>    Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys.
-</code></pre></div>
 <p>Aquest codi és el que conté el punt d'entrada principal a l'aplicació és el que donarà nom al projecte, per tant tindrà el mateix nom que la carpeta que el conté. Crea el teu projecte de particules i guarda'l amb el nom <strong>SistemaParticules</strong>.</p>
 <p>Una vegada ja tenim el nostre projecte creat s'afegirien les classes necessàries. En el nostre cas tindrem una unica classe que es diu <strong>Particula</strong>. Aquesta acció resultarà en un nou fitxer dins del projecte que s'acaba de crear. Per tal de crear aquesta classe realitza les següents accions:</p>
 <p><center>
-<img src="../assets/Tema5/CrearClasse1.png" width="60%"/>
+<img src="../assets/Tema6/CrearClasse1.png" width="60%"/>
 </center></p>
 <p>Si es fa clic amb el ratolí el que es marca a la imatge anterior ens apareixeran les següents opcions: "Nova pestanya", "Reanomena", "Elimina", "Pestanya Anterior", "Pestanya següent" ... Hem d'escollir l'opció <strong>Nova Pestanya</strong> i al diàleg que apareixerà li posarem <strong>Particula.java</strong>, el nom de la classe que volem crear. El resultat final serà que el nostre editor del Processing IDE tindrà dues pestanyes: el main que hem anomenat SistemaParticules i la classe Particula.java. </p>
 <p><center>
-<img src="../assets/Tema5/CrearClasse2.png" width="60%"/>
+<img src="../assets/Tema6/CrearClasse2.png" width="60%"/>
 </center></p>
 <div class="admonition danger">
 <p class="admonition-title">Compte amb l'extensió de la classe Partícula</p>
 <p>Fixa't que el nom de la classe partícula té extensió java i no pde. Això és molt important.</p>
-<p>Veiem-ho amb més detall. Processing IDE usa un tipus de classe que fa ús dels PApplets (o Applets de Processing IDE) per poder dibuixar per exemple amb les funcions de dibuix que ens ofereix l'API de Processing IDE. Per tant té    Crea un projecte amb Processing IDE com s'ha explicat en aquest apartat amb nom <strong>"SistemaParticules"</strong>. Aquest projecte ha de tindre dos fitxers: el principal o main de l'entorn de desenvolupament i un altre que contindrà la futura classe <strong>"Particula.java"</strong>  que havies dissenyat a l'activitat anterior. </p>
-<div class="highlight"><pre><span></span><code>Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys. un funcionament un poc peculiar i és per aquest motiu que no podrem posar atributs estàtics dins d'una classe com si podriem fer en altres entorns de desenvolupament.
-</code></pre></div>
+<p>Veiem-ho amb més detall. Processing IDE usa un tipus de classe que fa ús dels PApplets (o Applets de Processing IDE) per poder dibuixar per exemple amb les funcions de dibuix que ens ofereix l'API de Processing IDE. Per tant té algunes limitacions.</p>
 <p>El problema que tenim és que si la nostra classe Particula és .pde no podrem treballar amb mètodes i atributs estàtics sense convertir tota la classe en estàtica cosa no que no seria viable. Però si l'opció que escollim finalment és guardar la nostra particual com a "Particula.java" ens trobarem en que ja no podem usar mètodes de dibuix de Processing IDE. </p>
 <p>Convertir la classe Particula.pde a Particula.java. Sí que podem posar atributs i mètodes estàtics però no poden fer ús de les funcionalitat de la llibreria de Processing IDE com les de dibuix, per tant el mètode mostrar ja no funcionaria.</p>
 <p>Pareix ser que hem arribat a un carreró sense eixida, però encara ens queda una última opció que és passar-li l'sketch (PApplet) a la classe partícula quan ho necessitem.</p>
@@ -513,8 +507,7 @@
 <p>Per tal de no repetir el mateix resultat del volcà que farem com a exemple el resultat que obtindreu serà una pluja. Les particules en el vostre cas seran gotes de pluja que cauen des des totes les posicions de l'eix y superior en diferents direccions, velocitats i tamanys.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act602.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -585,8 +578,7 @@
 <p>Recorda que has de posar comentaris de documentació als atributs. Pots aprofitar per explicar la justificació del perquè consideres importants els atributs o propietats que has escollit.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act603.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -694,8 +686,7 @@
 <p>Després declara dos objectes de la classe Particula al main del teu projecte, concretament a la secció de variables globals i al mètode setup fer que es cride als dos constructors que acabes d'implementar.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act604.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -754,8 +745,7 @@
 <p>Al final al teu sistema de partícules de la pluja el que acabaràs instanciant són gotes de pluja. Crea almenys cinc gotes de pluja diferents entre elles utilitzant els constructors de la classe Particula. Encara que no es mostren de moment les parícules per pantalla, hauries d'aconseguir que foren diferents entre elles. Quan més automatizada tinques la diferència entre gotes millor.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act605.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -808,8 +798,7 @@
 <p><strong>Reflexiona:</strong> Què ha de tornar aquest mètode? Quí s'ha d'encarregar de fer el println?</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act606.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -933,8 +922,7 @@
 <p>Utilitza aquest mètode mostrar fes que les cinc particules que has creat a l'activitat anterior es mostren per pantalla.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act607.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -978,8 +966,7 @@
 <p>Qualsevol altra cosa que aportes a l'activitat i estiga degudament justificada també puntuarà.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="../assets/Tema6/act608.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -1142,8 +1129,7 @@
 <p>Aplica la norma dels modificadors de visibilitat al teu projecte pluja i adapta les classes que ja tens implementades.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act609.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -1203,8 +1189,7 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>Per aquells atributs susceptibles de ser modificats per l'usuari de la classe, fer els gets i sets pertinents. Mínim hauràs d'afegir el mètode <strong>setColor</strong> que tindrà paràmetres: r, g i b de tipus enters i amb rang de valors entre 0 i 255. El mètode setColor s'haurà d'encarregar de traduir els tres números enters a un número hexadecimal amb format ARGB. Exemple: 0xFF33BBAA on les primeres dues F són les que indiquen opacitat total.</p>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act610.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -1339,8 +1324,7 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 </table>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act611.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -1458,8 +1442,7 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act612.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>
@@ -1633,8 +1616,7 @@ Fins ara, la creació d’una partícula podria fer-se així:</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><center>📦 <strong>Fitxer ZIP amb la solució completa</strong></center></p>
-<p><center><a class="md-button md-button--secondary" href="./assets/Tema6/act613.zip">📥 Descarrega la solució</a></center></p>
+<p>Encara no disponible</p>
 </div>
 </div>
 </div>

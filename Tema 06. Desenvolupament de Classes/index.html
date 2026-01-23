@@ -1247,15 +1247,15 @@ Avantatge fonamental l'assignació de valors als atributs està controlada pel p
 <p>En el nostre cas del sistema de partícules, aquest patró s’implementa mitjançant mètodes estàtics dins de la pròpia classe Particula, que actuen com una <strong>fàbrica de partícules.</strong></p>
 <p><strong>Per què utilitzar una fàbrica?</strong>
 Fins ara, la creació d’una partícula podria fer-se així:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">Particula</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Particula</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">p</span><span class="p">.</span><span class="na">setColorRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">p</span><span class="p">.</span><span class="na">setVelocitat</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-Aquest enfocament presenta alguns inconvenients: la lògica de construcció queda repartida pel codi, qualsevol canvi obliga a modificar molts llocs, i el codi principal es torna menys llegible.</p>
+<p>Aquest enfocament presenta alguns inconvenients: la lògica de construcció queda repartida pel codi, qualsevol canvi obliga a modificar molts llocs, i el codi principal es torna menys llegible.</p>
 <p>Amb una fàbrica, tota aquesta lògica queda centralitzada en un únic lloc.</p>
-<p>Factory method a la classe Partícula</p>
+<p><strong>Factory method a la classe Partícula</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>

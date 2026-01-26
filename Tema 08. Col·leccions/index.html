@@ -8,16 +8,16 @@
 <link href="../Tema%2007.%20Entrada%2C%20eixida%20i%20gr%C3%A0fics/" rel="prev"/>
 <link href="../Tema%2009.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.12" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
 <title>08.- Col·leccions - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -33,10 +33,10 @@
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -57,16 +57,16 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 <input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 </form>
-<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -74,17 +74,17 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
 <nav aria-label="Search" class="md-search__options">
 <button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -106,7 +106,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
@@ -320,7 +320,7 @@
 </ul>
 <p>És molt important distingir entre <strong>valor i posició.</strong> Mentre que el valor és el contingut de l’array en una posició determinada la posició és l’índex que ens permet recorres l’array i tot el seu contingut.</p>
 <p><center>
-<img alt="Arrays Posició vs Valor" src="assets/Tema5/Arrays1.png"/>
+<img alt="Arrays Posició vs Valor" src="../assets/Tema8/Arrays1.png"/>
 </center></p>
 <p>A l’exemple anterior tenim un array de 8 enters, la part superior de color blau ens indica les posicions que van de la 0 a la 7, 8 posicions ens total. Mentre que a la fila inferior trobarem el valor que conté cadascuna de les posicions. Per exemple en la posició 5 (la sisena) de l’array tindríem emmagatzemat un valor de 8.</p>
 <p>Un altre concepte a tenir en compte és la dimensió o grandària de l’array que ens determina el total d’elements que es poden guardar en aquest. En el nostre cas la mida seria de 8.</p>
@@ -401,7 +401,7 @@
 </div>
 </input></input></div>
 </details>
-<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema5/act501.pde)-->
+<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema8/act501.pde)-->
 <h3 id="arrays-de-caracters">Arrays de caracters</h3>
 <p>Un array que conté caràcters en lloc de números funciona d’una forma molt semblant al que s’ha explicat en els apartats anteriors. Es pot veure de forma senzilla a l’exemple que vos mostrem a continuació.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -437,7 +437,7 @@
 </div>
 </input></input></div>
 </details>
-<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema5/act502.pde)-->
+<!--[Descarrega la solució al problema de la inicialització d'arrays](assets/Tema8/act502.pde)-->
 <h3 id="arrays-com-a-parametres">Arrays com a paràmetres</h3>
 <p>Com qualsevol altre tipus de dades, un array també es pot passar com a <strong>paràmetre a un mètode.</strong> Els arrays sempre es passen <strong>per referència</strong>, és a dir, quan passem un array per paràmetre a un mètode, el que en realitat estem passant és un adreça de memòria que és la que ens indicaria on està l’inici del contingut d’aquest. Passar per referència qualsevol paràmetre significa que qualsevol modificació que es faja dins del mètode afectarà també a l’array fora d’aquest.</p>
 <p>No passa el mateix si passem un element concret de l’array, en aquest cas a l’igual que amb els altres paràmetres, aquests es passen per valor, per tant les  modificacions o canvis que es produeixen dins del mètode no afectaran fora d’aquest.</p>
@@ -469,7 +469,7 @@
 </div>
 </input></input></div>
 </details>
-<!--[Descarrega la solució al problema de mostrar arrays amigablement](assets/Tema5/act503.pde)-->
+<!--[Descarrega la solució al problema de mostrar arrays amigablement](assets/Tema8/act503.pde)-->
 <h3 id="bucle-for-en-java">Bucle for en Java</h3>
 <p>A les activitats anteriors t'hauràs trobat amb el dilema de com recórrer tant l'array d'enters com el de caracters per tal d'inicialitzar-lo. Si vares entendre bé el <strong>teorema d'estructura i les estructures iteratives</strong>, segurament hauràs utilitzat un bucle while, un do while o un for. Però aquests bucles a l'hora de recórrer arrays tenen un inconvenient: el <strong>grandària de l'array</strong>. El programador ha de controlar quan s'arriba al final de l'array per tal que l'aplicació no done una errada inesperada i això de vegades no és senzill. Mira els següents exemples de bucles:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
@@ -527,7 +527,7 @@
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema dels diferents tipus de bucle](assets/Tema5/act504.pde)-->
+<!--[Descarrega la solució al problema dels diferents tipus de bucle](assets/Tema/act504.pde)-->
 <p>La millor forma de recórrer un array sense haver de controlar quan s’arriba al final és la sentència for usada d’una manera alternativa. Si per exemple tenim un array d’enters que s’anomena «vector» i volem llistar tots els seus elements, podríem fer el següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
@@ -551,7 +551,7 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 </div>
 </div>
 </details>
-<!--[Descarrega la solució al problema del bucle for "especial"](assets/Tema5/act505.pde)-->
+<!--[Descarrega la solució al problema del bucle for "especial"](assets/Tema8/act505.pde)-->
 <h2 id="algorismes-de-recerca">Algorismes de recerca</h2>
 <p>Implicitament amb l'aparició de les estructures de dades complexes en programació que, en certa manera, es podrien entendre com a <strong>conjunts</strong>, apareix la necessitat de poder <strong>fer recerques</strong> elements dintre d'aquestos conjunts. Existeixen dos <strong>algorismes de recerca</strong> que veurem en aquest apartat: la recerca <strong>seqüencial</strong> i la recerca <strong>binaria</strong>. A l’element que estem buscant li direm <strong>clau</strong>.</p>
 <p>Però abans d'anar per feina, canviarem temporalment l'entorn de programació de Processing IDE a <strong>Eclipse IDE</strong> i veurem un poc més que són les classes i els objectes i com funcionen en Java abans de veure-ho amb més detall al tema següent. Realitza les activitats següents abans de continuar.</p>
@@ -677,7 +677,7 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 </div>
 </div>
 </details>
-<!--[Descarrega el projecte inicial](assets/Tema5/act506.pde)-->
+<!--[Descarrega el projecte inicial](assets/Tema8/act506.pde)-->
 <details class="question">
 <summary>Activitat 507. Inicialització d'arrays</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Solució</label></div>
@@ -703,7 +703,7 @@ Escriu el problema amb el que t'has trobat i la solució que has aplicat a un co
 </div>
 </div>
 </details>
-<!--[Descarrega la solució a l'activitat 507](assets/Tema5/act507.pde)-->
+<!--[Descarrega la solució a l'activitat 507](assets/Tema/act507.pde)-->
 <details class="question">
 <summary>Activitat 508. Ampliació de funcions</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Solució</label></div>
@@ -731,7 +731,7 @@ X. Eixir</li>
 </div>
 </div>
 </details>
-<!--[Descarrega la solució a l'activitat 508](assets/Tema5/act508.pde)-->
+<!--[Descarrega la solució a l'activitat 508](assets/Tema8/act508.pde)-->
 <details class="question">
 <summary>Activitat 509. Mostrar menú</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Solució</label></div>
@@ -847,7 +847,7 @@ Al mateix temps hauràs d'implementar un mètode que capture el teclat per tal q
 2. A partir de la posició 1 busquem l’element més menut següent i fem el mateix que al pas anterior però aquesta vegada a la posició 1 de l’array
 3. Repetim el pas 2 fins arribar a l’última posició de l’array.</p>
 <p><center>
-<img alt="Ordenació Selecció" src="assets/Tema5/SeleccioOrdenacio.gif"/>
+<img alt="Ordenació Selecció" src="../assets/Tema8/SeleccioOrdenacio.gif"/>
 </center></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
@@ -925,7 +925,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><center>
-<img alt="Ordenació per Inserció" src="assets/Tema5/Insercio.gif"/>
+<img alt="Ordenació per Inserció" src="../assets/Tema8/Insercio.gif"/>
 </center></p>
 <details class="question">
 <summary>Activitat 513. Algorisme ordenació per inserció</summary>
@@ -981,7 +981,7 @@ Imaginem que tenim el següent array d’enters per ordenar: </p>
 <a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <center>
-<img alt="Ordenació per Bombolla" src="assets/Tema5/Bombolla.gif"/>
+<img alt="Ordenació per Bombolla" src="../assets/Tema8/Bombolla.gif"/>
 </center></p>
 <details class="question">
 <summary>Activitat 514. Ordenació per bombolla</summary>
@@ -1348,7 +1348,7 @@ El menú ha de mostrar el següent:</p>
 </ol>
 <p>Per a cadascuna de les operacions anteriors s’ha d’implementar un mètode
 Mireu el següent exemple:</p>
-<p><img alt="Activitat 15. Matrius" src="assets/Tema5/Matrius1.png"/></p>
+<!--<img alt="Activitat 15. Matrius" src="assets/Tema8/Matrius1.png" />-->
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1359,7 +1359,7 @@ Mireu el següent exemple:</p>
 <!--[Descarrega la solució a l'activitat 519](assets/Tema5/act519.pde)-->
 <h3 id="arrays-irregulars">Arrays irregulars</h3>
 <p>Una matriu irregular o escalonada no és més que un array de taules, on cadascuna de les taules que formen l’array no necessàriament han de tenir la mateixa grandària.</p>
-<p><img alt="Arrays Irregulars" src="assets/Tema5/Irregulars.png"/></p>
+<p><img alt="Arrays Irregulars" src="../assets/Tema8/Irregulars.png"/></p>
 <p>La declaració d’un array irregular en java seria de la següent manera:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
@@ -2121,8 +2121,8 @@ $: indica que la coincidència ha d'estar al final de la línia.
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

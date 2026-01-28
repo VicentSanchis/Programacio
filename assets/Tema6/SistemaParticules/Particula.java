@@ -2,13 +2,13 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 public class Particula {
-  private static int totalParticules;
-  private PVector posicio;
-  private PVector direccio;
-  private PVector vel;
-  private float   velocitat;
-  private int     grandaria;
-  private int     pinta;
+  protected static int totalParticules;
+  protected PVector posicio;
+  protected PVector direccio;
+  protected PVector vel;
+  protected float   velocitat;
+  protected int     grandaria;
+  protected int     pinta;
 
   // Constructor per defecte
   public Particula () {

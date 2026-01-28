@@ -80,17 +80,30 @@ public class Particula {
 
   public void actualitzar () {
     PVector acceleracio = new PVector(0, 0);
-    acceleracio.add (Fisica2D.gravetatPluja (profunditat));
-    acceleracio.add (Fisica2D.friccioPluja (velocitat, profunditat));
-    
+
+    // Gravetat
+    PVector g = new PVector(0, 0.3f);
+    g.mult(0.5f + profunditat);
+    acceleracio.add(g);
+
+    // Fricció correcta
+    PVector f = velocitat.copy();
+    f.mult(-1);
+    f.normalize();
+    f.mult(0.02f);
+    f.mult(1.0f - profunditat);
+    acceleracio.add(f);
+
     // Direcció base de la gota
     PVector velDir = direccio.copy();
     velDir.mult(velocitatEscalar * (0.5f + profunditat));
     acceleracio.add(velDir);
 
     // Actualització
-    velocitat.add (acceleracio);
-    velocitat.limit (Fisica2D.velocitatTerminal (profunditat));
+    velocitat.add(acceleracio);
+
+    float velocitatMax = velocitatEscalar * (0.5f + profunditat);
+    velocitat.limit(velocitatMax);
 
     posicio.add(velocitat);
   }

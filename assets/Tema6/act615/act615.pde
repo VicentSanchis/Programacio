@@ -4,17 +4,16 @@ Particula g1, g2, g3, g4, g5, g6, g7, g8, g9, g10;
 // Configuració inicial de l'aplicació
 void setup () {
   size (640, 480);
-  g1  = Particula.crearParticula (40, 40, 560, 40);
-  g1  = Particula.crearParticula (40, 40, 560, 40);
-  g2  = Particula.crearParticula (40, 40, 560, 40);
-  g3  = Particula.crearParticula (40, 40, 560, 40);
-  g4  = Particula.crearParticula (40, 40, 560, 40);
-  g5  = Particula.crearParticula (40, 40, 560, 40);
-  g6  = Particula.crearParticula (40, 40, 560, 40);
-  g7  = Particula.crearParticula (40, 40, 560, 40);
-  g8  = Particula.crearParticula (40, 40, 560, 40);
-  g9  = Particula.crearParticula (40, 40, 560, 40);
-  g10 = Particula.crearParticula (40, 40, 560, 40);
+  g1  = new Gota ();
+  g2  = new Gota ();
+  g3  = new Gota ();
+  g4  = new Gota ();
+  g5  = new Gota ();
+  g6  = new Gota ();
+  g7  = new Gota ();
+  g8  = new Gota ();
+  g9  = new Gota ();
+  g10 = new Gota ();
   
   println(g1.diguesHola ());
   println(g2.diguesHola ());

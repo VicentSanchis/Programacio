@@ -5,11 +5,11 @@ Particula p1, p2, p3, p4, p5;
 void setup () {
   size (640, 480);
   
-  p1 = Particula.crearParticula(new PVector (320, 240));
-  p2 = Particula.crearParticula(new PVector (320, 240));
-  p3 = Particula.crearParticula(new PVector (320, 240));
-  p4 = Particula.crearParticula(new PVector (320, 240));
-  p5 = Particula.crearParticula(new PVector (320, 240));
+  p1 = new Lava (new PVector (320, 240));
+  p2 = new Fum (new PVector (320, 240));
+  p3 = new Lava (new PVector (320, 240));
+  p4 = new Fum (new PVector (320, 240));
+  p5 = new Lava (new PVector (320, 240));
   
   println(Particula.mostraTotalParticules());
 }

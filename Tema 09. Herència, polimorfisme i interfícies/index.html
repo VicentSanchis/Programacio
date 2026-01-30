@@ -247,7 +247,7 @@
 <h2 id="herencia">Herència</h2>
 <p>En programació orientada a objectes l’herència és un mecanisme que permet potenciar la reutilització i l’extensibilitat en el desenvolupament de programari a banda de <strong>reduir la quantitat de codi redundant.</strong> Aquest mecanisme permet crear noves classes a partir d’una classe o <strong>jerarquia de classes</strong> preexistent (ja comprovades i verificades) evitant d’aquesta forma el redisseny, la modificació i verificació de la part ja implementada. L’herència facilita la creació d’objectes a partir d’altres ja existents i implica que una subclasse obté tot el comportament (mètodes) i finalment els atributs (variables) de la seua superclasse.</p>
 <p>Suposem el cas en el que disposem de dues classes (amb menys classes resultaria impossible l’herència), una s’anomenarà: <strong>classe base, superclasse o classe pare;</strong> mentre que l’altra serà <strong>la classe derivada, subclasse o classe filla.</strong></p>
-<p>Seguint amb l'exemple del tema anterior del <strong>Volcano</strong> <a href="../assets/Tema7/Volcano.zip">(Descarrega'l ací)</a>, els nostres piroclasts tenen tots les mateixes característiques (aparença) i tots tenen el mateix comportament conforme l'hem dissenyada fins ara. Si apliquem els conceptes d'herència i polimorfisme al nostre projecte el canvi pot ser significatiu.</p>
+<p>Seguint amb l'exemple del tema anterior del <strong>Volcano</strong> <a href="assets/Tema7/Volcano.zip">(Descarrega'l ací)</a>, els nostres piroclasts tenen tots les mateixes característiques (aparença) i tots tenen el mateix comportament conforme l'hem dissenyada fins ara. Si apliquem els conceptes d'herència i polimorfisme al nostre projecte el canvi pot ser significatiu.</p>
 <p>Basant-nos en el projecte del volcà del tema anterior però aplicant algunes modificacions de classes i amb el que varem explicar al tema anterior sobre <strong>herència</strong> on haviem dissenyat una sèrie de classes derivades de <strong>Piroclast</strong> com es podreu observar al següent esquema:</p>
 <div class="admonition danger">
 <p class="admonition-title">Canvis Projecte Volcano</p>
@@ -375,7 +375,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 <summary>Activitat 701. El joc dels escacs</summary>
 <p>Fes un diagrama de classes per al joc dels escacs utilitzant els mecanismes d'herència com hem vist amb l'exemple del Volcano.</p>
 <p><center>
-<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="../assets/Tema7/Escacs.gif"/></kbd>
+<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="assets/Tema7/Escacs.gif"/></kbd>
 </center></p>
 <p>Basant-nos en la imatge anterior, podriem fer un dissenya amb un tauler de joc una classe base fitxa que aglutine tots els atributs i mètodes comuns i després per cada una de les fitxes diferents: torre, cavall, àlfil, peó, torre, rei i reina es podrien crear classes derivades on especificariem les diferències en aparença, cada fitxa té una forma, i en comportament, cada fitxa es mou d'una forma diferent.</p>
 </details>
@@ -508,7 +508,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <p>El que fem amb el codi anterior i la crida a <strong>super</strong> és cridar al constructor de la classe pare passant-li els paràmetres que demana per tal d'inicialitzar els diferents piroclasts de forma correcta.</p>
 <p>Per tal de distingir les diferents subclasses, els assignarem diferents colors a les diferents subclasses.</p>
 <p><center>
-<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="../assets/Tema7/VolcanoT7.gif"/></kbd>
+<kbd style="border:1px solid #888;width:50%;"><img alt="Volcano" src="assets/Tema7/VolcanoT7.gif"/></kbd>
 </center></p>
 <p>A més a més, super() també ens permet cridar a mètodes de la classe pare de la següent forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">super</span><span class="p">.</span><span class="na">metode</span><span class="p">(</span><span class="n">arguments</span><span class="p">);</span>

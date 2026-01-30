@@ -15,16 +15,16 @@ void setup () {
   g9  = new Gota ();
   g10 = new Gota ();
   
-  println(g1.diguesHola ());
-  println(g2.diguesHola ());
-  println(g3.diguesHola ());
-  println(g4.diguesHola ());
-  println(g5.diguesHola ());
-  println(g6.diguesHola ());
-  println(g7.diguesHola ());
-  println(g8.diguesHola ());
-  println(g9.diguesHola ());
-  println(g10.diguesHola ());
+  println (g1.diguesHola ());
+  println (g2.diguesHola ());
+  println (g3.diguesHola ());
+  println (g4.diguesHola ());
+  println (g5.diguesHola ());
+  println (g6.diguesHola ());
+  println (g7.diguesHola ());
+  println (g8.diguesHola ());
+  println (g9.diguesHola ());
+  println (g10.diguesHola ());
 }
 
 // Bucle de joc o mètode draw

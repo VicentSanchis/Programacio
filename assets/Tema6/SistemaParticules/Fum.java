@@ -7,4 +7,10 @@ public class Fum extends Particula {
         vel = new PVector(0, -3f);
         pinta = 0xFFCCCCCC;
     }
+    
+    public void actualitzar () {
+      PVector acceleracio = new PVector (0, 0);
+      vel.add(acceleracio);
+      posicio.add(vel);
+  }
 }

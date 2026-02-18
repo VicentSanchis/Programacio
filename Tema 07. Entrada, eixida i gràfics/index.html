@@ -200,6 +200,20 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccio-als-fitxers">
+<span class="md-ellipsis">
+      Introducció als fitxers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fitxers-de-text-guardar-i-recuperar-informacio">
+<span class="md-ellipsis">
+      Fitxers de text: guardar i recuperar informació
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -255,7 +269,9 @@ Tainted Love    Imelda May</li>
 </div>
 <p>Una part important de tot llenguatge de programació és com s’establirà el contacte amb l’exterior, bé siga mitjançant la <strong>consola</strong> o a través del <strong>sistema de fitxers</strong>, per finalment poder actuar amb l’usuari d’una aplicació en execució. Ambdós, consola i sistema de fitxers, poden funcionar tant d’entrada als nostres programes com d’eixida.</p>
 <p>Java defineix una abstracció, els <strong>streams o fluxos</strong> per tractar la comunicació d’informació amb l’exterior. Per entendre-ho millor, un stream o flux és com un canal de comunicació entre un origen i un destí. Per exemple suposem el cas d’un programa que quan arranque haja de llegir una llista de clients d’un fitxer de text per crear una agenda. En aquest cas <strong>l’origen</strong> seria el fitxer de text i el <strong>destí</strong> el programa o aplicació que s’encarrega d’emplenar l’agenda amb el llistat de clients, doncs bé, l’stream en aquest escenari seria el <strong>canal de comunicació</strong> que s’establiria entre el fitxer de text i el programa per tal que aquest puga llegir la informació.</p>
-<p><img alt="Streams" src="../assets/Tema7/EntradaEixida.png"/></p>
+<p><center>
+<img src="../assets/Tema7/EntradaEixida.png"/>
+</center></p>
 <p>A la imatge anterior es poden observar dos tipus de fluxos de dades: El primer és un flux d'entrada de dades, s'enten d'entrada perquè va del sistema de fitxers al programa, mentre que el segon representa un flux de dades d'eixida, ja que aquest va del programa al sistema de fitxers.</p>
 <p>En aquest tema explicarem com Java tracta mitjançant objectes l’establiment d'aquests canals de comunicació i quines són les operacions que hi podem fer i com s’han d’utilitzar aquestes abstraccions de Java.
 D’altra banda Java també ofereix el mecanisme d’excepcions per controlar els errors sobrevinguts. Una excepció és un problema que es produeix en temps d’execució. Java permet controlar aquests problemes i programar amb els try...catch la solució als errors en temps d’execució.</p>
@@ -286,13 +302,21 @@ D’altra banda Java també ofereix el mecanisme d’excepcions per controlar el
 </table>
 <p>Java declara quatre classes <strong>abstractes</strong>, és a dir, que no podem instanciar cap objectes d'aquestes classes, que deriven directament de la superclasse «Object» que són: <strong>InputStream</strong>, <strong>OutputStream</strong>, <strong>Reader</strong> i <strong>Writer</strong>.</p>
 <p><strong>InputStream</strong> és la base per a totes les classes definides per al flux d’entrada de dades a nivell de bytes. A la imatge següent es mostren totes les classes que deriven d'InputStream.  De totes les classes derivades de la classe abstracta InputStream, veurem amb més detall les següents: FileInputStream, DataInputStream i ObjectInputStream.</p>
-<p><img alt="Jerarquia Classes" src="../assets/Tema7/InputStreamClasses.png"/></p>
+<p><center>
+<img src="../assets/Tema7/InputStreamClasses.png"/>
+</center></p>
 <p><strong>OutputStream</strong> és la classe base per a les classes que gestionen el flux d’eixida a nivell de bytes. A la imatge següent es poden observar totes les seues classes derivades. Pel que fa a aquesta classe abstracta, veurem amb més detall: FileOutputStream, DataOutputStream, PrintStream i ObjectOutputStream.</p>
-<p><img alt="Jerarquia Classes" src="../assets/Tema7/OutputStreamClasses.png"/></p>
+<p><center>
+<img src="../assets/Tema7/OutputStreamClasses.png"/>
+</center></p>
 <p><strong>Reader</strong> és la classe per llegir streams a nivell de caracter. Observa les classes derivades a la imatge següent. D'aquesta classe abstracta veurem amb més detall: BufferedReader, InputStreamReader, FileReader</p>
-<p><img alt="Jerarquia Classes" src="../assets/Tema7/ReaderClasses.png"/></p>
+<p><center>
+<img src="../assets/Tema7/ReaderClasses.png"/>
+</center></p>
 <p><strong>Writer</strong> és la classe per escriure a streams a nivell de caracter i les classes que deriven d'ell són les que es poden veure a la següent imatge. De totes les derivades ens centrarem en: OutputStreamWriter, FileWriter, BufferedWriter i PrintWriter.</p>
-<p><img alt="Jerarquia Classes" src="../assets/Tema7/WriterClasses.png"/></p>
+<p><center>
+<img src="../assets/Tema7/WriterClasses.png"/>
+</center></p>
 <h2 id="entrada-i-eixida-per-consola-en-processing-ide">Entrada i eixida per consola en Processing IDE</h2>
 <blockquote>
 <p><em>La consola com a eina d’eixida i entrada bàsica d’informació</em></p>
@@ -411,62 +435,338 @@ D’altra banda Java també ofereix el mecanisme d’excepcions per controlar el
 <li>la <strong>entrada principal de dades</strong> es farà mitjançant <strong>fitxers</strong> i <strong>interfícies gràfiques</strong></li>
 <li>la consola quedarà com a eina de suport i depuració</li>
 </ul>
-<p>??? question "🧩 Activitat 705. Reflexió guiada
-    Escriu un breu comentari indicant:</p>
-<div class="highlight"><pre><span></span><code>- Dos avantatges d’usar la consola en Processing
-- Dues limitacions respecte a l’entrada de dades
-
-Aquesta activitat no requereix codi, només reflexió.
-</code></pre></div>
+<details class="question">
+<summary>Activitat 705. Control d'errors en l'entrada per consola</summary>
+<ul>
+<li>Validació de dades</li>
+<li>Gestió d'errors habituals</li>
+</ul>
+</details>
+<h2 id="introduccio-als-fitxers">Introducció als fitxers</h2>
+<blockquote>
+<p>"Quan les dades han de sobreviure al programa"</p>
+</blockquote>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.3. S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades.</li>
+</ul>
+</div>
+<p>Fins ara, tota la informació que utilitza el programa desapareix quan aquest s’atura. En aquest bloc introduirem els fitxers com a mecanisme per guardar informació de manera permanent.</p>
+<p>En Processing IDE, els fitxers són especialment importants perquè permeten:</p>
+<ul>
+<li>Guardar resultats</li>
+<li>Carregar configuracions</li>
+<li>Reutilitzar dades entre execucions</li>
+</ul>
+<p>Aquest bloc és conceptual i pràctic alhora, i servirà de base per als següents apartats del tema.</p>
+<p>### Què és un fitxer</p>
+<p>Un <strong>arxiu o fitxer</strong> és un conjunt de bytes que són emmagatzemats en un dispositiu. Un arxiu o fitxer es identificat per un nom i la descripció de la carpeta o directori (la ruta) que el conté. Una de les principals finalitats dels arxius és tindre desats en <strong>memòria secundària</strong>, quan les aplicacions ja han acabat d’executar-se, i que siguen recuperables després.</p>
+<p>Un <strong>fitxer</strong> sUn <strong>arxiu o fitxer</strong> és un conjunt de bytes que són emmagatzemats en un dispositiu. Un arxiu o fitxer es identificat per un nom i la descripció de la carpeta o directori (la ruta) que el conté. Una de les principals finalitats dels arxius és tindre desats en <strong>memòria secundària</strong>, quan les aplicacions ja han acabat d’executar-se, i que siguen recuperables després.’ha de poder llegir, actualitzar, esborrar registres i tornar a guardar-se de nou amb tots els canvis realitzats. Segons el dispositiu físic que els emmagatzeme, els arxius poden ser <strong>directes o seqüencials</strong>, el primer implica que per poder accedir a qualsevol registre, hem de passar prèviament pels anteriors, per exemple una cinta magnètica, mentre que el segon tipus d’arxiu permet l’accés directe al registre en qüestió sense haver de passar pels anteriors. </p>
+<p>En Java un arxiu és una <strong>seqüencia de bytes</strong> que contenen la informació emmagatzemada. Per poder treballar amb aquestes seqüencies de bytes, Java disposa de classes com són els tipus bàsics (int, double, string..).
+D’una altra banda, com ja hem explicat abans, un flux és una abstracció que es refereix a una corrent <strong>(stream)</strong> de dades entre un origen (també conegut com a font o productor) i una destinació o embornal (consumidor) i la connexió que existeix entre els dos també es coneix com a pipe o tub per on circules les dades.</p>
+<p>Quan comença qualsevol execució d’un programa Java, es creen tres objectes flux, canals pels que pot fluir informació d’entrada o eixida; aquests objectes estan definits a la classe System i són:</p>
+<ul>
+<li><strong>System.in:</strong> entrada estàndard, permet l’entrada de dades des del teclat.Una excepció és un fallo que es produeix en temps d’execució. Classe <strong>InputStream</strong></li>
+<li><strong>System.out:</strong> eixida estàndard, permet la programa imprimir per pantalla. Classe <strong>PrintStream</strong></li>
+<li><strong>System.err:</strong> eixida d’errors, permet al programa imprimir errors per pantalla. Per defecte sol ser la mateixa eixida que System.out. Classe <strong>PrintStream</strong></li>
+</ul>
+<p>En resum, un fitxer és un conjunt de dades emmagatzemades en un dispositiu de memòria secundària (disc dur, SSD, USB…). A diferència de les variables, el contingut d’un fitxer no es perd quan el programa finalitza.</p>
+<p>En programació, els fitxers s’utilitzen principalment per:</p>
+<ul>
+<li>Guardar informació</li>
+<li>Recuperar dades</li>
+<li>Compartir informació entre programes</li>
+</ul>
+<p>Podem distingir, de manera general, dos tipus de fitxers:</p>
+<ul>
+<li><strong>Fitxers de text:</strong> contenen informació llegible (txt, csv…)</li>
+<li><strong>Fitxers binaris:</strong> contenen dades codificades (imatges, dades numèriques, objectes…)</li>
+</ul>
+<h3 id="la-classe-file">La classe File</h3>
+<p>Per poder identificar d’un fitxer al sistema de fitxers de qualsevol sistema operatiu, necessitem: nom i ruta. Per exemple ‘/user/data/file.txt’. El fitxer es diu file.txt i la ruta en la qual es troba és ‘/user/data/’. Aquest identificador de fitxer és el que es passa al constructor de la classe per tal d’obrir un flux.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">File</span><span class="w"> </span><span class="n">fitxer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// Fes el que vullgues fer amb el fitxer</span>
+</code></pre></div></td></tr></table></div>
+<p>Veiem un altre exemple d'ús de la classe File</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"El fitxer existeix"</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"El fitxer no existeix"</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="ubicacio-dels-fitxers-en-processing-ide">Ubicació dels fitxers en Processing IDE</h4>
+<p>En l’exemple anterior hem utilitzat la <strong>classe File</strong> per tal d’instanciar un stream al fitxer que li hem passat per paràmetre «prova.txt». Compte que s’ha de passar la ruta absoluta d’on es troba el fitxer utilitzant la funció de Processing IDE <strong>sketchPath()</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">String</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">println</span><span class="p">(</span><span class="n">ruta</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>Hi ha alternatives al constructor de la classe File que hem mostrat a l’exemple anterior, es pot construir també amb dos paràmetres: ruta i nom del fitxer o inclús indicar-li la ruta mitjançant un altre objecte File.</p>
+<p>Els mètodes de la classe File són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public boolean exists()</td>
+<td>Torna true si el fitxer existeix</td>
+</tr>
+<tr>
+<td>public boolean canWrite()</td>
+<td>Torna true si es pot escriure al fitxer</td>
+</tr>
+<tr>
+<td>public boolean canRead()</td>
+<td>Torna true si es només de lectura</td>
+</tr>
+<tr>
+<td>public boolean isFile()</td>
+<td>Torna true si és un fitxer</td>
+</tr>
+<tr>
+<td>public boolean isDirectory()</td>
+<td>Torna true si és un directori</td>
+</tr>
+<tr>
+<td>public boolean isAbsolute()</td>
+<td>Torna true si el directori té ruta completa</td>
+</tr>
+<tr>
+<td>public long length()</td>
+<td>Torna la mida en bytes del fitxer</td>
+</tr>
+<tr>
+<td>public long lastModified()</td>
+<td>Torna el timestamp de l’última modificació</td>
+</tr>
+<tr>
+<td>public String getName()</td>
+<td>Torna una string amb el nom del fitxer</td>
+</tr>
+<tr>
+<td>public String getPath()</td>
+<td>Torna una string amb el path del fitxer</td>
+</tr>
+<tr>
+<td>public String getAbsolutePath()</td>
+<td>Torna la ruta absoluta del fitxer</td>
+</tr>
+<tr>
+<td>public boolean setReadOnly()</td>
+<td>Converteix el fitxer en només lectura</td>
+</tr>
+<tr>
+<td>public boolean delete()</td>
+<td>Elimina el fitxer o directori (si està buit)</td>
+</tr>
+<tr>
+<td>public boolean renameTo(File nou)</td>
+<td>Canvia el nom pel del fitxer nou</td>
+</tr>
+<tr>
+<td>public boolean mkdir()</td>
+<td>Crea el directori del fitxer</td>
+</tr>
+<tr>
+<td>public String[] list()</td>
+<td>Torna un array d’strings dels elements</td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Activitat 706. Class File</summary>
+<p>Crea un projecte en Processing IDE que obriga un fitxer de prova qualsevol, per exemple: prova.txt. 
+  Revisa els mètodes de la classe File i comprova el funcionament d'alguns d'ells per exemple: getName();
+  Mostra per pantalla una fitxa en la que es mostre la següent informació: </p>
+<ul>
+<li>Nom del fitxer</li>
+<li>Ruta absoluta del fitxer</li>
+<li>Data de l'última vegada que s'ha modificat</li>
+</ul>
+</details>
+<h3 id="carpetes-i-organitzacio-de-fitxers">Carpetes i organització de fitxers</h3>
+<p>A mesura que un projecte creix, és recomanable organitzar els fitxers en carpetes. La classe File permet treballar també amb carpetes.</p>
+<p>Exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">File</span><span class="w"> </span><span class="n">carpeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades"</span><span class="p">));</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">carpeta</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="n">carpeta</span><span class="p">.</span><span class="na">mkdir</span><span class="p">();</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="errors-habituals">Errors habituals</h3>
+<p>Quan treballem amb fitxers poden aparèixer problemes com:</p>
+<ul>
+<li>Fitxers inexistents</li>
+<li>Rutes incorrectes</li>
+<li>Permisos insuficients</li>
+</ul>
+<p>La gestió d’aquests errors es fa mitjançant el mecanisme de les excepcions com ja varem veure al tema 4</p>
+<h2 id="fitxers-de-text-guardar-i-recuperar-informacio">Fitxers de text: guardar i recuperar informació</h2>
+<blockquote>
+<p>El primer pas real per a la persistència de dades</p>
+</blockquote>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.4. S'han utilitzat fitxers per emmagatzemar i recuperar informació.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.5. S'han creat programes que utilitzin diversos mètodes d'accés al contingut dels fitxers.</li>
+</ul>
+</div>
+<p>En aquest bloc aprendrem a escriure i llegir fitxers de text. A diferència del bloc anterior, ara sí treballarem amb dades reals que es guardaran en disc i es podran recuperar en una altra execució del programa.</p>
+<p>Treballarem dues vies:</p>
+<ul>
+<li>Classes estàndard de Java (PrintWriter, BufferedReader)</li>
+<li>Funcions pròpies de Processing (saveStrings(), loadStrings())</li>
+</ul>
+<h3 id="escriure-en-un-fitxer-de-text-amb-printwriter">Escriure en un fitxer de text amb PrintWriter</h3>
+<p>La classe PrintWriter permet escriure text en un fitxer de manera senzilla.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createWriter</span><span class="p">(</span><span class="n">ruta</span><span class="p">);</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primera línia"</span><span class="p">);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segona línia"</span><span class="p">);</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">  </span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">  </span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer creat correctament."</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>És important: </p>
+<ul>
+<li>Escriure les línies amb println()</li>
+<li>Tancar el fitxer amb close()</li>
+</ul>
+<details class="question">
+<summary>Activitat 707. Crear un fitxer de text</summary>
+<p>Escriu un programa que cree un fitxer anomenat alumne.txt i guarde el teu nom, edat i curs en línies separades.</p>
+</details>
+<h3 id="llegir-un-fitxer-de-text-amb-loadstrings">Llegir un fitxer de text amb loadStrings()</h3>
+<p>Processing ofereix la funció loadStrings() que permet llegir totes les línies d’un fitxer de text en un array de cadenes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">linies</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">linies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Cada element de l’array correspon a una línia del fitxer.</p>
+<details class="question">
+<summary>Activitat 708. Llegir un fitxer</summary>
+<p>Llig el fitxer alumne.txt creat anteriorment i mostra el seu contingut per consola.</p>
+</details>
+<h3 id="processsar-la-informacio-llegida">Processsar la informació llegida</h3>
+<p>Quan llegim un fitxer, sovint necessitem processar les dades.</p>
+<p>Per exemple, si un fitxer conté números, podem convertir-los amb int() o float().</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"numeros.txt"</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">linies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">linia</span><span class="p">);</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">  </span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Suma total: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 709. Sumar valors d'un fitxer</summary>
+<p>Crea un fitxer amb diversos números (un per línia) i escriu un programa que calcule i mostre la suma total.</p>
+</details>
+<details class="question">
+<summary>Activitat 710. Copiar i invertir</summary>
+<p>Basat en el codi anterior i fes que al fitxer resultat, el d’eixida, es copie el que apareix a «prova.txt», el d’entrada però a l’inrevés. Per exemple:</p>
+<p>Un possible resultat de l'activitat anterior podria ser el que es pot observar a la imatge següent:      </p>
+<p><img alt="Fitxers Invertits" src="../assets/Tema8/FitxersInvertits.png"/></p>
+</details>
+<h3 id="afegir-informacio-a-un-fitxer-existent">Afegir informació a un fitxer existent</h3>
+<p>Si volem afegir informació sense esborrar el contingut anterior, podem treballar acumulant les dades en un array i tornar-les a guardar.</p>
+<p><strong>Estratègia bàsica:</strong></p>
+<ol>
+<li>Llegir el fitxer amb loadStrings()</li>
+<li>Afegir una nova línia</li>
+<li>Tornar a guardar amb saveStrings()</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">novesLinies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">append</span><span class="p">(</span><span class="n">linies</span><span class="p">,</span><span class="w"> </span><span class="s">"Nova línia"</span><span class="p">);</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">saveStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">novesLinies</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 711. Afegir dades</summary>
+<p>Modifica el programa perquè afegisca una nova línia amb la data actual al fitxer alumne.txt</p>
+</details>
+<h3 id="problemes-habituals-i-control-derrors">Problemes habituals i control d'errors</h3>
+<p>En treballar amb fitxers de text poden aparèixer problemes com:</p>
+<ul>
+<li>Fitxer inexistent</li>
+<li>Contingut inesperat</li>
+<li>Errors de conversió de tipus</li>
+</ul>
+<p>Aquests casos es poden controlar amb els mecanismes ja estudiats al Tema 4.</p>
+<details class="question">
+<summary>Activitat 712. Detecció de problemes</summary>
+<p>Prova què ocorre si intentes llegir un fitxer que no existeix. Explica què passa i com es podria evitar el problema.</p>
+</details>
 <!--
-
-
-
-
-
-
-
-### Format de la informació
-- Formats bàsics amb printf
-- Presentació clara de dades
-
-### Entrada de dades pel teclat
-- La classe Scanner
-- Lectura de diferents tipus de dades
-
-### Control d'errors en l'entrada per consola
-- Validació de dades
-- Gestió d'errors habituals (recordatori tema 4)
-
-## Bloc 2. Introducció als fixers
-
-!!! note
-    "Quan les dades han de sobreviure al programa"
-
-!!! success "Criteris d'avaluació associats"
-    - [x] RA5.3. S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades.
-
-### Què és un fitxer
-- Fitxers i memòria secundària.
-- Fitxers de text vs fitxers binaris
-
-### La classe File
-- Crear i comprovar fitxers
-- Informació d'un fitxer
-
-### Fitxers i Processing IDE
-- sketchPath()
-- Ubicació els fitxers
-- Particularitats de Processing IDE
-
-## Bloc 3. Fitxers de text: guardar i recuperar informació
-
-!!! note
-    "La forma habitual de treballar amb dades"
-
-!!! success "Criteris d'avaluació associats"
-    - [x] RA5.4. S'han utilitzat fitxers per emmagatzemar i recuperar informació.
-    - [x] RA5.5. S'han creat programes que utilitzin diversos mètodes d'accés al contingut dels fitxers.
 
 ### Escriure en fitxers de text
 - PrintWriter
@@ -592,14 +892,6 @@ Aquesta activitat no requereix codi, només reflexió.
 
 
 -->
-<!-- RA5.1. S'ha utilitzat la consola per realitzar operacions d'entrada i sortida d'informació. -->
-<!-- RA5.2. S'han aplicat formats en la visualització de la informació. -->
-<!-- RA5.3. S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades. -->
-<!-- RA5.4. S'han utilitzat fitxers per emmagatzemar i recuperar informació.-->
-<!-- RA5.5. S'han creat programes que utilitzin diversos mètodes d'accés al contingut dels fitxers. -->
-<!-- RA5.6. S'han utilitzat les eines de l'entorn de desenvolupament per crear interfícies gràfics d'usuari simples. -->
-<!-- RA5.7. S'han programat controladors d'esdeveniments. -->
-<!-- RA5.8. S'han escrit programes que utilitzin interfícies gràfics per a l'entrada i sortida d'informació. -->
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

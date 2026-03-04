@@ -221,6 +221,41 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objectes-i-persistencia">
+<span class="md-ellipsis">
+      Objectes i persistència
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fitxers-xml">
+<span class="md-ellipsis">
+      Fitxers XML
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excepcions">
+<span class="md-ellipsis">
+      Excepcions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projecte-final-del-tema">
+<span class="md-ellipsis">
+      Projecte final del tema
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resum-i-connexions-amb-altres-temes">
+<span class="md-ellipsis">
+      Resum i connexions amb altres temes
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -607,6 +642,7 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <li>Ruta absoluta del fitxer</li>
 <li>Data de l'última vegada que s'ha modificat</li>
 </ul>
+<!--      <a href="assets/Tema8/act801.zip">Descarrega la solució ací</a> -->
 </details>
 <h3 id="carpetes-i-organitzacio-de-fitxers">Carpetes i organització de fitxers</h3>
 <p>A mesura que un projecte creix, és recomanable organitzar els fitxers en carpetes. La classe File permet treballar també amb carpetes.</p>
@@ -629,6 +665,7 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 <li>Permisos insuficients</li>
 </ul>
 <p>La gestió d’aquests errors es fa mitjançant el mecanisme de les excepcions com ja varem veure al tema 4</p>
+<p>Com hauràs pogut comprovar amb <strong>la classe File</strong> t'ha resultat impossible escriure o llegir d'ell.  A continuació estudiarem amb més detall les diferents classes que disposa Java pel tractament de l'entrada i eixida d'informació (Streams). Per tal entendre-ho millor, dividirem aquesta secció en dos blocs: <strong>Tractament a nivell de text</strong> amb les classes abstractes <strong>Writer i reader</strong> i les seues classes derivades i <strong>tractament a nivell de byte</strong> amb les classes abstractes <strong>InputStream i OutputStream</strong> i les seues subclasses.</p>
 <h2 id="fitxers-de-text-guardar-i-recuperar-informacio">Fitxers de text: guardar i recuperar informació</h2>
 <blockquote>
 <p>El primer pas real per a la persistència de dades</p>
@@ -641,40 +678,217 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 </ul>
 </div>
 <p>En aquest bloc aprendrem a escriure i llegir fitxers de text. A diferència del bloc anterior, ara sí treballarem amb dades reals que es guardaran en disc i es podran recuperar en una altra execució del programa.</p>
+<p>Al cap i a la fi els arxius, en una gran majoria, solen ser seqüències de caracters i des del punt de vista lògic ens resulta més natural treballar amb ells a aquest nivell.</p>
 <p>Treballarem dues vies:</p>
 <ul>
 <li>Classes estàndard de Java (PrintWriter, BufferedReader)</li>
 <li>Funcions pròpies de Processing (saveStrings(), loadStrings())</li>
 </ul>
-<h3 id="escriure-en-un-fitxer-de-text-amb-printwriter">Escriure en un fitxer de text amb PrintWriter</h3>
+<h3 id="printstream">PrintStream</h3>
+<p>La classe <strong>PrintStream</strong> deriva de <strong>FilterOutputStream</strong> i el valor afegit d’aquesta classe derivada és que permet afegir el caràcter final de línia als fitxers. Aquests tipus de fluxos són sempre d’eixida i s’associen a un altre flux de bytes de més baix nivell. <strong>System.out</strong> és un objecte de tipus PrintStream. Per tant quan executem la sentència System.out.println(""); el que estem fent realment és cridar al mètode println de la classe PrintStream.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"Complex.dat"</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">PrintStream</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">));</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1">// Treballem i tanquem</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">ps</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public PrintStream(OutputStream destino)</td>
+<td>Crea un objecte associat a qualsevol objecte d’eixida per paràmetre</td>
+</tr>
+<tr>
+<td>public PrintStream(OutputStream destino, boolean flag)</td>
+<td>Crea un objecte associat a qualsevol objecte d’eixida per paràmetre. Si flag és true, es produeix un bolcat automàtic al escriure final de línia.</td>
+</tr>
+<tr>
+<td>public void flush()</td>
+<td>Bolca el flux actual</td>
+</tr>
+<tr>
+<td>public void print(Object obj)</td>
+<td>Escriu la representació de l’objecte obj al flux</td>
+</tr>
+<tr>
+<td>public void print(String cad)</td>
+<td>Escriu la cadena al flux</td>
+</tr>
+<tr>
+<td>public void print(char c)</td>
+<td>Escriu un caràcter al flux</td>
+</tr>
+<tr>
+<td>public void println(Object obj)</td>
+<td>Escriu la representació de l’objecte al flux i final de línia</td>
+</tr>
+<tr>
+<td>public void println(String cad)</td>
+<td>Escriu la cadena al flux i final de línia</td>
+</tr>
+</tbody>
+</table>
+<p>Observa el codi següent. Utilitzant la classe <strong>PrintStream</strong> s'obre un fitxer 'output.txt' dintre del qual s'escriurà una sola cadena de caracters 'data' i després es tancarà l'stream una vegada finalitzat l'execució del codi.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Text que volem escriure dintre del fitxer"</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">   </span><span class="n">PrintStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">   </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">   </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="printwriter">PrintWriter</h3>
+<p>Els fluxos més utilitzats en l’eixida de caràcters són de tipus PrintWriter, aquesta classe declara constructors per associar un flux PrintWriter amb qualsevol altre de tipus Writer o bé OutputStream.</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public PrintWriter(OutputStream destí)</td>
+<td>Crea un flux associat amb un altre d’eixida a nivell de byte.</td>
+</tr>
+<tr>
+<td>public PrintWriter(Writer destino)</td>
+<td>Crea un flux associat amb un altre d’eixida de caràcters de tipus Writer.</td>
+</tr>
+</tbody>
+</table>
+<p>La importància d’aquesta classe radica en que defineix mètodes print() i println() per cadascun dels tipus de dades simples, per String i per Object; la diferència entre els mètodes print() i println() està en que el segon afegeix els caràcters de final de línia a continuació dels escrits per l’argument. </p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public void print(Object obj)</td>
+<td>Escriu la representació de l’objecte obj al flux</td>
+</tr>
+<tr>
+<td>public void print(String cad)</td>
+<td>Escriu la cadena al flux</td>
+</tr>
+<tr>
+<td>public void print(char c)</td>
+<td>Escriu el caràcter c al flux.</td>
+</tr>
+<tr>
+<td>public void println(Object obj)</td>
+<td>Escriu la representació de l’objecte obj al flux i final de línia</td>
+</tr>
+<tr>
+<td>public void println(String cad)</td>
+<td>Escriu la cadena al flux i el final de línia</td>
+</tr>
+<tr>
+<td>public void println(char c)</td>
+<td>Escriu el caràcter c al flux i final de línia.</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is a text inside the file."</span><span class="p">;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">PrintWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="n">output</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="p">}</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!--??? question "Activitat 806. FileWriter, FileReader, BufferedReader i PrintWriter"
+      Utilitzant les classes anteriors, obre un fitxer que continga text, llig tot el seu contingut i enregistra'l a un fitxer d'eixida amb la condició que has de canviar majúscules per minúscules i a l'inrevés des del fitxer d'origen.  
+
+      Has de tindre en compte que Processing IDE incorpora les seues pròpies classes BufferedReader i PrintWriter que podràs utilitzar en combinació amb FileWriter i FileReader per poder fer aquesta activitat.-->
+<!--      [Descarrega la solució ací](assets/Tema8/act806.zip)-->
+<h3 id="escriure-en-un-fitxer-de-text-amb-printwriter-processing-ide">Escriure en un fitxer de text amb PrintWriter (Processing IDE)</h3>
 <p>La classe PrintWriter permet escriure text en un fitxer de manera senzilla.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span>
-<span class="normal"><a href="#__codelineno-8-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createWriter</span><span class="p">(</span><span class="n">ruta</span><span class="p">);</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primera línia"</span><span class="p">);</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segona línia"</span><span class="p">);</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">  </span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">  </span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer creat correctament."</span><span class="p">);</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createWriter</span><span class="p">(</span><span class="n">ruta</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">  </span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primera línia"</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segona línia"</span><span class="p">);</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">  </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">  </span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer creat correctament."</span><span class="p">);</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>És important: </p>
 <ul>
@@ -687,47 +901,47 @@ D’una altra banda, com ja hem explicat abans, un flux és una abstracció que 
 </details>
 <h3 id="llegir-un-fitxer-de-text-amb-loadstrings">Llegir un fitxer de text amb loadStrings()</h3>
 <p>Processing ofereix la funció loadStrings() que permet llegir totes les línies d’un fitxer de text en un array de cadenes.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">linies</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">linies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">linies</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">linies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Cada element de l’array correspon a una línia del fitxer.</p>
 <details class="question">
 <summary>Activitat 708. Llegir un fitxer</summary>
 <p>Llig el fitxer alumne.txt creat anteriorment i mostra el seu contingut per consola.</p>
 </details>
-<h3 id="processsar-la-informacio-llegida">Processsar la informació llegida</h3>
+<h3 id="processar-la-informacio-llegida">Processar la informació llegida</h3>
 <p>Quan llegim un fitxer, sovint necessitem processar les dades.</p>
 <p>Per exemple, si un fitxer conté números, podem convertir-los amb int() o float().</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"numeros.txt"</span><span class="p">);</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">linies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">linia</span><span class="p">);</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">  </span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Suma total: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"numeros.txt"</span><span class="p">);</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">linies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">linia</span><span class="p">);</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">  </span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Suma total: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 709. Sumar valors d'un fitxer</summary>
@@ -757,15 +971,15 @@ També hauràs de:</p>
 <li>Afegir una nova línia</li>
 <li>Tornar a guardar amb saveStrings()</li>
 </ol>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">novesLinies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">append</span><span class="p">(</span><span class="n">linies</span><span class="p">,</span><span class="w"> </span><span class="s">"Nova línia"</span><span class="p">);</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">saveStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">novesLinies</span><span class="p">);</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">linies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">);</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">novesLinies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">append</span><span class="p">(</span><span class="n">linies</span><span class="p">,</span><span class="w"> </span><span class="s">"Nova línia"</span><span class="p">);</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">  </span><span class="n">saveStrings</span><span class="p">(</span><span class="s">"dades.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">novesLinies</span><span class="p">);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 711. Afegir dades</summary>
@@ -783,6 +997,405 @@ També hauràs de:</p>
 <summary>Activitat 712. Detecció de problemes</summary>
 <p>Prova què ocorre si intentes llegir un fitxer que no existeix. Explica què passa i com es podria evitar el problema.</p>
 </details>
+<h3 id="bufferedreader-a-processing-ide">BufferedReader a Processing IDE</h3>
+<p>A l'API de Processing existeix  una classe <strong>BufferedReader.</strong> Aquesta classe s'encarrega de llegir línia a línia com un conjunt d'Strings individuals.  Però s'utilitza per a llegir de fitxers i no de l'entrada (system.in) com als exemples anteriors. Per poder llegir des de teclat a Processing hem d'utilitzar el mètode <strong>keyPressed</strong></p>
+<p>Abans de copiar i provar el següent exemple, descarrega el fitxer <a href="../assets/Tema8/positions.txt"><strong>positions.txt</strong></a> amb parells de números a cada línia separats per un tabulador.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span>
+<span class="normal"><a href="#__codelineno-15-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="c1">// Open the file from the createWriter() example</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">  </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createReader</span><span class="p">(</span><span class="s">"positions.txt"</span><span class="p">);</span><span class="w">    </span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w"> </span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">    </span><span class="c1">// Stop reading because of an error or file is empty</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">    </span><span class="n">noLoop</span><span class="p">();</span><span class="w">  </span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">pieces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">TAB</span><span class="p">);</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">pieces</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<h3 id="reader-i-writer">Reader i writer</h3>
+<p>Els arxius de text són arxius de caràcters, es poden crear fluxos de bytes o de caràcters derivats de les classes abstractes Reader i Writer.</p>
+<p>Els fluxos <strong>Reader i Writer</strong> són fluxos de Java orientats a caràcters. Amb aquests fluxos podem llegir i escriure caràcters o cadenes de caràcters al dispositius connectats mitjançant aquests fluxos.</p>
+<p>Per llegir arxius de caràcters s’utilitzen fluxos derivats de la classe Reader on es declaren o sobreescriuen mètodes per la lectura de caràcters. Els mètodes més importants són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public int read()</td>
+<td>Llig un caràcter en forma d’enter. Si arriba al final del fitxer torna -1</td>
+</tr>
+<tr>
+<td>public int read(char [] b)</td>
+<td>Llig una seqüencia de caràcters fins completar l’array b o llegir el final del fitxer. Torna el nombre de caràcters llegits o -1 si arriba al final de l’arxiu</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inputstreamreader-i-outputstreamwriter">InputStreamReader i OutputStreamWriter</h3>
+<p>Els fluxos de la classe <strong>InputStreamReader</strong> envolten (wrap) a un flux de bytes; converteixen la seqüència de bytes en seqüència de caràcters i així ja no ho hem de fer nosaltres; la classe deriva directament de Reader, pel que té disponibles els mètodes read() de la seua classe pare per la lectura de caràcters</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">InputStreamReader</span><span class="w"> </span><span class="n">ent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="c1">// En acabar tanquem l'stream</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">ent</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+La classe <strong>OutputStreamWriter</strong> que deriva de <strong>writer</strong>, permet escriure caràcters en un flux de bytes al qual s’associa la creació de l’objecte o flux.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">ot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">arxiu</span><span class="p">));</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="c1">// Després hem de recordar de tancar l'stream</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">ot</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+Els mètodes de la classe <strong>InputStreamReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el flux i allibera tots els recursos del sistema associats</td>
+</tr>
+<tr>
+<td>String getEncoding()</td>
+<td>Retorna el nom de la codificació de caràcters que utilitza aquest flux</td>
+</tr>
+<tr>
+<td>int read()</td>
+<td>Llegeix un sol caràcter</td>
+</tr>
+<tr>
+<td>int read(char[] buf, int offset, int length)</td>
+<td>Llegeix caràcters en una part d'una matriu</td>
+</tr>
+<tr>
+<td>boolean ready()</td>
+<td>Indica si aquest flux està llest per ser llegit</td>
+</tr>
+</tbody>
+</table>
+<p>Els mètodes de la classe <strong>OutputStreamWriter</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el corrent, rentant-lo primer</td>
+</tr>
+<tr>
+<td>void flush()</td>
+<td>Redueix el corrent</td>
+</tr>
+<tr>
+<td>String getEncoding()</td>
+<td>Retorna el nom de la codificació de caràcters que utilitza aquest flux</td>
+</tr>
+<tr>
+<td>void write(char [] buf, int off, int len)</td>
+<td>Escriu una part d'una matriu de caràcters</td>
+</tr>
+<tr>
+<td>void write(int c)</td>
+<td>Escriu un sol caràcter</td>
+</tr>
+<tr>
+<td>void write(String str, int off, int len)</td>
+<td>Escriu una part d'una cadena</td>
+</tr>
+</tbody>
+</table>
+<p>Però allò normal és que no s'utilitzen directament aquestes classes sino que es faja ús de <strong>FileReader i FileWriter</strong>.</p>
+<h3 id="filereader-i-filewriter">FileReader i FileWriter</h3>
+<p>Per llegir arxius de text o de caràcters es pot crear un flux del tipus <strong>FileReader</strong>, aquesta classe deriva d’InputStreamReader, hereta els mètodes read() per a llegir caràcters, el constructor té com entrada una cadena amb el nom de l’arxiu</p>
+<p>Per exemple</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">fr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+Els constructors de la classe <strong>FileReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileReader(File file)</td>
+<td>Crea un nou FileReader , amb el nom del fitxer des del qual cal llegir</td>
+</tr>
+<tr>
+<td>FileReader(FileDescriptor fd)</td>
+<td>Crea un nou FileReader , donat el FileDescriptor per llegir</td>
+</tr>
+<tr>
+<td>FileReader(String fileName)</td>
+<td>Crea un nou FileReader , amb el nom del fitxer des del qual cal llegir</td>
+</tr>
+</tbody>
+</table>
+<p>Els mètodes dels que disposa <strong>FileReader</strong> són:</p>
+<ul>
+<li><strong>Heretats de java.io.InputStreamReader:</strong> close, getEncoding, read, ready</li>
+<li><strong>Heretats de java.io.Reader:</strong> mark, markSupported, read, reset, skip</li>
+<li><strong>Heretats de java.lang.Object:</strong> clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait</li>
+</ul>
+<p>No es freqüent utilitzar directament fluxos <strong>OutputStreamWriter</strong>, encara que resulta interessant perquè la classe <strong>FileWriter</strong> és una extensió d’ella. Dissenyada per escriure en un arxiu de caràcters, els fluxos d’aquest tipus escriuen caràcters amb el mètode write() a l’arxiu al que s’associa el flux quan es crea l’objecte.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"cartes.dat"</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">nr</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">"Frase qualsevol a escriure"</span><span class="p">);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="n">nr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+Els constructors de la classe <strong>FileWriter</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileWriter(File file)</td>
+<td>Construeix un objecte FileWriter donat un objecte File</td>
+</tr>
+<tr>
+<td>FileWriter(File file, boolean append)</td>
+<td>Construeix un objecte FileWriter donat un objecte File</td>
+</tr>
+<tr>
+<td>FileWriter(FileDescriptor fd)</td>
+<td>Construeix un objecte FileWriter associat a un descriptor de fitxer</td>
+</tr>
+<tr>
+<td>FileWriter(String fileName)</td>
+<td>Construeix un objecte FileWriter amb un nom de fitxer</td>
+</tr>
+<tr>
+<td>FileWriter(String fileName, boolean append)</td>
+<td>Construeix un objecte FileWriter amb un nom de fitxer amb un booleà que indica si s'han d'afegir o no les dades escrites</td>
+</tr>
+</tbody>
+</table>
+<p>En general no resulta eficient llegir directament d’un flux d’aquest tipus, s’utilitzarà un flux <strong>BufferedReader</strong> i <strong>BufferedWriter</strong></p>
+<h3 id="bufferedreader-i-bufferedwriter">BufferedReader i BufferedWriter</h3>
+<p>La lectura d’arxius de text es realitza amb un flux que emmagatzema els caràcters en un <strong>buffer</strong> intermedi, aquests no es lligen directament de l’arxiu si no del buffer. D’aquesta manera augmentem l’eficiència a les operacions d’entrada, la classe <strong>BufferedReader</strong> permet crear fluxos de caràcters amb buffer que no és més que una forma d’organitzar el flux bàsic de caràcters del que ve  el text perquè al crear un flux BufferReader, aquest s’inicialitza com un flux de caràcters InputStreamReader o qualsevol altre.</p>
+<p>El constructor de la classe té un argument de tipus Reader, FileReader o InputStreamReader, el flux creat disposa d’un buffer de grandària suficient, el qual es pot especificar en el constructor amb un segon argument encara que no fa falta. Exemples de fluxos amb buffer.</p>
+<p>Els mètodes de la classe <strong>BufferedReader</strong> són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el flux i allibera tots els recursos del sistema associats</td>
+</tr>
+<tr>
+<td>void mark(int readAheadLimit)</td>
+<td>Marca la posició actual al flux</td>
+</tr>
+<tr>
+<td>boolean markSupported()</td>
+<td>Indica si aquest flux admet l'operació mark(), que fa</td>
+</tr>
+<tr>
+<td>read()</td>
+<td>Llegeix un sol caràcter</td>
+</tr>
+<tr>
+<td>int read(char[] cbuf, int off, int len)</td>
+<td>Llegeix caràcters en una part d'una matriu</td>
+</tr>
+<tr>
+<td>String readLine()</td>
+<td>Llegeix una línia de text</td>
+</tr>
+<tr>
+<td>boolean ready()</td>
+<td>Indica si aquest flux està llest per ser llegit</td>
+</tr>
+<tr>
+<td>void reset()</td>
+<td>Restableix el flux a la marca més recent</td>
+</tr>
+<tr>
+<td>long skip(long n)</td>
+<td>Omet personatges</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span>
+<span class="normal"><a href="#__codelineno-20-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">File</span><span class="w"> </span><span class="n">someFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(...);</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="c1">// Count the number of 'a' characters.</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'a'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">      </span><span class="n">aCount</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="p">}</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"There are "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aCount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 'a' characters in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">someFile</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>BufferedWriter</strong>, per un altre costat, escriu text en un flux de sortida de caràcters, guarda els caràcters en memòria intermèdia (buffer) per tal de proporcionar una escriptura eficient de caràcters, matrius i cadenes individuals.</p>
+<p>Es pot especificar la mida de la memòria intermèdia o es pot acceptar la mida predeterminada. El valor predeterminat és prou gran per a la majoria de propòsits.</p>
+<p>Es proporciona un mètode newLine(), que utilitza la pròpia noció de separador de línies de la plataforma tal com es defineix per la propietat del sistema line.separator . No totes les plataformes utilitzen el caràcter de nova línia ('\n') per acabar les línies. Per tant, es prefereix cridar aquest mètode per acabar cada línia de sortida que escriure directament un caràcter de nova línia.</p>
+<p>Els mètodes de la classe són:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void close()</td>
+<td>Tanca el corrent, rentant-lo primer</td>
+</tr>
+<tr>
+<td>void flush()</td>
+<td>Redueix el corrent</td>
+</tr>
+<tr>
+<td>void newLine()</td>
+<td>Escriu un separador de línies</td>
+</tr>
+<tr>
+<td>void   write(char[] cbuf, int off, int len)</td>
+<td>Escriu una part d'una matriu de caràcters</td>
+</tr>
+<tr>
+<td>void write(int c)</td>
+<td>Escriu un sol caràcter</td>
+</tr>
+<tr>
+<td>void write(String s, int off, int len)</td>
+<td>Escriu una part d'una cadena</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span>
+<span class="normal"><a href="#__codelineno-21-23">23</a></span>
+<span class="normal"><a href="#__codelineno-21-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is the data in the output file"</span><span class="p">;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">  </span><span class="c1">// Creates a FileWriter</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"output.txt"</span><span class="p">;</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">  </span><span class="n">FileWriter</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">  </span><span class="c1">// Creates a BufferedWriter</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="w">  </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="w">  </span><span class="c1">// Writes the string to the file</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="w">  </span><span class="c1">// Closes the writer</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="w">  </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="p">}</span>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a><span class="w">  </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">();</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23"></a><span class="p">}</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24"></a><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
 <h2 id="fitxers-binaris-i-dades-estructurades">Fitxers binaris i dades estructurades</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -808,42 +1421,205 @@ També hauràs de:</p>
 <li>Volem més eficiència</li>
 <li>No necessitem que el fitxer siga llegible per humans.</li>
 </ul>
+<p>Com ja hem explicat abans, el tractament de l'entrada eixida en java a nivell de bytes es fa amb les classes abstractes <strong>InputStream i OutputStream</strong> de les quals deriven les classes: </p>
+<ul>
+<li>FileInputStream i FileOutputStream</li>
+<li>PipedInputStream i PipedOutputStream </li>
+<li>FilterInputStream i FilterOutputStream</li>
+<li>ByteArrayInputStream i ByteArrayOutputStream</li>
+<li>ObjectInputStream i ObjectOutputStream, etc.. </li>
+</ul>
+<h3 id="fileinputstream-i-fileoutputstream">FileInputStream i FileOutputStream</h3>
+<p>Tot arxiu es pot considerar en sí mateix una seqüència de bytes de baix nivell i després sobre aquesta informació es pot construir informació de mes alt nivell per tal de processar dades més complexes des de tipus bàsic fins objectes. </p>
+<p>En altres paraules, si volem obrir un flux de dades a un fitxer o arxiu i volem llegir byte a byte per després decidir nosaltres a nivell de programació que volem fer amb aquests bytes, hauríem d’utilitzar aquestes classes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"provat.txt"</span><span class="p">);</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="c1">// Fem el que hem de fer amb le fitxer i després s'ha de tancar</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>La classe <strong>FileInputStream</strong> s’utilitza per llegir bytes o grups de bytes del fitxer associat. Tots els mètodes tenen visibilitat pública i s’ha de tenir en compte quina és l’excepció que llencen per controlar els possibles errors en temps d’execució.</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileOutputStream(String nombre) throws IOException;</td>
+<td>Crea un objecte inicialitzat amb el nom d’arxiu que es passa com argument</td>
+</tr>
+<tr>
+<td>FileOutputStream(String nombre, boolean sw) throws IOException;</td>
+<td>Crea un objecte inicialitzat amb el nom d’arxiu que es passa per paràmetre. Si sw és true els nous bytes s’afegeixen al final</td>
+</tr>
+<tr>
+<td>FileOutputStream(File nombre) throws IOException;</td>
+<td>Crea un objecte inicialitzat amb l’objecte file que es passa per paràmetre</td>
+</tr>
+<tr>
+<td>void write(byte a) throws IOException;</td>
+<td>Escriu el byte ‘a’ al flux associat</td>
+</tr>
+<tr>
+<td>void write(byte[] s) throws IOException;</td>
+<td>Escriu l’array de bytes ‘s’ al flux</td>
+</tr>
+<tr>
+<td>void write(byte[] s, int org, int len) throws IOException;</td>
+<td>Llig una seqüència de bytes del flux i la desa a ‘s’ començant per ‘org’ i una mida de ‘len’. Torna -1 si arriba al final del fitxer</td>
+</tr>
+<tr>
+<td>void close()throws IOException;</td>
+<td>Tanca el flux i el fitxer queda lliure per al seu ús posterior</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Exemple 1</p>
+<p>A continuació obrirem el fitxer «prova.txt» amb un FileInputStream per llegir-lo i desarem el seu contingut a un fitxer d’eixida «resultat.txt» que obrirem amb un FileOutputStream. Al fitxer d’eixida, bolcarem el contingut de «prova.txt»</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span>
+<span class="normal"><a href="#__codelineno-23-21">21</a></span>
+<span class="normal"><a href="#__codelineno-23-22">22</a></span>
+<span class="normal"><a href="#__codelineno-23-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">      </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">);</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">      </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"resultat.txt"</span><span class="p">);</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">         </span><span class="n">fout</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">byteLlegit</span><span class="p">);</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">         </span><span class="n">byteLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fen</span><span class="p">.</span><span class="na">read</span><span class="p">();</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">      </span><span class="n">fen</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">      </span><span class="n">fout</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer no trobat"</span><span class="p">);</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">"Error d'entrada eixida"</span><span class="p">);</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Observa el codi anterior:</strong> Primer s'instancia un objecte de la classe <strong>FileInputStream</strong> (derivada de InputStream) en la que se li indica la ruta del fitxer amb el que volem treballar. Després aquest objecte FileInputStream s'utilitza per poder instanciar un objecte de la classe <strong>DataInputStream</strong> que utilitzarem per llegir tipus de dades primitius del fitxer.</p>
+<p>Bàsicament aquestes classes el que fan és organitzar els bytes en tipus primitius de tal forma que ja podem treballar llegint i escrivint als fluxos: enters, caràcters, reals, cadenes etc..</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public DataInputStream(InputStream entrada) throws IOException</td>
+<td>Crea un objecte associat a l’stream que es passa per paràmetre</td>
+</tr>
+<tr>
+<td>public final boolean readBoolean() throws IOException</td>
+<td>Torna el valor de tipus booleà llegit</td>
+</tr>
+<tr>
+<td>public final byte readByte() throws IOException</td>
+<td>Torna el valor de tipus byte llegit</td>
+</tr>
+<tr>
+<td>public final short readShort() throws IOException</td>
+<td>Torna el valor de tipus short llegit</td>
+</tr>
+<tr>
+<td>public final char readChar() throws IOException</td>
+<td>Torna el valor de tipus char llegit</td>
+</tr>
+<tr>
+<td>public final int readInt() throws IOException</td>
+<td>Torna el valor de tipus int llegit</td>
+</tr>
+<tr>
+<td>public final long readLong() throws IOException</td>
+<td>Torna el valor de tipus long llegit</td>
+</tr>
+<tr>
+<td>public final float readFloat() throws IOException</td>
+<td>Torna el valor de tipus float llegit</td>
+</tr>
+<tr>
+<td>public final double readDouble() throws IOException</td>
+<td>Torna el valor de tipus double llegit</td>
+</tr>
+<tr>
+<td>public final String readUTF() throws IOException</td>
+<td>Torna una cadena que es va escriure en UTF</td>
+</tr>
+</tbody>
+</table>
+<p>D’aquesta forma ja no ens hem de preocupar de saber quants bytes de memòria s’han de reservar per un caràcter o un enter. Per exemple si associem  un <strong>DataOutputStream</strong> a un fitxer i després cridem al mètode <strong>writeInt</strong>, realment el que s’està fent és escriure 4 bytes d’informació al fitxer de la qual cosa s’estaria encarregant de manera transparent a l’usuari.</p>
 <h3 id="escriure-dades-en-format-binari">Escriure dades en format binari</h3>
 <p>Per escriure dades primitives utilitzem DataOutputStream.</p>
 <p>Exemple en Processing:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span>
-<span class="normal"><a href="#__codelineno-12-12">12</a></span>
-<span class="normal"><a href="#__codelineno-12-13">13</a></span>
-<span class="normal"><a href="#__codelineno-12-14">14</a></span>
-<span class="normal"><a href="#__codelineno-12-15">15</a></span>
-<span class="normal"><a href="#__codelineno-12-16">16</a></span>
-<span class="normal"><a href="#__codelineno-12-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.bin"</span><span class="p">));</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeFloat</span><span class="p">(</span><span class="mf">7.5f</span><span class="p">);</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer binari creat correctament."</span><span class="p">);</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error en escriure el fitxer."</span><span class="p">);</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.bin"</span><span class="p">));</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeFloat</span><span class="p">(</span><span class="mf">7.5f</span><span class="p">);</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Fitxer binari creat correctament."</span><span class="p">);</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error en escriure el fitxer."</span><span class="p">);</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Alguns mètodes disponibles:</p>
 <ul>
@@ -864,45 +1640,45 @@ També hauràs de:</p>
 <summary>Ordre de lectura</summary>
 <p>Les dades s’han de llegir en el mateix ordre en què s’han escrit.</p>
 </details>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span>
-<span class="normal"><a href="#__codelineno-13-12">12</a></span>
-<span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span>
-<span class="normal"><a href="#__codelineno-13-15">15</a></span>
-<span class="normal"><a href="#__codelineno-13-16">16</a></span>
-<span class="normal"><a href="#__codelineno-13-17">17</a></span>
-<span class="normal"><a href="#__codelineno-13-18">18</a></span>
-<span class="normal"><a href="#__codelineno-13-19">19</a></span>
-<span class="normal"><a href="#__codelineno-13-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.bin"</span><span class="p">));</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readFloat</span><span class="p">();</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">aprovat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readBoolean</span><span class="p">();</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Edat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edat</span><span class="p">);</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Nota: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nota</span><span class="p">);</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Aprovat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aprovat</span><span class="p">);</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
-<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">    </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error en llegir el fitxer."</span><span class="p">);</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span>
+<span class="normal"><a href="#__codelineno-25-17">17</a></span>
+<span class="normal"><a href="#__codelineno-25-18">18</a></span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span>
+<span class="normal"><a href="#__codelineno-25-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">sketchPath</span><span class="p">(</span><span class="s">"dades.bin"</span><span class="p">));</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readFloat</span><span class="p">();</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">aprovat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readBoolean</span><span class="p">();</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Edat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edat</span><span class="p">);</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Nota: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nota</span><span class="p">);</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Aprovat: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aprovat</span><span class="p">);</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">    </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Error en llegir el fitxer."</span><span class="p">);</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 714. Llegir d'un fitxer binari</summary>
@@ -911,21 +1687,20 @@ També hauràs de:</p>
 <h3 id="importancia-de-lordre">Importància de l'ordre</h3>
 <p>En un fitxer binari no hi ha separadors ni etiquetes. Només hi ha bytes.</p>
 <p>Si escrivim:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">dos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">dos</span><span class="p">.</span><span class="na">writeFloat</span><span class="p">(</span><span class="mf">5.5f</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">dos</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="n">dos</span><span class="p">.</span><span class="na">writeFloat</span><span class="p">(</span><span class="mf">5.5f</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Hem de llegir:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readFloat</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readFloat</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div></p>
 <p>Si invertim l'ordre, el resultat serà incorrecte perquè els bytes no corresponen al tipus esperat.</p>
 <details class="question">
 <summary>Activitat 715. Canvia l'ordre</summary>
 <p>Canvia l’ordre de lectura i observa què ocorre. Explica el resultat.</p>
 </details>
-<h3 id="control-derrors">Control d'errors</h3>
 <h3 id="avantatges-i-inconvenients">Avantatges i inconvenients</h3>
 <p><strong>Avantatges</strong></p>
 <ul>
@@ -943,94 +1718,569 @@ També hauràs de:</p>
 <summary>Activitat 716. Compara fitxers de text i binaris</summary>
 <p>Fes una aplicació en la que es necessite l'ús de fitxers de text i també l'ús de fitxers binaris encara que siga per a finalitats distintes. Mínim s'ha de llegir i escriure dels dos fitxers.</p>
 </details>
-<!--
-
-## Bloc 4. Fitxers binaris i dades estructurades
-
-
-## Bloc 5. Objectes i persistència
-
-!!! note
-    "Guardar objectes complets"
-
-!!! success "Criteris d'avaluació associats"
-    - [x] RA5.5. S'han creat programes que utilitzen diversos mètodes d'accés al contingut dels fitxers.
-
-### Què és la persistència
-- Quan té sentit usar-la
-
-### Serialització d'objectes
-- ObjectInputStream
-- ObjectOutputStream
-
-### Consideracions en Processing IDE
-- Fitxers .java vs fitxers .pde
-
-### Control d'errors en la serialització
-- Problemes habituals
-- Gestió d'errors en lectura d'objectes.
-
-## Bloc 6. Interfícies gràfiques amb ControlP5
-
-!!! note 
-    "Entrada i eixida gràfica d'informació"
-
-!!! success "Criteris d'avaluació associats"
-    - [x] RA5.6. S'han utilitzat les eines de l'entorn de desenvolupament per crear interfícies gràfics d'usuari simples.
-    - [x] RA5.7. S'han programat controladors d'esdeveniments.
-    - [x] RA5.8. S'han escrit programes que utilitzin interfícies gràfics per a l'entrada i sortida d'informació.
-
-### Introducció a ControlP5
-- Què és controlP5
-- Instal·lació de la llibreria
-
-### Controls bàsics
-- Botons
-- Sliders
-- Camps de text
-- Etiquetes
-
-### Gestió d'esdeveniments
-- ControlListener
-- controlEvent
-- Interacció amb l'usuari.
-
-### Comunicació amb el programa principal
-- Classes menú
-- Modificar l'estat de l'aplicació
-
-### Connexió amb fitxers
-- Guardar dades des de la GUI
-- Recuperar informació guardada
-
-## Projecte final del tema
-
-!!! note
-    "Aplicació completa d'entrada i eixida"
-
-### Descripció del projecte
-- Interfície gràfica
-- Entrada de dades per GUI
-- Guardar i recuperar dades de fitxer
-
-### Requisits mínims
-- Ús de ControlP5
-- Eixida per pantalla
-- Persistència de les dades.
-
-### Ampliacions possibles
-- Millora visual
-- Validacions
-- Estadístiques.
-
-## Resum i connexions amb altres temes
-- Què hem après
-- Relació amb programació modular i classes.
-- Preparació per a projectes més grans
-
-
-
--->
+<p>Per tal d'instanciar un objecte de la classe <strong>DataOutputStream</strong>, on es podria escriure, ho fariem de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"result.txt"</span><span class="p">);</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">snb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fn</span><span class="p">);</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="c1">// Treballem amb ells i tanquem.</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="n">fn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="n">snb</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>Al contrari que passava amb el DataInputStream, al codi anterior estem instanciant un objecte de la classe <strong>DataOutputStream</strong> que utilitzarem per escriure la informació desitjada.</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public DataOutputStream(OutputStream destino) throws IOException</td>
+<td>Crea un objecte associat a l’outputstream que es passa per paràmetre</td>
+</tr>
+<tr>
+<td>public final void writeBoolean(boolean v) throws IOException</td>
+<td>Escriu un boolean</td>
+</tr>
+<tr>
+<td>public final void writeByte(int v) throws IOException</td>
+<td>Escriu un byte</td>
+</tr>
+<tr>
+<td>public final void writeShort(int v) throws IOException</td>
+<td>Escriu un short</td>
+</tr>
+<tr>
+<td>public final void writeChar(int v) throws IOException</td>
+<td>Escriu un char</td>
+</tr>
+<tr>
+<td>public final void writeChars(String v) throws IOException</td>
+<td>Escriu tots els chars que conté la String v</td>
+</tr>
+<tr>
+<td>public final void writeInt(int v) throws IOException</td>
+<td>Escriu un int</td>
+</tr>
+<tr>
+<td>public final void writeLong(long v) throws IOException</td>
+<td>Escriu un long</td>
+</tr>
+<tr>
+<td>public final void writeFloat(float v) throws IOException</td>
+<td>Escriu un float</td>
+</tr>
+<tr>
+<td>public final void writeDouble(double v) throws IOException</td>
+<td>Escriu un double</td>
+</tr>
+<tr>
+<td>public final void writeUTF(String cad) throws IOException</td>
+<td>Escriu la cadena cad en format UTF</td>
+</tr>
+<tr>
+<td>public final int close()throws IOException</td>
+<td>Tanca el flux</td>
+</tr>
+</tbody>
+</table>
+<p>Un altre exemple d'ús del <strong>DataInputStream:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span>
+<span class="normal"><a href="#__codelineno-29-13">13</a></span>
+<span class="normal"><a href="#__codelineno-29-14">14</a></span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span>
+<span class="normal"><a href="#__codelineno-29-16">16</a></span>
+<span class="normal"><a href="#__codelineno-29-17">17</a></span>
+<span class="normal"><a href="#__codelineno-29-18">18</a></span>
+<span class="normal"><a href="#__codelineno-29-19">19</a></span>
+<span class="normal"><a href="#__codelineno-29-20">20</a></span>
+<span class="normal"><a href="#__codelineno-29-21">21</a></span>
+<span class="normal"><a href="#__codelineno-29-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"prova.txt"</span><span class="p">;</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="p">);</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">inst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">available</span><span class="p">();</span><span class="w">  </span><span class="c1">// Quants bytes té l'arxiu</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="w">    </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="o">[</span><span class="n">count</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">    </span><span class="n">inst</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="w">    </span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="w"> </span><span class="n">byt</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">byt</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// Si no es tracta del caracter EOF (10 ASCII)</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">byt</span><span class="p">;</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="n">ki</span><span class="o">+</span><span class="s">"-"</span><span class="p">);</span>
+<a id="__codelineno-29-16" name="__codelineno-29-16"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-19" name="__codelineno-29-19"></a><span class="w">  </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-20" name="__codelineno-29-20"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Algo val mal"</span><span class="p">);</span>
+<a id="__codelineno-29-21" name="__codelineno-29-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-29-22" name="__codelineno-29-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>A continuació podem veure un exemple en el que fem ús del <strong>DataOutputStream i DataInputStream</strong>. El que fa aquest exemple és escriure a un fitxer d’eixida «pluges.dat» dos valors double aleatoris per després llegir-los amb un DataInputStream i mostrar-los per pantalla. </p>
+<p>El codi podria ser el següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-30-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-30-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-30-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span>
+<span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span>
+<span class="normal"><a href="#__codelineno-30-15">15</a></span>
+<span class="normal"><a href="#__codelineno-30-16">16</a></span>
+<span class="normal"><a href="#__codelineno-30-17">17</a></span>
+<span class="normal"><a href="#__codelineno-30-18">18</a></span>
+<span class="normal"><a href="#__codelineno-30-19">19</a></span>
+<span class="normal"><a href="#__codelineno-30-20">20</a></span>
+<span class="normal"><a href="#__codelineno-30-21">21</a></span>
+<span class="normal"><a href="#__codelineno-30-22">22</a></span>
+<span class="normal"><a href="#__codelineno-30-23">23</a></span>
+<span class="normal"><a href="#__codelineno-30-24">24</a></span>
+<span class="normal"><a href="#__codelineno-30-25">25</a></span>
+<span class="normal"><a href="#__codelineno-30-26">26</a></span>
+<span class="normal"><a href="#__codelineno-30-27">27</a></span>
+<span class="normal"><a href="#__codelineno-30-28">28</a></span>
+<span class="normal"><a href="#__codelineno-30-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="p">;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="w">    </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">writeDouble</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10"></a>
+<a id="__codelineno-30-11" name="__codelineno-30-11"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">strPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"pluges.dat"</span><span class="p">);</span>
+<a id="__codelineno-30-12" name="__codelineno-30-12"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13"></a>
+<a id="__codelineno-30-14" name="__codelineno-30-14"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+<a id="__codelineno-30-15" name="__codelineno-30-15"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primer valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span>
+<a id="__codelineno-30-16" name="__codelineno-30-16"></a><span class="w">    </span><span class="n">info2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="na">readDouble</span><span class="p">();</span>
+<a id="__codelineno-30-17" name="__codelineno-30-17"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segon valor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">info2</span><span class="p">);</span>
+<a id="__codelineno-30-18" name="__codelineno-30-18"></a>
+<a id="__codelineno-30-19" name="__codelineno-30-19"></a><span class="w">    </span><span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-30-20" name="__codelineno-30-20"></a><span class="w">    </span><span class="n">dos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-30-21" name="__codelineno-30-21"></a><span class="w">    </span><span class="n">fis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-30-22" name="__codelineno-30-22"></a><span class="w">    </span><span class="n">dis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-30-23" name="__codelineno-30-23"></a><span class="p">}</span>
+<a id="__codelineno-30-24" name="__codelineno-30-24"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-25" name="__codelineno-30-25"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fitxer no existeix"</span><span class="p">);</span>
+<a id="__codelineno-30-26" name="__codelineno-30-26"></a><span class="p">}</span>
+<a id="__codelineno-30-27" name="__codelineno-30-27"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-28" name="__codelineno-30-28"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error IO inesperat"</span><span class="p">);</span>
+<a id="__codelineno-30-29" name="__codelineno-30-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Activitat 717. Data Input i Data Output</summary>
+<p>Crea un projecte en Processing copia el codi anterior i una vegada acabada l'execució del programa, obre el fitxer "pluges.dat" i compara el que s'ha mostrat a consola amb el que s'ha gravat al fitxer. Posa el mateix? Per què?</p>
+</details>
+<!--[Descarrega la solució ací](assets/Tema8/act803.zip)-->
+<details class="question">
+<summary>Activitat 718. LLig per teclat i copia</summary>
+<p>Utilitzant el mètode mouseClicked fes una aplicació de tal forma que tot allò que es teclege es guarde en un fitxer de text juntament amb l'hora a la qual s'ha escrit. Per exemple, si l'usuari escriu per pantalla el seu nom, "Manolo" i prem Intro, al fitxer d'eixida s'hauria de gravar: </p>
+<p>[09:05:25] - Manolo</p>
+<p>Has d'utilitzar la classe <strong>PrintStream</strong> per fer aquesta activitat.</p>
+</details>
+<!--      [Descarrega la solució ací](assets/Tema8/act804.zip)-->
+<h2 id="objectes-i-persistencia">Objectes i persistència</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>"Guardar objectes complets"</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Criteris d'avaluació associats</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.5. S'han creat programes que utilitzen diversos mètodes d'accés al contingut dels fitxers.</li>
+</ul>
+</div>
+<p>Fins ara hem tractat el tema d'entrada - eixida d'informació utilitzant els tipus primitius o bàsics que ens proporciona el llenguatge de programació: int, char, float, String... però que passa si el que volem desar o llegir des d'un dispositiu extern és un o diversos objectes? Com es guarden i com es recuperen aquestos objectes?</p>
+<p>Java proporciona una mecanisme que s'anomena <strong>serialització</strong> que consisteix en convertir un objecte en una seqüència de bytes de tal forma que, ara sí, es podrà desar a un fitxer o un dispositiu extern. El procés de lectura d'un objecte serialitzat a un fitxer, per contra, s'anomena <strong>desserialització</strong>.</p>
+<p>Per tal que un objecte continue existint, és a dir, que siga persistent, una vegada ja hem finalitzat l’execució d’un programa o aplicació l’hem de desar a un arxiu d’objectes. Per poder aconseguir açò, utilitzarem les classes <strong>ObjectInputStream i ObjectOutputStream</strong></p>
+<h3 id="classe-dobjecte-persistent">Classe d'objecte persistent</h3>
+<p><strong>Serialització:</strong> és el procés de convertir un objecte (incloses les referències a altres objectes) a una seqüència de bytes, així com també l'acció de reconstruir eixos bytes en un objecte viu en un futur. La serialització s'utilitza quan vols <strong>persistir</strong> un objecte, és a dir, que dure més que el que dura l'execució d'un programa o aplicació.</p>
+<p>La declaració de la classe els objectes de la qual van a ser persistents, han de implementar la interfície <strong>«serializable»</strong> del paquet java.io, la qual és buida, no declara mètodes, simplement indica a la màquina virtual de Java que les instàncies d’aquestes classes podran gravar-se en un fitxer.</p>
+<p>Exemples</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kd">class</span> <span class="nc">racional</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">serializable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span>
+<span class="normal"><a href="#__codelineno-32-11">11</a></span>
+<span class="normal"><a href="#__codelineno-32-12">12</a></span>
+<span class="normal"><a href="#__codelineno-32-13">13</a></span>
+<span class="normal"><a href="#__codelineno-32-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Serializable</span><span class="p">;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SerialClass</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">SerialClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">      </span><span class="n">currentTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getTime</span><span class="p">();</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a>
+<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">getCurrentTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">currentTime</span><span class="p">;</span>
+<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="objectoutputstream">ObjectOutputStream</h3>
+<p>Els fluxos de la classe ObjectOutputStream s’utilitzen per gravar objectes persistents. El mètode writeObject() escriu qualsevol objecte d’una classe serializable en el flux de bytes associat. Pot llençar excepcions del tipus IOException que és necessari processar.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeObject</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>El constructor de la classe espera un argument de tipus OutputStream, que és la base dels fluxos d’eixida a nivell de bytes, per tant, per crear aquest tipus de fluxos primer es crea un d’eixida a nivell de bytes associat a un arxiu extern i a continuació, es passa com argument al constructor de ObjectOutputStream, per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span>
+<span class="normal"><a href="#__codelineno-34-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">String</span><span class="w"> </span><span class="n">strFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sketchPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"dadesRac.dat"</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">strFile</span><span class="p">);</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">fobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">bn</span><span class="p">);</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="n">bn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>A continuació es pot escriure qualsevol objecte al flux:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span>
+<span class="normal"><a href="#__codelineno-35-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">Persona</span><span class="w"> </span><span class="n">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">"Juan"</span><span class="p">,</span><span class="s">"Martin"</span><span class="p">,</span><span class="w"> </span><span class="s">"123432123X"</span><span class="p">);</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="n">fobj</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">juan</span><span class="p">);</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="p">(</span><span class="s">"Cadena de favors"</span><span class="p">);</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="n">fobj</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="n">fobj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="objectinputstream">ObjectInputStream</h3>
+<p>El objectes guardats en arxius amb fluxos de la classe ObjectOutputStream es recuperen i lligen amb fluxos d’entrada del tipus ObjectInputStream, aquesta classe és una extensió d’InputStream, a més a més, implementa la interfície DataInput, per això disposa de diversos mètodes d’entrada (read) per cadascun dels tipus de dades com readInt() o altres. El mètode més important definit per la classe ObjectInputStream és readObject(), el qual llig un objecte del flux d’entrada, és a dir, de l’arxiu associat al flux de baix nivell; l’objecte llegit es va escriure en el seu moment amb el mètode writeObject()</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="nf">readObject</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>El constructor de fluxos ObjectInputStream té com entrada un altre flux de baix nivell de qualsevol tipus derivat d’InputStream, per exemple: FileInputStream associat amb l’arxiu d’objectes. A continuació es crea un flux d’entrada per llegir els objectes de l’arxiu «arxiuObjects.dat»</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"arxiuObjects.dat"</span><span class="p">));</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">obj</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>El constructor de la classe <strong>ObjectOutputStream</strong> llença una excepció si, per exemple, l’arxiu no existeix, aquella és del tipus «ClassNotFoundException» o «IOException», és necessari poder capturar aquestes excepcions</p>
+<details class="danger" open="open">
+<summary>Compte on poses el codi</summary>
+<p>Ja que l'entorn de desenvolupament que estem utilitzant, Processing IDE, no és un IDE a l'ús com l'Eclipse IDE, Visual Studio Code o NetBeans, la serialització d'objectes pot donar errors. És <strong>molt important</strong> que el codi relatiu als ObjectInputStream i ObjectInputStream estiga escrit en fitxers que no tinguen l'extensió <strong>.pde</strong> i tinguen una extensió <strong>.java</strong>. En altres paraules, aquelles classes que siguen susceptibles de ser serialitzades: </p>
+<p><strong>(1)</strong> Tindran tot el codi amb els objectes ObjectOutputStream i ObjectInputStream per poder llegir i escriure objectes en fitxers.
+  <strong>(2)</strong> Es desaran amb l'extensió <em>java</em> i <strong>MAI</strong> <em>pde</em>.</p>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">Dog</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="c1">// Creates an object of Dog class</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="w">  </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Tyson"</span><span class="p">,</span><span class="w"> </span><span class="s">"Labrador"</span><span class="p">);</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="w">  </span><span class="n">dog</span><span class="p">.</span><span class="na">save</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-39-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-39-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-39-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-39-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-39-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-39-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-39-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-39-10">10</a></span>
+<span class="normal"><a href="#__codelineno-39-11">11</a></span>
+<span class="normal"><a href="#__codelineno-39-12">12</a></span>
+<span class="normal"><a href="#__codelineno-39-13">13</a></span>
+<span class="normal"><a href="#__codelineno-39-14">14</a></span>
+<span class="normal"><a href="#__codelineno-39-15">15</a></span>
+<span class="normal"><a href="#__codelineno-39-16">16</a></span>
+<span class="normal"><a href="#__codelineno-39-17">17</a></span>
+<span class="normal"><a href="#__codelineno-39-18">18</a></span>
+<span class="normal"><a href="#__codelineno-39-19">19</a></span>
+<span class="normal"><a href="#__codelineno-39-20">20</a></span>
+<span class="normal"><a href="#__codelineno-39-21">21</a></span>
+<span class="normal"><a href="#__codelineno-39-22">22</a></span>
+<span class="normal"><a href="#__codelineno-39-23">23</a></span>
+<span class="normal"><a href="#__codelineno-39-24">24</a></span>
+<span class="normal"><a href="#__codelineno-39-25">25</a></span>
+<span class="normal"><a href="#__codelineno-39-26">26</a></span>
+<span class="normal"><a href="#__codelineno-39-27">27</a></span>
+<span class="normal"><a href="#__codelineno-39-28">28</a></span>
+<span class="normal"><a href="#__codelineno-39-29">29</a></span>
+<span class="normal"><a href="#__codelineno-39-30">30</a></span>
+<span class="normal"><a href="#__codelineno-39-31">31</a></span>
+<span class="normal"><a href="#__codelineno-39-32">32</a></span>
+<span class="normal"><a href="#__codelineno-39-33">33</a></span>
+<span class="normal"><a href="#__codelineno-39-34">34</a></span>
+<span class="normal"><a href="#__codelineno-39-35">35</a></span>
+<span class="normal"><a href="#__codelineno-39-36">36</a></span>
+<span class="normal"><a href="#__codelineno-39-37">37</a></span>
+<span class="normal"><a href="#__codelineno-39-38">38</a></span>
+<span class="normal"><a href="#__codelineno-39-39">39</a></span>
+<span class="normal"><a href="#__codelineno-39-40">40</a></span>
+<span class="normal"><a href="#__codelineno-39-41">41</a></span>
+<span class="normal"><a href="#__codelineno-39-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a>
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-39-10" name="__codelineno-39-10"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-39-12" name="__codelineno-39-12"></a>
+<a id="__codelineno-39-13" name="__codelineno-39-13"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-15" name="__codelineno-39-15"></a><span class="w">            </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span>
+<a id="__codelineno-39-16" name="__codelineno-39-16"></a>
+<a id="__codelineno-39-17" name="__codelineno-39-17"></a><span class="w">            </span><span class="c1">// Creates an ObjectOutputStream</span>
+<a id="__codelineno-39-18" name="__codelineno-39-18"></a><span class="w">            </span><span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+<a id="__codelineno-39-19" name="__codelineno-39-19"></a>
+<a id="__codelineno-39-20" name="__codelineno-39-20"></a><span class="w">            </span><span class="c1">// Writes objects to the output stream</span>
+<a id="__codelineno-39-21" name="__codelineno-39-21"></a><span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span>
+<a id="__codelineno-39-22" name="__codelineno-39-22"></a>
+<a id="__codelineno-39-23" name="__codelineno-39-23"></a><span class="w">            </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fileStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">);</span>
+<a id="__codelineno-39-24" name="__codelineno-39-24"></a>
+<a id="__codelineno-39-25" name="__codelineno-39-25"></a><span class="w">            </span><span class="c1">// Creates an ObjectInputStream</span>
+<a id="__codelineno-39-26" name="__codelineno-39-26"></a><span class="w">            </span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="n">fileStream</span><span class="p">);</span>
+<a id="__codelineno-39-27" name="__codelineno-39-27"></a>
+<a id="__codelineno-39-28" name="__codelineno-39-28"></a><span class="w">            </span><span class="c1">// Reads the objects</span>
+<a id="__codelineno-39-29" name="__codelineno-39-29"></a><span class="w">            </span><span class="n">Dog</span><span class="w"> </span><span class="n">newDog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Dog</span><span class="p">)</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span>
+<a id="__codelineno-39-30" name="__codelineno-39-30"></a>
+<a id="__codelineno-39-31" name="__codelineno-39-31"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Name: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+<a id="__codelineno-39-32" name="__codelineno-39-32"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dog Breed: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newDog</span><span class="p">.</span><span class="na">breed</span><span class="p">);</span>
+<a id="__codelineno-39-33" name="__codelineno-39-33"></a>
+<a id="__codelineno-39-34" name="__codelineno-39-34"></a><span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-39-35" name="__codelineno-39-35"></a><span class="w">            </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-39-36" name="__codelineno-39-36"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-39-37" name="__codelineno-39-37"></a>
+<a id="__codelineno-39-38" name="__codelineno-39-38"></a><span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-39" name="__codelineno-39-39"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-39-40" name="__codelineno-39-40"></a><span class="w">      </span><span class="p">}</span><span class="w">    </span>
+<a id="__codelineno-39-41" name="__codelineno-39-41"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-39-42" name="__codelineno-39-42"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<details class="question">
+<summary>Activitat 719. Classe alumne</summary>
+<p>Dissenya una aplicació amb Processing IDE on es podrà per un costat introduir informació d'alumnes que es guardaran en un fitxer que s'anomene: 'alumnes.dat'. </p>
+<p>Al principi l'aplicació llegirà de l'arxiu 'alumnes.dat' tots els alumnes inscrits al curs i els mostrar per pantalla, ordenats alfabèticament pel cognom. </p>
+<p>Una vegada haja mostrat tots els alumnes, l'aplicació esperarà que s'introduisca algun alumne nou per consola, una vegada introduits totes les dades de l'alumne, aquesta es guardarà en un objecte primer i després al fitxer 'alumnes.dat' a continuació dels que ja havien estat enregistrats. </p>
+<p>Finalment tornarà a mostrar els alumnes ordenats alfabèticament i torna a començar.</p>
+<p><a href="../assets/Tema8/ProvaObjectes.zip">Descarrega un exemple ací</a></p>
+</details>
+<h2 id="fitxers-xml">Fitxers XML</h2>
+<details class="question">
+<summary>Activitat 720. Processa un document XML en Java</summary>
+</details>
+<p>Crear classe Alumne crear estructura xml amb alumnes carregar un arraylist d'alumnes al main. La classe Alumne ha de tindre mètodes LoadXML ....</p>
+<details class="question">
+<summary>Activitat 721. Aplicació traductora amb XML</summary>
+</details>
+<h2 id="excepcions">Excepcions</h2>
+<p>Un problema important en el desenvolupament del programari és la gestió de les errades o errors. No importa quan bé estiga planificat aquest desenvolupament i quan eficient siga l’equip desenvolupador. És una màxima en informàtica el fet que sempre apareixeran problemes. Aquests problemes inesperats són problemes o errors que apareixen en temps d’execució, per exemple: esgotament de memòria o recursos, errors en els intervals dels bucles, divisions per zero, arxius no existents, etc..</p>
+<p>Les excepcions són el mecanisme previst per Java per tractar aquests problemes sobrevinguts. Amb les excepcions, Java dona la possibilitat al programador salvar aquest tipus de situacions de manera controlada sense que el programa o aplicació es tanque, bloquege o deixe de respondre.</p>
+<h3 id="condicions-derrors-en-programes">Condicions d'errors en programes</h3>
+<p>Programar, escriure codi, mètodes, classes, etc.. que siga eficient, eficaç i lliure d’errades és altament complicat. El control d’errades és una part tant important en el disseny d’aplicacions que a totes les diferents metodologia de cicle de vida software, hi ha una fase que es dedica única i exclusivament a detectar aquestes errades i solucionar-les i així i tot és impossible produir programari totalment lliure d’errades.</p>
+<h3 id="tractament-dels-codis-derror">Tractament dels codis d'error</h3>
+<p>Java inclou un mecanisme de gestió d’excepcions per poder intentat cobrir possibles errades en els programes en temps d’execució. Aquest mecanisme consisteix en capturar (catch) els errors quan es produeixen en temps d’execució.</p>
+<p>Quan es produeix un fallo en temps d’execució es podrien fer tres coses: parar l’execució de sobte, continuar executant esperant que no passe res o establir una senyal d’error que el mateix codi amb altres sentències s’encarregue de gestionar.</p>
+<p>Aquestes senyals que envia (throw) el programa quan es produeix alguna errada en Java s’anomenen excepcions i el bloc del codi on es posen les sentències per tal d’intentar solucionar-lo en temps d’execució és el bloc catch.</p>
+<h3 id="excepcions-en-java">Excepcions en Java</h3>
+<p>Una excepció és un fallo que es produeix en temps d’execució. Si hem escrit bé el codi per tal de gestionar aquest fallo, el flux d’execució passa al codi destinat a gestionar les excepcions, en cas contrari el programa acaba la seua execució.</p>
+<p>Aquestes excepcions es poden produir per exemple si intenten accedir a un element d’un array fora dels seus límits, si intentem obrir un fitxer que no existeix o està bloquejat, si dividim per zero, etc..</p>
+<p>El model de gestió d’excepcions a Java afegeix cinc noves paraules reservades: try, throw, throws, catch i finally.</p>
+<ul>
+<li><strong>try:</strong> bloc on es detectaran les excepcions</li>
+<li><strong>catch:</strong> captura les excepcions que es produeixen al bloc try </li>
+<li><strong>throw:</strong> expressió per llençar excepcions</li>
+<li><strong>throws:</strong> indica les excepcions que pot llençar un mètode.</li>
+<li><strong>finally:</strong> bloc opcional situat després del try catch</li>
+</ul>
+<p>Les passes del model de control d’excepcions en Java són:</p>
+<ol>
+<li>El bloc try conté les instruccions o part del codi susceptible de provocar algun error.</li>
+<li>Si en temps d’execució es produeix algun error dins de les sentències que es troben dins del bloc try, es llença una excepció.</li>
+<li>S’executa el codi que es troba dins del bloc catch associat a la excepció que s’ha llençat al punt anterior.</li>
+<li>S’executa el bloc finally (opcional)</li>
+</ol>
+<p>Exemple. Suposem una classe persona que incorporarem a la nostra aplicació. Aquesta classe té un constructor al qual se li passa el DNI, imaginem ara que de la nostra aplicació instanciem un objecte de la classe persona a la qual l direm Joan però quan cridem al constructor de la classe no li passem un DNI, aquest «mal ús» de la classe Persona, llençaria una excepció que hauria de capturar la nostra aplicació al bloc catch i és ací, en aquest bloc d’instruccions, en el que s’hauria de corregir la situació o avisar a l’usuari de l’aplicació del que ha passat.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-40-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-40-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-40-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-40-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-40-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-40-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-40-10">10</a></span>
+<span class="normal"><a href="#__codelineno-40-11">11</a></span>
+<span class="normal"><a href="#__codelineno-40-12">12</a></span>
+<span class="normal"><a href="#__codelineno-40-13">13</a></span>
+<span class="normal"><a href="#__codelineno-40-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">escolta</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="w">   </span><span class="c1">// Codi del metode escolta</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="w">   </span><span class="c1">// ...</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="p">}</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8"></a><span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9"></a><span class="w">      </span><span class="n">escolta</span><span class="p">();</span>
+<a id="__codelineno-40-10" name="__codelineno-40-10"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11"></a><span class="w">   </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12"></a><span class="w">      </span><span class="c1">// Codi a executar quan es produeix una excepció.</span>
+<a id="__codelineno-40-13" name="__codelineno-40-13"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Al codi anterior hem crear un mètode escolta que l’únic que fa és llençar una excepció. Quan al mètode main cridem a la funció escolta, si volem fer ús del sistema d’excepcions de Java, l’haurem de posar dins del bloc try. Just desprès d’acabar el conjunt d’instruccions del bloc try posem un catch indicant-li quina és la classe d’excepció que hauriem de capturar, al nostre cas Exception, i dins del bloc catch posariem el codi que s’hauria d’executar en cas de produir-se eixe error. Normalment es solen posar missatges d’error que alerten l’usuari de l’aplicació.</p>
+<p>A continuació explicarem amb més detall què és el que fan cadascun dels blocs del mecanisme d’excepcions que ha dissenyat Java.</p>
+<h3 id="bloc-try">Bloc try</h3>
+<p>Dins del bloc try s’han de posar aquelles sentències que poden llençar alguna excepció entre claudàtors, després del claudàtor de tancament s’ha de posar el bloc catch o controlador d’excepcions almenys un bloc catch. Si l’excepció que es produeix coincideix amb algun dels paràmetres dels blocs catch que hi han, s’executen les sentències que es troben a dintre.</p>
+<p>Els blocs try, de la mateixa forma que amb totes les sentències de programació estructurada, es poden niar.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-41-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-41-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-41-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-41-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-41-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-41-10">10</a></span>
+<span class="normal"><a href="#__codelineno-41-11">11</a></span>
+<span class="normal"><a href="#__codelineno-41-12">12</a></span>
+<span class="normal"><a href="#__codelineno-41-13">13</a></span>
+<span class="normal"><a href="#__codelineno-41-14">14</a></span>
+<span class="normal"><a href="#__codelineno-41-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="w">   </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="w">      </span><span class="n">escolta</span><span class="p">();</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a><span class="w">         </span><span class="n">tornaAEscoltar</span><span class="p">();</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a><span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-41-9" name="__codelineno-41-9"></a><span class="w">         </span><span class="c1">// Codi excepció interna</span>
+<a id="__codelineno-41-10" name="__codelineno-41-10"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-41-11" name="__codelineno-41-11"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-41-12" name="__codelineno-41-12"></a><span class="w">   </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-41-13" name="__codelineno-41-13"></a><span class="w">      </span><span class="c1">// Codi excepció externa</span>
+<a id="__codelineno-41-14" name="__codelineno-41-14"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-41-15" name="__codelineno-41-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>A l’exemple anterior és pot observar un codi amb dos blocs try niats on el primer bloc try té dos blocs catch per controlar varies excepcions</p>
+<h3 id="bloc-throw">Bloc throw</h3>
+<p>La sentència throw llença (raise) una excepció. Les excepcions en Java són objectes, per tant, una excepció és una instància d’una classe que deriva de la classe Exception
+A l’exemple anterior com es pot observar es capturen dos tipus d’excepcions diferents, una generica Exception i una altra FileNotFoundException. Aquesta última es produeix normalment quan volem obrir un fitxer, amb la classe File per exemple, i aquest no existeix.    </p>
+<h3 id="bloc-catch">Bloc catch</h3>
+<p>El bloc catch o de captura d’excepcions. Quan una excepció es llença des d’un bloc try, si el tipus d’excepció que s’ha llençat coincideix amb el tipus d’excepció que s’ha passat per paràmetre al catch, s’executarien les sentències que hi han dins del bloc catch. Normalment es sol posar el codi necessari per poder eixir de la situació en la que ens trobem quan s’alça una excepció.</p>
+<h3 id="clausula-finally">Clàusula finally</h3>
+<p>El bloc finally en un try..catch, és el bloc d’instruccions que s’executarà sempre, hi haja excepcions o no, al final de tot el nostre codi. 
+Normalment es solen posar sentències per tal d’alliberar tot allò que podem haver creat dins del bloc try, és a dir, tancar fluxos, fitxers, connexions a bases de dades etc..amb la finalitat d’alliberar memòria.</p>
+<h3 id="classes-dexcepcions-en-java">Classes d'excepcions en Java</h3>
+<p><img alt="Excepcions Java" src="../assets/Tema8/Excepcions.png"/></p>
+<h3 id="creacio-dexcepcions">Creació d'excepcions</h3>
+<p>Java permet la creació d’excepcions noves que deriven de la classe base Exception</p>
+<details class="question">
+<summary>Activitat 722. Crear i utilitzar una excepció personalitzada</summary>
+</details>
+<p>Crea una classe d'excepció personalitzada anomenada NumeroNegatiuException que hereti de la classe Exception. Aquesta excepció s'haurà de llançar quan un valor numèric negatiu sigui introduït en el programa.</p>
+<p>Crea un mètode anomenat verificarNumero(int numero) que comprovi si el número és negatiu. Si el número és negatiu, ha de llençar la teva excepció personalitzada (NumeroNegatiuException).</p>
+<p>En el mètode main, crida el mètode verificarNumero i captura la excepció per mostrar un missatge d'error si s'introdueix un número negatiu.</p>
+<h3 id="introduccio-a-controlp5">Introducció a ControlP5</h3>
+<ul>
+<li>Què és controlP5</li>
+<li>Instal·lació de la llibreria</li>
+</ul>
+<h3 id="controls-basics">Controls bàsics</h3>
+<ul>
+<li>Botons</li>
+<li>Sliders</li>
+<li>Camps de text</li>
+<li>Etiquetes</li>
+</ul>
+<h3 id="gestio-desdeveniments">Gestió d'esdeveniments</h3>
+<ul>
+<li>ControlListener</li>
+<li>controlEvent</li>
+<li>Interacció amb l'usuari.</li>
+</ul>
+<h3 id="comunicacio-amb-el-programa-principal">Comunicació amb el programa principal</h3>
+<ul>
+<li>Classes menú</li>
+<li>Modificar l'estat de l'aplicació</li>
+</ul>
+<h3 id="connexio-amb-fitxers">Connexió amb fitxers</h3>
+<ul>
+<li>Guardar dades des de la GUI</li>
+<li>Recuperar informació guardada</li>
+</ul>
+<h2 id="projecte-final-del-tema">Projecte final del tema</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>"Aplicació completa d'entrada i eixida"</p>
+</div>
+<h3 id="descripcio-del-projecte">Descripció del projecte</h3>
+<ul>
+<li>Interfície gràfica</li>
+<li>Entrada de dades per GUI</li>
+<li>Guardar i recuperar dades de fitxer</li>
+</ul>
+<h3 id="requisits-minims">Requisits mínims</h3>
+<ul>
+<li>Ús de ControlP5</li>
+<li>Eixida per pantalla</li>
+<li>Persistència de les dades.</li>
+</ul>
+<h3 id="ampliacions-possibles">Ampliacions possibles</h3>
+<ul>
+<li>Millora visual</li>
+<li>Validacions</li>
+<li>Estadístiques.</li>
+</ul>
+<h2 id="resum-i-connexions-amb-altres-temes">Resum i connexions amb altres temes</h2>
+<ul>
+<li>Què hem après</li>
+<li>Relació amb programació modular i classes.</li>
+<li>Preparació per a projectes més grans</li>
+</ul>
+<p>--&gt;</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

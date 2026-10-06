@@ -5,20 +5,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Tema%2003.%20Estructures%20de%20Control/" rel="prev"/>
+<link href="../Tema%2005.%20Arrais%20i%20col%C2%B7leccions/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.2.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
 <title>04.- Prog. Orientada Objectes - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.120efc48.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.9647289d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../stylesheet/extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.9/mermaid.neutral.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
-<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -29,13 +30,13 @@
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-header__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -54,17 +55,18 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Canvia a mode fosc">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<input aria-label="Canvia a mode fosc" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a mode fosc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
-<input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Canvia a preferència del sistema">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"></path></svg>
+<input aria-label="Canvia a preferència del sistema" class="md-option" data-md-color-accent="white" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Canvia a preferència del sistema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"></path></svg>
 </label>
 </form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -72,22 +74,22 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </label>
 <nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -104,40 +106,82 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="PROGRAMACIÓ 1DAW" class="md-nav__button md-logo" data-md-component="logo" href=".." title="PROGRAMACIÓ 1DAW">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     PROGRAMACIÓ 1DAW
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="..">
-        Índex
-      </a>
+<span class="md-ellipsis">
+    
+  
+    Índex
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2001.%20Introducci%C3%B3%20a%20la%20programaci%C3%B3/">
-        01.- Introducció programació
-      </a>
+<span class="md-ellipsis">
+    
+  
+    01.- Introducció programació
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2002.%20El%20llenguatge%20Java/">
-        02.- El llenguatge Java
-      </a>
+<span class="md-ellipsis">
+    
+  
+    02.- El llenguatge Java
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2003.%20Estructures%20de%20Control/">
-        03.- Estructures de control
-      </a>
+<span class="md-ellipsis">
+    
+  
+    03.- Estructures de control
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          04.- Prog. Orientada Objectes
-          <span class="md-nav__icon md-icon"></span>
+<span class="md-ellipsis">
+    
+  
+    04.- Prog. Orientada Objectes
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        04.- Prog. Orientada Objectes
-      </a>
+<span class="md-ellipsis">
+    
+  
+    04.- Prog. Orientada Objectes
+  
+
+    
+  </span>
+</a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
@@ -146,66 +190,135 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#introduccio">
-    Introducció
-  </a>
+<span class="md-ellipsis">
+      
+        Introducció
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#caracteristiques-principals">
-    Característiques principals
-  </a>
+<span class="md-ellipsis">
+      
+        Característiques principals
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#classes-i-objectes">
-    Classes i Objectes
-  </a>
+<span class="md-ellipsis">
+      
+        Classes i Objectes
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#projecte-figures-geometriques">
-    Projecte figures geomètriques
-  </a>
+<span class="md-ellipsis">
+      
+        Projecte figures geomètriques
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#propietats-i-metodes-estatics">
-    Propietats i mètodes estàtics
-  </a>
+<span class="md-ellipsis">
+      
+        Propietats i mètodes estàtics
+      
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2005.%20Arrais%20i%20col%C2%B7leccions/">
-        05.- Arrais i col·leccions
-      </a>
+<span class="md-ellipsis">
+    
+  
+    05.- Arrais i col·leccions
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2006.%20Programaci%C3%B3%20Modular/">
-        06.- Programació modular
-      </a>
+<span class="md-ellipsis">
+    
+  
+    06.- Programació modular
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2007.%20Desenvolupament%20de%20Classes/">
-        07.- Desenvolupament classes
-      </a>
+<span class="md-ellipsis">
+    
+  
+    07.- Desenvolupament classes
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2008.%20Entrada%20i%20eixida/">
-        08.- Entrada i eixida
-      </a>
+<span class="md-ellipsis">
+    
+  
+    08.- Entrada i eixida
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/">
-        09.- Gràfics. ControlP5
-      </a>
+<span class="md-ellipsis">
+    
+  
+    09.- Gràfics. ControlP5
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2010.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/">
-        10.- Herència polimorfisme interfícies
-      </a>
+<span class="md-ellipsis">
+    
+  
+    10.- Herència polimorfisme interfícies
+  
+
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Tema%2011.%20Bases%20de%20dades%20relacionals/">
-        11.- Bases de dades relacionals
-      </a>
+<span class="md-ellipsis">
+    
+  
+    11.- Bases de dades relacionals
+  
+
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -220,12 +333,12 @@
 <p><strong>RA2. Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.</strong></p>
 <h3 id="criteris-davaluacio">Criteris d'avaluació</h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.1. S'han identificat els fonaments de la programació orientada a objectes.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.2. S'han escrit programes simples.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.3. S'han instanciat objectes a partir de classes predefinides.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.4. S'han utilitzat mètodes i propietats dels objectes.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.5. S'han escrit trucades a mètodes estàtics.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA2.6. S'han utilitzat paràmetres en la crida a mètodes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.1. S'han identificat els fonaments de la programació orientada a objectes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.2. S'han escrit programes simples.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.3. S'han instanciat objectes a partir de classes predefinides.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.4. S'han utilitzat mètodes i propietats dels objectes.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.5. S'han escrit trucades a mètodes estàtics.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.6. S'han utilitzat paràmetres en la crida a mètodes.</li>
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.7. S'han incorporat i utilitzat llibreries d'objectes.</li>
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.8. S'han utilitzat constructors.</li>
 <li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA2.9. S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples.</li>
@@ -237,9 +350,9 @@
 <p>Un dels <strong>objectius</strong> de la programació orientada a objectes és reflectir la realitat, de forma que els elements d’un programa s’ajusten a elements de la vida quotidiana. </p>
 <p>Al contrari de la programació estructurada procedimental clàssica, en <strong>POO</strong> es dona prioritat a la <strong>modelació de les dades</strong> i no als procediments. En un escenari de programació orientada a objectes, a la fase d'anàlisi es determinen els diferents actors del programa (objectes) i a partir d'ací se li assignen els diferents atributs i accions que pot realitzar.</p>
 <p>Doncs bé, a diferència del paradigma de programació estructurada, ací <strong>primer programem els objectes</strong> (definirem les classes) amb totes les seues característiques derivades de la fase d'anàlisi <strong>atributs</strong> i també el seu <strong>comportament</strong> (mètodes) i finalment utilitzariem aquestes classes en forma d'objectes al programa principal.</p>
-<p><center>
+<center>
 <img alt="Abstracció" src="../assets/Tema6/Abstraccio.jpg"/>
-</center></p>
+</center>
 <p>En conclusió, en <strong>programació orientada a objectes</strong> el que veurem serà com crear classes d'objectes diversos per després poder utilitzar-los en altres programes però... pas a pas.</p>
 <p>Veiem primer un poc de teoria...</p>
 <h2 id="caracteristiques-principals">Característiques principals</h2>
@@ -254,24 +367,24 @@
 <p>Abstraure's és <strong>aïllar mentalment</strong>, considerar separadament (un o diversos atributs o qualitats) d'una cosa. Per exemple abstraure els conceptes més importants d'un discurs, és a dir, <strong>quedar-se amb allò important.</strong></p>
 <p>En programació orientada a objectes abstraure’s, l’abstracció, seria mostrar únicament les característiques essencials, que fa l’objecte i per a que es crea, deixant de banda elements com la implementació.</p>
 <p>L’abstracció permet representar les característiques essencials d’un objecte, deixant enrere aquelles que no tenen tanta importància. A més a més, es centra en l’objecte tal i com el coneixem en la vida real, de forma que ens centrem en allò que es capaç de fer però no en com ho fa. Bàsicament, definiríem l’abstracció com la forma de descriure una entitat del món real sense importar la complexitat que està present i el poder utilitzar aquesta en qualsevol aplicació.</p>
-<p><center>
+<center>
 <img alt="Abstracció" src="../assets/Tema6/Abstraccio2.jpg"/>
-</center></p>
+</center>
 <h3 id="encapsulament">Encapsulament</h3>
 <p>L’encapsulament és, en altres paraules, <strong>l’ocultació d’informació</strong>, de forma que les dades internes d’un objecte estan ocultes al món exterior, només es coneix d’ell la seua essència, és a dir, què podem fer amb ell.</p>
 <p>Per exemple, amb freqüència es desenvolupa codi font o projectes en els que utilitzem la classe out, més concretament el mètode println. Out es troba dins de l’espai de noms (namespace) System i no és més que una classe d’aquest paquet. Dit en altres paraules. Out és una classe i println() és un mètode de la classe Out.</p>
-<p><center>
+<center>
 <img alt="Encapsulament" src="../assets/Tema6/Encapsulament.jpg"/>
-</center></p>
+</center>
 <h3 id="modularitat">Modularitat</h3>
 <p>Aquesta propietat fa referència a la forma en la que els elements en programació orientada a objectes es troben <strong>organitzats en mòduls</strong>, facilitant així l’encapsulament i abstracció de la informació.</p>
 <p>La modularitat permet <strong>dividir una aplicació en parts.</strong> Aquestes parts han de ser tan independents com puguen de la resta de mòduls així com també de l’aplicació principal. El motiu pel qual els mòduls han de ser el més independents possibles de l’aplicació és perquè així es podran reutilitzar en altres aplicacions més endavant.</p>
 <p>Tots i cadascun d'aquestos elements seran definits en fitxers diferents.</p>
 <h3 id="jerarquia-i-herencia">Jerarquia i herència</h3>
 <p>La <strong>jerarquia</strong> és la propietat de la programació orientada a objectes respecte de la relació o ordre existent entre les distintes classes i objectes. El mecanisme principal per tal d’ordenar les classes als nostres projectes és l’herència. Podem parlar d’herència entre classes quan elements d’una classe (superclasse) son heretats per una altra o inclòs els seus mètodes poden ser sobrecarregats.</p>
-<p><center>
+<center>
 <img alt="Herència" src="../assets/Tema6/Herencia.jpg"/>
-</center></p>
+</center>
 <h3 id="polimorfisme">Polimorfisme</h3>
 <p>Polimorfisme és una paraula grega que significa <strong>«moltes formes»</strong>. Aquesta paraula és ideal per definir aquesta característica de la programació orientada a objectes ja que en POO podem tindre objectes amb el <strong>mateix nom</strong> que realitzen <strong>funcions distintes</strong> o implementen codi diferent.</p>
 <p>El polimorfisme és un mecanisme que s’utilitza molt en POO juntament amb l’herència tal que quan una classe deriva d’una altra hereta les seues característiques i operacions. A la classe que hereta es pot redefinir qualsevol mètode heretat, de forma que en funció de la referència a objectes que usem a cada moment s’estarà executant un mètode o un altre.
@@ -320,17 +433,16 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <li>Si no es defineix cap constructor, el compilador pot generar-ne un per defecte.</li>
 </ul>
 <p>Però vejam un exemple amb els nostres PVectors</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Instanciació d'un objecte de la classe PVector</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Instanciació d'un objecte de la classe PVector</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// PVector idPVector = new PVector();</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">PVector</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PVector</span> <span class="p">();</span>         <span class="c1">// Creem un objecte PVector v1 amb coordenades (0, 0)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">PVector</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PVector</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>  <span class="c1">// Creem un objecte PVector v2 amb coordenades (100, 20)</span>
-</code></pre></div>
-</td></tr></table>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">();</span><span class="w">         </span><span class="c1">// Creem un objecte PVector v1 amb coordenades (0, 0)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w">  </span><span class="c1">// Creem un objecte PVector v2 amb coordenades (100, 20)</span>
+</code></pre></div></td></tr></table></div>
 <p>Al crear un objecte d'una classe qualsevol tindrem accés al que denominem <strong>propietats o atributs i mètodes</strong> de classe.</p>
 <h3 id="atributs">Atributs</h3>
 <p>Els atributs són les característiques individuals que diferencien un objecte d’un altre i determinen la seua aparença, estat o altres qualitats. Els atributs es desen en variables anomenades <strong>variables d’instància</strong> (un objecte és l'instància d'una classe) i cada objecte particular pot tindre valors distints per a aquestes variables.  </p>
@@ -338,19 +450,18 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <p>Les <strong>variables d’instància o atributs</strong> també anomenades membres són declarades a la classe però els seus valors son canviats i fixats a l’objectes ja que una classe no és més que un esquema que defineix com seran les persones al nostre programa.</p>
 <p>A més de les variables d’instància hi ha <strong>variables de classe</strong>, les quals s’apliquen a la classe i a totes les instàncies. </p>
 <p>En resum, un atribut en programació orientada a objectes ve a ser el mateix que una variable en programació estructurada. Per tal de poder accedir a una propietat d'un objecte concret d'una classe, primer hem d'assegurar-nos que la propietat és pública (ho deuria posar a la documentació de la classe) i després només hem de escriure l'identificador de l'objecte seguit d'un punt i finalment l'identificador de l'atribut.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Accés a un atribut d'un objecte</span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Accés a un atribut d'un objecte</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// idObjecte.idAtribut [= valor];</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">v2</span><span class="p">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>   <span class="c1">// Canviem el valor de la coordenada x de l'objecte v2</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>   <span class="c1">// Canviem el valor de la coordenada y de l'objecte v1</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">println</span><span class="p">(</span><span class="s">"V2.X: "</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>  <span class="c1">// Mostre el valor de la coordenada x de l'objecte v2</span>
-</code></pre></div>
-</td></tr></table>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">   </span><span class="c1">// Canviem el valor de la coordenada x de l'objecte v2</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">   </span><span class="c1">// Canviem el valor de la coordenada y de l'objecte v1</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">println</span><span class="p">(</span><span class="s">"V2.X: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Mostre el valor de la coordenada x de l'objecte v2</span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Estat d'un objecte</p>
 <p>L'<strong>estat</strong> d'un objecte en la Programació Orientada a Objectes (POO) representa la condició o conjunt de dades d'un objecte en un moment concret. Es defineix pel valor actual dels seus atributs (o propietats) i emmagatzema les característiques que el diferencien d'altres instàncies de la mateixa classe.</p>
@@ -369,17 +480,16 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <li><strong>etc..</strong></li>
 </ul>
 <p>Igual que passava amb els atributs, per tal de cridar a un mètode d'un objecte (enviar-li un missatge), primer ens hem d'assegurar que el mètode és públic </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Accés a un mètode. Enviament de missatges</span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Accés a un mètode. Enviament de missatges</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// idObjecte.metode([parametres]);</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">float</span> <span class="n">d</span> <span class="o">=</span> <span class="n">v2</span><span class="p">.</span><span class="na">dist</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span>     <span class="c1">// Calcula la distància entre v2 i v1</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span>                <span class="c1">// Suma al vector v1 el vector v2</span>
-</code></pre></div>
-</td></tr></table>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">float</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">dist</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span><span class="w">     </span><span class="c1">// Calcula la distància entre v2 i v1</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">v1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span><span class="w">                </span><span class="c1">// Suma al vector v1 el vector v2</span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Comportament d'un objecte</p>
 <p>En la Programació Orientada a Objectes (POO), el comportament d'un objecte és la manera com aquest interactua amb el seu entorn, rep ordres i modifica el seu estat. Es defineix mitjançant els mètodes (les funcions o accions que l'objecte és capaç de realitzar) i els missatges que pot rebre o enviar.</p>
@@ -395,7 +505,7 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <p>Observa el codi a continuació:</p>
 <details class="example">
 <summary>Ús d'objectes de la classe PVector</summary>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -433,47 +543,46 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 <span class="normal"><a href="#__codelineno-3-36">36</a></span>
 <span class="normal"><a href="#__codelineno-3-37">37</a></span>
 <span class="normal"><a href="#__codelineno-3-38">38</a></span>
-<span class="normal"><a href="#__codelineno-3-39">39</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Variables globals</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">PVector</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">;</span>       <span class="c1">// Declaració de dos objectes (v1, v2) de la classe PVector</span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Variables globals</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">PVector</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span><span class="w">       </span><span class="c1">// Declaració de dos objectes (v1, v2) de la classe PVector</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// Funció setup: només s'executa una vegada a l'inici de l'execució.</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>  
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>	<span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>       <span class="c1">// Configura les dimensions de l'aplicació</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>	<span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PVector</span><span class="p">();</span>  <span class="c1">// Instanciació de l'objecte v1</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>	<span class="n">v1</span><span class="p">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">320</span><span class="p">;</span>          <span class="c1">// Accés a l'atribut x de l'objecte v1</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>	<span class="n">v1</span><span class="p">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">240</span><span class="p">;</span>          <span class="c1">// Accés a l'atribut y de l'objectes v2</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">	</span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span><span class="w">       </span><span class="c1">// Configura les dimensions de l'aplicació</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">	</span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">();</span><span class="w">  </span><span class="c1">// Instanciació de l'objecte v1</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">	</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span><span class="w">          </span><span class="c1">// Accés a l'atribut x de l'objecte v1</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">	</span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">240</span><span class="p">;</span><span class="w">          </span><span class="c1">// Accés a l'atribut y de l'objectes v2</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>	<span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PVector</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">140</span><span class="p">);</span> <span class="c1">// Instanciació de l'objecte v2</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">	</span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">140</span><span class="p">);</span><span class="w"> </span><span class="c1">// Instanciació de l'objecte v2</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="c1">// Funció draw: s'executa 60 vegades per segon (60Hz freqüència del monitor)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span> 
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>	<span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>  <span class="c1">// Pinta el fons de blanc</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>	<span class="c1">// Per mostrar el que passa amb els PVectors dibuixarem un punt a cada vector</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>	<span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>	<span class="n">strokeWeight</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>	<span class="c1">// Dibuixem els punts al seu lloc</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>	<span class="n">point</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a>	<span class="n">point</span><span class="p">(</span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">	</span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// Pinta el fons de blanc</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">	</span><span class="c1">// Per mostrar el que passa amb els PVectors dibuixarem un punt a cada vector</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">	</span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">	</span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">	</span><span class="c1">// Dibuixem els punts al seu lloc</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">	</span><span class="n">point</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">	</span><span class="n">point</span><span class="p">(</span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
 <a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a>	<span class="c1">// Dibuixem una línia que els uneixca</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>	<span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a>	<span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a>	<span class="n">line</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">	</span><span class="c1">// Dibuixem una línia que els uneixca</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">	</span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">	</span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">	</span><span class="n">line</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
 <a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="p">}</span>
 <a id="__codelineno-3-29" name="__codelineno-3-29"></a>
 <a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1">// Declaració d'altres funcions. Opcional</span>
 <a id="__codelineno-3-31" name="__codelineno-3-31"></a>
 <a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="c1">// Esedeveniments</span>
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kt">void</span> <span class="nf">mouseClicked</span>  <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kt">void</span> <span class="nf">mouseReleased</span> <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kt">void</span> <span class="nf">mousePressed</span>  <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="kt">void</span> <span class="nf">keyPressed</span>    <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="kt">void</span> <span class="nf">keyReleased</span>   <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="kt">void</span> <span class="nf">mouseDragged</span>  <span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="kt">void</span> <span class="nf">mouseMoved</span>    <span class="p">()</span> <span class="p">{}</span>
-</code></pre></div>
-</td></tr></table>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseClicked</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseReleased</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mousePressed</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="w">   </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseDragged</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mouseMoved</span><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div></td></tr></table></div>
 </details>
 <details class="question">
 <summary>Activitat 401. La classe PVector</summary>
@@ -484,13 +593,12 @@ Un mateix missatge enviat a objectes diferents donarà com a resposta eixides di
 Modifica els valors x i y dels objectes PVector per tal que es dibuixen un al mig de la meitat esquerra de la pantalla i l'altre al mig de la meitat dreta. Els dos han d'estar a la mateixa altura. Fixa't que les dimensions de l'esbós són 640 per 480.
 Crea una variable <strong>distancia</strong> i utilitza la funció dist de la classe PVector per saber quina distància hi ha entre els dos punts.
 Afegeix el codi següent al teu esbós:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">textSize</span> <span class="p">(</span><span class="mi">25</span><span class="p">);</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">fill</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">text</span> <span class="p">(</span><span class="n">distancia</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">textSize</span><span class="w"> </span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">fill</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">text</span><span class="w"> </span><span class="p">(</span><span class="n">distancia</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p>Investiga el manual de referència de Processing IDE i posa la informació de la distància que has afegit abans, al mig de la línia i dins d'un requadre amb la vora de color negra.</p>
 </div>
 <div class="tabbed-block">
@@ -816,15 +924,15 @@ Ara posa un quart PVector i uneix també les línies.</p>
 </center>
 </div>
 <p>Primer hem de preparar el nostre Processing per tal que es puga u sar aquesta llibreria. Obre Processing IDE i ves a <strong>File --&gt; Preferences</strong></p>
-<p><center>
+<center>
 <img alt="Processing IDE Preferences" src="../assets/Tema4/ProcessingPreferences.png" width="330px"/>
-</center></p>
+</center>
 <p>Com pots observar al diàleg que s'obre, a la seua part superior es pot saber quina és la carpeta dels sketch. Normalment <strong>/home/usuari/sketchbook</strong>. Seguidament has d'anar a aquesta carpeta i obrir la carpeta <strong>libraries</strong> que hi trobaràs com mostra la següent imatge:</p>
-<p><center>
+<center>
 <img alt="Carpeta d'esbossos de Processing IDE" src="../assets/Tema4/carpetaSketchbook.png" width="70%"/>
-</center></p>
+</center>
 <p>Finalment descarrega la <a href="../assets/Tema4/Dibuixem/library/Dibuixem.jar">llibreria Dibuixem</a> i copia-la a la carpeta abans indicada. Si tot ha anat bé a la carpeta libraries trobaràs una estructura molt semblant a la següent. Les carpetes controlP5, sound i mínim són llibreries i utilitats instal·lades des del Processing IDE. No et preocupes si no t'apareixen.</p>
-<p><center>
+<center>
 <div class="mermaid">	graph TD
 		A[📁libraries] --&gt; B[📁Dibuixem]
 		B --&gt; C[📁library]
@@ -837,7 +945,7 @@ Ara posa un quart PVector i uneix també les línies.</p>
 		A --&gt; K[📁sound]
 		K --&gt; L[...]
 </div>
-</center></p>
+</center>
 <div class="admonition danger">
 <p class="admonition-title">Manual de referència package Dibuixem</p>
 <p>Abans de començar amb les activitats associades al <strong>Projecte Figures Geomètriques</strong>, revisa la documentació de la llibreria:
@@ -852,27 +960,22 @@ Ara posa un quart PVector i uneix també les línies.</p>
 <div class="tabbed-block">
 <p>Copia el codi base d'un projecte en Processing IDE i desa'l com a act303.pde.
 Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la línia de codi: </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">Dibuixem.*</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">Dibuixem.*</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <p>A la secció de variables globals declara un objecte amb identificador c1 de la classe Cercle. </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Cercle</span> <span class="n">c1</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <p>Al mètode setup() has de crear l'objecte c1 de la classe Cercle utilitzant el seu constructor. I no oblides de donar-li dimensions a l'aplicació amb size.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">size</span> <span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">);</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cercle</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span> <span class="c1">// Creem un cercle a la posició 320, 240,</span>
-</code></pre></div>
-</td></tr></table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creem un cercle a la posició 320, 240,</span>
+</code></pre></div></td></tr></table></div>
 <p>Al mètode draw() fes que es mostre el cercle.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
-</code></pre></div>
-</td></tr></table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
 <p>Utilitza el mètode setPosicio de l'objecte de la classe Cercle per tal que el cercle es puga moure per la pantalla. Pots utilitzar algun esdeveniment de ratolí.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">c1</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p>Ampliació: Per què quan mous el cercle no s'esborra l'anterior? Com es pot arreglar?</p>
 </div>
 <div class="tabbed-block">
@@ -1125,11 +1228,10 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <li>No cal modificar cap classe de la llibreria.</li>
 </ul>
 <p><strong>IMPORTANT:</strong> Modifica l'inici del mètode setup (). Si no la llibreria Dibuixem no es veurà bé. Has de substituir el size per el següent codi:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">size</span> <span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">,</span> <span class="n">P3D</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="n">P3D</span><span class="p">);</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">ortho</span><span class="p">();</span>
-</code></pre></div>
-</td></tr></table></p>
+</code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
 <table>
@@ -1399,7 +1501,7 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <div class="tabbed-block">
 <p>Instal·la la llibreria <strong>Ani</strong> que té disponible Processing IDE i combina-la amb la llibreria Dibuixem.</p>
 <p>Per exemple pots fer que un cercle de la llibreria dibuixem, canvie gradualment el seu ample durant l'execució de l'aplicació.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
@@ -1419,29 +1521,28 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <span class="normal"><a href="#__codelineno-11-18">18</a></span>
 <span class="normal"><a href="#__codelineno-11-19">19</a></span>
 <span class="normal"><a href="#__codelineno-11-20">20</a></span>
-<span class="normal"><a href="#__codelineno-11-21">21</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">de.looksgood.ani.*</span><span class="p">;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">import</span> <span class="nn">Dibuixem.*</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">de.looksgood.ani.*</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">Dibuixem.*</span><span class="p">;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">Cercle</span> <span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">Cercle</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>	<span class="n">size</span> <span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">,</span> <span class="n">P3D</span><span class="p">);</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>	<span class="n">ortho</span> <span class="p">();</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>	<span class="n">Ani</span><span class="p">.</span><span class="na">init</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a>	<span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cercle</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="p">);</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a>	<span class="n">Ani</span><span class="p">.</span><span class="na">to</span> <span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">"ample"</span><span class="p">,</span> <span class="mi">220</span><span class="p">);</span> 
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a>	<span class="c1">// On c és el cercle, </span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a>	<span class="c1">// 5 és el temps que ha de tardar en fer la transició, </span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a>	<span class="c1">// ample és l'atribut a modificar </span>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a>	<span class="c1">// 220 l'ample final de la figura en acabar la transició</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">	</span><span class="n">size</span><span class="w"> </span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="n">P3D</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">	</span><span class="n">ortho</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">init</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">	</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cercle</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">	</span><span class="n">Ani</span><span class="p">.</span><span class="na">to</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">"ample"</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">	</span><span class="c1">// On c és el cercle, </span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">	</span><span class="c1">// 5 és el temps que ha de tardar en fer la transició, </span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">	</span><span class="c1">// ample és l'atribut a modificar </span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">	</span><span class="c1">// 220 l'ample final de la figura en acabar la transició</span>
 <a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="p">}</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17"></a>
-<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="kt">void</span> <span class="nf">draw</span> <span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19"></a>	<span class="n">background</span> <span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20"></a>	<span class="n">c</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">	</span><span class="n">background</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">	</span><span class="n">c</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
 <a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 <p>També pots combinar el mètode keyPressed amb la llibreria per tal que a diferents tecles diferents accions.</p>
 </div>
 <div class="tabbed-block">
@@ -1517,37 +1618,10 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 </details>
 </article>
 </div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 03.- Estructures de control" class="md-footer__link md-footer__link--prev" href="../Tema%2003.%20Estructures%20de%20Control/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              03.- Estructures de control
-            </div>
-</div>
-</a>
-<a aria-label="Next: 05.- Arrais i col·leccions" class="md-footer__link md-footer__link--next" href="../Tema%2005.%20Arrais%20i%20col%C2%B7leccions/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              05.- Arrais i col·leccions
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1565,8 +1639,8 @@ Afegeix la llibreria dibuixem al projecte a la secció de llibreries amb la lín
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",

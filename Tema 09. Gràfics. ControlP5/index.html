@@ -8,9 +8,9 @@
 <link href="../Tema%2008.%20Entrada%20i%20eixida/" rel="prev"/>
 <link href="../Tema%2010.%20Her%C3%A8ncia%2C%20polimorfisme%20i%20interf%C3%ADcies/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
 <title>09.- Gràfics. ControlP5 - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -361,9 +361,9 @@
 </div>
 <h3 id="criteris-davaluacio">Criteris d'avaluació</h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.6. S'han utilitzat les eines de l'entorn de desenvolupament per crear interfícies gràfics d'usuari simples.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.7. S'han programat controladors d'esdeveniments.</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> RA5.8. S'han escrit programes que utilitzin interfícies gràfics per a l'entrada i sortida d'informació.
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA5.6. S'han utilitzat les eines de l'entorn de desenvolupament per crear interfícies gràfics d'usuari simples.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA5.7. S'han programat controladors d'esdeveniments.</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> RA5.8. S'han escrit programes que utilitzin interfícies gràfics per a l'entrada i sortida d'informació.
 Tainted Love    Imelda May</li>
 </ul>
 <h2 id="introduccio">Introducció</h2>
@@ -397,7 +397,7 @@ Tainted Love    Imelda May</li>
 <h2 id="botons">Botons</h2>
 <p>Un botó dispara un esdeveniment després de que s'allibere. Els esdeveniments del botó es poden associar a funcions dins de la teua aplicació. Si vols veure més informació d'aquest control pots anar a la documentació de la <a href="https://sojamo.de/libraries/controlP5/reference/index.html?controlP5/Button.html">classe Controller</a>.</p>
 <p>Primer crearem una xicoteta aplicació per posar botons i veure amb un poc més de detall com funcionen i que es pot fer amb ells. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">Menu</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">Menu</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -472,7 +472,7 @@ Tainted Love    Imelda May</li>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
+</input></input></div>
 <p>Al codi anterior s'ha creat la <strong>classe Menú</strong> que és la que contindrà els controls de <strong>controlP5</strong>. Al nostre cas es tractarà inicialment d'un sol botó amb text <strong>BOTO1</strong> a la posició (250,150) amb una grandària de 150 per 150 píxels de color blau. Com pots observar també he implementat el mètode (buit de moment) <strong>controlEvent</strong> ja que es tracta d'una classe que implementa la interfície <strong>ControlListener</strong>. Finalment hem posat un mètode <strong>display</strong> public en el que bàsicament el que es fa és cridar al mètode <strong>show()</strong> de la classe Button de la llibreria ControlP5.</p>
 <p>Al executar eixe codi es mostra el següent:</p>
 <center>
@@ -490,7 +490,7 @@ Tainted Love    Imelda May</li>
 <div class="highlight"><pre><span></span><code>Heu de tenir en compte que el mètode **controlEvent** és un mètode que pot respondre a accions de l'usuari en diferents controls de la mateixa classe. És a dir, que la nostra classe menú pot tindre més d'un botó i tots els esdeveniments executaran el mètode en qüestió.
 </code></pre></div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Main</label><label for="__tabbed_2_2">Menu</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Main</label><label for="__tabbed_2_2">Menu</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -575,7 +575,7 @@ Tainted Love    Imelda May</li>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
+</input></div>
 <p>Per acabar, què passa si el que volem quan es premi un botó modifique l'estat del programa principal? Hem d'aprofitar que al constructor de la classe menú se li passa el <strong>pare</strong> (programa principal en el nostre cas) i per tant des dels esdeveniments de la classe <strong>Menú</strong> podriem cridar a mètodes de la classe pare. Per tant tot allò que volem que siga susceptible de modificar-se des de classes externes com el menú, haurem de crear mètodes als quals podem cridar des del menú.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Main</label><label for="__tabbed_3_2">Menu</label></div>
 <div class="tabbed-content">
@@ -2118,6 +2118,6 @@ Tainted Love    Imelda May</li>
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
 </body>
 </html>

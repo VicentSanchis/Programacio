@@ -249,10 +249,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pas-dobjectes-a-funcions">
+<a class="md-nav__link" href="#metodes-amb-i-sense-valor-de-retorn">
 <span class="md-ellipsis">
       
-        Pas d'objectes a funcions
+        Mètodes amb i sense valor de retorn
       
     </span>
 </a>
@@ -481,7 +481,7 @@ On: </p>
 <p>Un mètode pot executar instruccions sense retornar cap valor (void) o pot calcular un resultat i retornar-lo mitjançant return. En tots dos casos pot rebre paràmetres.</p>
 <details class="question">
 <summary>Activitat 601. Modularitza la taula de billar</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problema</label><label for="__tabbed_1_2">Rúbrica</label><label for="__tabbed_1_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Enunciat</label><label for="__tabbed_1_2">Rúbrica</label><label for="__tabbed_1_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>El següent codi per a Processing IDE dibuixa una taula de billar amb dues boles negres, dues banques i dues roges. Modularitza el codi de tal forma que al mètode draw només hi haurà crides a mètodes definits per tu, concretament els següents mètodes: </p>
@@ -555,7 +555,68 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>El programa compleix exactament l’enunciat: el draw() només conté crides als mètodes indicats i el resultat visual és correcte.</td>
+<td>El resultat és correcte però queda alguna instrucció de dibuix fora dels mètodes o algun detall menor.</td>
+<td>Modularitza parcialment el codi, però no segueix completament l’estructura demanada.</td>
+<td>ntenta modularitzar però no compleix els requisits mínims.</td>
+<td>No compleix l’enunciat.</td>
+</tr>
+<tr>
+<td>Definició i ús correcte de mètodes</td>
+<td>Defineix correctament tots els mètodes demanats i els utilitza de forma clara i coherent.</td>
+<td>Mètodes correctes però amb algun error menor (nom, ordre o redundància).</td>
+<td>Mètodes incomplets o mal definits.</td>
+<td>Ús incorrecte dels mètodes.</td>
+<td>No defineix mètodes.</td>
+</tr>
+<tr>
+<td>Organització del codi. Modularització.</td>
+<td>Cada mètode fa exactament la funció que li pertoca (taula, boles per color).</td>
+<td>Bona modularització però amb alguna barreja de responsabilitats.</td>
+<td>Organització confusa o poc clara.</td>
+<td>Modularització artificial o incorrecta.</td>
+<td>Codi totalment desorganitzat.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació.</td>
+<td>Comentari de documentació inicial i comentaris clars en cada mètode.</td>
+<td>Comentaris correctes però incomplets.</td>
+<td>Pocs comentaris o poc útils.</td>
+<td>Comentaris molt pobres.</td>
+<td>No hi ha comentaris.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Identació impecable, codi net, llegible i ben ordenat.</td>
+<td>Algunes errades menors (espais, salts de línia, etc.).</td>
+<td>Estil clarament millorable.</td>
+<td>Codi difícil de llegir o mal alineat.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+<tr>
+<td>Simplicitat del codi i semàntica</td>
+<td>Codi simple i directe. Cada instrucció està al lloc que li correspon.</td>
+<td>Algunes línies innecessàries o repetides.</td>
+<td>Massa codi per a una tasca simple.</td>
+<td>Codi artificiós o confús.</td>
+<td>Totalment ineficient.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -649,13 +710,74 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 602. Resol problemes del codi anterior</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><input id="__tabbed_2_3" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Problema</label><label for="__tabbed_2_2">Rúbrica</label><label for="__tabbed_2_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><input id="__tabbed_2_3" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Enunciat</label><label for="__tabbed_2_2">Rúbrica</label><label for="__tabbed_2_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Còpia el codi anterior, executa'l i raona el que està passant. Modifica el codi per tal que funcione correctament i mostre un resultat per pantalla.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>Identifica tots els errors, els corregeix i el programa funciona mostrant resultats correctes.</td>
+<td>Corregeix els errors principals però queda algun cas sense resoldre.</td>
+<td>Corregeix només una part dels errors o el programa funciona parcialment.</td>
+<td>Intenta corregir però el programa continua sense funcionar.</td>
+<td>No corregeix el codi o no funciona gens.</td>
+</tr>
+<tr>
+<td>Comprensió de les signatures dels mètodes</td>
+<td>Entén perfectament el nombre i tipus de paràmetres, el valor de retorn i per què algunes crides són incorrectes.</td>
+<td>Entén les signatures però té alguna confusió menor (ex. retorn no usat).</td>
+<td>Confusió clara entre paràmetres, retorns i crides als mètodes.</td>
+<td>Correccions fetes per prova-error, sense comprensió real.</td>
+<td>No entén el funcionament dels mètodes ni les seues crides.</td>
+</tr>
+<tr>
+<td>Correcció tècnica del codi</td>
+<td>El codi és coherent, ben estructurat i sense redundàncies.</td>
+<td>Codi correcte amb algun detall millorable.</td>
+<td>Funciona però amb solucions poc netes o redundants.</td>
+<td>Codi confús o amb errors potencials.</td>
+<td>El codi no és executable.</td>
+</tr>
+<tr>
+<td>Raonament i comentaris explicatius</td>
+<td>Explica clarament per què fallava cada crida i com s’ha corregit.</td>
+<td>Hi ha comentaris, però incomplets o poc clars.</td>
+<td>Comentaris mínims o molt superficials.</td>
+<td>Comentaris poc útils o incorrectes.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, ben indentat i amb identificadors correctes.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular o poc cuidat.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+<tr>
+<td>Simplicitat i adequació semàntica</td>
+<td>Solucions simples, adequades i ben plantejades.</td>
+<td>Alguna línia innecessària però correcte.</td>
+<td>Solució artificiosa o massa complicada.</td>
+<td>Solució confusa o poc coherent.</td>
+<td>Totalment ineficient.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -665,7 +787,7 @@ On: </p>
 </details>
 <details class="question">
 <summary>Activitat 603. Crida als mètodes de forma correcta</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Problema</label><label for="__tabbed_3_2">Rúbrica</label><label for="__tabbed_3_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Enunciat</label><label for="__tabbed_3_2">Rúbrica</label><label for="__tabbed_3_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Copia el codi que trobaràs a continuació. Aquest codi té quatre mètodes i el que has de fer és:</p>
@@ -745,7 +867,60 @@ On: </p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>Identifica tots els errors, els corregeix i el programa funciona mostrant resultats correctes.</td>
+<td>Corregeix els errors principals però queda algun cas sense resoldre.</td>
+<td>Corregeix només una part dels errors o el programa funciona parcialment.</td>
+<td>Intenta corregir però el programa continua sense funcionar.</td>
+<td>No corregeix el codi o no funciona gens.</td>
+</tr>
+<tr>
+<td>Comprensió. Ús correcte de mètodes</td>
+<td>Fa totes les crides correctament, respectant paràmetres, tipus i retorns.</td>
+<td>Crides correctes amb algun error menor corregit posteriorment.</td>
+<td>Diverses crides incorrectes o confusió amb els paràmetres.</td>
+<td>Crides majoritàriament incorrectes.</td>
+<td>No sap cridar els mètodes.</td>
+</tr>
+<tr>
+<td>Correcció tècnica del codi</td>
+<td>El codi és coherent, ben estructurat i sense redundàncies.</td>
+<td>Codi correcte amb algun detall millorable.</td>
+<td>Funciona però amb solucions poc netes o redundants.</td>
+<td>Codi confús o amb errors potencials.</td>
+<td>El codi no és executable.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, ben indentat i amb identificadors correctes.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular o poc cuidat.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+<tr>
+<td>Simplicitat i adequació semàntica</td>
+<td>Solucions simples, adequades i ben plantejades.</td>
+<td>Alguna línia innecessària però correcte.</td>
+<td>Solució artificiosa o massa complicada.</td>
+<td>Solució confusa o poc coherent.</td>
+<td>Totalment ineficient.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -767,7 +942,7 @@ On: </p>
 </ul>
 <details class="question">
 <summary>Activitat 604. Modularitza el següent codi</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Problema</label><label for="__tabbed_4_2">Rúbrica</label><label for="__tabbed_4_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Enunciat</label><label for="__tabbed_4_2">Rúbrica</label><label for="__tabbed_4_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Escriu el següent codi en Processing i executa'l. </p>
@@ -844,7 +1019,68 @@ Aquest codi mostra el següent dibuix</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>El codi final està totalment modularitzat tal com s’indica a l’enunciat; totes les parts estan correctament separades en mètodes.</td>
+<td>Compleix la majoria del que es demana però falta algun mètode o detall menor.</td>
+<td>Només explica parcialment què passa o oblida algun dels punts demanats.</td>
+<td>Modularització mínima, incompleta o incorrecta.</td>
+<td>No hi ha modularització.</td>
+</tr>
+<tr>
+<td>Definició i ús de mètodes</td>
+<td>Tots els mètodes definits correctament amb noms clars, paràmetres i retorns correctes; s’utilitzen adequadament al draw o a setup.</td>
+<td>Alguns mètodes correctes amb errors menors en paràmetres, retorns o crides.</td>
+<td>Múltiples errors en definició o ús dels mètodes.</td>
+<td>Ús molt incorrecte o confús de mètodes.</td>
+<td>No s’utilitzen mètodes.</td>
+</tr>
+<tr>
+<td>Resultat final mostrat i millores</td>
+<td>El programa mostra correctament el resultat final i, si s’escau, millores estètiques respecte al codi original.</td>
+<td>El resultat és correcte amb petites millores.</td>
+<td>Mostra només el resultat bàsic.</td>
+<td>El resultat és incorrecte o incomplet.</td>
+<td>No es mostra res rellevant.</td>
+</tr>
+<tr>
+<td>Comentaris</td>
+<td>Comentaris útils a cada mètode i documentació clara al principi.</td>
+<td>Hi ha comentaris, però incomplets o poc clars.</td>
+<td>Comentaris mínims o molt superficials.</td>
+<td>Comentaris poc útils o incorrectes.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, ben indentat i amb identificadors correctes.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular o poc cuidat.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+<tr>
+<td>Simplicitat i adequació semàntica</td>
+<td>Solucions simples, adequades i ben plantejades.</td>
+<td>Alguna línia innecessària però correcte.</td>
+<td>Solució artificiosa o massa complicada.</td>
+<td>Solució confusa o poc coherent.</td>
+<td>Totalment ineficient.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1100,7 +1336,68 @@ Aquest codi mostra el següent dibuix</p>
 <p>Has de tindre en compte que arribats a aquest punt, hem vist mètodes parametritzables, per tant, és valorarà també en aquesta activitat l'ús de paràmetres i arguments.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>El dibuix està clarament modularitzat, s’han creat mètodes propis i s’han utilitzat paràmetres tal com es demana.</td>
+<td>La modularització és correcta però incompleta o millorable (massa codi al draw o pocs mètodes).</td>
+<td>S’ha intentat modularitzar però el resultat és parcial o confús.</td>
+<td>Modularització mínima o incorrecta.</td>
+<td>No hi ha modularització.</td>
+</tr>
+<tr>
+<td>Definició i ús de mètodes</td>
+<td>Mètodes ben definits, amb responsabilitats clares i cridats correctament des de draw o setup.</td>
+<td>Mètodes correctes però amb alguna responsabilitat mal separada.</td>
+<td>Mètodes poc clars, massa grans o poc coherents.</td>
+<td>Ús incorrecte o artificial de mètodes.</td>
+<td>No hi ha mètodes definits.</td>
+</tr>
+<tr>
+<td>Ús de paràmetres i arguments</td>
+<td>Ús adequat i significatiu de paràmetres (posició, color, mida, etc.). Reutilització clara del codi.</td>
+<td>Paràmetres correctes però poc explotats o redundants.</td>
+<td>Paràmetres mal escollits o poc útils.</td>
+<td>Paràmetres innecessaris o incorrectes.</td>
+<td>No s’utilitzen paràmetres.</td>
+</tr>
+<tr>
+<td>Organització i semàntica del codi</td>
+<td>Cada mètode fa exactament el que ha de fer. Bona separació entre configuració, dibuix i lògica.</td>
+<td>Alguna responsabilitat fora de lloc, però globalment correcte.</td>
+<td>Codi confús amb barreja de responsabilitats.</td>
+<td>Codi mal organitzat i difícil d’entendre.</td>
+<td>Total desordre semàntic.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació</td>
+<td>Comentaris útils a cada mètode i documentació clara al principi.</td>
+<td>Hi ha comentaris, però incomplets o poc clars.</td>
+<td>Comentaris mínims o molt superficials.</td>
+<td>Comentaris poc útils o incorrectes.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, indentació impecable, identificadors clars i sense soroll visual.</td>
+<td>Alguna errada menor (salts de línia, espais, etc.).</td>
+<td>Estil millorable amb errors visibles.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1113,8 +1410,8 @@ Aquest codi mostra el següent dibuix</p>
 <p>En alguns llenguatges de programació existeixen diferents mecanismes, com ara el pas per valor i el pas per referència.</p>
 <p>En Java, tots els arguments es passen per valor. Això significa que el mètode rep una còpia del valor de cada argument.</p>
 <p>El comportament depén del tipus de dada:
-- Tipus primitius: es copia el valor de la variable. Els canvis que fem sobre el paràmetre no modifiquen la variable original.
-- Objectes: es copia el valor de la referència a l'objecte. El mètode pot modificar l'estat de l'objecte original, però no pot canviar la referència que conserva la variable original.</p>
+- <strong>Tipus primitius:</strong> es copia el valor de la variable. Els canvis que fem sobre el paràmetre no modifiquen la variable original.
+- <strong>Objectes:</strong> es copia el valor de la referència a l'objecte. El mètode pot modificar l'estat de l'objecte original, però no pot canviar la referència que conserva la variable original.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>Que un mètode puga modificar un objecte rebut com a argument no significa que Java utilitze el pas per referència. El que es copia continua sent el valor de la referència.</p>
@@ -1161,21 +1458,82 @@ Aquest codi mostra el següent dibuix</p>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 606. Comprendre funcions amb tipus primitius</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Problema</label><label for="__tabbed_6_2">Rúbrica</label><label for="__tabbed_6_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Enunciat</label><label for="__tabbed_6_2">Rúbrica</label><label for="__tabbed_6_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Copia el codi anterior en Processing IDE i respon a les següents qüestions:</p>
 <ol>
-<li>Quins són els paràmetres i de quin tipus són els de la funció modificaTipusPrimitius?</li>
-<li>Quantes vegades es crida a la funció modificaTipusPrimitius?</li>
+<li>Quins són els paràmetres i de quin tipus són els del mètode modificaTipusPrimitius?</li>
+<li>Quantes vegades es crida al mètode modificaTipusPrimitius?</li>
 <li>Quins argument es passen a cada crida?</li>
 <li>Què passa i per què a l'executar-se el codi anterior?</li>
-<li>Estan passant-se els arguments per valor o per referència?</li>
+<li>Com es passen els arguments en Java? Explica què passa amb els valors de les variables originals i per què.</li>
 <li>Dibuixa un diagrama on s'explique que està passant a la pila de crides (stack).</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quins són els paràmetres i tipus del mètode?</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+<tr>
+<td>Quantes vegades es crida al mètode?</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+<tr>
+<td>Quins arguments es passen en cada crida?</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+<tr>
+<td>Què passa i per què a l'executar-se el codi anterior?</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+<tr>
+<td>Com es passen els arguments en Java? Explica què passa amb els valors de les variables originals i per què.</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+<tr>
+<td>Dibuixa un diagrama on s'explique que està passant a la pila de crides (stack).</td>
+<td>Perfecte</td>
+<td>Notable</td>
+<td>Bé</td>
+<td>Insuficient</td>
+<td>Apartat no realitzat</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1184,11 +1542,12 @@ Aquest codi mostra el següent dibuix</p>
 </div>
 </details>
 <details class="question">
-<summary>Activitat 607. Comprendre el pas per valor i referència.</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Problema</label><label for="__tabbed_7_2">Rúbrica</label><label for="__tabbed_7_3">Solució</label></div>
+<summary>Activitat 607. Comprendre el pas d'arrays com a arguments</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Enunciat</label><label for="__tabbed_7_2">Rúbrica</label><label for="__tabbed_7_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Passa el següent codi a processing, executa'l i raona el que està passant. Quin altre nom alternatiu li podriem posar al mètode per tal que aquest siga més significatiu?</p>
+<p>Per què canvia el contingut de l'array, però no el valor de la variable i, si tots dos s'han passat per valor?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1222,14 +1581,14 @@ Aquest codi mostra el següent dibuix</p>
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Abans de la crida a la funció:"</span><span class="p">);</span>
 <a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"i="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">);</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"array[5]="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="n">funcio</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">array</span><span class="p">);</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="n">metode</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">array</span><span class="p">);</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Després de la crida a la funció:"</span><span class="p">);</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"i="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">);</span>
 <a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"array[5]="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="p">);</span>
 <a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="p">}</span>
 <a id="__codelineno-14-16" name="__codelineno-14-16"></a>
 <a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">    </span><span class="n">noLoop</span><span class="p">();</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="p">}</span>
 <a id="__codelineno-14-20" name="__codelineno-14-20"></a>
 <a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">metode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1239,7 +1598,68 @@ Aquest codi mostra el següent dibuix</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l’enunciat</td>
+<td>Ha executat el codi, ha raonat correctament el comportament, ha explicat el pas per valor i referència i ha proposat un nom alternatiu coherent per a la funció.</td>
+<td>Compleix quasi tot: explicació correcta però incompleta o nom alternatiu millorable.</td>
+<td>Només explica parcialment què passa o oblida algun dels punts demanats.</td>
+<td>Explicació molt superficial o incorrecta.</td>
+<td>No respon a l’activitat o no hi ha raonament.</td>
+</tr>
+<tr>
+<td>Comprensió del pas per valor i per referència</td>
+<td>Explica clarament que i no canvia perquè es passa perquè és un tipus primitiu. L’array sí canvia perquè es passa la referència a aquest. Relaciona el canvi amb la memòria i els efectes laterals.</td>
+<td>Entén la diferència però amb alguna explicació imprecisa o poc profunda.</td>
+<td>Intueix què passa però confon conceptes o no els justifica bé.</td>
+<td>Explicació errònia del mecanisme.</td>
+<td>No entén ni explica el pas per valor ni per referència.</td>
+</tr>
+<tr>
+<td>Proposta de nom alternatiu per a la funció</td>
+<td>El nou nom és molt significatiu i descriu clarament l’efecte de la funció</td>
+<td>Nom correcte però millorable semànticament.</td>
+<td>Nom massa genèric o poc clar.</td>
+<td>Nom inadequat o confús.</td>
+<td>No proposa cap nom alternatiu.</td>
+</tr>
+<tr>
+<td>Comentaris i raonament escrit</td>
+<td>Comentari clar, ben estructurat, explica què passa abans i després de la crida i el perquè.</td>
+<td>Hi ha comentaris, però incomplets o poc clars.</td>
+<td>Comentaris mínims o molt superficials.</td>
+<td>Comentaris poc útils o incorrectes.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, ben indentat i amb identificadors correctes.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular o poc cuidat.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+<tr>
+<td>Simplicitat i adequació semàntica</td>
+<td>Solucions simples, adequades i ben plantejades.</td>
+<td>Alguna línia innecessària però correcte.</td>
+<td>Solució artificiosa o massa complicada.</td>
+<td>Solució confusa o poc coherent.</td>
+<td>Totalment ineficient.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1249,15 +1669,76 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 608. Modifica dibuixaCor</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><input id="__tabbed_8_3" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Problema</label><label for="__tabbed_8_2">Rúbrica</label><label for="__tabbed_8_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><input id="__tabbed_8_3" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Enunciat</label><label for="__tabbed_8_2">Rúbrica</label><label for="__tabbed_8_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Crea un projecte en Processing on s'utilitze el mètode dibuixaCor on uns dels paràmetres són dos float que ens indiquen la posició central del cor. Modifica el mètode canviant els dos float (posX i posY) per un objecte de la classe PVector.</p>
-<p>Una vegada hages fet el canvi, a la primera línia del mètode modifica els valors del PVector (argument).</p>
+<p>Una vegada hages fet el canvi, modifica els components x i y del PVector rebut com a paràmetre. Observa què passa amb la posició del cor i explica per què els canvis també es reflecteixen en l'objecte utilitzant en la crida.</p>
 <p>Què és el que passa? Et recomane que uses el depurador per tal que pugues seguir amb més detall el que està passant.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l'enunciat</td>
+<td>El mètode s’ha modificat correctament per usar un PVector, el projecte compila i funciona tal com es demana.</td>
+<td>El canvi a PVector està fet però amb algun detall menor incorrecte o poc elegant.</td>
+<td>El codi està parcialment modificat però no compleix tot l’enunciat.</td>
+<td>La modificació és incorrecta o incompleta.</td>
+<td>No s’ha fet la modificació demanada.</td>
+</tr>
+<tr>
+<td>Ús correcte de Pvector com a paràmetre</td>
+<td>El PVector s’utilitza correctament per accedir a les coordenades i substituir totalment els antics paràmetres posX i posY.</td>
+<td>Ús correcte del PVector, però amb alguna redundància o ús poc òptim.</td>
+<td>Ús confús o parcial del Pvector.</td>
+<td>El PVector s’utilitza de manera incorrecta.</td>
+<td>No s'ha fet aquest apartat</td>
+</tr>
+<tr>
+<td>Modificació del PVector dins del mètode i resultat observat</td>
+<td>Es modifica el PVector dins del mètode i es mostra clarament l’efecte d’aquesta modificació en el programa.</td>
+<td>El PVector es modifica, però l’efecte no està del tot clar o no s’explota completament.</td>
+<td>Es modifica el PVector però el resultat és confús o incorrecte.</td>
+<td>La modificació no té efecte observable.</td>
+<td>No es modifica el Pvector.</td>
+</tr>
+<tr>
+<td>Raonament i explicació del que passa</td>
+<td>L’alumne explica correctament què passa i per què, fent referència al pas de paràmetres per referència.</td>
+<td>Explicació correcta però superficial o poc precisa.</td>
+<td>Explicació parcial o amb errades conceptuals.</td>
+<td>Explicació molt pobra o incorrecta.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació</td>
+<td>Comentaris útils a cada mètode i documentació clara al principi.</td>
+<td>Hi ha comentaris, però incomplets o poc clars.</td>
+<td>Comentaris mínims o molt superficials.</td>
+<td>Comentaris poc útils o incorrectes.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Codi net, indentació impecable, identificadors clars i sense soroll visual.</td>
+<td>Alguna errada menor (salts de línia, espais, etc.).</td>
+<td>Estil millorable amb errors visibles.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1291,36 +1772,40 @@ Aquest codi mostra el següent dibuix</p>
 <span class="normal"><a href="#__codelineno-15-23">23</a></span>
 <span class="normal"><a href="#__codelineno-15-24">24</a></span>
 <span class="normal"><a href="#__codelineno-15-25">25</a></span>
-<span class="normal"><a href="#__codelineno-15-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="n">Persona</span><span class="w"> </span><span class="n">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">();</span>
+<span class="normal"><a href="#__codelineno-15-26">26</a></span>
+<span class="normal"><a href="#__codelineno-15-27">27</a></span>
+<span class="normal"><a href="#__codelineno-15-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="w">    </span><span class="n">Persona</span><span class="w"> </span><span class="n">juan</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="n">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">();</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">        </span><span class="n">modificarPersona</span><span class="p">(</span><span class="n">juan</span><span class="p">);</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Nom: "</span><span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">strNom</span><span class="p">);</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Cognom: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">strCognom</span><span class="p">);</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Edat: "</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">edat</span><span class="p">);</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">modificarPersona</span><span class="w"> </span><span class="p">(</span><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">strNom</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">;</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">strCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Unodos"</span><span class="p">;</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">edat</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a>
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">;</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strCognom</span><span class="p">;</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25"></a>
-<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Nom: "</span><span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">strNom</span><span class="p">);</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Cognom: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">strCognom</span><span class="p">);</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">"Edat: "</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">juan</span><span class="p">.</span><span class="na">edat</span><span class="p">);</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">        </span><span class="n">noLoop</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">modificarPersona</span><span class="w"> </span><span class="p">(</span><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">strNom</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">"Manolo"</span><span class="p">;</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">strCognom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Unodos"</span><span class="p">;</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">edat</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strNom</span><span class="p">;</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strCognom</span><span class="p">;</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="question">
 <summary>Activitat 609. Raona les següents qüestions</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><input id="__tabbed_9_3" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Problema</label><label for="__tabbed_9_2">Rúbrica</label><label for="__tabbed_9_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><input id="__tabbed_9_3" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Enunciat</label><label for="__tabbed_9_2">Rúbrica</label><label for="__tabbed_9_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Copia el codi anterior i respon a les següents qüestions:</p>
@@ -1329,11 +1814,72 @@ Aquest codi mostra el següent dibuix</p>
 <li>Quantes vegades es crida a la funció modificaPersona?</li>
 <li>Quins argument es passen a cada crida?</li>
 <li>Què passa i per què a l'executar-se el codi anterior?</li>
-<li>Estan passant-se els arguments per valor o per referència?</li>
+<li>Com es passa l'argument juan al mètode? Per què els canvis que es fan sobre els atributs de p es reflecteixen en juan?</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l'enunciat</td>
+<td>Ha copiat, executat el codi i ha respost totes les qüestions plantejades.</td>
+<td>Ha respost totes les qüestions però amb algun detall menor incorrecte o incomplet.</td>
+<td>Ha respost només part de les qüestions.</td>
+<td>Les respostes són molt incompletes o no s’ajusten al codi.</td>
+<td>No ha realitzat l’activitat o no respon les qüestions.</td>
+</tr>
+<tr>
+<td>Identificació de paràmetres i arguments</td>
+<td>Identifica correctament el paràmetre (Persona p), el seu tipus i l’argument passat a la crida.</td>
+<td>Identificació correcta però amb explicació superficial.</td>
+<td>Identificació parcial o amb errades conceptuals.</td>
+<td>Confusió clara entre paràmetres i arguments.</td>
+<td>No identifica correctament paràmetres ni arguments.</td>
+</tr>
+<tr>
+<td>Anàlisi del nombre de crides al mètode</td>
+<td>Indica correctament quantes vegades es crida el mètode i ho justifica pel comportament de draw().</td>
+<td>Indica correctament el nombre però sense justificar-lo.</td>
+<td>Nombre incorrecte o justificació errònia.</td>
+<td>Resposta molt confusa.</td>
+<td>No respon la qüestió.</td>
+</tr>
+<tr>
+<td>Explicació del comportament del programa</td>
+<td>Explica clarament què passa en executar-se el programa i per què es modifiquen els atributs de l’objecte.</td>
+<td>Explicació correcta però incompleta o poc precisa.</td>
+<td>Explicació parcial amb errades conceptuals.</td>
+<td>Explicació molt pobra o incorrecta.</td>
+<td>No hi ha cap explicació.</td>
+</tr>
+<tr>
+<td>Comprensió del pas de paràmetres</td>
+<td>Identifica correctament que es passa una referència a un objecte i ho explica adequadament.</td>
+<td>Identifica correctament el tipus de pas però amb una explicació superficial.</td>
+<td>Resposta amb confusions parcials.</td>
+<td>Confusió clara en el pas d'arguments en Java</td>
+<td>No respon o la resposta és incorrecta.</td>
+</tr>
+<tr>
+<td>Qualitat de l'expressió i ús de comentaris</td>
+<td>Respostes clares, ben redactades i comentaris ben integrats al codi.</td>
+<td>Respostes correctes però poc desenvolupades.</td>
+<td>Expressió confusa o comentaris molt breus.</td>
+<td>Comentaris pobres o difícils d’entendre.</td>
+<td>No hi ha comentaris ni explicacions.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1341,6 +1887,15 @@ Aquest codi mostra el següent dibuix</p>
 </div>
 </div>
 </details>
+<h3 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h3>
+<p>Quan passem un objecte com a argument d'un mètode, Java en copia el valor de la referència. Això significa que el paràmetre i la variable utilitzada com a argument contenen referències al mateix objecte.</p>
+<p>Per tant, si dins del mètode modifiquem els atributs de l'objecte, aquests canvis també es reflectiran en l'objecte original. En canvi, si assignem un objecte diferent al paràmetre, aquesta assignació no modificarà la referència de la variable original.</p>
+<p>Quan creem una variable d'un tipus de classe, declarem una variable que pot emmagatzemar una referència a un objecte. L'objecte es crea quan utilitzem l'operador new. Quan passem aquesta variable com a argument a un mètode, es copia el valor de la referència.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Java sempre passa els arguments per valor. Quan passem un objecte, es copia el valor de la referència. Això permet modificar l'estat de l'objecte des del mètode, però no modificar la referència de la variable original.</p>
+</div>
+<p>Però vejam un exemple per tal que quede més clar:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1382,133 +1937,327 @@ Aquest codi mostra el següent dibuix</p>
 <span class="normal"><a href="#__codelineno-16-39">39</a></span>
 <span class="normal"><a href="#__codelineno-16-40">40</a></span>
 <span class="normal"><a href="#__codelineno-16-41">41</a></span>
-<span class="normal"><a href="#__codelineno-16-42">42</a></span>
-<span class="normal"><a href="#__codelineno-16-43">43</a></span>
-<span class="normal"><a href="#__codelineno-16-44">44</a></span>
-<span class="normal"><a href="#__codelineno-16-45">45</a></span>
-<span class="normal"><a href="#__codelineno-16-46">46</a></span>
-<span class="normal"><a href="#__codelineno-16-47">47</a></span>
-<span class="normal"><a href="#__codelineno-16-48">48</a></span>
-<span class="normal"><a href="#__codelineno-16-49">49</a></span>
-<span class="normal"><a href="#__codelineno-16-50">50</a></span>
-<span class="normal"><a href="#__codelineno-16-51">51</a></span>
-<span class="normal"><a href="#__codelineno-16-52">52</a></span>
-<span class="normal"><a href="#__codelineno-16-53">53</a></span>
-<span class="normal"><a href="#__codelineno-16-54">54</a></span>
-<span class="normal"><a href="#__codelineno-16-55">55</a></span>
-<span class="normal"><a href="#__codelineno-16-56">56</a></span>
-<span class="normal"><a href="#__codelineno-16-57">57</a></span>
-<span class="normal"><a href="#__codelineno-16-58">58</a></span>
-<span class="normal"><a href="#__codelineno-16-59">59</a></span>
-<span class="normal"><a href="#__codelineno-16-60">60</a></span>
-<span class="normal"><a href="#__codelineno-16-61">61</a></span>
-<span class="normal"><a href="#__codelineno-16-62">62</a></span>
-<span class="normal"><a href="#__codelineno-16-63">63</a></span>
-<span class="normal"><a href="#__codelineno-16-64">64</a></span>
-<span class="normal"><a href="#__codelineno-16-65">65</a></span>
-<span class="normal"><a href="#__codelineno-16-66">66</a></span>
-<span class="normal"><a href="#__codelineno-16-67">67</a></span>
-<span class="normal"><a href="#__codelineno-16-68">68</a></span>
-<span class="normal"><a href="#__codelineno-16-69">69</a></span>
-<span class="normal"><a href="#__codelineno-16-70">70</a></span>
-<span class="normal"><a href="#__codelineno-16-71">71</a></span>
-<span class="normal"><a href="#__codelineno-16-72">72</a></span>
-<span class="normal"><a href="#__codelineno-16-73">73</a></span>
-<span class="normal"><a href="#__codelineno-16-74">74</a></span>
-<span class="normal"><a href="#__codelineno-16-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="n">size</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"----- EXEMPLES DE PROCEDIMENTS -----"</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-16-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1">// Programa Java per demostrar el pas d'objectes a funcions</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">);</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">  </span><span class="c1">// Procediment sense paràmetres</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">  </span><span class="n">saluda</span><span class="p">();</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">  </span><span class="c1">// Procediment amb paràmetres</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">  </span><span class="n">dibuixaPunt</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"----- EXEMPLES DE FUNCIONS -----"</span><span class="p">);</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">  </span><span class="c1">// Funció sense paràmetres que retorna un valor</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreAleatori</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generaNumero</span><span class="p">();</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Nombre aleatori: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombreAleatori</span><span class="p">);</span>
-<a id="__codelineno-16-17" name="__codelineno-16-17"></a>
-<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">  </span><span class="c1">// Funció amb paràmetres que retorna un valor</span>
-<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumaDosNumeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Suma de 3 + 5 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
-<a id="__codelineno-16-21" name="__codelineno-16-21"></a>
-<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">  </span><span class="c1">// Funció amb paràmetres que retorna un booleà</span>
-<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">  </span><span class="kt">boolean</span><span class="w"> </span><span class="n">esMajor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esMajorEdat</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"És major d'edat? "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">esMajor</span><span class="p">);</span>
-<a id="__codelineno-16-25" name="__codelineno-16-25"></a>
-<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">  </span><span class="c1">// Ús del valor retornat per prendre decisions</span>
-<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esMajorEdat</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Pot entrar"</span><span class="p">);</span>
-<a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"No pot entrar"</span><span class="p">);</span>
-<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">    </span><span class="n">ob1</span><span class="p">.</span><span class="na">modifica</span><span class="p">(</span><span class="n">ob2</span><span class="p">);</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Després de modificar ob2:"</span><span class="p">);</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob2.a: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob2</span><span class="p">.</span><span class="na">a</span><span class="p">);</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob2.b: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob2</span><span class="p">.</span><span class="na">b</span><span class="p">);</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">    </span><span class="n">noLoop</span><span class="p">();</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="p">}</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">    </span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">    </span><span class="c1">// Constructor de la classe</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-16-32" name="__codelineno-16-32"></a>
-<a id="__codelineno-16-33" name="__codelineno-16-33"></a><span class="w">  </span><span class="n">noLoop</span><span class="p">();</span>
-<a id="__codelineno-16-34" name="__codelineno-16-34"></a><span class="p">}</span>
-<a id="__codelineno-16-35" name="__codelineno-16-35"></a>
-<a id="__codelineno-16-36" name="__codelineno-16-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-37" name="__codelineno-16-37"></a><span class="w">  </span><span class="c1">// No fem servir draw en aquest exemple</span>
-<a id="__codelineno-16-38" name="__codelineno-16-38"></a><span class="p">}</span>
-<a id="__codelineno-16-39" name="__codelineno-16-39"></a>
-<a id="__codelineno-16-40" name="__codelineno-16-40"></a><span class="cm">/*-------------------------------------------------</span>
-<a id="__codelineno-16-41" name="__codelineno-16-41"></a><span class="cm"> PROCEDIMENTS (no retornen valor)</span>
-<a id="__codelineno-16-42" name="__codelineno-16-42"></a><span class="cm">-------------------------------------------------*/</span>
-<a id="__codelineno-16-43" name="__codelineno-16-43"></a>
-<a id="__codelineno-16-44" name="__codelineno-16-44"></a><span class="c1">// Procediment sense paràmetres</span>
-<a id="__codelineno-16-45" name="__codelineno-16-45"></a><span class="kt">void</span><span class="w"> </span><span class="nf">saluda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-46" name="__codelineno-16-46"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Hola! Açò és un procediment sense paràmetres."</span><span class="p">);</span>
-<a id="__codelineno-16-47" name="__codelineno-16-47"></a><span class="p">}</span>
-<a id="__codelineno-16-48" name="__codelineno-16-48"></a>
-<a id="__codelineno-16-49" name="__codelineno-16-49"></a><span class="c1">// Procediment amb paràmetres</span>
-<a id="__codelineno-16-50" name="__codelineno-16-50"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaPunt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-51" name="__codelineno-16-51"></a><span class="w">  </span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-16-52" name="__codelineno-16-52"></a><span class="w">  </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-16-53" name="__codelineno-16-53"></a><span class="w">  </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
-<a id="__codelineno-16-54" name="__codelineno-16-54"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"He dibuixat un punt en ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">", "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">")"</span><span class="p">);</span>
-<a id="__codelineno-16-55" name="__codelineno-16-55"></a><span class="p">}</span>
-<a id="__codelineno-16-56" name="__codelineno-16-56"></a>
-<a id="__codelineno-16-57" name="__codelineno-16-57"></a><span class="cm">/*-------------------------------------------------</span>
-<a id="__codelineno-16-58" name="__codelineno-16-58"></a><span class="cm"> FUNCIONS (retornen un valor)</span>
-<a id="__codelineno-16-59" name="__codelineno-16-59"></a><span class="cm">-------------------------------------------------*/</span>
-<a id="__codelineno-16-60" name="__codelineno-16-60"></a>
-<a id="__codelineno-16-61" name="__codelineno-16-61"></a><span class="c1">// Funció sense paràmetres</span>
-<a id="__codelineno-16-62" name="__codelineno-16-62"></a><span class="kt">int</span><span class="w"> </span><span class="nf">generaNumero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-63" name="__codelineno-16-63"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">));</span><span class="w"> </span><span class="c1">// Retorna un número entre 1 i 10</span>
-<a id="__codelineno-16-64" name="__codelineno-16-64"></a><span class="p">}</span>
-<a id="__codelineno-16-65" name="__codelineno-16-65"></a>
-<a id="__codelineno-16-66" name="__codelineno-16-66"></a><span class="c1">// Funció amb paràmetres</span>
-<a id="__codelineno-16-67" name="__codelineno-16-67"></a><span class="kt">int</span><span class="w"> </span><span class="nf">sumaDosNumeros</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-68" name="__codelineno-16-68"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-16-69" name="__codelineno-16-69"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
-<a id="__codelineno-16-70" name="__codelineno-16-70"></a><span class="p">}</span>
-<a id="__codelineno-16-71" name="__codelineno-16-71"></a>
-<a id="__codelineno-16-72" name="__codelineno-16-72"></a><span class="c1">// Funció amb paràmetres que retorna un booleà</span>
-<a id="__codelineno-16-73" name="__codelineno-16-73"></a><span class="kt">boolean</span><span class="w"> </span><span class="nf">esMajorEdat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-74" name="__codelineno-16-74"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-<a id="__codelineno-16-75" name="__codelineno-16-75"></a><span class="p">}</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a><span class="w">    </span><span class="c1">// Torna true si els valors són els mateixos</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equalTo</span><span class="p">(</span><span class="n">Demo</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">b</span><span class="p">);</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-37" name="__codelineno-16-37"></a>
+<a id="__codelineno-16-38" name="__codelineno-16-38"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">modifica</span><span class="w"> </span><span class="p">(</span><span class="n">Demo</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39"></a><span class="w">        </span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="p">;</span>
+<a id="__codelineno-16-40" name="__codelineno-16-40"></a><span class="w">        </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="p">;</span>
+<a id="__codelineno-16-41" name="__codelineno-16-41"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-42" name="__codelineno-16-42"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Eixida</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">obj1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj2</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">obj1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj3</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</code></pre></div></td></tr></table></div>
+<p>Explicació en imatges:</p>
+<p><strong>1.Primer:</strong> S'instancien els tres objectes ob1, ob2 i ob3.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<center>![Pas 1](assets/Tema5/Explicacio1.png)</center>
+<p><strong>2. Segon:</strong> En declarar el mètode equalTo, definim el paràmetre obj, de tipus Demo. Aquest paràmetre rebrà una còpia de la referència de l'objecte que es proporcione com a argument en cada crida.</p>
+<center>![Pas 2](assets/Tema5/Explicacio2.png)</center>
+<p><strong>3. Tercer:</strong> Quan executem ob1.equalTo(ob2), es copia el valor de la referència continguda en ob2 al paràmetre obj. Per tant, tant ob2 com obj permeten accedir al mateix objecte.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<center>![Pas 3](assets/Tema5/Explicacio3.png)</center>
+<p><strong>4. Quart:</strong> Ara com podem observar, es crida al mètode equalTo sobre 'ob1' i 'obj' fa referència a 'ob2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si la condició és veritat, tornarà <strong>true</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">if</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>5. Cinquè:</strong> De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència com s'ha fet al pas tercer.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+<center>![Pas 4](assets/Tema5/Explicacio4.png)</center>
+<p><strong>6. Sisè:</strong> Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</p>
+<h2 id="metodes-amb-i-sense-valor-de-retorn">Mètodes amb i sense valor de retorn</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span>
+<span class="normal"><a href="#__codelineno-22-13">13</a></span>
+<span class="normal"><a href="#__codelineno-22-14">14</a></span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span>
+<span class="normal"><a href="#__codelineno-22-16">16</a></span>
+<span class="normal"><a href="#__codelineno-22-17">17</a></span>
+<span class="normal"><a href="#__codelineno-22-18">18</a></span>
+<span class="normal"><a href="#__codelineno-22-19">19</a></span>
+<span class="normal"><a href="#__codelineno-22-20">20</a></span>
+<span class="normal"><a href="#__codelineno-22-21">21</a></span>
+<span class="normal"><a href="#__codelineno-22-22">22</a></span>
+<span class="normal"><a href="#__codelineno-22-23">23</a></span>
+<span class="normal"><a href="#__codelineno-22-24">24</a></span>
+<span class="normal"><a href="#__codelineno-22-25">25</a></span>
+<span class="normal"><a href="#__codelineno-22-26">26</a></span>
+<span class="normal"><a href="#__codelineno-22-27">27</a></span>
+<span class="normal"><a href="#__codelineno-22-28">28</a></span>
+<span class="normal"><a href="#__codelineno-22-29">29</a></span>
+<span class="normal"><a href="#__codelineno-22-30">30</a></span>
+<span class="normal"><a href="#__codelineno-22-31">31</a></span>
+<span class="normal"><a href="#__codelineno-22-32">32</a></span>
+<span class="normal"><a href="#__codelineno-22-33">33</a></span>
+<span class="normal"><a href="#__codelineno-22-34">34</a></span>
+<span class="normal"><a href="#__codelineno-22-35">35</a></span>
+<span class="normal"><a href="#__codelineno-22-36">36</a></span>
+<span class="normal"><a href="#__codelineno-22-37">37</a></span>
+<span class="normal"><a href="#__codelineno-22-38">38</a></span>
+<span class="normal"><a href="#__codelineno-22-39">39</a></span>
+<span class="normal"><a href="#__codelineno-22-40">40</a></span>
+<span class="normal"><a href="#__codelineno-22-41">41</a></span>
+<span class="normal"><a href="#__codelineno-22-42">42</a></span>
+<span class="normal"><a href="#__codelineno-22-43">43</a></span>
+<span class="normal"><a href="#__codelineno-22-44">44</a></span>
+<span class="normal"><a href="#__codelineno-22-45">45</a></span>
+<span class="normal"><a href="#__codelineno-22-46">46</a></span>
+<span class="normal"><a href="#__codelineno-22-47">47</a></span>
+<span class="normal"><a href="#__codelineno-22-48">48</a></span>
+<span class="normal"><a href="#__codelineno-22-49">49</a></span>
+<span class="normal"><a href="#__codelineno-22-50">50</a></span>
+<span class="normal"><a href="#__codelineno-22-51">51</a></span>
+<span class="normal"><a href="#__codelineno-22-52">52</a></span>
+<span class="normal"><a href="#__codelineno-22-53">53</a></span>
+<span class="normal"><a href="#__codelineno-22-54">54</a></span>
+<span class="normal"><a href="#__codelineno-22-55">55</a></span>
+<span class="normal"><a href="#__codelineno-22-56">56</a></span>
+<span class="normal"><a href="#__codelineno-22-57">57</a></span>
+<span class="normal"><a href="#__codelineno-22-58">58</a></span>
+<span class="normal"><a href="#__codelineno-22-59">59</a></span>
+<span class="normal"><a href="#__codelineno-22-60">60</a></span>
+<span class="normal"><a href="#__codelineno-22-61">61</a></span>
+<span class="normal"><a href="#__codelineno-22-62">62</a></span>
+<span class="normal"><a href="#__codelineno-22-63">63</a></span>
+<span class="normal"><a href="#__codelineno-22-64">64</a></span>
+<span class="normal"><a href="#__codelineno-22-65">65</a></span>
+<span class="normal"><a href="#__codelineno-22-66">66</a></span>
+<span class="normal"><a href="#__codelineno-22-67">67</a></span>
+<span class="normal"><a href="#__codelineno-22-68">68</a></span>
+<span class="normal"><a href="#__codelineno-22-69">69</a></span>
+<span class="normal"><a href="#__codelineno-22-70">70</a></span>
+<span class="normal"><a href="#__codelineno-22-71">71</a></span>
+<span class="normal"><a href="#__codelineno-22-72">72</a></span>
+<span class="normal"><a href="#__codelineno-22-73">73</a></span>
+<span class="normal"><a href="#__codelineno-22-74">74</a></span>
+<span class="normal"><a href="#__codelineno-22-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">  </span><span class="n">size</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"----- EXEMPLES DE MÈTODES SENSE VALOR DE RETORN -----"</span><span class="p">);</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">  </span><span class="c1">// Procediment sense paràmetres</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">  </span><span class="n">saluda</span><span class="p">();</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">  </span><span class="c1">// Procediment amb paràmetres</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">  </span><span class="n">dibuixaPunt</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"----- EXEMPLES DE MÈTODES AMB VALOR DE RETORN -----"</span><span class="p">);</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">  </span><span class="c1">// Funció sense paràmetres que retorna un valor</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreAleatori</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generaNumero</span><span class="p">();</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Nombre aleatori: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombreAleatori</span><span class="p">);</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a>
+<a id="__codelineno-22-18" name="__codelineno-22-18"></a><span class="w">  </span><span class="c1">// Funció amb paràmetres que retorna un valor</span>
+<a id="__codelineno-22-19" name="__codelineno-22-19"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumaDosNumeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-22-20" name="__codelineno-22-20"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Suma de 3 + 5 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
+<a id="__codelineno-22-21" name="__codelineno-22-21"></a>
+<a id="__codelineno-22-22" name="__codelineno-22-22"></a><span class="w">  </span><span class="c1">// Funció amb paràmetres que retorna un booleà</span>
+<a id="__codelineno-22-23" name="__codelineno-22-23"></a><span class="w">  </span><span class="kt">boolean</span><span class="w"> </span><span class="n">esMajor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esMajorEdat</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-22-24" name="__codelineno-22-24"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"És major d'edat? "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">esMajor</span><span class="p">);</span>
+<a id="__codelineno-22-25" name="__codelineno-22-25"></a>
+<a id="__codelineno-22-26" name="__codelineno-22-26"></a><span class="w">  </span><span class="c1">// Ús del valor retornat per prendre decisions</span>
+<a id="__codelineno-22-27" name="__codelineno-22-27"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esMajorEdat</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-28" name="__codelineno-22-28"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Pot entrar"</span><span class="p">);</span>
+<a id="__codelineno-22-29" name="__codelineno-22-29"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-30" name="__codelineno-22-30"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"No pot entrar"</span><span class="p">);</span>
+<a id="__codelineno-22-31" name="__codelineno-22-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-22-32" name="__codelineno-22-32"></a>
+<a id="__codelineno-22-33" name="__codelineno-22-33"></a><span class="w">  </span><span class="n">noLoop</span><span class="p">();</span>
+<a id="__codelineno-22-34" name="__codelineno-22-34"></a><span class="p">}</span>
+<a id="__codelineno-22-35" name="__codelineno-22-35"></a>
+<a id="__codelineno-22-36" name="__codelineno-22-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-37" name="__codelineno-22-37"></a><span class="w">  </span><span class="c1">// No fem servir draw en aquest exemple</span>
+<a id="__codelineno-22-38" name="__codelineno-22-38"></a><span class="p">}</span>
+<a id="__codelineno-22-39" name="__codelineno-22-39"></a>
+<a id="__codelineno-22-40" name="__codelineno-22-40"></a><span class="cm">/*-------------------------------------------------</span>
+<a id="__codelineno-22-41" name="__codelineno-22-41"></a><span class="cm"> PROCEDIMENTS (Mètodes que no retornen valor)</span>
+<a id="__codelineno-22-42" name="__codelineno-22-42"></a><span class="cm">-------------------------------------------------*/</span>
+<a id="__codelineno-22-43" name="__codelineno-22-43"></a>
+<a id="__codelineno-22-44" name="__codelineno-22-44"></a><span class="c1">// Procediment sense paràmetres</span>
+<a id="__codelineno-22-45" name="__codelineno-22-45"></a><span class="kt">void</span><span class="w"> </span><span class="nf">saluda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-46" name="__codelineno-22-46"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"Hola! Açò és un procediment sense paràmetres."</span><span class="p">);</span>
+<a id="__codelineno-22-47" name="__codelineno-22-47"></a><span class="p">}</span>
+<a id="__codelineno-22-48" name="__codelineno-22-48"></a>
+<a id="__codelineno-22-49" name="__codelineno-22-49"></a><span class="c1">// Procediment amb paràmetres</span>
+<a id="__codelineno-22-50" name="__codelineno-22-50"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaPunt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-51" name="__codelineno-22-51"></a><span class="w">  </span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-22-52" name="__codelineno-22-52"></a><span class="w">  </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-22-53" name="__codelineno-22-53"></a><span class="w">  </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-22-54" name="__codelineno-22-54"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="s">"He dibuixat un punt en ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">", "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">")"</span><span class="p">);</span>
+<a id="__codelineno-22-55" name="__codelineno-22-55"></a><span class="p">}</span>
+<a id="__codelineno-22-56" name="__codelineno-22-56"></a>
+<a id="__codelineno-22-57" name="__codelineno-22-57"></a><span class="cm">/*-------------------------------------------------</span>
+<a id="__codelineno-22-58" name="__codelineno-22-58"></a><span class="cm"> FUNCIONS (Mètodes que retornen un valor)</span>
+<a id="__codelineno-22-59" name="__codelineno-22-59"></a><span class="cm">-------------------------------------------------*/</span>
+<a id="__codelineno-22-60" name="__codelineno-22-60"></a>
+<a id="__codelineno-22-61" name="__codelineno-22-61"></a><span class="c1">// Funció sense paràmetres</span>
+<a id="__codelineno-22-62" name="__codelineno-22-62"></a><span class="kt">int</span><span class="w"> </span><span class="nf">generaNumero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-63" name="__codelineno-22-63"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">));</span><span class="w"> </span><span class="c1">// Retorna un número entre 1 i 10</span>
+<a id="__codelineno-22-64" name="__codelineno-22-64"></a><span class="p">}</span>
+<a id="__codelineno-22-65" name="__codelineno-22-65"></a>
+<a id="__codelineno-22-66" name="__codelineno-22-66"></a><span class="c1">// Funció amb paràmetres</span>
+<a id="__codelineno-22-67" name="__codelineno-22-67"></a><span class="kt">int</span><span class="w"> </span><span class="nf">sumaDosNumeros</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-68" name="__codelineno-22-68"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-22-69" name="__codelineno-22-69"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
+<a id="__codelineno-22-70" name="__codelineno-22-70"></a><span class="p">}</span>
+<a id="__codelineno-22-71" name="__codelineno-22-71"></a>
+<a id="__codelineno-22-72" name="__codelineno-22-72"></a><span class="c1">// Funció amb paràmetres que retorna un booleà</span>
+<a id="__codelineno-22-73" name="__codelineno-22-73"></a><span class="kt">boolean</span><span class="w"> </span><span class="nf">esMajorEdat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-74" name="__codelineno-22-74"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<a id="__codelineno-22-75" name="__codelineno-22-75"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En Java, tots aquests blocs són mètodes. Segons el valor que retornen, podem distingir entre:
+- Mètodes sense valor de retorn: utilitzen void i no retornen cap resultat. Tradicionalment, també s'anomenen procediments.
+- Mètodes amb valor de retorn: indiquen el tipus de dada que retornen (int, boolean, float, String, etc.) i utilitzen return per proporcionar el resultat. Tradicionalment, també s'anomenen funcions.</p>
+<p>El valor retornat es pot guardar en una variable, utilitzar en una expressió o emprar directament en una condició.</p>
 <details class="question">
-<summary>Activitat 610. Revisa conceptes</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><input id="__tabbed_10_3" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Problema</label><label for="__tabbed_10_2">Rúbrica</label><label for="__tabbed_10_3">Solució</label></div>
+<summary>Activitat 610. Analitza els mètodes</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><input id="__tabbed_10_3" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">Enunciat</label><label for="__tabbed_10_2">Rúbrica</label><label for="__tabbed_10_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>És el moment de revisar tots els conceptes vistos fins ara que no són pocs. Revisa el codi anterior i respon a les següents qüestions:</p>
 <ol>
 <li>Quants mètodes hi han al codi? (draw i setup no compten)</li>
-<li>Quin identificador tenen?</li>
-<li>Escriu el prototip (interfície) de cadascun dels mètodes que has trobat.</li>
-<li>Per a cada mètode respon: quants paràmetres tenen? Quin és el nom dels paràmetres i el tipus?</li>
-<li>Quins dels mètodes que has trobat són funcions i quins procediments? Raona la resposta.</li>
-<li>Reescriu la classificació anterior en forma de taula, indicant per a cada mètode:</li>
-<li>Identificador, funcion o procediment i retorn.</li>
+<li>Identifica el nom de cadascun tenen?</li>
+<li>Escriu la declaració de cada mètode, indicant-ne el tipus de retorn, el nom i els paràmetres.</li>
+<li>Classifica cada mètode segon si retorna valor o no.</li>
+<li>Completa una taula com aquesta:</li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Tipus de retorn</th>
+<th>Paràmetres</th>
+<th>Classificació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**</td>
+<td>**</td>
+<td>**</td>
+<td>**</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quants mètodes hi ha al codi?</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+<tr>
+<td>Quin identificador tenen?</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+<tr>
+<td>Escriu el prototip o interfície</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+<tr>
+<td>Quants paràmetres tenen els mètodes? Quin identificador tenen? Quin tipus són?</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+<tr>
+<td>Quins són funcions i quins procediments</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+<tr>
+<td>Classificació</td>
+<td>Perfecte</td>
+<td>Imprecís</td>
+<td>Parcial</td>
+<td>Incorrecte</td>
+<td>No respon</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1518,22 +2267,83 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 611. Paràmetres coordenades</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><input id="__tabbed_11_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Problema</label><label for="__tabbed_11_2">Rúbrica</label><label for="__tabbed_11_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><input id="__tabbed_11_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">Enunciat</label><label for="__tabbed_11_2">Rúbrica</label><label for="__tabbed_11_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Modifica el codi de l'activitat 505 per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dues funcions: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenades x i y i a partir d'aquestes ha de dibuixar els ulls i la boca on corresponga.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span>
-<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="w">    </span><span class="c1">// Prototips de les funcions</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaCara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaUlls</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoca</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<p>Modifica el codi de l'activitat 605 per tal que tant el codi que dibuixa els ulls com el codi que dibuixa la boca, estiguen en dos mètodes: dibuixaUlls i dibuixaBoca. A aquestes funcions se'ls passarà com a paràmetres les coordenades x i y i a partir d'aquestos ha de dibuixar els ulls i la boca on corresponga.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="w">    </span><span class="c1">// Prototips de les funcions</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaCara</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaUlls</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaBoca</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Important:</strong> Les funcions no han de dependre de variables globals i aquestes s'haurien d'eliminar.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l'enunciat</td>
+<td>El codi està correctament modularitzat amb dibuixaUlls(x,y) i dibuixaBoca(x,y) i funciona com s’espera.</td>
+<td>El codi funciona però falta algun detall menor de modularització o precisió.</td>
+<td>Només una part està correctament modularitzada.</td>
+<td>La modularització és incorrecta o incompleta.</td>
+<td>No compleix l’enunciat.</td>
+</tr>
+<tr>
+<td>Ús correcte de paràmetres i arguments</td>
+<td>Les funcions utilitzen correctament els paràmetres x i y per calcular totes les coordenades de manera relativa.</td>
+<td>Ús correcte dels paràmetres però amb alguna coordenada fixa o poc general.</td>
+<td>Els paràmetres s’usen parcialment; encara hi ha dependències implícites.</td>
+<td>Els paràmetres quasi no s’usen o s’usen malament.</td>
+<td>No hi ha ús real de paràmetres.</td>
+</tr>
+<tr>
+<td>Independència de les funcions (no ús de variables globals)</td>
+<td>Les funcions són totalment independents i no depenen de cap variable global.</td>
+<td>Hi ha alguna dependència menor però el funcionament és correcte.</td>
+<td>Dependència clara de variables globals.</td>
+<td>Les funcions no poden funcionar sense globals.</td>
+<td>No s’han creat funcions independents.</td>
+</tr>
+<tr>
+<td>Organització i modularització del codi</td>
+<td>Codi ben estructurat: draw() només crida mètodes, responsabilitats ben separades.</td>
+<td>Bona estructura però amb alguna responsabilitat mal situada.</td>
+<td>Modularització millorable o confusa.</td>
+<td>Codi desorganitzat.</td>
+<td>No hi ha cap estructura modular clara.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació</td>
+<td>Comentaris clars que expliquen què fa cada funció i com usa les coordenades.</td>
+<td>Comentaris correctes però incomplets.</td>
+<td>Pocs comentaris o poc útils.</td>
+<td>Comentaris molt pobres.</td>
+<td>No hi ha comentaris.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Identació impecable, noms clars, codi net i llegible.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular i clarament millorable.</td>
+<td>Codi desordenat o difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1543,82 +2353,144 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 612. Dibuixar cares - Ampliació</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><input id="__tabbed_12_3" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Problema</label><label for="__tabbed_12_2">Rúbrica</label><label for="__tabbed_12_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><input id="__tabbed_12_3" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">Enunciat</label><label for="__tabbed_12_2">Rúbrica</label><label for="__tabbed_12_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Amplia el codi anterior per tal que mostre el següent dibuix. Observa com ha de quedar el codi de la funció draw</p>
+<p>Amplia el programa anterior per a dibuixar les tres cares que es mostren en la imatge. Cada cara tindrà una forma exterior diferent, però compartirà els mateixos mètodes per a dibuixar els ulls i la boca.</p>
+<p>Modifica el programa perquè draw() s'encarregue de coordinar el dibuix de les tres cares, cridant els mètodes corresponents i passant-los les coordenades de cada cara.</p>
 <p><center><img alt="Activitat 512" src="assets/Tema5/Activitat512.png"/></center></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-18-10">10</a></span>
-<span class="normal"><a href="#__codelineno-18-11">11</a></span>
-<span class="normal"><a href="#__codelineno-18-12">12</a></span>
-<span class="normal"><a href="#__codelineno-18-13">13</a></span>
-<span class="normal"><a href="#__codelineno-18-14">14</a></span>
-<span class="normal"><a href="#__codelineno-18-15">15</a></span>
-<span class="normal"><a href="#__codelineno-18-16">16</a></span>
-<span class="normal"><a href="#__codelineno-18-17">17</a></span>
-<span class="normal"><a href="#__codelineno-18-18">18</a></span>
-<span class="normal"><a href="#__codelineno-18-19">19</a></span>
-<span class="normal"><a href="#__codelineno-18-20">20</a></span>
-<span class="normal"><a href="#__codelineno-18-21">21</a></span>
-<span class="normal"><a href="#__codelineno-18-22">22</a></span>
-<span class="normal"><a href="#__codelineno-18-23">23</a></span>
-<span class="normal"><a href="#__codelineno-18-24">24</a></span>
-<span class="normal"><a href="#__codelineno-18-25">25</a></span>
-<span class="normal"><a href="#__codelineno-18-26">26</a></span>
-<span class="normal"><a href="#__codelineno-18-27">27</a></span>
-<span class="normal"><a href="#__codelineno-18-28">28</a></span>
-<span class="normal"><a href="#__codelineno-18-29">29</a></span>
-<span class="normal"><a href="#__codelineno-18-30">30</a></span>
-<span class="normal"><a href="#__codelineno-18-31">31</a></span>
-<span class="normal"><a href="#__codelineno-18-32">32</a></span>
-<span class="normal"><a href="#__codelineno-18-33">33</a></span>
-<span class="normal"><a href="#__codelineno-18-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">}</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cercleX</span><span class="p">,</span><span class="w"> </span><span class="n">cercleY</span><span class="p">,</span><span class="w"> </span><span class="n">triangleX</span><span class="p">,</span><span class="w"> </span><span class="n">triangleY</span><span class="p">,</span><span class="w"> </span><span class="n">quadratX</span><span class="p">,</span><span class="w"> </span><span class="n">quadratY</span><span class="p">;</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">    </span><span class="c1">// Coordenades del cercle</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">    </span><span class="n">cercleX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
-<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">    </span><span class="n">cercleY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
-<a id="__codelineno-18-11" name="__codelineno-18-11"></a>
-<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">    </span><span class="c1">// Coordenades del primer punt del triangle</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">    </span><span class="n">triangleX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span>
-<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">    </span><span class="n">triangleY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
-<a id="__codelineno-18-15" name="__codelineno-18-15"></a>
-<a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="w">    </span><span class="c1">// Coordenades del quadrat</span>
-<a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">    </span><span class="n">quadratX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">470</span><span class="p">;</span>
-<a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">    </span><span class="n">quadratY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
-<a id="__codelineno-18-19" name="__codelineno-18-19"></a>
-<a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el cercle</span>
-<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a cercleX i cercleY ací</span>
-<a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
-<a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
-<a id="__codelineno-18-24" name="__codelineno-18-24"></a>
-<a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el triangle</span>
-<a id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a triangleX i triangleY ací</span>
-<a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
-<a id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
-<a id="__codelineno-18-29" name="__codelineno-18-29"></a>
-<a id="__codelineno-18-30" name="__codelineno-18-30"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el quadrat</span>
-<a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a quadratX i quadratY ací</span>
-<a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
-<a id="__codelineno-18-33" name="__codelineno-18-33"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
-<a id="__codelineno-18-34" name="__codelineno-18-34"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span>
+<span class="normal"><a href="#__codelineno-24-25">25</a></span>
+<span class="normal"><a href="#__codelineno-24-26">26</a></span>
+<span class="normal"><a href="#__codelineno-24-27">27</a></span>
+<span class="normal"><a href="#__codelineno-24-28">28</a></span>
+<span class="normal"><a href="#__codelineno-24-29">29</a></span>
+<span class="normal"><a href="#__codelineno-24-30">30</a></span>
+<span class="normal"><a href="#__codelineno-24-31">31</a></span>
+<span class="normal"><a href="#__codelineno-24-32">32</a></span>
+<span class="normal"><a href="#__codelineno-24-33">33</a></span>
+<span class="normal"><a href="#__codelineno-24-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="p">}</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="n">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cercleX</span><span class="p">,</span><span class="w"> </span><span class="n">cercleY</span><span class="p">,</span><span class="w"> </span><span class="n">triangleX</span><span class="p">,</span><span class="w"> </span><span class="n">triangleY</span><span class="p">,</span><span class="w"> </span><span class="n">quadratX</span><span class="p">,</span><span class="w"> </span><span class="n">quadratY</span><span class="p">;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">    </span><span class="c1">// Coordenades del cercle</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="n">cercleX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">    </span><span class="n">cercleY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">    </span><span class="c1">// Coordenades del primer punt del triangle</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">    </span><span class="n">triangleX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">    </span><span class="n">triangleY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">    </span><span class="c1">// Coordenades del quadrat</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="w">    </span><span class="n">quadratX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">470</span><span class="p">;</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">    </span><span class="n">quadratY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el cercle</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a cercleX i cercleY ací</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">cercleX</span><span class="p">,</span><span class="n">cercleY</span><span class="p">);</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a>
+<a id="__codelineno-24-25" name="__codelineno-24-25"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el triangle</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a triangleX i triangleY ací</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">triangleX</span><span class="p">,</span><span class="n">triangleY</span><span class="p">);</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29"></a>
+<a id="__codelineno-24-30" name="__codelineno-24-30"></a><span class="w">    </span><span class="c1">// Codi per dibuixar el quadrat</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31"></a><span class="w">    </span><span class="c1">// Escriu el codi necessari per dibuixar el cercle a quadratX i quadratY ací</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32"></a><span class="w">    </span><span class="n">dibuixaUlls</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33"></a><span class="w">    </span><span class="n">dibuixaBoca</span><span class="p">(</span><span class="n">quadratX</span><span class="p">,</span><span class="n">quadratY</span><span class="p">);</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l'enunciat</td>
+<td>Es dibuixen correctament les tres cares: cercle groc, triangle morat i quadrat blau, amb ulls i boca.</td>
+<td>Es dibuixen totes les cares però amb algun detall incorrecte (forma, color o posició).</td>
+<td>Només es dibuixen correctament una o dues cares.</td>
+<td>El resultat no s’ajusta clarament a l’enunciat.</td>
+<td>No compleix l’enunciat.</td>
+</tr>
+<tr>
+<td>Definició i ús correcte de funcions</td>
+<td>Les funcions dibuixaUlls, dibuixaBoca, dibuixaCercle, dibuixaTriangle i dibuixaQuadrat estan ben definides i s’utilitzen correctament.</td>
+<td>Totes les funcions existeixen però alguna és millorable o massa específica.</td>
+<td>Falten funcions o hi ha codi duplicat.</td>
+<td>Modularització molt deficient.</td>
+<td>No hi ha ús real de funcions.</td>
+</tr>
+<tr>
+<td>Ús correcte de paràmetres (coordenades)</td>
+<td>Totes les funcions treballen amb coordenades passades per paràmetre de manera relativa.</td>
+<td>Ús correcte dels paràmetres però amb algun valor fix innecessari.</td>
+<td>Dependència parcial de variables globals.</td>
+<td>Ús incorrecte dels paràmetres.</td>
+<td>No es fan servir paràmetres de manera efectiva.</td>
+</tr>
+<tr>
+<td>Reutilització i coherència del codi</td>
+<td>Les funcions d’ulls i boca s’utilitzen de manera coherent per a totes les cares.</td>
+<td>Reutilització correcta però amb algun detall redundant.</td>
+<td>Reutilització limitada o inconsistent.</td>
+<td>Poc o cap reaprofitar del codi.</td>
+<td>Tot el codi està duplicat.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació</td>
+<td>Comentaris clars que expliquen què fa cada funció i com usa les coordenades.</td>
+<td>Comentaris correctes però incomplets.</td>
+<td>Pocs comentaris o poc útils.</td>
+<td>Comentaris molt pobres.</td>
+<td>No hi ha comentaris.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Identació impecable, noms clars, codi net i llegible.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular i clarament millorable.</td>
+<td>Codi desordenat o difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1628,35 +2500,96 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 613. Dibuixar peça domino</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><input id="__tabbed_13_3" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Problema</label><label for="__tabbed_13_2">Rúbrica</label><label for="__tabbed_13_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><input id="__tabbed_13_3" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">Enunciat</label><label for="__tabbed_13_2">Rúbrica</label><label for="__tabbed_13_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Emplena el codi de la funció dibuixaDomino(int,int) per tal que mostre la imatge següent.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-19-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="p">}</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="n">dibuixaDomino</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="p">}</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7"></a>
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaDomino</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
-<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">    </span><span class="c1">// Codi per dibuixar la peça de dominó amb la puntuació que es passa per paràmetre.</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="p">}</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="n">dibuixaDomino</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="p">}</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">dibuixaDomino</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">    </span><span class="c1">// Codi per dibuixar la peça de dominó amb la puntuació que es passa per paràmetre.</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><center><img alt="Activitat 8" src="assets/Tema5/Activitat513.png"/></center></p>
-<p><strong>Restricció:</strong> T'has obligar a utilitzar bucles per a dibuixar els punts.</p>
+<p><strong>Restricció:</strong> has d'utilitzar bucles per a dibuixar els punts de cada meitat de la peça. No pots dibuixar cada punt mitjançant una crida independent a ellipse().</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Implementació funcional del dominó</td>
+<td>La fitxa de dominó es dibuixa correctament: dos quadres diferenciats, separació clara i nombre de punts exacte segons a i b.</td>
+<td>El dominó es dibuixa quasi correctament, amb algun detall visual menor (alineació, proporció, separació).</td>
+<td>Es reconeix la fitxa però hi ha errors clars en la distribució o nombre de punts.</td>
+<td>El dibuix és incomplet o no representa una fitxa de dominó funcional.</td>
+<td>No es dibuixa el dominó o el codi no funciona.</td>
+</tr>
+<tr>
+<td>Ús correcte de paràmetres</td>
+<td>Els valors a i b s’utilitzen correctament per determinar els punts del quadre superior i inferior.</td>
+<td>Els paràmetres s’utilitzen però amb alguna confusió menor.</td>
+<td>Només s’utilitza correctament un dels paràmetres.</td>
+<td>Els paràmetres quasi no s’utilitzen o s’ignoren.</td>
+<td>No s’utilitzen els paràmetres.</td>
+</tr>
+<tr>
+<td>Ús obligatori de bucles</td>
+<td>S’utilitzen bucles de manera clara i correcta per dibuixar tots els punts del dominó.</td>
+<td>S’utilitzen bucles però amb algun ús redundant o millorable.</td>
+<td>Ús parcial de bucles (alguns punts amb codi repetit).</td>
+<td>Ús mínim o inadequat de bucles.</td>
+<td>No s’utilitzen bucles (incompliment de la restricció).</td>
+</tr>
+<tr>
+<td>Organització i modularització del codi</td>
+<td>Tot el codi de dibuix està correctament encapsulat dins de dibuixaDomino.</td>
+<td>Lleugera dispersió del codi, però estructura clara.</td>
+<td>Part del codi està fora del mètode sense justificació.</td>
+<td>Mala organització del codi.</td>
+<td>No es respecta l’estructura modular.</td>
+</tr>
+<tr>
+<td>Comentaris i documentació</td>
+<td>Comentaris clars que expliquen què fa cada funció i com usa les coordenades.</td>
+<td>Comentaris correctes però incomplets.</td>
+<td>Pocs comentaris o poc útils.</td>
+<td>Comentaris molt pobres.</td>
+<td>No hi ha comentaris.</td>
+</tr>
+<tr>
+<td>Estil i qualitat del codi</td>
+<td>Identació impecable, noms clars, codi net i llegible.</td>
+<td>Algunes errades menors d’estil.</td>
+<td>Estil irregular i clarament millorable.</td>
+<td>Codi desordenat o difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1666,7 +2599,7 @@ Aquest codi mostra el següent dibuix</p>
 </details>
 <details class="question">
 <summary>Activitat 614. Dibuixar peça dominó parametritzada</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><input id="__tabbed_14_3" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Problema</label><label for="__tabbed_14_2">Rúbrica</label><label for="__tabbed_14_3">Solució</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><input id="__tabbed_14_3" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">Enunciat</label><label for="__tabbed_14_2">Rúbrica</label><label for="__tabbed_14_3">Solució</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Què passa si en lloc de 5 i 4 passarem 6 i 6 per paràmetre? Dibuixa el que esperes que dibuixe? </p>
@@ -1674,7 +2607,68 @@ Aquest codi mostra el següent dibuix</p>
 <p><strong>Ampliació:</strong> fes que el teu algorisme mostre totes les peces del dominó ordenades en files i columnes.</p>
 </div>
 <div class="tabbed-block">
-<p>Encara no disponible</p>
+<table>
+<thead>
+<tr>
+<th>Ítem d'avaluació</th>
+<th>4 - Excel·lent</th>
+<th>3 - Correcte</th>
+<th>2 - Parcial</th>
+<th>1 - Incorrecte</th>
+<th>0 - Inexistent o incoherent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliment de l'enunciat</td>
+<td>El programa dibuixa totes les peces del dominó correctament, ordenades i sense repeticions.</td>
+<td>Es dibuixen quasi totes les peces o hi ha algun petit error d’ordre.</td>
+<td>Es dibuixen algunes peces però no totes.</td>
+<td>Modularització molt pobra o artificial.</td>
+<td>No compleix l’enunciat.</td>
+</tr>
+<tr>
+<td>Modularització del codi</td>
+<td>Codi clarament modularitzat: funcions ben definides, reutilitzables i amb responsabilitats clares.</td>
+<td>Bona modularització, però amb alguna funció massa gran o amb codi duplicat.</td>
+<td>Modularització parcial o poc clara.</td>
+<td>Els paràmetres quasi no s’utilitzen o s’ignoren.</td>
+<td>No hi ha modularització.</td>
+</tr>
+<tr>
+<td>Ús de paràmetres i generalització</td>
+<td>Les funcions són totalment parametritzades i independents de valors concrets.</td>
+<td>Parametrització correcta però amb alguna dependència innecessària.</td>
+<td>Paràmetres mal utilitzats o poc generals.</td>
+<td>Ús testimonial dels paràmetres.</td>
+<td>No s’utilitzen paràmetres correctament.</td>
+</tr>
+<tr>
+<td>Ús d’estructures de control</td>
+<td>Ús correcte i eficient de bucles per generar totes les peces.</td>
+<td>Bucles correctes però amb alguna redundància.</td>
+<td>Ús limitat o confús dels bucles.</td>
+<td>Bucles incorrectes.</td>
+<td>No s’utilitzen bucles.</td>
+</tr>
+<tr>
+<td>Organització visual i disposició en pantalla</td>
+<td>Peces ben alineades en files i columnes, amb espaiat coherent.</td>
+<td>Disposició correcta però millorable.</td>
+<td>Disposició poc clara.</td>
+<td>Peces solapades o mal distribuïdes.</td>
+<td>No hi ha una disposició coherent.</td>
+</tr>
+<tr>
+<td>Estil, comentaris i qualitat del codi</td>
+<td>Identació impecable, bons noms d’identificadors i comentaris útils.</td>
+<td>Codi llegible amb algun detall d’estil millorable.</td>
+<td>Estil inconsistent o comentaris escassos.</td>
+<td>Codi difícil de llegir.</td>
+<td>No segueix cap convenció.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tabbed-block">
 <p>Encara no disponible</p>
@@ -1682,109 +2676,19 @@ Aquest codi mostra el següent dibuix</p>
 </div>
 </div>
 </details>
-<h2 id="pas-dobjectes-a-funcions">Pas d'objectes a funcions</h2>
-<p>Quan passem un <strong>tipus primitiu</strong> a una funció, es passa <strong>per valor</strong>. Però quan vam passar <strong>un objecte</strong> a una funció, la situació canvia dràsticament, perquè els objectes es passen <strong>per referència</strong>. Java fa aquesta cosa interessant que és una classe d'híbrid entre passar per valor i passar per referència.</p>
-<p>A l'crear una variable d'un tipus de classe <strong>(un objecte)</strong>, només varem crear una referència a un objecte. Per tant, quan passem aquesta referència a un mètode, el paràmetre que el rep es referirà a el mateix objecte que el referit per l'argument.</p>
-<p>Això vol dir efectivament que els objectes actuen com si es passessin als mètodes mitjançant l'ús del <strong>pas per referència.</strong></p>
-<p><strong>IMPORTANT:</strong> Els canvis en l'objecte dins el mètode es reflecteixen en l'objecte utilitzat com a argument.</p>
-<p>Però vejam un exemple per tal que quede més clar:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-20-10">10</a></span>
-<span class="normal"><a href="#__codelineno-20-11">11</a></span>
-<span class="normal"><a href="#__codelineno-20-12">12</a></span>
-<span class="normal"><a href="#__codelineno-20-13">13</a></span>
-<span class="normal"><a href="#__codelineno-20-14">14</a></span>
-<span class="normal"><a href="#__codelineno-20-15">15</a></span>
-<span class="normal"><a href="#__codelineno-20-16">16</a></span>
-<span class="normal"><a href="#__codelineno-20-17">17</a></span>
-<span class="normal"><a href="#__codelineno-20-18">18</a></span>
-<span class="normal"><a href="#__codelineno-20-19">19</a></span>
-<span class="normal"><a href="#__codelineno-20-20">20</a></span>
-<span class="normal"><a href="#__codelineno-20-21">21</a></span>
-<span class="normal"><a href="#__codelineno-20-22">22</a></span>
-<span class="normal"><a href="#__codelineno-20-23">23</a></span>
-<span class="normal"><a href="#__codelineno-20-24">24</a></span>
-<span class="normal"><a href="#__codelineno-20-25">25</a></span>
-<span class="normal"><a href="#__codelineno-20-26">26</a></span>
-<span class="normal"><a href="#__codelineno-20-27">27</a></span>
-<span class="normal"><a href="#__codelineno-20-28">28</a></span>
-<span class="normal"><a href="#__codelineno-20-29">29</a></span>
-<span class="normal"><a href="#__codelineno-20-30">30</a></span>
-<span class="normal"><a href="#__codelineno-20-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">// Programa Java per demostrar el pas d'objectes a funcions</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="n">size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">);</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="p">}</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">22</span><span class="p">);</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">22</span><span class="p">);</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="n">ob3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11"></a>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob1==ob2: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"ob1==ob3: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="p">}</span>
-<a id="__codelineno-20-16" name="__codelineno-20-16"></a>
-<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="w">    </span>
-<a id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="w">    </span><span class="c1">// Constructor de la classe</span>
-<a id="__codelineno-20-22" name="__codelineno-20-22"></a><span class="w">    </span><span class="n">Demo</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-23" name="__codelineno-20-23"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<a id="__codelineno-20-24" name="__codelineno-20-24"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
-<a id="__codelineno-20-25" name="__codelineno-20-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-26" name="__codelineno-20-26"></a>
-<a id="__codelineno-20-27" name="__codelineno-20-27"></a><span class="w">    </span><span class="c1">// Torna true si els valors són els mateixos</span>
-<a id="__codelineno-20-28" name="__codelineno-20-28"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equalTo</span><span class="p">(</span><span class="n">Demo</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-29" name="__codelineno-20-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">b</span><span class="p">);</span>
-<a id="__codelineno-20-30" name="__codelineno-20-30"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-31" name="__codelineno-20-31"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Eixida</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
-<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">obj1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj2</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">obj1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj3</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-</code></pre></div></td></tr></table></div>
-<p>Explicació en imatges:</p>
-<p><strong>1.Primer:</strong> S'instancien els tres objectes ob1, ob2 i ob3.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
-<span class="normal"><a href="#__codelineno-22-2">2</a></span>
-<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">Demo</span><span class="w"> </span><span class="n">ob3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-<center>![Pas 1](assets/Tema5/Explicacio1.png)</center>
-<p><strong>2. Segon:</strong> En la funció <strong>equalTo</strong>, es declara una referència de classe Demo amb un objecte <strong>obj</strong> i s'assigna inicialment <strong>null</strong>. </p>
-<center>![Pas 2](assets/Tema5/Explicacio2.png)</center>
-<p><strong>3. Tercer:</strong> En la primera crida al mètode <strong>equalTo</strong> (ob1.equalTo(ob2)), al paràmetre obj del prototip del mètode, se li passa l'argument <strong>'ob2'</strong>, és a dir, 'obj' passa a ser una referència a 'ob2' quan la següent sentència s'execute.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob2: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob2</span><span class="p">));</span>
-</code></pre></div></td></tr></table></div>
-<center>![Pas 3](assets/Tema5/Explicacio3.png)</center>
-<p><strong>4. Quart:</strong> Ara com podem observar, es crida al mètode equalTo sobre 'ob1' i 'obj' fa referència a 'ob2'. Donat que els valors 'a' i 'b' són els mateixos per ambdues referències, aleshores si la condició és veritat, tornarà <strong>true</strong>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">if</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p><strong>5. Cinquè:</strong> De nou 'obj' es reassignarà a 'ob3' quan s'executa la següent sentència com s'ha fet al pas tercer.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ob1 == ob3: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob1</span><span class="p">.</span><span class="na">equalTo</span><span class="p">(</span><span class="n">ob3</span><span class="p">));</span>
-</code></pre></div></td></tr></table></div>
-<center>![Pas 4](assets/Tema5/Explicacio4.png)</center>
-<p><strong>6. Sisè:</strong> Ara, com podem observar, el mètode equalTo es crida en 'ob1', i 'obj' fa referència a 'ob3'. Com que els valors 'a' i 'b' no són els mateixos per a les dues referències, aleshores torna false.</p>
 <h2 id="recursivitat">Recursivitat</h2>
 <div class="admonition info">
 <p class="admonition-title">Definició</p>
-<p>En general, la recursivitat és el procés de definir alguna cosa en termes de si mateix i és una cosa semblant a una definició circular. El component clau d'un mètode recursiu és una declaració que executa una crida a si mateix. La recursivitat és un poderós mecanisme de control.</p>
-</div>
+<p>La recursivitat és una tècnica de programació en què un mètode es crida a si mateix per a resoldre un problema.</p>
+<p>Perquè un mètode recursiu funcione correctament, necessita dos elements:</p>
+<ul>
+<li>Condició de base: determina quan ha d'acabar la recursivitat. En aquest cas, el mètode retorna un resultat sense tornar-se a cridar.</li>
+<li>Crida recursiva: el mètode es torna a cridar amb uns arguments que apropen el problema a la condició de base.</li>
+</ul>
+<p>Si no s'arriba mai a la condició de base, les crides poden continuar fins que es produïsca un desbordament de la pila (Stack Overflow).</p>
 <p>L'exemple clàssic de recursivitat és el càlcul del <strong>factorial</strong> d'un nombre. El factorial d'un nombre N és el producte de tots els nombres enters que es troben entre 1 i N. Per exemple, el factorial de 3 és 1 × 2 × 3, és a dir, és de 6.</p>
 <p>El següent programa mostra una forma recursiva de calcular el factorial d'un nombre. Per a propòsits de comparació, també s'inclou un equivalent no recursiu (iteratiu).</p>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
@@ -1840,10 +2744,10 @@ Aquest codi mostra el següent dibuix</p>
 <a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="kt">int</span><span class="w"> </span><span class="nf">factorialRecursiu</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <a id="__codelineno-26-19" name="__codelineno-26-19"></a>
-<a id="__codelineno-26-20" name="__codelineno-26-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-26-20" name="__codelineno-26-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
 <a id="__codelineno-26-21" name="__codelineno-26-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <a id="__codelineno-26-22" name="__codelineno-26-22"></a>
-<a id="__codelineno-26-23" name="__codelineno-26-23"></a><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-26-23" name="__codelineno-26-23"></a><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorialRecursiu</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
 <a id="__codelineno-26-24" name="__codelineno-26-24"></a>
 <a id="__codelineno-26-25" name="__codelineno-26-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <a id="__codelineno-26-26" name="__codelineno-26-26"></a>
@@ -1876,10 +2780,14 @@ Aquest codi mostra el següent dibuix</p>
 </code></pre></div></td></tr></table></div>
 <div class="admonition danger">
 <p class="admonition-title">Stack Overflow</p>
-<p>Les versions recursives de moltes rutines poden executar-se una mica més lentament que els seus equivalents iteratius causa de la sobrecàrrega addicional de les trucades a mètodes addicionals. Massa crides recursives a un mètode podrien causar un desbordament de la pila.</p>
+<p>Cada vegada que un mètode es crida, es reserva un espai en la pila d'execució per a guardar informació de la crida, com ara els paràmetres i les variables locals.</p>
+<p>En un mètode recursiu, cada nova crida necessita un nou espai en aquesta pila. Si es fan massa crides sense arribar a la condició de base, la pila pot esgotar la capacitat disponible i Java provocarà un error anomenat StackOverflowError.</p>
+<p>Per això, és fonamental que tot mètode recursiu tinga una condició de base i que cada crida recursiva avance cap a aquesta condició.</p>
 </div>
 <p>Com l'emmagatzematge per als paràmetres i les variables locals està a la pila i cada trucada nova crea una nova còpia d'aquestes variables, és possible que <strong>la pila s'acabe esgotant</strong>. Si això passa, el sistema de temps d'execució (run-time) de Java causarà una <strong>excepció</strong>. No obstant això, probablement no hauràs de preocupar-te per això a menys que una rutina recursiva es torne boja.</p>
-<p>El <strong>principal avantatge</strong> de la recursivitat és que alguns tipus d'algoritmes es poden implementar de forma més clara i més recursiva del que poden ser iterativament. Per exemple, l'algorisme de classificació Quicksort és bastant difícil d'implementar de manera iterativa. A més, alguns problemes, especialment els relacionats amb la IA, semblen prestar-se a solucions recursives.</p>
+<h3 id="avantatges-de-la-recursivitat">Avantatges de la recursivitat</h3>
+<p>La recursivitat permet expressar alguns algorismes d'una manera més clara i natural. És especialment útil quan un problema es pot dividir en problemes més menuts de la mateixa naturalesa.</p>
+<p>No obstant això, la recursivitat no sempre és la millor solució. En alguns casos, una versió iterativa pot ser més eficient i consumir menys memòria, ja que no necessita acumular tantes crides a la pila.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
 <span class="normal"><a href="#__codelineno-28-3">3</a></span>
@@ -1896,7 +2804,8 @@ Aquest codi mostra el següent dibuix</p>
 <a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 <a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>En l'exemple anterior: Si es diu a fact (10), cridarà a fact(9), fact(8), fact(7), etc., però el nombre mai arribarà a 100. Per tant, no s'assoleix la condició base. Si la memòria s'esgota amb aquests mètodes en la pila, provocarà un error de <strong>desbordament de pila</strong>.</p>
+<p>Si cridem fact(10), les crides successives seran fact(9), fact(8), fact(7)... El valor de n cada vegada és més menut, de manera que mai arribarà a 100.</p>
+<p>Com que no s'assoleix la condició de base, el mètode continuarà fent crides recursives fins que s'esgote la pila d'execució i es produïsca un StackOverflowError.</p>
 <h2 id="la-api-de-java">La API de Java</h2>
 <p>L'API Java és una interfície de programació d'aplicacions (API, per les seves sigles de l'anglès: Application Programming Interface) proveïda pels creadors de el llenguatge de programació Java, que dóna als programadors els mitjans per desenvolupar aplicacions Java.</p>
 <p>Com el llenguatge Java és un llenguatge orientat a objectes, l'API de Java proveeix d'un conjunt de classes utilitàries per a efectuar tota mena de tasques necessàries dins d'un programa.</p>

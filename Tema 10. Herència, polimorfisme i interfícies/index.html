@@ -8,9 +8,9 @@
 <link href="../Tema%2009.%20Gr%C3%A0fics.%20ControlP5/" rel="prev"/>
 <link href="../Tema%2011.%20Bases%20de%20dades%20relacionals/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
 <title>10.- Herència polimorfisme interfícies - PROGRAMACIÓ 1DAW</title>
-<link href="../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -463,7 +463,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 <p>En Java tenim la possibilitat de fer protected <strong>(#)</strong> private <strong>(-)</strong> public <strong>(+)</strong> i package <strong>(~)</strong> ens determina la visibilitat dels membres d’una classe. Java considera que l’herència és sempre pública i que la classe derivada tindrà per tant accés als membres protected i public de la classe pare però no als membres privats. El fet de poder tindre elements privats a la nostra classe base seria per poder ocultar informació a les classes derivades.</p>
 <p>Fixa't que ací els atributs de la classe pare o <strong>superclasse</strong> ja no usen el modificador de visibilitat private sino <strong>protected</strong>. Si no les subclasses no podrien heretar els atributs de la classe pare.</p>
 <p>Traduint el diagrama de classes anterior i aplicant els modificadors de visibilitat adequats, el codi podria quedar de la següent forma:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><input id="__tabbed_1_3" name="__tabbed_1" type="radio"/><input id="__tabbed_1_4" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Piroclast</label><label for="__tabbed_1_2">Fum</label><label for="__tabbed_1_3">Lava</label><label for="__tabbed_1_4">Roca</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Piroclast</label><label for="__tabbed_1_2">Fum</label><label for="__tabbed_1_3">Lava</label><label for="__tabbed_1_4">Roca</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -566,7 +566,7 @@ La classe <strong>Cendra</strong> ara és la classe <strong>Fum</strong></p>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
+</input></input></input></input></div>
 <p>Del codi anterior es pot extreure la següent informació:</p>
 <div class="highlight"><pre><span></span><code>- Totes les subclasses tindran accés, encara que al codi no estiga als atributs de la superclasse.
 - Totes les subclasses quan criden als mètodes display i update, executaran el codi que hi ha a la superclasse sempre que no es s’indique el contrari (sobrecàrrega o sobreescriptura).
@@ -596,7 +596,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 <p>Mira el següent exemple, passa'l a Processing IDE i comprova que és el que està passant. Seria interessant que abans d'executar el codi per comprovar el que està passant, t'escrigueres el que trobes que va a passar.</p>
 <details class="exemple">
 <summary>Constructors en herència</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><input id="__tabbed_2_3" name="__tabbed_2" type="radio"/><input id="__tabbed_2_4" name="__tabbed_2" type="radio"/><input id="__tabbed_2_5" name="__tabbed_2" type="radio"/><input id="__tabbed_2_6" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Main</label><label for="__tabbed_2_2">B1</label><label for="__tabbed_2_3">B2</label><label for="__tabbed_2_4">D</label><label for="__tabbed_2_5">H</label><label for="__tabbed_2_6">Dh</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"/><input id="__tabbed_2_4" name="__tabbed_2" type="radio"/><input id="__tabbed_2_5" name="__tabbed_2" type="radio"/><input id="__tabbed_2_6" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Main</label><label for="__tabbed_2_2">B1</label><label for="__tabbed_2_3">B2</label><label for="__tabbed_2_4">D</label><label for="__tabbed_2_5">H</label><label for="__tabbed_2_6">Dh</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -671,7 +671,7 @@ El segon és que ara cada vegada que s'afegisca un nou piroclast al con per expu
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
+</input></input></div>
 </details>
 <p>Finalment cal dir que el constructor d'una classe base (superclasse) pot executar una part del codi que és comú a totes les subclasses i la resta del codi necessari per a la construcció d'una subclasse ho pot fer la classe derivada.</p>
 <p>Però vegem com afecta el que acabem d'explicar al nostre projecte Volcano. Una vegada afegides les modificacions el projecte podria quedar com mostra el següent codi. Fixa't especialment en la modificació de codi que s'ha fet al mètode <strong>creaPiroclast</strong> de la classe <strong>Crater</strong> que és la que va afegint els piroclasts a l'arrayList:</p>
@@ -2009,7 +2009,7 @@ amb relacions d'herència que es poden estendre fàcilment.</p>
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
     theme: "forest",
